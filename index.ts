@@ -40,6 +40,10 @@ async function analyzePRWithClaude(
     // If not in cache, perform the analysis
     const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
 
+Major Impact: Introduce a feature, fix a bug, improve performance, or refactor code.
+Minor Impact: Minor bug fixes, easy feature additions, small improvements. Typically more than 30 lines of code changes.
+Tiny Impact: Minor documentation changes, typo fixes, small cosmetic fixes, updates to dependencies.
+
 Title: ${pr.title}
 Body: ${pr.body}
 Diff:
@@ -91,10 +95,7 @@ async function main() {
     const prs = await getMergedPRs(repo, weekStartString)
     console.log(`Found ${prs.length} merged PRs`)
     for (const pr of prs) {
-      if (
-        pr.user.login === "renovate-bot" ||
-        pr.title.toLowerCase().includes("bump")
-      ) {
+      if (pr.user.login.includes("renovate")) {
         continue
       }
       const analysis = await analyzePRWithClaude(pr, repo)
@@ -102,7 +103,27 @@ async function main() {
     }
   }
 
-  const markdown = await generateMarkdown(allPRs, weekStartString)
+  // Group PRs by contributor
+  const contributorPRs = allPRs.reduce((acc, pr) => {
+    if (!acc[pr.contributor]) {
+      acc[pr.contributor] = []
+    }
+    acc[pr.contributor].push(pr)
+    return acc
+  }, {} as Record<string, AnalyzedPR[]>)
+
+  // Sort each contributor's PRs by impact
+  const impactOrder = { Major: 3, Minor: 2, Tiny: 1 }
+  for (const contributor in contributorPRs) {
+    contributorPRs[contributor].sort(
+      (a, b) => impactOrder[b.impact] - impactOrder[a.impact]
+    )
+  }
+
+  // Flatten the sorted PRs back into a single array
+  const sortedPRs = Object.values(contributorPRs).flat()
+
+  const markdown = await generateMarkdown(sortedPRs, weekStartString)
   fs.writeFileSync(`contribution-overviews/${weekStartString}.md`, markdown)
   console.log(`Generated contribution-overviews/${weekStartString}.md`)
 
