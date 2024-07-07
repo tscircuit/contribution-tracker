@@ -45,7 +45,7 @@ export async function generateMarkdown(
   }, {} as Record<string, AnalyzedPR[]>)
 
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
-    markdown += `### ${repo}\n\n`
+    markdown += `### [${repo}](https://github.com/${repo})\n\n`
     markdown += "| PR # | Impact | Contributor | Description |\n"
     markdown += "|------|--------|-------------|-------------|\n"
     repoPRs
@@ -70,7 +70,7 @@ export async function generateMarkdown(
   }, {} as Record<string, AnalyzedPR[]>)
 
   Object.entries(prsByContributor).forEach(([contributor, contributorPRs]) => {
-    markdown += `### ${contributor}\n\n`
+    markdown += `### [${contributor}](https://github.com/${contributor})\n\n`
     markdown += "| PR # | Impact | Description |\n"
     markdown += "|------|--------|-------------|\n"
     contributorPRs.forEach((pr) => {
