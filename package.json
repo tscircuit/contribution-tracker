@@ -1,0 +1,17 @@
+{
+  "name": "contribution-tracker",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
+    "@octokit/rest": "^21.0.0",
+    "level": "^8.0.1",
+    "redaxios": "^0.5.1"
+  }
+}
