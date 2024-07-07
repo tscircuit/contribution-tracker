@@ -20,7 +20,7 @@ jobs:
         run: bun install
 
       - name: Run script
-        run: bun index.ts
+        run: FULL_REPO_LIST=1 bun index.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
