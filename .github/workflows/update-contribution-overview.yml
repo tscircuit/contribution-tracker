@@ -28,8 +28,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update chart"
+          git add contribution-overviews
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update contribution overviews"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
