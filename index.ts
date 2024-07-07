@@ -5,6 +5,7 @@ import { Level } from "level"
 import { getRepos } from "./getRepos"
 import { generateMarkdown } from "./generateMarkdown"
 import { getMergedPRs, type PullRequest } from "./getMergedPRs"
+import filterDiff from "./filterDiff"
 
 export const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 const anthropic = new Anthropic({
@@ -37,6 +38,8 @@ async function analyzePRWithClaude(
     )
     return cachedAnalysis
   } catch (error) {
+    const reducedDiff = filterDiff(pr.diff)
+
     // If not in cache, perform the analysis
     const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
 
@@ -47,7 +50,7 @@ Tiny Impact: Minor documentation changes, typo fixes, small cosmetic fixes, upda
 Title: ${pr.title}
 Body: ${pr.body}
 Diff:
-${pr.diff}
+${reducedDiff.slice(0, 8000)}
 
 Response format:
 Description: [One-line description]

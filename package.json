@@ -12,6 +12,7 @@
     "@anthropic-ai/sdk": "^0.24.3",
     "@octokit/rest": "^21.0.0",
     "level": "^8.0.1",
+    "parse-diff": "^0.11.1",
     "redaxios": "^0.5.1"
   }
 }
