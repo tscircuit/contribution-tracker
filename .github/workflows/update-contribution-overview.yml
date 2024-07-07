@@ -2,7 +2,7 @@ name: Update Contribution Overview
 
 on:
   schedule:
-    - cron: "0 */12 * * *" # Run every 12 hours
+    - cron: "0 18 * * *" # 6am PST
   workflow_dispatch: # Allow manual triggering
 
 jobs:
@@ -22,7 +22,8 @@ jobs:
       - name: Run script
         run: FULL_REPO_LIST=1 bun index.ts
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.TSCIRCUIT_BOT_ANTHROPIC_API_KEY }}
 
       - name: Commit changes
         run: |
