@@ -3,7 +3,17 @@
 Generates weekly contribution overviews for tscircuit contributors. Check out all
 the [contribution overviews here](./contribution-overviews/)
 
-## Last Week
+* All PRs in the tscircuit org are scanned/summarized via Claude Haiku
+* Claude classifies each Diff/PR as a Major, Minor or Tiny contribution
+* All the PRs, summaries, and classifications are organized into charts and tables
+
+The current week is shown below. There are 3 major sections:
+
+* [Contributor Overview](#contributor-overview)
+* [PRs by Repository](#prs-by-repository)
+* [PRs by Contributor](#changes-by-contributor)
+
+## Current Week
 
 <!-- START_CURRENT_WEEK -->
 
