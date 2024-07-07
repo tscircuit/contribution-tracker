@@ -127,6 +127,14 @@ async function main() {
   fs.writeFileSync(`contribution-overviews/${weekStartString}.md`, markdown)
   console.log(`Generated contribution-overviews/${weekStartString}.md`)
 
+  // Edit the README.md file
+  const readme = fs.readFileSync("README.md", "utf8")
+  const updatedReadme = readme.replace(
+    /<!-- START_CURRENT_WEEK -->[\s\S]*<!-- END_CURRENT_WEEK -->/m,
+    `<!-- START_CURRENT_WEEK -->\n\n${markdown}\n\n<!-- END_CURRENT_WEEK -->`
+  )
+  fs.writeFileSync("README.md", updatedReadme)
+
   // Close the database
   await db.close()
 }
