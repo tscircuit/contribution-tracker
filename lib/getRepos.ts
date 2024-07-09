@@ -1,4 +1,4 @@
-import { octokit } from "."
+import { octokit } from "../index"
 
 export async function getRepos(): Promise<string[]> {
   if (process.env.FULL_REPO_LIST) {

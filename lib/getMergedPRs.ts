@@ -1,4 +1,4 @@
-import { octokit } from "."
+import { octokit } from "../index"
 import axios from "redaxios"
 
 export interface PullRequest {

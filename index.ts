@@ -2,10 +2,10 @@ import { Octokit } from "@octokit/rest"
 import * as fs from "fs"
 import Anthropic from "@anthropic-ai/sdk"
 import { Level } from "level"
-import { getRepos } from "./getRepos"
-import { generateMarkdown } from "./generateMarkdown"
-import { getMergedPRs, type PullRequest } from "./getMergedPRs"
-import filterDiff from "./filterDiff"
+import { getRepos } from "./lib/getRepos"
+import { generateMarkdown } from "./lib/generateMarkdown"
+import { getMergedPRs, type PullRequest } from "./lib/getMergedPRs"
+import filterDiff from "./lib/filterDiff"
 
 export const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 const anthropic = new Anthropic({
@@ -15,7 +15,7 @@ const anthropic = new Anthropic({
 // Initialize LevelDB
 const db = new Level("./pr-analysis-cache", { valueEncoding: "json" })
 
-interface AnalyzedPR {
+export interface AnalyzedPR {
   number: number
   title: string
   description: string

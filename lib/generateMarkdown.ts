@@ -1,4 +1,17 @@
-import type { AnalyzedPR } from "."
+import type { AnalyzedPR } from "../index"
+
+export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
+  switch (impact) {
+    case "Major":
+      return "🐳 Major"
+    case "Minor":
+      return "🐙 Minor"
+    case "Tiny":
+      return "🐌 Tiny"
+    default:
+      return "🟣"
+  }
+}
 
 export async function generateMarkdown(
   prs: AnalyzedPR[],
@@ -20,7 +33,7 @@ export async function generateMarkdown(
 
   // Generate contributor overview table
   markdown += "## Contributor Overview\n\n"
-  markdown += "| Contributor | Major | Minor | Other |\n"
+  markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny |\n"
   markdown += "|-------------|-------|-------|-------|\n"
   const contributorEffort = prs.reduce((acc, pr) => {
     if (!acc[pr.contributor]) {
@@ -54,7 +67,9 @@ export async function generateMarkdown(
         return impactOrder[a.impact] - impactOrder[b.impact]
       })
       .forEach((pr) => {
-        markdown += `| [#${pr.number}](${pr.url}) | ${pr.impact} | ${pr.contributor} | ${pr.description} |\n`
+        markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
+          pr.impact
+        )} | ${pr.contributor} | ${pr.description} |\n`
       })
     markdown += "\n"
   })
@@ -74,7 +89,9 @@ export async function generateMarkdown(
     markdown += "| PR # | Impact | Description |\n"
     markdown += "|------|--------|-------------|\n"
     contributorPRs.forEach((pr) => {
-      markdown += `| [#${pr.number}](${pr.url}) | ${pr.impact} | ${pr.description} |\n`
+      markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(pr.impact)} | ${
+        pr.description
+      } |\n`
     })
     markdown += "\n"
   })
