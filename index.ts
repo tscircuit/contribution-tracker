@@ -63,8 +63,8 @@ Impact: [Major/Minor/Tiny]`
     })
 
     const content = message.content[0].text
-    const description = content.split("Description:")?.[1].split("Impact:")[0]
-    const impact = content.split("Impact:")?.[1]
+    const description = content.split("Description:")?.[1]?.split("Impact:")[0] ?? ""
+    const impact = content.split("Impact:")?.[1] ?? ""
 
     const analysis: AnalyzedPR = {
       number: pr.number,
