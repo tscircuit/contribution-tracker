@@ -23,36 +23,74 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/jscad-fiber" : 4
+    "tscircuit/builder" : 1
+    "tscircuit/cli" : 1
+    "tscircuit/3d-viewer" : 1
+    "tscircuit/jscad-fiber" : 8
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny |
 |-------------|-------|-------|-------|
-| Slaviiiii | 0 | 4 | 0 |
+| imrishabh18 | 3 | 0 | 0 |
+| Slaviiiii | 1 | 7 | 0 |
 
 ## Changes by Repository
+
+### [tscircuit/builder](https://github.com/tscircuit/builder)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#95](https://github.com/tscircuit/builder/pull/95) | 🐳 Major | imrishabh18 | Fix the issue of not centering the component when only one prop (e.g., `center.x`) is provided. |
+
+### [tscircuit/cli](https://github.com/tscircuit/cli)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#117](https://github.com/tscircuit/cli/pull/117) | 🐳 Major | imrishabh18 | Introduce a debug button in the menu |
+
+### [tscircuit/3d-viewer](https://github.com/tscircuit/3d-viewer)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#11](https://github.com/tscircuit/3d-viewer/pull/11) | 🐳 Major | imrishabh18 | Adds better error handling for bad URLs in the `useGlobalObjLoader` hook and displays a fallback box when the URL is invalid. |
 
 ### [tscircuit/jscad-fiber](https://github.com/tscircuit/jscad-fiber)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#59](https://github.com/tscircuit/jscad-fiber/pull/59) | 🐙 Minor | Slaviiiii | Wrap the `ExtrudeRotate` component with `withColorProp` and `withOffsetProp` wrappers to add color and offset functionality. |
-| [#58](https://github.com/tscircuit/jscad-fiber/pull/58) | 🐙 Minor | Slaviiiii | Wrap the ExtrudeRectangular component with color and offset prop wrappers. |
-| [#56](https://github.com/tscircuit/jscad-fiber/pull/56) | 🐙 Minor | Slaviiiii | Adds color and offset props to the ExtrudeHelical component |
-| [#57](https://github.com/tscircuit/jscad-fiber/pull/57) | 🐙 Minor | Slaviiiii | Wrap the ExtrudeLinear component with withColorProp and withOffsetProp HOCs to add support for `color` and `center` props. |
+| [#57](https://github.com/tscircuit/jscad-fiber/pull/57) | 🐳 Major | Slaviiiii | Wrap ExtrudeLinear component with color and offset props |
+| [#63](https://github.com/tscircuit/jscad-fiber/pull/63) | 🐙 Minor | Slaviiiii | Add color and center properties to the RoundedCylinder component |
+| [#62](https://github.com/tscircuit/jscad-fiber/pull/62) | 🐙 Minor | Slaviiiii | Add color and center position properties to the Cylinder component. |
+| [#61](https://github.com/tscircuit/jscad-fiber/pull/61) | 🐙 Minor | Slaviiiii | Wrap the `RoundedCuboid` component with a color wrapper to allow setting the color of the cuboid. |
+| [#60](https://github.com/tscircuit/jscad-fiber/pull/60) | 🐙 Minor | Slaviiiii | Adds color and center properties to the Cube component and updates the cube.fixture.tsx file accordingly. |
+| [#59](https://github.com/tscircuit/jscad-fiber/pull/59) | 🐙 Minor | Slaviiiii | Wrapped the `ExtrudeRotate` component with `withColorProp` and `withOffsetProp` higher-order components to add color and offset properties. |
+| [#58](https://github.com/tscircuit/jscad-fiber/pull/58) | 🐙 Minor | Slaviiiii | Wrap the ExtrudeRectangular component with withColorProp and withOffsetProp higher-order components to add color and offset props. |
+| [#56](https://github.com/tscircuit/jscad-fiber/pull/56) | 🐙 Minor | Slaviiiii | Wrap ExtrudeHelical component with `withColorProp` and `withOffsetProp` higher-order components. |
 
 ## Changes by Contributor
+
+### [imrishabh18](https://github.com/imrishabh18)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#95](https://github.com/tscircuit/builder/pull/95) | 🐳 Major | Fix the issue of not centering the component when only one prop (e.g., `center.x`) is provided. |
+| [#117](https://github.com/tscircuit/cli/pull/117) | 🐳 Major | Introduce a debug button in the menu |
+| [#11](https://github.com/tscircuit/3d-viewer/pull/11) | 🐳 Major | Adds better error handling for bad URLs in the `useGlobalObjLoader` hook and displays a fallback box when the URL is invalid. |
 
 ### [Slaviiiii](https://github.com/Slaviiiii)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#59](https://github.com/tscircuit/jscad-fiber/pull/59) | 🐙 Minor | Wrap the `ExtrudeRotate` component with `withColorProp` and `withOffsetProp` wrappers to add color and offset functionality. |
-| [#58](https://github.com/tscircuit/jscad-fiber/pull/58) | 🐙 Minor | Wrap the ExtrudeRectangular component with color and offset prop wrappers. |
-| [#56](https://github.com/tscircuit/jscad-fiber/pull/56) | 🐙 Minor | Adds color and offset props to the ExtrudeHelical component |
-| [#57](https://github.com/tscircuit/jscad-fiber/pull/57) | 🐙 Minor | Wrap the ExtrudeLinear component with withColorProp and withOffsetProp HOCs to add support for `color` and `center` props. |
+| [#57](https://github.com/tscircuit/jscad-fiber/pull/57) | 🐳 Major | Wrap ExtrudeLinear component with color and offset props |
+| [#63](https://github.com/tscircuit/jscad-fiber/pull/63) | 🐙 Minor | Add color and center properties to the RoundedCylinder component |
+| [#62](https://github.com/tscircuit/jscad-fiber/pull/62) | 🐙 Minor | Add color and center position properties to the Cylinder component. |
+| [#61](https://github.com/tscircuit/jscad-fiber/pull/61) | 🐙 Minor | Wrap the `RoundedCuboid` component with a color wrapper to allow setting the color of the cuboid. |
+| [#60](https://github.com/tscircuit/jscad-fiber/pull/60) | 🐙 Minor | Adds color and center properties to the Cube component and updates the cube.fixture.tsx file accordingly. |
+| [#59](https://github.com/tscircuit/jscad-fiber/pull/59) | 🐙 Minor | Wrapped the `ExtrudeRotate` component with `withColorProp` and `withOffsetProp` higher-order components to add color and offset properties. |
+| [#58](https://github.com/tscircuit/jscad-fiber/pull/58) | 🐙 Minor | Wrap the ExtrudeRectangular component with withColorProp and withOffsetProp higher-order components to add color and offset props. |
+| [#56](https://github.com/tscircuit/jscad-fiber/pull/56) | 🐙 Minor | Wrap ExtrudeHelical component with `withColorProp` and `withOffsetProp` higher-order components. |
 
 
 
