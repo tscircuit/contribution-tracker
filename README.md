@@ -23,140 +23,163 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/pcb-viewer" : 3
-    "tscircuit/footprinter" : 6
-    "tscircuit/builder" : 1
-    "tscircuit/soup" : 4
-    "tscircuit/props" : 9
-    "tscircuit/circuit-to-svg" : 5
+    "tscircuit/builder" : 2
+    "tscircuit/pcb-viewer" : 4
+    "tscircuit/footprinter" : 7
+    "tscircuit/circuit-json" : 5
+    "tscircuit/props" : 11
+    "tscircuit/circuit-to-svg" : 6
     "tscircuit/cli" : 2
-    "tscircuit/schematic-symbols" : 2
     "tscircuit/soup-util" : 1
     "tscircuit/core" : 5
+    "tscircuit/schematic-symbols" : 2
     "tscircuit/plop" : 1
+    "tscircuit/mm" : 2
     "tscircuit/jscad-electronics" : 2
     "tscircuit/jscad-fiber" : 2
+    "tscircuit/specctra-dsn-json" : 1
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny |
 |-------------|-------|-------|-------|
-| ShiboSoftwareDev | 2 | 4 | 0 |
-| imrishabh18 | 3 | 2 | 0 |
-| seveibar | 12 | 6 | 0 |
-| anas-sarkez | 2 | 5 | 2 |
-| abhijitxy | 4 | 0 | 0 |
+| ShiboSoftwareDev | 3 | 5 | 0 |
+| imrishabh18 | 5 | 2 | 0 |
+| seveibar | 13 | 8 | 0 |
+| abhijitxy | 5 | 1 | 0 |
+| anas-sarkez | 2 | 4 | 3 |
+| andrii-balitskyi | 1 | 0 | 0 |
 
 ## Changes by Repository
-
-### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#43](https://github.com/tscircuit/pcb-viewer/pull/43) | 🐳 Major | ShiboSoftwareDev | Added the pcb_board outline feature and tests |
-| [#42](https://github.com/tscircuit/pcb-viewer/pull/42) | 🐳 Major | imrishabh18 | Add polygon rendering inside the Trace component |
-| [#40](https://github.com/tscircuit/pcb-viewer/pull/40) | 🐳 Major | imrishabh18 | Adds support for trace-hint on plated-hole components |
-
-### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#19](https://github.com/tscircuit/footprinter/pull/19) | 🐳 Major | ShiboSoftwareDev | Added footprints for ms-012 and ms-013 components |
-| [#24](https://github.com/tscircuit/footprinter/pull/24) | 🐳 Major | anas-sarkez | Added SOT723 component definition. |
-| [#23](https://github.com/tscircuit/footprinter/pull/23) | 🐳 Major | anas-sarkez | Added SOT563 function and test |
-| [#25](https://github.com/tscircuit/footprinter/pull/25) | 🐙 Minor | anas-sarkez | Fixed silkscreen issue of some components |
-| [#21](https://github.com/tscircuit/footprinter/pull/21) | 🐙 Minor | anas-sarkez | Added more tests for the `bga` feature. |
-| [#20](https://github.com/tscircuit/footprinter/pull/20) | 🐙 Minor | anas-sarkez | Added some missing tests and snapshots |
 
 ### [tscircuit/builder](https://github.com/tscircuit/builder)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#105](https://github.com/tscircuit/builder/pull/105) | 🐙 Minor | ShiboSoftwareDev | Added optional `outline` prop to `board-builder` to draw the board with an outline if it has at least three elements. |
+| [#106](https://github.com/tscircuit/builder/pull/106) | 🐳 Major | ShiboSoftwareDev | Gerber now supports board outline. |
+| [#105](https://github.com/tscircuit/builder/pull/105) | 🐙 Minor | ShiboSoftwareDev | Added an optional "outline" prop to the board-builder component to allow drawing the board with an outline. |
 
-### [tscircuit/soup](https://github.com/tscircuit/soup)
+### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#30](https://github.com/tscircuit/soup/pull/30) | 🐳 Major | seveibar | Add support for customizing the styles of pins in the schematic component. |
-| [#29](https://github.com/tscircuit/soup/pull/29) | 🐙 Minor | ShiboSoftwareDev | Make `pcb_board_id` and `route_thickness_mode` optional in the PCB board and trace models |
-| [#28](https://github.com/tscircuit/soup/pull/28) | 🐙 Minor | ShiboSoftwareDev | Added an optional `outline` property of type `z.array(point)` to the PCB board definition. |
-| [#31](https://github.com/tscircuit/soup/pull/31) | 🐙 Minor | imrishabh18 | Change the default mode for `trace` to `constant` instead of `interpolated`. |
+| [#43](https://github.com/tscircuit/pcb-viewer/pull/43) | 🐳 Major | ShiboSoftwareDev | Added support for custom PCB board outlines and provided several examples in the Storybook |
+| [#44](https://github.com/tscircuit/pcb-viewer/pull/44) | 🐳 Major | imrishabh18 | Fix the trace rendering to handle the "constant" route_thickness_mode correctly. |
+| [#42](https://github.com/tscircuit/pcb-viewer/pull/42) | 🐳 Major | imrishabh18 | Render the PCB trace inside the Trace element using the new `polygon()` method in the Drawer class. |
+| [#40](https://github.com/tscircuit/pcb-viewer/pull/40) | 🐳 Major | imrishabh18 | Add support for trace-hint for plated-hole. |
+
+### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#19](https://github.com/tscircuit/footprinter/pull/19) | 🐳 Major | ShiboSoftwareDev | Added ms-012 and ms-013 footprints |
+| [#24](https://github.com/tscircuit/footprinter/pull/24) | 🐳 Major | anas-sarkez | Added a new component called SOT723. |
+| [#23](https://github.com/tscircuit/footprinter/pull/23) | 🐳 Major | anas-sarkez | Added SOT563 function and test |
+| [#28](https://github.com/tscircuit/footprinter/pull/28) | 🐙 Minor | seveibar | Update the `circuit-to-svg` dependency to version `0.0.13` to fix issues with the snapshot generation. |
+| [#25](https://github.com/tscircuit/footprinter/pull/25) | 🐙 Minor | anas-sarkez | Fixed silkscreen issue of some components |
+| [#21](https://github.com/tscircuit/footprinter/pull/21) | 🐙 Minor | anas-sarkez | Added more tests for a BGA footprint with 64 pins, 10mm x 10mm size, 8x8 grid, and 1.27mm pitch. |
+| [#20](https://github.com/tscircuit/footprinter/pull/20) | 🐙 Minor | anas-sarkez | Added some missing tests and snapshots |
+
+### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#32](https://github.com/tscircuit/circuit-json/pull/32) | 🐙 Minor | ShiboSoftwareDev | Changed the type of the `layer` field in the `pcb_trace` schema from `string` to `layer_ref`. |
+| [#29](https://github.com/tscircuit/circuit-json/pull/29) | 🐙 Minor | ShiboSoftwareDev | Make `pcb_board_id` and `route_thickness_mode` optional in the PCB board and trace schemas. |
+| [#28](https://github.com/tscircuit/circuit-json/pull/28) | 🐙 Minor | ShiboSoftwareDev | Added a new `outline` property of type `z.array(point).optional()` to the `pcb_board` type. |
+| [#31](https://github.com/tscircuit/circuit-json/pull/31) | 🐙 Minor | imrishabh18 | Change the default mode for `trace` from "interpolated" to "constant". |
+| [#30](https://github.com/tscircuit/circuit-json/pull/30) | 🐙 Minor | seveibar | Add support for `pin_styles` in the `schematic_component` schema. |
 
 ### [tscircuit/props](https://github.com/tscircuit/props)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#32](https://github.com/tscircuit/props/pull/32) | 🐳 Major | seveibar | This pull request refactors the project by splitting the code into multiple files, separating props from zod types, and adding a type check to ensure parity. |
+| [#36](https://github.com/tscircuit/props/pull/36) | 🐳 Major | seveibar | Add schematic direction and port arrangement to jumper component. |
+| [#35](https://github.com/tscircuit/props/pull/35) | 🐳 Major | seveibar | More refactoring to better defined props, split out capacitor and resistor, add jumper, add pullupFor, decouplingFor |
+| [#32](https://github.com/tscircuit/props/pull/32) | 🐳 Major | seveibar | Refactoring the project into multiple files, splitting props from zod, and adding a type check to ensure parity |
 | [#31](https://github.com/tscircuit/props/pull/31) | 🐳 Major | seveibar | Add testing and template for new structure |
-| [#25](https://github.com/tscircuit/props/pull/25) | 🐙 Minor | ShiboSoftwareDev | Added an optional `outline` property to the `boardProps` object. |
-| [#34](https://github.com/tscircuit/props/pull/34) | 🐙 Minor | imrishabh18 | Add symbol name as a prop to the CommonComponentProps type. |
-| [#33](https://github.com/tscircuit/props/pull/33) | 🐙 Minor | seveibar | Remove the "auto" options for some parameters in the chip component. |
-| [#29](https://github.com/tscircuit/props/pull/29) | 🟣 | seveibar | Update the formatbot GitHub Action to not run against forks. |
-| [#30](https://github.com/tscircuit/props/pull/30) | 🐳 Major | seveibar | Revert build system to use --dts, add `schPinStyle` and other schematic box improvements, and add support for camelCase route hint points. |
-| [#24](https://github.com/tscircuit/props/pull/24) | 🐙 Minor | seveibar | Modify the `pinLabels` type to accept both numbers and strings to fix React parsing issues. |
-| [#22](https://github.com/tscircuit/props/pull/22) | 🐙 Minor | seveibar | Make the `for` prop in `<tracehint>` component optional to support a new syntax where the `<tracehint>` is nested inside a `<trace>` component. |
+| [#30](https://github.com/tscircuit/props/pull/30) | 🐳 Major | seveibar | Revert build system to use --dts, add schPinStyle and other schematic box improvements, add support for camelCase route hint points |
+| [#25](https://github.com/tscircuit/props/pull/25) | 🐙 Minor | ShiboSoftwareDev | Added the `outline` prop type to the `boardProps` object. |
+| [#34](https://github.com/tscircuit/props/pull/34) | 🐙 Minor | imrishabh18 | Add a new optional prop `symbolName` to the `commonComponentProps` type. |
+| [#33](https://github.com/tscircuit/props/pull/33) | 🐙 Minor | seveibar | Remove "auto" options for some parameters in the chip component. |
+| [#29](https://github.com/tscircuit/props/pull/29) | 🐙 Minor | seveibar | Update formatbot to not run against forks |
+| [#24](https://github.com/tscircuit/props/pull/24) | 🐙 Minor | seveibar | Change the type of `pinLabels` in the `chipProps` interface to accept either numbers or strings to fix issues with React parsing. |
+| [#22](https://github.com/tscircuit/props/pull/22) | 🐙 Minor | seveibar | Make the `for` property in `<tracehint>` optional to support a new syntax where the `<tracehint>` is placed directly inside the `<trace>` element. |
 
 ### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#25](https://github.com/tscircuit/circuit-to-svg/pull/25) | 🐳 Major | imrishabh18 | Integrate schematic symbols by using the `circuitJsonToSchematicSvg` function, which returns a Promise that needs to be parsed by `svgson`. |
-| [#29](https://github.com/tscircuit/circuit-to-svg/pull/29) | 🐙 Minor | anas-sarkez | Integrated custom silkscreen with adjustable stroke width for PCB boundary. |
-| [#27](https://github.com/tscircuit/circuit-to-svg/pull/27) | 🐙 Minor | anas-sarkez | Updated the silkscreen of the printed circuit board (PCB). |
-| [#31](https://github.com/tscircuit/circuit-to-svg/pull/31) | 🐌 Tiny | anas-sarkez | Removed the console log for null elements in the `pcb-soup-to-svg.ts` file. |
-| [#30](https://github.com/tscircuit/circuit-to-svg/pull/30) | 🐌 Tiny | anas-sarkez | Removed console logs that were printing SVG object data. |
+| [#28](https://github.com/tscircuit/circuit-to-svg/pull/28) | 🐳 Major | imrishabh18 | Fix schematic symbols attributes to properly handle position, width, height, and rotation. |
+| [#25](https://github.com/tscircuit/circuit-to-svg/pull/25) | 🐳 Major | imrishabh18 | Integrate the schematic-symbols library to generate SVG for circuit components and improve the rotation of symbols. |
+| [#29](https://github.com/tscircuit/circuit-to-svg/pull/29) | 🐙 Minor | anas-sarkez | Integrated custom silkscreen |
+| [#31](https://github.com/tscircuit/circuit-to-svg/pull/31) | 🐌 Tiny | anas-sarkez | Removed the console log statement in the `pcb-soup-to-svg.ts` file. |
+| [#30](https://github.com/tscircuit/circuit-to-svg/pull/30) | 🐌 Tiny | anas-sarkez | Removed unnecessary console logs from the PCB to SVG conversion function. |
+| [#27](https://github.com/tscircuit/circuit-to-svg/pull/27) | 🐌 Tiny | anas-sarkez | Fixed silkscreen |
 
 ### [tscircuit/cli](https://github.com/tscircuit/cli)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#131](https://github.com/tscircuit/cli/pull/131) | 🐳 Major | seveibar | Add support for the @tscircuit/core beta in the CLI |
-| [#130](https://github.com/tscircuit/cli/pull/130) | 🐙 Minor | seveibar | Updated the `export-gerbers.ts` file to change the `flip_y_axis` option to `false` for both Gerber and Excellon drill commands. |
-
-### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#12](https://github.com/tscircuit/schematic-symbols/pull/12) | 🐳 Major | seveibar | Reorganizes the build system to generate files more explicitly for the project. |
-| [#10](https://github.com/tscircuit/schematic-symbols/pull/10) | 🐳 Major | seveibar | Introduced a new function `getInnerSvg` to export the inner SVG elements without the surrounding SVG tag. |
+| [#131](https://github.com/tscircuit/cli/pull/131) | 🐳 Major | seveibar | Adds support for the `@tscircuit/core` beta by introducing a new `--core` option to the CLI commands. |
+| [#130](https://github.com/tscircuit/cli/pull/130) | 🐙 Minor | seveibar | Change the `flip_y_axis` option to `false` in the `export-gerbers.ts` file. |
 
 ### [tscircuit/soup-util](https://github.com/tscircuit/soup-util)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#9](https://github.com/tscircuit/soup-util/pull/9) | 🐙 Minor | seveibar | Allow creating soup util with validation turned on |
+| [#9](https://github.com/tscircuit/soup-util/pull/9) | 🐳 Major | seveibar | Adds an option to the `su` function to enable validation of inserted elements. |
 
 ### [tscircuit/core](https://github.com/tscircuit/core)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#14](https://github.com/tscircuit/core/pull/14) | 🐳 Major | seveibar | Introduce support for reporting bundle and install size in the GitHub Actions workflow. |
-| [#13](https://github.com/tscircuit/core/pull/13) | 🐳 Major | seveibar | Introduce a GitHub Actions workflow to track the bundle size of the project and report the difference between the base branch and the pull request branch. |
-| [#10](https://github.com/tscircuit/core/pull/10) | 🐳 Major | seveibar | Introduce a new Chip component with support for various properties and rendering of source, schematic, and PCB components. |
-| [#6](https://github.com/tscircuit/core/pull/6) | 🐳 Major | seveibar | Introduce a new feature to support trace hints in the Trace class |
-| [#4](https://github.com/tscircuit/core/pull/4) | 🐳 Major | seveibar |  |
+| [#14](https://github.com/tscircuit/core/pull/14) | 🐳 Major | seveibar | Add support for tracking the install size of the project in addition to the bundle size. |
+| [#13](https://github.com/tscircuit/core/pull/13) | 🐳 Major | seveibar | Introduce a GitHub Actions workflow to track the bundle size of a pull request and report the difference compared to the base branch. |
+| [#10](https://github.com/tscircuit/core/pull/10) | 🐳 Major | seveibar | Introduce a new "Chip" component and related functionality, including the ability to define pin labels, render source components, schematic components, and PCB components. |
+| [#6](https://github.com/tscircuit/core/pull/6) | 🐳 Major | seveibar | Adds support for trace hints, allowing multi-layer routing by defining route points and layers to pass through. |
+| [#4](https://github.com/tscircuit/core/pull/4) | 🟣 | seveibar |  |
+
+### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#12](https://github.com/tscircuit/schematic-symbols/pull/12) | 🐳 Major | seveibar | Explicitly specifying the generated files for the build system |
+| [#10](https://github.com/tscircuit/schematic-symbols/pull/10) | 🐳 Major | seveibar | Introduce a new function `getInnerSvg` to extract the inner SVG content from the `getSvg` function. |
 
 ### [tscircuit/plop](https://github.com/tscircuit/plop)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#4](https://github.com/tscircuit/plop/pull/4) | 🐙 Minor | seveibar | Update the formatbot workflow to not run against forks. |
+| [#4](https://github.com/tscircuit/plop/pull/4) | 🐙 Minor | seveibar | Update formatbot to not run against forks |
+
+### [tscircuit/mm](https://github.com/tscircuit/mm)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#3](https://github.com/tscircuit/mm/pull/3) | 🐳 Major | abhijitxy | Add custom unit conversion |
+| [#4](https://github.com/tscircuit/mm/pull/4) | 🐙 Minor | abhijitxy | Updated the package.json file to remove the `@types/convert-units` and `convert-units` dependencies. |
 
 ### [tscircuit/jscad-electronics](https://github.com/tscircuit/jscad-electronics)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#16](https://github.com/tscircuit/jscad-electronics/pull/16) | 🐳 Major | abhijitxy | Implement a BGA (Ball Grid Array) component with various configurable properties and support for missing balls. |
-| [#14](https://github.com/tscircuit/jscad-electronics/pull/14) | 🐳 Major | abhijitxy | Implement SOT-23-3P Component |
+| [#16](https://github.com/tscircuit/jscad-electronics/pull/16) | 🐳 Major | abhijitxy | Implement a new BGA (Ball Grid Array) component with customizable parameters and support for both manual ball placement and footprint string-based placement. |
+| [#14](https://github.com/tscircuit/jscad-electronics/pull/14) | 🐳 Major | abhijitxy | Implement the SOT-23-3P component, which is a type of surface-mount transistor package. |
 
 ### [tscircuit/jscad-fiber](https://github.com/tscircuit/jscad-fiber)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#73](https://github.com/tscircuit/jscad-fiber/pull/73) | 🐳 Major | abhijitxy | Introduce a degree to radian conversion function for rotating 3D objects |
-| [#72](https://github.com/tscircuit/jscad-fiber/pull/72) | 🐳 Major | abhijitxy | Implemented the Rotate component to support string input for rotation angles in addition to existing Point3 and array formats. |
+| [#73](https://github.com/tscircuit/jscad-fiber/pull/73) | 🐳 Major | abhijitxy | Introduce a feature to convert degrees to radians for the `rotate` function. |
+| [#72](https://github.com/tscircuit/jscad-fiber/pull/72) | 🐳 Major | abhijitxy | Implemented a new feature to support 180-degree string input for the Rotate component. |
+
+### [tscircuit/specctra-dsn-json](https://github.com/tscircuit/specctra-dsn-json)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#12](https://github.com/tscircuit/specctra-dsn-json/pull/12) | 🐳 Major | andrii-balitskyi | Convert the test suite from AVA to Bun:Test |
 
 ## Changes by Contributor
 
@@ -164,69 +187,84 @@ pie
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#43](https://github.com/tscircuit/pcb-viewer/pull/43) | 🐳 Major | Added the pcb_board outline feature and tests |
-| [#19](https://github.com/tscircuit/footprinter/pull/19) | 🐳 Major | Added footprints for ms-012 and ms-013 components |
-| [#105](https://github.com/tscircuit/builder/pull/105) | 🐙 Minor | Added optional `outline` prop to `board-builder` to draw the board with an outline if it has at least three elements. |
-| [#29](https://github.com/tscircuit/soup/pull/29) | 🐙 Minor | Make `pcb_board_id` and `route_thickness_mode` optional in the PCB board and trace models |
-| [#28](https://github.com/tscircuit/soup/pull/28) | 🐙 Minor | Added an optional `outline` property of type `z.array(point)` to the PCB board definition. |
-| [#25](https://github.com/tscircuit/props/pull/25) | 🐙 Minor | Added an optional `outline` property to the `boardProps` object. |
+| [#106](https://github.com/tscircuit/builder/pull/106) | 🐳 Major | Gerber now supports board outline. |
+| [#43](https://github.com/tscircuit/pcb-viewer/pull/43) | 🐳 Major | Added support for custom PCB board outlines and provided several examples in the Storybook |
+| [#19](https://github.com/tscircuit/footprinter/pull/19) | 🐳 Major | Added ms-012 and ms-013 footprints |
+| [#105](https://github.com/tscircuit/builder/pull/105) | 🐙 Minor | Added an optional "outline" prop to the board-builder component to allow drawing the board with an outline. |
+| [#32](https://github.com/tscircuit/circuit-json/pull/32) | 🐙 Minor | Changed the type of the `layer` field in the `pcb_trace` schema from `string` to `layer_ref`. |
+| [#29](https://github.com/tscircuit/circuit-json/pull/29) | 🐙 Minor | Make `pcb_board_id` and `route_thickness_mode` optional in the PCB board and trace schemas. |
+| [#28](https://github.com/tscircuit/circuit-json/pull/28) | 🐙 Minor | Added a new `outline` property of type `z.array(point).optional()` to the `pcb_board` type. |
+| [#25](https://github.com/tscircuit/props/pull/25) | 🐙 Minor | Added the `outline` prop type to the `boardProps` object. |
 
 ### [imrishabh18](https://github.com/imrishabh18)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#42](https://github.com/tscircuit/pcb-viewer/pull/42) | 🐳 Major | Add polygon rendering inside the Trace component |
-| [#40](https://github.com/tscircuit/pcb-viewer/pull/40) | 🐳 Major | Adds support for trace-hint on plated-hole components |
-| [#25](https://github.com/tscircuit/circuit-to-svg/pull/25) | 🐳 Major | Integrate schematic symbols by using the `circuitJsonToSchematicSvg` function, which returns a Promise that needs to be parsed by `svgson`. |
-| [#31](https://github.com/tscircuit/soup/pull/31) | 🐙 Minor | Change the default mode for `trace` to `constant` instead of `interpolated`. |
-| [#34](https://github.com/tscircuit/props/pull/34) | 🐙 Minor | Add symbol name as a prop to the CommonComponentProps type. |
+| [#44](https://github.com/tscircuit/pcb-viewer/pull/44) | 🐳 Major | Fix the trace rendering to handle the "constant" route_thickness_mode correctly. |
+| [#42](https://github.com/tscircuit/pcb-viewer/pull/42) | 🐳 Major | Render the PCB trace inside the Trace element using the new `polygon()` method in the Drawer class. |
+| [#40](https://github.com/tscircuit/pcb-viewer/pull/40) | 🐳 Major | Add support for trace-hint for plated-hole. |
+| [#28](https://github.com/tscircuit/circuit-to-svg/pull/28) | 🐳 Major | Fix schematic symbols attributes to properly handle position, width, height, and rotation. |
+| [#25](https://github.com/tscircuit/circuit-to-svg/pull/25) | 🐳 Major | Integrate the schematic-symbols library to generate SVG for circuit components and improve the rotation of symbols. |
+| [#31](https://github.com/tscircuit/circuit-json/pull/31) | 🐙 Minor | Change the default mode for `trace` from "interpolated" to "constant". |
+| [#34](https://github.com/tscircuit/props/pull/34) | 🐙 Minor | Add a new optional prop `symbolName` to the `commonComponentProps` type. |
 
 ### [seveibar](https://github.com/seveibar)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#131](https://github.com/tscircuit/cli/pull/131) | 🐳 Major | Add support for the @tscircuit/core beta in the CLI |
-| [#30](https://github.com/tscircuit/soup/pull/30) | 🐳 Major | Add support for customizing the styles of pins in the schematic component. |
-| [#32](https://github.com/tscircuit/props/pull/32) | 🐳 Major | This pull request refactors the project by splitting the code into multiple files, separating props from zod types, and adding a type check to ensure parity. |
+| [#131](https://github.com/tscircuit/cli/pull/131) | 🐳 Major | Adds support for the `@tscircuit/core` beta by introducing a new `--core` option to the CLI commands. |
+| [#9](https://github.com/tscircuit/soup-util/pull/9) | 🐳 Major | Adds an option to the `su` function to enable validation of inserted elements. |
+| [#36](https://github.com/tscircuit/props/pull/36) | 🐳 Major | Add schematic direction and port arrangement to jumper component. |
+| [#35](https://github.com/tscircuit/props/pull/35) | 🐳 Major | More refactoring to better defined props, split out capacitor and resistor, add jumper, add pullupFor, decouplingFor |
+| [#32](https://github.com/tscircuit/props/pull/32) | 🐳 Major | Refactoring the project into multiple files, splitting props from zod, and adding a type check to ensure parity |
 | [#31](https://github.com/tscircuit/props/pull/31) | 🐳 Major | Add testing and template for new structure |
-| [#12](https://github.com/tscircuit/schematic-symbols/pull/12) | 🐳 Major | Reorganizes the build system to generate files more explicitly for the project. |
-| [#10](https://github.com/tscircuit/schematic-symbols/pull/10) | 🐳 Major | Introduced a new function `getInnerSvg` to export the inner SVG elements without the surrounding SVG tag. |
-| [#130](https://github.com/tscircuit/cli/pull/130) | 🐙 Minor | Updated the `export-gerbers.ts` file to change the `flip_y_axis` option to `false` for both Gerber and Excellon drill commands. |
-| [#9](https://github.com/tscircuit/soup-util/pull/9) | 🐙 Minor | Allow creating soup util with validation turned on |
-| [#33](https://github.com/tscircuit/props/pull/33) | 🐙 Minor | Remove the "auto" options for some parameters in the chip component. |
-| [#29](https://github.com/tscircuit/props/pull/29) | 🟣 | Update the formatbot GitHub Action to not run against forks. |
-| [#30](https://github.com/tscircuit/props/pull/30) | 🐳 Major | Revert build system to use --dts, add `schPinStyle` and other schematic box improvements, and add support for camelCase route hint points. |
-| [#14](https://github.com/tscircuit/core/pull/14) | 🐳 Major | Introduce support for reporting bundle and install size in the GitHub Actions workflow. |
-| [#13](https://github.com/tscircuit/core/pull/13) | 🐳 Major | Introduce a GitHub Actions workflow to track the bundle size of the project and report the difference between the base branch and the pull request branch. |
-| [#10](https://github.com/tscircuit/core/pull/10) | 🐳 Major | Introduce a new Chip component with support for various properties and rendering of source, schematic, and PCB components. |
-| [#6](https://github.com/tscircuit/core/pull/6) | 🐳 Major | Introduce a new feature to support trace hints in the Trace class |
-| [#4](https://github.com/tscircuit/core/pull/4) | 🐳 Major |  |
-| [#24](https://github.com/tscircuit/props/pull/24) | 🐙 Minor | Modify the `pinLabels` type to accept both numbers and strings to fix React parsing issues. |
-| [#22](https://github.com/tscircuit/props/pull/22) | 🐙 Minor | Make the `for` prop in `<tracehint>` component optional to support a new syntax where the `<tracehint>` is nested inside a `<trace>` component. |
-| [#4](https://github.com/tscircuit/plop/pull/4) | 🐙 Minor | Update the formatbot workflow to not run against forks. |
-
-### [anas-sarkez](https://github.com/anas-sarkez)
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#24](https://github.com/tscircuit/footprinter/pull/24) | 🐳 Major | Added SOT723 component definition. |
-| [#23](https://github.com/tscircuit/footprinter/pull/23) | 🐳 Major | Added SOT563 function and test |
-| [#25](https://github.com/tscircuit/footprinter/pull/25) | 🐙 Minor | Fixed silkscreen issue of some components |
-| [#21](https://github.com/tscircuit/footprinter/pull/21) | 🐙 Minor | Added more tests for the `bga` feature. |
-| [#20](https://github.com/tscircuit/footprinter/pull/20) | 🐙 Minor | Added some missing tests and snapshots |
-| [#29](https://github.com/tscircuit/circuit-to-svg/pull/29) | 🐙 Minor | Integrated custom silkscreen with adjustable stroke width for PCB boundary. |
-| [#27](https://github.com/tscircuit/circuit-to-svg/pull/27) | 🐙 Minor | Updated the silkscreen of the printed circuit board (PCB). |
-| [#31](https://github.com/tscircuit/circuit-to-svg/pull/31) | 🐌 Tiny | Removed the console log for null elements in the `pcb-soup-to-svg.ts` file. |
-| [#30](https://github.com/tscircuit/circuit-to-svg/pull/30) | 🐌 Tiny | Removed console logs that were printing SVG object data. |
+| [#30](https://github.com/tscircuit/props/pull/30) | 🐳 Major | Revert build system to use --dts, add schPinStyle and other schematic box improvements, add support for camelCase route hint points |
+| [#14](https://github.com/tscircuit/core/pull/14) | 🐳 Major | Add support for tracking the install size of the project in addition to the bundle size. |
+| [#13](https://github.com/tscircuit/core/pull/13) | 🐳 Major | Introduce a GitHub Actions workflow to track the bundle size of a pull request and report the difference compared to the base branch. |
+| [#10](https://github.com/tscircuit/core/pull/10) | 🐳 Major | Introduce a new "Chip" component and related functionality, including the ability to define pin labels, render source components, schematic components, and PCB components. |
+| [#6](https://github.com/tscircuit/core/pull/6) | 🐳 Major | Adds support for trace hints, allowing multi-layer routing by defining route points and layers to pass through. |
+| [#130](https://github.com/tscircuit/cli/pull/130) | 🐙 Minor | Change the `flip_y_axis` option to `false` in the `export-gerbers.ts` file. |
+| [#30](https://github.com/tscircuit/circuit-json/pull/30) | 🐙 Minor | Add support for `pin_styles` in the `schematic_component` schema. |
+| [#33](https://github.com/tscircuit/props/pull/33) | 🐙 Minor | Remove "auto" options for some parameters in the chip component. |
+| [#29](https://github.com/tscircuit/props/pull/29) | 🐙 Minor | Update formatbot to not run against forks |
+| [#24](https://github.com/tscircuit/props/pull/24) | 🐙 Minor | Change the type of `pinLabels` in the `chipProps` interface to accept either numbers or strings to fix issues with React parsing. |
+| [#22](https://github.com/tscircuit/props/pull/22) | 🐙 Minor | Make the `for` property in `<tracehint>` optional to support a new syntax where the `<tracehint>` is placed directly inside the `<trace>` element. |
+| [#28](https://github.com/tscircuit/footprinter/pull/28) | 🐙 Minor | Update the `circuit-to-svg` dependency to version `0.0.13` to fix issues with the snapshot generation. |
+| [#4](https://github.com/tscircuit/core/pull/4) | 🟣 |  |
+| [#12](https://github.com/tscircuit/schematic-symbols/pull/12) | 🐳 Major | Explicitly specifying the generated files for the build system |
+| [#10](https://github.com/tscircuit/schematic-symbols/pull/10) | 🐳 Major | Introduce a new function `getInnerSvg` to extract the inner SVG content from the `getSvg` function. |
+| [#4](https://github.com/tscircuit/plop/pull/4) | 🐙 Minor | Update formatbot to not run against forks |
 
 ### [abhijitxy](https://github.com/abhijitxy)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#16](https://github.com/tscircuit/jscad-electronics/pull/16) | 🐳 Major | Implement a BGA (Ball Grid Array) component with various configurable properties and support for missing balls. |
-| [#14](https://github.com/tscircuit/jscad-electronics/pull/14) | 🐳 Major | Implement SOT-23-3P Component |
-| [#73](https://github.com/tscircuit/jscad-fiber/pull/73) | 🐳 Major | Introduce a degree to radian conversion function for rotating 3D objects |
-| [#72](https://github.com/tscircuit/jscad-fiber/pull/72) | 🐳 Major | Implemented the Rotate component to support string input for rotation angles in addition to existing Point3 and array formats. |
+| [#3](https://github.com/tscircuit/mm/pull/3) | 🐳 Major | Add custom unit conversion |
+| [#16](https://github.com/tscircuit/jscad-electronics/pull/16) | 🐳 Major | Implement a new BGA (Ball Grid Array) component with customizable parameters and support for both manual ball placement and footprint string-based placement. |
+| [#14](https://github.com/tscircuit/jscad-electronics/pull/14) | 🐳 Major | Implement the SOT-23-3P component, which is a type of surface-mount transistor package. |
+| [#73](https://github.com/tscircuit/jscad-fiber/pull/73) | 🐳 Major | Introduce a feature to convert degrees to radians for the `rotate` function. |
+| [#72](https://github.com/tscircuit/jscad-fiber/pull/72) | 🐳 Major | Implemented a new feature to support 180-degree string input for the Rotate component. |
+| [#4](https://github.com/tscircuit/mm/pull/4) | 🐙 Minor | Updated the package.json file to remove the `@types/convert-units` and `convert-units` dependencies. |
+
+### [anas-sarkez](https://github.com/anas-sarkez)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#24](https://github.com/tscircuit/footprinter/pull/24) | 🐳 Major | Added a new component called SOT723. |
+| [#23](https://github.com/tscircuit/footprinter/pull/23) | 🐳 Major | Added SOT563 function and test |
+| [#25](https://github.com/tscircuit/footprinter/pull/25) | 🐙 Minor | Fixed silkscreen issue of some components |
+| [#21](https://github.com/tscircuit/footprinter/pull/21) | 🐙 Minor | Added more tests for a BGA footprint with 64 pins, 10mm x 10mm size, 8x8 grid, and 1.27mm pitch. |
+| [#20](https://github.com/tscircuit/footprinter/pull/20) | 🐙 Minor | Added some missing tests and snapshots |
+| [#29](https://github.com/tscircuit/circuit-to-svg/pull/29) | 🐙 Minor | Integrated custom silkscreen |
+| [#31](https://github.com/tscircuit/circuit-to-svg/pull/31) | 🐌 Tiny | Removed the console log statement in the `pcb-soup-to-svg.ts` file. |
+| [#30](https://github.com/tscircuit/circuit-to-svg/pull/30) | 🐌 Tiny | Removed unnecessary console logs from the PCB to SVG conversion function. |
+| [#27](https://github.com/tscircuit/circuit-to-svg/pull/27) | 🐌 Tiny | Fixed silkscreen |
+
+### [andrii-balitskyi](https://github.com/andrii-balitskyi)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#12](https://github.com/tscircuit/specctra-dsn-json/pull/12) | 🐳 Major | Convert the test suite from AVA to Bun:Test |
 
 
 
