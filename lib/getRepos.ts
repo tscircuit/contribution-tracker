@@ -2,13 +2,25 @@ import { octokit } from "../index"
 
 export async function getRepos(): Promise<string[]> {
   if (process.env.FULL_REPO_LIST) {
-    return await octokit.rest.repos
-      .listForOrg({
+    let repos: string[] = [];
+    let page = 1;
+    let hasNextPage = true;
+
+    while (hasNextPage) {
+      const response = await octokit.rest.repos.listForOrg({
         org: "tscircuit",
         type: "public",
         per_page: 100,
-      })
-      .then((res) => res.data.map((repo) => repo.full_name))
+        page: page,
+      });
+
+      repos = repos.concat(response.data.map((repo) => repo.full_name));
+
+      hasNextPage = response.data.length === 100;
+      page++;
+    }
+
+    return repos;
   }
 
   return [
