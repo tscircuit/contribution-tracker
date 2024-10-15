@@ -43,8 +43,8 @@ async function analyzePRWithClaude(
     // If not in cache, perform the analysis
     const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
 
-Major Impact: Introduces a huge feature, fixes a critical or difficult bug
-Minor Impact: Minor bug fixes, easy feature additions, small improvements. Typically more than 30 lines of code changes.
+Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement.
+Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 100 lines of code changes. Adding a new symbol.
 Tiny Impact: Minor documentation changes, typo fixes, small cosmetic fixes, updates to dependencies.
 
 Title: ${pr.title}
@@ -89,7 +89,9 @@ Impact: [Major/Minor/Tiny]`
 
 async function main() {
   const weekStart = new Date()
-  weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 1) // Set to last Saturday
+  // weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 1) // Set to last Saturday
+  weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 4) // Set to last Wednesday
+
   const weekStartString = weekStart.toISOString().split("T")[0]
 
   const repos = await getRepos()
