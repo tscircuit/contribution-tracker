@@ -27,14 +27,14 @@ export interface AnalyzedPR {
 
 async function analyzePRWithClaude(
   pr: PullRequest,
-  repo: string
+  repo: string,
 ): Promise<AnalyzedPR> {
   const cacheKey = `${repo}:${pr.number}`
 
   try {
     // Try to get the analysis from cache
     const cachedAnalysis = JSON.parse(
-      await db.get(cacheKey, { valueEncoding: "json" })
+      await db.get(cacheKey, { valueEncoding: "json" }),
     )
     return cachedAnalysis
   } catch (error) {
@@ -43,8 +43,8 @@ async function analyzePRWithClaude(
     // If not in cache, perform the analysis
     const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
 
-Major Impact: Introduce a feature, fix a bug, improve performance, or refactor code.
-Minor Impact: Minor bug fixes, easy feature additions, small improvements. Typically more than 30 lines of code changes.
+Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement.
+Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 100 lines of code changes. Adding a new symbol.
 Tiny Impact: Minor documentation changes, typo fixes, small cosmetic fixes, updates to dependencies.
 
 Title: ${pr.title}
@@ -63,7 +63,8 @@ Impact: [Major/Minor/Tiny]`
     })
 
     const content = message.content[0].text
-    const description = content.split("Description:")?.[1]?.split("Impact:")[0] ?? ""
+    const description =
+      content.split("Description:")?.[1]?.split("Impact:")[0] ?? ""
     const impact = content.split("Impact:")?.[1] ?? ""
 
     const analysis: AnalyzedPR = {
@@ -88,7 +89,9 @@ Impact: [Major/Minor/Tiny]`
 
 async function main() {
   const weekStart = new Date()
-  weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 1) // Set to last Saturday
+  // weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 1) // Set to last Saturday
+  weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 4) // Set to last Wednesday
+
   const weekStartString = weekStart.toISOString().split("T")[0]
 
   const repos = await getRepos()
@@ -108,19 +111,22 @@ async function main() {
   }
 
   // Group PRs by contributor
-  const contributorPRs = allPRs.reduce((acc, pr) => {
-    if (!acc[pr.contributor]) {
-      acc[pr.contributor] = []
-    }
-    acc[pr.contributor].push(pr)
-    return acc
-  }, {} as Record<string, AnalyzedPR[]>)
+  const contributorPRs = allPRs.reduce(
+    (acc, pr) => {
+      if (!acc[pr.contributor]) {
+        acc[pr.contributor] = []
+      }
+      acc[pr.contributor].push(pr)
+      return acc
+    },
+    {} as Record<string, AnalyzedPR[]>,
+  )
 
   // Sort each contributor's PRs by impact
   const impactOrder = { Major: 3, Minor: 2, Tiny: 1 }
   for (const contributor in contributorPRs) {
     contributorPRs[contributor].sort(
-      (a, b) => impactOrder[b.impact] - impactOrder[a.impact]
+      (a, b) => impactOrder[b.impact] - impactOrder[a.impact],
     )
   }
 
@@ -135,7 +141,7 @@ async function main() {
   const readme = fs.readFileSync("README.md", "utf8")
   const updatedReadme = readme.replace(
     /<!-- START_CURRENT_WEEK -->[\s\S]*<!-- END_CURRENT_WEEK -->/m,
-    `<!-- START_CURRENT_WEEK -->\n\n${markdown}\n\n<!-- END_CURRENT_WEEK -->`
+    `<!-- START_CURRENT_WEEK -->\n\n${markdown}\n\n<!-- END_CURRENT_WEEK -->`,
   )
   fs.writeFileSync("README.md", updatedReadme)
 
