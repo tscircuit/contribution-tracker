@@ -87,7 +87,7 @@ Impact: [Major/Minor/Tiny]`
   }
 }
 
-async function main() {
+export async function generateWeeklyOverview() {
   const weekStart = new Date()
   // weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 1) // Set to last Saturday
   weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 4) // Set to last Wednesday
@@ -148,5 +148,3 @@ async function main() {
   // Close the database
   await db.close()
 }
-
-main().catch(console.error)
