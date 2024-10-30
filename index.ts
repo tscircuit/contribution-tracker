@@ -87,19 +87,15 @@ Impact: [Major/Minor/Tiny]`
   }
 }
 
-export async function generateWeeklyOverview() {
-  const weekStart = new Date()
-  // weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 1) // Set to last Saturday
-  weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 4) // Set to last Wednesday
-
-  const weekStartString = weekStart.toISOString().split("T")[0]
+export async function generateOverview(startDate: string) {
+  const startDateString = startDate
 
   const repos = await getRepos()
   const allPRs: AnalyzedPR[] = []
 
   for (const repo of repos) {
     console.log(`Analyzing ${repo}`)
-    const prs = await getMergedPRs(repo, weekStartString)
+    const prs = await getMergedPRs(repo, startDateString)
     console.log(`Found ${prs.length} merged PRs`)
     for (const pr of prs) {
       if (pr.user.login.includes("renovate")) {
@@ -133,9 +129,9 @@ export async function generateWeeklyOverview() {
   // Flatten the sorted PRs back into a single array
   const sortedPRs = Object.values(contributorPRs).flat()
 
-  const markdown = await generateMarkdown(sortedPRs, weekStartString)
-  fs.writeFileSync(`contribution-overviews/${weekStartString}.md`, markdown)
-  console.log(`Generated contribution-overviews/${weekStartString}.md`)
+  const markdown = await generateMarkdown(sortedPRs, startDateString)
+  fs.writeFileSync(`contribution-overviews/${startDateString}.md`, markdown)
+  console.log(`Generated contribution-overviews/${startDateString}.md`)
 
   // Edit the README.md file
   const readme = fs.readFileSync("README.md", "utf8")
@@ -147,4 +143,11 @@ export async function generateWeeklyOverview() {
 
   // Close the database
   await db.close()
+}
+
+export async function generateWeeklyOverview() {
+  const weekStart = new Date()
+  weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 4) // Set to last Wednesday
+  const weekStartString = weekStart.toISOString().split("T")[0]
+  await generateOverview(weekStartString)
 }
