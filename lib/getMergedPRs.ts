@@ -1,5 +1,4 @@
 import { octokit } from "../index"
-import axios from "redaxios"
 
 export interface PullRequest {
   number: number
@@ -11,12 +10,17 @@ export interface PullRequest {
   html_url: string
   created_at: string
   merged_at: string
-  diff: string // New property to store the diff content
+  diff: string
+  reviews: number
+  reviewRequests: number
+  reviewsGiven: number
+  changesRequested: number
+  isClosed: boolean
 }
 
 export async function getMergedPRs(
   repo: string,
-  since: string
+  since: string,
 ): Promise<PullRequest[]> {
   const [owner, repo_name] = repo.split("/")
   const { data } = await octokit.pulls.list({
@@ -29,11 +33,10 @@ export async function getMergedPRs(
   })
 
   const filteredPRs = data.filter(
-    (pr) => pr.merged_at && new Date(pr.merged_at) >= new Date(since)
+    (pr) => pr.merged_at && new Date(pr.merged_at) >= new Date(since),
   )
 
-  // Fetch diff content for each PR
-  const prsWithDiff = await Promise.all(
+  const prsWithDetails = await Promise.all(
     filteredPRs.map(async (pr) => {
       const { data: diffData } = await octokit.pulls.get({
         owner,
@@ -44,12 +47,38 @@ export async function getMergedPRs(
         },
       })
 
+      const { data: reviews } = await octokit.pulls.listReviews({
+        owner,
+        repo: repo_name,
+        pull_number: pr.number,
+      })
+
+      const { data: reviewRequests } =
+        await octokit.pulls.listRequestedReviewers({
+          owner,
+          repo: repo_name,
+          pull_number: pr.number,
+        })
+
+      const changesRequested = reviews.filter(
+        (review) => review.state === "CHANGES_REQUESTED",
+      ).length
+
+      const reviewsGiven = reviews.filter(
+        (review) => pr.user && review.user?.login === pr.user.login,
+      ).length
+
       return {
         ...pr,
         diff: diffData as unknown as string,
-      }
-    })
+        reviews: reviews.length,
+        reviewRequests: reviewRequests.users.length,
+        reviewsGiven,
+        changesRequested,
+        isClosed: pr.state === "closed",
+      } as PullRequest
+    }),
   )
 
-  return prsWithDiff as PullRequest[]
+  return prsWithDetails as PullRequest[]
 }

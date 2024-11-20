@@ -92,6 +92,17 @@ export async function generateOverview(startDate: string) {
 
   const repos = await getRepos()
   const allPRs: AnalyzedPR[] = []
+  const contributorData: Record<
+    string,
+    {
+      reviewsReceived: number
+      reviewsRequested: number
+      reviewsGiven: number
+      changesRequested: number
+      prsOpened: number
+      prsClosed: number
+    }
+  > = {}
 
   for (const repo of repos) {
     console.log(`Analyzing ${repo}`)
@@ -103,6 +114,26 @@ export async function generateOverview(startDate: string) {
       }
       const analysis = await analyzePRWithClaude(pr, repo)
       allPRs.push(analysis)
+
+      // Aggregate review-related metrics
+      const contributor = pr.user.login
+      if (!contributorData[contributor]) {
+        contributorData[contributor] = {
+          reviewsReceived: 0,
+          reviewsRequested: 0,
+          reviewsGiven: 0,
+          changesRequested: 0,
+          prsOpened: 0,
+          prsClosed: 0,
+        }
+      }
+
+      contributorData[contributor].reviewsReceived += pr.reviews
+      contributorData[contributor].reviewsRequested += pr.reviewRequests
+      contributorData[contributor].reviewsGiven += pr.reviewsGiven
+      contributorData[contributor].changesRequested += pr.changesRequested
+      contributorData[contributor].prsOpened += 1
+      if (pr.isClosed) contributorData[contributor].prsClosed += 1
     }
   }
 
@@ -129,7 +160,11 @@ export async function generateOverview(startDate: string) {
   // Flatten the sorted PRs back into a single array
   const sortedPRs = Object.values(contributorPRs).flat()
 
-  const markdown = await generateMarkdown(sortedPRs, startDateString)
+  const markdown = await generateMarkdown(
+    sortedPRs,
+    contributorData,
+    startDateString,
+  )
   fs.writeFileSync(`contribution-overviews/${startDateString}.md`, markdown)
   console.log(`Generated contribution-overviews/${startDateString}.md`)
 
