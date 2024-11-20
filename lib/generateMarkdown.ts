@@ -25,6 +25,17 @@ export const scoreToStarString = (score: number) => {
 
 export async function generateMarkdown(
   prs: AnalyzedPR[],
+  contributorData: Record<
+    string,
+    {
+      reviewsReceived: number
+      rejections: number
+      approvals: number
+      changesRequested: number
+      prsOpened: number
+      prsClosed: number
+    }
+  >,
   weekStart: string,
 ): Promise<string> {
   let markdown = `# Contribution Overview ${weekStart}\n\n`
@@ -71,6 +82,18 @@ export async function generateMarkdown(
   for (const [contributor, effort] of sortedContributors) {
     markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} |\n`
   }
+  markdown += "\n"
+
+  // Generate Review Table
+  markdown += "## Review Table\n\n"
+  markdown +=
+    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed |\n"
+  markdown +=
+    "|-------------|------------------|-----------|------------|-------------------|------------|------------|\n"
+
+  Object.entries(contributorData).forEach(([contributor, data]) => {
+    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} |\n`
+  })
   markdown += "\n"
 
   // Generate changes by repository

@@ -1,7 +1,6 @@
 import { octokit } from "../index"
-import axios from "redaxios"
 
-export interface PullRequest {
+export interface MergedPullRequest {
   number: number
   title: string
   body: string
@@ -16,8 +15,8 @@ export interface PullRequest {
 
 export async function getMergedPRs(
   repo: string,
-  since: string
-): Promise<PullRequest[]> {
+  since: string,
+): Promise<MergedPullRequest[]> {
   const [owner, repo_name] = repo.split("/")
   const { data } = await octokit.pulls.list({
     owner,
@@ -29,7 +28,7 @@ export async function getMergedPRs(
   })
 
   const filteredPRs = data.filter(
-    (pr) => pr.merged_at && new Date(pr.merged_at) >= new Date(since)
+    (pr) => pr.merged_at && new Date(pr.merged_at) >= new Date(since),
   )
 
   // Fetch diff content for each PR
@@ -48,8 +47,8 @@ export async function getMergedPRs(
         ...pr,
         diff: diffData as unknown as string,
       }
-    })
+    }),
   )
 
-  return prsWithDiff as PullRequest[]
+  return prsWithDiff as MergedPullRequest[]
 }

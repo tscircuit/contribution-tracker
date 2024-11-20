@@ -2,6 +2,10 @@
   "name": "contribution-tracker",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "format": "biome format . --write",
+    "format:check": "biome format ."
+  },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
     "@types/bun": "latest"
