@@ -4,8 +4,9 @@ import Anthropic from "@anthropic-ai/sdk"
 import { Level } from "level"
 import { getRepos } from "./lib/getRepos"
 import { generateMarkdown } from "./lib/generateMarkdown"
-import { getMergedPRs, type PullRequest } from "./lib/getMergedPRs"
+import { getMergedPRs, type MergedPullRequest } from "./lib/getMergedPRs"
 import filterDiff from "./lib/filterDiff"
+import { getAllPRs } from "./lib/getAllPRs"
 
 export const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 const anthropic = new Anthropic({
@@ -26,7 +27,7 @@ export interface AnalyzedPR {
 }
 
 async function analyzePRWithClaude(
-  pr: PullRequest,
+  pr: MergedPullRequest,
   repo: string,
 ): Promise<AnalyzedPR> {
   const cacheKey = `${repo}:${pr.number}`
@@ -96,8 +97,8 @@ export async function generateOverview(startDate: string) {
     string,
     {
       reviewsReceived: number
-      reviewsRequested: number
-      reviewsGiven: number
+      rejections: number
+      approvals: number
       changesRequested: number
       prsOpened: number
       prsClosed: number
@@ -106,6 +107,34 @@ export async function generateOverview(startDate: string) {
 
   for (const repo of repos) {
     console.log(`Analyzing ${repo}`)
+
+    const prsWithReviews = await getAllPRs(repo, startDateString)
+    console.log(`Found ${prsWithReviews.length} total PRs`)
+    for (const pr of prsWithReviews) {
+      if (pr.user.login.includes("renovate")) {
+        continue
+      }
+
+      const contributor = pr.user.login
+      if (!contributorData[contributor]) {
+        contributorData[contributor] = {
+          reviewsReceived: 0,
+          rejections: 0,
+          approvals: 0,
+          changesRequested: 0,
+          prsOpened: 0,
+          prsClosed: 0,
+        }
+      }
+
+      contributorData[contributor].reviewsReceived += pr.reviewsReceived
+      contributorData[contributor].rejections += pr.rejections
+      contributorData[contributor].approvals += pr.approvals
+      contributorData[contributor].changesRequested += pr.changesRequested
+      contributorData[contributor].prsOpened += 1
+      if (pr.isClosed) contributorData[contributor].prsClosed += 1
+    }
+
     const prs = await getMergedPRs(repo, startDateString)
     console.log(`Found ${prs.length} merged PRs`)
     for (const pr of prs) {
@@ -114,26 +143,6 @@ export async function generateOverview(startDate: string) {
       }
       const analysis = await analyzePRWithClaude(pr, repo)
       allPRs.push(analysis)
-
-      // Aggregate review-related metrics
-      const contributor = pr.user.login
-      if (!contributorData[contributor]) {
-        contributorData[contributor] = {
-          reviewsReceived: 0,
-          reviewsRequested: 0,
-          reviewsGiven: 0,
-          changesRequested: 0,
-          prsOpened: 0,
-          prsClosed: 0,
-        }
-      }
-
-      contributorData[contributor].reviewsReceived += pr.reviews
-      contributorData[contributor].reviewsRequested += pr.reviewRequests
-      contributorData[contributor].reviewsGiven += pr.reviewsGiven
-      contributorData[contributor].changesRequested += pr.changesRequested
-      contributorData[contributor].prsOpened += 1
-      if (pr.isClosed) contributorData[contributor].prsClosed += 1
     }
   }
 

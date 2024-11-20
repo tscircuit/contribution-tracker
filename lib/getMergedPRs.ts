@@ -1,6 +1,6 @@
 import { octokit } from "../index"
 
-export interface PullRequest {
+export interface MergedPullRequest {
   number: number
   title: string
   body: string
@@ -10,18 +10,13 @@ export interface PullRequest {
   html_url: string
   created_at: string
   merged_at: string
-  diff: string
-  reviews: number
-  reviewRequests: number
-  reviewsGiven: number
-  changesRequested: number
-  isClosed: boolean
+  diff: string // New property to store the diff content
 }
 
 export async function getMergedPRs(
   repo: string,
   since: string,
-): Promise<PullRequest[]> {
+): Promise<MergedPullRequest[]> {
   const [owner, repo_name] = repo.split("/")
   const { data } = await octokit.pulls.list({
     owner,
@@ -36,7 +31,8 @@ export async function getMergedPRs(
     (pr) => pr.merged_at && new Date(pr.merged_at) >= new Date(since),
   )
 
-  const prsWithDetails = await Promise.all(
+  // Fetch diff content for each PR
+  const prsWithDiff = await Promise.all(
     filteredPRs.map(async (pr) => {
       const { data: diffData } = await octokit.pulls.get({
         owner,
@@ -47,38 +43,12 @@ export async function getMergedPRs(
         },
       })
 
-      const { data: reviews } = await octokit.pulls.listReviews({
-        owner,
-        repo: repo_name,
-        pull_number: pr.number,
-      })
-
-      const { data: reviewRequests } =
-        await octokit.pulls.listRequestedReviewers({
-          owner,
-          repo: repo_name,
-          pull_number: pr.number,
-        })
-
-      const changesRequested = reviews.filter(
-        (review) => review.state === "CHANGES_REQUESTED",
-      ).length
-
-      const reviewsGiven = reviews.filter(
-        (review) => pr.user && review.user?.login === pr.user.login,
-      ).length
-
       return {
         ...pr,
         diff: diffData as unknown as string,
-        reviews: reviews.length,
-        reviewRequests: reviewRequests.users.length,
-        reviewsGiven,
-        changesRequested,
-        isClosed: pr.state === "closed",
-      } as PullRequest
+      }
     }),
   )
 
-  return prsWithDetails as PullRequest[]
+  return prsWithDiff as MergedPullRequest[]
 }
