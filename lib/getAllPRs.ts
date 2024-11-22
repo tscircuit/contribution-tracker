@@ -15,6 +15,7 @@ export interface PullRequest {
   approvals: number
   changesRequested: number
   isClosed: boolean
+  issuesCreated: number
 }
 
 export async function getAllPRs(
@@ -79,6 +80,14 @@ export async function getAllPRs(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
 
+      const { data: issues } = await octokit.issues.listForRepo({
+        owner,
+        repo: repo_name,
+        creator: pr.user.login,
+        since,
+        state: "all",
+      })
+
       const { data: reviewRequests } =
         await octokit.pulls.listRequestedReviewers({
           owner,
@@ -95,6 +104,7 @@ export async function getAllPRs(
         changesRequested,
         approvals,
         isClosed: pr.state === "closed",
+        issuesCreated: issues.length,
       } as PullRequest
     }),
   )

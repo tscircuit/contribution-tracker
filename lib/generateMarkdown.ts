@@ -34,6 +34,7 @@ export async function generateMarkdown(
       changesRequested: number
       prsOpened: number
       prsClosed: number
+      issuesCreated: Number
     }
   >,
   weekStart: string,
@@ -87,12 +88,12 @@ export async function generateMarkdown(
   // Generate Review Table
   markdown += "## Review Table\n\n"
   markdown +=
-    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed |\n"
+    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed | Issues Created |\n"
   markdown +=
-    "|-------------|------------------|-----------|------------|-------------------|------------|------------|\n"
+    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|n"
 
   Object.entries(contributorData).forEach(([contributor, data]) => {
-    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} |\n`
+    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated} |\n`
   })
   markdown += "\n"
 

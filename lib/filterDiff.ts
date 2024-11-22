@@ -8,7 +8,7 @@ export function filterDiff(diffContent: string): string {
 
   // Filter out the excluded files
   const filteredFiles = files.filter(
-    (file) => file.to && !filesToExclude.includes(file.to)
+    (file) => file.to && !filesToExclude.includes(file.to),
   )
 
   // Reconstruct the diff content
