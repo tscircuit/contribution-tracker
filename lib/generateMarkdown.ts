@@ -34,7 +34,7 @@ export async function generateMarkdown(
       changesRequested: number
       prsOpened: number
       prsClosed: number
-      issuesCreated: number
+      issuesCreated: Number
     }
   >,
   weekStart: string,
@@ -58,20 +58,19 @@ export async function generateMarkdown(
 
   // Generate contributor overview table
   markdown += "## Contributor Overview\n\n"
-  markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
-  markdown += "|-------------|-------|-------|-------|-------|----------------|\n"
+  markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ |\n"
+  markdown += "|-------------|-------|-------|-------|-------|\n"
   const impactWorth = { Major: 4, Minor: 2, Tiny: 1 }
   const contributorEffort = prs.reduce(
     (acc, pr) => {
       if (!acc[pr.contributor]) {
-        acc[pr.contributor] = { Major: 0, Minor: 0, Tiny: 0, score: 0, issuesCreated: 0 }
+        acc[pr.contributor] = { Major: 0, Minor: 0, Tiny: 0, score: 0 }
       }
       acc[pr.contributor][pr.impact]++
       const impactScore = impactWorth[pr.impact as keyof typeof impactWorth]
       if (!Number.isNaN(impactScore) && typeof impactScore === "number") {
         acc[pr.contributor].score += impactScore
       }
-      acc[pr.contributor].issuesCreated = contributorData[pr.contributor]?.issuesCreated || 0
 
       return acc
     },
@@ -80,8 +79,9 @@ export async function generateMarkdown(
   const sortedContributors = Object.entries(contributorEffort).sort(
     (a, b) => b[1].score - a[1].score,
   )
+  console.log(sortedContributors)
   for (const [contributor, effort] of sortedContributors) {
-    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} | ${effort.issuesCreated} |\n`
+    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} |\n`
   }
   markdown += "\n"
 
@@ -90,7 +90,7 @@ export async function generateMarkdown(
   markdown +=
     "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed | Issues Created |\n"
   markdown +=
-    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|\n"
+    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|n"
 
   Object.entries(contributorData).forEach(([contributor, data]) => {
     markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated} |\n`
