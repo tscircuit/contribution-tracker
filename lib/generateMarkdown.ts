@@ -34,7 +34,7 @@ export async function generateMarkdown(
       changesRequested: number
       prsOpened: number
       prsClosed: number
-      issuesCreated: number
+      issuesCreated: number | undefined // Allowing undefined for missing issuesCreated
     }
   >,
   weekStart: string,
@@ -59,7 +59,7 @@ export async function generateMarkdown(
   // Generate contributor overview table
   markdown += "## Contributor Overview\n\n"
   markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
-  markdown += "|-------------|-------|-------|-------|-------|----------------|\n"
+  markdown += "|-------------|---------|---------|---------|-----|----------------|\n"
   const impactWorth = { Major: 4, Minor: 2, Tiny: 1 }
   const contributorEffort = prs.reduce(
     (acc, pr) => {
@@ -71,7 +71,7 @@ export async function generateMarkdown(
       if (!Number.isNaN(impactScore) && typeof impactScore === "number") {
         acc[pr.contributor].score += impactScore
       }
-      acc[pr.contributor].issuesCreated = contributorData[pr.contributor]?.issuesCreated || 0
+      acc[pr.contributor].issuesCreated = contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
 
       return acc
     },
@@ -93,7 +93,7 @@ export async function generateMarkdown(
     "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|\n"
 
   Object.entries(contributorData).forEach(([contributor, data]) => {
-    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated} |\n`
+    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated ?? 0} |\n`
   })
   markdown += "\n"
 
