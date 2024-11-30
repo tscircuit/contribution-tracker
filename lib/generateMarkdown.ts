@@ -34,7 +34,7 @@ export async function generateMarkdown(
       changesRequested: number
       prsOpened: number
       prsClosed: number
-      issuesCreated: Number
+      issuesCreated: number | undefined // Allowing undefined for missing issuesCreated
     }
   >,
   weekStart: string,
@@ -58,8 +58,9 @@ export async function generateMarkdown(
 
   // Generate contributor overview table
   markdown += "## Contributor Overview\n\n"
-  markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ |\n"
-  markdown += "|-------------|-------|-------|-------|-------|\n"
+  
+  markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
+  markdown += "|-------------|---------|---------|---------|-----|----------------|\n"
   const impactWorth = { Major: 4, Minor: 2, Tiny: 1 }
   const contributorEffort = prs.reduce(
     (acc, pr) => {
@@ -71,6 +72,9 @@ export async function generateMarkdown(
       if (!Number.isNaN(impactScore) && typeof impactScore === "number") {
         acc[pr.contributor].score += impactScore
       }
+
+      acc[pr.contributor].issuesCreated = contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
+
 
       return acc
     },
