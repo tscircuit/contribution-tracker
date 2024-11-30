@@ -92,12 +92,12 @@ export async function generateMarkdown(
   // Generate Review Table
   markdown += "## Review Table\n\n"
   markdown +=
-    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed | Issues Created |\n"
+    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed | Issues created |\n"
   markdown +=
-    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|n"
+    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|\n"
 
   Object.entries(contributorData).forEach(([contributor, data]) => {
-    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated ?? 0} |\n`
+    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated || 0} |\n`
   })
   markdown += "\n"
 
