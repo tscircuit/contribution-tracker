@@ -13,7 +13,7 @@ function extractBountyAmount(issue: any): number {
 }
 
 // Fetch bountied issues for a specific contributor
-export async function fetchBountiedIssues(
+export async function getBountiedIssues(
   repo: string,
   contributor: string,
   startDate: string,

@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/rest"
-import { fetchBountiedIssues } from "../lib/getBountiedIssues"
+import { getBountiedIssues } from "../lib/getBountiedIssues"
 
 async function testFetchBountiedIssues() {
   // You'll need to set a GitHub token
@@ -11,7 +11,7 @@ async function testFetchBountiedIssues() {
   const startDate = "2024-01-01"
 
   try {
-    const bountiedIssues = await fetchBountiedIssues(
+    const bountiedIssues = await getBountiedIssues(
       repo,
       contributor,
       startDate,
