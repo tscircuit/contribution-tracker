@@ -25,7 +25,7 @@ export async function fetchBountiedIssues(
       creator: contributor,
       since: startDate,
       state: "all",
-      labels: "💎 Bounty", // Filter issues by the bounty label directly
+      label: "💎 Bounty", // Filter issues by the bounty label directly
     })
 
     // Process issues to extract numbers and bounty amounts

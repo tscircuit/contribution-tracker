@@ -6,8 +6,8 @@ async function testFetchBountiedIssues() {
   const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
   // Choose a specific repository and contributor to test
-  const repo = "tscircuit/snippets"
-  const contributor = "sevelbar"
+  const repo = "tscircuit/status"
+  const contributor = "Anshgrover23"
   const startDate = "2024-01-01"
 
   try {
