@@ -7,6 +7,7 @@ import { generateMarkdown } from "./lib/generateMarkdown"
 import { getMergedPRs, type MergedPullRequest } from "./lib/getMergedPRs"
 import filterDiff from "./lib/filterDiff"
 import { getAllPRs } from "./lib/getAllPRs"
+import { fetchBountiedIssues } from './lib/getBountiedIssues'
 
 export const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 const anthropic = new Anthropic({
@@ -102,13 +103,15 @@ export async function generateOverview(startDate: string) {
       changesRequested: number
       prsOpened: number
       prsClosed: number
+      bountiedIssuesCount?: number
+      bountiedIssuesTotal?: number
     }
   > = {}
 
   for (const repo of repos) {
     console.log(`Analyzing ${repo}`)
 
-    const prsWithReviews = await getAllPRs(repo, startDateString)
+    const prsWithReviews = await getAllPRs(repo, startDate)
     console.log(`Found ${prsWithReviews.length} total PRs`)
     for (const pr of prsWithReviews) {
       if (pr.user.login.includes("renovate")) {
@@ -124,6 +127,8 @@ export async function generateOverview(startDate: string) {
           changesRequested: 0,
           prsOpened: 0,
           prsClosed: 0,
+          bountiedIssuesCount: 0,
+          bountiedIssuesTotal: 0,
         }
       }
 
@@ -143,6 +148,16 @@ export async function generateOverview(startDate: string) {
       }
       const analysis = await analyzePRWithClaude(pr, repo)
       allPRs.push(analysis)
+    }
+
+    // Fetch and process bountied issues for each contributor
+    for (const contributor of Object.keys(contributorData)) {
+      const bountiedIssues = await fetchBountiedIssues(repo, contributor, startDateString)
+      contributorData[contributor].bountiedIssuesCount = bountiedIssues.length
+      contributorData[contributor].bountiedIssuesTotal = bountiedIssues.reduce(
+        (total, issue) => total + issue.amount,
+        0,
+      )
     }
   }
 
