@@ -3,11 +3,6 @@ import { Octokit } from "@octokit/rest"
 // Ensure you have access to the Octokit instance
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
-// Function to check if an issue has a bounty label
-function hasBountyLabel(issue: any): boolean {
-  return issue.labels.some((label: any) => label.name === "💎 Bounty")
-}
-
 // Function to extract bounty amount from issue body
 function extractBountyAmount(issue: any): number {
   const bodyMatch = issue.body?.match(/\$(\d+)\s*bounty/i)
@@ -29,14 +24,13 @@ export async function fetchBountiedIssues(
       repo: repo.split('/')[1],
       creator: contributor,
       since: startDate,
-      state: 'all'
-    })
+      state: 'all',
+      labels: "💎 Bounty", // Filter issues by the bounty label directly
+    });
 
-    // Filter and process bountied issues
-    return issues
-      .filter(hasBountyLabel)
-      .map((issue) => ({
-        number: issue.number,
+    // Process issues to extract numbers and bounty amounts
+    return issues.map((issue) => ({
+      number: issue.number,
         amount: extractBountyAmount(issue)
       }))
   } catch (error) {
