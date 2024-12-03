@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/rest"
-import { fetchBountiedIssues } from '../lib/getBountiedIssues'
+import { fetchBountiedIssues } from "../lib/getBountiedIssues"
 
 async function testFetchBountiedIssues() {
   // You'll need to set a GitHub token
@@ -11,13 +11,20 @@ async function testFetchBountiedIssues() {
   const startDate = "2024-01-01"
 
   try {
-    const bountiedIssues = await fetchBountiedIssues(repo, contributor, startDate)
+    const bountiedIssues = await fetchBountiedIssues(
+      repo,
+      contributor,
+      startDate,
+    )
 
     console.log("Bountied Issues Found:")
     console.log(JSON.stringify(bountiedIssues, null, 2))
 
     console.log(`Total Bountied Issues: ${bountiedIssues.length}`)
-    const totalBountyAmount = bountiedIssues.reduce((sum, issue) => sum + issue.amount, 0)
+    const totalBountyAmount = bountiedIssues.reduce(
+      (sum, issue) => sum + issue.amount,
+      0,
+    )
     console.log(`Total Bounty Amount: $${totalBountyAmount}`)
   } catch (error) {
     console.error("Error fetching bountied issues:", error)
