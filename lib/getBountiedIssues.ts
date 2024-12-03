@@ -56,7 +56,6 @@ export async function getBountiedIssues(
         
         // Extract the bounty amount from the bot's comment
         const amount = botComment && botComment.body ? extractBountyAmountFromComment(botComment.body) : 0
-        console.log(botComment?.body);
         
 
         return {
