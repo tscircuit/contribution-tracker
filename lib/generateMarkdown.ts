@@ -60,9 +60,11 @@ export async function generateMarkdown(
 
   // Generate contributor overview table
   markdown += "## Contributor Overview\n\n"
-  
-  markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
-  markdown += "|-------------|---------|---------|---------|-----|----------------|\n"
+
+  markdown +=
+    "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
+  markdown +=
+    "|-------------|---------|---------|---------|-----|----------------|\n"
   const impactWorth = { Major: 4, Minor: 2, Tiny: 1 }
   const contributorEffort = prs.reduce(
     (acc, pr) => {
@@ -75,8 +77,8 @@ export async function generateMarkdown(
         acc[pr.contributor].score += impactScore
       }
 
-      acc[pr.contributor].issuesCreated = contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
-
+      acc[pr.contributor].issuesCreated =
+        contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
 
       return acc
     },

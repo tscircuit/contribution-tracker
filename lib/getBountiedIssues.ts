@@ -16,25 +16,28 @@ function extractBountyAmount(issue: any): number {
 export async function fetchBountiedIssues(
   repo: string,
   contributor: string,
-  startDate: string
+  startDate: string,
 ): Promise<{ number: number; amount: number }[]> {
   try {
     const { data: issues } = await octokit.issues.listForRepo({
-      owner: repo.split('/')[0],
-      repo: repo.split('/')[1],
+      owner: repo.split("/")[0],
+      repo: repo.split("/")[1],
       creator: contributor,
       since: startDate,
-      state: 'all',
+      state: "all",
       labels: "💎 Bounty", // Filter issues by the bounty label directly
-    });
+    })
 
     // Process issues to extract numbers and bounty amounts
     return issues.map((issue) => ({
       number: issue.number,
-        amount: extractBountyAmount(issue)
-      }))
+      amount: extractBountyAmount(issue),
+    }))
   } catch (error) {
-    console.error(`Error fetching bountied issues for ${contributor} in ${repo}:`, error)
+    console.error(
+      `Error fetching bountied issues for ${contributor} in ${repo}:`,
+      error,
+    )
     return []
   }
 }

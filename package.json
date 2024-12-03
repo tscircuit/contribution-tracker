@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "format": "biome format . --write",
-    "format:check": "biome format ."
+    "format:check": "biome format .",
+    "test:github": "bun --env-file=.env scripts/test-github-issues.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
@@ -18,6 +19,7 @@
     "@octokit/rest": "^21.0.0",
     "level": "^8.0.1",
     "parse-diff": "^0.11.1",
-    "redaxios": "^0.5.1"
+    "redaxios": "^0.5.1",
+    "dotenv": "latest"
   }
 }

@@ -7,7 +7,7 @@ import { generateMarkdown } from "./lib/generateMarkdown"
 import { getMergedPRs, type MergedPullRequest } from "./lib/getMergedPRs"
 import filterDiff from "./lib/filterDiff"
 import { getAllPRs } from "./lib/getAllPRs"
-import { fetchBountiedIssues } from './lib/getBountiedIssues'
+import { fetchBountiedIssues } from "./lib/getBountiedIssues"
 
 export const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 const anthropic = new Anthropic({
@@ -152,7 +152,11 @@ export async function generateOverview(startDate: string) {
 
     // Fetch and process bountied issues for each contributor
     for (const contributor of Object.keys(contributorData)) {
-      const bountiedIssues = await fetchBountiedIssues(repo, contributor, startDateString)
+      const bountiedIssues = await fetchBountiedIssues(
+        repo,
+        contributor,
+        startDateString,
+      )
       contributorData[contributor].bountiedIssuesCount = bountiedIssues.length
       contributorData[contributor].bountiedIssuesTotal = bountiedIssues.reduce(
         (total, issue) => total + issue.amount,
