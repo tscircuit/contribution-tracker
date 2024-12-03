@@ -103,6 +103,7 @@ export async function generateOverview(startDate: string) {
       changesRequested: number
       prsOpened: number
       prsClosed: number
+      issuesCreated: number
       bountiedIssuesCount?: number
       bountiedIssuesTotal?: number
     }
@@ -127,6 +128,7 @@ export async function generateOverview(startDate: string) {
           changesRequested: 0,
           prsOpened: 0,
           prsClosed: 0,
+          issuesCreated: 0,
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
         }
@@ -138,6 +140,7 @@ export async function generateOverview(startDate: string) {
       contributorData[contributor].changesRequested += pr.changesRequested
       contributorData[contributor].prsOpened += 1
       if (pr.isClosed) contributorData[contributor].prsClosed += 1
+      contributorData[contributor].issuesCreated += pr.issuesCreated
     }
 
     const prs = await getMergedPRs(repo, startDateString)
