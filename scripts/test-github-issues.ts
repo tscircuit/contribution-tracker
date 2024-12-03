@@ -11,11 +11,7 @@ async function testFetchBountiedIssues() {
   const startDate = "2024-01-01"
 
   try {
-    const bountiedIssues = await getBountiedIssues(
-      repo,
-      contributor,
-      startDate,
-    )
+    const bountiedIssues = await getBountiedIssues(repo, contributor, startDate)
 
     console.log("Bountied Issues Found:")
     console.log(JSON.stringify(bountiedIssues, null, 2))

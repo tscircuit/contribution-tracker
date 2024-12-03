@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/rest"
-import { unescapeLeadingUnderscores } from "typescript";
+import { unescapeLeadingUnderscores } from "typescript"
 
 // Ensure you have access to the Octokit instance
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
@@ -7,10 +7,9 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 // Function to extract bounty amount from the comment body
 function extractBountyAmountFromComment(commentBody: string): number {
   const bodyMatch = commentBody.match(/\$\d+/i)
-  console.log(bodyMatch);
-  
+
   if (bodyMatch) {
-    return parseInt(bodyMatch[0].replace('$', ''))
+    return parseInt(bodyMatch[0].replace("$", ""))
   }
   return 0 // Default if no bounty found
 }
@@ -36,7 +35,7 @@ export async function getBountiedIssues(
 
     // Ensure we only return issues with the bounty label
     const bountiedIssues = issueData.filter((issue) =>
-      issue.labels.some((label: any) => label.name === "💎 Bounty")
+      issue.labels.some((label: any) => label.name === "💎 Bounty"),
     )
 
     // Process issues to extract numbers and bounty amounts from comments
@@ -50,19 +49,21 @@ export async function getBountiedIssues(
         })
 
         // Find the comment by 'algora-pbc[bot]' and extract the bounty amount
-        const botComment = comments.find((comment: any) => comment.user.login === "algora-pbc[bot]")
-        // console.log(botComment);
-        
-        
+        const botComment = comments.find(
+          (comment: any) => comment.user.login === "algora-pbc[bot]",
+        )
+
         // Extract the bounty amount from the bot's comment
-        const amount = botComment && botComment.body ? extractBountyAmountFromComment(botComment.body) : 0
-        
+        const amount =
+          botComment && botComment.body
+            ? extractBountyAmountFromComment(botComment.body)
+            : 0
 
         return {
           number: issue.number,
           amount,
         }
-      })
+      }),
     )
   } catch (error) {
     console.error(

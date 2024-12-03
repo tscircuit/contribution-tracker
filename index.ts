@@ -150,19 +150,26 @@ export async function generateOverview(startDate: string) {
       allPRs.push(analysis)
     }
 
-    // Fetch and process bountied issues for each contributor
-    for (const contributor of Object.keys(contributorData)) {
-      const bountiedIssues = await getBountiedIssues(
-        repo,
-        contributor,
-        startDateString,
-      )
-      contributorData[contributor].bountiedIssuesCount = bountiedIssues.length
-      contributorData[contributor].bountiedIssuesTotal = bountiedIssues.reduce(
-        (total, issue) => total + issue.amount,
-        0,
-      )
-    }
+    // Fetch and process bountied issues for all contributors in parallel
+    const bountiedIssuesPromises = Object.keys(contributorData).map(
+      async (contributor) => {
+        const bountiedIssues = await getBountiedIssues(
+          repo,
+          contributor,
+          startDateString,
+        )
+
+        contributorData[contributor].bountiedIssuesCount =
+          (contributorData[contributor].bountiedIssuesCount || 0) +
+          bountiedIssues.length
+        contributorData[contributor].bountiedIssuesTotal =
+          (contributorData[contributor].bountiedIssuesTotal || 0) +
+          bountiedIssues.reduce((total, issue) => total + issue.amount, 0)
+      },
+    )
+
+    // Wait for all bounty fetching to complete
+    await Promise.all(bountiedIssuesPromises)
   }
 
   // Group PRs by contributor
