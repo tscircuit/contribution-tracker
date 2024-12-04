@@ -99,7 +99,7 @@ export async function generateMarkdown(
   )
   console.log(sortedContributors)
   for (const [contributor, effort] of sortedContributors) {
-    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} |\n`
+    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} | ${effort.issuesCreated} |\n`
   }
   markdown += "\n"
 
