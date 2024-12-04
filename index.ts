@@ -7,6 +7,7 @@ import { generateMarkdown } from "./lib/generateMarkdown"
 import { getMergedPRs, type MergedPullRequest } from "./lib/getMergedPRs"
 import filterDiff from "./lib/filterDiff"
 import { getAllPRs } from "./lib/getAllPRs"
+import { getBountiedIssues } from "./lib/getBountiedIssues"
 
 export const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 const anthropic = new Anthropic({
@@ -102,13 +103,16 @@ export async function generateOverview(startDate: string) {
       changesRequested: number
       prsOpened: number
       prsClosed: number
+      issuesCreated: number
+      bountiedIssuesCount?: number
+      bountiedIssuesTotal?: number
     }
   > = {}
 
   for (const repo of repos) {
     console.log(`Analyzing ${repo}`)
 
-    const prsWithReviews = await getAllPRs(repo, startDateString)
+    const prsWithReviews = await getAllPRs(repo, startDate)
     console.log(`Found ${prsWithReviews.length} total PRs`)
     for (const pr of prsWithReviews) {
       if (pr.user.login.includes("renovate")) {
@@ -124,6 +128,9 @@ export async function generateOverview(startDate: string) {
           changesRequested: 0,
           prsOpened: 0,
           prsClosed: 0,
+          issuesCreated: 0,
+          bountiedIssuesCount: 0,
+          bountiedIssuesTotal: 0,
         }
       }
 
@@ -133,6 +140,7 @@ export async function generateOverview(startDate: string) {
       contributorData[contributor].changesRequested += pr.changesRequested
       contributorData[contributor].prsOpened += 1
       if (pr.isClosed) contributorData[contributor].prsClosed += 1
+      contributorData[contributor].issuesCreated += pr.issuesCreated
     }
 
     const prs = await getMergedPRs(repo, startDateString)
@@ -144,6 +152,27 @@ export async function generateOverview(startDate: string) {
       const analysis = await analyzePRWithClaude(pr, repo)
       allPRs.push(analysis)
     }
+
+    // Fetch and process bountied issues for all contributors in parallel
+    const bountiedIssuesPromises = Object.keys(contributorData).map(
+      async (contributor) => {
+        const bountiedIssues = await getBountiedIssues(
+          repo,
+          contributor,
+          startDateString,
+        )
+
+        contributorData[contributor].bountiedIssuesCount =
+          (contributorData[contributor].bountiedIssuesCount || 0) +
+          bountiedIssues.length
+        contributorData[contributor].bountiedIssuesTotal =
+          (contributorData[contributor].bountiedIssuesTotal || 0) +
+          bountiedIssues.reduce((total, issue) => total + issue.amount, 0)
+      },
+    )
+
+    // Wait for all bounty fetching to complete
+    await Promise.all(bountiedIssuesPromises)
   }
 
   // Group PRs by contributor

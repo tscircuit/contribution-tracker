@@ -35,6 +35,8 @@ export async function generateMarkdown(
       prsOpened: number
       prsClosed: number
       issuesCreated: number | undefined // Allowing undefined for missing issuesCreated
+      bountiedIssuesCount?: number // New field for number of bountied issues
+      bountiedIssuesTotal?: number // New field for total bounty amount
     }
   >,
   weekStart: string,
@@ -58,9 +60,11 @@ export async function generateMarkdown(
 
   // Generate contributor overview table
   markdown += "## Contributor Overview\n\n"
-  
-  markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
-  markdown += "|-------------|---------|---------|---------|-----|----------------|\n"
+
+  markdown +=
+    "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
+  markdown +=
+    "|-------------|---------|---------|---------|-----|----------------|\n"
   const impactWorth = { Major: 4, Minor: 2, Tiny: 1 }
   const contributorEffort = prs.reduce(
     (acc, pr) => {
@@ -73,8 +77,8 @@ export async function generateMarkdown(
         acc[pr.contributor].score += impactScore
       }
 
-      acc[pr.contributor].issuesCreated = contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
-
+      acc[pr.contributor].issuesCreated =
+        contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
 
       return acc
     },
@@ -92,12 +96,12 @@ export async function generateMarkdown(
   // Generate Review Table
   markdown += "## Review Table\n\n"
   markdown +=
-    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed | Issues created |\n"
+    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed | Issues Created | Bountied Issues | Bountied Issue $ |\n"
   markdown +=
-    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|\n"
+    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|-----------------|------------------|\n"
 
   Object.entries(contributorData).forEach(([contributor, data]) => {
-    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated || 0} |\n`
+    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated || 0} | ${data.bountiedIssuesCount || 0} | ${data.bountiedIssuesTotal?.toLocaleString() || 0} |\n`
   })
   markdown += "\n"
 

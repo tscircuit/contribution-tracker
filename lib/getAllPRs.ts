@@ -88,6 +88,8 @@ export async function getAllPRs(
         state: "all",
       })
 
+      const pureIssues = issues.filter(issue => !issue.pull_request);
+
       const { data: reviewRequests } =
         await octokit.pulls.listRequestedReviewers({
           owner,
@@ -104,7 +106,7 @@ export async function getAllPRs(
         changesRequested,
         approvals,
         isClosed: pr.state === "closed",
-        issuesCreated: issues.length,
+        issuesCreated: pureIssues.length,
       } as PullRequest
     }),
   )
