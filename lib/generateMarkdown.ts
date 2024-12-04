@@ -88,11 +88,15 @@ export async function generateMarkdown(
 
   // Then add bounty points separately for each contributor
   Object.entries(contributorEffort).forEach(([contributor, effort]) => {
-    const bountiedAmount = contributorData[contributor]?.bountiedIssuesTotal || 0
+    const bountiedAmount =
+      contributorData[contributor]?.bountiedIssuesTotal || 0
     // Convert bounty amount to minor contributions ($10 = 1 minor contribution)
     let minorContributionsFromBounties = Math.floor(bountiedAmount / 10)
     // Cap at 10 minor contributions as per requirements
-    minorContributionsFromBounties = Math.min(minorContributionsFromBounties, 10)
+    minorContributionsFromBounties = Math.min(
+      minorContributionsFromBounties,
+      10,
+    )
     // Add to score (minor contributions are worth 2 points each)
     effort.score += minorContributionsFromBounties * 2
   })
