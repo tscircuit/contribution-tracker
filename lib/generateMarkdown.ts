@@ -77,6 +77,7 @@ export async function generateMarkdown(
         acc[pr.contributor].score += impactScore
       }
 
+      // Track number of issues created
       acc[pr.contributor].issuesCreated =
         contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
 
@@ -84,12 +85,28 @@ export async function generateMarkdown(
     },
     {} as Record<string, Record<string, number>>,
   )
+
+  // Then add bounty points separately for each contributor
+  Object.entries(contributorEffort).forEach(([contributor, effort]) => {
+    const bountiedAmount =
+      contributorData[contributor]?.bountiedIssuesTotal || 0
+    // Convert bounty amount to minor contributions ($10 = 1 minor contribution)
+    let minorContributionsFromBounties = Math.floor(bountiedAmount / 10)
+    // Cap at 10 minor contributions as per requirements
+    minorContributionsFromBounties = Math.min(
+      minorContributionsFromBounties,
+      10,
+    )
+    // Add to score (minor contributions are worth 2 points each)
+    effort.score += minorContributionsFromBounties * 2
+  })
+
   const sortedContributors = Object.entries(contributorEffort).sort(
     (a, b) => b[1].score - a[1].score,
   )
   console.log(sortedContributors)
   for (const [contributor, effort] of sortedContributors) {
-    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} |\n`
+    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} | ${effort.issuesCreated} |\n`
   }
   markdown += "\n"
 
@@ -125,7 +142,10 @@ export async function generateMarkdown(
     repoPRs
       .sort((a, b) => {
         const impactOrder = { Major: 0, Minor: 1, Tiny: 2 }
-        return impactOrder[a.impact] - impactOrder[b.impact]
+        return (
+          impactOrder[a.impact as keyof typeof impactOrder] -
+          impactOrder[b.impact as keyof typeof impactOrder]
+        )
       })
       .forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(

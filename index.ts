@@ -8,6 +8,7 @@ import { getMergedPRs, type MergedPullRequest } from "./lib/getMergedPRs"
 import filterDiff from "./lib/filterDiff"
 import { getAllPRs } from "./lib/getAllPRs"
 import { getBountiedIssues } from "./lib/getBountiedIssues"
+import { getIssuesCreated } from "./lib/getIssuesCreated"
 
 export const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 const anthropic = new Anthropic({
@@ -140,7 +141,6 @@ export async function generateOverview(startDate: string) {
       contributorData[contributor].changesRequested += pr.changesRequested
       contributorData[contributor].prsOpened += 1
       if (pr.isClosed) contributorData[contributor].prsClosed += 1
-      contributorData[contributor].issuesCreated += pr.issuesCreated
     }
 
     const prs = await getMergedPRs(repo, startDateString)
@@ -173,6 +173,21 @@ export async function generateOverview(startDate: string) {
 
     // Wait for all bounty fetching to complete
     await Promise.all(bountiedIssuesPromises)
+
+    const getIssuesCreatedPromises = Object.keys(contributorData).map(
+      async (contributor) => {
+        const issuesCreated = await getIssuesCreated(
+          repo,
+          contributor,
+          startDateString,
+        )
+
+        contributorData[contributor].issuesCreated =
+          (contributorData[contributor].issuesCreated || 0) + issuesCreated
+      },
+    )
+
+    await Promise.all(getIssuesCreatedPromises)
   }
 
   // Group PRs by contributor
