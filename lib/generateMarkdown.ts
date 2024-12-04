@@ -77,6 +77,16 @@ export async function generateMarkdown(
         acc[pr.contributor].score += impactScore
       }
 
+      // Calculate and add points from bountied issues
+      const bountiedAmount = contributorData[pr.contributor]?.bountiedIssuesTotal || 0
+      // Convert bounty amount to minor contributions ($10 = 1 minor contribution)
+      let minorContributionsFromBounties = Math.floor(bountiedAmount / 10)
+      // Cap at 10 minor contributions as per requirements
+      minorContributionsFromBounties = Math.min(minorContributionsFromBounties, 10)
+      // Add to score (minor contributions are worth 2 points each)
+      acc[pr.contributor].score += minorContributionsFromBounties * 2
+
+      // Track number of issues created
       acc[pr.contributor].issuesCreated =
         contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
 
@@ -125,7 +135,10 @@ export async function generateMarkdown(
     repoPRs
       .sort((a, b) => {
         const impactOrder = { Major: 0, Minor: 1, Tiny: 2 }
-        return impactOrder[a.impact] - impactOrder[b.impact]
+        return (
+          impactOrder[a.impact as keyof typeof impactOrder] -
+          impactOrder[b.impact as keyof typeof impactOrder]
+        )
       })
       .forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
