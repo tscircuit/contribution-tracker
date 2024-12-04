@@ -99,7 +99,7 @@ export async function generateOverview(startDate: string) {
     string,
     {
       reviewsReceived: number
-      rejections: number
+      reviewsRequested: number
       approvals: number
       changesRequested: number
       prsOpened: number
@@ -124,7 +124,7 @@ export async function generateOverview(startDate: string) {
       if (!contributorData[contributor]) {
         contributorData[contributor] = {
           reviewsReceived: 0,
-          rejections: 0,
+          reviewsRequested: 0,
           approvals: 0,
           changesRequested: 0,
           prsOpened: 0,
@@ -136,7 +136,7 @@ export async function generateOverview(startDate: string) {
       }
 
       contributorData[contributor].reviewsReceived += pr.reviewsReceived
-      contributorData[contributor].rejections += pr.rejections
+      contributorData[contributor].reviewsRequested += pr.reviewsRequested
       contributorData[contributor].approvals += pr.approvals
       contributorData[contributor].changesRequested += pr.changesRequested
       contributorData[contributor].prsOpened += 1
