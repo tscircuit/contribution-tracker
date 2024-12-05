@@ -113,9 +113,9 @@ export async function generateMarkdown(
   // Generate Review Table
   markdown += "## Review Table\n\n"
   markdown +=
-    "| Contributor | Reviews Received | Approvals Received | Review Requested | Changes Requested | PRs Opened | PRs Closed | Issues Created | Bountied Issues | Bountied Issue $ |\n"
+    "| Contributor | Reviews Received | Approvals Received | Reviews Requested | Changes Requested | PRs Opened | PRs Closed | Issues Created | Bountied Issues | Bountied Issue $ |\n"
   markdown +=
-    "|-------------|------------------|--------------------|------------------|-------------------|------------|------------|----------------|-----------------|------------------|\n"
+    "|-------------|------------------|--------------------|-------------------|-------------------|------------|------------|----------------|-----------------|------------------|\n"
 
   const sortedReviewData = Object.entries(contributorData).sort(
     ([, a], [, b]) => b.prsClosed - a.prsClosed,
