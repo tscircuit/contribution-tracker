@@ -11,7 +11,7 @@ export interface PullRequest {
   created_at: string
   merged_at: string
   reviewsReceived: number
-  rejections: number
+  reviewsRequested: number
   approvals: number
   changesRequested: number
   isClosed: boolean
@@ -86,12 +86,12 @@ export async function getAllPRs(
           pull_number: pr.number,
         })
 
-      const rejections = reviewRequests.users.length
+      const reviewsRequested = reviewRequests.users.length
 
       return {
         ...pr,
         reviewsReceived,
-        rejections,
+        reviewsRequested,
         changesRequested,
         approvals,
         isClosed: pr.state === "closed",

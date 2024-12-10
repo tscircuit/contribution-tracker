@@ -29,7 +29,7 @@ export async function generateMarkdown(
     string,
     {
       reviewsReceived: number
-      rejections: number
+      reviewsRequested: number
       approvals: number
       changesRequested: number
       prsOpened: number
@@ -112,13 +112,29 @@ export async function generateMarkdown(
 
   // Generate Review Table
   markdown += "## Review Table\n\n"
+  markdown += `
+[contributor-hover]: ## "Name of the contributor"
+[reviews-hover]: ## "Number of reviews received for PRs"
+[approvals-hover]: ## "Number of approvals received for PRs"
+[rejections-hover]: ## "Number of rejections received for PRs"
+[changes-hover]: ## "Number of change requests received"
+[prs-opened-hover]: ## "Number of PRs opened"
+[prs-closed-hover]: ## "Number of PRs closed"
+[issues-hover]: ## "Number of issues created by the contributor"
+[bountied-issues-hover]: ## "Number of issues with a bounty"
+[bountied-issue-amount-hover]: ## "Total bounty amount in dollars"
+`
   markdown +=
-    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed | Issues Created | Bountied Issues | Bountied Issue $ |\n"
+    "| [Contributor][contributor-hover] | [Reviews Received][reviews-hover] | [Approvals][approvals-hover] | [Rejections][rejections-hover] | [Changes Requested][changes-hover] | [PRs Opened][prs-opened-hover] | [PRs Closed][prs-closed-hover] | [Issues Created][issues-hover] | [Bountied Issues][bountied-issues-hover] | [Bountied Issue $][bountied-issue-amount-hover] |\n"
   markdown +=
-    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|-----------------|------------------|\n"
+    "|-------------|------------------|--------------------|-------------------|-------------------|------------|------------|----------------|-----------------|------------------|\n"
 
-  Object.entries(contributorData).forEach(([contributor, data]) => {
-    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated || 0} | ${data.bountiedIssuesCount || 0} | ${data.bountiedIssuesTotal?.toLocaleString() || 0} |\n`
+  const sortedReviewData = Object.entries(contributorData).sort(
+    ([, a], [, b]) => b.prsClosed - a.prsClosed,
+  )
+
+  sortedReviewData.forEach(([contributor, data]) => {
+    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.reviewsRequested} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated || 0} | ${data.bountiedIssuesCount || 0} | ${data.bountiedIssuesTotal?.toLocaleString() || 0} |\n`
   })
   markdown += "\n"
 
