@@ -1,7 +1,10 @@
-import { octokit } from "../index"
+import { octokit } from "./sdks"
 
 export async function getRepos(): Promise<string[]> {
   if (process.env.SHORT_REPO_LIST) {
+    if (process.env.SHORT_REPO_LIST.includes("tscircuit/")) {
+      return process.env.SHORT_REPO_LIST.split(",")
+    }
     return [
       "tscircuit/snippets",
       "tscircuit/tscircuit",
@@ -29,7 +32,7 @@ export async function getRepos(): Promise<string[]> {
       page: page,
     })
 
-    repos = repos.concat(response.data.map((repo) => repo.full_name))
+    repos = repos.concat(response.data.map((repo: any) => repo.full_name))
 
     hasNextPage = response.data.length === 100
     page++
