@@ -1,4 +1,4 @@
-import { octokit } from "../index"
+import { octokit } from "lib/sdks"
 
 export interface PullRequest {
   number: number

@@ -1,114 +1,23 @@
 import { Octokit } from "@octokit/rest"
 import * as fs from "fs"
+import type { AnalyzedPR, ContributorStats } from "./lib/types"
 import Anthropic from "@anthropic-ai/sdk"
 import { Level } from "level"
 import { getRepos } from "./lib/getRepos"
 import { generateMarkdown } from "./lib/generateMarkdown"
-import { getMergedPRs, type MergedPullRequest } from "./lib/getMergedPRs"
-import filterDiff from "./lib/filterDiff"
+import { getMergedPRs } from "./lib/getMergedPRs"
 import { getAllPRs } from "./lib/getAllPRs"
 import { getBountiedIssues } from "./lib/getBountiedIssues"
 import { getIssuesCreated } from "./lib/getIssuesCreated"
-
-export const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
-
-// Initialize LevelDB
-const db = new Level("./pr-analysis-cache", { valueEncoding: "json" })
-
-export interface AnalyzedPR {
-  number: number
-  title: string
-  description: string
-  impact: "Major" | "Minor" | "Tiny"
-  contributor: string
-  repo: string
-  url: string
-}
-
-async function analyzePRWithClaude(
-  pr: MergedPullRequest,
-  repo: string,
-): Promise<AnalyzedPR> {
-  const cacheKey = `${repo}:${pr.number}`
-
-  try {
-    // Try to get the analysis from cache
-    const cachedAnalysis = JSON.parse(
-      await db.get(cacheKey, { valueEncoding: "json" }),
-    )
-    return cachedAnalysis
-  } catch (error) {
-    const reducedDiff = filterDiff(pr.diff)
-
-    // If not in cache, perform the analysis
-    const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
-
-Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement.
-Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 100 lines of code changes. Adding a new symbol.
-Tiny Impact: Minor documentation changes, typo fixes, small cosmetic fixes, updates to dependencies.
-
-Title: ${pr.title}
-Body: ${pr.body}
-Diff:
-${reducedDiff.slice(0, 8000)}
-
-Response format:
-Description: [One-line description]
-Impact: [Major/Minor/Tiny]`
-
-    const message = await anthropic.messages.create({
-      model: "claude-3-haiku-20240307",
-      max_tokens: 1000,
-      messages: [{ role: "user", content: prompt }],
-    })
-
-    const content = message.content[0].text
-    const description =
-      content.split("Description:")?.[1]?.split("Impact:")[0] ?? ""
-    const impact = content.split("Impact:")?.[1] ?? ""
-
-    const analysis: AnalyzedPR = {
-      number: pr.number,
-      title: pr.title,
-      description: description.replace("Description: ", "").trim(),
-      impact: impact?.replace("Impact: ", "")?.trim() as
-        | "Major"
-        | "Minor"
-        | "Tiny",
-      contributor: pr.user.login,
-      repo,
-      url: pr.html_url,
-    }
-
-    // Store the analysis in cache
-    await db.put(cacheKey, analysis, { valueEncoding: "json" })
-
-    return analysis
-  }
-}
+import { analyzePRWithClaude } from "./lib/analyzePRWithClaude"
+import { db } from "./lib/cache"
 
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
 
   const repos = await getRepos()
   const allPRs: AnalyzedPR[] = []
-  const contributorData: Record<
-    string,
-    {
-      reviewsReceived: number
-      rejections: number
-      approvals: number
-      changesRequested: number
-      prsOpened: number
-      prsClosed: number
-      issuesCreated: number
-      bountiedIssuesCount?: number
-      bountiedIssuesTotal?: number
-    }
-  > = {}
+  const contributorData: Record<string, ContributorStats> = {}
 
   for (const repo of repos) {
     console.log(`Analyzing ${repo}`)

@@ -1,4 +1,4 @@
-import type { AnalyzedPR } from "../index"
+import type { AnalyzedPR } from "lib/types"
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {
