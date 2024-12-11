@@ -16,7 +16,7 @@ export async function generateOverview(startDate: string) {
   const startDateString = startDate
 
   const repos = await getRepos()
-  const allPRs: AnalyzedPR[] = []
+  const mergedPrsWithAnalysis: AnalyzedPR[] = []
   const contributorData: Record<string, ContributorStats> = {}
 
   for (const repo of repos) {
@@ -33,11 +33,10 @@ export async function generateOverview(startDate: string) {
       if (!contributorData[contributor]) {
         contributorData[contributor] = {
           reviewsReceived: 0,
-          rejections: 0,
-          approvals: 0,
-          changesRequested: 0,
+          rejectionsReceived: 0,
+          approvalsReceived: 0,
           prsOpened: 0,
-          prsClosed: 0,
+          prsMerged: 0,
           issuesCreated: 0,
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
@@ -45,21 +44,22 @@ export async function generateOverview(startDate: string) {
       }
 
       contributorData[contributor].reviewsReceived += pr.reviewsReceived
-      contributorData[contributor].rejections += pr.rejections
-      contributorData[contributor].approvals += pr.approvals
-      contributorData[contributor].changesRequested += pr.changesRequested
+      contributorData[contributor].rejectionsReceived += pr.rejectionsReceived
+      contributorData[contributor].approvalsReceived += pr.approvalsReceived
       contributorData[contributor].prsOpened += 1
-      if (pr.isClosed) contributorData[contributor].prsClosed += 1
+
+      if (pr.isClosed && pr.merged_at)
+        contributorData[contributor].prsMerged += 1
     }
 
-    const prs = await getMergedPRs(repo, startDateString)
-    console.log(`Found ${prs.length} merged PRs`)
-    for (const pr of prs) {
+    const mergedPrs = await getMergedPRs(repo, startDateString)
+    console.log(`Found ${mergedPrs.length} merged PRs`)
+    for (const pr of mergedPrs) {
       if (pr.user.login.includes("renovate")) {
         continue
       }
       const analysis = await analyzePRWithClaude(pr, repo)
-      allPRs.push(analysis)
+      mergedPrsWithAnalysis.push(analysis)
     }
 
     // Fetch and process bountied issues for all contributors in parallel
@@ -100,7 +100,7 @@ export async function generateOverview(startDate: string) {
   }
 
   // Group PRs by contributor
-  const contributorPRs = allPRs.reduce(
+  const contributorPRs = mergedPrsWithAnalysis.reduce(
     (acc, pr) => {
       if (!acc[pr.contributor]) {
         acc[pr.contributor] = []
@@ -129,6 +129,11 @@ export async function generateOverview(startDate: string) {
   )
   fs.writeFileSync(`contribution-overviews/${startDateString}.md`, markdown)
   console.log(`Generated contribution-overviews/${startDateString}.md`)
+  fs.writeFileSync(
+    `contribution-overviews/${startDateString}.json`,
+    JSON.stringify(contributorData, null, 2),
+  )
+  console.log(`Generated contribution-overviews/${startDateString}.json`)
 
   // Edit the README.md file
   const readme = fs.readFileSync("README.md", "utf8")

@@ -1,26 +1,10 @@
 import { octokit } from "lib/sdks"
-
-export interface PullRequest {
-  number: number
-  title: string
-  body: string
-  user: {
-    login: string
-  }
-  html_url: string
-  created_at: string
-  merged_at: string
-  reviewsReceived: number
-  rejections: number
-  approvals: number
-  changesRequested: number
-  isClosed: boolean
-}
+import type { PullRequest, PullRequestWithReviews } from "./types"
 
 export async function getAllPRs(
   repo: string,
   since: string,
-): Promise<PullRequest[]> {
+): Promise<PullRequestWithReviews[]> {
   const [owner, repo_name] = repo.split("/")
 
   const fetchPRs = async (page = 1): Promise<any[]> => {
@@ -43,6 +27,9 @@ export async function getAllPRs(
   const prs = await fetchPRs()
 
   const filteredPRs = prs.filter((pr) => {
+    if (pr.user.login.includes("renovate")) {
+      return false
+    }
     const createdDate = pr.created_at ? new Date(pr.created_at) : null
     const mergedDate = pr.merged_at ? new Date(pr.merged_at) : null
     const sinceDate = new Date(since)
@@ -72,30 +59,20 @@ export async function getAllPRs(
       const reviews = await fetchReviews(pr.number)
       const reviewsReceived = reviews.length
 
-      const approvals = reviews.filter(
+      const approvalsReceived = reviews.filter(
         (review) => review.state === "APPROVED",
       ).length
-      const changesRequested = reviews.filter(
+      const rejectionsReceived = reviews.filter(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
-
-      const { data: reviewRequests } =
-        await octokit.pulls.listRequestedReviewers({
-          owner,
-          repo: repo_name,
-          pull_number: pr.number,
-        })
-
-      const rejections = reviewRequests.users.length
 
       return {
         ...pr,
         reviewsReceived,
-        rejections,
-        changesRequested,
-        approvals,
+        rejectionsReceived,
+        approvalsReceived,
         isClosed: pr.state === "closed",
-      } as PullRequest
+      } as PullRequestWithReviews
     }),
   )
 

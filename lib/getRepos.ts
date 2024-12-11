@@ -2,6 +2,9 @@ import { octokit } from "./sdks"
 
 export async function getRepos(): Promise<string[]> {
   if (process.env.SHORT_REPO_LIST) {
+    if (process.env.SHORT_REPO_LIST.includes("tscircuit/")) {
+      return process.env.SHORT_REPO_LIST.split(",")
+    }
     return [
       "tscircuit/snippets",
       "tscircuit/tscircuit",

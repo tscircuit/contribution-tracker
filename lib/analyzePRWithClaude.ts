@@ -1,6 +1,6 @@
 import { anthropic } from "./sdks"
 import filterDiff from "./filterDiff"
-import type { MergedPullRequest } from "./getMergedPRs"
+import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "./types"
 import { db } from "./cache"
 
@@ -61,7 +61,7 @@ Impact: [Major/Minor/Tiny]`
     }
 
     // Store the analysis in cache
-    await db.put(cacheKey, analysis, { valueEncoding: "json" })
+    await db.put(cacheKey, JSON.stringify(analysis), { valueEncoding: "json" })
 
     return analysis
   }

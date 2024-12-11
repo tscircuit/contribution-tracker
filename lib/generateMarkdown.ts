@@ -1,4 +1,4 @@
-import type { AnalyzedPR } from "lib/types"
+import type { AnalyzedPR, ContributorStats } from "lib/types"
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {
@@ -25,20 +25,7 @@ export const scoreToStarString = (score: number) => {
 
 export async function generateMarkdown(
   prs: AnalyzedPR[],
-  contributorData: Record<
-    string,
-    {
-      reviewsReceived: number
-      rejections: number
-      approvals: number
-      changesRequested: number
-      prsOpened: number
-      prsClosed: number
-      issuesCreated: number | undefined // Allowing undefined for missing issuesCreated
-      bountiedIssuesCount?: number // New field for number of bountied issues
-      bountiedIssuesTotal?: number // New field for total bounty amount
-    }
-  >,
+  contributorIdToStatsMap: Record<string, ContributorStats>,
   weekStart: string,
 ): Promise<string> {
   let markdown = `# Contribution Overview ${weekStart}\n\n`
@@ -79,7 +66,7 @@ export async function generateMarkdown(
 
       // Track number of issues created
       acc[pr.contributor].issuesCreated =
-        contributorData[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
+        contributorIdToStatsMap[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
 
       return acc
     },
@@ -89,7 +76,7 @@ export async function generateMarkdown(
   // Then add bounty points separately for each contributor
   Object.entries(contributorEffort).forEach(([contributor, effort]) => {
     const bountiedAmount =
-      contributorData[contributor]?.bountiedIssuesTotal || 0
+      contributorIdToStatsMap[contributor]?.bountiedIssuesTotal || 0
     // Convert bounty amount to minor contributions ($10 = 1 minor contribution)
     let minorContributionsFromBounties = Math.floor(bountiedAmount / 10)
     // Cap at 10 minor contributions as per requirements
@@ -104,22 +91,82 @@ export async function generateMarkdown(
   const sortedContributors = Object.entries(contributorEffort).sort(
     (a, b) => b[1].score - a[1].score,
   )
-  console.log(sortedContributors)
   for (const [contributor, effort] of sortedContributors) {
     markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} | ${effort.issuesCreated} |\n`
+
+    // Update the contributor's stats with the new score
+    contributorIdToStatsMap[contributor].score = effort.score
   }
   markdown += "\n"
 
   // Generate Review Table
   markdown += "## Review Table\n\n"
-  markdown +=
-    "| Contributor | Reviews Received | Approvals | Rejections | Changes Requested | PRs Opened | PRs Closed | Issues Created | Bountied Issues | Bountied Issue $ |\n"
-  markdown +=
-    "|-------------|------------------|-----------|------------|-------------------|------------|------------|----------------|-----------------|------------------|\n"
 
-  Object.entries(contributorData).forEach(([contributor, data]) => {
-    markdown += `| [${contributor}](https://github.com/${contributor}) | ${data.reviewsReceived} | ${data.approvals} | ${data.rejections} | ${data.changesRequested} | ${data.prsOpened} | ${data.prsClosed} | ${data.issuesCreated || 0} | ${data.bountiedIssuesCount || 0} | ${data.bountiedIssuesTotal?.toLocaleString() || 0} |\n`
+  const columnTitleToDescription = {
+    "Reviews Received":
+      "Number of reviews received for PRs for this contributor",
+    "Approvals Received":
+      "Number of approvals received for PRs this contributor authored",
+    "Rejections Received":
+      "Number of rejections received for PRs this contributor authored",
+    "PRs Opened": "Number of PRs opened by this contributor",
+    "Issues Created": "Number of issues created by this contributor",
+    "Bountied Issues":
+      "Number of issues this contributor created with a bounty",
+    "Bountied Issue $":
+      "Total bounty amount placed on issues authored by this contributor",
+  }
+
+  markdown += Object.entries(columnTitleToDescription)
+    .map(
+      ([title, description]) =>
+        `[${title.toLowerCase().replace(/\s/g, "-")}-hover]: ## "${description}"`,
+    )
+    .join("\n")
+  markdown += "\n\n"
+
+  const columnTitleToPropName: Record<
+    string,
+    keyof ContributorStats | "contributor"
+  > = {
+    Contributor: "contributor",
+    "Reviews Received": "reviewsReceived",
+    "Approvals Received": "approvalsReceived",
+    "Rejections Received": "rejectionsReceived",
+    "PRs Opened": "prsOpened",
+    "PRs Merged": "prsMerged",
+    "Issues Created": "issuesCreated",
+    "Bountied Issues": "bountiedIssuesCount",
+    "Bountied Issue $": "bountiedIssuesTotal",
+  }
+
+  const columnTitles = Object.keys(columnTitleToPropName)
+
+  markdown += "|"
+  columnTitles.forEach((column) => {
+    markdown += ` ${column} |`
   })
+  markdown += "\n"
+
+  markdown += "|"
+  columnTitles.forEach(() => {
+    markdown += "---|"
+  })
+  markdown += "\n"
+
+  Object.entries(contributorIdToStatsMap).forEach(
+    ([contributor, stats]: any[]) => {
+      markdown += "|"
+      columnTitles.forEach((columnTitle) => {
+        if (columnTitle.toLowerCase().trim() === "contributor") {
+          markdown += ` [${contributor}](#${contributor.replace(/\s/g, "-")}) |`
+          return
+        }
+        markdown += ` ${stats[columnTitleToPropName[columnTitle]]} |`
+      })
+      markdown += "\n"
+    },
+  )
   markdown += "\n"
 
   // Generate changes by repository

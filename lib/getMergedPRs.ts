@@ -1,17 +1,5 @@
 import { octokit } from "lib/sdks"
-
-export interface MergedPullRequest {
-  number: number
-  title: string
-  body: string
-  user: {
-    login: string
-  }
-  html_url: string
-  created_at: string
-  merged_at: string
-  diff: string // New property to store the diff content
-}
+import type { MergedPullRequest } from "lib/types"
 
 export async function getMergedPRs(
   repo: string,
