@@ -5,21 +5,21 @@
     "approvalsReceived": 10,
     "prsOpened": 10,
     "prsMerged": 10,
-    "issuesCreated": 6,
-    "bountiedIssuesCount": 3,
-    "bountiedIssuesTotal": 57,
-    "score": 29
+    "issuesCreated": 7,
+    "bountiedIssuesCount": 4,
+    "bountiedIssuesTotal": 77,
+    "score": 35
   },
   "seveibar": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "prsOpened": 21,
-    "prsMerged": 15,
-    "issuesCreated": 78,
-    "bountiedIssuesCount": 49,
-    "bountiedIssuesTotal": 1300,
-    "score": 57
+    "prsOpened": 25,
+    "prsMerged": 21,
+    "issuesCreated": 89,
+    "bountiedIssuesCount": 51,
+    "bountiedIssuesTotal": 1315,
+    "score": 67
   },
   "samyakshah3008": {
     "reviewsReceived": 7,
@@ -33,43 +33,43 @@
     "score": 3
   },
   "imrishabh18": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 8,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 3,
     "prsOpened": 23,
-    "prsMerged": 20,
+    "prsMerged": 21,
     "issuesCreated": 13,
     "bountiedIssuesCount": 6,
     "bountiedIssuesTotal": 85,
-    "score": 64
+    "score": 63
   },
   "devin-ai-integration[bot]": {
-    "reviewsReceived": 7,
-    "rejectionsReceived": 4,
-    "approvalsReceived": 3,
-    "prsOpened": 8,
-    "prsMerged": 2,
+    "reviewsReceived": 10,
+    "rejectionsReceived": 6,
+    "approvalsReceived": 4,
+    "prsOpened": 10,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 4
+    "score": 6
   },
   "AnasSarkiz": {
-    "reviewsReceived": 27,
+    "reviewsReceived": 28,
     "rejectionsReceived": 3,
-    "approvalsReceived": 7,
+    "approvalsReceived": 8,
     "prsOpened": 9,
-    "prsMerged": 7,
-    "issuesCreated": 3,
+    "prsMerged": 9,
+    "issuesCreated": 4,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 20
+    "score": 28
   },
   "techmannih": {
-    "reviewsReceived": 6,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 2,
-    "prsOpened": 4,
+    "reviewsReceived": 8,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 3,
+    "prsOpened": 5,
     "prsMerged": 2,
     "issuesCreated": 1,
     "bountiedIssuesCount": 0,
@@ -82,10 +82,10 @@
     "approvalsReceived": 10,
     "prsOpened": 14,
     "prsMerged": 13,
-    "issuesCreated": 7,
-    "bountiedIssuesCount": 3,
-    "bountiedIssuesTotal": 70,
-    "score": 39
+    "issuesCreated": 9,
+    "bountiedIssuesCount": 4,
+    "bountiedIssuesTotal": 95,
+    "score": 43
   },
   "UdaykiranRegimudi": {
     "reviewsReceived": 2,
@@ -106,7 +106,7 @@
     "issuesCreated": 2,
     "bountiedIssuesCount": 1,
     "bountiedIssuesTotal": 5,
-    "score": 14
+    "score": 10
   },
   "divanshu-go": {
     "reviewsReceived": 3,
@@ -127,7 +127,7 @@
     "issuesCreated": 1,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 14
+    "score": 12
   },
   "ni9999": {
     "reviewsReceived": 5,
