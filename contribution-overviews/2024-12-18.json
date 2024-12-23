@@ -1,36 +1,69 @@
 {
+  "AnasSarkiz": {
+    "reviewsReceived": 8,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 4,
+    "prsOpened": 4,
+    "prsMerged": 4,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "score": 10
+  },
   "seveibar": {
     "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "prsOpened": 15,
-    "prsMerged": 13,
-    "issuesCreated": 55,
-    "bountiedIssuesCount": 17,
-    "bountiedIssuesTotal": 447,
+    "prsMerged": 14,
+    "issuesCreated": 61,
+    "bountiedIssuesCount": 21,
+    "bountiedIssuesTotal": 512,
     "score": 54
   },
+  "Abse2001": {
+    "reviewsReceived": 20,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 6,
+    "prsOpened": 7,
+    "prsMerged": 5,
+    "issuesCreated": 2,
+    "bountiedIssuesCount": 1,
+    "bountiedIssuesTotal": 10,
+    "score": 12
+  },
   "Anshgrover23": {
-    "reviewsReceived": 25,
-    "rejectionsReceived": 7,
-    "approvalsReceived": 1,
-    "prsOpened": 4,
-    "prsMerged": 1,
+    "reviewsReceived": 37,
+    "rejectionsReceived": 8,
+    "approvalsReceived": 2,
+    "prsOpened": 5,
+    "prsMerged": 2,
     "issuesCreated": 2,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "score": 4
   },
-  "Abse2001": {
-    "reviewsReceived": 14,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 4,
-    "prsOpened": 6,
-    "prsMerged": 4,
+  "devin-ai-integration[bot]": {
+    "reviewsReceived": 10,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 6,
+    "prsOpened": 12,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 8
+    "score": 16
+  },
+  "techmannih": {
+    "reviewsReceived": 26,
+    "rejectionsReceived": 9,
+    "approvalsReceived": 11,
+    "prsOpened": 13,
+    "prsMerged": 7,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "score": 14
   },
   "rohittcodes": {
     "reviewsReceived": 6,
@@ -43,49 +76,27 @@
     "bountiedIssuesTotal": 20,
     "score": 10
   },
-  "devin-ai-integration[bot]": {
-    "reviewsReceived": 7,
+  "ShiboSoftwareDev": {
+    "reviewsReceived": 8,
     "rejectionsReceived": 1,
-    "approvalsReceived": 5,
-    "prsOpened": 10,
-    "prsMerged": 6,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "score": 14
-  },
-  "techmannih": {
-    "reviewsReceived": 24,
-    "rejectionsReceived": 7,
-    "approvalsReceived": 11,
-    "prsOpened": 10,
-    "prsMerged": 7,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "score": 16
-  },
-  "AnasSarkiz": {
-    "reviewsReceived": 7,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "prsOpened": 3,
-    "prsMerged": 2,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "score": 6
+    "approvalsReceived": 4,
+    "prsOpened": 5,
+    "prsMerged": 3,
+    "issuesCreated": 6,
+    "bountiedIssuesCount": 4,
+    "bountiedIssuesTotal": 195,
+    "score": 30
   },
   "imrishabh18": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 9,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "prsOpened": 8,
-    "prsMerged": 7,
-    "issuesCreated": 12,
-    "bountiedIssuesCount": 3,
-    "bountiedIssuesTotal": 30,
-    "score": 20
+    "approvalsReceived": 4,
+    "prsOpened": 9,
+    "prsMerged": 8,
+    "issuesCreated": 14,
+    "bountiedIssuesCount": 4,
+    "bountiedIssuesTotal": 40,
+    "score": 23
   },
   "Niharika0104": {
     "reviewsReceived": 2,
@@ -106,16 +117,5 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0
-  },
-  "ShiboSoftwareDev": {
-    "reviewsReceived": 2,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 2,
-    "prsOpened": 2,
-    "prsMerged": 2,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "score": 8
   }
 }
