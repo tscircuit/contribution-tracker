@@ -5,10 +5,10 @@
     "approvalsReceived": 1,
     "prsOpened": 23,
     "prsMerged": 21,
-    "issuesCreated": 73,
-    "bountiedIssuesCount": 32,
-    "bountiedIssuesTotal": 757,
-    "score": 74
+    "issuesCreated": 83,
+    "bountiedIssuesCount": 33,
+    "bountiedIssuesTotal": 782,
+    "score": 80
   },
   "AnasSarkiz": {
     "reviewsReceived": 8,
@@ -22,37 +22,37 @@
     "score": 10
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 13,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 8,
-    "prsOpened": 9,
-    "prsMerged": 7,
-    "issuesCreated": 9,
-    "bountiedIssuesCount": 4,
-    "bountiedIssuesTotal": 195,
-    "score": 40
-  },
-  "Abse2001": {
-    "reviewsReceived": 28,
+    "reviewsReceived": 17,
     "rejectionsReceived": 1,
     "approvalsReceived": 9,
-    "prsOpened": 10,
+    "prsOpened": 9,
     "prsMerged": 8,
-    "issuesCreated": 5,
-    "bountiedIssuesCount": 3,
-    "bountiedIssuesTotal": 30,
-    "score": 22
+    "issuesCreated": 11,
+    "bountiedIssuesCount": 5,
+    "bountiedIssuesTotal": 210,
+    "score": 44
+  },
+  "Abse2001": {
+    "reviewsReceived": 29,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 10,
+    "prsOpened": 11,
+    "prsMerged": 9,
+    "issuesCreated": 6,
+    "bountiedIssuesCount": 5,
+    "bountiedIssuesTotal": 52,
+    "score": 28
   },
   "techmannih": {
-    "reviewsReceived": 29,
+    "reviewsReceived": 30,
     "rejectionsReceived": 11,
-    "approvalsReceived": 11,
-    "prsOpened": 15,
-    "prsMerged": 8,
-    "issuesCreated": 0,
+    "approvalsReceived": 12,
+    "prsOpened": 16,
+    "prsMerged": 9,
+    "issuesCreated": 2,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 16
+    "score": 20
   },
   "devin-ai-integration[bot]": {
     "reviewsReceived": 10,
@@ -63,18 +63,18 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 19
+    "score": 15
   },
   "Anshgrover23": {
-    "reviewsReceived": 45,
-    "rejectionsReceived": 13,
-    "approvalsReceived": 4,
-    "prsOpened": 10,
-    "prsMerged": 4,
+    "reviewsReceived": 57,
+    "rejectionsReceived": 14,
+    "approvalsReceived": 6,
+    "prsOpened": 13,
+    "prsMerged": 6,
     "issuesCreated": 3,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 12
+    "score": 16
   },
   "rohittcodes": {
     "reviewsReceived": 6,
@@ -93,10 +93,10 @@
     "approvalsReceived": 7,
     "prsOpened": 17,
     "prsMerged": 14,
-    "issuesCreated": 16,
-    "bountiedIssuesCount": 6,
-    "bountiedIssuesTotal": 95,
-    "score": 45
+    "issuesCreated": 17,
+    "bountiedIssuesCount": 7,
+    "bountiedIssuesTotal": 100,
+    "score": 48
   },
   "karthik-nair-20": {
     "reviewsReceived": 0,
