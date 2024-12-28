@@ -7,6 +7,7 @@ export interface ContributorStats {
   issuesCreated: number
   bountiedIssuesCount?: number
   bountiedIssuesTotal?: number
+  reviewsAuthored?: number
   score?: number
 }
 
@@ -31,6 +32,7 @@ export interface PullRequestWithReviews extends PullRequest {
   rejectionsReceived: number
   approvalsReceived: number
   isClosed: boolean
+  reviewers: string[]
 }
 
 export interface AnalyzedPR {

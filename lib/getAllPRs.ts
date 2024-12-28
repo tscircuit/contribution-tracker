@@ -66,12 +66,14 @@ export async function getAllPRs(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
 
+      const reviewerLogins = reviews.map((review) => review.user.login)
       return {
         ...pr,
         reviewsReceived,
         rejectionsReceived,
         approvalsReceived,
         isClosed: pr.state === "closed",
+        reviewers: reviewerLogins,
       } as PullRequestWithReviews
     }),
   )

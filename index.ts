@@ -48,6 +48,24 @@ export async function generateOverview(startDate: string) {
       contributorData[contributor].approvalsReceived += pr.approvalsReceived
       contributorData[contributor].prsOpened += 1
 
+      // Count reviews authored by each reviewer
+      for (const reviewer of pr.reviewers) {
+        if (!contributorData[reviewer]) {
+          contributorData[reviewer] = {
+            reviewsReceived: 0,
+            rejectionsReceived: 0,
+            approvalsReceived: 0,
+            prsOpened: 0,
+            prsMerged: 0,
+            issuesCreated: 0,
+            bountiedIssuesCount: 0,
+            bountiedIssuesTotal: 0,
+            reviewsAuthored: 0,
+          }
+        }
+        contributorData[reviewer].reviewsAuthored! += 1
+      }
+
       if (pr.isClosed && pr.merged_at)
         contributorData[contributor].prsMerged += 1
     }
@@ -121,6 +139,13 @@ export async function generateOverview(startDate: string) {
 
   // Flatten the sorted PRs back into a single array
   const sortedPRs = Object.values(contributorPRs).flat()
+
+  // Add points for reviews authored
+  for (const contributor in contributorData) {
+    const stats = contributorData[contributor]
+    // 1 point for each authored review (tiny contribution)
+    stats.score = (stats.score || 0) + (stats.reviewsAuthored || 0)
+  }
 
   const markdown = await generateMarkdown(
     sortedPRs,
