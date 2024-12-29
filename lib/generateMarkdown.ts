@@ -135,6 +135,7 @@ export async function generateMarkdown(
     .join("\n")
   markdown += "\n\n"
 
+  // Define column title to property name mapping
   const columnTitleToPropName: Record<
     string,
     keyof ContributorStats | "contributor"
@@ -151,6 +152,16 @@ export async function generateMarkdown(
     "Bountied Issues": "bountiedIssuesCount",
     "Bountied Issue $": "bountiedIssuesTotal"
   }
+
+  // Debug: Print all contributor stats to verify data
+  console.log("\nDebug: All contributor stats:")
+  Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
+    console.log(`${contributor}:`, {
+      reviewsAuthored: stats.reviewsAuthored,
+      reviewsReceived: stats.reviewsReceived,
+      approvalsReceived: stats.approvalsReceived
+    })
+  })
 
   // Define explicit column order with Reviews Authored
   const columnTitles = [
@@ -190,8 +201,15 @@ export async function generateMarkdown(
   })
 
   // Generate table header with all defined columns
-  markdown += "| " + columnTitles.join(" | ") + " |\n"
-  markdown += "|" + columnTitles.map(() => "---").join("|") + "|\n"
+  const tableHeader = columnTitles.map(title => ` ${title} `).join("|")
+  const tableSeparator = columnTitles.map(() => "-------------").join("|")
+  
+  markdown += `|${tableHeader}|\n`
+  markdown += `|${tableSeparator}|\n`
+  
+  console.log("Debug: Generated table header:")
+  console.log(`|${tableHeader}|`)
+  console.log(`|${tableSeparator}|`)
 
   // Generate table rows with debug logging
   Object.entries(contributorIdToStatsMap).forEach(
@@ -200,12 +218,17 @@ export async function generateMarkdown(
       markdown += "|"
       columnTitles.forEach((columnTitle) => {
         if (columnTitle === "Contributor") {
-          markdown += ` [${contributor}](#${contributor.replace(/\s/g, "-")}) |`
+          markdown += ` [${contributor}](https://github.com/${contributor}) |`
           return
         }
         const propName = columnTitleToPropName[columnTitle]
-        console.log(`Debug: Column ${columnTitle} -> prop ${propName} -> value ${stats[propName]}`)
+        if (!propName) {
+          console.error(`Error: No property mapping found for column "${columnTitle}"`)
+          markdown += ` 0 |`
+          return
+        }
         const value = stats[propName] ?? 0
+        console.log(`Debug: ${contributor} - ${columnTitle} (${propName}) = ${value}`)
         markdown += ` ${value} |`
       })
       markdown += "\n"
