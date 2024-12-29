@@ -152,16 +152,11 @@ export async function generateMarkdown(
     "Bountied Issue $": "bountiedIssuesTotal"
   }
 
-  // Debug: Print current state before table generation
-  console.log("Debug: Column Title to Property Name mapping:", columnTitleToPropName)
-  console.log("Debug: Contributor Stats before table generation:", contributorIdToStatsMap)
-
-  // Define explicit column order
-  // Define explicit column order with Reviews Authored after Reviews Received
+  // Define explicit column order with Reviews Authored
   const columnTitles = [
     "Contributor",
     "Reviews Received",
-    "Reviews Authored",
+    "Reviews Authored",  // Ensure Reviews Authored is included
     "Approvals",
     "Rejections",
     "Changes Requested",
@@ -172,9 +167,9 @@ export async function generateMarkdown(
     "Bountied Issue $"
   ]
 
-  // Debug: Print column titles and their mappings
-  console.log("Debug: Column Titles:", columnTitles)
-  console.log("Debug: Column Mappings:", columnTitleToPropName)
+  // Debug: Print current state before table generation
+  console.log("Debug: Using explicit column order:", columnTitles)
+  console.log("Debug: First contributor stats:", Object.entries(contributorIdToStatsMap)[0])
 
   // Ensure all column titles have corresponding property mappings
   Object.keys(columnTitleToPropName).forEach(title => {
