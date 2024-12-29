@@ -103,6 +103,7 @@ export async function generateMarkdown(
   markdown += "## Review Table\n\n"
 
   const columnTitleToDescription = {
+    Contributor: "GitHub username of the contributor",
     "Reviews Received":
       "Number of reviews received for PRs for this contributor",
     "Reviews Authored":
