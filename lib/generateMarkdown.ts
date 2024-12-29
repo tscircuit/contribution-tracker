@@ -139,7 +139,7 @@ export async function generateMarkdown(
     string,
     keyof ContributorStats | "contributor"
   > = {
-    Contributor: "contributor",
+    "Contributor": "contributor",
     "Reviews Received": "reviewsReceived",
     "Reviews Authored": "reviewsAuthored",
     "Approvals": "approvalsReceived",
@@ -149,8 +149,12 @@ export async function generateMarkdown(
     "PRs Closed": "prsMerged",
     "Issues Created": "issuesCreated",
     "Bountied Issues": "bountiedIssuesCount",
-    "Bountied Issue $": "bountiedIssuesTotal",
+    "Bountied Issue $": "bountiedIssuesTotal"
   }
+
+  // Debug: Print current state before table generation
+  console.log("Debug: Column Title to Property Name mapping:", columnTitleToPropName)
+  console.log("Debug: Contributor Stats before table generation:", contributorIdToStatsMap)
 
   // Define explicit column order
   // Define explicit column order with Reviews Authored after Reviews Received
@@ -188,15 +192,19 @@ export async function generateMarkdown(
   markdown += "| " + columnTitles.join(" | ") + " |\n"
   markdown += "|" + columnTitles.map(() => "---").join("|") + "|\n"
 
+  // Generate table rows with debug logging
   Object.entries(contributorIdToStatsMap).forEach(
     ([contributor, stats]: any[]) => {
+      console.log(`Debug: Processing contributor ${contributor}:`, stats)
       markdown += "|"
       columnTitles.forEach((columnTitle) => {
-        if (columnTitle.toLowerCase().trim() === "contributor") {
+        if (columnTitle === "Contributor") {
           markdown += ` [${contributor}](#${contributor.replace(/\s/g, "-")}) |`
           return
         }
-        const value = stats[columnTitleToPropName[columnTitle]] ?? 0
+        const propName = columnTitleToPropName[columnTitle]
+        console.log(`Debug: Column ${columnTitle} -> prop ${propName} -> value ${stats[propName]}`)
+        const value = stats[propName] ?? 0
         markdown += ` ${value} |`
       })
       markdown += "\n"
