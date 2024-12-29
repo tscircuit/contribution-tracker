@@ -110,21 +110,16 @@ export async function generateMarkdown(
 
   const columnTitleToDescription = {
     Contributor: "GitHub username of the contributor",
-    "Reviews Received":
-      "Number of reviews received for PRs for this contributor",
-    "Reviews Authored":
-      "Number of reviews this contributor has authored",
-    "Approvals": "Number of approvals received for PRs this contributor authored",
-    "Rejections": "Number of rejections received for PRs this contributor authored",
-    "Changes Requested":
-      "Number of changes requested for PRs this contributor authored",
+    "Reviews Received": "Number of reviews received for PRs for this contributor",
+    "Approvals Given": "Number of approvals this contributor has given to other PRs",
+    "Changes Requested Given": "Number of changes this contributor has requested on other PRs",
+    "Approvals Received": "Number of approvals received for PRs this contributor authored",
+    "Changes Requested": "Number of changes requested for PRs this contributor authored",
     "PRs Opened": "Number of PRs opened by this contributor",
     "PRs Closed": "Number of PRs closed by this contributor",
     "Issues Created": "Number of issues created by this contributor",
-    "Bountied Issues":
-      "Number of issues this contributor created with a bounty",
-    "Bountied Issue $":
-      "Total bounty amount placed on issues authored by this contributor",
+    "Bountied Issues": "Number of issues this contributor created with a bounty",
+    "Bountied Issue $": "Total bounty amount placed on issues authored by this contributor",
   }
 
   markdown += Object.entries(columnTitleToDescription)
@@ -142,9 +137,9 @@ export async function generateMarkdown(
   > = {
     "Contributor": "contributor",
     "Reviews Received": "reviewsReceived",
-    "Reviews Authored": "reviewsAuthored",
-    "Approvals": "approvalsReceived",
-    "Rejections": "rejectionsReceived",
+    "Approvals Given": "approvalsGiven",
+    "Changes Requested Given": "changesRequestedGiven",
+    "Approvals Received": "approvalsReceived",
     "Changes Requested": "changesRequested",
     "PRs Opened": "prsOpened",
     "PRs Closed": "prsMerged",
@@ -160,18 +155,17 @@ export async function generateMarkdown(
       approvalsGiven: stats.approvalsGiven,
       changesRequested: stats.changesRequested,
       reviewsReceived: stats.reviewsReceived,
-      approvalsReceived: stats.approvalsReceived,
-      changesRequestedReceived: stats.changesRequestedReceived
+      approvalsReceived: stats.approvalsReceived
     })
   })
 
-  // Define explicit column order with Reviews Authored
+  // Define explicit column order
   const columnTitles = [
     "Contributor",
     "Reviews Received",
-    "Reviews Authored",  // Ensure Reviews Authored is included
-    "Approvals",
-    "Rejections",
+    "Approvals Given",
+    "Changes Requested Given",
+    "Approvals Received",
     "Changes Requested",
     "PRs Opened",
     "PRs Closed",
@@ -195,7 +189,6 @@ export async function generateMarkdown(
       changesRequested: stats.changesRequested,
       reviewsReceived: stats.reviewsReceived,
       approvalsReceived: stats.approvalsReceived,
-      changesRequestedReceived: stats.changesRequestedReceived,
       score: stats.score
     })
   })

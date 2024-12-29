@@ -1,14 +1,14 @@
 export interface ContributorStats {
   reviewsReceived: number
   approvalsReceived: number
-  changesRequestedReceived: number
+  changesRequested: number  // Number of changes requested by this contributor
   prsOpened: number
   prsMerged: number
   issuesCreated: number
   bountiedIssuesCount?: number
   bountiedIssuesTotal?: number
   approvalsGiven: number  // Number of approvals given by this contributor
-  changesRequested: number  // Number of changes requested by this contributor
+  changesRequestedGiven: number  // Number of changes requested given by this contributor
   score?: number
 }
 
