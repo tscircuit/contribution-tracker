@@ -102,6 +102,16 @@ export async function generateMarkdown(
   // Generate Review Table
   markdown += "## Review Table\n\n"
 
+  // Initialize any undefined stats to 0 and ensure numeric values
+  Object.values(contributorIdToStatsMap).forEach(stats => {
+    // Convert all review-related stats to numbers and initialize to 0 if undefined/NaN
+    stats.changesRequested = Number(stats.changesRequested) || 0
+    stats.changesRequestedGiven = Number(stats.changesRequestedGiven) || 0
+    stats.approvalsGiven = Number(stats.approvalsGiven) || 0
+    stats.approvalsReceived = Number(stats.approvalsReceived) || 0
+    stats.reviewsReceived = Number(stats.reviewsReceived) || 0
+  })
+
   // Debug: Print current state of contributorIdToStatsMap
   console.log("Debug: Full contributor stats:")
   Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
@@ -112,11 +122,11 @@ export async function generateMarkdown(
     Contributor: "GitHub username of the contributor",
     "Reviews Received": "Number of reviews received for PRs for this contributor",
     "Approvals Given": "Number of approvals this contributor has given to other PRs",
-    "Approvals Received": "Number of approvals received for PRs this contributor authored",
     "Changes Requested Given": "Number of changes this contributor has requested on other PRs",
-    "Changes Requested Received": "Number of changes requested for PRs this contributor authored",
+    "Approvals Received": "Number of approvals received for PRs this contributor authored",
+    "Changes Requested": "Number of changes requested for PRs this contributor authored",
     "PRs Opened": "Number of PRs opened by this contributor",
-    "PRs Closed": "Number of PRs closed by this contributor",
+    "PRs Merged": "Number of PRs merged by this contributor",
     "Issues Created": "Number of issues created by this contributor",
     "Bountied Issues": "Number of issues this contributor created with a bounty",
     "Bountied Issue $": "Total bounty amount placed on issues authored by this contributor",
@@ -138,11 +148,11 @@ export async function generateMarkdown(
     "Contributor": "contributor",
     "Reviews Received": "reviewsReceived",
     "Approvals Given": "approvalsGiven",
-    "Approvals Received": "approvalsReceived",
     "Changes Requested Given": "changesRequestedGiven",
-    "Changes Requested Received": "changesRequested",
+    "Approvals Received": "approvalsReceived",
+    "Changes Requested": "changesRequested",
     "PRs Opened": "prsOpened",
-    "PRs Closed": "prsMerged",
+    "PRs Merged": "prsMerged",
     "Issues Created": "issuesCreated",
     "Bountied Issues": "bountiedIssuesCount",
     "Bountied Issue $": "bountiedIssuesTotal"
@@ -151,13 +161,6 @@ export async function generateMarkdown(
   // Debug: Print all contributor stats to verify data
   console.log("\nDebug: All contributor stats with numeric verification:")
   Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
-    // Ensure all stats are properly initialized to 0 if undefined
-    stats.changesRequested = stats.changesRequested || 0
-    stats.changesRequestedGiven = stats.changesRequestedGiven || 0
-    stats.approvalsGiven = stats.approvalsGiven || 0
-    stats.approvalsReceived = stats.approvalsReceived || 0
-    stats.reviewsReceived = stats.reviewsReceived || 0
-
     console.log(`${contributor}:`, {
       approvalsGiven: stats.approvalsGiven,
       changesRequestedGiven: stats.changesRequestedGiven,
@@ -174,11 +177,11 @@ export async function generateMarkdown(
     "Contributor",
     "Reviews Received",
     "Approvals Given",
-    "Approvals Received",
     "Changes Requested Given",
-    "Changes Requested Received",
+    "Approvals Received",
+    "Changes Requested",
     "PRs Opened",
-    "PRs Closed",
+    "PRs Merged",
     "Issues Created",
     "Bountied Issues",
     "Bountied Issue $"
@@ -234,12 +237,26 @@ export async function generateMarkdown(
     }
   })
 
+  // Generate hover descriptions for all columns
+  const hoverDescriptions = columnTitles
+    .filter(title => columnTitleToDescription[title as keyof typeof columnTitleToDescription])
+    .map(title => 
+      `[${title.toLowerCase().replace(/\s/g, "-")}-hover]: ## "${columnTitleToDescription[title as keyof typeof columnTitleToDescription]}"`
+    )
+    .join("\n")
+  markdown += hoverDescriptions + "\n\n"
+
   // Generate table header with all defined columns
+  console.log("Debug: Generating table with columns:", columnTitles)
   const tableHeader = columnTitles.map(title => ` ${title} `).join("|")
-  const tableSeparator = columnTitles.map(() => "-------------").join("|")
+  const tableSeparator = columnTitles.map(() => "---").join("|")
   
   markdown += `|${tableHeader}|\n`
   markdown += `|${tableSeparator}|\n`
+  
+  console.log("Debug: Generated table header:")
+  console.log(`|${tableHeader}|`)
+  console.log(`|${tableSeparator}|`)
   
   console.log("Debug: Generated table header:")
   console.log(`|${tableHeader}|`)
