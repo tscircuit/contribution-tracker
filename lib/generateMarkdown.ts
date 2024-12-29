@@ -105,11 +105,14 @@ export async function generateMarkdown(
   const columnTitleToDescription = {
     "Reviews Received":
       "Number of reviews received for PRs for this contributor",
-    "Approvals Received":
-      "Number of approvals received for PRs this contributor authored",
-    "Rejections Received":
-      "Number of rejections received for PRs this contributor authored",
+    "Reviews Authored":
+      "Number of reviews this contributor has authored",
+    "Approvals": "Number of approvals received for PRs this contributor authored",
+    "Rejections": "Number of rejections received for PRs this contributor authored",
+    "Changes Requested":
+      "Number of changes requested for PRs this contributor authored",
     "PRs Opened": "Number of PRs opened by this contributor",
+    "PRs Closed": "Number of PRs closed by this contributor",
     "Issues Created": "Number of issues created by this contributor",
     "Bountied Issues":
       "Number of issues this contributor created with a bounty",
@@ -131,10 +134,12 @@ export async function generateMarkdown(
   > = {
     Contributor: "contributor",
     "Reviews Received": "reviewsReceived",
-    "Approvals Received": "approvalsReceived",
-    "Rejections Received": "rejectionsReceived",
+    "Reviews Authored": "reviewsAuthored",
+    "Approvals": "approvalsReceived",
+    "Rejections": "rejectionsReceived",
+    "Changes Requested": "changesRequested",
     "PRs Opened": "prsOpened",
-    "PRs Merged": "prsMerged",
+    "PRs Closed": "prsMerged",
     "Issues Created": "issuesCreated",
     "Bountied Issues": "bountiedIssuesCount",
     "Bountied Issue $": "bountiedIssuesTotal",
