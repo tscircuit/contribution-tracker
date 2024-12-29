@@ -113,7 +113,8 @@ export async function generateMarkdown(
     "Reviews Received": "Number of reviews received for PRs for this contributor",
     "Approvals Given": "Number of approvals this contributor has given to other PRs",
     "Approvals Received": "Number of approvals received for PRs this contributor authored",
-    "Changes Requested": "Number of changes requested for PRs this contributor authored",
+    "Changes Requested Given": "Number of changes this contributor has requested on other PRs",
+    "Changes Requested Received": "Number of changes requested for PRs this contributor authored",
     "PRs Opened": "Number of PRs opened by this contributor",
     "PRs Closed": "Number of PRs closed by this contributor",
     "Issues Created": "Number of issues created by this contributor",
@@ -138,7 +139,8 @@ export async function generateMarkdown(
     "Reviews Received": "reviewsReceived",
     "Approvals Given": "approvalsGiven",
     "Approvals Received": "approvalsReceived",
-    "Changes Requested": "changesRequested",
+    "Changes Requested Given": "changesRequestedGiven",
+    "Changes Requested Received": "changesRequested",
     "PRs Opened": "prsOpened",
     "PRs Closed": "prsMerged",
     "Issues Created": "issuesCreated",
@@ -147,13 +149,23 @@ export async function generateMarkdown(
   }
 
   // Debug: Print all contributor stats to verify data
-  console.log("\nDebug: All contributor stats:")
+  console.log("\nDebug: All contributor stats with numeric verification:")
   Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
+    // Ensure all stats are properly initialized to 0 if undefined
+    stats.changesRequested = stats.changesRequested || 0
+    stats.changesRequestedGiven = stats.changesRequestedGiven || 0
+    stats.approvalsGiven = stats.approvalsGiven || 0
+    stats.approvalsReceived = stats.approvalsReceived || 0
+    stats.reviewsReceived = stats.reviewsReceived || 0
+
     console.log(`${contributor}:`, {
       approvalsGiven: stats.approvalsGiven,
+      changesRequestedGiven: stats.changesRequestedGiven,
       changesRequested: stats.changesRequested,
       reviewsReceived: stats.reviewsReceived,
-      approvalsReceived: stats.approvalsReceived
+      approvalsReceived: stats.approvalsReceived,
+      isNaN_changesRequested: isNaN(stats.changesRequested),
+      isNaN_changesRequestedGiven: isNaN(stats.changesRequestedGiven)
     })
   })
 
@@ -163,7 +175,8 @@ export async function generateMarkdown(
     "Reviews Received",
     "Approvals Given",
     "Approvals Received",
-    "Changes Requested",
+    "Changes Requested Given",
+    "Changes Requested Received",
     "PRs Opened",
     "PRs Closed",
     "Issues Created",
@@ -196,9 +209,18 @@ export async function generateMarkdown(
     console.log(`${title} -> ${columnTitleToPropName[title]}`)
   })
 
-  // Debug: Print current state before table generation
+  // Debug: Print current state before table generation with numeric verification
   console.log("Debug: Using explicit column order:", columnTitles)
-  console.log("Debug: First contributor stats:", Object.entries(contributorIdToStatsMap)[0])
+  Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
+    console.log(`Debug: Stats for ${contributor}:`, {
+      changesRequested: stats.changesRequested,
+      changesRequestedGiven: stats.changesRequestedGiven,
+      isNumber_changesRequested: typeof stats.changesRequested === 'number' && !isNaN(stats.changesRequested),
+      isNumber_changesRequestedGiven: typeof stats.changesRequestedGiven === 'number' && !isNaN(stats.changesRequestedGiven),
+      raw_changesRequested: stats.changesRequested,
+      raw_changesRequestedGiven: stats.changesRequestedGiven
+    })
+  })
 
   // Ensure all column titles have corresponding property mappings
   Object.keys(columnTitleToPropName).forEach(title => {

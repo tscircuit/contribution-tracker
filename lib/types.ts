@@ -1,7 +1,9 @@
 export interface ContributorStats {
   reviewsReceived: number
-  approvalsReceived: number
-  changesRequested: number  // Number of changes requested by this contributor
+  rejectionsReceived: number  // Number of rejections received on contributor's PRs
+  approvalsReceived: number  // Number of approvals received on contributor's PRs
+  changesRequested: number  // Number of changes requested on contributor's PRs
+  changesRequestedGiven: number  // Number of changes requested by this contributor on others' PRs
   prsOpened: number
   prsMerged: number
   issuesCreated: number

@@ -42,6 +42,7 @@ export async function generateOverview(startDate: string) {
           bountiedIssuesTotal: 0,
           approvalsGiven: 0,
           changesRequested: 0,
+          changesRequestedGiven: 0,
         }
       }
 
@@ -65,6 +66,7 @@ export async function generateOverview(startDate: string) {
             bountiedIssuesTotal: 0,
             approvalsGiven: 0,
             changesRequested: 0,
+            changesRequestedGiven: 0,
             score: 0,
           }
         }
@@ -72,10 +74,10 @@ export async function generateOverview(startDate: string) {
         const reviewerStats = pr.reviewsByUser[reviewer]
         if (reviewerStats) {
           contributorData[reviewer].approvalsGiven = (contributorData[reviewer].approvalsGiven || 0) + reviewerStats.approvalsGiven
-          contributorData[reviewer].changesRequested = (contributorData[reviewer].changesRequested || 0) + reviewerStats.changesRequested
+          contributorData[reviewer].changesRequestedGiven = (contributorData[reviewer].changesRequestedGiven || 0) + reviewerStats.changesRequested
           console.log(`Debug: Updated review stats for ${reviewer}:`, {
             approvalsGiven: contributorData[reviewer].approvalsGiven,
-            changesRequested: contributorData[reviewer].changesRequested
+            changesRequestedGiven: contributorData[reviewer].changesRequestedGiven
           })
         }
       }
@@ -154,16 +156,18 @@ export async function generateOverview(startDate: string) {
   // Flatten the sorted PRs back into a single array
   const sortedPRs = Object.values(contributorPRs).flat()
 
-  // Add points for approvals and changes requested
+  // Add points for approvals and changes requested authored
   for (const contributor in contributorData) {
     const stats = contributorData[contributor]
-    // 1 point for each approval or changes requested (tiny contribution)
-    const reviewPoints = (stats.approvalsGiven || 0) + (stats.changesRequested || 0)
+    // 1 point for each approval or changes requested authored (tiny contribution)
+    const reviewPoints = (stats.approvalsGiven || 0) + (stats.changesRequestedGiven || 0)
     stats.score = (stats.score || 0) + reviewPoints
     console.log(`Debug: ${contributor} review points:`, {
-      approvalsGiven: stats.approvalsGiven,
-      changesRequested: stats.changesRequested,
-      totalPoints: reviewPoints
+      approvalsGiven: stats.approvalsGiven || 0,
+      changesRequestedGiven: stats.changesRequestedGiven || 0,
+      totalPoints: reviewPoints,
+      isNaN_changesRequestedGiven: isNaN(stats.changesRequestedGiven),
+      isNaN_approvalsGiven: isNaN(stats.approvalsGiven)
     })
   }
   
@@ -171,9 +175,12 @@ export async function generateOverview(startDate: string) {
   console.log("\nDebug: Final contributor data:")
   Object.entries(contributorData).forEach(([contributor, stats]) => {
     console.log(`${contributor}:`, {
-      approvalsGiven: stats.approvalsGiven,
-      changesRequested: stats.changesRequested,
-      score: stats.score
+      approvalsGiven: stats.approvalsGiven || 0,
+      changesRequestedGiven: stats.changesRequestedGiven || 0,
+      changesRequested: stats.changesRequested || 0,
+      score: stats.score || 0,
+      isNaN_changesRequested: isNaN(stats.changesRequested),
+      isNaN_changesRequestedGiven: isNaN(stats.changesRequestedGiven)
     })
   })
 
