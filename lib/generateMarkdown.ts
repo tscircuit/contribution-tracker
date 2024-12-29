@@ -157,9 +157,11 @@ export async function generateMarkdown(
   console.log("\nDebug: All contributor stats:")
   Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
     console.log(`${contributor}:`, {
-      reviewsAuthored: stats.reviewsAuthored,
+      approvalsGiven: stats.approvalsGiven,
+      changesRequested: stats.changesRequested,
       reviewsReceived: stats.reviewsReceived,
-      approvalsReceived: stats.approvalsReceived
+      approvalsReceived: stats.approvalsReceived,
+      changesRequestedReceived: stats.changesRequestedReceived
     })
   })
 
@@ -189,9 +191,11 @@ export async function generateMarkdown(
   console.log("\nDebug: Contributor Stats before table generation:")
   Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
     console.log(`${contributor}:`, {
-      reviewsAuthored: stats.reviewsAuthored,
+      approvalsGiven: stats.approvalsGiven,
+      changesRequested: stats.changesRequested,
       reviewsReceived: stats.reviewsReceived,
       approvalsReceived: stats.approvalsReceived,
+      changesRequestedReceived: stats.changesRequestedReceived,
       score: stats.score
     })
   })

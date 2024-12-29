@@ -1,7 +1,7 @@
 export interface ContributorStats {
   reviewsReceived: number
-  rejectionsReceived: number
   approvalsReceived: number
+  changesRequestedReceived: number
   prsOpened: number
   prsMerged: number
   issuesCreated: number
