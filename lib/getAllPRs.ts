@@ -70,12 +70,12 @@ export async function getAllPRs(
       const reviewsByUser = reviews.reduce<Record<string, ReviewerStats>>((acc, review) => {
         const login = review.user.login
         if (!acc[login]) {
-          acc[login] = { approvalsGiven: 0, changesRequested: 0 }
+          acc[login] = { approvalsGiven: 0, changesRequestedGiven: 0 }
         }
         if (review.state === "APPROVED") {
           acc[login].approvalsGiven++
         } else if (review.state === "CHANGES_REQUESTED") {
-          acc[login].changesRequested++
+          acc[login].changesRequestedGiven++
         }
         return acc
       }, {})
@@ -87,9 +87,9 @@ export async function getAllPRs(
       const reviewStats = Object.values(reviewsByUser).reduce<ReviewerStats>(
         (sum, stats: ReviewerStats) => ({
           approvalsGiven: sum.approvalsGiven + stats.approvalsGiven,
-          changesRequested: sum.changesRequested + stats.changesRequested
+          changesRequestedGiven: sum.changesRequestedGiven + stats.changesRequestedGiven
         }),
-        { approvalsGiven: 0, changesRequested: 0 }
+        { approvalsGiven: 0, changesRequestedGiven: 0 }
       )
 
       console.log(`Debug: PR #${pr.number} reviewers:`, reviewerLogins)
@@ -102,7 +102,7 @@ export async function getAllPRs(
         approvalsReceived,
         isClosed: pr.state === "closed",
         reviewers: reviewerLogins,
-        changesRequested: reviewStats.changesRequested,
+        changesRequestedGiven: reviewStats.changesRequestedGiven,
         reviewsByUser,
       } as PullRequestWithReviews
     }),

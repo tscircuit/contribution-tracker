@@ -30,7 +30,7 @@ export interface MergedPullRequest extends PullRequest {
 
 export interface ReviewerStats {
   approvalsGiven: number
-  changesRequested: number
+  changesRequestedGiven: number
 }
 
 export interface PullRequestWithReviews extends PullRequest {
