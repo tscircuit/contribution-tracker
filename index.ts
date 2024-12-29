@@ -40,7 +40,7 @@ export async function generateOverview(startDate: string) {
           issuesCreated: 0,
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
-          reviewsAuthored: 0,
+          approvalsGiven: 0,
           changesRequested: 0,
         }
       }
@@ -63,17 +63,21 @@ export async function generateOverview(startDate: string) {
             issuesCreated: 0,
             bountiedIssuesCount: 0,
             bountiedIssuesTotal: 0,
-            reviewsAuthored: 0,
+            approvalsGiven: 0,
             changesRequested: 0,
             score: 0,
           }
         }
-        // Initialize reviewsAuthored if undefined
-        if (contributorData[reviewer].reviewsAuthored === undefined) {
-          contributorData[reviewer].reviewsAuthored = 0
+        // Update approvals and changes requested counts from review stats
+        const reviewerStats = pr.reviewsByUser[reviewer]
+        if (reviewerStats) {
+          contributorData[reviewer].approvalsGiven = (contributorData[reviewer].approvalsGiven || 0) + reviewerStats.approvalsGiven
+          contributorData[reviewer].changesRequested = (contributorData[reviewer].changesRequested || 0) + reviewerStats.changesRequested
+          console.log(`Debug: Updated review stats for ${reviewer}:`, {
+            approvalsGiven: contributorData[reviewer].approvalsGiven,
+            changesRequested: contributorData[reviewer].changesRequested
+          })
         }
-        contributorData[reviewer].reviewsAuthored += 1
-        console.log(`Debug: Incrementing reviews authored for ${reviewer} to ${contributorData[reviewer].reviewsAuthored}`)
       }
 
       if (pr.isClosed && pr.merged_at)
@@ -150,19 +154,25 @@ export async function generateOverview(startDate: string) {
   // Flatten the sorted PRs back into a single array
   const sortedPRs = Object.values(contributorPRs).flat()
 
-  // Add points for reviews authored
+  // Add points for approvals and changes requested
   for (const contributor in contributorData) {
     const stats = contributorData[contributor]
-    console.log(`Debug: ${contributor} reviews authored:`, stats.reviewsAuthored)
-    // 1 point for each authored review (tiny contribution)
-    stats.score = (stats.score || 0) + (stats.reviewsAuthored || 0)
+    // 1 point for each approval or changes requested (tiny contribution)
+    const reviewPoints = (stats.approvalsGiven || 0) + (stats.changesRequested || 0)
+    stats.score = (stats.score || 0) + reviewPoints
+    console.log(`Debug: ${contributor} review points:`, {
+      approvalsGiven: stats.approvalsGiven,
+      changesRequested: stats.changesRequested,
+      totalPoints: reviewPoints
+    })
   }
   
   // Debug: Print final contributor data
   console.log("\nDebug: Final contributor data:")
   Object.entries(contributorData).forEach(([contributor, stats]) => {
     console.log(`${contributor}:`, {
-      reviewsAuthored: stats.reviewsAuthored,
+      approvalsGiven: stats.approvalsGiven,
+      changesRequested: stats.changesRequested,
       score: stats.score
     })
   })

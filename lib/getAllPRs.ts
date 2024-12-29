@@ -1,5 +1,5 @@
 import { octokit } from "lib/sdks"
-import type { PullRequest, PullRequestWithReviews } from "./types"
+import type { PullRequest, PullRequestWithReviews, ReviewerStats } from "./types"
 
 export async function getAllPRs(
   repo: string,
@@ -66,26 +66,30 @@ export async function getAllPRs(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
 
-      // Get all reviews with their states and reviewers
-      const reviewsByUser = reviews.reduce((acc, review) => {
+      // Track approvals and changes requested by each reviewer
+      const reviewsByUser = reviews.reduce<Record<string, ReviewerStats>>((acc, review) => {
         const login = review.user.login
         if (!acc[login]) {
-          acc[login] = { count: 0, changesRequested: 0 }
+          acc[login] = { approvalsGiven: 0, changesRequested: 0 }
         }
-        acc[login].count++
-        if (review.state === "CHANGES_REQUESTED") {
+        if (review.state === "APPROVED") {
+          acc[login].approvalsGiven++
+        } else if (review.state === "CHANGES_REQUESTED") {
           acc[login].changesRequested++
         }
         return acc
-      }, {} as Record<string, { count: number; changesRequested: number }>)
+      }, {})
 
       // Get unique reviewer logins
       const reviewerLogins = Object.keys(reviewsByUser)
 
-      // Count total changes requested reviews
-      const changesRequestedCount = Object.values(reviewsByUser).reduce(
-        (sum, stats) => sum + stats.changesRequested,
-        0
+      // Count total approvals and changes requested
+      const reviewStats = Object.values(reviewsByUser).reduce<ReviewerStats>(
+        (sum, stats: ReviewerStats) => ({
+          approvalsGiven: sum.approvalsGiven + stats.approvalsGiven,
+          changesRequested: sum.changesRequested + stats.changesRequested
+        }),
+        { approvalsGiven: 0, changesRequested: 0 }
       )
 
       console.log(`Debug: PR #${pr.number} reviewers:`, reviewerLogins)
@@ -98,7 +102,8 @@ export async function getAllPRs(
         approvalsReceived,
         isClosed: pr.state === "closed",
         reviewers: reviewerLogins,
-        changesRequested: changesRequestedCount,
+        changesRequested: reviewStats.changesRequested,
+        reviewsByUser,
       } as PullRequestWithReviews
     }),
   )

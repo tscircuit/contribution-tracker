@@ -7,8 +7,8 @@ export interface ContributorStats {
   issuesCreated: number
   bountiedIssuesCount?: number
   bountiedIssuesTotal?: number
-  reviewsAuthored: number  // Make reviewsAuthored required
-  changesRequested: number  // Make changesRequested required
+  approvalsGiven: number  // Number of approvals given by this contributor
+  changesRequested: number  // Number of changes requested by this contributor
   score?: number
 }
 
@@ -28,12 +28,18 @@ export interface MergedPullRequest extends PullRequest {
   diff: string
 }
 
+export interface ReviewerStats {
+  approvalsGiven: number
+  changesRequested: number
+}
+
 export interface PullRequestWithReviews extends PullRequest {
   reviewsReceived: number
   rejectionsReceived: number
   approvalsReceived: number
   isClosed: boolean
   reviewers: string[]
+  reviewsByUser: Record<string, ReviewerStats>
 }
 
 export interface AnalyzedPR {
