@@ -230,10 +230,10 @@ export async function generateMarkdown(
   Object.entries(contributorIdToStatsMap).forEach(
     ([contributor, stats]: any[]) => {
       console.log(`\nDebug: Processing contributor ${contributor}:`, {
-        reviewsAuthored: stats.reviewsAuthored,
         reviewsReceived: stats.reviewsReceived,
+        approvalsGiven: stats.approvalsGiven,
+        changesRequestedGiven: stats.changesRequestedGiven,
         approvalsReceived: stats.approvalsReceived,
-        rejectionsReceived: stats.rejectionsReceived,
         changesRequested: stats.changesRequested
       })
       

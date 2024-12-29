@@ -102,7 +102,7 @@ export async function getAllPRs(
         approvalsReceived,
         isClosed: pr.state === "closed",
         reviewers: reviewerLogins,
-        changesRequestedGiven: reviewStats.changesRequestedGiven,
+        changesRequested: reviewStats.changesRequestedGiven,
         reviewsByUser,
       } as PullRequestWithReviews
     }),
