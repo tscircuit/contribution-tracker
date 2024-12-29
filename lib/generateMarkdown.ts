@@ -102,6 +102,12 @@ export async function generateMarkdown(
   // Generate Review Table
   markdown += "## Review Table\n\n"
 
+  // Debug: Print current state of contributorIdToStatsMap
+  console.log("Debug: Full contributor stats:")
+  Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
+    console.log(`${contributor}:`, stats)
+  })
+
   const columnTitleToDescription = {
     Contributor: "GitHub username of the contributor",
     "Reviews Received":
@@ -147,6 +153,7 @@ export async function generateMarkdown(
   }
 
   // Define explicit column order
+  // Define explicit column order with Reviews Authored after Reviews Received
   const columnTitles = [
     "Contributor",
     "Reviews Received",
@@ -161,6 +168,10 @@ export async function generateMarkdown(
     "Bountied Issue $"
   ]
 
+  // Debug: Print column titles and their mappings
+  console.log("Debug: Column Titles:", columnTitles)
+  console.log("Debug: Column Mappings:", columnTitleToPropName)
+
   // Ensure all column titles have corresponding property mappings
   Object.keys(columnTitleToPropName).forEach(title => {
     if (!columnTitles.includes(title)) {
@@ -173,17 +184,9 @@ export async function generateMarkdown(
     }
   })
 
-  markdown += "|"
-  columnTitles.forEach((column) => {
-    markdown += ` ${column} |`
-  })
-  markdown += "\n"
-
-  markdown += "|"
-  columnTitles.forEach(() => {
-    markdown += "---|"
-  })
-  markdown += "\n"
+  // Generate table header with all defined columns
+  markdown += "| " + columnTitles.join(" | ") + " |\n"
+  markdown += "|" + columnTitles.map(() => "---").join("|") + "|\n"
 
   Object.entries(contributorIdToStatsMap).forEach(
     ([contributor, stats]: any[]) => {
@@ -193,7 +196,8 @@ export async function generateMarkdown(
           markdown += ` [${contributor}](#${contributor.replace(/\s/g, "-")}) |`
           return
         }
-        markdown += ` ${stats[columnTitleToPropName[columnTitle]]} |`
+        const value = stats[columnTitleToPropName[columnTitle]] ?? 0
+        markdown += ` ${value} |`
       })
       markdown += "\n"
     },
