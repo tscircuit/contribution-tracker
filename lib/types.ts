@@ -8,7 +8,6 @@ export interface ContributorStats {
   bountiedIssuesCount?: number
   bountiedIssuesTotal?: number
   approvalsGiven: number  // Number of approvals given by this contributor
-  changesRequestedGiven: number  // Number of changes requested given by this contributor
   score?: number
 }
 
@@ -30,7 +29,7 @@ export interface MergedPullRequest extends PullRequest {
 
 export interface ReviewerStats {
   approvalsGiven: number
-  changesRequestedGiven: number
+  changesRequested: number
 }
 
 export interface PullRequestWithReviews extends PullRequest {

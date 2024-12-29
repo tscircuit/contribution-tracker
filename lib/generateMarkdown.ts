@@ -112,7 +112,6 @@ export async function generateMarkdown(
     Contributor: "GitHub username of the contributor",
     "Reviews Received": "Number of reviews received for PRs for this contributor",
     "Approvals Given": "Number of approvals this contributor has given to other PRs",
-    "Changes Requested Given": "Number of changes this contributor has requested on other PRs",
     "Approvals Received": "Number of approvals received for PRs this contributor authored",
     "Changes Requested": "Number of changes requested for PRs this contributor authored",
     "PRs Opened": "Number of PRs opened by this contributor",
@@ -138,7 +137,6 @@ export async function generateMarkdown(
     "Contributor": "contributor",
     "Reviews Received": "reviewsReceived",
     "Approvals Given": "approvalsGiven",
-    "Changes Requested Given": "changesRequestedGiven",
     "Approvals Received": "approvalsReceived",
     "Changes Requested": "changesRequested",
     "PRs Opened": "prsOpened",
@@ -164,7 +162,6 @@ export async function generateMarkdown(
     "Contributor",
     "Reviews Received",
     "Approvals Given",
-    "Changes Requested Given",
     "Approvals Received",
     "Changes Requested",
     "PRs Opened",
@@ -232,7 +229,6 @@ export async function generateMarkdown(
       console.log(`\nDebug: Processing contributor ${contributor}:`, {
         reviewsReceived: stats.reviewsReceived,
         approvalsGiven: stats.approvalsGiven,
-        changesRequestedGiven: stats.changesRequestedGiven,
         approvalsReceived: stats.approvalsReceived,
         changesRequested: stats.changesRequested
       })
