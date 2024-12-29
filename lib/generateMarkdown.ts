@@ -146,7 +146,20 @@ export async function generateMarkdown(
     "Bountied Issue $": "bountiedIssuesTotal",
   }
 
-  const columnTitles = Object.keys(columnTitleToPropName)
+  // Define explicit column order
+  const columnTitles = [
+    "Contributor",
+    "Reviews Received",
+    "Reviews Authored",
+    "Approvals",
+    "Rejections",
+    "Changes Requested",
+    "PRs Opened",
+    "PRs Closed",
+    "Issues Created",
+    "Bountied Issues",
+    "Bountied Issue $"
+  ]
 
   markdown += "|"
   columnTitles.forEach((column) => {
