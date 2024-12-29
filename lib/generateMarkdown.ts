@@ -178,6 +178,17 @@ export async function generateMarkdown(
     "Bountied Issue $"
   ]
 
+  // Debug: Print contributor stats before table generation
+  console.log("\nDebug: Contributor Stats before table generation:")
+  Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
+    console.log(`${contributor}:`, {
+      reviewsAuthored: stats.reviewsAuthored,
+      reviewsReceived: stats.reviewsReceived,
+      approvalsReceived: stats.approvalsReceived,
+      score: stats.score
+    })
+  })
+
   // Debug: Print column titles and their property mappings
   console.log("\nDebug: Column Titles and Property Mappings:")
   columnTitles.forEach(title => {

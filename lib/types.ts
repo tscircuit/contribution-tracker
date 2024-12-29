@@ -7,8 +7,8 @@ export interface ContributorStats {
   issuesCreated: number
   bountiedIssuesCount?: number
   bountiedIssuesTotal?: number
-  reviewsAuthored?: number
-  changesRequested?: number
+  reviewsAuthored: number  // Make reviewsAuthored required
+  changesRequested: number  // Make changesRequested required
   score?: number
 }
 
