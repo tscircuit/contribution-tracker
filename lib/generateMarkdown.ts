@@ -161,6 +161,18 @@ export async function generateMarkdown(
     "Bountied Issue $"
   ]
 
+  // Ensure all column titles have corresponding property mappings
+  Object.keys(columnTitleToPropName).forEach(title => {
+    if (!columnTitles.includes(title)) {
+      console.warn(`Warning: Column title "${title}" exists in mapping but not in columnTitles array`)
+    }
+  })
+  columnTitles.forEach(title => {
+    if (!columnTitleToPropName[title] && title !== "Contributor") {
+      console.warn(`Warning: Column title "${title}" exists in columnTitles array but not in mapping`)
+    }
+  })
+
   markdown += "|"
   columnTitles.forEach((column) => {
     markdown += ` ${column} |`
