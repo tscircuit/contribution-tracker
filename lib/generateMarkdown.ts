@@ -178,6 +178,13 @@ export async function generateMarkdown(
     "Bountied Issue $"
   ]
 
+  // Debug: Print column titles and their property mappings
+  console.log("\nDebug: Column titles and their property mappings:")
+  columnTitles.forEach(title => {
+    const propName = columnTitleToPropName[title]
+    console.log(`${title} -> ${propName || 'undefined'}`)
+  })
+
   // Debug: Print contributor stats before table generation
   console.log("\nDebug: Contributor Stats before table generation:")
   Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
@@ -222,27 +229,35 @@ export async function generateMarkdown(
   console.log(`|${tableHeader}|`)
   console.log(`|${tableSeparator}|`)
 
-  // Generate table rows with debug logging
+  // Generate table rows with enhanced debug logging
   Object.entries(contributorIdToStatsMap).forEach(
     ([contributor, stats]: any[]) => {
-      console.log(`Debug: Processing contributor ${contributor}:`, stats)
-      markdown += "|"
+      console.log(`\nDebug: Processing contributor ${contributor}:`, {
+        reviewsAuthored: stats.reviewsAuthored,
+        reviewsReceived: stats.reviewsReceived,
+        approvalsReceived: stats.approvalsReceived,
+        rejectionsReceived: stats.rejectionsReceived,
+        changesRequested: stats.changesRequested
+      })
+      
+      let row = "|"
       columnTitles.forEach((columnTitle) => {
         if (columnTitle === "Contributor") {
-          markdown += ` [${contributor}](https://github.com/${contributor}) |`
+          row += ` [${contributor}](https://github.com/${contributor}) |`
           return
         }
         const propName = columnTitleToPropName[columnTitle]
         if (!propName) {
           console.error(`Error: No property mapping found for column "${columnTitle}"`)
-          markdown += ` 0 |`
+          row += ` 0 |`
           return
         }
         const value = stats[propName] ?? 0
         console.log(`Debug: ${contributor} - ${columnTitle} (${propName}) = ${value}`)
-        markdown += ` ${value} |`
+        row += ` ${value} |`
       })
-      markdown += "\n"
+      console.log(`Debug: Generated row: ${row}`)
+      markdown += row + "\n"
     },
   )
   markdown += "\n"
