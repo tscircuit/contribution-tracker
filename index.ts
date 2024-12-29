@@ -40,6 +40,8 @@ export async function generateOverview(startDate: string) {
           issuesCreated: 0,
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
+          reviewsAuthored: 0,
+          changesRequested: 0,
         }
       }
 
@@ -61,6 +63,7 @@ export async function generateOverview(startDate: string) {
             bountiedIssuesCount: 0,
             bountiedIssuesTotal: 0,
             reviewsAuthored: 0,
+            changesRequested: 0,
           }
         }
         contributorData[reviewer].reviewsAuthored! += 1
