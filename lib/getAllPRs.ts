@@ -66,15 +66,30 @@ export async function getAllPRs(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
 
-      // Get unique reviewer logins to avoid counting multiple reviews from same reviewer
-      const reviewerLogins = [...new Set(reviews.map((review) => review.user.login))]
-      
-      // Count changes requested reviews
-      const changesRequestedCount = reviews.filter(
-        (review) => review.state === "CHANGES_REQUESTED"
-      ).length
+      // Get all reviews with their states and reviewers
+      const reviewsByUser = reviews.reduce((acc, review) => {
+        const login = review.user.login
+        if (!acc[login]) {
+          acc[login] = { count: 0, changesRequested: 0 }
+        }
+        acc[login].count++
+        if (review.state === "CHANGES_REQUESTED") {
+          acc[login].changesRequested++
+        }
+        return acc
+      }, {} as Record<string, { count: number; changesRequested: number }>)
+
+      // Get unique reviewer logins
+      const reviewerLogins = Object.keys(reviewsByUser)
+
+      // Count total changes requested reviews
+      const changesRequestedCount = Object.values(reviewsByUser).reduce(
+        (sum, stats) => sum + stats.changesRequested,
+        0
+      )
 
       console.log(`Debug: PR #${pr.number} reviewers:`, reviewerLogins)
+      console.log(`Debug: PR #${pr.number} review stats:`, reviewsByUser)
       
       return {
         ...pr,
