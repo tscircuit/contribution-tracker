@@ -51,7 +51,8 @@ export async function generateOverview(startDate: string) {
       contributorData[contributor].prsOpened += 1
 
       // Count reviews authored by each reviewer
-      for (const reviewer of pr.reviewers) {
+      const uniqueReviewers = new Set(pr.reviewers)
+      for (const reviewer of uniqueReviewers) {
         if (!contributorData[reviewer]) {
           contributorData[reviewer] = {
             reviewsReceived: 0,
@@ -64,9 +65,15 @@ export async function generateOverview(startDate: string) {
             bountiedIssuesTotal: 0,
             reviewsAuthored: 0,
             changesRequested: 0,
+            score: 0,
           }
         }
-        contributorData[reviewer].reviewsAuthored! += 1
+        // Initialize reviewsAuthored if undefined
+        if (contributorData[reviewer].reviewsAuthored === undefined) {
+          contributorData[reviewer].reviewsAuthored = 0
+        }
+        contributorData[reviewer].reviewsAuthored += 1
+        console.log(`Debug: Incrementing reviews authored for ${reviewer} to ${contributorData[reviewer].reviewsAuthored}`)
       }
 
       if (pr.isClosed && pr.merged_at)
@@ -146,9 +153,19 @@ export async function generateOverview(startDate: string) {
   // Add points for reviews authored
   for (const contributor in contributorData) {
     const stats = contributorData[contributor]
+    console.log(`Debug: ${contributor} reviews authored:`, stats.reviewsAuthored)
     // 1 point for each authored review (tiny contribution)
     stats.score = (stats.score || 0) + (stats.reviewsAuthored || 0)
   }
+  
+  // Debug: Print final contributor data
+  console.log("\nDebug: Final contributor data:")
+  Object.entries(contributorData).forEach(([contributor, stats]) => {
+    console.log(`${contributor}:`, {
+      reviewsAuthored: stats.reviewsAuthored,
+      score: stats.score
+    })
+  })
 
   const markdown = await generateMarkdown(
     sortedPRs,

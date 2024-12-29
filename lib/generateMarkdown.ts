@@ -167,6 +167,12 @@ export async function generateMarkdown(
     "Bountied Issue $"
   ]
 
+  // Debug: Print column titles and their property mappings
+  console.log("\nDebug: Column Titles and Property Mappings:")
+  columnTitles.forEach(title => {
+    console.log(`${title} -> ${columnTitleToPropName[title]}`)
+  })
+
   // Debug: Print current state before table generation
   console.log("Debug: Using explicit column order:", columnTitles)
   console.log("Debug: First contributor stats:", Object.entries(contributorIdToStatsMap)[0])

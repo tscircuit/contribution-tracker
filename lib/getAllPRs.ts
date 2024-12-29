@@ -66,7 +66,16 @@ export async function getAllPRs(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
 
-      const reviewerLogins = reviews.map((review) => review.user.login)
+      // Get unique reviewer logins to avoid counting multiple reviews from same reviewer
+      const reviewerLogins = [...new Set(reviews.map((review) => review.user.login))]
+      
+      // Count changes requested reviews
+      const changesRequestedCount = reviews.filter(
+        (review) => review.state === "CHANGES_REQUESTED"
+      ).length
+
+      console.log(`Debug: PR #${pr.number} reviewers:`, reviewerLogins)
+      
       return {
         ...pr,
         reviewsReceived,
@@ -74,6 +83,7 @@ export async function getAllPRs(
         approvalsReceived,
         isClosed: pr.state === "closed",
         reviewers: reviewerLogins,
+        changesRequested: changesRequestedCount,
       } as PullRequestWithReviews
     }),
   )
