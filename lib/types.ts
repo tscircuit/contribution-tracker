@@ -1,3 +1,8 @@
+export interface ReviewerStats {
+  approvalsGiven: number
+  rejectionsGiven: number
+}
+
 export interface ContributorStats {
   reviewsReceived: number
   rejectionsReceived: number
@@ -8,6 +13,8 @@ export interface ContributorStats {
   bountiedIssuesCount?: number
   bountiedIssuesTotal?: number
   score?: number
+  approvalsGiven: number
+  rejectionsGiven: number
 }
 
 export interface PullRequest {
@@ -31,6 +38,7 @@ export interface PullRequestWithReviews extends PullRequest {
   rejectionsReceived: number
   approvalsReceived: number
   isClosed: boolean
+  reviewsByUser?: Record<string, ReviewerStats>
 }
 
 export interface AnalyzedPR {

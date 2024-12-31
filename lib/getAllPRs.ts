@@ -1,5 +1,5 @@
 import { octokit } from "lib/sdks"
-import type { PullRequest, PullRequestWithReviews } from "./types"
+import type { PullRequestWithReviews, ReviewerStats } from "./types"
 
 export async function getAllPRs(
   repo: string,
@@ -66,11 +66,28 @@ export async function getAllPRs(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
 
+      const reviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
+        (acc, review) => {
+          const reviewer = review.user.login
+          if (!acc[reviewer]) {
+            acc[reviewer] = { approvalsGiven: 0, rejectionsGiven: 0 }
+          }
+          if (review.state === "APPROVED") {
+            acc[reviewer].approvalsGiven++
+          } else if (review.state === "CHANGES_REQUESTED") {
+            acc[reviewer].rejectionsGiven++
+          }
+          return acc
+        },
+        {},
+      )
+
       return {
         ...pr,
         reviewsReceived,
         rejectionsReceived,
         approvalsReceived,
+        reviewsByUser,
         isClosed: pr.state === "closed",
       } as PullRequestWithReviews
     }),

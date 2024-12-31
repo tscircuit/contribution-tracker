@@ -73,7 +73,6 @@ export async function generateMarkdown(
     {} as Record<string, Record<string, number>>,
   )
 
-  // Then add bounty points separately for each contributor
   Object.entries(contributorEffort).forEach(([contributor, effort]) => {
     const bountiedAmount =
       contributorIdToStatsMap[contributor]?.bountiedIssuesTotal || 0
@@ -86,6 +85,12 @@ export async function generateMarkdown(
     )
     // Add to score (minor contributions are worth 2 points each)
     effort.score += minorContributionsFromBounties * 2
+
+    const approvalsGiven =
+      contributorIdToStatsMap[contributor]?.approvalsGiven || 0
+    const rejectionsGiven =
+      contributorIdToStatsMap[contributor]?.rejectionsGiven || 0
+    effort.score += Math.min(approvalsGiven + rejectionsGiven, 20)
   })
 
   const sortedContributors = Object.entries(contributorEffort).sort(
@@ -133,6 +138,8 @@ export async function generateMarkdown(
     "Reviews Received": "reviewsReceived",
     "Approvals Received": "approvalsReceived",
     "Rejections Received": "rejectionsReceived",
+    Approvals: "approvalsGiven",
+    Rejections: "rejectionsGiven",
     "PRs Opened": "prsOpened",
     "PRs Merged": "prsMerged",
     "Issues Created": "issuesCreated",

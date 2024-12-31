@@ -35,6 +35,8 @@ export async function generateOverview(startDate: string) {
           reviewsReceived: 0,
           rejectionsReceived: 0,
           approvalsReceived: 0,
+          approvalsGiven: 0,
+          rejectionsGiven: 0,
           prsOpened: 0,
           prsMerged: 0,
           issuesCreated: 0,
@@ -47,6 +49,31 @@ export async function generateOverview(startDate: string) {
       contributorData[contributor].rejectionsReceived += pr.rejectionsReceived
       contributorData[contributor].approvalsReceived += pr.approvalsReceived
       contributorData[contributor].prsOpened += 1
+
+      if (pr.reviewsByUser) {
+        Object.entries(pr.reviewsByUser).forEach(
+          ([reviewer, reviewerStats]) => {
+            if (!contributorData[reviewer]) {
+              contributorData[reviewer] = {
+                reviewsReceived: 0,
+                rejectionsReceived: 0,
+                approvalsReceived: 0,
+                approvalsGiven: 0,
+                rejectionsGiven: 0,
+                prsOpened: 0,
+                prsMerged: 0,
+                issuesCreated: 0,
+                bountiedIssuesCount: 0,
+                bountiedIssuesTotal: 0,
+              }
+            }
+            contributorData[reviewer].approvalsGiven +=
+              reviewerStats.approvalsGiven
+            contributorData[reviewer].rejectionsGiven +=
+              reviewerStats.rejectionsGiven
+          },
+        )
+      }
 
       if (pr.isClosed && pr.merged_at)
         contributorData[contributor].prsMerged += 1
