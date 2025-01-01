@@ -3,14 +3,14 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 33,
+    "approvalsGiven": 35,
     "rejectionsGiven": 19,
-    "prsOpened": 30,
-    "prsMerged": 30,
-    "issuesCreated": 60,
-    "bountiedIssuesCount": 25,
-    "bountiedIssuesTotal": 557,
-    "score": 109
+    "prsOpened": 35,
+    "prsMerged": 33,
+    "issuesCreated": 65,
+    "bountiedIssuesCount": 30,
+    "bountiedIssuesTotal": 654,
+    "score": 115
   },
   "devin-ai-integration[bot]": {
     "reviewsReceived": 7,
@@ -23,37 +23,37 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 10
+    "score": 8
   },
   "Anshgrover23": {
-    "reviewsReceived": 63,
+    "reviewsReceived": 64,
     "rejectionsReceived": 15,
-    "approvalsReceived": 15,
+    "approvalsReceived": 16,
     "approvalsGiven": 0,
-    "rejectionsGiven": 1,
-    "prsOpened": 18,
-    "prsMerged": 13,
-    "issuesCreated": 6,
+    "rejectionsGiven": 3,
+    "prsOpened": 21,
+    "prsMerged": 14,
+    "issuesCreated": 8,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 30
+    "score": 34
   },
   "Abse2001": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 5,
+    "approvalsReceived": 6,
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 5,
+    "prsOpened": 6,
+    "prsMerged": 6,
     "issuesCreated": 3,
     "bountiedIssuesCount": 3,
     "bountiedIssuesTotal": 32,
-    "score": 18
+    "score": 20
   },
   "techmannih": {
-    "reviewsReceived": 21,
-    "rejectionsReceived": 9,
+    "reviewsReceived": 23,
+    "rejectionsReceived": 11,
     "approvalsReceived": 4,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
@@ -85,7 +85,7 @@
     "rejectionsGiven": 3,
     "prsOpened": 5,
     "prsMerged": 3,
-    "issuesCreated": 12,
+    "issuesCreated": 13,
     "bountiedIssuesCount": 6,
     "bountiedIssuesTotal": 102,
     "score": 32
