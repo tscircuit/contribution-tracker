@@ -23,16 +23,21 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/core" : 5
-    "tscircuit/circuit-json" : 2
-    "tscircuit/props" : 2
-    "tscircuit/footprinter" : 2
-    "tscircuit/snippets" : 13
-    "tscircuit/jlcsearch" : 2
     "tscircuit/kicad-component-converter" : 2
-    "tscircuit/easyeda-converter" : 1
-    "tscircuit/cli" : 2
+    "tscircuit/easyeda-converter" : 2
+    "tscircuit/core" : 5
+    "tscircuit/cli" : 4
+    "tscircuit/pcb-viewer" : 2
+    "tscircuit/props" : 4
+    "tscircuit/plop" : 1
+    "tscircuit/snippets" : 16
+    "tscircuit/jlcsearch" : 5
     "tscircuit/circuit-json-to-tscircuit" : 2
+    "tscircuit/circuit-json-to-connectivity-map" : 1
+    "tscircuit/circuit-json" : 2
+    "tscircuit/autorouting.com" : 1
+    "tscircuit/tscircuit" : 1
+    "tscircuit/footprinter" : 2
     "tscircuit/3d-viewer" : 1
 ```
 
@@ -40,12 +45,13 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |
 |-------------|---------|---------|---------|-----|----------------|
-| [seveibar](#seveibar) | 4 | 9 | 1 | 👑 | 26 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 4 | 0 | ⭐⭐ | 5 |
-| [Anshgrover23](#Anshgrover23) | 1 | 6 | 0 | ⭐⭐ | 8 |
-| [Abse2001](#Abse2001) | 1 | 2 | 0 | ⭐ | 0 |
+| [seveibar](#seveibar) | 5 | 16 | 2 | 👑👑 | 47 |
+| [Anshgrover23](#Anshgrover23) | 3 | 9 | 1 | ⭐⭐⭐ | 9 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 5 | 0 | ⭐⭐ | 5 |
+| [Abse2001](#Abse2001) | 1 | 2 | 1 | ⭐ | 2 |
 | [DrSensor](#DrSensor) | 1 | 0 | 0 | ⭐ | 0 |
 | [techmannih](#techmannih) | 0 | 2 | 0 | ⭐ | 1 |
+| [devin-ai-integration[bot]](#devin-ai-integration[bot]) | 0 | 1 | 0 |  | 0 |
 | [krushnarout](#krushnarout) | 0 | 1 | 0 |  | 0 |
 
 ## Review Table
@@ -60,176 +66,241 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [Abse2001](#Abse2001) | 22 | 3 | 0 | 0 | 0 | 4 | 3 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 1 | 0 | 0 | 20 | 6 | 17 | 15 | 26 | 17 | 278 |
+| [Abse2001](#Abse2001) | 27 | 4 | 0 | 0 | 0 | 5 | 4 | 2 | 0 | 0 |
+| [seveibar](#seveibar) | 1 | 0 | 0 | 28 | 11 | 25 | 23 | 47 | 27 | 371 |
 | [DrSensor](#DrSensor) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 7 | 6 | 0 | 0 | 0 | 6 | 5 | 5 | 3 | 45 |
-| [Anshgrover23](#Anshgrover23) | 27 | 7 | 6 | 0 | 2 | 12 | 7 | 8 | 1 | 4 |
-| [devin-ai-integration[bot]](#devin-ai-integration[bot]) | 2 | 0 | 2 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
-| [techmannih](#techmannih) | 2 | 2 | 0 | 0 | 0 | 4 | 2 | 1 | 0 | 0 |
+| [Anshgrover23](#Anshgrover23) | 42 | 13 | 10 | 0 | 2 | 19 | 14 | 9 | 1 | 4 |
+| [techmannih](#techmannih) | 5 | 2 | 1 | 0 | 0 | 6 | 2 | 1 | 0 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 7 | 6 | 0 | 0 | 0 | 6 | 5 | 5 | 4 | 50 |
+| [devin-ai-integration[bot]](#devin-ai-integration[bot]) | 3 | 1 | 2 | 0 | 0 | 3 | 1 | 0 | 0 | 0 |
+| [oldbear26](#oldbear26) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [krushnarout](#krushnarout) | 1 | 1 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 
 ## Changes by Repository
-
-### [tscircuit/core](https://github.com/tscircuit/core)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#481](https://github.com/tscircuit/core/pull/481) | 🐳 Major | ShiboSoftwareDev | Implement the MOSFET component |
-| [#480](https://github.com/tscircuit/core/pull/480) | 🐳 Major | seveibar | Allows duplicate port hints for overlapping PCB primitive elements and fixes some KiCAD conversion issues. |
-| [#479](https://github.com/tscircuit/core/pull/479) | 🐙 Minor | Abse2001 | Added a `display_name` property to the `source_trace` object and implemented a function to generate the display name based on the connected ports and nets. |
-| [#478](https://github.com/tscircuit/core/pull/478) | 🐙 Minor | Anshgrover23 | Added a new `noSchematicRepresentation` option to the `Chip` component, which allows skipping the schematic rendering of the component. |
-| [#475](https://github.com/tscircuit/core/pull/475) | 🐙 Minor | seveibar | Adds support for non-numeric pin labels in schPinStyle and adds a function to get the numeric schPinStyle. |
-
-### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#116](https://github.com/tscircuit/circuit-json/pull/116) | 🐙 Minor | ShiboSoftwareDev | Added a new circuit element called "simple_mosfet" to the project. |
-| [#115](https://github.com/tscircuit/circuit-json/pull/115) | 🐙 Minor | Abse2001 | Added a new optional field `display_name` to the `SourceTrace` type. |
-
-### [tscircuit/props](https://github.com/tscircuit/props)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#138](https://github.com/tscircuit/props/pull/138) | 🐙 Minor | ShiboSoftwareDev | Refines the `MosfetProps` interface by updating the `channelType` property to use more generic values ("n" and "p") and adding a new `mosfetMode` property to distinguish between enhancement and depletion mode. |
-| [#141](https://github.com/tscircuit/props/pull/141) | 🐙 Minor | Anshgrover23 | Adds a new property `noSchematicRepresentation` to the `chipProps` type. |
-
-### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#105](https://github.com/tscircuit/footprinter/pull/105) | 🐙 Minor | ShiboSoftwareDev | Changes the parameter types of `pushbutton` from `number` to `length` in the `pushbutton.ts` file. |
-| [#104](https://github.com/tscircuit/footprinter/pull/104) | 🐙 Minor | ShiboSoftwareDev | Removed the `num_pins` literal type from the `axial` component and replaced it with a `number` type. |
-
-### [tscircuit/snippets](https://github.com/tscircuit/snippets)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#484](https://github.com/tscircuit/snippets/pull/484) | 🐳 Major | Abse2001 | Introduces a new feature that adds AI-driven auto-completion to the CodeEditor component using the Codeium library. |
-| [#482](https://github.com/tscircuit/snippets/pull/482) | 🐙 Minor | Anshgrover23 | Adds a new option to download the KiCAD PCB files for the circuit. |
-| [#460](https://github.com/tscircuit/snippets/pull/460) | 🐙 Minor | Anshgrover23 | Fix the search component to display search results with a maximum height and scrollable content. |
-| [#472](https://github.com/tscircuit/snippets/pull/472) | 🐙 Minor | Anshgrover23 | Add Algora bounty badges to the README.md file. |
-| [#458](https://github.com/tscircuit/snippets/pull/458) | 🐙 Minor | Anshgrover23 | Fixes issues with playwright tests, including wait time and locator improvements. |
-| [#487](https://github.com/tscircuit/snippets/pull/487) | 🐙 Minor | seveibar | Reverts a previous fix for card misalignment. |
-| [#488](https://github.com/tscircuit/snippets/pull/488) | 🐙 Minor | seveibar | Fixes the determination of the snippet type when the `templateFromUrl` is `null`. |
-| [#468](https://github.com/tscircuit/snippets/pull/468) | 🐙 Minor | seveibar | Improves the layout of the bullet points on the mobile version of the landing page |
-| [#463](https://github.com/tscircuit/snippets/pull/463) | 🐙 Minor | seveibar | Adds analytics tracking using Vercel Analytics and PostHog, and introduces a cookie consent banner. |
-| [#478](https://github.com/tscircuit/snippets/pull/478) | 🐙 Minor | techmannih | Fixes a card misalignment issue by adding a hover effect and adjusting the height to be full. |
-| [#475](https://github.com/tscircuit/snippets/pull/475) | 🐙 Minor | techmannih | Add a button to download the assembly SVG of the circuit |
-| [#465](https://github.com/tscircuit/snippets/pull/465) | 🐙 Minor | krushnarout | Adds a new button on the landing page for logged-in users. |
-| [#483](https://github.com/tscircuit/snippets/pull/483) | 🐌 Tiny | seveibar | Update the Discord link in the Header2 component. |
-
-### [tscircuit/jlcsearch](https://github.com/tscircuit/jlcsearch)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#14](https://github.com/tscircuit/jlcsearch/pull/14) | 🐳 Major | Anshgrover23 |  |
-| [#16](https://github.com/tscircuit/jlcsearch/pull/16) | 🐙 Minor | seveibar | Adds the PostHog analytics script to the application. |
 
 ### [tscircuit/kicad-component-converter](https://github.com/tscircuit/kicad-component-converter)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#110](https://github.com/tscircuit/kicad-component-converter/pull/110) | 🐳 Major | seveibar | Convert KiCad .kicad_mod files into Circuit JSON format on the website. |
-| [#112](https://github.com/tscircuit/kicad-component-converter/pull/112) | 🐙 Minor | seveibar | Adds a button to open the generated TSCircuit code in an online code snippet tool. |
+| [#110](https://github.com/tscircuit/kicad-component-converter/pull/110) | 🐳 Major | seveibar | Adds a web-based interface to convert Kicad Mod files into Circuit JSON or tscircuit code |
+| [#112](https://github.com/tscircuit/kicad-component-converter/pull/112) | 🐙 Minor | seveibar | Allow opening tscircuit snippet |
 
 ### [tscircuit/easyeda-converter](https://github.com/tscircuit/easyeda-converter)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#141](https://github.com/tscircuit/easyeda-converter/pull/141) | 🐙 Minor | seveibar | Add instructions to the README for adding new part tests |
+| [#146](https://github.com/tscircuit/easyeda-converter/pull/146) | 🐳 Major | seveibar | Adds support for parsing silkscreen text in the EasyEDA JSON to TSCircuit Soup JSON conversion. |
+| [#141](https://github.com/tscircuit/easyeda-converter/pull/141) | 🐙 Minor | seveibar | Add instructions to the README for adding a new part test |
+
+### [tscircuit/core](https://github.com/tscircuit/core)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#480](https://github.com/tscircuit/core/pull/480) | 🐳 Major | seveibar | Allow duplicate port hints for overlapping pcb primitive elements, fixing some KiCad conversion issues. |
+| [#475](https://github.com/tscircuit/core/pull/475) | 🐙 Minor | seveibar | Adds support for non-numeric pin labels in the `schPinStyle` property, and introduces a new function `getNumericSchPinStyle` to handle the conversion of pin labels to numeric pin numbers. |
+| [#479](https://github.com/tscircuit/core/pull/479) | 🐙 Minor | Abse2001 | Added a new function `getTraceDisplayName` to generate a display name for a trace based on the connected ports and nets. |
+| [#478](https://github.com/tscircuit/core/pull/478) | 🐙 Minor | Anshgrover23 | Adds a new feature to check the `noSchematicRepresentation` property and early return if it is true, skipping the normal schematic rendering. |
+| [#481](https://github.com/tscircuit/core/pull/481) | 🐙 Minor | ShiboSoftwareDev | Adds a new Mosfet component to the circuit library |
 
 ### [tscircuit/cli](https://github.com/tscircuit/cli)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#11](https://github.com/tscircuit/cli/pull/11) | 🟣 | seveibar | Fix Module Import issue in cli build |
-| [#10](https://github.com/tscircuit/cli/pull/10) | 🐳 Major | seveibar | Adds support for schematic drag and drop, dynamic loading of the runframe library, and an events watcher on the CLI. |
+| [#12](https://github.com/tscircuit/cli/pull/12) | 🐳 Major | seveibar | Establishes CLI patterns, implements authentication to prepare for snippets sync |
+| [#10](https://github.com/tscircuit/cli/pull/10) | 🐳 Major | seveibar | Adds support for drag-and-drop functionality in the schematic editor, including dynamic loading of the Runframe library and a watcher for file updates. |
+| [#13](https://github.com/tscircuit/cli/pull/13) | 🐙 Minor | seveibar | This pull request adds a new "clone" command to the CLI, allowing users to quickly download snippets from the tscircuit registry. |
+| [#11](https://github.com/tscircuit/cli/pull/11) | 🐙 Minor | seveibar | Fix Module Import issue in cli build |
+
+### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#107](https://github.com/tscircuit/pcb-viewer/pull/107) | 🐙 Minor | seveibar | Switch to ESM module (drop CommonJS support) |
+| [#101](https://github.com/tscircuit/pcb-viewer/pull/101) | 🐙 Minor | Abse2001 | Adds a trace length tooltip that is displayed when hovering over multiple traces, and handles the case when the trace length exceeds the maximum length. |
+
+### [tscircuit/props](https://github.com/tscircuit/props)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#144](https://github.com/tscircuit/props/pull/144) | 🐙 Minor | seveibar | Rename `pcbOffsetX` and `pcbOffsetY` properties to `outlineOffsetX` and `outlineOffsetY` respectively in the `boardProps` type. |
+| [#141](https://github.com/tscircuit/props/pull/141) | 🐙 Minor | Anshgrover23 | Add a new `noSchematicRepresentation` property to the `chipProps` type and associated tests. |
+| [#138](https://github.com/tscircuit/props/pull/138) | 🐙 Minor | ShiboSoftwareDev | Changes the `channelType` property in the `MosfetProps` interface and the `mosfetProps` object from `"nmos" | "pmos"` to `"n" | "p"`, and adds a new `mosfetMode` property with values `"enhancement" | "depletion"`. |
+| [#143](https://github.com/tscircuit/props/pull/143) | 🐙 Minor | devin-ai-integration[bot] | Add `pcbOffsetX` and `pcbOffsetY` properties to the board component to allow offsetting the board's PCB position. |
+
+### [tscircuit/plop](https://github.com/tscircuit/plop)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#7](https://github.com/tscircuit/plop/pull/7) | 🐙 Minor | seveibar | Allow bot token for bypassing branch protection on version commit |
+
+### [tscircuit/snippets](https://github.com/tscircuit/snippets)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#484](https://github.com/tscircuit/snippets/pull/484) | 🐳 Major | Abse2001 | Adds an AI-driven auto-completion feature to the CodeEditor component. |
+| [#493](https://github.com/tscircuit/snippets/pull/493) | 🐙 Minor | seveibar | Improve the search component, making it more responsive and user-friendly. |
+| [#487](https://github.com/tscircuit/snippets/pull/487) | 🐙 Minor | seveibar | Reverting a previous fix for card misalignment |
+| [#488](https://github.com/tscircuit/snippets/pull/488) | 🐙 Minor | seveibar | Fix the snippet type by checking the URL parameters and the template from the URL. |
+| [#468](https://github.com/tscircuit/snippets/pull/468) | 🐙 Minor | seveibar | Improves the layout of the landing feature bullet points on mobile devices. |
+| [#463](https://github.com/tscircuit/snippets/pull/463) | 🐙 Minor | seveibar | Adds analytics tracking and cookie consent component to the application. |
+| [#492](https://github.com/tscircuit/snippets/pull/492) | 🐙 Minor | Anshgrover23 | Fixes the selector for the "Edit Description" menu item |
+| [#490](https://github.com/tscircuit/snippets/pull/490) | 🐙 Minor | Anshgrover23 | Fixes all the tests and skips manual edits for now |
+| [#482](https://github.com/tscircuit/snippets/pull/482) | 🐙 Minor | Anshgrover23 | Add a new feature to download KiCad PCB files from the circuit editor. |
+| [#460](https://github.com/tscircuit/snippets/pull/460) | 🐙 Minor | Anshgrover23 | Fixes the search component by adding overflow-y-auto to the search results container to prevent the search results from overflowing the screen. |
+| [#472](https://github.com/tscircuit/snippets/pull/472) | 🐙 Minor | Anshgrover23 | Add Algora bounty badges to the README.md file. |
+| [#458](https://github.com/tscircuit/snippets/pull/458) | 🐙 Minor | Anshgrover23 | Fixes issues in the Playwright tests, including improvements to waiting for network requests, file dialog interactions, and star button functionality. |
+| [#478](https://github.com/tscircuit/snippets/pull/478) | 🐙 Minor | techmannih | Fixes card misalignment by adding a `hover:shadow-lg transition-shadow duration-200 h-full` class to the card component. |
+| [#475](https://github.com/tscircuit/snippets/pull/475) | 🐙 Minor | techmannih | Adds a new button to download the Assembly SVG for the circuit |
+| [#465](https://github.com/tscircuit/snippets/pull/465) | 🐙 Minor | krushnarout | Adds a new "HeaderDropdown" component and displays it on the landing page when the user is logged in. |
+| [#483](https://github.com/tscircuit/snippets/pull/483) | 🐌 Tiny | seveibar | Update the Discord link in the Header2 component |
+
+### [tscircuit/jlcsearch](https://github.com/tscircuit/jlcsearch)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#23](https://github.com/tscircuit/jlcsearch/pull/23) | 🐳 Major | Anshgrover23 | Adds a new derived table for LED Dot Matrix Display Modules and adds a new page for listing these components. |
+| [#22](https://github.com/tscircuit/jlcsearch/pull/22) | 🐳 Major | Anshgrover23 | Adds OLED Display modules to the application, including a new derived table for storing OLED display information and a new route for listing OLED displays. |
+| [#24](https://github.com/tscircuit/jlcsearch/pull/24) | 🐳 Major | Anshgrover23 | Adds a new derived table for LED Segment Display Modules, including various attributes such as package, positions, type, size, and color. |
+| [#16](https://github.com/tscircuit/jlcsearch/pull/16) | 🐙 Minor | seveibar | Adds the Posthog analytics script to the application. |
+| [#14](https://github.com/tscircuit/jlcsearch/pull/14) | 🟣 | Anshgrover23 |  |
 
 ### [tscircuit/circuit-json-to-tscircuit](https://github.com/tscircuit/circuit-json-to-tscircuit)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#2](https://github.com/tscircuit/circuit-json-to-tscircuit/pull/2) | 🐳 Major | seveibar | Add initial GitHub Actions workflows for format check, publishing to npm, testing, and type checking. |
-| [#3](https://github.com/tscircuit/circuit-json-to-tscircuit/pull/3) | 🐙 Minor | seveibar | Adds more README information and removes empty lines from output |
+| [#3](https://github.com/tscircuit/circuit-json-to-tscircuit/pull/3) | 🐙 Minor | seveibar | Adds more information to the README and removes empty lines from the output. |
+| [#2](https://github.com/tscircuit/circuit-json-to-tscircuit/pull/2) | 🐙 Minor | seveibar | Adds initial workflow files for format checking, type checking, testing, and publishing to npm. |
+
+### [tscircuit/circuit-json-to-connectivity-map](https://github.com/tscircuit/circuit-json-to-connectivity-map)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#7](https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/7) | 🐌 Tiny | seveibar | Update the version of the `@tscircuit/math-utils` dependency from `^0.0.4` to `^0.0.9`. |
+
+### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#116](https://github.com/tscircuit/circuit-json/pull/116) | 🐙 Minor | ShiboSoftwareDev | Added support for the `simple_mosfet` component in the `any_circuit_element` and `any_source_component` types. |
+| [#115](https://github.com/tscircuit/circuit-json/pull/115) | 🐌 Tiny | Abse2001 | Added an optional `display_name` field to the `SourceTrace` type. |
+
+### [tscircuit/autorouting.com](https://github.com/tscircuit/autorouting.com)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#13](https://github.com/tscircuit/autorouting.com/pull/13) | 🐙 Minor | Anshgrover23 | Add main logo animation |
+
+### [tscircuit/tscircuit](https://github.com/tscircuit/tscircuit)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#493](https://github.com/tscircuit/tscircuit/pull/493) | 🐌 Tiny | Anshgrover23 | Added Algora badges to the README.md file. |
+
+### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#105](https://github.com/tscircuit/footprinter/pull/105) | 🐙 Minor | ShiboSoftwareDev | Change the parameter types for pushbutton from number to length. |
+| [#104](https://github.com/tscircuit/footprinter/pull/104) | 🐙 Minor | ShiboSoftwareDev | Removed the `num_pins` property from the `axial` component definition, as it only has two pins. |
 
 ### [tscircuit/3d-viewer](https://github.com/tscircuit/3d-viewer)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#96](https://github.com/tscircuit/3d-viewer/pull/96) | 🐳 Major | DrSensor | Adds new hooks for exporting 3D models to GLTF format. |
+| [#96](https://github.com/tscircuit/3d-viewer/pull/96) | 🐳 Major | DrSensor | Add hooks for exporting to GLTF format |
 
 ## Changes by Contributor
-
-### [ShiboSoftwareDev](https://github.com/ShiboSoftwareDev)
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#481](https://github.com/tscircuit/core/pull/481) | 🐳 Major | Implement the MOSFET component |
-| [#116](https://github.com/tscircuit/circuit-json/pull/116) | 🐙 Minor | Added a new circuit element called "simple_mosfet" to the project. |
-| [#138](https://github.com/tscircuit/props/pull/138) | 🐙 Minor | Refines the `MosfetProps` interface by updating the `channelType` property to use more generic values ("n" and "p") and adding a new `mosfetMode` property to distinguish between enhancement and depletion mode. |
-| [#105](https://github.com/tscircuit/footprinter/pull/105) | 🐙 Minor | Changes the parameter types of `pushbutton` from `number` to `length` in the `pushbutton.ts` file. |
-| [#104](https://github.com/tscircuit/footprinter/pull/104) | 🐙 Minor | Removed the `num_pins` literal type from the `axial` component and replaced it with a `number` type. |
-
-### [Abse2001](https://github.com/Abse2001)
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#484](https://github.com/tscircuit/snippets/pull/484) | 🐳 Major | Introduces a new feature that adds AI-driven auto-completion to the CodeEditor component using the Codeium library. |
-| [#115](https://github.com/tscircuit/circuit-json/pull/115) | 🐙 Minor | Added a new optional field `display_name` to the `SourceTrace` type. |
-| [#479](https://github.com/tscircuit/core/pull/479) | 🐙 Minor | Added a `display_name` property to the `source_trace` object and implemented a function to generate the display name based on the connected ports and nets. |
-
-### [Anshgrover23](https://github.com/Anshgrover23)
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#14](https://github.com/tscircuit/jlcsearch/pull/14) | 🐳 Major |  |
-| [#141](https://github.com/tscircuit/props/pull/141) | 🐙 Minor | Adds a new property `noSchematicRepresentation` to the `chipProps` type. |
-| [#478](https://github.com/tscircuit/core/pull/478) | 🐙 Minor | Added a new `noSchematicRepresentation` option to the `Chip` component, which allows skipping the schematic rendering of the component. |
-| [#482](https://github.com/tscircuit/snippets/pull/482) | 🐙 Minor | Adds a new option to download the KiCAD PCB files for the circuit. |
-| [#460](https://github.com/tscircuit/snippets/pull/460) | 🐙 Minor | Fix the search component to display search results with a maximum height and scrollable content. |
-| [#472](https://github.com/tscircuit/snippets/pull/472) | 🐙 Minor | Add Algora bounty badges to the README.md file. |
-| [#458](https://github.com/tscircuit/snippets/pull/458) | 🐙 Minor | Fixes issues with playwright tests, including wait time and locator improvements. |
 
 ### [seveibar](https://github.com/seveibar)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#110](https://github.com/tscircuit/kicad-component-converter/pull/110) | 🐳 Major | Convert KiCad .kicad_mod files into Circuit JSON format on the website. |
-| [#480](https://github.com/tscircuit/core/pull/480) | 🐳 Major | Allows duplicate port hints for overlapping PCB primitive elements and fixes some KiCAD conversion issues. |
-| [#112](https://github.com/tscircuit/kicad-component-converter/pull/112) | 🐙 Minor | Adds a button to open the generated TSCircuit code in an online code snippet tool. |
-| [#141](https://github.com/tscircuit/easyeda-converter/pull/141) | 🐙 Minor | Add instructions to the README for adding new part tests |
-| [#475](https://github.com/tscircuit/core/pull/475) | 🐙 Minor | Adds support for non-numeric pin labels in schPinStyle and adds a function to get the numeric schPinStyle. |
-| [#487](https://github.com/tscircuit/snippets/pull/487) | 🐙 Minor | Reverts a previous fix for card misalignment. |
-| [#488](https://github.com/tscircuit/snippets/pull/488) | 🐙 Minor | Fixes the determination of the snippet type when the `templateFromUrl` is `null`. |
-| [#468](https://github.com/tscircuit/snippets/pull/468) | 🐙 Minor | Improves the layout of the bullet points on the mobile version of the landing page |
-| [#463](https://github.com/tscircuit/snippets/pull/463) | 🐙 Minor | Adds analytics tracking using Vercel Analytics and PostHog, and introduces a cookie consent banner. |
-| [#16](https://github.com/tscircuit/jlcsearch/pull/16) | 🐙 Minor | Adds the PostHog analytics script to the application. |
-| [#483](https://github.com/tscircuit/snippets/pull/483) | 🐌 Tiny | Update the Discord link in the Header2 component. |
-| [#11](https://github.com/tscircuit/cli/pull/11) | 🟣 | Fix Module Import issue in cli build |
-| [#10](https://github.com/tscircuit/cli/pull/10) | 🐳 Major | Adds support for schematic drag and drop, dynamic loading of the runframe library, and an events watcher on the CLI. |
-| [#2](https://github.com/tscircuit/circuit-json-to-tscircuit/pull/2) | 🐳 Major | Add initial GitHub Actions workflows for format check, publishing to npm, testing, and type checking. |
-| [#3](https://github.com/tscircuit/circuit-json-to-tscircuit/pull/3) | 🐙 Minor | Adds more README information and removes empty lines from output |
+| [#110](https://github.com/tscircuit/kicad-component-converter/pull/110) | 🐳 Major | Adds a web-based interface to convert Kicad Mod files into Circuit JSON or tscircuit code |
+| [#146](https://github.com/tscircuit/easyeda-converter/pull/146) | 🐳 Major | Adds support for parsing silkscreen text in the EasyEDA JSON to TSCircuit Soup JSON conversion. |
+| [#480](https://github.com/tscircuit/core/pull/480) | 🐳 Major | Allow duplicate port hints for overlapping pcb primitive elements, fixing some KiCad conversion issues. |
+| [#12](https://github.com/tscircuit/cli/pull/12) | 🐳 Major | Establishes CLI patterns, implements authentication to prepare for snippets sync |
+| [#10](https://github.com/tscircuit/cli/pull/10) | 🐳 Major | Adds support for drag-and-drop functionality in the schematic editor, including dynamic loading of the Runframe library and a watcher for file updates. |
+| [#107](https://github.com/tscircuit/pcb-viewer/pull/107) | 🐙 Minor | Switch to ESM module (drop CommonJS support) |
+| [#144](https://github.com/tscircuit/props/pull/144) | 🐙 Minor | Rename `pcbOffsetX` and `pcbOffsetY` properties to `outlineOffsetX` and `outlineOffsetY` respectively in the `boardProps` type. |
+| [#112](https://github.com/tscircuit/kicad-component-converter/pull/112) | 🐙 Minor | Allow opening tscircuit snippet |
+| [#141](https://github.com/tscircuit/easyeda-converter/pull/141) | 🐙 Minor | Add instructions to the README for adding a new part test |
+| [#475](https://github.com/tscircuit/core/pull/475) | 🐙 Minor | Adds support for non-numeric pin labels in the `schPinStyle` property, and introduces a new function `getNumericSchPinStyle` to handle the conversion of pin labels to numeric pin numbers. |
+| [#7](https://github.com/tscircuit/plop/pull/7) | 🐙 Minor | Allow bot token for bypassing branch protection on version commit |
+| [#493](https://github.com/tscircuit/snippets/pull/493) | 🐙 Minor | Improve the search component, making it more responsive and user-friendly. |
+| [#487](https://github.com/tscircuit/snippets/pull/487) | 🐙 Minor | Reverting a previous fix for card misalignment |
+| [#488](https://github.com/tscircuit/snippets/pull/488) | 🐙 Minor | Fix the snippet type by checking the URL parameters and the template from the URL. |
+| [#468](https://github.com/tscircuit/snippets/pull/468) | 🐙 Minor | Improves the layout of the landing feature bullet points on mobile devices. |
+| [#463](https://github.com/tscircuit/snippets/pull/463) | 🐙 Minor | Adds analytics tracking and cookie consent component to the application. |
+| [#16](https://github.com/tscircuit/jlcsearch/pull/16) | 🐙 Minor | Adds the Posthog analytics script to the application. |
+| [#13](https://github.com/tscircuit/cli/pull/13) | 🐙 Minor | This pull request adds a new "clone" command to the CLI, allowing users to quickly download snippets from the tscircuit registry. |
+| [#11](https://github.com/tscircuit/cli/pull/11) | 🐙 Minor | Fix Module Import issue in cli build |
+| [#3](https://github.com/tscircuit/circuit-json-to-tscircuit/pull/3) | 🐙 Minor | Adds more information to the README and removes empty lines from the output. |
+| [#2](https://github.com/tscircuit/circuit-json-to-tscircuit/pull/2) | 🐙 Minor | Adds initial workflow files for format checking, type checking, testing, and publishing to npm. |
+| [#7](https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/7) | 🐌 Tiny | Update the version of the `@tscircuit/math-utils` dependency from `^0.0.4` to `^0.0.9`. |
+| [#483](https://github.com/tscircuit/snippets/pull/483) | 🐌 Tiny | Update the Discord link in the Header2 component |
+
+### [Abse2001](https://github.com/Abse2001)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#484](https://github.com/tscircuit/snippets/pull/484) | 🐳 Major | Adds an AI-driven auto-completion feature to the CodeEditor component. |
+| [#101](https://github.com/tscircuit/pcb-viewer/pull/101) | 🐙 Minor | Adds a trace length tooltip that is displayed when hovering over multiple traces, and handles the case when the trace length exceeds the maximum length. |
+| [#479](https://github.com/tscircuit/core/pull/479) | 🐙 Minor | Added a new function `getTraceDisplayName` to generate a display name for a trace based on the connected ports and nets. |
+| [#115](https://github.com/tscircuit/circuit-json/pull/115) | 🐌 Tiny | Added an optional `display_name` field to the `SourceTrace` type. |
+
+### [Anshgrover23](https://github.com/Anshgrover23)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#23](https://github.com/tscircuit/jlcsearch/pull/23) | 🐳 Major | Adds a new derived table for LED Dot Matrix Display Modules and adds a new page for listing these components. |
+| [#22](https://github.com/tscircuit/jlcsearch/pull/22) | 🐳 Major | Adds OLED Display modules to the application, including a new derived table for storing OLED display information and a new route for listing OLED displays. |
+| [#24](https://github.com/tscircuit/jlcsearch/pull/24) | 🐳 Major | Adds a new derived table for LED Segment Display Modules, including various attributes such as package, positions, type, size, and color. |
+| [#141](https://github.com/tscircuit/props/pull/141) | 🐙 Minor | Add a new `noSchematicRepresentation` property to the `chipProps` type and associated tests. |
+| [#478](https://github.com/tscircuit/core/pull/478) | 🐙 Minor | Adds a new feature to check the `noSchematicRepresentation` property and early return if it is true, skipping the normal schematic rendering. |
+| [#13](https://github.com/tscircuit/autorouting.com/pull/13) | 🐙 Minor | Add main logo animation |
+| [#492](https://github.com/tscircuit/snippets/pull/492) | 🐙 Minor | Fixes the selector for the "Edit Description" menu item |
+| [#490](https://github.com/tscircuit/snippets/pull/490) | 🐙 Minor | Fixes all the tests and skips manual edits for now |
+| [#482](https://github.com/tscircuit/snippets/pull/482) | 🐙 Minor | Add a new feature to download KiCad PCB files from the circuit editor. |
+| [#460](https://github.com/tscircuit/snippets/pull/460) | 🐙 Minor | Fixes the search component by adding overflow-y-auto to the search results container to prevent the search results from overflowing the screen. |
+| [#472](https://github.com/tscircuit/snippets/pull/472) | 🐙 Minor | Add Algora bounty badges to the README.md file. |
+| [#458](https://github.com/tscircuit/snippets/pull/458) | 🐙 Minor | Fixes issues in the Playwright tests, including improvements to waiting for network requests, file dialog interactions, and star button functionality. |
+| [#493](https://github.com/tscircuit/tscircuit/pull/493) | 🐌 Tiny | Added Algora badges to the README.md file. |
+| [#14](https://github.com/tscircuit/jlcsearch/pull/14) | 🟣 |  |
+
+### [ShiboSoftwareDev](https://github.com/ShiboSoftwareDev)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#116](https://github.com/tscircuit/circuit-json/pull/116) | 🐙 Minor | Added support for the `simple_mosfet` component in the `any_circuit_element` and `any_source_component` types. |
+| [#138](https://github.com/tscircuit/props/pull/138) | 🐙 Minor | Changes the `channelType` property in the `MosfetProps` interface and the `mosfetProps` object from `"nmos" | "pmos"` to `"n" | "p"`, and adds a new `mosfetMode` property with values `"enhancement" | "depletion"`. |
+| [#105](https://github.com/tscircuit/footprinter/pull/105) | 🐙 Minor | Change the parameter types for pushbutton from number to length. |
+| [#104](https://github.com/tscircuit/footprinter/pull/104) | 🐙 Minor | Removed the `num_pins` property from the `axial` component definition, as it only has two pins. |
+| [#481](https://github.com/tscircuit/core/pull/481) | 🐙 Minor | Adds a new Mosfet component to the circuit library |
+
+### [devin-ai-integration[bot]](https://github.com/devin-ai-integration[bot])
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#143](https://github.com/tscircuit/props/pull/143) | 🐙 Minor | Add `pcbOffsetX` and `pcbOffsetY` properties to the board component to allow offsetting the board's PCB position. |
 
 ### [DrSensor](https://github.com/DrSensor)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#96](https://github.com/tscircuit/3d-viewer/pull/96) | 🐳 Major | Adds new hooks for exporting 3D models to GLTF format. |
+| [#96](https://github.com/tscircuit/3d-viewer/pull/96) | 🐳 Major | Add hooks for exporting to GLTF format |
 
 ### [techmannih](https://github.com/techmannih)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#478](https://github.com/tscircuit/snippets/pull/478) | 🐙 Minor | Fixes a card misalignment issue by adding a hover effect and adjusting the height to be full. |
-| [#475](https://github.com/tscircuit/snippets/pull/475) | 🐙 Minor | Add a button to download the assembly SVG of the circuit |
+| [#478](https://github.com/tscircuit/snippets/pull/478) | 🐙 Minor | Fixes card misalignment by adding a `hover:shadow-lg transition-shadow duration-200 h-full` class to the card component. |
+| [#475](https://github.com/tscircuit/snippets/pull/475) | 🐙 Minor | Adds a new button to download the Assembly SVG for the circuit |
 
 ### [krushnarout](https://github.com/krushnarout)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#465](https://github.com/tscircuit/snippets/pull/465) | 🐙 Minor | Adds a new button on the landing page for logged-in users. |
+| [#465](https://github.com/tscircuit/snippets/pull/465) | 🐙 Minor | Adds a new "HeaderDropdown" component and displays it on the landing page when the user is logged in. |
 
 
 
