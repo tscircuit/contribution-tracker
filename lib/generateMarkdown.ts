@@ -1,5 +1,4 @@
 import type { AnalyzedPR, ContributorStats } from "lib/types"
-import { readCache, writeCache } from "./cache"
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {
@@ -29,12 +28,6 @@ export async function generateMarkdown(
   contributorIdToStatsMap: Record<string, ContributorStats>,
   weekStart: string,
 ): Promise<string> {
-  const cacheKey = `markdown-${weekStart}-${JSON.stringify(prs)}-${JSON.stringify(contributorIdToStatsMap)}`
-  const cachedMarkdown = await readCache<string>(cacheKey, 24 * 60 * 60 * 1000)
-  if (cachedMarkdown) {
-    return cachedMarkdown
-  }
-
   let markdown = `# Contribution Overview ${weekStart}\n\n`
 
   // Generate Mermaid pie chart
@@ -241,6 +234,5 @@ export async function generateMarkdown(
     markdown += "\n"
   })
 
-  await writeCache(cacheKey, markdown)
   return markdown
 }
