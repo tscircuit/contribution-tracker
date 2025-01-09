@@ -1,6 +1,16 @@
 import { octokit } from "./sdks"
+import { readCache, writeCache } from "./cache"
 
 export async function getRepos(): Promise<string[]> {
+  const cacheKey = "repos:tscircuit"
+  const cacheExpiry = 24 * 60 * 60 * 1000 // 24 hours in milliseconds
+
+  // Try to retrieve cached repos
+  const cachedRepos = await readCache<string[]>(cacheKey, cacheExpiry)
+  if (cachedRepos) {
+    return cachedRepos
+  }
+
   if (process.env.SHORT_REPO_LIST) {
     if (process.env.SHORT_REPO_LIST.includes("tscircuit/")) {
       return process.env.SHORT_REPO_LIST.split(",")
@@ -37,6 +47,9 @@ export async function getRepos(): Promise<string[]> {
     hasNextPage = response.data.length === 100
     page++
   }
+
+  // Cache the retrieved repos
+  await writeCache(cacheKey, repos)
 
   return repos
 }

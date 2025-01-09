@@ -1,5 +1,6 @@
 import { Octokit } from "@octokit/rest"
 import { unescapeLeadingUnderscores } from "typescript"
+import { readCache, writeCache } from "./cache"
 
 // Ensure you have access to the Octokit instance
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
@@ -20,6 +21,16 @@ export async function getBountiedIssues(
   contributor: string,
   startDate: string,
 ): Promise<{ number: number; amount: number }[]> {
+  const cacheKey = `bounties-${repo}-${contributor}-${startDate}`
+  const cachedBounties = await readCache<{ number: number; amount: number }[]>(
+    cacheKey,
+    6 * 60 * 60 * 1000,
+  )
+
+  if (cachedBounties) {
+    return cachedBounties
+  }
+
   try {
     const { data: issues } = await octokit.issues.listForRepo({
       owner: repo.split("/")[0],
@@ -38,8 +49,7 @@ export async function getBountiedIssues(
       issue.labels.some((label: any) => label.name === "💎 Bounty"),
     )
 
-    // Process issues to extract numbers and bounty amounts from comments
-    return Promise.all(
+    const results = await Promise.all(
       bountiedIssues.map(async (issue) => {
         // Fetch comments for the issue
         const { data: comments } = await octokit.issues.listComments({
@@ -65,6 +75,9 @@ export async function getBountiedIssues(
         }
       }),
     )
+
+    await writeCache(cacheKey, results)
+    return results
   } catch (error) {
     console.error(
       `Error fetching bountied issues for ${contributor} in ${repo}:`,

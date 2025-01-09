@@ -2,7 +2,6 @@ import { Octokit } from "@octokit/rest"
 import * as fs from "fs"
 import type { AnalyzedPR, ContributorStats } from "./lib/types"
 import Anthropic from "@anthropic-ai/sdk"
-import { Level } from "level"
 import { getRepos } from "./lib/getRepos"
 import { generateMarkdown } from "./lib/generateMarkdown"
 import { getMergedPRs } from "./lib/getMergedPRs"
@@ -10,10 +9,28 @@ import { getAllPRs } from "./lib/getAllPRs"
 import { getBountiedIssues } from "./lib/getBountiedIssues"
 import { getIssuesCreated } from "./lib/getIssuesCreated"
 import { analyzePRWithClaude } from "./lib/analyzePRWithClaude"
-import { db } from "./lib/cache"
+import { readCache, writeCache } from "./lib/cache"
 
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
+  const cacheKey = `overview-${startDateString}`
+
+  // Try to get cached data first
+  const cachedData = await readCache<{
+    mergedPrsWithAnalysis: AnalyzedPR[]
+    contributorData: Record<string, ContributorStats>
+  }>(cacheKey, 24 * 60 * 60 * 1000) // 24 hour cache
+
+  if (cachedData) {
+    console.log("Using cached data for overview generation")
+    const { mergedPrsWithAnalysis, contributorData } = cachedData
+    await generateAndWriteFiles(
+      mergedPrsWithAnalysis,
+      contributorData,
+      startDateString,
+    )
+    return
+  }
 
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
@@ -126,6 +143,24 @@ export async function generateOverview(startDate: string) {
     await Promise.all(getIssuesCreatedPromises)
   }
 
+  // Cache the data
+  await writeCache(cacheKey, {
+    mergedPrsWithAnalysis,
+    contributorData,
+  })
+
+  await generateAndWriteFiles(
+    mergedPrsWithAnalysis,
+    contributorData,
+    startDateString,
+  )
+}
+
+async function generateAndWriteFiles(
+  mergedPrsWithAnalysis: AnalyzedPR[],
+  contributorData: Record<string, ContributorStats>,
+  startDateString: string,
+) {
   // Group PRs by contributor
   const contributorPRs = mergedPrsWithAnalysis.reduce(
     (acc, pr) => {
@@ -169,9 +204,6 @@ export async function generateOverview(startDate: string) {
     `<!-- START_CURRENT_WEEK -->\n\n${markdown}\n\n<!-- END_CURRENT_WEEK -->`,
   )
   fs.writeFileSync("README.md", updatedReadme)
-
-  // Close the database
-  await db.close()
 }
 
 export async function generateWeeklyOverview() {
