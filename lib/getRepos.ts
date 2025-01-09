@@ -25,7 +25,7 @@ export async function getRepos(): Promise<string[]> {
   let hasNextPage = true
 
   while (hasNextPage) {
-    const response = await octokit.rest.repos.listForOrg({
+    const response = await octokit.repos.listForOrg({
       org: "tscircuit",
       type: "public",
       per_page: 100,
@@ -37,6 +37,8 @@ export async function getRepos(): Promise<string[]> {
     hasNextPage = response.data.length === 100
     page++
   }
+
+  // Process complete
 
   return repos
 }

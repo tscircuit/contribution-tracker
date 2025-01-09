@@ -1,8 +1,5 @@
-import { Octokit } from "@octokit/rest"
+import { octokit } from "./sdks"
 import { unescapeLeadingUnderscores } from "typescript"
-
-// Ensure you have access to the Octokit instance
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
 // Function to extract bounty amount from the comment body
 function extractBountyAmountFromComment(commentBody: string): number {
@@ -38,8 +35,7 @@ export async function getBountiedIssues(
       issue.labels.some((label: any) => label.name === "💎 Bounty"),
     )
 
-    // Process issues to extract numbers and bounty amounts from comments
-    return Promise.all(
+    const results = await Promise.all(
       bountiedIssues.map(async (issue) => {
         // Fetch comments for the issue
         const { data: comments } = await octokit.issues.listComments({
@@ -65,6 +61,9 @@ export async function getBountiedIssues(
         }
       }),
     )
+
+    // Process complete
+    return results
   } catch (error) {
     console.error(
       `Error fetching bountied issues for ${contributor} in ${repo}:`,

@@ -26,17 +26,13 @@ export async function getMergedPRs(
         owner,
         repo: repo_name,
         pull_number: pr.number,
-        mediaType: {
-          format: "diff",
-        },
+        mediaType: { format: "diff" },
       })
-
-      return {
-        ...pr,
-        diff: diffData as unknown as string,
-      }
+      return { ...pr, diff: diffData as unknown as string }
     }),
   )
+
+  // Process complete
 
   return prsWithDiff as MergedPullRequest[]
 }
