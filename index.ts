@@ -9,6 +9,7 @@ import { getAllPRs } from "./lib/getAllPRs"
 import { getBountiedIssues } from "./lib/getBountiedIssues"
 import { getIssuesCreated } from "./lib/getIssuesCreated"
 import { analyzePRWithClaude } from "./lib/analyzePRWithClaude"
+import { db } from "./lib/cache"
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
 
@@ -180,6 +181,8 @@ async function generateAndWriteFiles(
     `<!-- START_CURRENT_WEEK -->\n\n${markdown}\n\n<!-- END_CURRENT_WEEK -->`,
   )
   fs.writeFileSync("README.md", updatedReadme)
+  // Close the database
+  await db.close()
 }
 
 export async function generateWeeklyOverview() {

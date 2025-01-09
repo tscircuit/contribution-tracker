@@ -2,11 +2,21 @@ import { anthropic } from "./sdks"
 import filterDiff from "./filterDiff"
 import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "./types"
+import { db } from "./cache"
+
 export async function analyzePRWithClaude(
   pr: MergedPullRequest,
   repo: string,
 ): Promise<AnalyzedPR> {
+  const cacheKey = `${repo}:${pr.number}`
+
   try {
+    // Try to get the analysis from cache
+    const cachedAnalysis = JSON.parse(
+      await db.get(cacheKey, { valueEncoding: "json" }),
+    )
+    return cachedAnalysis
+  } catch (error) {
     const reducedDiff = filterDiff(pr.diff)
 
     // If not in cache, perform the analysis
@@ -50,10 +60,9 @@ Impact: [Major/Minor/Tiny]`
       url: pr.html_url,
     }
 
-    // Analysis complete
+    // Store the analysis in cache
+    await db.put(cacheKey, JSON.stringify(analysis), { valueEncoding: "json" })
 
     return analysis
-  } catch (error) {
-    throw new Error(`Error analyzing PR: ${error}`)
   }
 }
