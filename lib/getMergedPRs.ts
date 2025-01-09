@@ -1,18 +1,10 @@
 import { octokit } from "lib/sdks"
-import { readCache, writeCache } from "./cache"
 import type { MergedPullRequest } from "lib/types"
 
 export async function getMergedPRs(
   repo: string,
   since: string,
 ): Promise<MergedPullRequest[]> {
-  const cacheKey = `mergedPRs:${repo}:${since}`
-  const cacheExpiry = 24 * 60 * 60 * 1000 // 24 hours
-
-  // Attempt to fetch from cache
-  const cachedPRs = await readCache<MergedPullRequest[]>(cacheKey, cacheExpiry)
-  if (cachedPRs) return cachedPRs
-
   const [owner, repo_name] = repo.split("/")
   const { data } = await octokit.pulls.list({
     owner,
@@ -40,8 +32,7 @@ export async function getMergedPRs(
     }),
   )
 
-  // Cache results
-  await writeCache(cacheKey, prsWithDiff)
+  // Process complete
 
   return prsWithDiff as MergedPullRequest[]
 }

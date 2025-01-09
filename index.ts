@@ -9,28 +9,8 @@ import { getAllPRs } from "./lib/getAllPRs"
 import { getBountiedIssues } from "./lib/getBountiedIssues"
 import { getIssuesCreated } from "./lib/getIssuesCreated"
 import { analyzePRWithClaude } from "./lib/analyzePRWithClaude"
-import { readCache, writeCache } from "./lib/cache"
-
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
-  const cacheKey = `overview-${startDateString}`
-
-  // Try to get cached data first
-  const cachedData = await readCache<{
-    mergedPrsWithAnalysis: AnalyzedPR[]
-    contributorData: Record<string, ContributorStats>
-  }>(cacheKey, 24 * 60 * 60 * 1000) // 24 hour cache
-
-  if (cachedData) {
-    console.log("Using cached data for overview generation")
-    const { mergedPrsWithAnalysis, contributorData } = cachedData
-    await generateAndWriteFiles(
-      mergedPrsWithAnalysis,
-      contributorData,
-      startDateString,
-    )
-    return
-  }
 
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
@@ -143,11 +123,7 @@ export async function generateOverview(startDate: string) {
     await Promise.all(getIssuesCreatedPromises)
   }
 
-  // Cache the data
-  await writeCache(cacheKey, {
-    mergedPrsWithAnalysis,
-    contributorData,
-  })
+  // Data processing complete
 
   await generateAndWriteFiles(
     mergedPrsWithAnalysis,

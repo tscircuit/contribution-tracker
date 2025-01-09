@@ -1,20 +1,10 @@
 import { octokit } from "lib/sdks"
-import { readCache, writeCache } from "./cache"
 import type { PullRequestWithReviews, ReviewerStats } from "./types"
 
 export async function getAllPRs(
   repo: string,
   since: string,
 ): Promise<PullRequestWithReviews[]> {
-  const cacheKey = `allPRs:${repo}:${since}`
-  const cacheExpiry = 24 * 60 * 60 * 1000 // 24 hours
-
-  const cachedPRs = await readCache<PullRequestWithReviews[]>(
-    cacheKey,
-    cacheExpiry,
-  )
-  if (cachedPRs) return cachedPRs
-
   const [owner, repo_name] = repo.split("/")
   const fetchPRs = async (page = 1): Promise<any[]> => {
     const { data } = await octokit.pulls.list({
@@ -99,8 +89,7 @@ export async function getAllPRs(
     }),
   )
 
-  // Cache results
-  await writeCache(cacheKey, prsWithDetails)
+  // Process complete
 
   return prsWithDetails
 }

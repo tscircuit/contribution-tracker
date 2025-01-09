@@ -1,9 +1,5 @@
-import { Octokit } from "@octokit/rest"
+import { octokit } from "./sdks"
 import { unescapeLeadingUnderscores } from "typescript"
-import { readCache, writeCache } from "./cache"
-
-// Ensure you have access to the Octokit instance
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
 // Function to extract bounty amount from the comment body
 function extractBountyAmountFromComment(commentBody: string): number {
@@ -21,16 +17,6 @@ export async function getBountiedIssues(
   contributor: string,
   startDate: string,
 ): Promise<{ number: number; amount: number }[]> {
-  const cacheKey = `bounties-${repo}-${contributor}-${startDate}`
-  const cachedBounties = await readCache<{ number: number; amount: number }[]>(
-    cacheKey,
-    6 * 60 * 60 * 1000,
-  )
-
-  if (cachedBounties) {
-    return cachedBounties
-  }
-
   try {
     const { data: issues } = await octokit.issues.listForRepo({
       owner: repo.split("/")[0],
@@ -76,7 +62,7 @@ export async function getBountiedIssues(
       }),
     )
 
-    await writeCache(cacheKey, results)
+    // Process complete
     return results
   } catch (error) {
     console.error(

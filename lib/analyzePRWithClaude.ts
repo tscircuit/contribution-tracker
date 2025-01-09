@@ -2,19 +2,11 @@ import { anthropic } from "./sdks"
 import filterDiff from "./filterDiff"
 import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "./types"
-import { readCache, writeCache } from "./cache"
-
 export async function analyzePRWithClaude(
   pr: MergedPullRequest,
   repo: string,
 ): Promise<AnalyzedPR> {
-  const cacheKey = `${repo}:${pr.number}`
-
   try {
-    // Attempt to retrieve from cache
-    const cachedAnalysis = await readCache<AnalyzedPR>(cacheKey)
-    if (cachedAnalysis) return cachedAnalysis
-
     const reducedDiff = filterDiff(pr.diff)
 
     // If not in cache, perform the analysis
@@ -58,8 +50,7 @@ Impact: [Major/Minor/Tiny]`
       url: pr.html_url,
     }
 
-    // Cache the analysis
-    await writeCache(cacheKey, analysis)
+    // Analysis complete
 
     return analysis
   } catch (error) {
