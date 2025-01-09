@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
+    "@octokit/plugin-rest-endpoint-methods": "^13.3.0",
+    "@octokit/types": "^13.7.0",
     "@types/bun": "latest"
   },
   "peerDependencies": {
@@ -16,10 +18,11 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.3",
-    "@octokit/rest": "^21.0.0",
+    "@octokit/rest": "^21.1.0",
+    "dotenv": "latest",
+    "file-system-cache": "3.0.0-alpha.8",
     "level": "^8.0.1",
     "parse-diff": "^0.11.1",
-    "redaxios": "^0.5.1",
-    "dotenv": "latest"
+    "redaxios": "^0.5.1"
   }
 }
