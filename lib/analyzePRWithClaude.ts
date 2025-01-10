@@ -51,6 +51,14 @@ Impact: [Major/Minor/Tiny]`
       url: pr.html_url,
     }
   } catch (error) {
-    throw new Error(`Error analyzing PR: ${error}`)
+    return {
+      number: pr.number,
+      title: pr.title,
+      description: "",
+      impact: "Minor",
+      contributor: pr.user.login,
+      repo,
+      url: pr.html_url,
+    }
   }
 }
