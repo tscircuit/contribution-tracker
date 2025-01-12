@@ -182,7 +182,7 @@ async function generateAndWriteFiles(
 
 export async function generateWeeklyOverview() {
   const weekStart = new Date()
-  weekStart.setDate(weekStart.getDate() - weekStart.getDay() - 4) // Set to last Wednesday
+  weekStart.setDate(weekStart.getDate() - 6) // Set to 6 days ago (for 7-day window including today)
   const weekStartString = weekStart.toISOString().split("T")[0]
   await generateOverview(weekStartString)
 }
