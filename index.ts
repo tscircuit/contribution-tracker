@@ -7,6 +7,7 @@ import { getAllPRs } from "./lib/getAllPRs"
 import { getBountiedIssues } from "./lib/getBountiedIssues"
 import { getIssuesCreated } from "./lib/getIssuesCreated"
 import { analyzePRWithClaude } from "./lib/analyzePRWithClaude"
+import { getLastWednesday } from "./lib/date-utils"
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
 
@@ -181,8 +182,7 @@ async function generateAndWriteFiles(
 }
 
 export async function generateWeeklyOverview() {
-  const weekStart = new Date()
-  weekStart.setDate(weekStart.getDate() - 6) // Set to 6 days ago (for 7-day window including today)
+  const weekStart = getLastWednesday(new Date())
   const weekStartString = weekStart.toISOString().split("T")[0]
   await generateOverview(weekStartString)
 }
