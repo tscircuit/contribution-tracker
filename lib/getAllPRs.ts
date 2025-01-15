@@ -53,17 +53,38 @@ export async function getAllPRs(
   const prsWithDetails = await Promise.all(
     filteredPRs.map(async (pr) => {
       const reviews = await fetchReviews(pr.number)
-      const reviewsReceived = reviews.length
 
-      const approvalsReceived = reviews.filter(
-        (review) => review.state === "APPROVED",
+      // Get only the latest review from each reviewer
+      interface Review {
+        user: { login: string }
+        state: string
+        submitted_at: string
+      }
+
+      const latestReviewByUser = reviews.reduce((acc, review: Review) => {
+        const reviewer = review.user.login
+        const existingReview = acc.get(reviewer)
+        if (
+          !existingReview ||
+          new Date(review.submitted_at) > new Date(existingReview.submitted_at)
+        ) {
+          acc.set(reviewer, review)
+        }
+        return acc
+      }, new Map())
+
+      const latestReviews = Array.from(latestReviewByUser.values()) as Review[]
+      const reviewsReceived = latestReviews.length
+
+      const approvalsReceived = latestReviews.filter(
+        (review: Review) => review.state === "APPROVED",
       ).length
-      const rejectionsReceived = reviews.filter(
-        (review) => review.state === "CHANGES_REQUESTED",
+      const rejectionsReceived = latestReviews.filter(
+        (review: Review) => review.state === "CHANGES_REQUESTED",
       ).length
 
-      const reviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
-        (acc, review) => {
+      const reviewsByUser = latestReviews.reduce<Record<string, ReviewerStats>>(
+        (acc, review: Review) => {
           const reviewer = review.user.login
           if (!acc[reviewer]) {
             acc[reviewer] = { approvalsGiven: 0, rejectionsGiven: 0 }
