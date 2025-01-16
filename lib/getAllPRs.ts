@@ -77,16 +77,20 @@ export async function getAllPRs(
         (review: Review) => review.state === "CHANGES_REQUESTED",
       ).length
 
+      // Get review stats for each reviewer based on their final review state
       const reviewsByUser = latestReviews.reduce<Record<string, ReviewerStats>>(
         (acc, review: Review) => {
           const reviewer = review.user.login
           if (!acc[reviewer]) {
             acc[reviewer] = { approvalsGiven: 0, rejectionsGiven: 0 }
           }
+          // Set (not increment) the final state
           if (review.state === "APPROVED") {
-            acc[reviewer].approvalsGiven++
+            acc[reviewer].approvalsGiven = 1
+            acc[reviewer].rejectionsGiven = 0
           } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer].rejectionsGiven++
+            acc[reviewer].approvalsGiven = 0
+            acc[reviewer].rejectionsGiven = 1
           }
           return acc
         },
