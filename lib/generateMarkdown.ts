@@ -86,11 +86,9 @@ export async function generateMarkdown(
     // Add to score (minor contributions are worth 2 points each)
     effort.score += minorContributionsFromBounties * 2
 
-    const approvalsGiven =
-      contributorIdToStatsMap[contributor]?.approvalsGiven || 0
-    const rejectionsGiven =
-      contributorIdToStatsMap[contributor]?.rejectionsGiven || 0
-    effort.score += Math.min(approvalsGiven + rejectionsGiven, 20)
+    const prsReviewed =
+      contributorIdToStatsMap[contributor]?.prsReviewed || 0
+    effort.score += Math.min(prsReviewed, 20)
   })
 
   const sortedContributors = Object.entries(contributorEffort).sort(

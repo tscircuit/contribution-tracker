@@ -54,8 +54,8 @@ export async function getAllPRs(
     filteredPRs.map(async (pr) => {
       const reviews = await fetchReviews(pr.number)
 
-      // Get only the latest review from each reviewer
-      const latestReviewByUser = reviews.reduce((acc, review: Review) => {
+      // Get the final review state from each reviewer
+      const finalReviewByReviewer = reviews.reduce((acc, review: Review) => {
         const reviewer = review.user.login
         const existingReview = acc.get(reviewer)
         if (
@@ -67,22 +67,26 @@ export async function getAllPRs(
         return acc
       }, new Map())
 
-      const latestReviews = Array.from(latestReviewByUser.values()) as Review[]
-      const reviewsReceived = latestReviews.length
+      const finalReviews = Array.from(finalReviewByReviewer.values()) as Review[]
+      const totalReviewers = finalReviews.length
 
-      const approvalsReceived = latestReviews.filter(
+      const finalApprovals = finalReviews.filter(
         (review: Review) => review.state === "APPROVED",
       ).length
-      const rejectionsReceived = latestReviews.filter(
+      const finalRejections = finalReviews.filter(
         (review: Review) => review.state === "CHANGES_REQUESTED",
       ).length
 
       // Get review stats for each reviewer based on their final review state
-      const reviewsByUser = latestReviews.reduce<Record<string, ReviewerStats>>(
+      const reviewsByUser = finalReviews.reduce<Record<string, ReviewerStats>>(
         (acc, review: Review) => {
           const reviewer = review.user.login
           if (!acc[reviewer]) {
-            acc[reviewer] = { approvalsGiven: 0, rejectionsGiven: 0 }
+            acc[reviewer] = { 
+              approvalsGiven: 0, 
+              rejectionsGiven: 0,
+              prsReviewed: 1  // Count each PR only once per reviewer
+            }
           }
           // Set (not increment) the final state
           if (review.state === "APPROVED") {
@@ -99,9 +103,9 @@ export async function getAllPRs(
 
       return {
         ...pr,
-        reviewsReceived,
-        rejectionsReceived,
-        approvalsReceived,
+        reviewsReceived: totalReviewers,
+        rejectionsReceived: finalRejections,
+        approvalsReceived: finalApprovals,
         reviewsByUser,
         isClosed: pr.state === "closed",
       } as PullRequestWithReviews

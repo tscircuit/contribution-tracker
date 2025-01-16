@@ -1,6 +1,7 @@
 export interface ReviewerStats {
   approvalsGiven: number
   rejectionsGiven: number
+  prsReviewed: number
 }
 
 export interface ContributorStats {
@@ -15,6 +16,7 @@ export interface ContributorStats {
   score?: number
   approvalsGiven: number
   rejectionsGiven: number
+  prsReviewed: number
 }
 
 export interface PullRequest {
