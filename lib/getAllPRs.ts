@@ -1,5 +1,5 @@
 import { octokit } from "lib/sdks"
-import type { PullRequestWithReviews, ReviewerStats } from "./types"
+import type { PullRequestWithReviews, ReviewerStats, Review } from "./types"
 
 export async function getAllPRs(
   repo: string,
@@ -55,12 +55,6 @@ export async function getAllPRs(
       const reviews = await fetchReviews(pr.number)
 
       // Get only the latest review from each reviewer
-      interface Review {
-        user: { login: string }
-        state: string
-        submitted_at: string
-      }
-
       const latestReviewByUser = reviews.reduce((acc, review: Review) => {
         const reviewer = review.user.login
         const existingReview = acc.get(reviewer)

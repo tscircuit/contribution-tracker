@@ -41,6 +41,12 @@ export interface PullRequestWithReviews extends PullRequest {
   reviewsByUser?: Record<string, ReviewerStats>
 }
 
+export interface Review {
+  user: { login: string }
+  state: string
+  submitted_at: string
+}
+
 export interface AnalyzedPR {
   number: number
   title: string
