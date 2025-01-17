@@ -1,4 +1,17 @@
 {
+  "seveibar": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "approvalsGiven": 10,
+    "rejectionsGiven": 8,
+    "prsOpened": 9,
+    "prsMerged": 7,
+    "issuesCreated": 32,
+    "bountiedIssuesCount": 22,
+    "bountiedIssuesTotal": 330,
+    "score": 56
+  },
   "ShiboSoftwareDev": {
     "reviewsReceived": 4,
     "rejectionsReceived": 0,
@@ -10,19 +23,6 @@
     "issuesCreated": 2,
     "bountiedIssuesCount": 2,
     "bountiedIssuesTotal": 20
-  },
-  "seveibar": {
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "approvalsGiven": 9,
-    "rejectionsGiven": 6,
-    "prsOpened": 4,
-    "prsMerged": 2,
-    "issuesCreated": 24,
-    "bountiedIssuesCount": 17,
-    "bountiedIssuesTotal": 268,
-    "score": 41
   },
   "techmannih": {
     "reviewsReceived": 20,
@@ -55,25 +55,25 @@
     "approvalsReceived": 0,
     "approvalsGiven": 1,
     "rejectionsGiven": 5,
-    "prsOpened": 6,
-    "prsMerged": 6,
+    "prsOpened": 8,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 22
+    "score": 30
   },
   "Anshgrover23": {
-    "reviewsReceived": 2,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "reviewsReceived": 6,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 2,
     "approvalsGiven": 0,
-    "rejectionsGiven": 3,
-    "prsOpened": 3,
+    "rejectionsGiven": 4,
+    "prsOpened": 5,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 5
+    "score": 6
   },
   "kom-senapati": {
     "reviewsReceived": 5,
@@ -108,9 +108,21 @@
     "rejectionsGiven": 1,
     "prsOpened": 0,
     "prsMerged": 0,
-    "issuesCreated": 2,
-    "bountiedIssuesCount": 2,
-    "bountiedIssuesTotal": 10
+    "issuesCreated": 3,
+    "bountiedIssuesCount": 3,
+    "bountiedIssuesTotal": 20
+  },
+  "B-Mustafa": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 0,
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0
   },
   "yashksaini-coder": {
     "reviewsReceived": 8,
