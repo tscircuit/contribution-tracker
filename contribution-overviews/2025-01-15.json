@@ -1,28 +1,16 @@
 {
-  "seveibar": {
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "approvalsGiven": 10,
-    "rejectionsGiven": 8,
-    "prsOpened": 9,
-    "prsMerged": 7,
-    "issuesCreated": 32,
-    "bountiedIssuesCount": 22,
-    "bountiedIssuesTotal": 330,
-    "score": 56
-  },
-  "ShiboSoftwareDev": {
-    "reviewsReceived": 4,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "approvalsGiven": 1,
-    "rejectionsGiven": 1,
-    "prsOpened": 1,
-    "prsMerged": 0,
-    "issuesCreated": 2,
-    "bountiedIssuesCount": 2,
-    "bountiedIssuesTotal": 20
+  "kom-senapati": {
+    "reviewsReceived": 5,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 3,
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
+    "prsMerged": 3,
+    "issuesCreated": 1,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "score": 6
   },
   "techmannih": {
     "reviewsReceived": 20,
@@ -30,63 +18,77 @@
     "approvalsReceived": 6,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
+    "prsOpened": 6,
     "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "score": 8
   },
-  "Ayushjhawar8": {
-    "reviewsReceived": 3,
-    "rejectionsReceived": 2,
+  "seveibar": {
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "approvalsGiven": 13,
+    "rejectionsGiven": 9,
+    "prsOpened": 13,
+    "prsMerged": 9,
+    "issuesCreated": 41,
+    "bountiedIssuesCount": 32,
+    "bountiedIssuesTotal": 565,
+    "score": 67
+  },
+  "ShiboSoftwareDev": {
+    "reviewsReceived": 7,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
+    "approvalsGiven": 1,
+    "rejectionsGiven": 1,
+    "prsOpened": 4,
+    "prsMerged": 3,
+    "issuesCreated": 2,
+    "bountiedIssuesCount": 2,
+    "bountiedIssuesTotal": 20,
+    "score": 12
+  },
+  "Ayushjhawar8": {
+    "reviewsReceived": 4,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 1,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 0,
+    "prsOpened": 2,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0
+    "bountiedIssuesTotal": 0,
+    "score": 1
   },
   "imrishabh18": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 1,
+    "approvalsGiven": 2,
     "rejectionsGiven": 5,
     "prsOpened": 8,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "score": 30
+    "score": 29
   },
   "Anshgrover23": {
-    "reviewsReceived": 6,
-    "rejectionsReceived": 2,
+    "reviewsReceived": 7,
+    "rejectionsReceived": 3,
     "approvalsReceived": 2,
     "approvalsGiven": 0,
     "rejectionsGiven": 4,
     "prsOpened": 5,
     "prsMerged": 1,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "score": 6
-  },
-  "kom-senapati": {
-    "reviewsReceived": 5,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 3,
-    "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 3,
     "issuesCreated": 1,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "score": 6
+    "bountiedIssuesCount": 1,
+    "bountiedIssuesTotal": 10,
+    "score": 8
   },
   "Saurabhsing21": {
     "reviewsReceived": 6,
@@ -99,6 +101,19 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0
+  },
+  "ArnavK-09": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 1,
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 1,
+    "issuesCreated": 2,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "score": 2
   },
   "Abse2001": {
     "reviewsReceived": 0,
