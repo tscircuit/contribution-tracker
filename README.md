@@ -56,7 +56,7 @@ pie
 [bountied-issues-hover]: ## "Number of issues this contributor created with a bounty"
 [bountied-issue-$-hover]: ## "Total bounty amount placed on issues authored by this contributor"
 
-| Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
+| Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals Sent | Rejections Sent | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
 | [seveibar](#seveibar) | 0 | 0 | 0 | 10 | 8 | 9 | 7 | 32 | 22 | 330 |
 | [ShiboSoftwareDev](#ShiboSoftwareDev) | 4 | 0 | 0 | 1 | 1 | 1 | 0 | 2 | 2 | 20 |
