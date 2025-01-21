@@ -73,17 +73,6 @@ export async function generateMarkdown(
     {} as Record<string, Record<string, number>>,
   )
 
-  // Calculate distinctPRsReviewed from existing stats
-  Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
-    // If they've given any reviews, they must have reviewed at least one PR
-    // We'll use the minimum of approvals + rejections as an estimate of distinct PRs
-    // This is actually a conservative estimate since each PR can have at most one
-    // approval or rejection from a given reviewer
-    if (stats.approvalsGiven > 0 || stats.rejectionsGiven > 0) {
-      stats.distinctPRsReviewed = stats.approvalsGiven + stats.rejectionsGiven
-    }
-  })
-
   Object.entries(contributorEffort).forEach(([contributor, effort]) => {
     const bountiedAmount =
       contributorIdToStatsMap[contributor]?.bountiedIssuesTotal || 0
