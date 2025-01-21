@@ -1,6 +1,7 @@
 export interface ReviewerStats {
   approvalsGiven: number
   rejectionsGiven: number
+  prNumbers?: Set<number> // Set of PR numbers this reviewer has reviewed
 }
 
 export interface ContributorStats {

@@ -1,5 +1,9 @@
 import { octokit } from "lib/sdks"
-import type { PullRequestWithReviews, ReviewerStats } from "./types"
+import type {
+  PullRequestWithReviews,
+  ReviewerStats,
+  ContributorStats,
+} from "./types"
 
 export async function getAllPRs(
   repo: string,
@@ -66,8 +70,16 @@ export async function getAllPRs(
         (acc, review) => {
           const reviewer = review.user.login
           if (!acc[reviewer]) {
-            acc[reviewer] = { approvalsGiven: 0, rejectionsGiven: 0 }
+            acc[reviewer] = {
+              approvalsGiven: 0,
+              rejectionsGiven: 0,
+              prNumbers: new Set<number>(),
+            }
           }
+          // Track this PR number for the reviewer
+          acc[reviewer].prNumbers?.add(pr.number)
+
+          // Update approval/rejection counts
           if (review.state === "APPROVED") {
             acc[reviewer].approvalsGiven++
           } else if (review.state === "CHANGES_REQUESTED") {
@@ -89,7 +101,50 @@ export async function getAllPRs(
     }),
   )
 
-  // Process complete
+  // Aggregate distinct PRs reviewed per contributor
+  const reviewerPRs: Record<string, Set<number>> = {}
+  const contributorStats: Record<string, ContributorStats> = {}
+
+  // First pass: collect all PR numbers for each reviewer
+  prsWithDetails.forEach((pr) => {
+    if (!pr.reviewsByUser) return
+
+    Object.entries(pr.reviewsByUser).forEach(([reviewer, stats]) => {
+      if (!reviewerPRs[reviewer]) {
+        reviewerPRs[reviewer] = new Set<number>()
+      }
+      if (stats.prNumbers) {
+        // Union the PR numbers from this review into the aggregate set
+        stats.prNumbers.forEach((prNum) => reviewerPRs[reviewer].add(prNum))
+      }
+
+      // Initialize contributor stats if needed
+      if (!contributorStats[reviewer]) {
+        contributorStats[reviewer] = {
+          reviewsReceived: 0,
+          rejectionsReceived: 0,
+          approvalsReceived: 0,
+          prsOpened: 0,
+          prsMerged: 0,
+          issuesCreated: 0,
+          approvalsGiven: 0,
+          rejectionsGiven: 0,
+          distinctPRsReviewed: 0,
+        }
+      }
+
+      // Add this PR's review counts to the total
+      contributorStats[reviewer].approvalsGiven += stats.approvalsGiven
+      contributorStats[reviewer].rejectionsGiven += stats.rejectionsGiven
+    })
+  })
+
+  // Second pass: set distinctPRsReviewed from aggregated PR numbers
+  Object.entries(reviewerPRs).forEach(([reviewer, prNumbers]) => {
+    if (contributorStats[reviewer]) {
+      contributorStats[reviewer].distinctPRsReviewed = prNumbers.size
+    }
+  })
 
   return prsWithDetails
 }
