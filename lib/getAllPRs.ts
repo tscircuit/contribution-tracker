@@ -101,8 +101,8 @@ export async function getAllPRs(
     }),
   )
 
-  // Aggregate distinct PRs reviewed per contributor
-  const reviewerPRs: Record<string, Set<number>> = {}
+  // Map of reviewer usernames to their set of reviewed PR numbers
+  const reviewerToPRNumbersMap: Record<string, Set<number>> = {}
   const contributorStats: Record<string, ContributorStats> = {}
 
   // First pass: collect all PR numbers for each reviewer
@@ -110,12 +110,14 @@ export async function getAllPRs(
     if (!pr.reviewsByUser) return
 
     Object.entries(pr.reviewsByUser).forEach(([reviewer, stats]) => {
-      if (!reviewerPRs[reviewer]) {
-        reviewerPRs[reviewer] = new Set<number>()
+      if (!reviewerToPRNumbersMap[reviewer]) {
+        reviewerToPRNumbersMap[reviewer] = new Set<number>()
       }
       if (stats.prNumbers) {
         // Union the PR numbers from this review into the aggregate set
-        stats.prNumbers.forEach((prNum) => reviewerPRs[reviewer].add(prNum))
+        stats.prNumbers.forEach((prNum) =>
+          reviewerToPRNumbersMap[reviewer].add(prNum),
+        )
       }
 
       // Initialize contributor stats if needed
@@ -140,7 +142,7 @@ export async function getAllPRs(
   })
 
   // Second pass: set distinctPRsReviewed from aggregated PR numbers
-  Object.entries(reviewerPRs).forEach(([reviewer, prNumbers]) => {
+  Object.entries(reviewerToPRNumbersMap).forEach(([reviewer, prNumbers]) => {
     if (contributorStats[reviewer]) {
       contributorStats[reviewer].distinctPRsReviewed = prNumbers.size
     }
