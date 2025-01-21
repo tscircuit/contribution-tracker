@@ -15,6 +15,7 @@ export interface ContributorStats {
   score?: number
   approvalsGiven: number
   rejectionsGiven: number
+  distinctPRsReviewed?: number // Number of unique PRs reviewed by this contributor
 }
 
 export interface PullRequest {

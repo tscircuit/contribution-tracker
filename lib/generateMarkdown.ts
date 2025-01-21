@@ -73,6 +73,17 @@ export async function generateMarkdown(
     {} as Record<string, Record<string, number>>,
   )
 
+  // Calculate distinctPRsReviewed from existing stats
+  Object.entries(contributorIdToStatsMap).forEach(([contributor, stats]) => {
+    // If they've given any reviews, they must have reviewed at least one PR
+    // We'll use the minimum of approvals + rejections as an estimate of distinct PRs
+    // This is actually a conservative estimate since each PR can have at most one
+    // approval or rejection from a given reviewer
+    if (stats.approvalsGiven > 0 || stats.rejectionsGiven > 0) {
+      stats.distinctPRsReviewed = stats.approvalsGiven + stats.rejectionsGiven
+    }
+  })
+
   Object.entries(contributorEffort).forEach(([contributor, effort]) => {
     const bountiedAmount =
       contributorIdToStatsMap[contributor]?.bountiedIssuesTotal || 0
@@ -86,11 +97,17 @@ export async function generateMarkdown(
     // Add to score (minor contributions are worth 2 points each)
     effort.score += minorContributionsFromBounties * 2
 
+    // Use distinctPRsReviewed for scoring instead of raw review counts
+    const distinctPRsReviewed =
+      contributorIdToStatsMap[contributor]?.distinctPRsReviewed || 0
+    // Cap review points at 20, same as before
+    effort.score += Math.min(distinctPRsReviewed, 20)
+
+    // Keep track of raw counts for display purposes only
     const approvalsGiven =
       contributorIdToStatsMap[contributor]?.approvalsGiven || 0
     const rejectionsGiven =
       contributorIdToStatsMap[contributor]?.rejectionsGiven || 0
-    effort.score += Math.min(approvalsGiven + rejectionsGiven, 20)
   })
 
   const sortedContributors = Object.entries(contributorEffort).sort(
