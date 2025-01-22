@@ -25,7 +25,7 @@ test("should count distinct PRs for scoring instead of raw review counts", async
       issuesCreated: 0,
       approvalsGiven: 1, // One approvals on the same PR
       rejectionsGiven: 2, // Two rejection on the same PR
-      distinctPRsReviewed: 1, // Should only count as one PR
+      distinctPrsReviewed: 1, // Should only count as one PR
       score: 0,
     },
   }
@@ -48,7 +48,7 @@ test("should cap review points at 20 even with many distinct PRs", async () => {
       issuesCreated: 0,
       approvalsGiven: 25,
       rejectionsGiven: 5,
-      distinctPRsReviewed: 30, // More than the cap
+      distinctPrsReviewed: 30, // More than the cap
       score: 0,
     },
   }

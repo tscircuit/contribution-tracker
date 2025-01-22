@@ -86,11 +86,11 @@ export async function generateMarkdown(
     // Add to score (minor contributions are worth 2 points each)
     effort.score += minorContributionsFromBounties * 2
 
-    // Use distinctPRsReviewed for scoring instead of raw review counts
-    const distinctPRsReviewed =
-      contributorIdToStatsMap[contributor]?.distinctPRsReviewed || 0
+    // Use distinctPrsReviewed for scoring instead of raw review counts
+    const distinctPrsReviewed =
+      contributorIdToStatsMap[contributor]?.distinctPrsReviewed || 0
     // Cap review points at 20, same as before
-    effort.score += Math.min(distinctPRsReviewed, 20)
+    effort.score += Math.min(distinctPrsReviewed, 20)
 
     // Keep track of raw counts for display purposes only
     const approvalsGiven =
