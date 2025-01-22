@@ -1,6 +1,7 @@
 export interface ReviewerStats {
   approvalsGiven: number
   rejectionsGiven: number
+  prNumbers?: Set<number> // Set of PR numbers this reviewer has reviewed
 }
 
 export interface ContributorStats {
@@ -15,6 +16,7 @@ export interface ContributorStats {
   score?: number
   approvalsGiven: number
   rejectionsGiven: number
+  distinctPrsReviewed?: number // Number of unique PRs reviewed by this contributor
 }
 
 export interface PullRequest {
