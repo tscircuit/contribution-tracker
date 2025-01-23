@@ -105,8 +105,12 @@ export async function generateMarkdown(
   for (const [contributor, effort] of sortedContributors) {
     markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} | ${effort.issuesCreated} |\n`
 
-    // Update the contributor's stats with the new score
+    // Update the contributor's stats with the new score and counts
     contributorIdToStatsMap[contributor].score = effort.score
+    contributorIdToStatsMap[contributor].major = effort.Major
+    contributorIdToStatsMap[contributor].minor = effort.Minor
+    contributorIdToStatsMap[contributor].tiny = effort.Tiny
+    contributorIdToStatsMap[contributor].stars = scoreToStarString(effort.score)
   }
   markdown += "\n"
 
