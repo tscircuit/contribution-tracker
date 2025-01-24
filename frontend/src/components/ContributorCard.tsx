@@ -1,26 +1,5 @@
 import { GitPullRequest, MessageSquare } from 'lucide-react';
-
-interface ContributorStats {
-  reviewsReceived: number;
-  rejectionsReceived: number;
-  approvalsReceived: number;
-  approvalsGiven: number;
-  rejectionsGiven: number;
-  prsOpened: number;
-  prsMerged: number;
-  issuesCreated: number;
-  bountiedIssuesCount: number;
-  bountiedIssuesTotal: number;
-  major?: number;
-  minor?: number;
-  tiny?: number;
-  stars?: string;
-}
-
-interface ContributorCardProps {
-  username: string;
-  contributor: ContributorStats;
-}
+import { ContributorCardProps } from '../types/ContributorData';
 
 export function ContributorCard({ username, contributor }: ContributorCardProps) {
   return (

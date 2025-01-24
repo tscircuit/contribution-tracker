@@ -1,23 +1,7 @@
 import { useEffect, useState } from 'react';
 import { GithubIcon } from 'lucide-react';
 import { ContributorCard } from './components/ContributorCard';
-
-type ContributorStats = {
-  reviewsReceived: number;
-  rejectionsReceived: number;
-  approvalsReceived: number;
-  approvalsGiven: number;
-  rejectionsGiven: number;
-  prsOpened: number;
-  prsMerged: number;
-  issuesCreated: number;
-  bountiedIssuesCount: number;
-  bountiedIssuesTotal: number;
-  major?: number;
-  minor?: number;
-  tiny?: number;
-  stars?: string;
-};
+import { ContributorStats } from './types/ContributorData'
 
 function App() {
   const [data, setData] = useState<Record<string, ContributorStats>>({});
