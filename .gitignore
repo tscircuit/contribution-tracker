@@ -134,3 +134,4 @@ pr-analysis-cache
 .aider*
 mega_repo_readme.md
 .cache-anthropic/
+.vercel
