@@ -1,19 +1,34 @@
 import { useEffect, useState } from "react"
 import { GithubIcon } from "lucide-react"
-import { ContributorCard } from "./components/ContributorCard"
-import { type ContributorStats } from "./types/ContributorData"
+import { ContributorOverview } from "./components/ContributorOverview"
+import { PRsByRepository } from "./components/PRsByRepository"
+import { Modal } from "./components/Modal"
+import {
+  type ContributorStats,
+  type PR,
+  type RepoData,
+} from "./types/contributor"
+import {
+  getContributionOverviewsUrl,
+  getMarkdownUrl,
+  getPullRequestUrl,
+} from "./constants/api"
 
 function App() {
   const [data, setData] = useState<Record<string, ContributorStats>>({})
   const [dateUsed, setDateUsed] = useState<string>("")
+  const [repositories, setRepositories] = useState<Record<string, number>>({})
+  const [repoDetails, setRepoDetails] = useState<RepoData[]>([])
+  const [selectedContributor, setSelectedContributor] = useState<string>()
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
-    // First fetch the list of files in the contribution-overviews directory
-    fetch(
-      "https://api.github.com/repos/tscircuit/contribution-tracker/contents/contribution-overviews",
-    )
-      .then((resp) => resp.json())
-      .then((files) => {
+    async function fetchData() {
+      try {
+        // First fetch the list of files
+        const filesResp = await fetch(getContributionOverviewsUrl())
+        const files = await filesResp.json()
+
         // Filter for JSON files and sort by name to get the latest
         const jsonFiles = files
           .filter((file: { name: string }) => file.name.endsWith(".json"))
@@ -24,61 +39,131 @@ function App() {
         if (jsonFiles.length === 0) throw new Error("No JSON files found")
 
         const latestFile = jsonFiles[0]
-        setDateUsed(latestFile.name.replace(".json", ""))
+        const date = latestFile.name.replace(".json", "")
+        setDateUsed(date)
 
-        // Fetch the content of the latest JSON file
-        return fetch(latestFile.download_url)
-      })
-      .then((resp) => resp.json())
-      .then((json) => {
-        setData(json)
-      })
-      .catch((error) => {
+        // Fetch the JSON data
+        const jsonResp = await fetch(latestFile.download_url)
+        const jsonData = await jsonResp.json()
+        setData(jsonData)
+
+        // Fetch the markdown file
+        const mdResp = await fetch(getMarkdownUrl(date))
+        const markdown = await mdResp.text()
+
+        // Parse repository data from markdown
+        const repoStats: Record<string, number> = {}
+        const repoDetails: RepoData[] = []
+
+        let currentRepo: string | null = null
+        let currentPRs: PR[] = []
+
+        markdown.split("\n").forEach((line) => {
+          // Match repository headers
+          const repoMatch = line.match(/### \[(.*?)\]/)
+          if (repoMatch) {
+            if (currentRepo && currentPRs.length > 0) {
+              repoDetails.push({ name: currentRepo, prs: [...currentPRs] })
+            }
+            currentRepo = repoMatch[1]
+            currentPRs = []
+            return
+          }
+
+          // Match PR rows in tables
+          const prMatch = line.match(
+            /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \|/,
+          )
+          if (prMatch && currentRepo) {
+            repoStats[currentRepo] = (repoStats[currentRepo] || 0) + 1
+            currentPRs.push({
+              number: parseInt(prMatch[1]),
+              impact: prMatch[2] as PR["impact"],
+              contributor: prMatch[3],
+              description: prMatch[4],
+              url: getPullRequestUrl(currentRepo, parseInt(prMatch[1])),
+            })
+          }
+        })
+
+        // Add the last repo if exists
+        if (currentRepo && currentPRs.length > 0) {
+          repoDetails.push({ name: currentRepo, prs: currentPRs })
+        }
+
+        setRepositories(repoStats)
+        setRepoDetails(repoDetails)
+      } catch (error) {
         console.error("Error fetching data:", error)
-      })
+      }
+    }
+
+    fetchData()
   }, [])
 
-  const getStarCount = (stars?: string) => (stars ?? "").length
-
   const sortedContributors = Object.entries(data).sort((a, b) => {
-    // Primary sort by star count
-    const starDiff = getStarCount(b[1].stars) - getStarCount(a[1].stars)
-    if (starDiff !== 0) return starDiff
+    // Primary sort by total contributions
+    const getTotalContributions = (stats: ContributorStats) =>
+      (stats.major || 0) + (stats.minor || 0) + (stats.tiny || 0)
 
-    // Secondary sort by PR count
-    return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
+    const totalDiff = getTotalContributions(b[1]) - getTotalContributions(a[1])
+    if (totalDiff !== 0) return totalDiff
+
+    // Secondary sort by star count
+    const getStarCount = (stars?: string) => (stars ?? "").length
+    return getStarCount(b[1].stars) - getStarCount(a[1].stars)
   })
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
             TSCircuit Contributors
           </h1>
-          <div className="flex items-center justify-center gap-2 text-gray-600">
-            <GithubIcon className="w-5 h-5" />
+          <div className="flex items-center gap-4 mt-2 sm:mt-0">
             <a
               href="https://github.com/tscircuit/contribution-tracker"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
             >
+              <GithubIcon className="w-5 h-5" />
               View on GitHub
             </a>
+            <span className="text-sm text-gray-600">
+              Last updated: {dateUsed}
+            </span>
           </div>
-          <p className="text-gray-600 mt-2">Last updated: {dateUsed}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedContributors.map(([username, stats]) => (
-            <ContributorCard
-              key={username}
-              username={username}
-              contributor={stats}
+        <ContributorOverview
+          contributors={sortedContributors}
+          onSelectContributor={(username) => {
+            setSelectedContributor(username)
+            setIsModalOpen(true)
+          }}
+        />
+
+        <PRsByRepository repositories={repoDetails} />
+
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => {
+            setIsModalOpen(false)
+            setSelectedContributor(undefined)
+          }}
+          title={
+            selectedContributor ? `Contributions by ${selectedContributor}` : ""
+          }
+        >
+          {selectedContributor && (
+            <PRsByRepository
+              repositories={repoDetails}
+              selectedContributor={selectedContributor}
             />
-          ))}
-        </div>
+          )}
+        </Modal>
       </div>
     </div>
   )
