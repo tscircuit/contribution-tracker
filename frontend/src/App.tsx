@@ -101,17 +101,15 @@ function App() {
     fetchData()
   }, [])
 
+  const getStarCount = (stars?: string) => (stars ?? "").length
+
   const sortedContributors = Object.entries(data).sort((a, b) => {
-    // Primary sort by total contributions
-    const getTotalContributions = (stats: ContributorStats) =>
-      (stats.major || 0) + (stats.minor || 0) + (stats.tiny || 0)
+    // Primary sort by star count
+    const starDiff = getStarCount(b[1].stars) - getStarCount(a[1].stars)
+    if (starDiff !== 0) return starDiff
 
-    const totalDiff = getTotalContributions(b[1]) - getTotalContributions(a[1])
-    if (totalDiff !== 0) return totalDiff
-
-    // Secondary sort by star count
-    const getStarCount = (stars?: string) => (stars ?? "").length
-    return getStarCount(b[1].stars) - getStarCount(a[1].stars)
+    // Secondary sort by PR count
+    return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
   })
 
   return (
