@@ -8,7 +8,7 @@ const CONTRIBUTION_OVERVIEWS_PATH = "contribution-overviews"
 export const getContributionOverviewsUrl = () =>
   `${REPO_BASE_URL}/contents/${CONTRIBUTION_OVERVIEWS_PATH}`
 
-export const getMarkdownUrl = (date: string) =>
+export const getContributionOverviewMarkdownUrl = (date: string) =>
   `${RAW_CONTENT_URL}/${CONTRIBUTION_OVERVIEWS_PATH}/${date}.md`
 
 export const getPullRequestUrl = (repo: string, prNumber: number) =>

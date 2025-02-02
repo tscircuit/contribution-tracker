@@ -10,7 +10,7 @@ import {
 } from "./types/contributor"
 import {
   getContributionOverviewsUrl,
-  getMarkdownUrl,
+  getContributionOverviewMarkdownUrl,
   getPullRequestUrl,
 } from "./constants/api"
 
@@ -48,7 +48,7 @@ function App() {
         setData(jsonData)
 
         // Fetch the markdown file
-        const mdResp = await fetch(getMarkdownUrl(date))
+        const mdResp = await fetch(getContributionOverviewMarkdownUrl(date))
         const markdown = await mdResp.text()
 
         // Parse repository data from markdown
