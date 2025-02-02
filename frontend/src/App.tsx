@@ -1,84 +1,70 @@
-import { useEffect, useState } from "react"
 import { GithubIcon } from "lucide-react"
-import { ContributorCard } from "./components/ContributorCard"
-import { type ContributorStats } from "./types/ContributorData"
+import { ContributorOverview } from "./components/ContributorOverview"
+import { PRsByRepository } from "./components/PRsByRepository"
+import { Modal } from "./components/Modal"
+import { useContributorsData } from "./hooks/useContributorsData"
 
 function App() {
-  const [data, setData] = useState<Record<string, ContributorStats>>({})
-  const [dateUsed, setDateUsed] = useState<string>("")
-
-  useEffect(() => {
-    // First fetch the list of files in the contribution-overviews directory
-    fetch(
-      "https://api.github.com/repos/tscircuit/contribution-tracker/contents/contribution-overviews",
-    )
-      .then((resp) => resp.json())
-      .then((files) => {
-        // Filter for JSON files and sort by name to get the latest
-        const jsonFiles = files
-          .filter((file: { name: string }) => file.name.endsWith(".json"))
-          .sort((a: { name: string }, b: { name: string }) =>
-            b.name.localeCompare(a.name),
-          )
-
-        if (jsonFiles.length === 0) throw new Error("No JSON files found")
-
-        const latestFile = jsonFiles[0]
-        setDateUsed(latestFile.name.replace(".json", ""))
-
-        // Fetch the content of the latest JSON file
-        return fetch(latestFile.download_url)
-      })
-      .then((resp) => resp.json())
-      .then((json) => {
-        setData(json)
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error)
-      })
-  }, [])
-
-  const getStarCount = (stars?: string) => (stars ?? "").length
-
-  const sortedContributors = Object.entries(data).sort((a, b) => {
-    // Primary sort by star count
-    const starDiff = getStarCount(b[1].stars) - getStarCount(a[1].stars)
-    if (starDiff !== 0) return starDiff
-
-    // Secondary sort by PR count
-    return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
-  })
+  const {
+    dateUsed,
+    repoDetails,
+    selectedContributor,
+    isModalOpen,
+    sortedContributors,
+    setSelectedContributor,
+    setIsModalOpen,
+  } = useContributorsData()
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
             TSCircuit Contributors
           </h1>
-          <div className="flex items-center justify-center gap-2 text-gray-600">
-            <GithubIcon className="w-5 h-5" />
+          <div className="flex items-center gap-4 mt-2 sm:mt-0">
             <a
               href="https://github.com/tscircuit/contribution-tracker"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
             >
+              <GithubIcon className="w-5 h-5" />
               View on GitHub
             </a>
+            <span className="text-sm text-gray-600">
+              Last updated: {dateUsed}
+            </span>
           </div>
-          <p className="text-gray-600 mt-2">Last updated: {dateUsed}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedContributors.map(([username, stats]) => (
-            <ContributorCard
-              key={username}
-              username={username}
-              contributor={stats}
+        <ContributorOverview
+          contributors={sortedContributors}
+          onSelectContributor={(username) => {
+            setSelectedContributor(username)
+            setIsModalOpen(true)
+          }}
+        />
+
+        <PRsByRepository repositories={repoDetails} />
+
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => {
+            setIsModalOpen(false)
+            setSelectedContributor(undefined)
+          }}
+          title={
+            selectedContributor ? `Contributions by ${selectedContributor}` : ""
+          }
+        >
+          {selectedContributor && (
+            <PRsByRepository
+              repositories={repoDetails}
+              selectedContributor={selectedContributor}
             />
-          ))}
-        </div>
+          )}
+        </Modal>
       </div>
     </div>
   )

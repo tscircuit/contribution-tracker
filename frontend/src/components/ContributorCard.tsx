@@ -1,5 +1,6 @@
-import { GitPullRequest, MessageSquare } from "lucide-react"
-import { type ContributorCardProps } from "../types/ContributorData"
+import { type ContributorCardProps } from "../types/contributor"
+import { getAvatarUrl, getProfileUrl } from "../constants/github"
+import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
 
 export function ContributorCard({
   username,
@@ -10,7 +11,7 @@ export function ContributorCard({
       <div className="p-4 flex items-center gap-3 border-b border-gray-100">
         <div className="relative flex-shrink-0">
           <img
-            src={`https://github.com/${username}.png`}
+            src={getAvatarUrl(username)}
             alt={`${username}'s avatar`}
             className="w-14 h-14 rounded-full"
           />
@@ -19,7 +20,7 @@ export function ContributorCard({
           <div className="flex items-center justify-between gap-2">
             <h3 className="text-base font-semibold truncate">
               <a
-                href={`https://github.com/${username}`}
+                href={getProfileUrl(username)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800"
@@ -32,58 +33,31 @@ export function ContributorCard({
             </div>
           </div>
           <div className="mt-1 flex gap-3 text-sm text-gray-600">
-            <div className="flex items-center gap-1">
-              <span className="font-medium text-blue-600">
-                {contributor.major || 0}
-              </span>{" "}
-              major
-            </div>
-            <div className="flex items-center gap-1">
-              <span className="font-medium text-purple-600">
-                {contributor.minor || 0}
-              </span>{" "}
-              minor
-            </div>
-            <div className="flex items-center gap-1">
-              <span className="font-medium text-yellow-600">
-                {contributor.tiny || 0}
-              </span>{" "}
-              tiny
-            </div>
+            {Object.values(CONTRIBUTION_TYPES).map((type) => (
+              <div key={type.value} className="flex items-center gap-1">
+                <span className={`font-medium ${type.colorClass}`}>
+                  {contributor[type.value] || 0}
+                </span>{" "}
+                {type.label}
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-2 divide-x divide-y divide-gray-100 bg-gray-50/80">
-        <div className="p-2.5">
-          <div className="text-sm text-gray-500">Pull Requests</div>
-          <div className="mt-1 font-medium flex items-center gap-1.5">
-            <GitPullRequest className="w-4 h-4 text-green-500" />
-            <span>
-              {contributor.prsMerged}/{contributor.prsOpened}
-            </span>
-          </div>
-        </div>
-
-        <div className="p-2.5">
-          <div className="text-sm text-gray-500">Reviews</div>
-          <div className="mt-1 font-medium flex items-center gap-1.5">
-            <MessageSquare className="w-4 h-4 text-blue-500" />
-            <span>{contributor.reviewsReceived}</span>
-          </div>
-        </div>
-
-        <div className="p-2.5">
-          <div className="text-sm text-gray-500">Approvals</div>
-          <div className="mt-1 font-medium">
-            {contributor.approvalsReceived}
-          </div>
-        </div>
-
-        <div className="p-2.5">
-          <div className="text-sm text-gray-500">Issues</div>
-          <div className="mt-1 font-medium">{contributor.issuesCreated}</div>
-        </div>
+        {STATS_CONFIG.map((stat) => {
+          const Icon = stat.icon
+          return (
+            <div key={stat.key} className="p-2.5">
+              <div className="text-sm text-gray-500">{stat.label}</div>
+              <div className="mt-1 font-medium flex items-center gap-1.5">
+                <Icon className={`w-4 h-4 ${stat.iconColor}`} />
+                <span>{stat.getValue(contributor)}</span>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
