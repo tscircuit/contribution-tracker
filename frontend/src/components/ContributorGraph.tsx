@@ -32,7 +32,7 @@ export default function ContributorGraph({ username }: { username: string }) {
 
   // Fetch graph data based on the username and includeSkeletonDataSet toggle.
   const graphData = useMemo(
-    () => last8WeeksData(username).slice(0, 25),
+    () => last8WeeksData(username),
     [username, last8WeeksData],
   )
 
