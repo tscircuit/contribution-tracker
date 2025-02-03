@@ -146,6 +146,31 @@ export function useContributorsData(): UseContributorsDataReturn {
       }))
       .filter((record) => Object.keys(record).length > 1) // Ensure there's data beyond 'date'
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+
+    // DEFAULT DATA TO ALSO CONSIDER NO WORKING WEEKS
+    const defaultData = {
+      approvalsGiven: 0,
+      approvalsReceived: 0,
+      bountiedIssuesCount: 0,
+      bountiedIssuesTotal: 0,
+      issuesCreated: 0,
+      prsMerged: 0,
+      prsOpened: 0,
+      rejectionsGiven: 0,
+      rejectionsReceived: 0,
+      reviewsReceived: 0,
+      score: 0,
+    }
+
+    return jsonRecords
+      .map((x) => ({
+        date: new Date(x.date).toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "2-digit",
+        }),
+        ...Object.assign({}, defaultData, x[username]), // Fill missing fields with 0
+      }))
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
   }
 
   return {

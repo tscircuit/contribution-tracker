@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useMemo } from "react"
 import { useContributorsData } from "../hooks/useContributorsData"
 import {
   LineChart,
@@ -12,15 +12,15 @@ import {
 
 export default function ContributorGraph({ username }: { username: string }) {
   const { last8WeeksData } = useContributorsData()
-  const data = last8WeeksData(username).splice(0, 25)
-  console.log(data)
+  const graphData = useMemo(
+    () => last8WeeksData(username).slice(0, 25),
+    [username, last8WeeksData],
+  )
 
   return (
     <div style={{ width: "100%", height: 400 }}>
-      {" "}
-      {/* Adjust height as needed */}
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data}>
+        <LineChart data={graphData}>
           <Line type="monotone" dataKey="approvalsGiven" stroke="#ff5733" />
           <Line type="monotone" dataKey="approvalsReceived" stroke="#33ff57" />
           <Line

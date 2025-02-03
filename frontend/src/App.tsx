@@ -3,7 +3,7 @@ import { ContributorOverview } from "./components/ContributorOverview"
 import { PRsByRepository } from "./components/PRsByRepository"
 import { Modal } from "./components/Modal"
 import { useContributorsData } from "./hooks/useContributorsData"
-import ContributerGraph from "./components/ContributerGraph"
+import ContributorGraph from "./components/ContributorGraph"
 
 function App() {
   const {
@@ -60,7 +60,7 @@ function App() {
           }
         >
           {selectedContributor && (
-            <ContributerGraph username={selectedContributor} />
+            <ContributorGraph username={selectedContributor} />
           )}
           {selectedContributor && (
             <PRsByRepository
