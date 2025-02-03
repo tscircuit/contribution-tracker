@@ -59,7 +59,7 @@ export function useContributorsData(): UseContributorsDataReturn {
           if (weeksDiff <= 8) {
             const resp = await fetch(file.download_url)
             const jsonData = await resp.json()
-            jsonRecords.push(jsonData)
+            jsonRecords.push({ ...jsonData, date: fileDate })
           } else {
             break
           }
@@ -136,7 +136,16 @@ export function useContributorsData(): UseContributorsDataReturn {
   })
 
   const last8WeeksData = (username: string) => {
-    return jsonRecords.map((x) => x[username]).filter(Boolean)
+    return jsonRecords
+      .map((x) => ({
+        date: new Date(x.date).toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "2-digit",
+        }),
+        ...x[username],
+      }))
+      .filter((record) => Object.keys(record).length > 1) // Ensure there's data beyond 'date'
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
   }
 
   return {
