@@ -143,12 +143,12 @@ export function useContributorsData(): UseContributorsDataReturn {
       }))
       .filter(
         (record, index, array) =>
-          index === array.findIndex((r) => r.date === record.date),
+          index ===
+          array.findIndex((r) => r.date.getTime() === record.date.getTime()),
       )
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-      .map((x) => ({
-        date: x.date.toLocaleDateString("en-US", {
-          year: "numeric",
+      .map(({ date: _date, ...x }) => ({
+        date: _date.toLocaleDateString("en-US", {
           month: "2-digit",
           day: "2-digit",
         }),
