@@ -170,7 +170,7 @@ export function useContributorsData(): UseContributorsDataReturn {
         }),
         ...Object.assign({}, defaultData, x[username]), // Fill missing fields with 0
       }))
-      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   }
 
   return {
