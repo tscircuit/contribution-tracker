@@ -138,7 +138,7 @@ export function useContributorsData(): UseContributorsDataReturn {
   const last8WeeksData = (username: string) => {
     return jsonRecords
       .map((x) => ({
-        date: new Date(x.date).toLocaleDateString("en-GB", {
+        date: new Date(x.date).toLocaleDateString("en-US", {
           day: "2-digit",
           month: "2-digit",
         }),
