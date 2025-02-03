@@ -145,7 +145,7 @@ export function useContributorsData(): UseContributorsDataReturn {
         ...x[username],
       }))
       .filter((record) => Object.keys(record).length > 1) // Ensure there's data beyond 'date'
-      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
     // DEFAULT DATA TO ALSO CONSIDER NO WORKING WEEKS
     const defaultData = {
