@@ -16,7 +16,7 @@ interface UseContributorsDataReturn {
   repositories: Record<string, number>
   repoDetails: RepoData[]
   selectedContributor?: string
-  last8WeeksData: (username: string) => any[]
+  last8WeeksData: (username: string, includeEmptyDataSet?: boolean) => any[]
   isModalOpen: boolean
   sortedContributors: [string, ContributorStats][]
   setSelectedContributor: (username?: string) => void
@@ -135,19 +135,27 @@ export function useContributorsData(): UseContributorsDataReturn {
     return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
   })
 
-  const last8WeeksData = (username: string) => {
-    return jsonRecords
-      .map((x) => ({
-        date: new Date(x.date).toLocaleDateString("en-GB", {
-          day: "2-digit",
-          month: "2-digit",
-        }),
-        ...x[username],
-      }))
-      .filter((record) => Object.keys(record).length > 1) // Ensure there's data beyond 'date'
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  const last8WeeksData = (
+    username: string,
+    includeEmptyDataSet: boolean = false,
+  ) => {
+    if (includeEmptyDataSet) {
+      return jsonRecords
+        .map((x) => ({
+          date: new Date(x.date).toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "2-digit",
+          }),
+          ...x[username],
+        }))
+        .filter(
+          (record, index, array) =>
+            index === array.findIndex((r) => r.date === record.date),
+        )
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+        .reverse()
+    }
 
-    // DEFAULT DATA TO ALSO CONSIDER NO WORKING WEEKS
     const defaultData = {
       approvalsGiven: 0,
       approvalsReceived: 0,
@@ -162,15 +170,24 @@ export function useContributorsData(): UseContributorsDataReturn {
       score: 0,
     }
 
-    return jsonRecords
-      .map((x) => ({
-        date: new Date(x.date).toLocaleDateString("en-GB", {
-          day: "2-digit",
-          month: "2-digit",
-        }),
-        ...Object.assign({}, defaultData, x[username]), // Fill missing fields with 0
-      }))
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    const uniqueRecords = new Map<
+      string,
+      { date: string } & typeof defaultData
+    >()
+
+    jsonRecords.forEach((x) => {
+      const formattedDate = new Date(x.date).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+      })
+      const userData = { ...defaultData, ...x[username] }
+
+      uniqueRecords.set(formattedDate, { date: formattedDate, ...userData })
+    })
+
+    return Array.from(uniqueRecords.values())
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+      .reverse()
   }
 
   return {
