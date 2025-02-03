@@ -139,8 +139,9 @@ export function useContributorsData(): UseContributorsDataReturn {
     return jsonRecords
       .map((x) => ({
         date: new Date(x.date).toLocaleDateString("en-US", {
-          day: "2-digit",
+          year: "numeric",
           month: "2-digit",
+          day: "2-digit",
         }),
         ...x[username],
       }))
@@ -149,7 +150,6 @@ export function useContributorsData(): UseContributorsDataReturn {
           index === array.findIndex((r) => r.date === record.date),
       )
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-      .reverse()
   }
 
   return {
