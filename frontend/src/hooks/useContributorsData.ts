@@ -150,6 +150,14 @@ export function useContributorsData(): UseContributorsDataReturn {
           index === array.findIndex((r) => r.date === record.date),
       )
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+      .map((x) => ({
+        date: x.date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }),
+        ...x,
+      }))
   }
 
   return {
