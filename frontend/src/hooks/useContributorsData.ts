@@ -16,6 +16,7 @@ interface UseContributorsDataReturn {
   repositories: Record<string, number>
   repoDetails: RepoData[]
   selectedContributor?: string
+  last8WeeksData: (username: string) => any[]
   isModalOpen: boolean
   sortedContributors: [string, ContributorStats][]
   setSelectedContributor: (username?: string) => void
@@ -29,6 +30,7 @@ export function useContributorsData(): UseContributorsDataReturn {
   const [repoDetails, setRepoDetails] = useState<RepoData[]>([])
   const [selectedContributor, setSelectedContributor] = useState<string>()
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [jsonRecords, setJsonRecords] = useState<any[]>([])
 
   useEffect(() => {
     async function fetchData() {
@@ -43,12 +45,25 @@ export function useContributorsData(): UseContributorsDataReturn {
           .sort((a: { name: string }, b: { name: string }) =>
             b.name.localeCompare(a.name),
           )
-
         if (jsonFiles.length === 0) throw new Error("No JSON files found")
 
         const latestFile = jsonFiles[0]
         const date = latestFile.name.replace(".json", "")
         setDateUsed(date)
+
+        for (const file of jsonFiles) {
+          const fileName = file.name.replace(".json", "")
+          const fileDate = new Date(fileName)
+          const timeDiff = new Date().getTime() - fileDate.getTime()
+          const weeksDiff = timeDiff / (1000 * 60 * 60 * 24 * 7)
+          if (weeksDiff <= 8) {
+            const resp = await fetch(file.download_url)
+            const jsonData = await resp.json()
+            jsonRecords.push({ ...jsonData, date: fileDate })
+          } else {
+            break
+          }
+        }
 
         // Fetch the JSON data
         const jsonResp = await fetch(latestFile.download_url)
@@ -120,12 +135,34 @@ export function useContributorsData(): UseContributorsDataReturn {
     return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
   })
 
+  const last8WeeksData = (username: string) => {
+    return jsonRecords
+      .map((x) => ({
+        date: new Date(x.date),
+        ...x[username],
+      }))
+      .filter(
+        (record, index, array) =>
+          index ===
+          array.findIndex((r) => r.date.getTime() === record.date.getTime()),
+      )
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+      .map(({ date: _date, ...x }) => ({
+        date: _date.toLocaleDateString("en-US", {
+          month: "2-digit",
+          day: "2-digit",
+        }),
+        ...x,
+      }))
+  }
+
   return {
     data,
     dateUsed,
     repositories,
     repoDetails,
     selectedContributor,
+    last8WeeksData,
     isModalOpen,
     sortedContributors,
     setSelectedContributor,
