@@ -124,12 +124,10 @@ export function useContributorsData(): UseContributorsDataReturn {
     fetchData()
   }, [])
 
-  const getStarCount = (stars?: string) => (stars ?? "").length
-
   const sortedContributors = Object.entries(data).sort((a, b) => {
-    // Primary sort by star count
-    const starDiff = getStarCount(b[1].stars) - getStarCount(a[1].stars)
-    if (starDiff !== 0) return starDiff
+    // Primary sort by score
+    const scoreDiff = (b[1].score ?? 0) - (a[1].score ?? 0)
+    if (scoreDiff !== 0) return scoreDiff
 
     // Secondary sort by PR count
     return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)

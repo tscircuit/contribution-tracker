@@ -13,6 +13,7 @@ export interface ContributorStats {
   minor?: number
   tiny?: number
   stars?: string
+  score?: number
 }
 
 export interface ContributorCardProps {
