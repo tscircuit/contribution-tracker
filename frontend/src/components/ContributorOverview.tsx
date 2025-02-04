@@ -6,7 +6,7 @@ import {
   type PodiumEntryProps,
 } from "../types/contributor"
 import { ContributorCard } from "./ContributorCard"
-import { getAvatarUrl } from "../constants/github"
+import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
 
 export function ContributorOverview({
@@ -67,7 +67,14 @@ export function ContributorOverview({
             <div
               className={`${nameSizes[size]} font-medium text-gray-900 mb-1`}
             >
-              {username}
+              <a
+                href={getProfileUrl(username)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:text-blue-800"
+              >
+                {username}
+              </a>
             </div>
             <div className="flex gap-1 text-yellow-400 mb-2">{stats.stars}</div>
 
