@@ -8,6 +8,8 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
+  ReferenceLine,
+  Label,
 } from "recharts"
 
 const DROPDOWN_MENU_ITEMS = [
@@ -23,6 +25,14 @@ const DROPDOWN_MENU_ITEMS = [
   { key: "bountiedIssuesCount", label: "Bountied Issues (Count)" },
   { key: "bountiedIssuesTotal", label: "Bountied Issues (Total)" },
 ]
+
+const SCORE_LABELS = {
+  10: "⭐",
+  30: "⭐⭐",
+  50: "⭐⭐⭐",
+  75: "👑",
+  100: "👑👑",
+}
 
 export default function ContributorGraph({ username }: { username: string }) {
   const { last8WeeksData } = useContributorsData()
@@ -57,6 +67,22 @@ export default function ContributorGraph({ username }: { username: string }) {
       <div style={{ width: "100%", height: 400 }}>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={graphData}>
+            {selectedMetric === "score" &&
+              Object.entries(SCORE_LABELS).map(([score, label]) => (
+                <ReferenceLine
+                  key={score}
+                  y={Number(score)}
+                  stroke="#FFEA00"
+                  strokeOpacity={0.8}
+                  strokeDasharray="9 12"
+                >
+                  <Label
+                    value={label}
+                    position="insideBottomLeft"
+                    style={{ fill: "#FFD700", fontSize: "12px", opacity: 0.4 }}
+                  />
+                </ReferenceLine>
+              ))}
             <Line
               type="monotone"
               dataKey={selectedMetric}
