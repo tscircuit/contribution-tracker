@@ -2,7 +2,6 @@ import { Response, type Request } from "node-fetch"
 
 export async function GET(request: Request): Promise<Response> {
   const DISCORD_CLIENT_ID =
-    Bun.env.DISCORD_CLIENT_ID ||
     process.env.DISCORD_CLIENT_ID ||
     import.meta.env.DISCORD_CLIENT_ID
   const REDIRECT_URI = "https://contrib.com"

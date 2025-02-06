@@ -71,7 +71,7 @@ export async function GET(request: Request) {
   const code = new URL(request.url).searchParams.get("code")
 
   if (!code) {
-    return new Response("Missing authorization code.", { status: 400 })
+    return Response.json({message: "Missing authorization code."}, { status: 400 })
   }
 
   try {
