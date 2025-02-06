@@ -119,7 +119,7 @@ export async function GET(request: Request): Promise<Response> {
 
   if (!code) {
     return Response.json(
-      { message: "error hre" },
+      { message: "No code provided" },
       { status: 500 }
     );
   }
@@ -142,7 +142,7 @@ export async function GET(request: Request): Promise<Response> {
     const accessToken = tokenResponse.access_token;
     if (!accessToken) {
       return Response.json(
-        { message: "error hre" },
+        { message: "No access token found" },
         { status: 500 }
       );
     }
@@ -157,7 +157,7 @@ export async function GET(request: Request): Promise<Response> {
     const discordId = userInfoResponse.id;
     if (!discordId) {
       return Response.json(
-        { message: "error hre" },
+        { message: "No Discord Id Found" },
         { status: 500 }
       );
     }
@@ -174,7 +174,7 @@ export async function GET(request: Request): Promise<Response> {
     );
     if (!githubConnection) {
       return Response.json(
-        { message: "error hre" },
+        { message: "No github connection found" },
         { status: 500 }
       );
     }
@@ -182,7 +182,7 @@ export async function GET(request: Request): Promise<Response> {
     const githubUsername = githubConnection.name;
     if (!githubUsername) {
       return Response.json(
-        { message: "error hre" },
+        { message: "No github username found" },
         { status: 500 }
       );
     }
@@ -200,7 +200,7 @@ export async function GET(request: Request): Promise<Response> {
   } catch (error) {
     console.error("Error handling callback:", error);
     return Response.json(
-      { message: "error hre" },
+      { message: `${error}` },
       { status: 500 }
     );
   }
