@@ -112,7 +112,7 @@ async function syncRoles(client: Client, guildId: string) {
 
 // Main function
 async function main() {
-  const discordToken = process.env.DISCORD_BOT_TOKEN;
+  const discordToken = process.env.DISCORD_TOKEN;
   const guildId = process.env.DISCORD_GUILD_ID;
 
   if (!discordToken || !guildId) {
