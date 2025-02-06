@@ -3,7 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "format": "biome format . --write",
+    "format": "biome format frontend --write",
     "format:check": "biome format .",
     "test:github": "bun --env-file=.env scripts/test-github-issues.ts",
     "dev": "vite",
@@ -17,6 +17,7 @@
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "ky": "^1.7.4",
     "vite": "^6.0.5"
   },
   "peerDependencies": {
