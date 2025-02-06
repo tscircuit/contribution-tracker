@@ -1,30 +1,22 @@
 import { Response, type Request } from "node-fetch";
 
 export async function GET(request: Request): Promise<Response> {
-    try {
-        const DISCORD_CLIENT_ID =
-            process?.env?.DISCORD_CLIENT_ID ??
-            import.meta?.env?.DISCORD_CLIENT_ID;
-        const REDIRECT_URI = "https://contrib.com";
-        if (!DISCORD_CLIENT_ID) {
-            return new Response("", {
-                status: 302,
-                headers: { Location: "/?no-discord-token" },
-            });
-        }
-        const discordAuthUrl = `https://discord.com/api/oauth2/authorize?client_id=${DISCORD_CLIENT_ID}&redirect_uri=${encodeURIComponent(
-            REDIRECT_URI
-        )}&response_type=code&scope=identify%20connections`;
-
-        // Return a 302 redirect response
+    const DISCORD_CLIENT_ID =
+        process?.env?.DISCORD_CLIENT_ID ?? import.meta?.env?.DISCORD_CLIENT_ID;
+    const REDIRECT_URI = new URL(request.url).origin + '/api/callback';
+    if (!DISCORD_CLIENT_ID) {
         return new Response("", {
             status: 302,
-            headers: { Location: discordAuthUrl },
-        });
-    } catch (e: any) {
-        return new Response("", {
-            status: 302,
-            headers: { Location: `/?${e.message}` },
+            headers: { Location: "/?no-discord-token" },
         });
     }
+    const discordAuthUrl = `https://discord.com/api/oauth2/authorize?client_id=${DISCORD_CLIENT_ID}&redirect_uri=${encodeURIComponent(
+        REDIRECT_URI
+    )}&response_type=code&scope=identify%20connections`;
+
+    // Return a 302 redirect response
+    return new Response("", {
+        status: 302,
+        headers: { Location: discordAuthUrl },
+    });
 }
