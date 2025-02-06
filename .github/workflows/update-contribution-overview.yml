@@ -1,15 +1,17 @@
 name: Update Contribution Overview
 
 on:
-  schedule:
-    - cron: "0 18 * * *" # 6am PST
+  workflow_run:
+    workflows: ["Sync Discord Roles"] 
+    types:
+      - completed
   workflow_dispatch: # Allow manual triggering
 
 jobs:
   update-chart:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
