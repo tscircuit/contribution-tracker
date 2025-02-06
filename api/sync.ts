@@ -5,7 +5,7 @@ export async function GET(request: Request): Promise<Response> {
     Bun.env.DISCORD_CLIENT_ID ||
     process.env.DISCORD_CLIENT_ID ||
     import.meta.env.DISCORD_CLIENT_ID
-  const REDIRECT_URI = "https://google.com"
+  const REDIRECT_URI = "https://contrib.com"
   const discordAuthUrl = `https://discord.com/api/oauth2/authorize?client_id=${DISCORD_CLIENT_ID}&redirect_uri=${encodeURIComponent(
     REDIRECT_URI,
   )}&response_type=code&scope=identify%20connections`
