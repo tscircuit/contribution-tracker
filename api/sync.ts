@@ -13,9 +13,10 @@ export async function GET(request: Request): Promise<Response> {
     }
 
     // Construct Discord OAuth2 URL
-    const discordAuthUrl = `https://discord.com/api/oauth2/authorize?client_id=${DISCORD_CLIENT_ID}&redirect_uri=${encodeURIComponent(
+    const discordAuthUrl = `https://discord.com/oauth2/authorize?client_id=${DISCORD_CLIENT_ID}&response_type=token&redirect_uri=${encodeURIComponent(
         REDIRECT_URI
-    )}&response_type=code&scope=connections+role_connections.write`;
+    )}&scope=connections`;
+
 
     // Redirect the user to Discord's authorization URL
     return new Response(null, {

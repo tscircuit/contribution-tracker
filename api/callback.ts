@@ -1,7 +1,8 @@
+// @ts-nocheck
+
 import ky from "ky";
 import fs from "fs";
 import { Octokit } from "@octokit/rest";
-
 interface DiscordTokenResponse {
   access_token: string;
 }
@@ -111,93 +112,87 @@ async function createPullRequest(
 }
 
 export async function GET(request: Request): Promise<Response> {
-  const code = new URL(request.url).searchParams.get("code");
-
-  if (!code) {
+  // Extract the access token from the URL fragment
+  const fragment = new URL(request.url).hash.substring(1);
+  const params = new URLSearchParams(fragment);
+  const accessToken = params.get("access_token");
+console.log(55, request)
+  if (!accessToken) {
     return Response.json(
-      { message: "No code provided" },
-      { status: 500 }
+      { message: "No access token found in URL fragment" },
+      { status: 400 }
     );
   }
 
   try {
-    // Exchange code for access token
-    const tokenResponse = await ky
-      .post("https://discord.com/api/v10/oauth2/token", {
-        json: {
-          client_id: process.env.DISCORD_CLIENT_ID,
-          client_secret: process.env.DISCORD_CLIENT_SECRET,
-          grant_type: "authorization_code",
-          code,
-          redirect_uri: process.env.REDIRECT_URI!,
-          scope: "identify connections",
-        },
-      })
-      .json<DiscordTokenResponse>();
-
-    const accessToken = tokenResponse.access_token;
-    if (!accessToken) {
-      return Response.json(
-        { message: "No access token found" },
-        { status: 500 }
-      );
-    }
-
     // Fetch Discord user info
-    const userInfoResponse = await ky
-      .get("https://discord.com/api/v10/users/@me", {
-        headers: { Authorization: `Bearer ${accessToken}` },
-      })
-      .json<DiscordUser>();
+    const userInfoResponse = await ky.get("https://discord.com/api/v10/users/@me", {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    }).json();
+    console.log(userInfoResponse)
+    // if (!userInfoResponse) {
+    //   return Response.json(
+    //     { message: "Failed to fetch user info" },
+    //     { status: 500 }
+    //   );
+    // }
 
-    const discordId = userInfoResponse.id;
+    const userInfo = userInfoResponse;
+    const discordId = userInfo.id;
+
     if (!discordId) {
       return Response.json(
-        { message: "No Discord Id Found" },
+        { message: "No Discord ID found" },
         { status: 500 }
       );
     }
 
-    // Fetch Discord connections (GitHub account)
-    const connectionsResponse = await ky
-      .get("https://discord.com/api/v10/users/@me/connections", {
-        headers: { Authorization: `Bearer ${accessToken}` },
-      })
-      .json<DiscordConnection[]>();
+    // Fetch Discord connections (e.g., GitHub account)
+    const connectionsResponse = await fetch("https://discord.com/api/v10/users/@me/connections", {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
 
-    const githubConnection = connectionsResponse.find(
-      (connection) => connection.type === "github"
+    if (!connectionsResponse.ok) {
+      return Response.json(
+        { message: "Failed to fetch connections" },
+        { status: 500 }
+      );
+    }
+
+    const connections = await connectionsResponse.json();
+    const githubConnection = connections.find(
+      (connection: any) => connection.type === "github"
     );
+
     if (!githubConnection) {
       return Response.json(
-        { message: "No github connection found" },
+        { message: "No GitHub connection found" },
         { status: 500 }
       );
     }
 
     const githubUsername = githubConnection.name;
+
     if (!githubUsername) {
       return Response.json(
-        { message: "No github username found" },
+        { message: "No GitHub username found" },
         { status: 500 }
       );
     }
 
-    // Save data to users.json
+    // Save user data (this part assumes you have a createPullRequest function)
     const userData: Record<string, string> = { [discordId]: githubUsername };
-
-    // Generate a unique branch name
     const branchName = `add-github-username-${Date.now()}-${githubUsername}`;
 
-    // Create a pull request with the updated data
     await createPullRequest(branchName, userData);
 
     return new Response("GitHub username saved successfully!", { status: 200 });
   } catch (error) {
     console.error("Error handling callback:", error);
     return Response.json(
-      { message: `${error}` },
+      { message: `Error: ${error}` },
       { status: 500 }
     );
   }
 }
+

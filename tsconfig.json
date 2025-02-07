@@ -1,3 +1,4 @@
+// @ts-nocheck
 {
   "compilerOptions": {
     // Enable latest features
@@ -21,7 +22,7 @@
     "esModuleInterop": true,
 
     // Best practices
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
 

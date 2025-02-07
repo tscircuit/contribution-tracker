@@ -23,7 +23,7 @@ function App() {
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
             TSCircuit Contributors
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center items-center gap-4 mt-2 sm:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center items-center gap-3 mt-2 sm:mt-0">
             <a
               href="/api/sync"
               rel="noopener noreferrer"
