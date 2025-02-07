@@ -1,5 +1,4 @@
 import { Octokit } from "@octokit/rest"
-import { unwrapPromise } from "shared/unwrap"
 import path from "path"
 
 // Helper function to validate environment variables
