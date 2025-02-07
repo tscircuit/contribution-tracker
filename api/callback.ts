@@ -284,6 +284,10 @@ export async function GET(request: Request): Promise<Response> {
     const githubUsername = githubConnection.name
     const discordId= userResponseInfo.id
 
+    const userData: Record<string, string> = {
+      [discordId]: githubUsername,
+  };
+  
     await createPullRequest(`add-github-username-${Date.now()}-${githubUsername}`, userData);
 
    return new Response("", {
