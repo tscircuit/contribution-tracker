@@ -1,8 +1,8 @@
 import fs from "fs"
 import path from "path"
-import { Client, Guild, Role, GuildMember } from "discord.js"
+import { Client, Role } from "discord.js"
 
-// Define constants for role names
+// Discord Roles
 const ROLE_NAMES = [
   "New Contributor",
   "Contributor",
@@ -10,10 +10,13 @@ const ROLE_NAMES = [
   "Hero",
   "King",
   "Legend",
-]
+] as const
+
+// Infer the type of ROLE_NAMES as a tuple of string literals
+type RoleName = (typeof ROLE_NAMES)[number]
 
 // Map stars to roles
-const STAR_TO_ROLE_MAP: Record<string, string> = {
+const STAR_TO_ROLE_MAP: Record<string, RoleName> = {
   "": "New Contributor",
   "⭐": "Contributor",
   "⭐⭐": "Try Hard",
@@ -24,7 +27,7 @@ const STAR_TO_ROLE_MAP: Record<string, string> = {
 
 // Function to load contribution data
 function loadContributionData(): Record<string, any> {
-  const contributionsDir = path.join(__dirname, "contribution-overviews")
+  const contributionsDir = path.join(process.cwd(), "contribution-overviews")
   const files = fs
     .readdirSync(contributionsDir)
     .filter((file) => file.endsWith(".json"))
@@ -34,6 +37,7 @@ function loadContributionData(): Record<string, any> {
   }
 
   const latestFile = files.sort().pop()
+  console.log("Using data from ", latestFile, "\n")
   const filePath = path.join(contributionsDir, latestFile!)
   const data = fs.readFileSync(filePath, "utf-8")
   return JSON.parse(data)
@@ -41,7 +45,7 @@ function loadContributionData(): Record<string, any> {
 
 // Function to load user mappings
 function loadUserMappings(): Record<string, string> {
-  const filePath = path.join(__dirname, "users.json")
+  const filePath = path.join(process.cwd(), "users.json")
   const data = fs.readFileSync(filePath, "utf-8")
   return JSON.parse(data)
 }
@@ -60,14 +64,14 @@ async function syncRoles(client: Client, guildId: string) {
   // Fetch all roles in the guild
   const roles: Record<string, Role> = {}
   for (const roleName of ROLE_NAMES) {
-    const role = guild.roles.cache.find((r) => r.name === roleName)
+    const role = guild.roles.cache.find((r) => r.name == roleName)
     if (!role) {
       console.warn(`Role '${roleName}' not found.`)
       continue
     }
     roles[roleName] = role
   }
-
+  console.log("\n")
   // Process each user in the contribution data
   for (const [githubUsername, userData] of Object.entries(contributionData)) {
     const { stars } = userData
@@ -79,7 +83,6 @@ async function syncRoles(client: Client, guildId: string) {
       )
       continue
     }
-
     const targetRoleName = STAR_TO_ROLE_MAP[stars]
     const targetRole = roles[targetRoleName]
 
@@ -107,9 +110,14 @@ async function syncRoles(client: Client, guildId: string) {
     }
 
     // Remove all existing roles and assign the target role
-    await discordUser.roles.set([targetRole.id])
+    await discordUser.roles.set([targetRole.id]).catch((e) => {
+      console.log(
+        `Error adding role ${targetRoleName} to ${githubUsername} with discord id ${discordId} because:- `,
+        e.message,
+      )
+    })
     console.log(
-      `Updated role for ${githubUsername} (${discordId}) to '${targetRoleName}' (${targetRole.id}).`,
+      `Add role for ${githubUsername} (${discordId}) to '${targetRoleName}' (${targetRole.id}).`,
     )
   }
 }
@@ -127,7 +135,7 @@ async function main() {
   const client = new Client({ intents: ["Guilds", "GuildMembers"] })
 
   client.on("ready", async () => {
-    console.log(`Logged in as ${client.user?.tag}`)
+    console.log(`Logged in as ${client.user?.tag}\n`)
     await syncRoles(client, guildId)
     client.destroy()
   })

@@ -1,43 +1,27 @@
-import ky from "ky"
-import fs from "fs"
 import { Octokit } from "@octokit/rest"
-interface DiscordTokenResponse {
-  access_token: string
-}
-
-interface DiscordUser {
-  id: string
-}
-
-interface DiscordConnection {
-  type: string
-  name: string
-}
-
-
 
 async function createPullRequest(
   branchName: string,
-  content: Record<string, string>
+  content: Record<string, string>,
 ): Promise<void> {
-  const owner = process.env.GITHUB_REPO_OWNER;
-  const repo = process.env.GITHUB_REPO_NAME;
-  const token = process.env.GITHUB_TOKEN;
+  const owner = process.env.GITHUB_REPO_OWNER
+  const repo = process.env.GITHUB_REPO_NAME
+  const token = process.env.GITHUB_TOKEN
 
   if (!owner || !repo || !token) {
-    throw new Error("Missing required GitHub environment variables.");
+    throw new Error("Missing required GitHub environment variables.")
   }
 
-  const octokit = new Octokit({ auth: token });
-  const usersFilePath = "users.json";
+  const octokit = new Octokit({ auth: token })
+  const usersFilePath = "users.json"
 
   try {
     // Get the default branch
-    const { data: repoData } = await octokit.repos.get({ owner, repo });
-    const defaultBranch = repoData.default_branch;
+    const { data: repoData } = await octokit.repos.get({ owner, repo })
+    const defaultBranch = repoData.default_branch
 
     if (!defaultBranch) {
-      throw new Error("Default branch not found.");
+      throw new Error("Default branch not found.")
     }
 
     // Get the latest commit SHA from the default branch
@@ -45,8 +29,8 @@ async function createPullRequest(
       owner,
       repo,
       branch: defaultBranch,
-    });
-    const latestCommitSha = branchData.commit.sha;
+    })
+    const latestCommitSha = branchData.commit.sha
 
     // Create a new branch from the latest commit
     await octokit.git.createRef({
@@ -54,34 +38,38 @@ async function createPullRequest(
       repo,
       ref: `refs/heads/${branchName}`,
       sha: latestCommitSha,
-    });
+    })
 
     // Fetch the existing users.json content from the repository
-    let existingContent: Record<string, string> = {};
-    let fileSha: string | undefined;
+    let existingContent: Record<string, string> = {}
+    let fileSha: string | undefined
 
     try {
-      const { data } = await octokit.repos.getContent({
+      const { data }: { data: any } = await octokit.repos.getContent({
         owner,
         repo,
         path: usersFilePath,
         ref: defaultBranch,
-      });
+      })
 
       if (!Array.isArray(data) && data.content) {
-        const decodedContent = Buffer.from(data.content, "base64").toString("utf8");
-        existingContent = JSON.parse(decodedContent);
-        fileSha = data.sha;
+        const decodedContent = Buffer.from(data.content, "base64").toString(
+          "utf8",
+        )
+        existingContent = JSON.parse(decodedContent)
+        fileSha = data.sha
       }
     } catch (err: any) {
       if (err.status !== 404) {
-        throw err;  // Rethrow if it's not a 'file not found' error
+        throw err // Rethrow if it's not a 'file not found' error
       }
     }
 
     // Append new content without overwriting existing data
-    const updatedContent = { ...existingContent, ...content };
-    const encodedContent = Buffer.from(JSON.stringify(updatedContent, null, 2)).toString("base64");
+    const updatedContent = { ...existingContent, ...content }
+    const encodedContent = Buffer.from(
+      JSON.stringify(updatedContent, null, 2),
+    ).toString("base64")
 
     // Update or create the users.json file in the new branch
     await octokit.repos.createOrUpdateFileContents({
@@ -91,8 +79,8 @@ async function createPullRequest(
       message: "Append new GitHub username",
       content: encodedContent,
       branch: branchName,
-      sha: fileSha, 
-    });
+      sha: fileSha,
+    })
 
     // Create the pull request using 'tscircuit' as the author
     await octokit.pulls.create({
@@ -102,14 +90,12 @@ async function createPullRequest(
       body: "Automated PR created by **tscircuit** to sync new GitHub usernames.",
       head: branchName,
       base: defaultBranch,
-    });
-
+    })
   } catch (error) {
-    console.error("Error creating pull request:", error);
-    throw error;
+    console.error("Error creating pull request:", error)
+    throw error
   }
 }
-
 
 export async function GET(request: Request): Promise<Response> {
   const url = new URL(request.url)
