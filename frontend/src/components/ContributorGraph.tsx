@@ -47,7 +47,7 @@ export default function ContributorGraph({ username }: { username: string }) {
   )
 
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg">
+    <div className="p-4 bg-white shadow-sm rounded-lg mb-2">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-2 sm:space-y-0 sm:space-x-4">
         <h2 className="text-lg font-semibold">Contributor Activity</h2>
         <div className="flex items-center space-x-4">
