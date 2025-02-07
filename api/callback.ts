@@ -243,16 +243,32 @@ export async function GET(request: Request): Promise<Response> {
     const accessToken = tokenData.access_token;
 
     // Fetch user info
-    const userResponse = await fetch('https://discord.com/api/v10/users/@me/connections', {
+    const userConnectionsResponse = await fetch('https://discord.com/api/v10/users/@me/connections', {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
 
-    if (!userResponse.ok) {
-      return new Response('Failed to fetch user info' + await userResponse.text() + `59, ${JSON.stringify(tokenData)}`, { status: 500 });
+    if (!userConnectionsResponse.ok) {
+      return new Response('Failed to fetch user connections');
     }
 
-    const userInfo = await userResponse.json();
-    return new Response(JSON.stringify(userInfo), { status: 200 });
+    const userConnectionsInfo: Array<{type: string, name: string}> = await userConnectionsResponse.json();
+    const githubConnection = Array.from(userConnectionsInfo).find(x => x.type == 'github')
+
+    if(!githubConnection) {
+      return new Response("", {
+        status: 302,
+        headers: { Location: '/?no-github-connection' },
+    });
+    }
+
+    const githubUsername = githubConnection.name
+
+    return new Response(`3434
+      
+      ${githubUsername}
+      
+      33
+      ${userConnectionsInfo}`, { status: 200 });
   } catch (error) {
     return new Response(`Error: ${error}`, { status: 500 });
   }
