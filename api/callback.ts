@@ -1,5 +1,6 @@
 import { Octokit } from "@octokit/rest"
 import path from "path"
+import fs from "fs"
 
 // Helper function to validate environment variables
 function validateEnvVars(): void {
@@ -194,10 +195,14 @@ export async function GET(request: Request): Promise<Response> {
   const discordId = userResponseInfo.id
 
   // Checking if exists
-  const usersData: any = await Bun.file(
-    path.join(process.cwd(), "users.json"),
-  ).json()
-  if (usersData[`${discordId}`]) {
+  const [doesUserExist] = unwrapSync(() => {
+    const usersData: any = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), "users.json")).toString(),
+    )
+    return usersData[`${discordId}`]
+  })
+
+  if (doesUserExist) {
     return new Response("", {
       status: 302,
       headers: { Location: "/?account-already-present" },
