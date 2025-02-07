@@ -1,4 +1,4 @@
-import { GithubIcon } from "lucide-react"
+import { GithubIcon, RefreshCcwDotIcon } from "lucide-react"
 import { ContributorOverview } from "./components/ContributorOverview"
 import { PRsByRepository } from "./components/PRsByRepository"
 import { Modal } from "./components/Modal"
@@ -23,12 +23,20 @@ function App() {
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
             TSCircuit Contributors
           </h1>
-          <div className="flex items-center gap-4 mt-2 sm:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center items-center gap-4 mt-2 sm:mt-0">
+            <a
+              href="/api/sync"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+            >
+              <RefreshCcwDotIcon className="w-5 h-5" />
+              Sync Roles
+            </a>
             <a
               href="https://github.com/tscircuit/contribution-tracker"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
             >
               <GithubIcon className="w-5 h-5" />
               View on GitHub

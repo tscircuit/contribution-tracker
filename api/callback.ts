@@ -2,21 +2,17 @@ import ky from "ky";
 import fs from "fs";
 import { Octokit } from "@octokit/rest";
 
-// Type definitions for Discord API responses
 interface DiscordTokenResponse {
   access_token: string;
-  // other fields omitted for brevity
 }
 
 interface DiscordUser {
   id: string;
-  // additional fields can be added as needed
 }
 
 interface DiscordConnection {
   type: string;
   name: string;
-  // additional fields can be added as needed
 }
 
 // Helper function to create a pull request
