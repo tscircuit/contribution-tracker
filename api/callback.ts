@@ -234,7 +234,7 @@ export async function GET(request: Request): Promise<Response> {
         redirect_uri: new URL("/api/callback", request.url).toString()
       }),
     });
-console.log(await tokenResponse.text())
+
     if (!tokenResponse.ok) {
       return new Response('Failed to get access token', { status: 500 });
     }
