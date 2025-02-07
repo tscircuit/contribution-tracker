@@ -248,7 +248,7 @@ export async function GET(request: Request): Promise<Response> {
     });
 
     if (!userResponse.ok) {
-      return new Response('Failed to fetch user info' + await userResponse.text() + `59, ${tokenData}`, { status: 500 });
+      return new Response('Failed to fetch user info' + await userResponse.text() + `59, ${JSON.stringify(tokenData)}`, { status: 500 });
     }
 
     const userInfo = await userResponse.json();
