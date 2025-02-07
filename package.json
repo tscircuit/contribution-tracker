@@ -3,7 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "format": "biome format frontend --write",
+    "format": "biome format . --write",
     "format:check": "biome format .",
     "test:github": "bun --env-file=.env scripts/test-github-issues.ts",
     "dev": "vite",
