@@ -24,8 +24,7 @@ async function createPullRequest(
     const repo = process.env.GITHUB_REPO_NAME;
     const token = process.env.GITHUB_TOKEN;
     if (!owner || !repo || !token) {
-        // Even in helper functions, errors propagate via exceptions so that the GET handler can return the proper response.
-        throw new Error("Missing required environment variables");
+        throw new Error("Missing required github environment variables");
     }
 
     const octokit = new Octokit({ auth: token });
@@ -213,12 +212,14 @@ export async function GET(request: Request): Promise<Response> {
     client_secret: process.env.DISCORD_CLIENT_SECRET!,
     grant_type: "authorization_code",
     code: code,
-    // @ts-ignore
     redirect_uri:
         new URL("/api/callback", request.url).toString(),
 };
   if (!code) {
-    return new Response('No authorization code found', { status: 400 });
+    return new Response(JSON.stringify({ error:'No authorization code found'}), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   try {
@@ -236,7 +237,10 @@ export async function GET(request: Request): Promise<Response> {
     });
 
     if (!tokenResponse.ok) {
-      return new Response('Failed to get access token', { status: 500 });
+      return new Response(JSON.stringify({ error: 'Failed to get access token' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     const tokenData = await tokenResponse.json();
@@ -248,7 +252,10 @@ export async function GET(request: Request): Promise<Response> {
     });
 
     if (!userConnectionsResponse.ok) {
-      return new Response('Failed to fetch user connections');
+      return new Response(JSON.stringify({ error: 'Failed to fetch user connections' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
     const userConnectionsInfo: Array<{type: string, name: string}> = await userConnectionsResponse.json();
@@ -264,24 +271,30 @@ export async function GET(request: Request): Promise<Response> {
     const userResponse = await fetch('https://discord.com/api/users/@me', {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
+    const userResponseInfo = await userResponse.json()
 
     if (!userResponse.ok) {
-      return new Response('Failed to fetch user info');
+      return new Response(JSON.stringify({ error: 'Failed to fetch user info' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
+      
     }
 
     const githubUsername = githubConnection.name
+    const discordId= userResponseInfo.id
 
-    return new Response(`3434
-      
-      ${JSON.stringify(githubUsername)}
-      
-      33
-      ${JSON.stringify(userConnectionsInfo)}
-      
-      444
-      
-      ${JSON.stringify(await userResponse.json())}`, { status: 200 });
+    await createPullRequest(`add-github-username-${Date.now()}-${githubUsername}`, userData);
+
+   return new Response("", {
+        status: 302,
+        headers: { Location: '/?sync-request-created' },
+    });;
   } catch (error) {
-    return new Response(`Error: ${error}`, { status: 500 });
+    return new Response(JSON.stringify({ error: error.message || String(error) }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+    
   }
 }
