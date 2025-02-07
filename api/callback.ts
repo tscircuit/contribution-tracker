@@ -261,14 +261,26 @@ export async function GET(request: Request): Promise<Response> {
     });
     }
 
+    const userResponse = await fetch('https://discord.com/api/users/@me', {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+
+    if (!userResponse.ok) {
+      return new Response('Failed to fetch user info');
+    }
+
     const githubUsername = githubConnection.name
 
     return new Response(`3434
       
-      ${githubUsername}
+      ${JSON.stringify(githubUsername)}
       
       33
-      ${userConnectionsInfo}`, { status: 200 });
+      ${JSON.stringify(userConnectionsInfo)}
+      
+      444
+      
+      ${JSON.stringify(await userResponse.json())}`, { status: 200 });
   } catch (error) {
     return new Response(`Error: ${error}`, { status: 500 });
   }
