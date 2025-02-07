@@ -243,7 +243,7 @@ export async function GET(request: Request): Promise<Response> {
     const accessToken = tokenData.access_token;
 
     // Fetch user info
-    const userResponse = await fetch('https://discord.com/api/users/@me', {
+    const userResponse = await fetch('https://discord.com/api/oauth2/@me', {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
 
