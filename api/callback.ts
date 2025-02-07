@@ -15,8 +15,9 @@ interface DiscordConnection {
 }
 
 
+
 async function createPullRequest(
-  githubUsername: string,
+  branchName: string,
   content: Record<string, string>
 ): Promise<void> {
   const owner = process.env.GITHUB_REPO_OWNER;
@@ -28,7 +29,6 @@ async function createPullRequest(
   }
 
   const octokit = new Octokit({ auth: token });
-  const branchName = "tscircuit-sync";
   const usersFilePath = "users.json";
 
   try {
@@ -75,7 +75,7 @@ async function createPullRequest(
       }
     } catch (err: any) {
       if (err.status !== 404) {
-        throw err;  // If it's not a 'file not found' error, rethrow
+        throw err;  // Rethrow if it's not a 'file not found' error
       }
     }
 
@@ -88,18 +88,26 @@ async function createPullRequest(
       owner,
       repo,
       path: usersFilePath,
-      message: `Append new GitHub username: ${githubUsername}`,
+      message: "Append new GitHub username",
       content: encodedContent,
       branch: branchName,
-      sha: fileSha,  // Include SHA if the file already exists
+      sha: fileSha,  // Include SHA if the file exists
+      committer: {
+        name: "tscircuit-sync",
+        email: "tscircuit-sync@users.noreply.github.com",
+      },
+      author: {
+        name: "tscircuit-sync",
+        email: "tscircuit-sync@users.noreply.github.com",
+      },
     });
 
-    // Create the pull request with a mention of the GitHub user
+    // Create the pull request using 'tscircuit' as the author
     await octokit.pulls.create({
       owner,
       repo,
-      title: "Sync GitHub Username to users.json",
-      body: `This PR adds **@${githubUsername}** to the \`users.json\` file.`,
+      title: "Sync GitHub username",
+      body: "Automated PR created by **tscircuit** to sync new GitHub usernames.",
       head: branchName,
       base: defaultBranch,
     });
