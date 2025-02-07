@@ -91,15 +91,7 @@ async function createPullRequest(
       message: "Append new GitHub username",
       content: encodedContent,
       branch: branchName,
-      sha: fileSha,  // Include SHA if the file exists
-      committer: {
-        name: "tscircuit-sync",
-        email: "tscircuit-sync@users.noreply.github.com",
-      },
-      author: {
-        name: "tscircuit-sync",
-        email: "tscircuit-sync@users.noreply.github.com",
-      },
+      sha: fileSha, 
     });
 
     // Create the pull request using 'tscircuit' as the author
