@@ -124,6 +124,7 @@ async function syncRoles(client: Client, guildId: string) {
           .map((r) => r.name)
           .join(", ")}] from ${githubUsername} (${discordId})`,
       )
+      await Bun.sleep(1000)
     }
 
     // Determine all roles to assign based on the user's rank
@@ -150,6 +151,7 @@ async function syncRoles(client: Client, guildId: string) {
       console.log(
         `Assigned roles [${rolesToAssign.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
       )
+      await Bun.sleep(1000) // avoid rate limit
     }
   }
 }
