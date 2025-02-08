@@ -2,7 +2,7 @@ name: Update Contribution Overview
 
 on:
   workflow_run:
-    workflows: ["Synvc Discord Roles"] 
+    workflows: ["Sync Discord Roles"] 
     types:
       - completed
   workflow_dispatch: # Allow manual triggering
