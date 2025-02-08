@@ -21,8 +21,8 @@ const STAR_TO_ROLE_MAP: Record<string, RoleName> = {
   "⭐": "Contributor",
   "⭐⭐": "Try Hard",
   "⭐⭐⭐": "Hero",
-  "👑": "King",
   "⭐⭐⭐⭐⭐": "Legend",
+  "👑": "King",
 }
 
 // Function to load contribution data
@@ -83,9 +83,9 @@ async function syncRoles(client: Client, guildId: string) {
       )
       continue
     }
+
     const targetRoleName = STAR_TO_ROLE_MAP[stars]
     const targetRole = roles[targetRoleName]
-
     if (!targetRole) {
       console.warn(
         `Target role '${targetRoleName}' not found for user ${githubUsername}.`,
@@ -97,7 +97,6 @@ async function syncRoles(client: Client, guildId: string) {
     const discordId = Object.keys(userMappings).find(
       (id) => userMappings[id].toLowerCase() === githubUsername.toLowerCase(),
     )
-
     if (!discordId) {
       console.warn(`No Discord ID found for GitHub username ${githubUsername}.`)
       continue
@@ -109,16 +108,49 @@ async function syncRoles(client: Client, guildId: string) {
       continue
     }
 
-    // Remove all existing roles and assign the target role
-    await discordUser.roles.set([targetRole.id]).catch((e) => {
-      console.log(
-        `Error adding role ${targetRoleName} to ${githubUsername} with discord id ${discordId} because:- `,
-        e.message,
-      )
-    })
-    console.log(
-      `Add role for ${githubUsername} (${discordId}) to '${targetRoleName}' (${targetRole.id}).`,
+    // Remove all existing roles present in ROLE_NAMES
+    const rolesToRemove = discordUser.roles.cache.filter((role) =>
+      ROLE_NAMES.includes(role.name as RoleName),
     )
+    if (rolesToRemove.size > 0) {
+      await discordUser.roles.remove(rolesToRemove).catch((e) => {
+        console.warn(
+          `Error removing roles from ${githubUsername} (${discordId}):`,
+          e.message,
+        )
+      })
+      console.log(
+        `Removed roles [${Array.from(rolesToRemove.values())
+          .map((r) => r.name)
+          .join(", ")}] from ${githubUsername} (${discordId})`,
+      )
+    }
+
+    // Determine all roles to assign based on the user's rank
+    const rolesToAssign: Role[] = []
+    let currentRankIndex = ROLE_NAMES.indexOf(targetRoleName)
+
+    // Add all roles up to and including the target role
+    for (let i = 0; i <= currentRankIndex; i++) {
+      const roleName = ROLE_NAMES[i]
+      const role = roles[roleName]
+      if (role) {
+        rolesToAssign.push(role)
+      }
+    }
+
+    // Assign the roles
+    if (rolesToAssign.length > 0) {
+      await discordUser.roles.add(rolesToAssign.map((r) => r.id)).catch((e) => {
+        console.log(
+          `Error adding roles to ${githubUsername} (${discordId}) because:`,
+          e.message,
+        )
+      })
+      console.log(
+        `Assigned roles [${rolesToAssign.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
+      )
+    }
   }
 }
 
