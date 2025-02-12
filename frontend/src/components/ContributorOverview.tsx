@@ -9,15 +9,30 @@ import { ContributorCard } from "./ContributorCard"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
 
+const FULL_TIMERS = ["seveibar", "imrishabh18"]
+
 export function ContributorOverview({
   contributors,
   onSelectContributor,
 }: ContributorOverviewProps) {
   const [showAllContributors, setShowAllContributors] = useState(false)
 
-  // Get top 3 contributors for podium
-  const podiumContributors = contributors.slice(0, 3)
-  const remainingContributors = contributors.slice(3)
+  // First, separate full-timers from other contributors
+  const [fullTimerContributors, otherContributors] = contributors.reduce(
+    ([full, other], contributor) => {
+      if (FULL_TIMERS.includes(contributor[0])) {
+        return [[...full, contributor], other]
+      }
+      return [full, [...other, contributor]]
+    },
+    [[] as [string, ContributorStats][], [] as [string, ContributorStats][]]
+  )
+
+  // Get top 3 contributors from non-full-timers
+  const podiumContributors = otherContributors.slice(0, 3)
+  const remainingContributors = otherContributors.slice(3).filter(
+    ([username]) => !FULL_TIMERS.includes(username)
+  )
 
   const PodiumEntry = ({
     position,
@@ -29,35 +44,35 @@ export function ContributorOverview({
     onClick,
   }: PodiumEntryProps) => {
     const sizes = {
-      sm: "md:w-20 md:h-20",
-      md: "md:w-24 md:h-24",
-      lg: "md:w-32 md:h-32",
+      sm: "md:w-24 md:h-24",
+      md: "md:w-28 md:h-28",
+      lg: "md:w-36 md:h-36",
     }
 
     const badgeSizes = {
       sm: "md:w-8 md:h-8 text-base",
-      md: "md:w-8 md:h-8 text-base",
-      lg: "md:w-10 md:h-10 md:text-xl text-base",
+      md: "md:w-10 md:h-10 text-lg",
+      lg: "md:w-12 md:h-12 md:text-2xl text-lg",
     }
 
     const nameSizes = {
       sm: "md:text-lg",
-      md: "md:text-lg",
-      lg: "md:text-xl",
+      md: "md:text-xl",
+      lg: "md:text-2xl",
     }
 
     return (
       <div className="flex flex-col md:items-center w-full md:w-auto">
-        <div className="flex items-center md:flex-col gap-4 md:gap-0">
+        <div className="flex items-center md:flex-col gap-4 md:gap-2">
           <div className="relative">
             <img
               src={getAvatarUrl(username)}
               alt={`${username}'s avatar`}
-              className={`w-24 h-24 ${sizes[size]} rounded-full mb-0 md:mb-3 cursor-pointer ring-4 ${ringColor} hover:ring-8 transition-all`}
+              className={`w-28 h-28 ${sizes[size]} rounded-full mb-0 md:mb-4 cursor-pointer ring-4 ${ringColor} hover:ring-8 transition-all`}
               onClick={onClick}
             />
             <div
-              className={`absolute -top-2 -right-2 w-8 h-8 ${badgeSizes[size]} ${bgColor} rounded-full flex items-center justify-center text-white font-bold`}
+              className={`absolute -top-2 -right-2 w-10 h-10 ${badgeSizes[size]} ${bgColor} rounded-full flex items-center justify-center text-white font-bold`}
             >
               {position}
             </div>
@@ -65,7 +80,7 @@ export function ContributorOverview({
 
           <div className="flex flex-col md:items-center flex-1 md:flex-initial">
             <div
-              className={`${nameSizes[size]} font-medium text-gray-900 mb-1`}
+              className={`${nameSizes[size]} font-medium text-gray-900 mb-2`}
             >
               <a
                 href={getProfileUrl(username)}
@@ -76,25 +91,25 @@ export function ContributorOverview({
                 {username}
               </a>
             </div>
-            <div className="flex gap-1 text-yellow-400 mb-2">{stats.stars}</div>
+            <div className="flex gap-1 text-yellow-400 mb-3">{stats.stars}</div>
 
-            <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm text-gray-600 mb-2">
+            <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm md:text-base text-gray-600 mb-3">
               {STATS_CONFIG.map((stat) => {
                 const Icon = stat.icon
                 return (
-                  <div key={stat.key} className="flex items-center gap-1">
-                    <Icon className="w-4 h-4" />
+                  <div key={stat.key} className="flex items-center gap-1.5">
+                    <Icon className="w-5 h-5" />
                     <span>{stat.getValue(stats)}</span>
                   </div>
                 )
               })}
             </div>
 
-            <div className="flex flex-wrap gap-x-4 gap-y-1 items-center">
+            <div className="flex flex-wrap gap-x-4 gap-y-1.5 items-center">
               {Object.values(CONTRIBUTION_TYPES).map((type) => (
                 <div
                   key={type.value}
-                  className={`font-medium ${type.colorClass}`}
+                  className={`font-medium ${type.colorClass} md:text-lg`}
                 >
                   {type.emoji} {stats[type.value] || 0}
                 </div>
@@ -129,47 +144,89 @@ export function ContributorOverview({
 
   return (
     <section className="mt-20 mb-16 max-w-7xl mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12">
-        🏆 Top 3 Contributors 🏆
-      </h2>
-
-      {/* Podium */}
-      <div className="flex flex-col md:flex-row justify-center items-stretch md:items-end gap-8 mb-12">
-        {/* Second Place */}
-        {podiumContributors[1] && (
-          <div className="order-2 md:order-1">
-            <PodiumEntry
-              {...podiumStyles[1]}
-              username={podiumContributors[1][0]}
-              stats={podiumContributors[1][1]}
-              onClick={() => onSelectContributor(podiumContributors[1][0])}
-            />
+      <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12">
+        {fullTimerContributors.length > 0 && (
+          <div className="md:w-1/5">
+            <h3 className="text-lg font-semibold mb-3">Full-time</h3>
+            <div className="space-y-2">
+              {fullTimerContributors.map(([username, stats]) => (
+                <div
+                  key={username}
+                  onClick={() => onSelectContributor(username)}
+                  className="bg-white rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={getAvatarUrl(username)}
+                      alt={`${username}'s avatar`}
+                      className="w-10 h-10 rounded-full"
+                    />
+                    <div>
+                      <div className="font-medium">
+                        <a
+                          href={getProfileUrl(username)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-black hover:text-blue-800"
+                        >
+                          {username}
+                        </a>
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        Score: {stats.score || 0}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
+
+        <div className="md:flex-grow">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            🏆 Top 3 Contributors 🏆
+          </h2>
+          
+          {/* Podium */}
+          <div className="flex flex-col md:flex-row justify-center items-stretch md:items-end gap-10 md:gap-12">
+            {/* Second Place */}
+            {podiumContributors[1] && (
+              <div className="order-2 md:order-1">
+                <PodiumEntry
+                  {...podiumStyles[1]}
+                  username={podiumContributors[1][0]}
+                  stats={podiumContributors[1][1]}
+                  onClick={() => onSelectContributor(podiumContributors[1][0])}
+                />
+              </div>
+            )}
 
         {/* First Place */}
-        {podiumContributors[0] && (
-          <div className="order-1 md:order-2">
-            <PodiumEntry
-              {...podiumStyles[0]}
-              username={podiumContributors[0][0]}
-              stats={podiumContributors[0][1]}
-              onClick={() => onSelectContributor(podiumContributors[0][0])}
-            />
-          </div>
-        )}
+            {podiumContributors[0] && (
+              <div className="order-1 md:order-2">
+                <PodiumEntry
+                  {...podiumStyles[0]}
+                  username={podiumContributors[0][0]}
+                  stats={podiumContributors[0][1]}
+                  onClick={() => onSelectContributor(podiumContributors[0][0])}
+                />
+              </div>
+            )}
 
         {/* Third Place */}
-        {podiumContributors[2] && (
-          <div className="order-3">
-            <PodiumEntry
-              {...podiumStyles[2]}
-              username={podiumContributors[2][0]}
-              stats={podiumContributors[2][1]}
-              onClick={() => onSelectContributor(podiumContributors[2][0])}
-            />
+            {podiumContributors[2] && (
+              <div className="order-3">
+                <PodiumEntry
+                  {...podiumStyles[2]}
+                  username={podiumContributors[2][0]}
+                  stats={podiumContributors[2][1]}
+                  onClick={() => onSelectContributor(podiumContributors[2][0])}
+                />
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
 
       {/* Show All Contributors Button */}
