@@ -161,7 +161,7 @@ export function ContributorOverview({
                       alt={`${username}'s avatar`}
                       className="w-10 h-10 rounded-full"
                     />
-                    <div>
+                    <div className="flex-grow">
                       <div className="font-medium">
                         <a
                           href={getProfileUrl(username)}
@@ -174,6 +174,27 @@ export function ContributorOverview({
                       </div>
                       <div className="text-sm text-gray-500">
                         Score: {stats.score || 0}
+                      </div>
+                      <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-600 mt-1 mb-2">
+                        {STATS_CONFIG.map((stat) => {
+                          const Icon = stat.icon
+                          return (
+                            <div key={stat.key} className="flex items-center gap-1">
+                              <Icon className="w-3.5 h-3.5" />
+                              <span>{stat.getValue(stats)}</span>
+                            </div>
+                          )
+                        })}
+                      </div>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1.5 items-center">
+                        {Object.values(CONTRIBUTION_TYPES).map((type) => (
+                          <div
+                            key={type.value}
+                            className={`text-sm ${type.colorClass}`}
+                          >
+                            {type.emoji} {stats[type.value] || 0}
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
