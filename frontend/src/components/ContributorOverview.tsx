@@ -155,14 +155,17 @@ export function ContributorOverview({
                   onClick={() => onSelectContributor(username)}
                   className="bg-white rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
                 >
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={getAvatarUrl(username)}
-                      alt={`${username}'s avatar`}
-                      className="w-10 h-10 rounded-full"
-                    />
-                    <div className="flex-grow">
-                      <div className="font-medium">
+                  <div className="flex items-center gap-4">
+                    <div className="relative">
+                      <img
+                        src={getAvatarUrl(username)}
+                        alt={`${username}'s avatar`}
+                        className="w-14 h-14 rounded-full ring-2 ring-blue-400"
+                      />
+                    </div>
+
+                    <div className="flex-grow min-w-0">
+                      <div className="font-medium text-gray-900">
                         <a
                           href={getProfileUrl(username)}
                           target="_blank"
@@ -172,15 +175,18 @@ export function ContributorOverview({
                           {username}
                         </a>
                       </div>
-                      <div className="text-sm text-gray-500">
-                        Score: {stats.score || 0}
+                      <div className="text-yellow-400 text-sm mb-2">
+                        {stats.stars}
                       </div>
-                      <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-600 mt-1 mb-2">
+                      <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm text-gray-600 mb-2">
                         {STATS_CONFIG.map((stat) => {
                           const Icon = stat.icon
                           return (
-                            <div key={stat.key} className="flex items-center gap-1">
-                              <Icon className="w-3.5 h-3.5" />
+                            <div
+                              key={stat.key}
+                              className="flex items-center gap-1.5"
+                            >
+                              <Icon className="w-4 h-4" />
                               <span>{stat.getValue(stats)}</span>
                             </div>
                           )
@@ -208,7 +214,7 @@ export function ContributorOverview({
           <h2 className="text-3xl font-bold text-center mb-10">
             🏆 Top 3 Contributors 🏆
           </h2>
-          
+
           {/* Podium */}
           <div className="flex flex-col md:flex-row justify-center items-stretch md:items-end gap-10 md:gap-12">
             {/* Second Place */}
@@ -223,7 +229,7 @@ export function ContributorOverview({
               </div>
             )}
 
-        {/* First Place */}
+            {/* First Place */}
             {podiumContributors[0] && (
               <div className="order-1 md:order-2">
                 <PodiumEntry
@@ -235,7 +241,7 @@ export function ContributorOverview({
               </div>
             )}
 
-        {/* Third Place */}
+            {/* Third Place */}
             {podiumContributors[2] && (
               <div className="order-3">
                 <PodiumEntry
