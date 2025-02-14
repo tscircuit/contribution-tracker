@@ -26,13 +26,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.TSCIRCUIT_BOT_ANTHROPIC_API_KEY }}
-
-      - name: Run discord script
-        run: bun scripts/sync-discord-roles.ts
-        env:
-          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          DISCORD_GUILD_ID: ${{ secrets.DISCORD_GUILD_ID }}
-
+          
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
