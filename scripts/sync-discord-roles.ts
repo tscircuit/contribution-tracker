@@ -2,8 +2,12 @@ import fs from "fs"
 import path from "path"
 import { Client, Role } from "discord.js"
 
-// Discord Roles
-const ROLE_NAMES = [
+// ----- Role definitions ----- //
+
+// All-Time roles (by score)
+// These roles are cumulative: if a user qualifies for a higher tier, they should have
+// all lower-tier roles as well. However, WE DO NOT REMOVE ANY ALL-TIME ROLES ONCE ASSIGNED.
+const ALL_TIME_ROLE_NAMES = [
   "New Contributor",
   "Contributor",
   "Try Hard",
@@ -11,21 +15,28 @@ const ROLE_NAMES = [
   "King",
   "Legend",
 ] as const
+type AllTimeRoleName = (typeof ALL_TIME_ROLE_NAMES)[number]
 
-// Infer the type of ROLE_NAMES as a tuple of string literals
-type RoleName = (typeof ROLE_NAMES)[number]
+// Weekly roles (by stars)
+// These roles are fully synced each week: only the cumulative weekly roles based on the current
+// stars value should be present.
+const WEEKLY_ROLE_NAMES = ["⭐", "⭐⭐", "⭐⭐⭐", "👑", "👑👑"] as const
+type WeeklyRoleName = (typeof WEEKLY_ROLE_NAMES)[number]
 
-// Map stars to roles
-const STAR_TO_ROLE_MAP: Record<string, RoleName> = {
-  "": "New Contributor",
-  "⭐": "Contributor",
-  "⭐⭐": "Try Hard",
-  "⭐⭐⭐": "Hero",
-  "⭐⭐⭐⭐⭐": "Legend",
-  "👑": "King",
+// ----- Helper function for All-Time roles ----- //
+
+function getAllTimeRoleName(score: number): AllTimeRoleName | null {
+  if (score >= 100) return "Legend"
+  if (score >= 75) return "King"
+  if (score >= 50) return "Hero"
+  if (score >= 30) return "Try Hard"
+  if (score >= 10) return "Contributor"
+  if (score >= 3) return "New Contributor"
+  return null
 }
 
-// Function to load contribution data
+// ----- Data loading functions ----- //
+
 function loadContributionData(): Record<string, any> {
   const contributionsDir = path.join(process.cwd(), "contribution-overviews")
   const files = fs
@@ -37,20 +48,20 @@ function loadContributionData(): Record<string, any> {
   }
 
   const latestFile = files.sort().pop()
-  console.log("Using data from ", latestFile, "\n")
+  console.log("Using data from", latestFile, "\n")
   const filePath = path.join(contributionsDir, latestFile!)
   const data = fs.readFileSync(filePath, "utf-8")
   return JSON.parse(data)
 }
 
-// Function to load user mappings
 function loadUserMappings(): Record<string, string> {
   const filePath = path.join(process.cwd(), "users.json")
   const data = fs.readFileSync(filePath, "utf-8")
   return JSON.parse(data)
 }
 
-// Function to sync roles
+// ----- Main sync function ----- //
+
 async function syncRoles(client: Client, guildId: string) {
   const guild = await client.guilds.fetch(guildId)
   if (!guild) {
@@ -61,39 +72,70 @@ async function syncRoles(client: Client, guildId: string) {
   const contributionData = loadContributionData()
   const userMappings = loadUserMappings()
 
-  // Fetch all roles in the guild
-  const roles: Record<string, Role> = {}
-  for (const roleName of ROLE_NAMES) {
-    const role = guild.roles.cache.find((r) => r.name == roleName)
+  // Fetch all-time roles from the guild
+  const allTimeRoles: Record<AllTimeRoleName, Role> = {} as any
+  for (const roleName of ALL_TIME_ROLE_NAMES) {
+    const role = guild.roles.cache.find((r) => r.name === roleName)
     if (!role) {
-      console.warn(`Role '${roleName}' not found.`)
+      console.warn(`All-Time role '${roleName}' not found.`)
       continue
     }
-    roles[roleName] = role
+    allTimeRoles[roleName] = role
   }
+
+  // Fetch weekly roles from the guild
+  const weeklyRoles: Record<WeeklyRoleName, Role> = {} as any
+  for (const roleName of WEEKLY_ROLE_NAMES) {
+    const role = guild.roles.cache.find((r) => r.name === roleName)
+    if (!role) {
+      console.warn(`Weekly role '${roleName}' not found.`)
+      continue
+    }
+    weeklyRoles[roleName] = role
+  }
+
   console.log("\n")
+
   // Process each user in the contribution data
   for (const [githubUsername, userData] of Object.entries(contributionData)) {
-    const { stars } = userData
+    // Extract all-time and weekly contribution data:
+    // Use 'score' for all-time roles and 'stars' for weekly roles.
+    const { score, stars } = userData
 
-    // Skip users without stars
-    if (!stars || !STAR_TO_ROLE_MAP[stars]) {
-      console.warn(
-        `Skipping user ${githubUsername} due to missing or invalid stars.`,
-      )
-      continue
+    // Compute desired cumulative all-time roles (only add missing; do not remove any)
+    const desiredAllTimeRoles: Role[] = []
+    if (typeof score === "number") {
+      const targetAllTimeRoleName = getAllTimeRoleName(score)
+      if (targetAllTimeRoleName) {
+        const targetIndex = ALL_TIME_ROLE_NAMES.indexOf(targetAllTimeRoleName)
+        for (let i = 0; i <= targetIndex; i++) {
+          const roleName = ALL_TIME_ROLE_NAMES[i]
+          const role = allTimeRoles[roleName]
+          if (role) {
+            desiredAllTimeRoles.push(role)
+          }
+        }
+      }
     }
 
-    const targetRoleName = STAR_TO_ROLE_MAP[stars]
-    const targetRole = roles[targetRoleName]
-    if (!targetRole) {
-      console.warn(
-        `Target role '${targetRoleName}' not found for user ${githubUsername}.`,
-      )
-      continue
+    // Compute desired cumulative weekly roles (fully synced)
+    const desiredWeeklyRoles: Role[] = []
+    if (
+      typeof stars === "string" &&
+      WEEKLY_ROLE_NAMES.includes(stars as WeeklyRoleName)
+    ) {
+      const targetWeeklyRoleName = stars as WeeklyRoleName
+      const targetIndex = WEEKLY_ROLE_NAMES.indexOf(targetWeeklyRoleName)
+      for (let i = 0; i <= targetIndex; i++) {
+        const roleName = WEEKLY_ROLE_NAMES[i]
+        const role = weeklyRoles[roleName]
+        if (role) {
+          desiredWeeklyRoles.push(role)
+        }
+      }
     }
 
-    // Find the Discord user by GitHub username
+    // Find the Discord user by GitHub username using the userMappings
     const discordId = Object.keys(userMappings).find(
       (id) => userMappings[id].toLowerCase() === githubUsername.toLowerCase(),
     )
@@ -108,55 +150,74 @@ async function syncRoles(client: Client, guildId: string) {
       continue
     }
 
-    // Remove all existing roles present in ROLE_NAMES
-    const rolesToRemove = discordUser.roles.cache.filter((role) =>
-      ROLE_NAMES.includes(role.name as RoleName),
+    // --- Sync All-Time Roles (Addition Only) ---
+    const currentAllTimeRoles = discordUser.roles.cache.filter((role) =>
+      ALL_TIME_ROLE_NAMES.includes(role.name as AllTimeRoleName),
     )
-    if (rolesToRemove.size > 0) {
-      await discordUser.roles.remove(rolesToRemove).catch((e) => {
-        console.warn(
-          `Error removing roles from ${githubUsername} (${discordId}):`,
-          e.message,
-        )
-      })
+    const currentAllTimeRoleIds = new Set(currentAllTimeRoles.map((r) => r.id))
+    const allTimeRolesToAdd = desiredAllTimeRoles.filter(
+      (role) => !currentAllTimeRoleIds.has(role.id),
+    )
+    if (allTimeRolesToAdd.length > 0) {
+      await discordUser.roles
+        .add(allTimeRolesToAdd.map((r) => r.id))
+        .catch((e) => {
+          console.warn(
+            `Error adding all-time roles to ${githubUsername} (${discordId}): ${e.message}`,
+          )
+        })
       console.log(
-        `Removed roles [${Array.from(rolesToRemove.values())
-          .map((r) => r.name)
-          .join(", ")}] from ${githubUsername} (${discordId})`,
+        `Added all-time roles [${allTimeRolesToAdd.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
       )
       await Bun.sleep(1000)
     }
 
-    // Determine all roles to assign based on the user's rank
-    const rolesToAssign: Role[] = []
-    let currentRankIndex = ROLE_NAMES.indexOf(targetRoleName)
-
-    // Add all roles up to and including the target role
-    for (let i = 0; i <= currentRankIndex; i++) {
-      const roleName = ROLE_NAMES[i]
-      const role = roles[roleName]
-      if (role) {
-        rolesToAssign.push(role)
-      }
-    }
-
-    // Assign the roles
-    if (rolesToAssign.length > 0) {
-      await discordUser.roles.add(rolesToAssign.map((r) => r.id)).catch((e) => {
-        console.log(
-          `Error adding roles to ${githubUsername} (${discordId}) because:`,
-          e.message,
+    // --- Sync Weekly Roles (Remove & Add) ---
+    // Only weekly roles are removed if they are not part of the desired set.
+    const currentWeeklyRoles = discordUser.roles.cache.filter((role) =>
+      WEEKLY_ROLE_NAMES.includes(role.name as WeeklyRoleName),
+    )
+    const currentWeeklyRoleIds = new Set(currentWeeklyRoles.map((r) => r.id))
+    const desiredWeeklyRoleIds = new Set(desiredWeeklyRoles.map((r) => r.id))
+    // Remove weekly roles that are not desired
+    const weeklyRolesToRemove = currentWeeklyRoles.filter(
+      (role) => !desiredWeeklyRoleIds.has(role.id),
+    )
+    if (weeklyRolesToRemove.size > 0) {
+      await discordUser.roles.remove(weeklyRolesToRemove).catch((e) => {
+        console.warn(
+          `Error removing weekly roles from ${githubUsername} (${discordId}): ${e.message}`,
         )
       })
       console.log(
-        `Assigned roles [${rolesToAssign.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
+        `Removed weekly roles [${Array.from(weeklyRolesToRemove.values())
+          .map((r) => r.name)
+          .join(", ")}] from ${githubUsername} (${discordId}).`,
       )
-      await Bun.sleep(1000) // avoid rate limit
+      await Bun.sleep(1000)
+    }
+    // Add any missing weekly roles
+    const weeklyRolesToAdd = desiredWeeklyRoles.filter(
+      (role) => !currentWeeklyRoleIds.has(role.id),
+    )
+    if (weeklyRolesToAdd.length > 0) {
+      await discordUser.roles
+        .add(weeklyRolesToAdd.map((r) => r.id))
+        .catch((e) => {
+          console.warn(
+            `Error adding weekly roles to ${githubUsername} (${discordId}): ${e.message}`,
+          )
+        })
+      console.log(
+        `Added weekly roles [${weeklyRolesToAdd.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
+      )
+      await Bun.sleep(1000)
     }
   }
 }
 
-// Main function
+// ----- Main function ----- //
+
 async function main() {
   const discordToken = process.env.DISCORD_TOKEN
   const guildId = process.env.DISCORD_GUILD_ID
@@ -180,3 +241,22 @@ async function main() {
 main().catch((err) => {
   console.error("An error occurred:", err)
 })
+
+/**
+Weekly Role Thresholds:
+====================
+👑👑: 100+ points
+👑: 75+ points
+⭐⭐⭐: 50+ points
+⭐⭐: 30+ points
+⭐: 10+ points
+
+All-Time Role Thresholds:
+=====================
+Legend: 100+ points
+King: 75+ points
+Hero: 50+ points
+Try Hard: 30+ points
+Contributor: 10+ points
+New Contributor: 3+ points 
+ */
