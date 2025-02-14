@@ -1,10 +1,8 @@
 name: Update Contribution Overview
 
 on:
-  workflow_run:
-    workflows: ["Sync Discord Roles"] 
-    types:
-      - completed
+  schedule:
+    - cron: "0 18 * * *" # 6am PST
   workflow_dispatch: # Allow manual triggering
 
 jobs:
