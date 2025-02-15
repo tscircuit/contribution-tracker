@@ -8,8 +8,7 @@ import {
 import { ContributorCard } from "./ContributorCard"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
-
-const FULL_TIMERS = ["seveibar", "imrishabh18"]
+import { FULL_TIMERS } from "../constants/contributors"
 
 export function ContributorOverview({
   contributors,
@@ -25,14 +24,14 @@ export function ContributorOverview({
       }
       return [full, [...other, contributor]]
     },
-    [[] as [string, ContributorStats][], [] as [string, ContributorStats][]]
+    [[] as [string, ContributorStats][], [] as [string, ContributorStats][]],
   )
 
   // Get top 3 contributors from non-full-timers
   const podiumContributors = otherContributors.slice(0, 3)
-  const remainingContributors = otherContributors.slice(3).filter(
-    ([username]) => !FULL_TIMERS.includes(username)
-  )
+  const remainingContributors = otherContributors
+    .slice(3)
+    .filter(([username]) => !FULL_TIMERS.includes(username))
 
   const PodiumEntry = ({
     position,
