@@ -1,0 +1,27 @@
+name: Sync Discord Roles
+
+on:
+  schedule:
+    - cron: "0 18 * * 1" # Runs every Monday at 6 AM PST
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  sync-discord-roles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run script
+        run: bun scripts/sync-discord-roles.ts
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_GUILD_ID: ${{ secrets.DISCORD_GUILD_ID }}
