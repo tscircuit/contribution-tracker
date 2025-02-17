@@ -23,12 +23,12 @@ function App() {
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
             TSCircuit Contributors
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center items-center gap-3 mt-2 sm:mt-0">
+          <div className="grid grid-cols-1 md:flex place-items-center md:items-center gap-3 mt-2 sm:mt-0">
             <a
               href="https://github.com/tscircuit/contribution-tracker"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors w-full"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors w-full sm:w-auto"
             >
               <GithubIcon className="w-5 h-5" />
               View on GitHub
