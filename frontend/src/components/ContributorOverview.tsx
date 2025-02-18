@@ -154,53 +154,54 @@ export function ContributorOverview({
                   onClick={() => onSelectContributor(username)}
                   className="bg-white rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="relative">
-                      <img
-                        src={getAvatarUrl(username)}
-                        alt={`${username}'s avatar`}
-                        className="w-14 h-14 rounded-full ring-2 ring-blue-400"
-                      />
-                    </div>
-
-                    <div className="flex-grow min-w-0">
-                      <div className="font-medium text-gray-900">
-                        <a
-                          href={getProfileUrl(username)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-black hover:text-blue-800"
-                        >
-                          {username}
-                        </a>
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-3 sm:gap-5 mb-5">
+                      <div className="relative flex-shrink-0">
+                        <img
+                          src={getAvatarUrl(username)}
+                          alt={`${username}'s avatar`}
+                          className="w-12 sm:w-14 h-12 sm:h-14 rounded-full ring-2 ring-blue-400"
+                        />
                       </div>
-                      <div className="text-yellow-400 text-sm mb-2">
-                        {stats.stars}
-                      </div>
-                      <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm text-gray-600 mb-2">
-                        {STATS_CONFIG.map((stat) => {
-                          const Icon = stat.icon
-                          return (
-                            <div
-                              key={stat.key}
-                              className="flex items-center gap-1.5"
-                            >
-                              <Icon className="w-4 h-4" />
-                              <span>{stat.getValue(stats)}</span>
-                            </div>
-                          )
-                        })}
-                      </div>
-                      <div className="flex flex-wrap gap-x-4 gap-y-1.5 items-center">
-                        {Object.values(CONTRIBUTION_TYPES).map((type) => (
-                          <div
-                            key={type.value}
-                            className={`text-sm ${type.colorClass}`}
+                      <div className="min-w-0">
+                        <div className="font-medium text-gray-900 truncate">
+                          <a
+                            href={getProfileUrl(username)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-black hover:text-blue-800"
                           >
-                            {type.emoji} {stats[type.value] || 0}
-                          </div>
-                        ))}
+                            {username}
+                          </a>
+                        </div>
+                        <div className="text-yellow-400 text-sm mt-1">
+                          {stats.stars}
+                        </div>
                       </div>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-x-4 md:gap-x-6 gap-y-2 text-sm text-gray-600 mb-2">
+                      {STATS_CONFIG.map((stat) => {
+                        const Icon = stat.icon
+                        return (
+                          <div
+                            key={stat.key}
+                            className="flex items-center gap-1.5"
+                          >
+                            <Icon className="w-4 h-4" />
+                            <span>{stat.getValue(stats)}</span>
+                          </div>
+                        )
+                      })}
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 items-center">
+                      {Object.values(CONTRIBUTION_TYPES).map((type) => (
+                        <div
+                          key={type.value}
+                          className={`text-sm ${type.colorClass}`}
+                        >
+                          {type.emoji} {stats[type.value] || 0}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
