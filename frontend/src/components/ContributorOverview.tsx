@@ -145,7 +145,7 @@ export function ContributorOverview({
     <section className="mt-20 mb-16 max-w-7xl mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12">
         {fullTimerContributors.length > 0 && (
-          <div className="md:w-1/5">
+          <div className="md:w-[14%]">
             <h3 className="text-lg font-semibold mb-3">Full-time</h3>
             <div className="space-y-2">
               {fullTimerContributors.map(([username, stats]) => (
@@ -155,12 +155,12 @@ export function ContributorOverview({
                   className="bg-white rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
                 >
                   <div className="flex flex-col">
-                    <div className="flex items-center gap-3 sm:gap-5 mb-5">
+                    <div className="flex items-center gap-3 sm:gap-3 mb-4">
                       <div className="relative flex-shrink-0">
                         <img
                           src={getAvatarUrl(username)}
                           alt={`${username}'s avatar`}
-                          className="w-12 sm:w-14 h-12 sm:h-14 rounded-full ring-2 ring-blue-400"
+                          className="w-11 h-11 rounded-full ring-2 ring-blue-400"
                         />
                       </div>
                       <div className="min-w-0">
@@ -174,18 +174,18 @@ export function ContributorOverview({
                             {username}
                           </a>
                         </div>
-                        <div className="text-yellow-400 text-sm mt-1">
+                        <div className="text-yellow-400 text-xs">
                           {stats.stars}
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-x-4 md:gap-x-6 gap-y-2 text-sm text-gray-600 mb-2">
+                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-xs text-gray-600 mb-1">
                       {STATS_CONFIG.map((stat) => {
                         const Icon = stat.icon
                         return (
                           <div
                             key={stat.key}
-                            className="flex items-center gap-1.5"
+                            className="flex items-center gap-0.5"
                           >
                             <Icon className="w-4 h-4" />
                             <span>{stat.getValue(stats)}</span>
@@ -193,7 +193,7 @@ export function ContributorOverview({
                         )
                       })}
                     </div>
-                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 items-center">
+                    <div className="flex flex-wrap gap-x-1.5 gap-y-0.5 items-center mt-1">
                       {Object.values(CONTRIBUTION_TYPES).map((type) => (
                         <div
                           key={type.value}
