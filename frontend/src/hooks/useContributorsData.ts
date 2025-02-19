@@ -21,6 +21,7 @@ interface UseContributorsDataReturn {
   sortedContributors: [string, ContributorStats][]
   setSelectedContributor: (username?: string) => void
   setIsModalOpen: (isOpen: boolean) => void
+  loading: boolean
 }
 
 export function useContributorsData(): UseContributorsDataReturn {
@@ -31,9 +32,11 @@ export function useContributorsData(): UseContributorsDataReturn {
   const [selectedContributor, setSelectedContributor] = useState<string>()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [jsonRecords, setJsonRecords] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchData() {
+      setLoading(true)
       try {
         // First fetch the list of files
         const filesResp = await fetch(getContributionOverviewsUrl())
@@ -118,6 +121,8 @@ export function useContributorsData(): UseContributorsDataReturn {
         setRepoDetails(repoDetails)
       } catch (error) {
         console.error("Error fetching data:", error)
+      } finally {
+        setLoading(false)
       }
     }
 
@@ -165,5 +170,6 @@ export function useContributorsData(): UseContributorsDataReturn {
     sortedContributors,
     setSelectedContributor,
     setIsModalOpen,
+    loading,
   }
 }
