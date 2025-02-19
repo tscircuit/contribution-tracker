@@ -1,4 +1,4 @@
-import { GithubIcon } from "lucide-react"
+import { GithubIcon, Loader } from "lucide-react"
 import { ContributorOverview } from "./components/ContributorOverview"
 import { PRsByRepository } from "./components/PRsByRepository"
 import { Modal } from "./components/Modal"
@@ -14,7 +14,17 @@ function App() {
     sortedContributors,
     setSelectedContributor,
     setIsModalOpen,
+    loading,
   } = useContributorsData()
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center">
+        <Loader className="animate-spin w-10 h-10 text-gray-600" />
+        <div className="text-gray-600 mt-2">Loading...</div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
