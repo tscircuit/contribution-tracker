@@ -57,44 +57,67 @@ export async function getAllPRs(
   const prsWithDetails = await Promise.all(
     filteredPRs.map(async (pr) => {
       const reviews = await fetchReviews(pr.number)
-      const reviewsReceived = reviews.length
+      const isMerged = !!pr.merged_at
 
-      const approvalsReceived = reviews.filter(
+      let processedReviews = reviews
+
+      // For merged PRs, get the latest review per user
+      if (isMerged) {
+        const userLatestReviewMap = new Map<string, any>()
+        // Process in reverse to get the latest review first
+        for (const review of [...reviews].reverse()) {
+          const reviewer = review.user.login
+          if (!userLatestReviewMap.has(reviewer)) {
+            userLatestReviewMap.set(reviewer, review)
+          }
+        }
+        processedReviews = Array.from(userLatestReviewMap.values())
+      }
+
+      const approvalsReceived = processedReviews.filter(
         (review) => review.state === "APPROVED",
       ).length
-      const rejectionsReceived = reviews.filter(
+      const rejectionsReceived = processedReviews.filter(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
 
-      const reviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
-        (acc, review) => {
-          const reviewer = review.user.login
-          if (!acc[reviewer]) {
-            acc[reviewer] = {
-              approvalsGiven: 0,
-              rejectionsGiven: 0,
-              prNumbers: new Set<number>(),
-            }
+      const reviewsByUser = processedReviews.reduce<
+        Record<string, ReviewerStats>
+      >((acc, review) => {
+        const reviewer = review.user.login
+        if (!acc[reviewer]) {
+          acc[reviewer] = {
+            approvalsGiven: 0,
+            rejectionsGiven: 0,
+            prNumbers: new Set<number>(),
           }
-          // Track this PR number for the reviewer
-          acc[reviewer].prNumbers?.add(pr.number)
+        }
 
-          // Update approval/rejection counts
+        if (isMerged) {
+          // For merged PRs, only add to prNumbers if approved
+          if (review.state === "APPROVED") {
+            acc[reviewer].approvalsGiven++
+            acc[reviewer].prNumbers?.add(pr.number)
+          } else if (review.state === "CHANGES_REQUESTED") {
+            acc[reviewer].rejectionsGiven++
+          }
+        } else {
+          // For non-merged PRs, count all reviews
+          acc[reviewer].prNumbers?.add(pr.number)
           if (review.state === "APPROVED") {
             acc[reviewer].approvalsGiven++
           } else if (review.state === "CHANGES_REQUESTED") {
             acc[reviewer].rejectionsGiven++
           }
-          return acc
-        },
-        {},
-      )
+        }
+        return acc
+      }, {})
 
       return {
         ...pr,
-        reviewsReceived,
-        rejectionsReceived,
+        reviewsReceived: processedReviews.length,
         approvalsReceived,
+        rejectionsReceived,
         reviewsByUser,
         isClosed: pr.state === "closed",
       } as PullRequestWithReviews
