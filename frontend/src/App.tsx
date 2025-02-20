@@ -1,9 +1,10 @@
-import { GithubIcon, Loader } from "lucide-react"
+import { GithubIcon } from "lucide-react"
 import { ContributorOverview } from "./components/ContributorOverview"
 import { PRsByRepository } from "./components/PRsByRepository"
 import { Modal } from "./components/Modal"
 import { useContributorsData } from "./hooks/useContributorsData"
 import ContributorGraph from "./components/ContributorGraph"
+import { useEffect, useState } from "react"
 
 function App() {
   const {
@@ -17,11 +18,25 @@ function App() {
     loading,
   } = useContributorsData()
 
-  if (loading) {
+  const [showContent, setShowContent] = useState(false)
+
+  useEffect(() => {
+    if (!loading) {
+      const timer = setTimeout(() => {
+        setShowContent(true)
+      }, 500)
+      return () => clearTimeout(timer)
+    }
+  }, [loading])
+
+  if (loading || !showContent) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center">
-        <Loader className="animate-spin w-10 h-10 text-gray-600" />
-        <div className="text-gray-600 mt-2">Loading...</div>
+      <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <div className="w-48">
+          <div className="loading">
+            <div className="loading-bar"></div>
+          </div>
+        </div>
       </div>
     )
   }
