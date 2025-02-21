@@ -14,7 +14,20 @@ function App() {
     sortedContributors,
     setSelectedContributor,
     setIsModalOpen,
+    loading,
   } = useContributorsData()
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <div className="w-48">
+          <div className="loading">
+            <div className="loading-bar"></div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
