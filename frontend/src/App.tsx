@@ -4,7 +4,6 @@ import { PRsByRepository } from "./components/PRsByRepository"
 import { Modal } from "./components/Modal"
 import { useContributorsData } from "./hooks/useContributorsData"
 import ContributorGraph from "./components/ContributorGraph"
-import { useEffect, useState } from "react"
 
 function App() {
   const {
@@ -18,18 +17,7 @@ function App() {
     loading,
   } = useContributorsData()
 
-  const [showContent, setShowContent] = useState(false)
-
-  useEffect(() => {
-    if (!loading) {
-      const timer = setTimeout(() => {
-        setShowContent(true)
-      }, 500)
-      return () => clearTimeout(timer)
-    }
-  }, [loading])
-
-  if (loading || !showContent) {
+  if (loading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
         <div className="w-48">
