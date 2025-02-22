@@ -9,6 +9,8 @@ import { ContributorCard } from "./ContributorCard"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
 import { FULL_TIMERS } from "../constants/contributors"
+import Tippy from "@tippyjs/react"
+import "tippy.js/dist/tippy.css"
 
 export function ContributorOverview({
   contributors,
@@ -97,7 +99,19 @@ export function ContributorOverview({
                 const Icon = stat.icon
                 return (
                   <div key={stat.key} className="flex items-center gap-1.5">
-                    <Icon className="w-5 h-5" />
+                    <Tippy
+                      content={
+                        stat.key === "pullRequests"
+                          ? "Merged PRs / Total PRs opened"
+                          : stat.key === "reviews"
+                            ? "Number of reviews received on PRs"
+                            : "Number of issues created"
+                      }
+                    >
+                      <span className="inline-flex">
+                        <Icon className="w-5 h-5" />
+                      </span>
+                    </Tippy>
                     <span>{stat.getValue(stats)}</span>
                   </div>
                 )
@@ -106,12 +120,20 @@ export function ContributorOverview({
 
             <div className="flex flex-wrap gap-x-4 gap-y-1.5 items-center">
               {Object.values(CONTRIBUTION_TYPES).map((type) => (
-                <div
+                <Tippy
                   key={type.value}
-                  className={`font-medium ${type.colorClass} md:text-lg`}
+                  content={
+                    type.value === "major"
+                      ? "Major contributions: Significant code changes or new features"
+                      : type.value === "minor"
+                        ? "Minor contributions: Bug fixes or small improvements"
+                        : "Tiny contributions: Documentation updates or minor fixes"
+                  }
                 >
-                  {type.emoji} {stats[type.value] || 0}
-                </div>
+                  <div className={`font-medium ${type.colorClass} md:text-lg`}>
+                    {type.emoji} {stats[type.value] || 0}
+                  </div>
+                </Tippy>
               ))}
             </div>
           </div>
@@ -187,7 +209,19 @@ export function ContributorOverview({
                             key={stat.key}
                             className="flex items-center gap-0.5"
                           >
-                            <Icon className="w-4 h-4" />
+                            <Tippy
+                              content={
+                                stat.key === "pullRequests"
+                                  ? "Merged PRs / Total PRs opened"
+                                  : stat.key === "reviews"
+                                    ? "Number of reviews received on PRs"
+                                    : "Number of issues created"
+                              }
+                            >
+                              <span className="inline-flex">
+                                <Icon className="w-4 h-4" />
+                              </span>
+                            </Tippy>
                             <span>{stat.getValue(stats)}</span>
                           </div>
                         )
@@ -195,12 +229,20 @@ export function ContributorOverview({
                     </div>
                     <div className="flex flex-wrap gap-x-1.5 gap-y-0.5 items-center mt-1">
                       {Object.values(CONTRIBUTION_TYPES).map((type) => (
-                        <div
+                        <Tippy
                           key={type.value}
-                          className={`text-sm ${type.colorClass}`}
+                          content={
+                            type.value === "major"
+                              ? "Major contributions: Significant code changes or new features"
+                              : type.value === "minor"
+                                ? "Minor contributions: Bug fixes or small improvements"
+                                : "Tiny contributions: Documentation updates or minor fixes"
+                          }
                         >
-                          {type.emoji} {stats[type.value] || 0}
-                        </div>
+                          <div className={`text-sm ${type.colorClass}`}>
+                            {type.emoji} {stats[type.value] || 0}
+                          </div>
+                        </Tippy>
                       ))}
                     </div>
                   </div>

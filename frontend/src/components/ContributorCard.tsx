@@ -1,6 +1,8 @@
 import { type ContributorCardProps } from "../types/contributor"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
+import Tippy from "@tippyjs/react"
+import "tippy.js/dist/tippy.css"
 
 export function ContributorCard({
   username,
@@ -34,12 +36,23 @@ export function ContributorCard({
           </div>
           <div className="mt-1 flex gap-3 text-sm text-gray-600">
             {Object.values(CONTRIBUTION_TYPES).map((type) => (
-              <div key={type.value} className="flex items-center gap-1">
-                <span className={`font-medium ${type.colorClass}`}>
-                  {contributor[type.value] || 0}
-                </span>{" "}
-                {type.label}
-              </div>
+              <Tippy
+                key={type.value}
+                content={
+                  type.value === "major"
+                    ? "Major contributions: Significant code changes or new features"
+                    : type.value === "minor"
+                      ? "Minor contributions: Bug fixes or small improvements"
+                      : "Tiny contributions: Documentation updates or minor fixes"
+                }
+              >
+                <div className="flex items-center gap-1">
+                  <span className={`font-medium ${type.colorClass}`}>
+                    {contributor[type.value] || 0}
+                  </span>{" "}
+                  {type.label}
+                </div>
+              </Tippy>
             ))}
           </div>
         </div>
@@ -52,7 +65,19 @@ export function ContributorCard({
             <div key={stat.key} className="p-2.5">
               <div className="text-sm text-gray-500">{stat.label}</div>
               <div className="mt-1 font-medium flex items-center gap-1.5">
-                <Icon className={`w-4 h-4 ${stat.iconColor}`} />
+                <Tippy
+                  content={
+                    stat.key === "pullRequests"
+                      ? "Merged PRs / Total PRs opened"
+                      : stat.key === "reviews"
+                        ? "Number of reviews received on PRs"
+                        : "Number of issues created"
+                  }
+                >
+                  <span className="inline-flex">
+                    <Icon className={`w-4 h-4 ${stat.iconColor}`} />
+                  </span>
+                </Tippy>
                 <span>{stat.getValue(contributor)}</span>
               </div>
             </div>
