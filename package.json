@@ -26,6 +26,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.3",
     "@octokit/rest": "^21.0.0",
+    "@tippyjs/react": "^4.2.6",
     "dotenv": "latest",
     "file-system-cache": "^3.0.0-alpha.8",
     "level": "^8.0.1",
