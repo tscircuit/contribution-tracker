@@ -8,6 +8,7 @@ import {
 import { ContributorCard } from "./ContributorCard"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
+import { CONTRIBUTION_TOOLTIPS, STATS_TOOLTIPS } from "../constants/tooltips"
 import { FULL_TIMERS } from "../constants/contributors"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
@@ -99,15 +100,7 @@ export function ContributorOverview({
                 const Icon = stat.icon
                 return (
                   <div key={stat.key} className="flex items-center gap-1.5">
-                    <Tippy
-                      content={
-                        stat.key === "pullRequests"
-                          ? "Merged PRs / Total PRs opened"
-                          : stat.key === "reviews"
-                            ? "Number of reviews received on PRs"
-                            : "Number of issues created"
-                      }
-                    >
+                    <Tippy content={STATS_TOOLTIPS[stat.key]}>
                       <span className="inline-flex">
                         <Icon className="w-5 h-5" />
                       </span>
@@ -122,13 +115,7 @@ export function ContributorOverview({
               {Object.values(CONTRIBUTION_TYPES).map((type) => (
                 <Tippy
                   key={type.value}
-                  content={
-                    type.value === "major"
-                      ? "Major contributions: Significant code changes or new features"
-                      : type.value === "minor"
-                        ? "Minor contributions: Bug fixes or small improvements"
-                        : "Tiny contributions: Documentation updates or minor fixes"
-                  }
+                  content={CONTRIBUTION_TOOLTIPS[type.value]}
                 >
                   <div className={`font-medium ${type.colorClass} md:text-lg`}>
                     {type.emoji} {stats[type.value] || 0}
@@ -209,15 +196,7 @@ export function ContributorOverview({
                             key={stat.key}
                             className="flex items-center gap-0.5"
                           >
-                            <Tippy
-                              content={
-                                stat.key === "pullRequests"
-                                  ? "Merged PRs / Total PRs opened"
-                                  : stat.key === "reviews"
-                                    ? "Number of reviews received on PRs"
-                                    : "Number of issues created"
-                              }
-                            >
+                            <Tippy content={STATS_TOOLTIPS[stat.key]}>
                               <span className="inline-flex">
                                 <Icon className="w-4 h-4" />
                               </span>
@@ -231,13 +210,7 @@ export function ContributorOverview({
                       {Object.values(CONTRIBUTION_TYPES).map((type) => (
                         <Tippy
                           key={type.value}
-                          content={
-                            type.value === "major"
-                              ? "Major contributions: Significant code changes or new features"
-                              : type.value === "minor"
-                                ? "Minor contributions: Bug fixes or small improvements"
-                                : "Tiny contributions: Documentation updates or minor fixes"
-                          }
+                          content={CONTRIBUTION_TOOLTIPS[type.value]}
                         >
                           <div className={`text-sm ${type.colorClass}`}>
                             {type.emoji} {stats[type.value] || 0}

@@ -1,6 +1,7 @@
 import { type ContributorCardProps } from "../types/contributor"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
+import { CONTRIBUTION_TOOLTIPS, STATS_TOOLTIPS } from "../constants/tooltips"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 
@@ -38,13 +39,7 @@ export function ContributorCard({
             {Object.values(CONTRIBUTION_TYPES).map((type) => (
               <Tippy
                 key={type.value}
-                content={
-                  type.value === "major"
-                    ? "Major contributions: Significant code changes or new features"
-                    : type.value === "minor"
-                      ? "Minor contributions: Bug fixes or small improvements"
-                      : "Tiny contributions: Documentation updates or minor fixes"
-                }
+                content={CONTRIBUTION_TOOLTIPS[type.value]}
               >
                 <div className="flex items-center gap-1">
                   <span className={`font-medium ${type.colorClass}`}>
@@ -65,15 +60,7 @@ export function ContributorCard({
             <div key={stat.key} className="p-2.5">
               <div className="text-sm text-gray-500">{stat.label}</div>
               <div className="mt-1 font-medium flex items-center gap-1.5">
-                <Tippy
-                  content={
-                    stat.key === "pullRequests"
-                      ? "Merged PRs / Total PRs opened"
-                      : stat.key === "reviews"
-                        ? "Number of reviews received on PRs"
-                        : "Number of issues created"
-                  }
-                >
+                <Tippy content={STATS_TOOLTIPS[stat.key]}>
                   <span className="inline-flex">
                     <Icon className={`w-4 h-4 ${stat.iconColor}`} />
                   </span>
