@@ -1,4 +1,5 @@
 import type { AnalyzedPR, ContributorStats } from "lib/types"
+import { getContributorScore } from "./scoring"
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {
@@ -52,63 +53,53 @@ export async function generateMarkdown(
     "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
   markdown +=
     "|-------------|---------|---------|---------|-----|----------------|\n"
-  const impactWorth = { Major: 4, Minor: 2, Tiny: 1 }
-  const contributorEffort = prs.reduce(
+
+  // Group PRs by contributor
+  const prsByContributor = prs.reduce(
     (acc, pr) => {
       if (!acc[pr.contributor]) {
-        acc[pr.contributor] = { Major: 0, Minor: 0, Tiny: 0, score: 0 }
+        acc[pr.contributor] = []
       }
-      acc[pr.contributor][pr.impact]++
-      const impactScore = impactWorth[pr.impact as keyof typeof impactWorth]
-      if (!Number.isNaN(impactScore) && typeof impactScore === "number") {
-        acc[pr.contributor].score += impactScore
-      }
-
-      // Track number of issues created
-      acc[pr.contributor].issuesCreated =
-        contributorIdToStatsMap[pr.contributor]?.issuesCreated ?? 0 // Use fallback to 0
-
+      acc[pr.contributor].push(pr)
       return acc
     },
-    {} as Record<string, Record<string, number>>,
+    {} as Record<string, AnalyzedPR[]>,
   )
 
-  Object.entries(contributorEffort).forEach(([contributor, effort]) => {
-    const bountiedAmount =
-      contributorIdToStatsMap[contributor]?.bountiedIssuesTotal || 0
-    // Convert bounty amount to tiny contributions
-    // $1-10 = 1 tiny contribution, $10-20 = 2 tiny contributions etc.
-    let tinyContributionsFromBounties = Math.ceil(bountiedAmount / 10)
-    // Cap at 6 tiny contributions as a maximum for issues
-    tinyContributionsFromBounties = Math.min(tinyContributionsFromBounties, 6)
-    // Add to score (tiny contributions are worth 1 point each)
-    effort.score += tinyContributionsFromBounties
+  // Calculate scores for each contributor
+  const contributorScores: Record<string, any> = {}
 
-    // Use distinctPrsReviewed for scoring instead of raw review counts
-    const distinctPrsReviewed =
-      contributorIdToStatsMap[contributor]?.distinctPrsReviewed || 0
-    // Cap review points at 20, same as before
-    effort.score += Math.min(distinctPrsReviewed, 20)
+  Object.entries(prsByContributor).forEach(([contributor, contributorPRs]) => {
+    // Get contributor stats if they exist
+    const stats = contributorIdToStatsMap[contributor]
 
-    // Keep track of raw counts for display purposes only
-    const approvalsGiven =
-      contributorIdToStatsMap[contributor]?.approvalsGiven || 0
-    const rejectionsGiven =
-      contributorIdToStatsMap[contributor]?.rejectionsGiven || 0
-  })
+    // Calculate score
+    const scoreResult = getContributorScore(contributorPRs, stats)
 
-  const sortedContributors = Object.entries(contributorEffort).sort(
-    (a, b) => b[1].score - a[1].score,
-  )
-  for (const [contributor, effort] of sortedContributors) {
-    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.Major} | ${effort.Minor} | ${effort.Tiny} | ${scoreToStarString(effort.score)} | ${effort.issuesCreated} |\n`
+    // Store the result
+    contributorScores[contributor] = {
+      ...scoreResult,
+      issuesCreated: stats?.issuesCreated ?? 0,
+    }
 
     // Update the contributor's stats with the new score and counts
-    contributorIdToStatsMap[contributor].score = effort.score
-    contributorIdToStatsMap[contributor].major = effort.Major
-    contributorIdToStatsMap[contributor].minor = effort.Minor
-    contributorIdToStatsMap[contributor].tiny = effort.Tiny
-    contributorIdToStatsMap[contributor].stars = scoreToStarString(effort.score)
+    if (stats) {
+      stats.score = scoreResult.score
+      stats.major = scoreResult.major
+      stats.minor = scoreResult.minor
+      stats.tiny = scoreResult.tiny
+      stats.stars = scoreToStarString(scoreResult.score)
+    }
+  })
+
+  // Sort contributors by score
+  const sortedContributors = Object.entries(contributorScores).sort(
+    (a, b) => b[1].score - a[1].score,
+  )
+
+  // Generate table rows
+  for (const [contributor, effort] of sortedContributors) {
+    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.major} | ${effort.minor} | ${effort.tiny} | ${scoreToStarString(effort.score)} | ${effort.issuesCreated} |\n`
   }
   markdown += "\n"
 
@@ -219,16 +210,7 @@ export async function generateMarkdown(
 
   // Generate changes by contributor
   markdown += "## Changes by Contributor\n\n"
-  const prsByContributor = prs.reduce(
-    (acc, pr) => {
-      if (!acc[pr.contributor]) {
-        acc[pr.contributor] = []
-      }
-      acc[pr.contributor].push(pr)
-      return acc
-    },
-    {} as Record<string, AnalyzedPR[]>,
-  )
+  // Reuse prsByContributor from above
 
   Object.entries(prsByContributor).forEach(([contributor, contributorPRs]) => {
     markdown += `### [${contributor}](https://github.com/${contributor})\n\n`
