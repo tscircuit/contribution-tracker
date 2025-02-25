@@ -1,0 +1,36 @@
+name: Update Sponsorships CSV
+
+on:
+  schedule:
+    - cron: "0 19 * * *" # 7am PST (1 hour after contribution overview)
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  update-sponsorships:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Generate sponsorships CSV
+        run: bun scripts/generate-sponsorship-csv.ts
+        
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sponsorships
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update sponsorships CSV"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
