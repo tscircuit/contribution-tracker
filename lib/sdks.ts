@@ -1,5 +1,5 @@
-import { CachedAnthropic } from "./cachedAnthropic"
-import { CachedOctokit } from "./cachedOctokit"
+import { CachedAnthropic } from "lib/ai/cachedAnthropic"
+import { CachedOctokit } from "lib/data-retrieval/cachedOctokit"
 
 export const octokit = new CachedOctokit({ auth: process.env.GITHUB_TOKEN })
 export const anthropic = new CachedAnthropic({

@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/rest"
-import { getBountiedIssues } from "../lib/getBountiedIssues"
+import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 
 async function testFetchBountiedIssues() {
   // You'll need to set a GitHub token

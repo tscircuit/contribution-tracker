@@ -1,13 +1,13 @@
 import * as fs from "fs"
 import type { AnalyzedPR, ContributorStats } from "./lib/types"
 import { getRepos } from "./lib/getRepos"
-import { generateMarkdown } from "./lib/generateMarkdown"
+import { generateMarkdown } from "./lib/data-processing/generateMarkdown"
 import { getMergedPRs } from "./lib/getMergedPRs"
-import { getAllPRs } from "./lib/getAllPRs"
+import { getAllPRs } from "./lib/data-retrieval/getAllPRs"
 import { getBountiedIssues } from "./lib/getBountiedIssues"
 import { getIssuesCreated } from "./lib/getIssuesCreated"
 import { analyzePRWithClaude } from "./lib/analyzePRWithClaude"
-import { getLastWednesday } from "./lib/date-utils"
+import { getLastWednesday } from "./lib/ai/date-utils"
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
 

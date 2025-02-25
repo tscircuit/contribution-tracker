@@ -65,7 +65,7 @@ export function getContributorScore(
   // Use distinctPrsReviewed for scoring instead of raw review counts
   const distinctPrsReviewed = contributorStats.distinctPrsReviewed || 0
   // Cap review points at 20
-  result.score += Math.min(distinctPrsReviewed, 20)
+  result.score += Math.min(distinctPrsReviewed, 10)
 
   return result
 }

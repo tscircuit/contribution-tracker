@@ -1,7 +1,7 @@
 import * as fs from "fs"
 import * as path from "path"
 import axios from "redaxios"
-import { getRepos } from "../lib/getRepos"
+import { getRepos } from "lib/data-retrieval/getRepos"
 
 const repositories: string[] = await getRepos()
 

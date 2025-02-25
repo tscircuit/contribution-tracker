@@ -3,7 +3,7 @@ import type {
   PullRequestWithReviews,
   ReviewerStats,
   ContributorStats,
-} from "./types"
+} from "../types"
 
 export async function getAllPRs(
   repo: string,

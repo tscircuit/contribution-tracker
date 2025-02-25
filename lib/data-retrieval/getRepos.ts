@@ -1,4 +1,4 @@
-import { octokit } from "./sdks"
+import { octokit } from "lib/sdks"
 
 export async function getRepos(): Promise<string[]> {
   if (process.env.SHORT_REPO_LIST) {

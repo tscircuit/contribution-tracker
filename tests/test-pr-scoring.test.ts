@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import { generateMarkdown } from "../lib/generateMarkdown"
+import { generateMarkdown } from "../lib/data-processing/generateMarkdown"
 import type { ContributorStats, AnalyzedPR } from "../lib/types"
 
 const mockPRs: AnalyzedPR[] = [

@@ -1,5 +1,5 @@
 import type { AnalyzedPR, ContributorStats } from "lib/types"
-import { getContributorScore } from "./scoring"
+import { getContributorScore } from "../scoring"
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {

@@ -1,7 +1,7 @@
-import { anthropic } from "./sdks"
-import filterDiff from "./filterDiff"
+import { anthropic } from "lib/sdks"
+import filterDiff from "lib/ai/filterDiff"
 import type { MergedPullRequest } from "lib/types"
-import type { AnalyzedPR } from "./types"
+import type { AnalyzedPR } from "lib/types"
 
 export async function analyzePRWithClaude(
   pr: MergedPullRequest,
