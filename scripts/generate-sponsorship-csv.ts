@@ -1,6 +1,7 @@
 import fs from "node:fs"
 import path from "node:path"
 import { FULL_TIMERS } from "frontend/src/constants/contributors"
+import { getSponsorshipAmount } from "../lib/scoring"
 
 interface ContributorData {
   stars?: string
@@ -72,20 +73,9 @@ function calculateSponsorship(lastFourWeeks: WeeklyData[]): {
   return Array.from(sponsorships.entries())
     .map(([username, data]) => {
       const { weeklyStars, score } = data
-      const medianStars = [...weeklyStars].sort((a, b) => a - b)[
-        Math.floor(weeklyStars.length / 2)
-      ]
 
-      let amount = 0
-      if (medianStars >= 3) {
-        amount = 400
-      } else if (medianStars === 2) {
-        amount = 150
-      } else if (medianStars === 1) {
-        amount = 50
-      } else if (score > 3) {
-        amount = 5
-      }
+      // Use the getSponsorshipAmount function to calculate the amount
+      let amount = getSponsorshipAmount({ weeklyStars, highScore: score })
 
       return {
         username,
