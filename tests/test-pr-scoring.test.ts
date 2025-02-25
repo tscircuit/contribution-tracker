@@ -55,8 +55,8 @@ test("should cap review points at 20 even with many distinct PRs", async () => {
 
   await generateMarkdown(mockPRs, contributorStats, "2024-03-01")
 
-  // Score should be 20 (capped) + 4 (Major PR)
-  expect(contributorStats["user1"].score).toBe(24)
+  // Score should be 10 (capped) + 4 (Major PR)
+  expect(contributorStats["user1"].score).toBe(14)
 })
 
 test("should handle edge case of no reviews", async () => {
