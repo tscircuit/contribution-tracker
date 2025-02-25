@@ -1,5 +1,5 @@
 import { anthropic } from "lib/sdks"
-import filterDiff from "lib/ai/filterDiff"
+import filterDiff from "lib/data-processing/filterDiff"
 import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "lib/types"
 
