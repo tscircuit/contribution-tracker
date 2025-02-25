@@ -1,7 +1,7 @@
 import parseDiff from "parse-diff"
 
 export function filterDiff(diffContent: string): string {
-  const filesToExclude = ["package-lock.json", "bun.lockb"]
+  const filesToExclude = ["package-lock.json", "bun.lockb", "bun.lock"]
 
   // Parse the diff content
   const files = parseDiff(diffContent)
