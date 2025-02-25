@@ -76,15 +76,13 @@ export async function generateMarkdown(
   Object.entries(contributorEffort).forEach(([contributor, effort]) => {
     const bountiedAmount =
       contributorIdToStatsMap[contributor]?.bountiedIssuesTotal || 0
-    // Convert bounty amount to minor contributions ($10 = 1 minor contribution)
-    let minorContributionsFromBounties = Math.floor(bountiedAmount / 10)
-    // Cap at 10 minor contributions as per requirements
-    minorContributionsFromBounties = Math.min(
-      minorContributionsFromBounties,
-      10,
-    )
-    // Add to score (minor contributions are worth 2 points each)
-    effort.score += minorContributionsFromBounties * 2
+    // Convert bounty amount to tiny contributions
+    // $1-10 = 1 tiny contribution, $10-20 = 2 tiny contributions etc.
+    let tinyContributionsFromBounties = Math.ceil(bountiedAmount / 10)
+    // Cap at 6 tiny contributions as a maximum for issues
+    tinyContributionsFromBounties = Math.min(tinyContributionsFromBounties, 6)
+    // Add to score (tiny contributions are worth 1 point each)
+    effort.score += tinyContributionsFromBounties
 
     // Use distinctPrsReviewed for scoring instead of raw review counts
     const distinctPrsReviewed =
