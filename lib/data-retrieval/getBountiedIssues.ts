@@ -1,5 +1,4 @@
-import { octokit } from "./sdks"
-import { unescapeLeadingUnderscores } from "typescript"
+import { octokit } from "lib/sdks"
 
 // Function to extract bounty amount from the comment body
 function extractBountyAmountFromComment(commentBody: string): number {

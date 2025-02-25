@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import { getLastWednesday } from "../lib/date-utils"
+import { getLastWednesday } from "../lib/ai/date-utils"
 
 test("returns same date when current day is Wednesday", () => {
   const wednesday = new Date("2024-01-17") // A Wednesday

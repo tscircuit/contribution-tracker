@@ -1,7 +1,7 @@
-import { anthropic } from "./sdks"
-import filterDiff from "./filterDiff"
+import { anthropic } from "lib/sdks"
+import filterDiff from "lib/data-processing/filterDiff"
 import type { MergedPullRequest } from "lib/types"
-import type { AnalyzedPR } from "./types"
+import type { AnalyzedPR } from "lib/types"
 
 export async function analyzePRWithClaude(
   pr: MergedPullRequest,
@@ -13,9 +13,11 @@ export async function analyzePRWithClaude(
     // If not in cache, perform the analysis
     const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
 
-Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement.
-Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 100 lines of code changes. Adding a new symbol.
+Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
+Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 50 lines of code changes. Adding a new symbol. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
+
 Tiny Impact: Minor documentation changes, typo fixes, small cosmetic fixes, updates to dependencies.
+Also Tiny Impact: The PR has NO RELATION to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
 
 Title: ${pr.title}
 Body: ${pr.body}
