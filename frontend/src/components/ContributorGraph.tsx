@@ -11,6 +11,7 @@ import {
   ReferenceLine,
   Label,
 } from "recharts"
+import { useDarkMode } from "../hooks/useDarkMode.tsx"
 
 const DROPDOWN_MENU_ITEMS = [
   { key: "prsMerged", label: "Pull Requests Merged" },
@@ -37,6 +38,7 @@ const SCORE_LABELS = {
 
 export default function ContributorGraph({ username }: { username: string }) {
   const { last8WeeksData } = useContributorsData()
+  const { isDarkMode } = useDarkMode()
 
   // State for the selected metric
   const [selectedMetric, setSelectedMetric] = useState("prsMerged")
@@ -48,12 +50,14 @@ export default function ContributorGraph({ username }: { username: string }) {
   )
 
   return (
-    <div className="p-4 bg-white shadow-sm rounded-lg mb-2">
+    <div className="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg mb-2">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-2 sm:space-y-0 sm:space-x-4">
-        <h2 className="text-lg font-semibold">Contributor Activity</h2>
+        <h2 className="text-lg font-semibold dark:text-gray-200">
+          Contributor Activity
+        </h2>
         <div className="flex items-center space-x-4">
           <select
-            className="px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:border-blue-300"
+            className="px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
             value={selectedMetric}
             onChange={(e) => setSelectedMetric(e.target.value)}
           >
@@ -87,14 +91,24 @@ export default function ContributorGraph({ username }: { username: string }) {
             <Line
               type="monotone"
               dataKey={selectedMetric}
-              stroke="#007bff"
+              stroke={isDarkMode ? "#60a5fa" : "#007bff"}
               strokeWidth={3}
               dot={{ r: 3 }}
             />
-            <Tooltip />
-            <CartesianGrid stroke="#e0e0e0" />
-            <XAxis dataKey="date" />
-            <YAxis />
+            <Tooltip
+              contentStyle={
+                isDarkMode
+                  ? {
+                      backgroundColor: "#1f2937",
+                      color: "#f3f4f6",
+                      border: "1px solid #374151",
+                    }
+                  : undefined
+              }
+            />
+            <CartesianGrid stroke={isDarkMode ? "#374151" : "#e0e0e0"} />
+            <XAxis dataKey="date" stroke={isDarkMode ? "#9ca3af" : "#6b7280"} />
+            <YAxis stroke={isDarkMode ? "#9ca3af" : "#6b7280"} />
           </LineChart>
         </ResponsiveContainer>
       </div>

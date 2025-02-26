@@ -79,20 +79,20 @@ export function ContributorOverview({
 
           <div className="flex flex-col md:items-center flex-1 md:flex-initial">
             <div
-              className={`${nameSizes[size]} font-medium text-gray-900 mb-2`}
+              className={`${nameSizes[size]} font-medium text-gray-900 dark:text-gray-100 mb-2`}
             >
               <a
                 href={getProfileUrl(username)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black hover:text-blue-800"
+                className="text-black dark:text-white hover:text-blue-800 dark:hover:text-blue-300"
               >
                 {username}
               </a>
             </div>
             <div className="flex gap-1 text-yellow-400 mb-3">{stats.stars}</div>
 
-            <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm md:text-base text-gray-600 mb-3">
+            <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm md:text-base text-gray-600 dark:text-gray-400 mb-3">
               {STATS_CONFIG.map((stat) => {
                 const Icon = stat.icon
                 return (
@@ -146,13 +146,15 @@ export function ContributorOverview({
       <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12">
         {fullTimerContributors.length > 0 && (
           <div className="md:w-[14%]">
-            <h3 className="text-lg font-semibold mb-3">Full-time</h3>
+            <h3 className="text-lg font-semibold mb-3 dark:text-gray-200">
+              Full-time
+            </h3>
             <div className="space-y-2">
               {fullTimerContributors.map(([username, stats]) => (
                 <div
                   key={username}
                   onClick={() => onSelectContributor(username)}
-                  className="bg-white rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
                 >
                   <div className="flex flex-col">
                     <div className="flex items-center gap-3 sm:gap-3 mb-4">
@@ -164,12 +166,12 @@ export function ContributorOverview({
                         />
                       </div>
                       <div className="min-w-0">
-                        <div className="font-medium text-gray-900 truncate">
+                        <div className="font-medium text-gray-900 dark:text-gray-100 truncate">
                           <a
                             href={getProfileUrl(username)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-black hover:text-blue-800"
+                            className="text-black dark:text-white hover:text-blue-800 dark:hover:text-blue-300"
                           >
                             {username}
                           </a>
@@ -179,7 +181,7 @@ export function ContributorOverview({
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-xs text-gray-600 mb-1">
+                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-xs text-gray-600 dark:text-gray-400 mb-1">
                       {STATS_CONFIG.map((stat) => {
                         const Icon = stat.icon
                         return (
@@ -211,7 +213,7 @@ export function ContributorOverview({
         )}
 
         <div className="md:flex-grow">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl font-bold text-center mb-10 dark:text-gray-100">
             🏆 Top 3 Contributors 🏆
           </h2>
 
@@ -261,7 +263,7 @@ export function ContributorOverview({
         <div className="text-center mb-8">
           <button
             onClick={() => setShowAllContributors(!showAllContributors)}
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
           >
             {showAllContributors ? (
               <>
