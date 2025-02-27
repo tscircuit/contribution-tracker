@@ -7,8 +7,8 @@ export function ContributorCard({
   contributor,
 }: ContributorCardProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-      <div className="p-4 flex items-center gap-3 border-b border-gray-100 dark:border-gray-700">
+    <div className="bg-background-card dark:bg-background-card-dark rounded-lg shadow-sm overflow-hidden">
+      <div className="p-4 flex items-center gap-3 border-b border-border dark:border-border-dark">
         <div className="relative flex-shrink-0">
           <img
             src={getAvatarUrl(username)}
@@ -23,7 +23,7 @@ export function ContributorCard({
                 href={getProfileUrl(username)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                className="text-primary dark:text-primary-dark hover:text-blue-800 dark:hover:text-blue-300"
               >
                 {username}
               </a>
@@ -32,7 +32,7 @@ export function ContributorCard({
               {contributor.stars || ""}
             </div>
           </div>
-          <div className="mt-1 flex gap-3 text-sm text-gray-600 dark:text-gray-400">
+          <div className="mt-1 flex gap-3 text-sm text-text-secondary dark:text-secondary-dark">
             {Object.values(CONTRIBUTION_TYPES).map((type) => (
               <div key={type.value} className="flex items-center gap-1">
                 <span className={`font-medium ${type.colorClass}`}>
@@ -45,15 +45,15 @@ export function ContributorCard({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 divide-x divide-y divide-gray-100 dark:divide-gray-700 bg-gray-50/80 dark:bg-gray-800/80">
+      <div className="grid grid-cols-2 divide-x divide-y divide-border dark:divide-border-dark bg-gray-50/80 dark:bg-background-card-dark/80">
         {STATS_CONFIG.map((stat) => {
           const Icon = stat.icon
           return (
             <div key={stat.key} className="p-2.5">
-              <div className="text-sm text-gray-500 dark:text-gray-400">
+              <div className="text-sm text-text-secondary dark:text-text-secondary-dark">
                 {stat.label}
               </div>
-              <div className="mt-1 font-medium flex items-center gap-1.5 dark:text-gray-300">
+              <div className="mt-1 font-medium flex items-center gap-1.5 text-text dark:text-text-dark">
                 <Icon className={`w-4 h-4 ${stat.iconColor}`} />
                 <span>{stat.getValue(contributor)}</span>
               </div>
