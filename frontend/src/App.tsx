@@ -16,7 +16,20 @@ function App() {
     sortedContributors,
     setSelectedContributor,
     setIsModalOpen,
+    loading,
   } = useContributorsData()
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <div className="w-48">
+          <div className="loading">
+            <div className="loading-bar"></div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className={`min-h-screen ${BG_DEFAULT} ${TRANSITION_COLORS}`}>

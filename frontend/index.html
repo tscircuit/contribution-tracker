@@ -41,9 +41,113 @@
         }
       }
     </script>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Loader Styles */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .dark .loading-overlay {
+      background: rgba(17, 24, 39, 0.7);
+    }
+
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+    }
+
+    .loading {
+      background-color: lightgrey;
+      height: 2px;
+      overflow: hidden;
+      position: relative;
+      width: 12em;
+      border-radius: 2px;
+    }
+
+    .dark .loading {
+      background-color: #4b5563;
+    }
+
+    .loading-bar {
+      animation: side2side 2s ease-in-out infinite;
+      background-color: dodgerblue;
+      height: 100%;
+      position: absolute;
+      width: 45%;
+    }
+
+    @keyframes side2side {
+      0%, 100% {
+        transform: translateX(-50%);
+      }
+      50% {
+        transform: translateX(150%);
+      }
+    }
+  </style>
+
+  <script>
+    // Check for dark mode preference
+    function setInitialTheme() {
+      const savedTheme = localStorage.getItem("darkMode");
+      if (savedTheme === "true" || 
+          (savedTheme === null && 
+           window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      }
+    }
+    
+    // Set theme immediately to avoid flash
+    setInitialTheme();
+    
+    window.onload = function() {
+      const loader = document.getElementById("loader")
+      const root = document.getElementById("root")
+
+      loader.style.transition = "opacity 0.3s ease"
+      loader.style.opacity = "0"
+      setTimeout(function() {
+        loader.style.display = "none"
+        root.style.visibility = "visible"
+      }, 300)
+    }
+  </script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <div class="loaderanimation">
+    <div id="loader" class="loading-overlay">
+      <div class="loading-container">
+        <div class="loading">
+          <div class="loading-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="root" class="loaderanimation" style="visibility: hidden;"></div>
+  <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

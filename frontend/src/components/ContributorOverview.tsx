@@ -8,6 +8,7 @@ import {
 import { ContributorCard } from "./ContributorCard"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
+import { CONTRIBUTION_TOOLTIPS, STATS_TOOLTIPS } from "../constants/tooltips"
 import { FULL_TIMERS } from "../constants/contributors"
 import {
   BG_CARD,
@@ -17,7 +18,10 @@ import {
   TEXT_PRIMARY,
   TEXT_SECONDARY,
   TRANSITION_COLORS,
+  BORDER_DEFAULT,
 } from "../constants/tailwind-utils"
+import Tippy from "@tippyjs/react"
+import "tippy.js/dist/tippy.css"
 
 export function ContributorOverview({
   contributors,
@@ -108,7 +112,11 @@ export function ContributorOverview({
                 const Icon = stat.icon
                 return (
                   <div key={stat.key} className="flex items-center gap-1.5">
-                    <Icon className="w-5 h-5" />
+                    <Tippy content={STATS_TOOLTIPS[stat.key]}>
+                      <span className="inline-flex">
+                        <Icon className="w-5 h-5" />
+                      </span>
+                    </Tippy>
                     <span>{stat.getValue(stats)}</span>
                   </div>
                 )
@@ -117,12 +125,14 @@ export function ContributorOverview({
 
             <div className="flex flex-wrap gap-x-4 gap-y-1.5 items-center">
               {Object.values(CONTRIBUTION_TYPES).map((type) => (
-                <div
+                <Tippy
                   key={type.value}
-                  className={`font-medium ${type.colorClass} md:text-lg`}
+                  content={CONTRIBUTION_TOOLTIPS[type.value]}
                 >
-                  {type.emoji} {stats[type.value] || 0}
-                </div>
+                  <div className={`font-medium ${type.colorClass} md:text-lg`}>
+                    {type.emoji} {stats[type.value] || 0}
+                  </div>
+                </Tippy>
               ))}
             </div>
           </div>
@@ -165,7 +175,7 @@ export function ContributorOverview({
                 <div
                   key={username}
                   onClick={() => onSelectContributor(username)}
-                  className={`${BG_CARD} rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md ${TRANSITION_COLORS}`}
+                  className={`${BG_CARD} rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md ${BG_CARD_HOVER} ${TRANSITION_COLORS}`}
                 >
                   <div className="flex flex-col">
                     <div className="flex items-center gap-3 sm:gap-3 mb-4">
@@ -202,7 +212,11 @@ export function ContributorOverview({
                             key={stat.key}
                             className="flex items-center gap-0.5"
                           >
-                            <Icon className="w-4 h-4" />
+                            <Tippy content={STATS_TOOLTIPS[stat.key]}>
+                              <span className="inline-flex">
+                                <Icon className="w-4 h-4" />
+                              </span>
+                            </Tippy>
                             <span>{stat.getValue(stats)}</span>
                           </div>
                         )
@@ -210,12 +224,14 @@ export function ContributorOverview({
                     </div>
                     <div className="flex flex-wrap gap-x-1.5 gap-y-0.5 items-center mt-1">
                       {Object.values(CONTRIBUTION_TYPES).map((type) => (
-                        <div
+                        <Tippy
                           key={type.value}
-                          className={`text-sm ${type.colorClass}`}
+                          content={CONTRIBUTION_TOOLTIPS[type.value]}
                         >
-                          {type.emoji} {stats[type.value] || 0}
-                        </div>
+                          <div className={`text-sm ${type.colorClass}`}>
+                            {type.emoji} {stats[type.value] || 0}
+                          </div>
+                        </Tippy>
                       ))}
                     </div>
                   </div>
