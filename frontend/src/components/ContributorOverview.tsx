@@ -9,6 +9,15 @@ import { ContributorCard } from "./ContributorCard"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
 import { FULL_TIMERS } from "../constants/contributors"
+import {
+  BG_CARD,
+  BG_CARD_HOVER,
+  BUTTON_SECONDARY,
+  LINK_PRIMARY,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+  TRANSITION_COLORS,
+} from "../constants/tailwind-utils"
 
 export function ContributorOverview({
   contributors,
@@ -79,20 +88,22 @@ export function ContributorOverview({
 
           <div className="flex flex-col md:items-center flex-1 md:flex-initial">
             <div
-              className={`${nameSizes[size]} font-medium text-gray-900 dark:text-gray-100 mb-2`}
+              className={`${nameSizes[size]} font-medium ${TEXT_PRIMARY} mb-2`}
             >
               <a
                 href={getProfileUrl(username)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black dark:text-white hover:text-blue-800 dark:hover:text-blue-300"
+                className={LINK_PRIMARY}
               >
                 {username}
               </a>
             </div>
             <div className="flex gap-1 text-yellow-400 mb-3">{stats.stars}</div>
 
-            <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm md:text-base text-gray-600 dark:text-gray-400 mb-3">
+            <div
+              className={`flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm md:text-base ${TEXT_SECONDARY} mb-3`}
+            >
               {STATS_CONFIG.map((stat) => {
                 const Icon = stat.icon
                 return (
@@ -146,7 +157,7 @@ export function ContributorOverview({
       <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12">
         {fullTimerContributors.length > 0 && (
           <div className="md:w-[14%]">
-            <h3 className="text-lg font-semibold mb-3 dark:text-gray-200">
+            <h3 className={`text-lg font-semibold mb-3 ${TEXT_PRIMARY}`}>
               Full-time
             </h3>
             <div className="space-y-2">
@@ -154,7 +165,7 @@ export function ContributorOverview({
                 <div
                   key={username}
                   onClick={() => onSelectContributor(username)}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
+                  className={`${BG_CARD} rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md ${TRANSITION_COLORS}`}
                 >
                   <div className="flex flex-col">
                     <div className="flex items-center gap-3 sm:gap-3 mb-4">
@@ -166,12 +177,12 @@ export function ContributorOverview({
                         />
                       </div>
                       <div className="min-w-0">
-                        <div className="font-medium text-gray-900 dark:text-gray-100 truncate">
+                        <div className={`font-medium ${TEXT_PRIMARY} truncate`}>
                           <a
                             href={getProfileUrl(username)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-black dark:text-white hover:text-blue-800 dark:hover:text-blue-300"
+                            className={LINK_PRIMARY}
                           >
                             {username}
                           </a>
@@ -181,7 +192,9 @@ export function ContributorOverview({
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-xs text-gray-600 dark:text-gray-400 mb-1">
+                    <div
+                      className={`flex flex-wrap gap-x-3 gap-y-2 text-xs ${TEXT_SECONDARY} mb-1`}
+                    >
                       {STATS_CONFIG.map((stat) => {
                         const Icon = stat.icon
                         return (
@@ -213,7 +226,9 @@ export function ContributorOverview({
         )}
 
         <div className="md:flex-grow">
-          <h2 className="text-3xl font-bold text-center mb-10 dark:text-gray-100">
+          <h2
+            className={`text-3xl font-bold text-center mb-10 ${TEXT_PRIMARY}`}
+          >
             🏆 Top 3 Contributors 🏆
           </h2>
 
@@ -263,7 +278,7 @@ export function ContributorOverview({
         <div className="text-center mb-8">
           <button
             onClick={() => setShowAllContributors(!showAllContributors)}
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
+            className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium ${BUTTON_SECONDARY}`}
           >
             {showAllContributors ? (
               <>

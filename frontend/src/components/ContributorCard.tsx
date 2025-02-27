@@ -1,14 +1,22 @@
 import { type ContributorCardProps } from "../types/contributor"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
+import {
+  BG_CARD,
+  BORDER_DEFAULT,
+  BORDER_DIVIDER,
+  LINK_PRIMARY,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from "../constants/tailwind-utils"
 
 export function ContributorCard({
   username,
   contributor,
 }: ContributorCardProps) {
   return (
-    <div className="bg-background-card dark:bg-background-card-dark rounded-lg shadow-sm overflow-hidden">
-      <div className="p-4 flex items-center gap-3 border-b border-border dark:border-border-dark">
+    <div className={`${BG_CARD} rounded-lg shadow-sm overflow-hidden`}>
+      <div className={`p-4 flex items-center gap-3 border-b ${BORDER_DEFAULT}`}>
         <div className="relative flex-shrink-0">
           <img
             src={getAvatarUrl(username)}
@@ -23,7 +31,7 @@ export function ContributorCard({
                 href={getProfileUrl(username)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary dark:text-primary-dark hover:text-blue-800 dark:hover:text-blue-300"
+                className={LINK_PRIMARY}
               >
                 {username}
               </a>
@@ -32,7 +40,7 @@ export function ContributorCard({
               {contributor.stars || ""}
             </div>
           </div>
-          <div className="mt-1 flex gap-3 text-sm text-text-secondary dark:text-secondary-dark">
+          <div className={`mt-1 flex gap-3 text-sm ${TEXT_SECONDARY}`}>
             {Object.values(CONTRIBUTION_TYPES).map((type) => (
               <div key={type.value} className="flex items-center gap-1">
                 <span className={`font-medium ${type.colorClass}`}>
@@ -45,15 +53,17 @@ export function ContributorCard({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 divide-x divide-y divide-border dark:divide-border-dark bg-gray-50/80 dark:bg-background-card-dark/80">
+      <div
+        className={`grid grid-cols-2 ${BORDER_DIVIDER} bg-gray-50/80 dark:bg-background-card-dark/80`}
+      >
         {STATS_CONFIG.map((stat) => {
           const Icon = stat.icon
           return (
             <div key={stat.key} className="p-2.5">
-              <div className="text-sm text-text-secondary dark:text-text-secondary-dark">
-                {stat.label}
-              </div>
-              <div className="mt-1 font-medium flex items-center gap-1.5 text-text dark:text-text-dark">
+              <div className={`text-sm ${TEXT_SECONDARY}`}>{stat.label}</div>
+              <div
+                className={`mt-1 font-medium flex items-center gap-1.5 ${TEXT_PRIMARY}`}
+              >
                 <Icon className={`w-4 h-4 ${stat.iconColor}`} />
                 <span>{stat.getValue(contributor)}</span>
               </div>

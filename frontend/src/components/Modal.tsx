@@ -1,4 +1,10 @@
 import { X } from "lucide-react"
+import {
+  BG_CARD,
+  BORDER_DEFAULT,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from "../constants/tailwind-utils"
 
 interface ModalProps {
   isOpen: boolean
@@ -20,16 +26,20 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
         />
 
         {/* Modal panel */}
-        <div className="relative transform overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-xl transition-all w-full max-w-4xl">
-          <div className="bg-white dark:bg-gray-800">
+        <div
+          className={`relative transform overflow-hidden rounded-lg ${BG_CARD} shadow-xl transition-all w-full max-w-4xl`}
+        >
+          <div className={BG_CARD}>
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-6 py-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+            <div
+              className={`flex items-center justify-between border-b ${BORDER_DEFAULT} px-6 py-4`}
+            >
+              <h3 className={`text-lg font-semibold ${TEXT_PRIMARY}`}>
                 {title}
               </h3>
               <button
                 type="button"
-                className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400"
+                className={`${TEXT_SECONDARY} hover:text-gray-500 dark:hover:text-gray-400`}
                 onClick={onClose}
               >
                 <X className="h-6 w-6" />

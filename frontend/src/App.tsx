@@ -5,6 +5,7 @@ import { PRsByRepository } from "./components/PRsByRepository"
 import { Modal } from "./components/Modal"
 import { useContributorsData } from "./hooks/useContributorsData"
 import ContributorGraph from "./components/ContributorGraph"
+import { BG_DEFAULT, TRANSITION_COLORS } from "./constants/tailwind-utils"
 
 function App() {
   const {
@@ -18,7 +19,7 @@ function App() {
   } = useContributorsData()
 
   return (
-    <div className="min-h-screen bg-background dark:bg-background-dark text-text dark:text-text-dark transition-colors duration-200">
+    <div className={`min-h-screen ${BG_DEFAULT} ${TRANSITION_COLORS}`}>
       <div className="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 space-y-8">
         <Header dateUsed={dateUsed} />
 

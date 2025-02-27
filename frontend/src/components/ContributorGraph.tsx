@@ -12,6 +12,11 @@ import {
   Label,
 } from "recharts"
 import { useDarkMode } from "../hooks/useDarkMode.tsx"
+import {
+  BG_CARD,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from "../constants/tailwind-utils"
 
 const DROPDOWN_MENU_ITEMS = [
   { key: "prsMerged", label: "Pull Requests Merged" },
@@ -50,14 +55,14 @@ export default function ContributorGraph({ username }: { username: string }) {
   )
 
   return (
-    <div className="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg mb-2">
+    <div className={`p-4 ${BG_CARD} shadow-sm rounded-lg mb-2`}>
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-2 sm:space-y-0 sm:space-x-4">
-        <h2 className="text-lg font-semibold dark:text-gray-200">
+        <h2 className={`text-lg font-semibold ${TEXT_PRIMARY}`}>
           Contributor Activity
         </h2>
         <div className="flex items-center space-x-4">
           <select
-            className="px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+            className={`px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 ${TEXT_PRIMARY}`}
             value={selectedMetric}
             onChange={(e) => setSelectedMetric(e.target.value)}
           >

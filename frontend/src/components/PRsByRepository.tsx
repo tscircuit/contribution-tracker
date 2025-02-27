@@ -1,5 +1,13 @@
 import { type RepoData } from "../types/contributor"
 import { getProfileUrl } from "../constants/github"
+import {
+  BG_CARD,
+  BG_CARD_HOVER,
+  BORDER_DEFAULT,
+  LINK_PRIMARY,
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+} from "../constants/tailwind-utils"
 
 interface PRsByRepositoryProps {
   repositories: RepoData[]
@@ -21,7 +29,7 @@ export function PRsByRepository({
 
   if (filteredRepositories.length === 0) {
     return (
-      <div className="text-center text-gray-500 dark:text-gray-400 py-4">
+      <div className={`text-center ${TEXT_SECONDARY} py-4`}>
         No PRs found {selectedContributor ? `for ${selectedContributor}` : ""}
       </div>
     )
@@ -30,7 +38,7 @@ export function PRsByRepository({
   return (
     <div className={selectedContributor ? "" : "mb-12"}>
       {!selectedContributor && (
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+        <h2 className={`text-2xl font-bold ${TEXT_PRIMARY} mb-4`}>
           PRs by Repository
         </h2>
       )}
@@ -39,15 +47,15 @@ export function PRsByRepository({
         {filteredRepositories.map((repo) => (
           <div
             key={repo.name}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden"
+            className={`${BG_CARD} rounded-lg shadow-sm overflow-hidden`}
           >
-            <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+            <div className={`px-4 py-3 border-b ${BORDER_DEFAULT}`}>
+              <h3 className={`text-lg font-semibold ${TEXT_PRIMARY}`}>
                 <a
                   href={`https://github.com/${repo.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                  className={LINK_PRIMARY}
                 >
                   {repo.name}
                 </a>
@@ -55,37 +63,42 @@ export function PRsByRepository({
             </div>
 
             <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+              <table className={`min-w-full divide-y ${BORDER_DEFAULT}`}>
                 <thead className="bg-gray-50 dark:bg-gray-700">
                   <tr>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider w-20">
+                    <th
+                      className={`px-3 py-2 text-left text-xs font-medium ${TEXT_SECONDARY} uppercase tracking-wider w-20`}
+                    >
                       PR
                     </th>
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider w-24">
+                    <th
+                      className={`px-3 py-2 text-left text-xs font-medium ${TEXT_SECONDARY} uppercase tracking-wider w-24`}
+                    >
                       Impact
                     </th>
                     {!selectedContributor && (
-                      <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider w-32">
+                      <th
+                        className={`px-3 py-2 text-left text-xs font-medium ${TEXT_SECONDARY} uppercase tracking-wider w-32`}
+                      >
                         By
                       </th>
                     )}
-                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    <th
+                      className={`px-3 py-2 text-left text-xs font-medium ${TEXT_SECONDARY} uppercase tracking-wider`}
+                    >
                       Description
                     </th>
                   </tr>
                 </thead>
-                <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                <tbody className={`${BG_CARD} divide-y ${BORDER_DEFAULT}`}>
                   {repo.prs.map((pr) => (
-                    <tr
-                      key={pr.number}
-                      className="hover:bg-gray-50 dark:hover:bg-gray-700"
-                    >
+                    <tr key={pr.number} className={BG_CARD_HOVER}>
                       <td className="px-3 py-2 whitespace-nowrap text-sm">
                         <a
                           href={pr.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                          className={LINK_PRIMARY}
                         >
                           #{pr.number}
                         </a>
@@ -99,13 +112,15 @@ export function PRsByRepository({
                             href={getProfileUrl(pr.contributor)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                            className={LINK_PRIMARY}
                           >
                             {pr.contributor}
                           </a>
                         </td>
                       )}
-                      <td className="px-3 py-2 text-sm text-gray-900 dark:text-gray-300 break-words">
+                      <td
+                        className={`px-3 py-2 text-sm ${TEXT_PRIMARY} break-words`}
+                      >
                         {pr.description}
                       </td>
                     </tr>
