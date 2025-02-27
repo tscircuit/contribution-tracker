@@ -4,6 +4,7 @@ import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
 import { CONTRIBUTION_TOOLTIPS, STATS_TOOLTIPS } from "../constants/tooltips"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
+
 import {
   BG_CARD,
   BORDER_DEFAULT,
