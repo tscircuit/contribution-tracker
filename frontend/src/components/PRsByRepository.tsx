@@ -63,7 +63,7 @@ export function PRsByRepository({
             </div>
 
             <div className="overflow-x-auto">
-              <table className={`min-w-full divide-y ${BORDER_DEFAULT}`}>
+              <table className="min-w-full">
                 <thead className="bg-gray-50 dark:bg-gray-700">
                   <tr>
                     <th
@@ -90,9 +90,12 @@ export function PRsByRepository({
                     </th>
                   </tr>
                 </thead>
-                <tbody className={`${BG_CARD} divide-y ${BORDER_DEFAULT}`}>
-                  {repo.prs.map((pr) => (
-                    <tr key={pr.number} className={BG_CARD_HOVER}>
+                <tbody>
+                  {repo.prs.map((pr, index) => (
+                    <tr
+                      key={pr.number}
+                      className={`${BG_CARD_HOVER} ${index !== repo.prs.length - 1 ? "border-b border-gray-100 dark:border-gray-700" : ""}`}
+                    >
                       <td className="px-3 py-2 whitespace-nowrap text-sm">
                         <a
                           href={pr.url}
@@ -103,7 +106,9 @@ export function PRsByRepository({
                           #{pr.number}
                         </a>
                       </td>
-                      <td className="px-3 py-2 whitespace-nowrap text-sm">
+                      <td
+                        className={`px-3 py-2 whitespace-nowrap text-sm ${TEXT_PRIMARY}`}
+                      >
                         {pr.impact}
                       </td>
                       {!selectedContributor && (
