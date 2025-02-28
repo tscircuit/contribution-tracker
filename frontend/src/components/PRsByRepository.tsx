@@ -64,6 +64,9 @@ export function PRsByRepository({
                     <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-24">
                       Impact
                     </th>
+                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">
+                      Milestone Alignment
+                    </th>
                     {!selectedContributor && (
                       <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">
                         By
@@ -89,6 +92,9 @@ export function PRsByRepository({
                       </td>
                       <td className="px-3 py-2 whitespace-nowrap text-sm">
                         {pr.impact}
+                      </td>
+                      <td className="px-3 py-2 whitespace-nowrap text-sm">
+                        {pr.milestoneAlignment ? "Yes" : "No"}
                       </td>
                       {!selectedContributor && (
                         <td className="px-3 py-2 whitespace-nowrap text-sm">

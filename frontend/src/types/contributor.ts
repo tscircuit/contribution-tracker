@@ -45,6 +45,7 @@ export interface PR {
   impact: ImpactType
   contributor: string
   description: string
+  milestoneAlignment: boolean
   url: string
 }
 

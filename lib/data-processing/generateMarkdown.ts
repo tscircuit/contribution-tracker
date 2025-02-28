@@ -119,6 +119,8 @@ export async function generateMarkdown(
       "Number of issues this contributor created with a bounty",
     "Bountied Issue $":
       "Total bounty amount placed on issues authored by this contributor",
+    "Milestone Alignment":
+      "Number of PRs that align with the milestone for this contributor",
   }
 
   markdown += Object.entries(columnTitleToDescription)
@@ -190,8 +192,10 @@ export async function generateMarkdown(
 
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
-    markdown += "| PR # | Impact | Contributor | Description |\n"
-    markdown += "|------|--------|-------------|-------------|\n"
+    markdown +=
+      "| PR # | Impact | Contributor | Description | Milestone Alignment |\n"
+    markdown +=
+      "|------|--------|-------------|-------------|---------------------|\n"
     repoPRs
       .sort((a, b) => {
         const impactOrder = { Major: 0, Minor: 1, Tiny: 2 }
@@ -203,7 +207,7 @@ export async function generateMarkdown(
       .forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
           pr.impact,
-        )} | ${pr.contributor} | ${pr.description} |\n`
+        )} | ${pr.contributor} | ${pr.description} | ${pr.milestoneAlignment ? "Yes" : "No"} |\n`
       })
     markdown += "\n"
   })
