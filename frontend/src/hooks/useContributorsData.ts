@@ -98,8 +98,9 @@ export function useContributorsData(): UseContributorsDataReturn {
 
           // Match PR rows in tables
           const prMatch = line.match(
-            /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \| (Yes|No) \|/,
+            /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \|/,
           )
+          
           if (prMatch && currentRepo) {
             repoStats[currentRepo] = (repoStats[currentRepo] || 0) + 1
             currentPRs.push({
