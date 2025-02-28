@@ -5,6 +5,8 @@ import { PRsByRepository } from "./components/PRsByRepository"
 import { Modal } from "./components/Modal"
 import { useContributorsData } from "./hooks/useContributorsData"
 import ContributorGraph from "./components/ContributorGraph"
+import PRsByRepositoryPieChart from "./components/PRsByRepositoryPieChart"
+import PRsByContributorPieChart from "./components/PRsByContributorPieChart"
 
 function App() {
   const {
@@ -44,6 +46,8 @@ function App() {
         />
 
         <PRsByRepository repositories={repoDetails} />
+        <PRsByRepositoryPieChart repositories={repoDetails} />
+        <PRsByContributorPieChart contributors={sortedContributors} />
 
         <Modal
           isOpen={isModalOpen}
