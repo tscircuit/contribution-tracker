@@ -2,7 +2,7 @@ name: Sync Discord Roles
 
 on:
   schedule:
-    - cron: "0 15 * * 3" # Runs every Monday at 6 AM PST
+    - cron: "0 15 * * 3" # Runs every Wednesday (3 hours before contribution-overview)
   workflow_dispatch: # Allow manual triggering
 
 jobs:
