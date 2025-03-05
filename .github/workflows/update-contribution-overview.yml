@@ -35,8 +35,6 @@ jobs:
           
       - name: Commit changes
         run: |
-          ls
-          exit 0
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add contribution-overviews
@@ -44,7 +42,6 @@ jobs:
           git diff --quiet && git diff --staged --quiet || git commit -m "Update contribution overviews"
 
       - name: Push changes
-        if: false
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
