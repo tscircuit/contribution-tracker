@@ -73,10 +73,9 @@ export class CachedAnthropic {
       }
 
       const cached = await this.getCached<MessageResponse>(params)
-      console.log("cache", cached)
       if (cached) return cached
 
-      const response = { message: [{ content: "Impact: Major" }] } // await this.client.messages.create(params, options)
+      const response = await this.client.messages.create(params, options)
       await this.setCached(params, response)
       return response
     },
