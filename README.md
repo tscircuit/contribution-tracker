@@ -23,6 +23,7 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
+    "tscircuit/jlcsearch" : 2
     "tscircuit/contribution-tracker" : 1
     "tscircuit/tscircuit.com" : 1
     "tscircuit/capacity-autorouter" : 1
@@ -32,9 +33,9 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |
 |-------------|---------|---------|---------|-----|----------------|
-| [seveibar](#seveibar) | 1 | 0 | 0 | ⭐ | 5 |
-| [imrishabh18](#imrishabh18) | 1 | 0 | 0 | ⭐ | 1 |
-| [ArnavK-09](#ArnavK-09) | 0 | 1 | 0 |  | 0 |
+| [seveibar](#seveibar) | 1 | 0 | 0 | ⭐ | 8 |
+| [ArnavK-09](#ArnavK-09) | 1 | 1 | 1 | ⭐ | 0 |
+| [imrishabh18](#imrishabh18) | 1 | 0 | 0 | ⭐ | 2 |
 
 ## Review Table
 
@@ -48,14 +49,24 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 0 | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 2 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 2 | 0 | 1 | 1 | 5 | 5 | 98 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 4 | 0 | 4 | 1 | 8 | 6 | 106 |
 | [techmannih](#techmannih) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 1 | 5 |
-| [ArnavK-09](#ArnavK-09) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 2 | 2 | 0 | 0 | 0 | 3 | 3 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 1 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 1 | 5 |
 | [kom-senapati](#kom-senapati) | 4 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
+| [PatanSharuKhan](#PatanSharuKhan) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 
 ## Changes by Repository
+
+### [tscircuit/jlcsearch](https://github.com/tscircuit/jlcsearch)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#36](https://github.com/tscircuit/jlcsearch/pull/36) | 🐳 Major | ArnavK-09 | Introduces a new API endpoint `/api/search` for searching components with support for full-text search, filtering by package, and limiting the number of results. |
+| [#39](https://github.com/tscircuit/jlcsearch/pull/39) | 🐌 Tiny | ArnavK-09 | Removes a surplus log statement from a search API test. |
 
 ### [tscircuit/contribution-tracker](https://github.com/tscircuit/contribution-tracker)
 
@@ -81,7 +92,9 @@ pie
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#36](https://github.com/tscircuit/jlcsearch/pull/36) | 🐳 Major | Introduces a new API endpoint `/api/search` for searching components with support for full-text search, filtering by package, and limiting the number of results. |
 | [#97](https://github.com/tscircuit/contribution-tracker/pull/97) | 🐙 Minor | Upload the Anthropic cache to GitHub Actions |
+| [#39](https://github.com/tscircuit/jlcsearch/pull/39) | 🐌 Tiny | Removes a surplus log statement from a search API test. |
 
 ### [imrishabh18](https://github.com/imrishabh18)
 
