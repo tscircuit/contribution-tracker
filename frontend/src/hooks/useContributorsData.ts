@@ -100,6 +100,7 @@ export function useContributorsData(): UseContributorsDataReturn {
           const prMatch = line.match(
             /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \|/,
           )
+
           if (prMatch && currentRepo) {
             repoStats[currentRepo] = (repoStats[currentRepo] || 0) + 1
             currentPRs.push({
@@ -107,6 +108,7 @@ export function useContributorsData(): UseContributorsDataReturn {
               impact: prMatch[2] as PR["impact"],
               contributor: prMatch[3],
               description: prMatch[4],
+              milestoneAlignment: prMatch[5] === "Yes",
               url: getPullRequestUrl(currentRepo, parseInt(prMatch[1])),
             })
           }
