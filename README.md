@@ -23,10 +23,11 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
+    "tscircuit/tscircuit.com" : 2
+    "tscircuit/circuit-json" : 1
+    "tscircuit/core" : 2
     "tscircuit/footprinter" : 1
     "tscircuit/capacity-autorouter" : 4
-    "tscircuit/core" : 2
-    "tscircuit/tscircuit.com" : 2
     "tscircuit/jlcsearch" : 2
     "tscircuit/contribution-tracker" : 1
     "tscircuit/circuit-to-svg" : 1
@@ -37,8 +38,8 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |
 |-------------|---------|---------|---------|-----|----------------|
-| [seveibar](#seveibar) | 4 | 1 | 0 | ⭐⭐ | 17 |
-| [imrishabh18](#imrishabh18) | 1 | 2 | 0 | ⭐⭐ | 8 |
+| [seveibar](#seveibar) | 4 | 1 | 0 | ⭐⭐ | 19 |
+| [imrishabh18](#imrishabh18) | 1 | 3 | 0 | ⭐⭐ | 8 |
 | [ArnavK-09](#ArnavK-09) | 1 | 1 | 1 | ⭐ | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 0 | 1 | 0 |  | 1 |
 | [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 |  | 2 |
@@ -56,12 +57,14 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 5 | 2 | 0 | 2 | 1 | 5 | 3 | 8 | 4 | 25 |
-| [Rishikesh63](#Rishikesh63) | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
-| [techmannih](#techmannih) | 1 | 0 | 1 | 1 | 1 | 7 | 0 | 5 | 1 | 5 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 0 | 0 | 0 | 0 | 2 | 0 | 1 | 1 | 10 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 7 | 1 | 8 | 5 | 19 | 13 | 232 |
+| [imrishabh18](#imrishabh18) | 5 | 2 | 0 | 2 | 1 | 6 | 4 | 8 | 4 | 25 |
 | [MustafaMulla29](#MustafaMulla29) | 6 | 2 | 0 | 0 | 0 | 3 | 1 | 2 | 0 | 0 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 7 | 1 | 7 | 5 | 17 | 11 | 192 |
+| [techmannih](#techmannih) | 1 | 0 | 1 | 1 | 1 | 7 | 0 | 5 | 1 | 5 |
+| [Rishikesh63](#Rishikesh63) | 2 | 0 | 1 | 0 | 0 | 2 | 0 | 1 | 0 | 0 |
+| [Husainj](#Husainj) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [Anshgrover23](#Anshgrover23) | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 2 | 1 | 5 |
 | [Ayushjhawar8](#Ayushjhawar8) | 4 | 3 | 0 | 0 | 0 | 2 | 1 | 1 | 1 | 10 |
 | [ArnavK-09](#ArnavK-09) | 2 | 2 | 0 | 0 | 0 | 3 | 3 | 0 | 0 | 0 |
 | [PatanSharuKhan](#PatanSharuKhan) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
@@ -69,6 +72,26 @@ pie
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
 
 ## Changes by Repository
+
+### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#714](https://github.com/tscircuit/tscircuit.com/pull/714) | 🐳 Major | imrishabh18 | Adds a new `/update` endpoint to the package fake API that allows updating existing packages, including privacy settings. |
+| [#718](https://github.com/tscircuit/tscircuit.com/pull/718) | 🐙 Minor | imrishabh18 | Adds the support for users to have private snippets. |
+
+### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#161](https://github.com/tscircuit/circuit-json/pull/161) | 🐙 Minor | imrishabh18 | Add `min_trace_thickness` property to `source_trace` object |
+
+### [tscircuit/core](https://github.com/tscircuit/core)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#691](https://github.com/tscircuit/core/pull/691) | 🐙 Minor | imrishabh18 | Fix a hover bug for traces by setting the `source_trace_id` property of the `pcb_trace` object. |
+| [#692](https://github.com/tscircuit/core/pull/692) | 🐙 Minor | seveibar | Update the version of the capacity autorouter dependency. |
 
 ### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
 
@@ -84,20 +107,6 @@ pie
 | [#34](https://github.com/tscircuit/capacity-autorouter/pull/34) | 🐳 Major | seveibar | Replace CapacitySegmentPointOptimizer with UnravelMultiSectionSolver, many fixes and optimizations with a 10x speed increase and higher quality. |
 | [#33](https://github.com/tscircuit/capacity-autorouter/pull/33) | 🐳 Major | seveibar | Introduces a new UnravelSectionSolver with A* algorithm for path planning. |
 | [#32](https://github.com/tscircuit/capacity-autorouter/pull/32) | 🐳 Major | seveibar | Fix major issues in Capacity Segment Optimization |
-
-### [tscircuit/core](https://github.com/tscircuit/core)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#692](https://github.com/tscircuit/core/pull/692) | 🐙 Minor | seveibar | Update the version of the capacity autorouter dependency. |
-| [#691](https://github.com/tscircuit/core/pull/691) | 🐙 Minor | imrishabh18 | Fix a hover bug for traces by setting the `source_trace_id` property of the `pcb_trace` object. |
-
-### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#714](https://github.com/tscircuit/tscircuit.com/pull/714) | 🐳 Major | imrishabh18 | Adds a new `/update` endpoint to the package fake API that allows updating existing packages, including privacy settings. |
-| [#718](https://github.com/tscircuit/tscircuit.com/pull/718) | 🐙 Minor | imrishabh18 | Adds the support for users to have private snippets. |
 
 ### [tscircuit/jlcsearch](https://github.com/tscircuit/jlcsearch)
 
@@ -126,6 +135,15 @@ pie
 
 ## Changes by Contributor
 
+### [imrishabh18](https://github.com/imrishabh18)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#714](https://github.com/tscircuit/tscircuit.com/pull/714) | 🐳 Major | Adds a new `/update` endpoint to the package fake API that allows updating existing packages, including privacy settings. |
+| [#161](https://github.com/tscircuit/circuit-json/pull/161) | 🐙 Minor | Add `min_trace_thickness` property to `source_trace` object |
+| [#691](https://github.com/tscircuit/core/pull/691) | 🐙 Minor | Fix a hover bug for traces by setting the `source_trace_id` property of the `pcb_trace` object. |
+| [#718](https://github.com/tscircuit/tscircuit.com/pull/718) | 🐙 Minor | Adds the support for users to have private snippets. |
+
 ### [MustafaMulla29](https://github.com/MustafaMulla29)
 
 | PR # | Impact | Description |
@@ -141,14 +159,6 @@ pie
 | [#33](https://github.com/tscircuit/capacity-autorouter/pull/33) | 🐳 Major | Introduces a new UnravelSectionSolver with A* algorithm for path planning. |
 | [#32](https://github.com/tscircuit/capacity-autorouter/pull/32) | 🐳 Major | Fix major issues in Capacity Segment Optimization |
 | [#692](https://github.com/tscircuit/core/pull/692) | 🐙 Minor | Update the version of the capacity autorouter dependency. |
-
-### [imrishabh18](https://github.com/imrishabh18)
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#714](https://github.com/tscircuit/tscircuit.com/pull/714) | 🐳 Major | Adds a new `/update` endpoint to the package fake API that allows updating existing packages, including privacy settings. |
-| [#691](https://github.com/tscircuit/core/pull/691) | 🐙 Minor | Fix a hover bug for traces by setting the `source_trace_id` property of the `pcb_trace` object. |
-| [#718](https://github.com/tscircuit/tscircuit.com/pull/718) | 🐙 Minor | Adds the support for users to have private snippets. |
 
 ### [ArnavK-09](https://github.com/ArnavK-09)
 
