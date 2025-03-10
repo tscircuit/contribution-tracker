@@ -23,11 +23,14 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/tscircuit.com" : 2
+    "tscircuit/runframe" : 1
+    "tscircuit/pcb-viewer" : 1
+    "tscircuit/dsn-converter" : 1
+    "tscircuit/tscircuit.com" : 3
     "tscircuit/circuit-json" : 1
-    "tscircuit/core" : 2
+    "tscircuit/core" : 3
     "tscircuit/footprinter" : 1
-    "tscircuit/capacity-autorouter" : 4
+    "tscircuit/capacity-autorouter" : 5
     "tscircuit/jlcsearch" : 2
     "tscircuit/contribution-tracker" : 1
     "tscircuit/circuit-to-svg" : 1
@@ -38,10 +41,12 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |
 |-------------|---------|---------|---------|-----|----------------|
-| [seveibar](#seveibar) | 4 | 1 | 0 | ⭐⭐ | 19 |
-| [imrishabh18](#imrishabh18) | 1 | 3 | 0 | ⭐⭐ | 8 |
+| [seveibar](#seveibar) | 5 | 1 | 0 | ⭐⭐ | 24 |
+| [imrishabh18](#imrishabh18) | 2 | 4 | 0 | ⭐⭐ | 8 |
 | [ArnavK-09](#ArnavK-09) | 1 | 1 | 1 | ⭐ | 0 |
+| [Abse2001](#Abse2001) | 1 | 1 | 0 | ⭐ | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 0 | 1 | 0 |  | 1 |
+| [Anshgrover23](#Anshgrover23) | 0 | 1 | 0 |  | 3 |
 | [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 |  | 2 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 1 |  | 0 |
 
@@ -57,21 +62,40 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
+| [imrishabh18](#imrishabh18) | 6 | 2 | 0 | 3 | 1 | 9 | 6 | 8 | 4 | 25 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 9 | 2 | 8 | 6 | 24 | 15 | 267 |
+| [Abse2001](#Abse2001) | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 | 0 | 0 |
 | [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 0 | 0 | 0 | 0 | 2 | 0 | 1 | 1 | 10 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 7 | 1 | 8 | 5 | 19 | 13 | 232 |
-| [imrishabh18](#imrishabh18) | 5 | 2 | 0 | 2 | 1 | 6 | 4 | 8 | 4 | 25 |
-| [MustafaMulla29](#MustafaMulla29) | 6 | 2 | 0 | 0 | 0 | 3 | 1 | 2 | 0 | 0 |
-| [techmannih](#techmannih) | 1 | 0 | 1 | 1 | 1 | 7 | 0 | 5 | 1 | 5 |
+| [MustafaMulla29](#MustafaMulla29) | 8 | 2 | 2 | 0 | 0 | 3 | 1 | 2 | 0 | 0 |
+| [techmannih](#techmannih) | 2 | 0 | 2 | 1 | 3 | 7 | 0 | 5 | 1 | 5 |
 | [Rishikesh63](#Rishikesh63) | 2 | 0 | 1 | 0 | 0 | 2 | 0 | 1 | 0 | 0 |
+| [Ayushjhawar8](#Ayushjhawar8) | 4 | 3 | 0 | 0 | 0 | 3 | 1 | 1 | 1 | 10 |
 | [Husainj](#Husainj) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [Anshgrover23](#Anshgrover23) | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 2 | 1 | 5 |
-| [Ayushjhawar8](#Ayushjhawar8) | 4 | 3 | 0 | 0 | 0 | 2 | 1 | 1 | 1 | 10 |
+| [Anshgrover23](#Anshgrover23) | 1 | 1 | 0 | 0 | 1 | 1 | 1 | 3 | 1 | 5 |
 | [ArnavK-09](#ArnavK-09) | 2 | 2 | 0 | 0 | 0 | 3 | 3 | 0 | 0 | 0 |
-| [PatanSharuKhan](#PatanSharuKhan) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
 | [kom-senapati](#kom-senapati) | 7 | 1 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [PatanSharuKhan](#PatanSharuKhan) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
 
 ## Changes by Repository
+
+### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#323](https://github.com/tscircuit/runframe/pull/323) | 🐳 Major | Abse2001 | Adds a feature to emit `onEditEvent` with an example and debounces the events to only emit the last one after dragging ends. |
+
+### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#191](https://github.com/tscircuit/pcb-viewer/pull/191) | 🐙 Minor | Abse2001 | Changes the type of `EditEvent` from a union of `EditPcbComponentLocationEvent` and `EditTraceHintEvent` to just `ManualEditEvent`. |
+
+### [tscircuit/dsn-converter](https://github.com/tscircuit/dsn-converter)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#101](https://github.com/tscircuit/dsn-converter/pull/101) | 🐳 Major | imrishabh18 | Add trace thickness information from the circuit JSON to the DSN file. |
 
 ### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
 
@@ -79,6 +103,7 @@ pie
 |------|--------|-------------|-------------|
 | [#714](https://github.com/tscircuit/tscircuit.com/pull/714) | 🐳 Major | imrishabh18 | Adds a new `/update` endpoint to the package fake API that allows updating existing packages, including privacy settings. |
 | [#718](https://github.com/tscircuit/tscircuit.com/pull/718) | 🐙 Minor | imrishabh18 | Adds the support for users to have private snippets. |
+| [#722](https://github.com/tscircuit/tscircuit.com/pull/722) | 🐙 Minor | Anshgrover23 | Fixes playwright tests for the editor page and footprint dialog |
 
 ### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
 
@@ -90,6 +115,7 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#696](https://github.com/tscircuit/core/pull/696) | 🐙 Minor | imrishabh18 | Add thickness to `source_trace` in the Trace component. |
 | [#691](https://github.com/tscircuit/core/pull/691) | 🐙 Minor | imrishabh18 | Fix a hover bug for traces by setting the `source_trace_id` property of the `pcb_trace` object. |
 | [#692](https://github.com/tscircuit/core/pull/692) | 🐙 Minor | seveibar | Update the version of the capacity autorouter dependency. |
 
@@ -103,6 +129,7 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#37](https://github.com/tscircuit/capacity-autorouter/pull/37) | 🐳 Major | seveibar | Adds a detailed JSON configuration for a keyboard design, including obstacles, trace widths, and layer count. |
 | [#35](https://github.com/tscircuit/capacity-autorouter/pull/35) | 🐳 Major | seveibar | The pull request changes the implementation of the Edge Solver to only solve between layer-compatible nodes and generate single layer nodes when there's a single-layer obstacle. |
 | [#34](https://github.com/tscircuit/capacity-autorouter/pull/34) | 🐳 Major | seveibar | Replace CapacitySegmentPointOptimizer with UnravelMultiSectionSolver, many fixes and optimizations with a 10x speed increase and higher quality. |
 | [#33](https://github.com/tscircuit/capacity-autorouter/pull/33) | 🐳 Major | seveibar | Introduces a new UnravelSectionSolver with A* algorithm for path planning. |
@@ -135,12 +162,21 @@ pie
 
 ## Changes by Contributor
 
+### [Abse2001](https://github.com/Abse2001)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#323](https://github.com/tscircuit/runframe/pull/323) | 🐳 Major | Adds a feature to emit `onEditEvent` with an example and debounces the events to only emit the last one after dragging ends. |
+| [#191](https://github.com/tscircuit/pcb-viewer/pull/191) | 🐙 Minor | Changes the type of `EditEvent` from a union of `EditPcbComponentLocationEvent` and `EditTraceHintEvent` to just `ManualEditEvent`. |
+
 ### [imrishabh18](https://github.com/imrishabh18)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#101](https://github.com/tscircuit/dsn-converter/pull/101) | 🐳 Major | Add trace thickness information from the circuit JSON to the DSN file. |
 | [#714](https://github.com/tscircuit/tscircuit.com/pull/714) | 🐳 Major | Adds a new `/update` endpoint to the package fake API that allows updating existing packages, including privacy settings. |
 | [#161](https://github.com/tscircuit/circuit-json/pull/161) | 🐙 Minor | Add `min_trace_thickness` property to `source_trace` object |
+| [#696](https://github.com/tscircuit/core/pull/696) | 🐙 Minor | Add thickness to `source_trace` in the Trace component. |
 | [#691](https://github.com/tscircuit/core/pull/691) | 🐙 Minor | Fix a hover bug for traces by setting the `source_trace_id` property of the `pcb_trace` object. |
 | [#718](https://github.com/tscircuit/tscircuit.com/pull/718) | 🐙 Minor | Adds the support for users to have private snippets. |
 
@@ -154,6 +190,7 @@ pie
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#37](https://github.com/tscircuit/capacity-autorouter/pull/37) | 🐳 Major | Adds a detailed JSON configuration for a keyboard design, including obstacles, trace widths, and layer count. |
 | [#35](https://github.com/tscircuit/capacity-autorouter/pull/35) | 🐳 Major | The pull request changes the implementation of the Edge Solver to only solve between layer-compatible nodes and generate single layer nodes when there's a single-layer obstacle. |
 | [#34](https://github.com/tscircuit/capacity-autorouter/pull/34) | 🐳 Major | Replace CapacitySegmentPointOptimizer with UnravelMultiSectionSolver, many fixes and optimizations with a 10x speed increase and higher quality. |
 | [#33](https://github.com/tscircuit/capacity-autorouter/pull/33) | 🐳 Major | Introduces a new UnravelSectionSolver with A* algorithm for path planning. |
@@ -173,6 +210,12 @@ pie
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#191](https://github.com/tscircuit/circuit-to-svg/pull/191) | 🐙 Minor | The pull request fixes an issue where the bottom layer silkscreen elements were not visually distinguishable, and adds different colors for the top (yellow) and bottom (blue) silkscreen elements. |
+
+### [Anshgrover23](https://github.com/Anshgrover23)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#722](https://github.com/tscircuit/tscircuit.com/pull/722) | 🐙 Minor | Fixes playwright tests for the editor page and footprint dialog |
 
 ### [tscircuitbot](https://github.com/tscircuitbot)
 
