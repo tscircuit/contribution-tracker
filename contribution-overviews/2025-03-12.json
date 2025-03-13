@@ -1,4 +1,21 @@
 {
+  "Anshgrover23": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 1,
+    "issuesCreated": 1,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "score": 1,
+    "major": 0,
+    "minor": 0,
+    "tiny": 1,
+    "stars": ""
+  },
   "MustafaMulla29": {
     "reviewsReceived": 3,
     "rejectionsReceived": 0,
@@ -20,13 +37,18 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 2,
-    "rejectionsGiven": 0,
-    "prsOpened": 0,
-    "prsMerged": 0,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0
+    "approvalsGiven": 4,
+    "rejectionsGiven": 1,
+    "prsOpened": 3,
+    "prsMerged": 1,
+    "issuesCreated": 2,
+    "bountiedIssuesCount": 1,
+    "bountiedIssuesTotal": 20,
+    "score": 2,
+    "major": 0,
+    "minor": 0,
+    "tiny": 0,
+    "stars": ""
   },
   "techmannih": {
     "reviewsReceived": 0,
@@ -57,21 +79,33 @@
     "tiny": 1,
     "stars": ""
   },
-  "imrishabh18": {
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
+  "Rishikesh63": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 1,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 1,
+    "prsOpened": 1,
+    "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "score": 2,
+    "bountiedIssuesTotal": 0
+  },
+  "imrishabh18": {
+    "reviewsReceived": 3,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 4,
+    "issuesCreated": 1,
+    "bountiedIssuesCount": 1,
+    "bountiedIssuesTotal": 5,
+    "score": 7,
     "major": 0,
-    "minor": 1,
+    "minor": 3,
     "tiny": 0,
-    "stars": ""
+    "stars": "⭐"
   }
 }
