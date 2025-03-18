@@ -27,22 +27,23 @@ pie
     "tscircuit/graphics-debug" : 8
     "tscircuit/easyeda-converter" : 1
     "tscircuit/winterspec" : 1
-    "tscircuit/core" : 3
-    "tscircuit/jlcsearch" : 1
-    "tscircuit/runframe" : 1
+    "tscircuit/core" : 4
     "tscircuit/cli" : 2
     "tscircuit/dsn-converter" : 1
     "tscircuit/tscircuit.com" : 5
+    "tscircuit/eval" : 1
     "tscircuit/autorouting-cache-engine" : 1
-    "tscircuit/capacity-autorouter" : 3
+    "tscircuit/jlcsearch" : 1
+    "tscircuit/runframe" : 1
+    "tscircuit/capacity-autorouter" : 4
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |
 |-------------|---------|---------|---------|-----|----------------|
-| [seveibar](#seveibar) | 3 | 4 | 1 | ⭐⭐ | 24 |
-| [imrishabh18](#imrishabh18) | 1 | 7 | 0 | ⭐⭐ | 5 |
+| [seveibar](#seveibar) | 4 | 4 | 1 | ⭐⭐⭐ | 28 |
+| [imrishabh18](#imrishabh18) | 2 | 7 | 1 | ⭐⭐ | 7 |
 | [Ayushjhawar8](#Ayushjhawar8) | 0 | 3 | 0 | ⭐ | 1 |
 | [MustafaMulla29](#MustafaMulla29) | 0 | 2 | 0 | ⭐ | 1 |
 | [Anshgrover23](#Anshgrover23) | 0 | 0 | 2 |  | 2 |
@@ -63,16 +64,16 @@ pie
 |---|---|---|---|---|---|---|---|---|---|---|
 | [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 1 | 40 |
 | [Anshgrover23](#Anshgrover23) | 1 | 1 | 0 | 0 | 1 | 3 | 2 | 2 | 0 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 5 | 3 | 1 | 0 | 0 | 4 | 2 | 1 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 5 | 3 | 1 | 0 | 0 | 5 | 2 | 1 | 0 | 0 |
 | [techmannih](#techmannih) | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 11 | 3 | 12 | 10 | 24 | 10 | 132 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 12 | 3 | 14 | 11 | 28 | 12 | 182 |
 | [krushnarout](#krushnarout) | 3 | 1 | 2 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | [ArnavK-09](#ArnavK-09) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
-| [Rishikesh63](#Rishikesh63) | 2 | 0 | 2 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 5 | 4 | 0 | 0 | 0 | 11 | 11 | 7 | 4 | 34 |
+| [Rishikesh63](#Rishikesh63) | 2 | 0 | 2 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 5 | 3 | 0 | 0 | 0 | 4 | 3 | 1 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 4 | 3 | 0 | 0 | 0 | 9 | 9 | 5 | 2 | 20 |
 | [joharkhan99](#joharkhan99) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [ricohageman](#ricohageman) | 2 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [ricohageman](#ricohageman) | 5 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
 
 ## Changes by Repository
 
@@ -111,21 +112,10 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#703](https://github.com/tscircuit/core/pull/703) | 🐳 Major | imrishabh18 | Automatically sizes the board to fit the components, even when the components are inside a group. |
 | [#689](https://github.com/tscircuit/core/pull/689) | 🐙 Minor | Ayushjhawar8 | Fix silkscreen component to follow parent layer |
 | [#701](https://github.com/tscircuit/core/pull/701) | 🐌 Tiny | Anshgrover23 | Adds the import path to the snapshot file names in the tests. |
 | [#700](https://github.com/tscircuit/core/pull/700) | 🐌 Tiny | Anshgrover23 | Move snapshot files to correct directory |
-
-### [tscircuit/jlcsearch](https://github.com/tscircuit/jlcsearch)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#41](https://github.com/tscircuit/jlcsearch/pull/41) | 🐙 Minor | Ayushjhawar8 | Add a title tag to the HTML response. |
-
-### [tscircuit/runframe](https://github.com/tscircuit/runframe)
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#329](https://github.com/tscircuit/runframe/pull/329) | 🐙 Minor | Ayushjhawar8 | Add ctrl/cmd+enter shortcut to run the circuit |
 
 ### [tscircuit/cli](https://github.com/tscircuit/cli)
 
@@ -150,16 +140,35 @@ pie
 | [#727](https://github.com/tscircuit/tscircuit.com/pull/727) | 🐙 Minor | imrishabh18 | Add the lock icon for private snippet |
 | [#726](https://github.com/tscircuit/tscircuit.com/pull/726) | 🐙 Minor | imrishabh18 | Adds support for creating private packages in the fake-snippets-api |
 
+### [tscircuit/eval](https://github.com/tscircuit/eval)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#140](https://github.com/tscircuit/eval/pull/140) | 🐌 Tiny | imrishabh18 | Updates the lock file for the core component |
+
 ### [tscircuit/autorouting-cache-engine](https://github.com/tscircuit/autorouting-cache-engine)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#7](https://github.com/tscircuit/autorouting-cache-engine/pull/7) | 🟣 | imrishabh18 | Add thickness as a property to normalize |
 
+### [tscircuit/jlcsearch](https://github.com/tscircuit/jlcsearch)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#41](https://github.com/tscircuit/jlcsearch/pull/41) | 🐙 Minor | Ayushjhawar8 | Add a title tag to the HTML response. |
+
+### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#329](https://github.com/tscircuit/runframe/pull/329) | 🐙 Minor | Ayushjhawar8 | Add ctrl/cmd+enter shortcut to run the circuit |
+
 ### [tscircuit/capacity-autorouter](https://github.com/tscircuit/capacity-autorouter)
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#55](https://github.com/tscircuit/capacity-autorouter/pull/55) | 🐳 Major | seveibar | The pull request switches the renderer to canvas, which results in a 10x speedup for the unravel multisection solver. |
 | [#45](https://github.com/tscircuit/capacity-autorouter/pull/45) | 🐳 Major | seveibar | The pull request allows straws to be connected if they are from different parents, and requires higher capacity when z availability differs between connected nodes. |
 | [#42](https://github.com/tscircuit/capacity-autorouter/pull/42) | 🐳 Major | seveibar | Adds a simplified path solver JSON file with a source trace route. |
 | [#52](https://github.com/tscircuit/capacity-autorouter/pull/52) | 🟣 | seveibar | Massive Optimizations Pt1: Optimizations for every stage, mostly 2d-hash bucket stuff and undumbing maps |
@@ -185,6 +194,22 @@ pie
 |------|--------|-------------|
 | [#33](https://github.com/tscircuit/winterspec/pull/33) | 🐌 Tiny | Update the GitHub Actions used in the project to their latest versions. |
 
+### [imrishabh18](https://github.com/imrishabh18)
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#703](https://github.com/tscircuit/core/pull/703) | 🐳 Major | Automatically sizes the board to fit the components, even when the components are inside a group. |
+| [#106](https://github.com/tscircuit/cli/pull/106) | 🐳 Major | Refactor the export command to generate circuit JSON and convert it to the requested format. |
+| [#104](https://github.com/tscircuit/dsn-converter/pull/104) | 🐙 Minor | Add support for the `circle` shape for SMT pads and refactor the `processedComponents` file. |
+| [#731](https://github.com/tscircuit/tscircuit.com/pull/731) | 🐙 Minor | Removes the fixed board dimensions for the module. |
+| [#730](https://github.com/tscircuit/tscircuit.com/pull/730) | 🐙 Minor | Add a lock icon on the profile page to indicate if a snippet is private. |
+| [#728](https://github.com/tscircuit/tscircuit.com/pull/728) | 🐙 Minor | Adds a dialog to choose package visibility (public or private) when creating a new snippet. |
+| [#727](https://github.com/tscircuit/tscircuit.com/pull/727) | 🐙 Minor | Add the lock icon for private snippet |
+| [#726](https://github.com/tscircuit/tscircuit.com/pull/726) | 🐙 Minor | Adds support for creating private packages in the fake-snippets-api |
+| [#104](https://github.com/tscircuit/cli/pull/104) | 🐙 Minor | Adds a --private flag to the push command to create private snippets. |
+| [#140](https://github.com/tscircuit/eval/pull/140) | 🐌 Tiny | Updates the lock file for the core component |
+| [#7](https://github.com/tscircuit/autorouting-cache-engine/pull/7) | 🟣 | Add thickness as a property to normalize |
+
 ### [Ayushjhawar8](https://github.com/Ayushjhawar8)
 
 | PR # | Impact | Description |
@@ -200,25 +225,12 @@ pie
 | [#701](https://github.com/tscircuit/core/pull/701) | 🐌 Tiny | Adds the import path to the snapshot file names in the tests. |
 | [#700](https://github.com/tscircuit/core/pull/700) | 🐌 Tiny | Move snapshot files to correct directory |
 
-### [imrishabh18](https://github.com/imrishabh18)
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#106](https://github.com/tscircuit/cli/pull/106) | 🐳 Major | Refactor the export command to generate circuit JSON and convert it to the requested format. |
-| [#104](https://github.com/tscircuit/dsn-converter/pull/104) | 🐙 Minor | Add support for the `circle` shape for SMT pads and refactor the `processedComponents` file. |
-| [#731](https://github.com/tscircuit/tscircuit.com/pull/731) | 🐙 Minor | Removes the fixed board dimensions for the module. |
-| [#730](https://github.com/tscircuit/tscircuit.com/pull/730) | 🐙 Minor | Add a lock icon on the profile page to indicate if a snippet is private. |
-| [#728](https://github.com/tscircuit/tscircuit.com/pull/728) | 🐙 Minor | Adds a dialog to choose package visibility (public or private) when creating a new snippet. |
-| [#727](https://github.com/tscircuit/tscircuit.com/pull/727) | 🐙 Minor | Add the lock icon for private snippet |
-| [#726](https://github.com/tscircuit/tscircuit.com/pull/726) | 🐙 Minor | Adds support for creating private packages in the fake-snippets-api |
-| [#104](https://github.com/tscircuit/cli/pull/104) | 🐙 Minor | Adds a --private flag to the push command to create private snippets. |
-| [#7](https://github.com/tscircuit/autorouting-cache-engine/pull/7) | 🟣 | Add thickness as a property to normalize |
-
 ### [seveibar](https://github.com/seveibar)
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#46](https://github.com/tscircuit/graphics-debug/pull/46) | 🐳 Major | Adds a new component `InteractiveGraphicsCanvas` which provides an interactive canvas with features like panning, zooming, and step-by-step visualization of graphics objects. |
+| [#55](https://github.com/tscircuit/capacity-autorouter/pull/55) | 🐳 Major | The pull request switches the renderer to canvas, which results in a 10x speedup for the unravel multisection solver. |
 | [#45](https://github.com/tscircuit/capacity-autorouter/pull/45) | 🐳 Major | The pull request allows straws to be connected if they are from different parents, and requires higher capacity when z availability differs between connected nodes. |
 | [#42](https://github.com/tscircuit/capacity-autorouter/pull/42) | 🐳 Major | Adds a simplified path solver JSON file with a source trace route. |
 | [#48](https://github.com/tscircuit/graphics-debug/pull/48) | 🐙 Minor | Removes `useMemos` from `InteractiveGraphicsCanvas` to avoid call stack overflow |
