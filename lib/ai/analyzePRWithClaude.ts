@@ -7,12 +7,10 @@ import {
   type Milestone,
 } from "../../shared/types/milestones"
 
-export function isPRAlignedWithMilestone(
-  pr: { title: string; body: string; diff: string },
-  milestone: Milestone,
-): boolean {
-  const content = `${pr.title} ${pr.body} ${pr.diff}`.toLowerCase()
-  return milestone.keywords.some((keyword: string) =>
+// Exported for testing
+export function checkMilestoneAlignment(pr: MergedPullRequest): boolean {
+  const content = `${pr.title} ${pr.body}`.toLowerCase()
+  return CURRENT_MILESTONE.keywords.some((keyword) =>
     content.includes(keyword.toLowerCase()),
   )
 }
@@ -23,12 +21,11 @@ export async function analyzePRWithClaude(
 ): Promise<AnalyzedPR> {
   try {
     const reducedDiff = filterDiff(pr.diff)
+    const milestoneAlignment = checkMilestoneAlignment(pr)
 
-    // First check if PR aligns with milestone using keyword matching
-    const milestoneAlignment = isPRAlignedWithMilestone(pr, CURRENT_MILESTONE)
-
-    // If not in cache, perform the analysis
-    const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
+    const prompt = `Analyze this pull request and provide:
+1. A one-line description of the change
+2. Impact classification (Major/Minor/Tiny)
 
 Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
 Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 50 lines of code changes. Adding a new symbol. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
