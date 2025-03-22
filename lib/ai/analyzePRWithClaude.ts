@@ -8,11 +8,40 @@ import {
 } from "../../shared/types/milestones"
 
 // Exported for testing
-export function checkMilestoneAlignment(pr: MergedPullRequest): boolean {
-  const content = `${pr.title} ${pr.body}`.toLowerCase()
-  return CURRENT_MILESTONE.keywords.some((keyword) =>
-    content.includes(keyword.toLowerCase()),
-  )
+export async function checkMilestoneAlignment(
+  pr: MergedPullRequest,
+): Promise<boolean> {
+  try {
+    const prompt = `Analyze if this pull request aligns with the current milestone:
+Title: ${pr.title}
+Body: ${pr.body}
+Diff: ${pr.diff.slice(0, 8000)}
+
+Current Milestone:
+Name: ${CURRENT_MILESTONE.name}
+Description: ${CURRENT_MILESTONE.description}
+Keywords: ${CURRENT_MILESTONE.keywords.join(", ")}
+
+Determine if this PR aligns with the current milestone's goals and objectives. Consider:
+1. Does the PR directly contribute to the milestone's main objective?
+2. Is the PR's scope and impact relevant to the milestone?
+3. Does the PR's content match the milestone's focus area?
+
+Respond with only "true" or "false".`
+
+    const message = await anthropic.messages.create({
+      model: "claude-3-haiku-20240307",
+      max_tokens: 100,
+      messages: [{ role: "user", content: prompt }],
+    })
+
+    // @ts-ignore
+    const content = message.content[0].text.trim().toLowerCase()
+    return content === "true"
+  } catch (error) {
+    console.error("Error checking milestone alignment:", error)
+    return false
+  }
 }
 
 export async function analyzePRWithClaude(
@@ -21,7 +50,7 @@ export async function analyzePRWithClaude(
 ): Promise<AnalyzedPR> {
   try {
     const reducedDiff = filterDiff(pr.diff)
-    const milestoneAlignment = checkMilestoneAlignment(pr)
+    const milestoneAlignment = await checkMilestoneAlignment(pr)
 
     const prompt = `Analyze this pull request and provide:
 1. A one-line description of the change
