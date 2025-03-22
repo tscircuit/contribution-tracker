@@ -2,6 +2,18 @@ import { anthropic } from "lib/sdks"
 import filterDiff from "lib/data-processing/filterDiff"
 import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "lib/types"
+import {
+  CURRENT_MILESTONE,
+  type Milestone,
+} from "../../shared/types/milestones"
+
+// Exported for testing
+export function checkMilestoneAlignment(pr: MergedPullRequest): boolean {
+  const content = `${pr.title} ${pr.body}`.toLowerCase()
+  return CURRENT_MILESTONE.keywords.some((keyword) =>
+    content.includes(keyword.toLowerCase()),
+  )
+}
 
 export async function analyzePRWithClaude(
   pr: MergedPullRequest,
@@ -9,9 +21,11 @@ export async function analyzePRWithClaude(
 ): Promise<AnalyzedPR> {
   try {
     const reducedDiff = filterDiff(pr.diff)
+    const milestoneAlignment = checkMilestoneAlignment(pr)
 
-    // If not in cache, perform the analysis
-    const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
+    const prompt = `Analyze this pull request and provide:
+1. A one-line description of the change
+2. Impact classification (Major/Minor/Tiny)
 
 Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
 Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 50 lines of code changes. Adding a new symbol. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
@@ -51,6 +65,7 @@ Impact: [Major/Minor/Tiny]`
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
+      milestoneAlignment,
     }
   } catch (error) {
     return {
@@ -61,6 +76,7 @@ Impact: [Major/Minor/Tiny]`
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
+      milestoneAlignment: false,
     }
   }
 }

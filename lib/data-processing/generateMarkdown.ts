@@ -190,8 +190,10 @@ export async function generateMarkdown(
 
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
-    markdown += "| PR # | Impact | Contributor | Description |\n"
-    markdown += "|------|--------|-------------|-------------|\n"
+    markdown +=
+      "| PR # | Impact | Contributor | Description | Milestone Aligned |\n"
+    markdown +=
+      "|------|--------|-------------|-------------|-------------------|\n"
     repoPRs
       .sort((a, b) => {
         const impactOrder = { Major: 0, Minor: 1, Tiny: 2 }
@@ -203,7 +205,7 @@ export async function generateMarkdown(
       .forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
           pr.impact,
-        )} | ${pr.contributor} | ${pr.description} |\n`
+        )} | ${pr.contributor} | ${pr.description} | ${pr.milestoneAlignment ? "✅" : "❌"} |\n`
       })
     markdown += "\n"
   })
@@ -214,12 +216,12 @@ export async function generateMarkdown(
 
   Object.entries(prsByContributor).forEach(([contributor, contributorPRs]) => {
     markdown += `### [${contributor}](https://github.com/${contributor})\n\n`
-    markdown += "| PR # | Impact | Description |\n"
-    markdown += "|------|--------|-------------|\n"
+    markdown += "| PR # | Impact | Description | Milestone Aligned |\n"
+    markdown += "|------|--------|-------------|-------------------|\n"
     contributorPRs.forEach((pr) => {
       markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(pr.impact)} | ${
         pr.description
-      } |\n`
+      } | ${pr.milestoneAlignment ? "✅" : "❌"} |\n`
     })
     markdown += "\n"
   })
