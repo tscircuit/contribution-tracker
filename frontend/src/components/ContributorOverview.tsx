@@ -64,7 +64,7 @@ export function ContributorOverview({
     }
 
     return (
-      <div className="flex flex-col md:items-center w-full md:w-auto md:flex-grow">
+      <div className="flex flex-col md:items-center w-full md:w-auto">
         <div className="flex items-center md:flex-col gap-4 md:gap-2">
           <div className="relative">
             <img
@@ -152,7 +152,7 @@ export function ContributorOverview({
 
   return (
     <section className="mt-20 mb-16 max-w-7xl mx-auto px-4">
-      <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12 w-full">
+      <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12">
         {fullTimerContributors.length > 0 && (
           <div className="md:w-[25%]">
             <h3 className="text-lg font-semibold mb-3">Full-time</h3>
@@ -163,8 +163,8 @@ export function ContributorOverview({
                   onClick={() => onSelectContributor(username)}
                   className="bg-white rounded-lg shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
                 >
-                  <div className="flex flex-col items-center justify-center w-full">
-                    <div className="flex items-center gap-3 sm:gap-3 mb-4 w-full">
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-3 sm:gap-3 mb-4">
                       <div className="relative flex-shrink-0">
                         <img
                           src={getAvatarUrl(username)}
@@ -188,13 +188,13 @@ export function ContributorOverview({
                         </div>
                       </div>
                     </div>
-                    <div className="flex w-full flex-wrap justify-between text-xs text-gray-600 mb-1">
+                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-xs text-gray-600 mb-1">
                       {STATS_CONFIG.map((stat) => {
                         const Icon = stat.icon
                         return (
                           <div
                             key={stat.key}
-                            className="flex items-center gap-1.5 flex-1 justify-center"
+                            className="flex items-center gap-0.5"
                           >
                             <Tippy content={STATS_TOOLTIPS[stat.key]}>
                               <span className="inline-flex">
@@ -206,15 +206,13 @@ export function ContributorOverview({
                         )
                       })}
                     </div>
-                    <div className="flex w-full flex-wrap justify-between gap-x-3 gap-y-1.5 items-center mt-2">
+                    <div className="flex flex-wrap gap-x-1.5 gap-y-0.5 items-center mt-1">
                       {Object.values(CONTRIBUTION_TYPES).map((type) => (
                         <Tippy
                           key={type.value}
                           content={CONTRIBUTION_TOOLTIPS[type.value]}
                         >
-                          <div
-                            className={`text-sm ${type.colorClass} flex-1 text-center`}
-                          >
+                          <div className={`text-sm ${type.colorClass}`}>
                             {type.emoji} {stats[type.value] || 0}
                           </div>
                         </Tippy>
