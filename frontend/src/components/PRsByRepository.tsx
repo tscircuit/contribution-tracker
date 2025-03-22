@@ -1,5 +1,6 @@
 import { type RepoData } from "../types/contributor"
 import { getProfileUrl } from "../constants/github"
+import { CURRENT_MILESTONE } from "../types/milestones"
 
 interface PRsByRepositoryProps {
   repositories: RepoData[]
@@ -30,9 +31,18 @@ export function PRsByRepository({
   return (
     <div className={selectedContributor ? "" : "mb-12"}>
       {!selectedContributor && (
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          PRs by Repository
-        </h2>
+        <div className="mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            PRs by Repository
+          </h2>
+          <div className="text-sm text-gray-600">
+            Current Milestone:{" "}
+            <span className="font-semibold">{CURRENT_MILESTONE.name}</span>
+            <span className="ml-2 text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">
+              {CURRENT_MILESTONE.startDate} to {CURRENT_MILESTONE.endDate}
+            </span>
+          </div>
+        </div>
       )}
 
       <div className="space-y-4">
@@ -110,13 +120,23 @@ export function PRsByRepository({
                       </td>
                       <td className="px-3 py-2 whitespace-nowrap text-sm">
                         {pr.milestoneAlignment ? (
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                            ✅ Aligned
-                          </span>
+                          <div className="flex items-center space-x-1">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                              ✅ Aligned
+                            </span>
+                            <span
+                              className="text-xs text-gray-500"
+                              title={CURRENT_MILESTONE.description}
+                            >
+                              {CURRENT_MILESTONE.name}
+                            </span>
+                          </div>
                         ) : (
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                            ❌ Not Aligned
-                          </span>
+                          <div className="flex items-center space-x-1">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                              ❌ Not Aligned
+                            </span>
+                          </div>
                         )}
                       </td>
                     </tr>
