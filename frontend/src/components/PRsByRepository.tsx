@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { type RepoData } from "../types/contributor"
 import { getProfileUrl } from "../constants/github"
 
@@ -27,6 +28,12 @@ export function PRsByRepository({
     )
   }
 
+  const [showAll, setShowAll] = useState(false)
+  const displayedRepositories = showAll
+    ? filteredRepositories
+    : filteredRepositories.slice(0, 5)
+  const hasMoreToShow = filteredRepositories.length > 5
+
   return (
     <div className={selectedContributor ? "" : "mb-12"}>
       {!selectedContributor && (
@@ -36,7 +43,7 @@ export function PRsByRepository({
       )}
 
       <div className="space-y-4">
-        {filteredRepositories.map((repo) => (
+        {displayedRepositories.map((repo) => (
           <div
             key={repo.name}
             className="bg-white rounded-lg shadow-sm overflow-hidden"
@@ -113,6 +120,19 @@ export function PRsByRepository({
           </div>
         ))}
       </div>
+
+      {hasMoreToShow && (
+        <div className="mt-4 text-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            {showAll
+              ? "Show Less"
+              : `Show More (${filteredRepositories.length - 5} more)`}
+          </button>
+        </div>
+      )}
     </div>
   )
 }
