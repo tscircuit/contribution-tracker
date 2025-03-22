@@ -10,6 +10,7 @@ const mockPRs: AnalyzedPR[] = [
     impact: "Major",
     contributor: "user1",
     repo: "test/repo",
+    milestoneAlignment: true,
     url: "https://github.com/test/repo/pull/1",
   },
 ]

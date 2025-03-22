@@ -37,6 +37,7 @@ export interface PullRequest {
 
 export interface MergedPullRequest extends PullRequest {
   diff: string
+  milestone?: Milestone
 }
 
 export interface PullRequestWithReviews extends PullRequest {
@@ -52,7 +53,16 @@ export interface AnalyzedPR {
   title: string
   description: string
   impact: "Major" | "Minor" | "Tiny"
+  milestoneAlignment: boolean
   contributor: string
   repo: string
   url: string
+}
+
+export interface Milestone {
+  title: string
+  description: string | null
+  state: string
+  due_on: string | null
+  closed_at: string | null
 }
