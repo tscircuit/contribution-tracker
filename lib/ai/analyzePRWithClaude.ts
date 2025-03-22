@@ -3,6 +3,8 @@ import filterDiff from "lib/data-processing/filterDiff"
 import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "lib/types"
 
+const CURRENT_MILESTONE = "Build more footprints"
+
 export async function analyzePRWithClaude(
   pr: MergedPullRequest,
   repo: string,
@@ -11,7 +13,7 @@ export async function analyzePRWithClaude(
     const reducedDiff = filterDiff(pr.diff)
 
     // If not in cache, perform the analysis
-    const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
+    const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny" and determine if it aligns with the current milestone "${CURRENT_MILESTONE}".
 
 Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
 Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 50 lines of code changes. Adding a new symbol. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
@@ -26,7 +28,8 @@ ${reducedDiff.slice(0, 8000)}
 
 Response format:
 Description: [One-line description]
-Impact: [Major/Minor/Tiny]`
+Impact: [Major/Minor/Tiny]
+Milestone Alignment: [true/false]`
 
     const message = await anthropic.messages.create({
       model: "claude-3-haiku-20240307",
@@ -38,7 +41,9 @@ Impact: [Major/Minor/Tiny]`
     const content = message.content[0].text
     const description =
       content.split("Description:")?.[1]?.split("Impact:")[0] ?? ""
-    const impact = content.split("Impact:")?.[1] ?? ""
+    const impact =
+      content.split("Impact:")?.[1]?.split("Milestone Alignment:")[0] ?? ""
+    const milestoneAlignment = content.split("Milestone Alignment:")?.[1] ?? ""
 
     return {
       number: pr.number,
@@ -51,6 +56,7 @@ Impact: [Major/Minor/Tiny]`
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
+      milestoneAlignment: milestoneAlignment?.trim().toLowerCase() === "true",
     }
   } catch (error) {
     return {
@@ -61,6 +67,7 @@ Impact: [Major/Minor/Tiny]`
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
+      milestoneAlignment: false,
     }
   }
 }

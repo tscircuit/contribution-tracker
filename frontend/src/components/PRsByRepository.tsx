@@ -72,6 +72,9 @@ export function PRsByRepository({
                     <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Description
                     </th>
+                    <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">
+                      Milestone
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
@@ -104,6 +107,17 @@ export function PRsByRepository({
                       )}
                       <td className="px-3 py-2 text-sm text-gray-900 break-words">
                         {pr.description}
+                      </td>
+                      <td className="px-3 py-2 whitespace-nowrap text-sm">
+                        {pr.milestoneAlignment ? (
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                            ✅ Aligned
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                            ❌ Not Aligned
+                          </span>
+                        )}
                       </td>
                     </tr>
                   ))}
