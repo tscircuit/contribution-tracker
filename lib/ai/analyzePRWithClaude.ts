@@ -2,6 +2,47 @@ import { anthropic } from "lib/sdks"
 import filterDiff from "lib/data-processing/filterDiff"
 import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "lib/types"
+import {
+  CURRENT_MILESTONE,
+  type Milestone,
+} from "../../shared/types/milestones"
+
+// Exported for testing
+export async function checkMilestoneAlignment(
+  pr: MergedPullRequest,
+): Promise<boolean> {
+  try {
+    const prompt = `Analyze if this pull request aligns with the current milestone:
+Title: ${pr.title}
+Body: ${pr.body}
+Diff: ${pr.diff.slice(0, 8000)}
+
+Current Milestone:
+Name: ${CURRENT_MILESTONE.name}
+Description: ${CURRENT_MILESTONE.description}
+Keywords: ${CURRENT_MILESTONE.keywords.join(", ")}
+
+Determine if this PR aligns with the current milestone's goals and objectives. Consider:
+1. Does the PR directly contribute to the milestone's main objective?
+2. Is the PR's scope and impact relevant to the milestone?
+3. Does the PR's content match the milestone's focus area?
+
+Respond with only "true" or "false".`
+
+    const message = await anthropic.messages.create({
+      model: "claude-3-haiku-20240307",
+      max_tokens: 100,
+      messages: [{ role: "user", content: prompt }],
+    })
+
+    // @ts-ignore
+    const content = message.content[0].text.trim().toLowerCase()
+    return content === "true"
+  } catch (error) {
+    console.error("Error checking milestone alignment:", error)
+    return false
+  }
+}
 
 export async function analyzePRWithClaude(
   pr: MergedPullRequest,
@@ -9,8 +50,8 @@ export async function analyzePRWithClaude(
 ): Promise<AnalyzedPR> {
   try {
     const reducedDiff = filterDiff(pr.diff)
+    const isAlignedWithMilestone = await checkMilestoneAlignment(pr)
 
-    // If not in cache, perform the analysis
     const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
 
 Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
@@ -51,16 +92,18 @@ Impact: [Major/Minor/Tiny]`
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
+      isAlignedWithMilestone,
     }
   } catch (error) {
     return {
       number: pr.number,
       title: pr.title,
       description: "",
-      impact: "Minor",
+      impact: "Minor" as const,
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
+      isAlignedWithMilestone: false,
     }
   }
 }

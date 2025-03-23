@@ -55,4 +55,5 @@ export interface AnalyzedPR {
   contributor: string
   repo: string
   url: string
+  isAlignedWithMilestone?: boolean // Whether the PR aligns with the current milestone
 }
