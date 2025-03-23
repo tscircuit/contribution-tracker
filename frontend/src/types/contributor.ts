@@ -46,7 +46,7 @@ export interface PR {
   contributor: string
   description: string
   url: string
-  milestoneAlignment?: boolean
+  isAlignedWithMilestone?: boolean
 }
 
 export interface RepoData {

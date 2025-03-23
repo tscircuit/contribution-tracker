@@ -205,7 +205,7 @@ export async function generateMarkdown(
       .forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
           pr.impact,
-        )} | ${pr.contributor} | ${pr.description} | ${pr.milestoneAlignment ? "✅" : "❌"} |\n`
+        )} | ${pr.contributor} | ${pr.description} | ${pr.isAlignedWithMilestone ? "✅" : "❌"} |\n`
       })
     markdown += "\n"
   })
@@ -221,7 +221,7 @@ export async function generateMarkdown(
     contributorPRs.forEach((pr) => {
       markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(pr.impact)} | ${
         pr.description
-      } | ${pr.milestoneAlignment ? "✅" : "❌"} |\n`
+      } | ${pr.isAlignedWithMilestone ? "✅" : "❌"} |\n`
     })
     markdown += "\n"
   })
