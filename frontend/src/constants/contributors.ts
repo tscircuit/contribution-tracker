@@ -1,1 +1,1 @@
-export const FULL_TIMERS = ["seveibar", "imrishabh18"]
+export const FULL_TIMERS = ["seveibar", "imrishabh18", "tscircuitbot"]
