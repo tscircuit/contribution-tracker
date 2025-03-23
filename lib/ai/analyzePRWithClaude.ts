@@ -7,22 +7,11 @@ import {
   type Milestone,
 } from "../../shared/types/milestones"
 
-// Cache for milestone alignment checks
-const milestoneAlignmentCache = new Map<string, boolean>()
-
 // Exported for testing
 export async function checkMilestoneAlignment(
   pr: MergedPullRequest,
 ): Promise<boolean> {
   try {
-    // Generate cache key from PR content
-    const cacheKey = `${pr.title}${pr.body}${pr.diff}`.slice(0, 100)
-
-    // Check cache first
-    if (milestoneAlignmentCache.has(cacheKey)) {
-      return milestoneAlignmentCache.get(cacheKey)!
-    }
-
     const prompt = `Analyze if this pull request aligns with the current milestone:
 Title: ${pr.title}
 Body: ${pr.body}
@@ -48,12 +37,7 @@ Respond with only "true" or "false".`
 
     // @ts-ignore
     const content = message.content[0].text.trim().toLowerCase()
-    const isAligned = content === "true"
-
-    // Cache the result
-    milestoneAlignmentCache.set(cacheKey, isAligned)
-
-    return isAligned
+    return content === "true"
   } catch (error) {
     console.error("Error checking milestone alignment:", error)
     return false
@@ -115,7 +99,7 @@ Impact: [Major/Minor/Tiny]`
       number: pr.number,
       title: pr.title,
       description: "",
-      impact: "Minor",
+      impact: "Minor" as const,
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
