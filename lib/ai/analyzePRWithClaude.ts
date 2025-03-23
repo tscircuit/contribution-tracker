@@ -7,11 +7,22 @@ import {
   type Milestone,
 } from "../../shared/types/milestones"
 
+// Cache for milestone alignment checks
+const milestoneAlignmentCache = new Map<string, boolean>()
+
 // Exported for testing
 export async function checkMilestoneAlignment(
   pr: MergedPullRequest,
 ): Promise<boolean> {
   try {
+    // Generate cache key from PR content
+    const cacheKey = `${pr.title}${pr.body}${pr.diff}`.slice(0, 100)
+
+    // Check cache first
+    if (milestoneAlignmentCache.has(cacheKey)) {
+      return milestoneAlignmentCache.get(cacheKey)!
+    }
+
     const prompt = `Analyze if this pull request aligns with the current milestone:
 Title: ${pr.title}
 Body: ${pr.body}
@@ -37,7 +48,12 @@ Respond with only "true" or "false".`
 
     // @ts-ignore
     const content = message.content[0].text.trim().toLowerCase()
-    return content === "true"
+    const isAligned = content === "true"
+
+    // Cache the result
+    milestoneAlignmentCache.set(cacheKey, isAligned)
+
+    return isAligned
   } catch (error) {
     console.error("Error checking milestone alignment:", error)
     return false
@@ -50,11 +66,9 @@ export async function analyzePRWithClaude(
 ): Promise<AnalyzedPR> {
   try {
     const reducedDiff = filterDiff(pr.diff)
-    const milestoneAlignment = await checkMilestoneAlignment(pr)
+    const isAlignedWithMilestone = await checkMilestoneAlignment(pr)
 
-    const prompt = `Analyze this pull request and provide:
-1. A one-line description of the change
-2. Impact classification (Major/Minor/Tiny)
+    const prompt = `Analyze the following pull request and provide a one-line description of the change. Also, classify the impact as "Major", "Minor", or "Tiny".
 
 Major Impact: Introduces a huge feature, fixes a critical or difficult bug. Generally difficult to implement. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
 Minor Impact: Bug fixes, simple feature additions, small improvements. Typically more than 50 lines of code changes. Adding a new symbol. The PR has a relation to circuit boards, electronics, electronic design automation tooling, footprints, bill of materials, electronic design format, PCB design, autorouters.
@@ -94,7 +108,7 @@ Impact: [Major/Minor/Tiny]`
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
-      milestoneAlignment,
+      isAlignedWithMilestone,
     }
   } catch (error) {
     return {
@@ -105,7 +119,7 @@ Impact: [Major/Minor/Tiny]`
       contributor: pr.user.login,
       repo,
       url: pr.html_url,
-      milestoneAlignment: false,
+      isAlignedWithMilestone: false,
     }
   }
 }
