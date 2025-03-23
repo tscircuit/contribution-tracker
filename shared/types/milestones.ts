@@ -7,10 +7,10 @@ export interface Milestone {
 }
 
 export const CURRENT_MILESTONE: Milestone = {
-  name: "Build more footprints",
+  name: "Build Keyboards",
   description:
-    "Focus on creating and improving electronic component footprints",
-  keywords: ["footprint", "footprints"],
+    "Tools and improvements that enable the building of keyboards with tscircuit",
+  keywords: ["keyboard"],
   startDate: "2024-03-01",
   endDate: "2024-03-31",
 }
