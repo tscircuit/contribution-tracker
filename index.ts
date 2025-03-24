@@ -14,9 +14,11 @@ export async function generateOverview(startDate: string) {
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
   const contributorData: Record<string, ContributorStats> = {}
+  // Map to collect unique PR numbers for each reviewer
+  const reviewerToReviewedPrs: Record<string, Set<number>> = {}
 
   for (const repo of repos) {
-    console.log(`Analyzing ${repo}`)
+    console.log(`\nAnalyzing ${repo}`)
 
     const prsWithReviews = await getAllPRs(repo, startDate)
     console.log(`Found ${prsWithReviews.length} total PRs`)
@@ -38,6 +40,7 @@ export async function generateOverview(startDate: string) {
           issuesCreated: 0,
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
+          distinctPrsReviewed: 0,
         }
       }
 
@@ -61,12 +64,23 @@ export async function generateOverview(startDate: string) {
                 issuesCreated: 0,
                 bountiedIssuesCount: 0,
                 bountiedIssuesTotal: 0,
+                distinctPrsReviewed: 0,
               }
             }
             contributorData[reviewer].approvalsGiven +=
               reviewerStats.approvalsGiven
             contributorData[reviewer].rejectionsGiven +=
               reviewerStats.rejectionsGiven
+
+            // Collect unique PR numbers for each reviewer
+            if (!reviewerToReviewedPrs[reviewer]) {
+              reviewerToReviewedPrs[reviewer] = new Set<number>()
+            }
+            if (reviewerStats.prNumbers) {
+              reviewerStats.prNumbers.forEach((prNum) =>
+                reviewerToReviewedPrs[reviewer].add(prNum),
+              )
+            }
           },
         )
       }
@@ -74,6 +88,13 @@ export async function generateOverview(startDate: string) {
       if (pr.isClosed && pr.merged_at)
         contributorData[contributor].prsMerged += 1
     }
+
+    // After processing all PRs, set distinctPrsReviewed for each reviewer
+    Object.entries(reviewerToReviewedPrs).forEach(([reviewer, prNumbers]) => {
+      if (contributorData[reviewer]) {
+        contributorData[reviewer].distinctPrsReviewed = prNumbers.size
+      }
+    })
 
     const mergedPrs = await getMergedPRs(repo, startDateString)
     console.log(`Found ${mergedPrs.length} merged PRs`)
