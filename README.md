@@ -23,20 +23,22 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/pcb-viewer" : 2
-    "tscircuit/props" : 2
     "tscircuit/core" : 5
-    "tscircuit/graphics-debug" : 1
-    "tscircuit/eval" : 11
-    "tscircuit/docs" : 1
-    "tscircuit/unravel-autorouter" : 10
-    "tscircuit/runframe" : 8
-    "tscircuit/cli" : 7
-    "tscircuit/easyeda-converter" : 1
-    "tscircuit/contribution-tracker" : 3
-    "tscircuit/3d-viewer" : 1
+    "tscircuit/pcb-viewer" : 3
     "tscircuit/dsn-converter" : 1
-    "tscircuit/tscircuit.com" : 3
+    "tscircuit/tscircuit.com" : 6
+    "tscircuit/eval" : 11
+    "tscircuit/runframe" : 9
+    "tscircuit/cli" : 9
+    "tscircuit/circuit-json-util" : 3
+    "tscircuit/props" : 3
+    "tscircuit/math-utils" : 2
+    "tscircuit/docs" : 2
+    "tscircuit/unravel-autorouter" : 10
+    "tscircuit/graphics-debug" : 1
+    "tscircuit/easyeda-converter" : 1
+    "tscircuit/contribution-tracker" : 4
+    "tscircuit/3d-viewer" : 1
     "tscircuit/file-server" : 1
 ```
 
@@ -44,17 +46,18 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |
 |-------------|---------|---------|---------|-----|----------------|
-| [seveibar](#seveibar) | 7 | 18 | 2 | 👑 | 50 |
-| [imrishabh18](#imrishabh18) | 1 | 4 | 2 | ⭐⭐ | 7 |
-| [ArnavK-09](#ArnavK-09) | 1 | 4 | 0 | ⭐⭐ | 2 |
-| [Anshgrover23](#Anshgrover23) | 1 | 2 | 0 | ⭐ | 3 |
+| [seveibar](#seveibar) | 9 | 21 | 2 | 👑👑 | 55 |
+| [imrishabh18](#imrishabh18) | 1 | 9 | 2 | ⭐⭐⭐ | 7 |
+| [ArnavK-09](#ArnavK-09) | 2 | 4 | 0 | ⭐⭐ | 2 |
+| [Anshgrover23](#Anshgrover23) | 1 | 3 | 1 | ⭐⭐ | 4 |
 | [krushnarout](#krushnarout) | 0 | 3 | 0 | ⭐ | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 3 |  | 0 |
 | [dhvll](#dhvll) | 0 | 1 | 0 |  | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 3 |  | 0 |
 | [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 |  | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 0 | 0 | 1 |  | 1 |
 | [kom-senapati](#kom-senapati) | 0 | 1 | 0 |  | 0 |
 | [ricohageman](#ricohageman) | 0 | 1 | 0 |  | 0 |
+| [gurjeetsinghvirdee](#gurjeetsinghvirdee) | 0 | 0 | 1 |  | 1 |
 
 ## Review Table
 
@@ -68,28 +71,109 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [dhvll](#dhvll) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 13 | 5 | 1 | 4 | 3 | 11 | 7 | 7 | 3 | 14 |
-| [MustafaMulla29](#MustafaMulla29) | 7 | 1 | 0 | 0 | 0 | 4 | 1 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 1 | 1 | 0 | 19 | 5 | 33 | 30 | 50 | 34 | 818 |
-| [Anshgrover23](#Anshgrover23) | 10 | 3 | 2 | 0 | 0 | 7 | 3 | 3 | 1 | 10 |
-| [onyedikachi-david](#onyedikachi-david) | 1 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 15 | 7 | 1 | 4 | 3 | 15 | 12 | 7 | 3 | 14 |
+| [seveibar](#seveibar) | 1 | 1 | 0 | 25 | 5 | 39 | 35 | 55 | 37 | 843 |
+| [dhvll](#dhvll) | 9 | 1 | 4 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 8 | 1 | 0 | 0 | 0 | 6 | 1 | 0 | 0 | 0 |
+| [Anshgrover23](#Anshgrover23) | 21 | 6 | 4 | 0 | 1 | 11 | 6 | 4 | 1 | 10 |
+| [onyedikachi-david](#onyedikachi-david) | 2 | 0 | 1 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 15 | 6 | 1 | 2 | 6 | 8 | 6 | 2 | 0 | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 10 |
-| [ArnavK-09](#ArnavK-09) | 14 | 5 | 2 | 1 | 0 | 7 | 5 | 2 | 0 | 0 |
-| [siva222003](#siva222003) | 3 | 1 | 1 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
-| [kom-senapati](#kom-senapati) | 3 | 2 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
+| [kom-senapati](#kom-senapati) | 5 | 2 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
+| [siva222003](#siva222003) | 4 | 1 | 2 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 10 | 4 | 0 | 0 | 0 |
 | [krushnarout](#krushnarout) | 5 | 3 | 2 | 0 | 0 | 4 | 3 | 0 | 0 | 0 |
+| [gurjeetsinghvirdee](#gurjeetsinghvirdee) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
 | [ricohageman](#ricohageman) | 2 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
 
 ## Changes by Repository
+
+### [tscircuit/core](https://github.com/tscircuit/core)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#713](https://github.com/tscircuit/core/pull/713) | 🐳 Major | imrishabh18 | Adds a utility function to apply manual edit events to a PCB manual edits file. | ✅ |
+| [#711](https://github.com/tscircuit/core/pull/711) | 🐳 Major | seveibar | Add support for new chip selection syntax: `sel.U1(MyChip)` and `sel.U1<"custompin1" | "custompin2">()` | ✅ |
+| [#714](https://github.com/tscircuit/core/pull/714) | 🐙 Minor | seveibar | Updates the Unravel Autorouter to version 0.0.42 | ✅ |
+| [#710](https://github.com/tscircuit/core/pull/710) | 🐙 Minor | seveibar | Replace "visualize" with "preview" to speed up autorouter previews | ✅ |
+| [#705](https://github.com/tscircuit/core/pull/705) | 🐙 Minor | seveibar | Update the capacity autorouter to version 0.0.34 | ✅ |
 
 ### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#206](https://github.com/tscircuit/pcb-viewer/pull/206) | 🐙 Minor | imrishabh18 | Fix for issue with transform state going back to default. | ✅ |
 | [#200](https://github.com/tscircuit/pcb-viewer/pull/200) | 🐙 Minor | dhvll | Improve bottom silkscreen visibility by changing its color from blue to yellow. | ✅ |
 | [#202](https://github.com/tscircuit/pcb-viewer/pull/202) | 🟣 | seveibar | Fixes the initial transform of the PCBViewer component to ensure it is properly initialized and focused. | ✅ |
+
+### [tscircuit/dsn-converter](https://github.com/tscircuit/dsn-converter)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#105](https://github.com/tscircuit/dsn-converter/pull/105) | 🐙 Minor | imrishabh18 | The change matches the number of `pcb_via` with the `route_type` via of `pcb_trace` to fix a mismatch between the two. | ✅ |
+
+### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#745](https://github.com/tscircuit/tscircuit.com/pull/745) | 🐙 Minor | imrishabh18 | Show the menu only when the snippet is saved | ❌ |
+| [#743](https://github.com/tscircuit/tscircuit.com/pull/743) | 🐙 Minor | imrishabh18 | Add hover effect and make the whole area selectable on the package visibility settings dialog | ✅ |
+| [#738](https://github.com/tscircuit/tscircuit.com/pull/738) | 🐙 Minor | imrishabh18 | Updates the `@tscircuit/core` and `@tscircuit/runframe` dependencies, and adds a new feature to apply PCB edit events to the manual edits file. | ✅ |
+| [#735](https://github.com/tscircuit/tscircuit.com/pull/735) | 🐌 Tiny | imrishabh18 | Update lockfile to ensure dependencies are up-to-date. | ❌ |
+| [#746](https://github.com/tscircuit/tscircuit.com/pull/746) | 🟣 | Anshgrover23 |  | ✅ |
+| [#716](https://github.com/tscircuit/tscircuit.com/pull/716) | 🐙 Minor | kom-senapati | Add a new "Starred Snippets" tab to the user profile page. | ❌ |
+
+### [tscircuit/eval](https://github.com/tscircuit/eval)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#163](https://github.com/tscircuit/eval/pull/163) | 🐳 Major | Anshgrover23 | Adds support for parent directory imports in the `resolveFilePath` function. | ✅ |
+| [#161](https://github.com/tscircuit/eval/pull/161) | 🐙 Minor | imrishabh18 | Fix for a bug that caused an error when importing a `manual-edits.json` file. | ✅ |
+| [#154](https://github.com/tscircuit/eval/pull/154) | 🐙 Minor | seveibar | Add support for subdirectory relative imports and absolute project directory imports | ✅ |
+| [#151](https://github.com/tscircuit/eval/pull/151) | 🐙 Minor | seveibar | Add support for ".ts" file extension loading in eval | ✅ |
+| [#148](https://github.com/tscircuit/eval/pull/148) | 🐌 Tiny | imrishabh18 | Update config to not generate lockfile | ❌ |
+| [#150](https://github.com/tscircuit/eval/pull/150) | 🟣 | seveibar | Adds better file system normalization support, including the ability to import files without file extensions, introduces a new `runTscircuitCode` function, refactors import keys for clarity, and adds default entrypoint configuration. | ❌ |
+| [#146](https://github.com/tscircuit/eval/pull/146) | 🟣 | seveibar | Add an auto-merge workflow for pull requests updating the `@tscircuit/core` package. | ✅ |
+| [#168](https://github.com/tscircuit/eval/pull/168) | 🟣 | tscircuitbot | Automated update of @tscircuit/core to v0.0.357. | ✅ |
+| [#166](https://github.com/tscircuit/eval/pull/166) | 🐌 Tiny | tscircuitbot | Automated update of @tscircuit/core to v0.0.356. | ✅ |
+| [#159](https://github.com/tscircuit/eval/pull/159) | 🐌 Tiny | tscircuitbot | Update @tscircuit/core to v0.0.355 | ✅ |
+| [#144](https://github.com/tscircuit/eval/pull/144) | 🐌 Tiny | tscircuitbot | Update @tscircuit/core to v0.0.353 | ✅ |
+
+### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#370](https://github.com/tscircuit/runframe/pull/370) | 🐳 Major | ArnavK-09 | Introduces a new `ImportComponentDialog` component that allows users to search and import components from JLC and tscircuit APIs. | ✅ |
+| [#369](https://github.com/tscircuit/runframe/pull/369) | 🐙 Minor | imrishabh18 | Adds support for manual edits in the RunFrameWithApi component. | ❌ |
+| [#359](https://github.com/tscircuit/runframe/pull/359) | 🐙 Minor | imrishabh18 | The pull request updates the `@tscircuit/eval` version from `0.0.131` to `0.0.135` and adds a new test to verify that the `manualEdits` functionality works as expected. | ✅ |
+| [#347](https://github.com/tscircuit/runframe/pull/347) | 🐙 Minor | seveibar | Add a "CLI Admin Panel" option in the advanced menu to help debug CLI events/files. | ✅ |
+| [#339](https://github.com/tscircuit/runframe/pull/339) | 🐙 Minor | seveibar | The pull request adds a new feature that allows the user to force the latest @tscircuit/eval version to be used in the CLI by default. | ❌ |
+| [#354](https://github.com/tscircuit/runframe/pull/354) | 🐙 Minor | krushnarout | Hides the preview graphics after the PCB traces are rendered | ✅ |
+| [#357](https://github.com/tscircuit/runframe/pull/357) | 🐙 Minor | krushnarout | Fix error tab content getting cut off in full screen mode | ✅ |
+| [#341](https://github.com/tscircuit/runframe/pull/341) | 🐙 Minor | krushnarout | The pull request changes the default behavior of the CircuitJsonPreview component to open in full screen mode. | ✅ |
+| [#348](https://github.com/tscircuit/runframe/pull/348) | 🐌 Tiny | seveibar | Use a simpler expression to simplify error text and avoid cutting off important text. | ✅ |
+
+### [tscircuit/cli](https://github.com/tscircuit/cli)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#115](https://github.com/tscircuit/cli/pull/115) | 🐳 Major | ArnavK-09 | Adds support for exporting snippets in various formats and unites the export system. | ✅ |
+| [#127](https://github.com/tscircuit/cli/pull/127) | 🐙 Minor | imrishabh18 | Upgrade the `@tscircuit/runframe` dependency to version `0.0.278` which adds manual edits support. | ✅ |
+| [#119](https://github.com/tscircuit/cli/pull/119) | 🐙 Minor | seveibar | Upgrade the `@tscircuit/runframe` package to version `0.0.271` | ❌ |
+| [#113](https://github.com/tscircuit/cli/pull/113) | 🐙 Minor | seveibar | Adds a GitHub Actions workflow to check for non-dev dependencies in the project and prevent them from being added. | ✅ |
+| [#112](https://github.com/tscircuit/cli/pull/112) | 🐙 Minor | seveibar | Stylize the tsci dev command | ✅ |
+| [#110](https://github.com/tscircuit/cli/pull/110) | 🐙 Minor | seveibar | Update the `@tscircuit/runframe` dependency to version `0.0.254` to get the "force latest eval" feature. | ✅ |
+| [#108](https://github.com/tscircuit/cli/pull/108) | 🐙 Minor | seveibar | Update tscircuit/core and tscircuit/eval dependencies to latest versions | ✅ |
+| [#117](https://github.com/tscircuit/cli/pull/117) | 🐙 Minor | ArnavK-09 | Adds error handling to the package installation process to provide better guidance to the user in case of failures. | ✅ |
+| [#111](https://github.com/tscircuit/cli/pull/111) | 🐙 Minor | ArnavK-09 | Add tests for the `clone` command functionality in the CLI | ✅ |
+
+### [tscircuit/circuit-json-util](https://github.com/tscircuit/circuit-json-util)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#26](https://github.com/tscircuit/circuit-json-util/pull/26) | 🐳 Major | seveibar | The pull request adds an optimized version of the `@tscircuit/soup-util` library with indexing for faster lookups, especially for large circuit soups. | ❌ |
+| [#28](https://github.com/tscircuit/circuit-json-util/pull/28) | 🐙 Minor | seveibar | Implement a function `getPrimaryId` that returns the primary ID of a circuit element based on its type. | ✅ |
+| [#27](https://github.com/tscircuit/circuit-json-util/pull/27) | 🐙 Minor | seveibar | Rename everything from "su" to "cju" and fix types. | ❌ |
 
 ### [tscircuit/props](https://github.com/tscircuit/props)
 
@@ -97,44 +181,21 @@ pie
 |------|--------|-------------|-------------|-------------------|
 | [#197](https://github.com/tscircuit/props/pull/197) | 🐳 Major | seveibar | Enhances the `ChipProps` type with more advanced features, including support for more complex pin label definitions and better type safety for the `connections` property. | ✅ |
 | [#198](https://github.com/tscircuit/props/pull/198) | 🐙 Minor | seveibar | Adds `ChipConnections` and `ChipPinLabels` utility types to the library. | ✅ |
+| [#200](https://github.com/tscircuit/props/pull/200) | 🐌 Tiny | Anshgrover23 | Fix a transistor test case to use the correct property name for the transistor type. | ✅ |
 
-### [tscircuit/core](https://github.com/tscircuit/core)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#711](https://github.com/tscircuit/core/pull/711) | 🐳 Major | seveibar | Add support for new chip selection syntax: `sel.U1(MyChip)` and `sel.U1<"custompin1" | "custompin2">()` | ✅ |
-| [#713](https://github.com/tscircuit/core/pull/713) | 🐳 Major | imrishabh18 | Adds a utility function to apply manual edit events to a PCB manual edits file. | ✅ |
-| [#714](https://github.com/tscircuit/core/pull/714) | 🐙 Minor | seveibar | Updates the Unravel Autorouter to version 0.0.42 | ✅ |
-| [#710](https://github.com/tscircuit/core/pull/710) | 🐙 Minor | seveibar | Replace "visualize" with "preview" to speed up autorouter previews | ✅ |
-| [#705](https://github.com/tscircuit/core/pull/705) | 🐙 Minor | seveibar | Update the capacity autorouter to version 0.0.34 | ✅ |
-
-### [tscircuit/graphics-debug](https://github.com/tscircuit/graphics-debug)
+### [tscircuit/math-utils](https://github.com/tscircuit/math-utils)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#50](https://github.com/tscircuit/graphics-debug/pull/50) | 🐙 Minor | seveibar | Add default line colors instead of black for canvas rendering, add stroke dash support. | ❌ |
-
-### [tscircuit/eval](https://github.com/tscircuit/eval)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#154](https://github.com/tscircuit/eval/pull/154) | 🐙 Minor | seveibar | Add support for subdirectory relative imports and absolute project directory imports | ✅ |
-| [#151](https://github.com/tscircuit/eval/pull/151) | 🐙 Minor | seveibar | Add support for ".ts" file extension loading in eval | ✅ |
-| [#150](https://github.com/tscircuit/eval/pull/150) | 🟣 | seveibar | Adds better file system normalization support, including the ability to import files without file extensions, introduces a new `runTscircuitCode` function, refactors import keys for clarity, and adds default entrypoint configuration. | ❌ |
-| [#146](https://github.com/tscircuit/eval/pull/146) | 🟣 | seveibar | Add an auto-merge workflow for pull requests updating the `@tscircuit/core` package. | ✅ |
-| [#163](https://github.com/tscircuit/eval/pull/163) | 🐳 Major | Anshgrover23 | Adds support for parent directory imports in the `resolveFilePath` function. | ✅ |
-| [#161](https://github.com/tscircuit/eval/pull/161) | 🐙 Minor | imrishabh18 | Fix for a bug that caused an error when importing a `manual-edits.json` file. | ✅ |
-| [#148](https://github.com/tscircuit/eval/pull/148) | 🐌 Tiny | imrishabh18 | Update config to not generate lockfile | ❌ |
-| [#168](https://github.com/tscircuit/eval/pull/168) | 🟣 | tscircuitbot | Automated update of @tscircuit/core to v0.0.357. | ✅ |
-| [#166](https://github.com/tscircuit/eval/pull/166) | 🐌 Tiny | tscircuitbot | Automated update of @tscircuit/core to v0.0.356. | ✅ |
-| [#159](https://github.com/tscircuit/eval/pull/159) | 🐌 Tiny | tscircuitbot | Update @tscircuit/core to v0.0.355 | ✅ |
-| [#144](https://github.com/tscircuit/eval/pull/144) | 🐌 Tiny | tscircuitbot | Update @tscircuit/core to v0.0.353 | ✅ |
+| [#6](https://github.com/tscircuit/math-utils/pull/6) | 🐳 Major | seveibar | Introduce new segment to box distance functions | ❌ |
+| [#5](https://github.com/tscircuit/math-utils/pull/5) | 🐙 Minor | seveibar | Adds a new function `segmentToSegmentMinDistance` to calculate the minimum distance between two line segments. | ❌ |
 
 ### [tscircuit/docs](https://github.com/tscircuit/docs)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#22](https://github.com/tscircuit/docs/pull/22) | 🐳 Major | seveibar | The pull request documents the new "selector" pattern for defining chips with type-safe chip properties and pin references. | ❌ |
+| [#24](https://github.com/tscircuit/docs/pull/24) | 🐌 Tiny | gurjeetsinghvirdee | Added Twitter and LinkedIn meta tags to the Docusaurus configuration to improve social media sharing. | ✅ |
 
 ### [tscircuit/unravel-autorouter](https://github.com/tscircuit/unravel-autorouter)
 
@@ -151,30 +212,11 @@ pie
 | [#57](https://github.com/tscircuit/unravel-autorouter/pull/57) | 🐙 Minor | ricohageman | Reduces the time spent sorting candidates by keeping them sorted inside a priority queue, yielding a 17% speedup on the ledmatrix3 benchmark. | ❌ |
 | [#70](https://github.com/tscircuit/unravel-autorouter/pull/70) | 🐌 Tiny | seveibar | Add a new Keyboard4 example file to the project. | ✅ |
 
-### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+### [tscircuit/graphics-debug](https://github.com/tscircuit/graphics-debug)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#370](https://github.com/tscircuit/runframe/pull/370) | 🐳 Major | ArnavK-09 | Introduces a new `ImportComponentDialog` component that allows users to search and import components from JLC and tscircuit APIs. | ✅ |
-| [#347](https://github.com/tscircuit/runframe/pull/347) | 🐙 Minor | seveibar | Add a "CLI Admin Panel" option in the advanced menu to help debug CLI events/files. | ✅ |
-| [#339](https://github.com/tscircuit/runframe/pull/339) | 🐙 Minor | seveibar | The pull request adds a new feature that allows the user to force the latest @tscircuit/eval version to be used in the CLI by default. | ❌ |
-| [#359](https://github.com/tscircuit/runframe/pull/359) | 🐙 Minor | imrishabh18 | The pull request updates the `@tscircuit/eval` version from `0.0.131` to `0.0.135` and adds a new test to verify that the `manualEdits` functionality works as expected. | ✅ |
-| [#354](https://github.com/tscircuit/runframe/pull/354) | 🐙 Minor | krushnarout | Hides the preview graphics after the PCB traces are rendered | ✅ |
-| [#357](https://github.com/tscircuit/runframe/pull/357) | 🐙 Minor | krushnarout | Fix error tab content getting cut off in full screen mode | ✅ |
-| [#341](https://github.com/tscircuit/runframe/pull/341) | 🐙 Minor | krushnarout | The pull request changes the default behavior of the CircuitJsonPreview component to open in full screen mode. | ✅ |
-| [#348](https://github.com/tscircuit/runframe/pull/348) | 🐌 Tiny | seveibar | Use a simpler expression to simplify error text and avoid cutting off important text. | ✅ |
-
-### [tscircuit/cli](https://github.com/tscircuit/cli)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#119](https://github.com/tscircuit/cli/pull/119) | 🐙 Minor | seveibar | Upgrade the `@tscircuit/runframe` package to version `0.0.271` | ❌ |
-| [#113](https://github.com/tscircuit/cli/pull/113) | 🐙 Minor | seveibar | Adds a GitHub Actions workflow to check for non-dev dependencies in the project and prevent them from being added. | ✅ |
-| [#112](https://github.com/tscircuit/cli/pull/112) | 🐙 Minor | seveibar | Stylize the tsci dev command | ✅ |
-| [#110](https://github.com/tscircuit/cli/pull/110) | 🐙 Minor | seveibar | Update the `@tscircuit/runframe` dependency to version `0.0.254` to get the "force latest eval" feature. | ✅ |
-| [#108](https://github.com/tscircuit/cli/pull/108) | 🐙 Minor | seveibar | Update tscircuit/core and tscircuit/eval dependencies to latest versions | ✅ |
-| [#117](https://github.com/tscircuit/cli/pull/117) | 🐙 Minor | ArnavK-09 | Adds error handling to the package installation process to provide better guidance to the user in case of failures. | ✅ |
-| [#111](https://github.com/tscircuit/cli/pull/111) | 🐙 Minor | ArnavK-09 | Add tests for the `clone` command functionality in the CLI | ✅ |
+| [#50](https://github.com/tscircuit/graphics-debug/pull/50) | 🐙 Minor | seveibar | Add default line colors instead of black for canvas rendering, add stroke dash support. | ❌ |
 
 ### [tscircuit/easyeda-converter](https://github.com/tscircuit/easyeda-converter)
 
@@ -186,6 +228,7 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#103](https://github.com/tscircuit/contribution-tracker/pull/103) | 🐙 Minor | Anshgrover23 | Fixes a bug where distinct PRs reviewed were not adding to the overall score | ❌ |
 | [#99](https://github.com/tscircuit/contribution-tracker/pull/99) | 🐙 Minor | Anshgrover23 | Adds current milestone information and a column to display if a PR is aligned with the current milestone | ✅ |
 | [#100](https://github.com/tscircuit/contribution-tracker/pull/100) | 🐙 Minor | ArnavK-09 | Adjust layout and spacing of the ContributorOverview component for better responsiveness. | ✅ |
 | [#101](https://github.com/tscircuit/contribution-tracker/pull/101) | 🐌 Tiny | Ayushjhawar8 | Add "tscircuitbot" to the list of full-time contributors. | ✅ |
@@ -196,20 +239,6 @@ pie
 |------|--------|-------------|-------------|-------------------|
 | [#221](https://github.com/tscircuit/3d-viewer/pull/221) | 🐙 Minor | MustafaMulla29 | Fixed a bug where the 3D viewer would be blank when the board's dimensions are 0. | ✅ |
 
-### [tscircuit/dsn-converter](https://github.com/tscircuit/dsn-converter)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#105](https://github.com/tscircuit/dsn-converter/pull/105) | 🐙 Minor | imrishabh18 | The change matches the number of `pcb_via` with the `route_type` via of `pcb_trace` to fix a mismatch between the two. | ✅ |
-
-### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#738](https://github.com/tscircuit/tscircuit.com/pull/738) | 🐙 Minor | imrishabh18 | Updates the `@tscircuit/core` and `@tscircuit/runframe` dependencies, and adds a new feature to apply PCB edit events to the manual edits file. | ✅ |
-| [#716](https://github.com/tscircuit/tscircuit.com/pull/716) | 🐙 Minor | kom-senapati | Add a new "Starred Snippets" tab to the user profile page. | ❌ |
-| [#735](https://github.com/tscircuit/tscircuit.com/pull/735) | 🐌 Tiny | imrishabh18 | Update lockfile to ensure dependencies are up-to-date. | ❌ |
-
 ### [tscircuit/file-server](https://github.com/tscircuit/file-server)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
@@ -217,6 +246,23 @@ pie
 | [#6](https://github.com/tscircuit/file-server/pull/6) | 🐙 Minor | ArnavK-09 | Implement new routes for downloading files via GET requests, with tests to verify the functionality. | ✅ |
 
 ## Changes by Contributor
+
+### [imrishabh18](https://github.com/imrishabh18)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#713](https://github.com/tscircuit/core/pull/713) | 🐳 Major | Adds a utility function to apply manual edit events to a PCB manual edits file. | ✅ |
+| [#206](https://github.com/tscircuit/pcb-viewer/pull/206) | 🐙 Minor | Fix for issue with transform state going back to default. | ✅ |
+| [#105](https://github.com/tscircuit/dsn-converter/pull/105) | 🐙 Minor | The change matches the number of `pcb_via` with the `route_type` via of `pcb_trace` to fix a mismatch between the two. | ✅ |
+| [#745](https://github.com/tscircuit/tscircuit.com/pull/745) | 🐙 Minor | Show the menu only when the snippet is saved | ❌ |
+| [#743](https://github.com/tscircuit/tscircuit.com/pull/743) | 🐙 Minor | Add hover effect and make the whole area selectable on the package visibility settings dialog | ✅ |
+| [#738](https://github.com/tscircuit/tscircuit.com/pull/738) | 🐙 Minor | Updates the `@tscircuit/core` and `@tscircuit/runframe` dependencies, and adds a new feature to apply PCB edit events to the manual edits file. | ✅ |
+| [#161](https://github.com/tscircuit/eval/pull/161) | 🐙 Minor | Fix for a bug that caused an error when importing a `manual-edits.json` file. | ✅ |
+| [#369](https://github.com/tscircuit/runframe/pull/369) | 🐙 Minor | Adds support for manual edits in the RunFrameWithApi component. | ❌ |
+| [#359](https://github.com/tscircuit/runframe/pull/359) | 🐙 Minor | The pull request updates the `@tscircuit/eval` version from `0.0.131` to `0.0.135` and adds a new test to verify that the `manualEdits` functionality works as expected. | ✅ |
+| [#127](https://github.com/tscircuit/cli/pull/127) | 🐙 Minor | Upgrade the `@tscircuit/runframe` dependency to version `0.0.278` which adds manual edits support. | ✅ |
+| [#735](https://github.com/tscircuit/tscircuit.com/pull/735) | 🐌 Tiny | Update lockfile to ensure dependencies are up-to-date. | ❌ |
+| [#148](https://github.com/tscircuit/eval/pull/148) | 🐌 Tiny | Update config to not generate lockfile | ❌ |
 
 ### [dhvll](https://github.com/dhvll)
 
@@ -229,22 +275,27 @@ pie
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#202](https://github.com/tscircuit/pcb-viewer/pull/202) | 🟣 | Fixes the initial transform of the PCBViewer component to ensure it is properly initialized and focused. | ✅ |
+| [#26](https://github.com/tscircuit/circuit-json-util/pull/26) | 🐳 Major | The pull request adds an optimized version of the `@tscircuit/soup-util` library with indexing for faster lookups, especially for large circuit soups. | ❌ |
 | [#197](https://github.com/tscircuit/props/pull/197) | 🐳 Major | Enhances the `ChipProps` type with more advanced features, including support for more complex pin label definitions and better type safety for the `connections` property. | ✅ |
 | [#711](https://github.com/tscircuit/core/pull/711) | 🐳 Major | Add support for new chip selection syntax: `sel.U1(MyChip)` and `sel.U1<"custompin1" | "custompin2">()` | ✅ |
-| [#198](https://github.com/tscircuit/props/pull/198) | 🐙 Minor | Adds `ChipConnections` and `ChipPinLabels` utility types to the library. | ✅ |
-| [#714](https://github.com/tscircuit/core/pull/714) | 🐙 Minor | Updates the Unravel Autorouter to version 0.0.42 | ✅ |
-| [#710](https://github.com/tscircuit/core/pull/710) | 🐙 Minor | Replace "visualize" with "preview" to speed up autorouter previews | ✅ |
-| [#705](https://github.com/tscircuit/core/pull/705) | 🐙 Minor | Update the capacity autorouter to version 0.0.34 | ✅ |
-| [#50](https://github.com/tscircuit/graphics-debug/pull/50) | 🐙 Minor | Add default line colors instead of black for canvas rendering, add stroke dash support. | ❌ |
-| [#154](https://github.com/tscircuit/eval/pull/154) | 🐙 Minor | Add support for subdirectory relative imports and absolute project directory imports | ✅ |
-| [#151](https://github.com/tscircuit/eval/pull/151) | 🐙 Minor | Add support for ".ts" file extension loading in eval | ✅ |
-| [#150](https://github.com/tscircuit/eval/pull/150) | 🟣 | Adds better file system normalization support, including the ability to import files without file extensions, introduces a new `runTscircuitCode` function, refactors import keys for clarity, and adds default entrypoint configuration. | ❌ |
-| [#146](https://github.com/tscircuit/eval/pull/146) | 🟣 | Add an auto-merge workflow for pull requests updating the `@tscircuit/core` package. | ✅ |
+| [#6](https://github.com/tscircuit/math-utils/pull/6) | 🐳 Major | Introduce new segment to box distance functions | ❌ |
 | [#22](https://github.com/tscircuit/docs/pull/22) | 🐳 Major | The pull request documents the new "selector" pattern for defining chips with type-safe chip properties and pin references. | ❌ |
 | [#78](https://github.com/tscircuit/unravel-autorouter/pull/78) | 🐳 Major | Introduces a "Closed Form Two Trace Transition Crossing Solver" feature that allows downloading unravel sections. | ✅ |
 | [#77](https://github.com/tscircuit/unravel-autorouter/pull/77) | 🐳 Major | This pull request introduces a multi-section capacity planning feature, where the connections are sorted prior to capacity pathing so that the shortest routes are routed first. It also deletes a significant amount of legacy solver code. | ✅ |
 | [#75](https://github.com/tscircuit/unravel-autorouter/pull/75) | 🐳 Major | The pull request allows straw solving for smaller nodes, penalizes small nodes in capacity pathing, and fixes an occasional via-in-straw issue. | ✅ |
 | [#72](https://github.com/tscircuit/unravel-autorouter/pull/72) | 🐳 Major | Fixes not accepting solutions due to cell step rounding issues via SQRT2 multiplication and adds a new test case that shows the existing solvers don't properly handle segment points that overlap X,Y on different Z. | ✅ |
+| [#28](https://github.com/tscircuit/circuit-json-util/pull/28) | 🐙 Minor | Implement a function `getPrimaryId` that returns the primary ID of a circuit element based on its type. | ✅ |
+| [#27](https://github.com/tscircuit/circuit-json-util/pull/27) | 🐙 Minor | Rename everything from "su" to "cju" and fix types. | ❌ |
+| [#198](https://github.com/tscircuit/props/pull/198) | 🐙 Minor | Adds `ChipConnections` and `ChipPinLabels` utility types to the library. | ✅ |
+| [#714](https://github.com/tscircuit/core/pull/714) | 🐙 Minor | Updates the Unravel Autorouter to version 0.0.42 | ✅ |
+| [#710](https://github.com/tscircuit/core/pull/710) | 🐙 Minor | Replace "visualize" with "preview" to speed up autorouter previews | ✅ |
+| [#705](https://github.com/tscircuit/core/pull/705) | 🐙 Minor | Update the capacity autorouter to version 0.0.34 | ✅ |
+| [#5](https://github.com/tscircuit/math-utils/pull/5) | 🐙 Minor | Adds a new function `segmentToSegmentMinDistance` to calculate the minimum distance between two line segments. | ❌ |
+| [#50](https://github.com/tscircuit/graphics-debug/pull/50) | 🐙 Minor | Add default line colors instead of black for canvas rendering, add stroke dash support. | ❌ |
+| [#154](https://github.com/tscircuit/eval/pull/154) | 🐙 Minor | Add support for subdirectory relative imports and absolute project directory imports | ✅ |
+| [#151](https://github.com/tscircuit/eval/pull/151) | 🐙 Minor | Add support for ".ts" file extension loading in eval | ✅ |
+| [#150](https://github.com/tscircuit/eval/pull/150) | 🟣 | Adds better file system normalization support, including the ability to import files without file extensions, introduces a new `runTscircuitCode` function, refactors import keys for clarity, and adds default entrypoint configuration. | ❌ |
+| [#146](https://github.com/tscircuit/eval/pull/146) | 🟣 | Add an auto-merge workflow for pull requests updating the `@tscircuit/core` package. | ✅ |
 | [#347](https://github.com/tscircuit/runframe/pull/347) | 🐙 Minor | Add a "CLI Admin Panel" option in the advanced menu to help debug CLI events/files. | ✅ |
 | [#339](https://github.com/tscircuit/runframe/pull/339) | 🐙 Minor | The pull request adds a new feature that allows the user to force the latest @tscircuit/eval version to be used in the CLI by default. | ❌ |
 | [#119](https://github.com/tscircuit/cli/pull/119) | 🐙 Minor | Upgrade the `@tscircuit/runframe` package to version `0.0.271` | ❌ |
@@ -265,25 +316,16 @@ pie
 |------|--------|-------------|-------------------|
 | [#163](https://github.com/tscircuit/eval/pull/163) | 🐳 Major | Adds support for parent directory imports in the `resolveFilePath` function. | ✅ |
 | [#176](https://github.com/tscircuit/easyeda-converter/pull/176) | 🐙 Minor | Refactors the component definition to use ChipProps for type-safe component definition. | ✅ |
+| [#103](https://github.com/tscircuit/contribution-tracker/pull/103) | 🐙 Minor | Fixes a bug where distinct PRs reviewed were not adding to the overall score | ❌ |
 | [#99](https://github.com/tscircuit/contribution-tracker/pull/99) | 🐙 Minor | Adds current milestone information and a column to display if a PR is aligned with the current milestone | ✅ |
+| [#200](https://github.com/tscircuit/props/pull/200) | 🐌 Tiny | Fix a transistor test case to use the correct property name for the transistor type. | ✅ |
+| [#746](https://github.com/tscircuit/tscircuit.com/pull/746) | 🟣 |  | ✅ |
 
 ### [MustafaMulla29](https://github.com/MustafaMulla29)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#221](https://github.com/tscircuit/3d-viewer/pull/221) | 🐙 Minor | Fixed a bug where the 3D viewer would be blank when the board's dimensions are 0. | ✅ |
-
-### [imrishabh18](https://github.com/imrishabh18)
-
-| PR # | Impact | Description | Milestone Aligned |
-|------|--------|-------------|-------------------|
-| [#713](https://github.com/tscircuit/core/pull/713) | 🐳 Major | Adds a utility function to apply manual edit events to a PCB manual edits file. | ✅ |
-| [#105](https://github.com/tscircuit/dsn-converter/pull/105) | 🐙 Minor | The change matches the number of `pcb_via` with the `route_type` via of `pcb_trace` to fix a mismatch between the two. | ✅ |
-| [#738](https://github.com/tscircuit/tscircuit.com/pull/738) | 🐙 Minor | Updates the `@tscircuit/core` and `@tscircuit/runframe` dependencies, and adds a new feature to apply PCB edit events to the manual edits file. | ✅ |
-| [#161](https://github.com/tscircuit/eval/pull/161) | 🐙 Minor | Fix for a bug that caused an error when importing a `manual-edits.json` file. | ✅ |
-| [#359](https://github.com/tscircuit/runframe/pull/359) | 🐙 Minor | The pull request updates the `@tscircuit/eval` version from `0.0.131` to `0.0.135` and adds a new test to verify that the `manualEdits` functionality works as expected. | ✅ |
-| [#735](https://github.com/tscircuit/tscircuit.com/pull/735) | 🐌 Tiny | Update lockfile to ensure dependencies are up-to-date. | ❌ |
-| [#148](https://github.com/tscircuit/eval/pull/148) | 🐌 Tiny | Update config to not generate lockfile | ❌ |
 
 ### [Ayushjhawar8](https://github.com/Ayushjhawar8)
 
@@ -296,6 +338,7 @@ pie
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#370](https://github.com/tscircuit/runframe/pull/370) | 🐳 Major | Introduces a new `ImportComponentDialog` component that allows users to search and import components from JLC and tscircuit APIs. | ✅ |
+| [#115](https://github.com/tscircuit/cli/pull/115) | 🐳 Major | Adds support for exporting snippets in various formats and unites the export system. | ✅ |
 | [#100](https://github.com/tscircuit/contribution-tracker/pull/100) | 🐙 Minor | Adjust layout and spacing of the ContributorOverview component for better responsiveness. | ✅ |
 | [#117](https://github.com/tscircuit/cli/pull/117) | 🐙 Minor | Adds error handling to the package installation process to provide better guidance to the user in case of failures. | ✅ |
 | [#111](https://github.com/tscircuit/cli/pull/111) | 🐙 Minor | Add tests for the `clone` command functionality in the CLI | ✅ |
@@ -323,6 +366,12 @@ pie
 | [#354](https://github.com/tscircuit/runframe/pull/354) | 🐙 Minor | Hides the preview graphics after the PCB traces are rendered | ✅ |
 | [#357](https://github.com/tscircuit/runframe/pull/357) | 🐙 Minor | Fix error tab content getting cut off in full screen mode | ✅ |
 | [#341](https://github.com/tscircuit/runframe/pull/341) | 🐙 Minor | The pull request changes the default behavior of the CircuitJsonPreview component to open in full screen mode. | ✅ |
+
+### [gurjeetsinghvirdee](https://github.com/gurjeetsinghvirdee)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#24](https://github.com/tscircuit/docs/pull/24) | 🐌 Tiny | Added Twitter and LinkedIn meta tags to the Docusaurus configuration to improve social media sharing. | ✅ |
 
 ### [ricohageman](https://github.com/ricohageman)
 
