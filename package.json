@@ -28,7 +28,7 @@
     "@octokit/rest": "^21.0.0",
     "@tippyjs/react": "^4.2.6",
     "dotenv": "latest",
-    "file-system-cache": "^3.0.0-alpha.8",
+    "file-system-cache": "2.3.0",
     "level": "^8.0.1",
     "lucide-react": "^0.474.0",
     "parse-diff": "^0.11.1",
