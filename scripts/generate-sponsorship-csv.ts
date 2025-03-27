@@ -12,15 +12,32 @@ interface WeeklyData {
   [username: string]: ContributorData
 }
 
-function getLastNWeeklyFiles(n: number): string[] {
+function getLastNWeeklyFiles(n: number): { filePath: string, endDate: string }[] {
   const overviewsDir = path.join(process.cwd(), "contribution-overviews")
+  const now = new Date()
+  const cutoff = new Date(now)
+  cutoff.setDate(now.getDate() - now.getDay())
   const files = fs
     .readdirSync(overviewsDir)
     .filter((file) => file.endsWith(".json"))
-    .sort((a, b) => b.localeCompare(a)) // Sort in descending order
+    .filter((file) => {
+      const datePart = file.slice(0, 10)
+      const fileDate = new Date(datePart)
+      return fileDate <= cutoff
+    })
+    .sort((a, b) => b.localeCompare(a))
     .slice(0, n)
 
-  return files.map((file) => path.join(overviewsDir, file))
+  return files.map((file) => {
+    const weekStart = file.slice(0, 10)
+    const weekEndDate = new Date(weekStart)
+    weekEndDate.setDate(weekEndDate.getDate() + 6)
+    const endDate = weekEndDate.toISOString().slice(0, 10)
+    return {
+      filePath: path.join(overviewsDir, file),
+      endDate
+    }
+  })
 }
 
 function readWeeklyData(filePath: string): WeeklyData {
@@ -33,7 +50,7 @@ function countStars(stars: string): number {
   return (stars.match(/⭐/g) || []).length
 }
 
-function calculateSponsorship(lastFourWeeks: WeeklyData[]): {
+function calculateSponsorship(lastFourWeeks: { endDate: string, data: WeeklyData }[]): {
   username: string
   amount: number
   remarks: string
@@ -43,12 +60,14 @@ function calculateSponsorship(lastFourWeeks: WeeklyData[]): {
     {
       weeklyStars: number[]
       score: number
+      remarksArr: string[]
     }
   > = new Map()
 
   // Collect data from all weeks
-  lastFourWeeks.forEach((weekData, weekIndex) => {
-    Object.entries(weekData).forEach(([username, data]) => {
+  lastFourWeeks.forEach((week, weekIndex) => {
+    const { endDate, data } = week;
+    Object.entries(data).forEach(([username, entry]) => {
       // Skip full-timers
       if (FULL_TIMERS.includes(username)) return
 
@@ -56,31 +75,37 @@ function calculateSponsorship(lastFourWeeks: WeeklyData[]): {
         sponsorships.set(username, {
           weeklyStars: Array(4).fill(0),
           score: 0,
+          remarksArr: Array(4).fill("")
         })
       }
 
       const userSponsorship = sponsorships.get(username)!
-      if (data.stars) {
-        userSponsorship.weeklyStars[weekIndex] = countStars(data.stars)
-      }
-      if (data.score) {
-        userSponsorship.score = Math.max(userSponsorship.score, data.score)
+      const starCount = entry.stars ? countStars(entry.stars) : 0;
+      userSponsorship.weeklyStars[weekIndex] = starCount;
+      userSponsorship.remarksArr[weekIndex] = `${endDate}: ${starCount === 0 ? "0" : starCount}`;
+      if (entry.score) {
+        userSponsorship.score = Math.max(userSponsorship.score, entry.score)
       }
     })
   })
 
+  sponsorships.forEach((value) => {
+    for (let i = 0; i < lastFourWeeks.length; i++) {
+      if (!value.remarksArr[i]) {
+        value.remarksArr[i] = `${lastFourWeeks[i].endDate}: 0`;
+      }
+    }
+  });
+  
   // Calculate sponsorship amounts
   return Array.from(sponsorships.entries())
     .map(([username, data]) => {
-      const { weeklyStars, score } = data
-
-      // Use the getSponsorshipAmount function to calculate the amount
+      const { weeklyStars, score, remarksArr } = data
       let amount = getSponsorshipAmount({ weeklyStars, highScore: score })
-
       return {
         username,
         amount,
-        remarks: `Past 4 weeks stars: [${weeklyStars.join(", ")}]`,
+        remarks: remarksArr.join("; ")
       }
     })
     .filter((s) => s.amount > 0) // Only include users who should receive sponsorship
@@ -109,9 +134,10 @@ function getCurrentMonthFile(): string {
 }
 
 function main() {
-  const lastFourFiles = getLastNWeeklyFiles(4)
-  const weeklyData = lastFourFiles.map((file) => readWeeklyData(file))
-  const sponsorships = calculateSponsorship(weeklyData)
+  const lastFourWeeks = getLastNWeeklyFiles(4)
+  const weeklyData = lastFourWeeks.map(({ filePath, endDate }) => ({ endDate, data: readWeeklyData(filePath) }))
+  const weeklyDataAsc = weeklyData.reverse()
+  const sponsorships = calculateSponsorship(weeklyDataAsc)
 
   const csvContent = generateCSV(sponsorships)
 
