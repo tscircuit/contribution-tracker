@@ -12,7 +12,9 @@ interface WeeklyData {
   [username: string]: ContributorData
 }
 
-function getLastNWeeklyFiles(n: number): { filePath: string, endDate: string }[] {
+function getLastNWeeklyFiles(
+  n: number,
+): { filePath: string; endDate: string }[] {
   const overviewsDir = path.join(process.cwd(), "contribution-overviews")
   const now = new Date()
   const cutoff = new Date(now)
@@ -35,7 +37,7 @@ function getLastNWeeklyFiles(n: number): { filePath: string, endDate: string }[]
     const endDate = weekEndDate.toISOString().slice(0, 10)
     return {
       filePath: path.join(overviewsDir, file),
-      endDate
+      endDate,
     }
   })
 }
@@ -50,7 +52,9 @@ function countStars(stars: string): number {
   return (stars.match(/⭐/g) || []).length
 }
 
-function calculateSponsorship(lastFourWeeks: { endDate: string, data: WeeklyData }[]): {
+function calculateSponsorship(
+  lastFourWeeks: { endDate: string; data: WeeklyData }[],
+): {
   username: string
   amount: number
   remarks: string
@@ -66,7 +70,7 @@ function calculateSponsorship(lastFourWeeks: { endDate: string, data: WeeklyData
 
   // Collect data from all weeks
   lastFourWeeks.forEach((week, weekIndex) => {
-    const { endDate, data } = week;
+    const { endDate, data } = week
     Object.entries(data).forEach(([username, entry]) => {
       // Skip full-timers
       if (FULL_TIMERS.includes(username)) return
@@ -75,14 +79,15 @@ function calculateSponsorship(lastFourWeeks: { endDate: string, data: WeeklyData
         sponsorships.set(username, {
           weeklyStars: Array(4).fill(0),
           score: 0,
-          remarksArr: Array(4).fill("")
+          remarksArr: Array(4).fill(""),
         })
       }
 
       const userSponsorship = sponsorships.get(username)!
-      const starCount = entry.stars ? countStars(entry.stars) : 0;
-      userSponsorship.weeklyStars[weekIndex] = starCount;
-      userSponsorship.remarksArr[weekIndex] = `${endDate}: ${starCount === 0 ? "0" : starCount}`;
+      const starCount = entry.stars ? countStars(entry.stars) : 0
+      userSponsorship.weeklyStars[weekIndex] = starCount
+      userSponsorship.remarksArr[weekIndex] =
+        `${endDate}: ${starCount === 0 ? "0" : starCount}`
       if (entry.score) {
         userSponsorship.score = Math.max(userSponsorship.score, entry.score)
       }
@@ -92,11 +97,11 @@ function calculateSponsorship(lastFourWeeks: { endDate: string, data: WeeklyData
   sponsorships.forEach((value) => {
     for (let i = 0; i < lastFourWeeks.length; i++) {
       if (!value.remarksArr[i]) {
-        value.remarksArr[i] = `${lastFourWeeks[i].endDate}: 0`;
+        value.remarksArr[i] = `${lastFourWeeks[i].endDate}: 0`
       }
     }
-  });
-  
+  })
+
   // Calculate sponsorship amounts
   return Array.from(sponsorships.entries())
     .map(([username, data]) => {
@@ -105,7 +110,7 @@ function calculateSponsorship(lastFourWeeks: { endDate: string, data: WeeklyData
       return {
         username,
         amount,
-        remarks: remarksArr.join("; ")
+        remarks: remarksArr.join("; "),
       }
     })
     .filter((s) => s.amount > 0) // Only include users who should receive sponsorship
@@ -135,7 +140,10 @@ function getCurrentMonthFile(): string {
 
 function main() {
   const lastFourWeeks = getLastNWeeklyFiles(4)
-  const weeklyData = lastFourWeeks.map(({ filePath, endDate }) => ({ endDate, data: readWeeklyData(filePath) }))
+  const weeklyData = lastFourWeeks.map(({ filePath, endDate }) => ({
+    endDate,
+    data: readWeeklyData(filePath),
+  }))
   const weeklyDataAsc = weeklyData.reverse()
   const sponsorships = calculateSponsorship(weeklyDataAsc)
 
