@@ -35,7 +35,7 @@ function getFullWeeksForMonth(year: number, month: number): WeekData[] {
     .filter((file) => file.endsWith(".json"))
     .map((file) => {
       const datePart = file.replace(".json", "")
-      const fileDate = new Date(datePart) 
+      const fileDate = new Date(datePart)
       return {
         filePath: path.join(overviewsDir, file),
         fileDate,
@@ -49,20 +49,22 @@ function getFullWeeksForMonth(year: number, month: number): WeekData[] {
   for (const { filePath, fileDate, datePart } of allFiles) {
     // The date in the filename is the START of the week
     const weekStartDate = new Date(fileDate)
-    
+
     // End date is the Tuesday following the start date (which should be a Wednesday)
     const weekEndDate = new Date(fileDate)
     weekEndDate.setDate(weekEndDate.getDate() + 6) // Wednesday to Tuesday = 6 days
-    
+
     // For March, we want COMPLETE weeks:
     // - 02/26, 03/05, 03/12, 03/19 (we exclude 03/26 since it's not a complete week)
-    
+
     // Include weeks that start in February but end in target month
     // OR weeks that start AND end in the target month
     const startsBeforeMonth = weekStartDate < monthStart
-    const endsInMonth = weekEndDate >= monthStart && weekEndDate < nextMonthStart
-    const startsInMonth = weekStartDate >= monthStart && weekStartDate < nextMonthStart
-    
+    const endsInMonth =
+      weekEndDate >= monthStart && weekEndDate < nextMonthStart
+    const startsInMonth =
+      weekStartDate >= monthStart && weekStartDate < nextMonthStart
+
     // Include if it overlaps with the target month
     if ((startsBeforeMonth && endsInMonth) || startsInMonth) {
       // But only include if we have complete data for this week
@@ -99,12 +101,12 @@ function countStars(stars: string): number {
 
 // Helper to verify if a date is a Wednesday
 function isWednesday(date: Date): boolean {
-  return date.getDay() === 3; // 0 = Sunday, 3 = Wednesday
+  return date.getDay() === 3 // 0 = Sunday, 3 = Wednesday
 }
 
-// Helper to verify if a date is a Tuesday  
+// Helper to verify if a date is a Tuesday
 function isTuesday(date: Date): boolean {
-  return date.getDay() === 2; // 0 = Sunday, 2 = Tuesday
+  return date.getDay() === 2 // 0 = Sunday, 2 = Tuesday
 }
 
 interface WeeklyDataWithDates {
@@ -135,13 +137,13 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
         if (FULL_TIMERS.includes(username)) return
 
         if (!sponsorships.has(username)) {
-          // Initialize with correct weekly date ranges 
+          // Initialize with correct weekly date ranges
           const weekDates = weeksWithDates.map(
             ({ weekStartDate, weekEndDate }) => {
               return {
                 start: new Date(weekStartDate),
                 end: new Date(weekEndDate),
-              };
+              }
             },
           )
 
