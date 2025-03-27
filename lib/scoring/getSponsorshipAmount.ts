@@ -15,6 +15,7 @@ export function getSponsorshipAmount({
           sortedStars[sortedStars.length / 2]) /
         2
       : sortedStars[Math.floor(sortedStars.length / 2)]
+  const maxStarCount = Math.max(...weeklyStars)
 
   // Determine amount based on median stars
   if (medianStars >= 3) {
@@ -27,6 +28,10 @@ export function getSponsorshipAmount({
     return 70
   } else if (medianStars >= 1) {
     return 50
+  } else if (maxStarCount >= 2) {
+    return 25
+  } else if (maxStarCount >= 1) {
+    return 15
   } else if (highScore >= 3) {
     return 5
   }

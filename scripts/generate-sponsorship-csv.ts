@@ -50,9 +50,9 @@ function getFullWeeksForMonth(year: number, month: number): WeekData[] {
     // The date in the filename is the START of the week
     const weekStartDate = new Date(fileDate)
     
-    // End date is 7 days after start day (exclusive)
+    // End date is the Tuesday following the start date (which should be a Wednesday)
     const weekEndDate = new Date(fileDate)
-    weekEndDate.setDate(weekEndDate.getDate() + 6)
+    weekEndDate.setDate(weekEndDate.getDate() + 6) // Wednesday to Tuesday = 6 days
     
     // For March, we want COMPLETE weeks:
     // - 02/26, 03/05, 03/12, 03/19 (we exclude 03/26 since it's not a complete week)
@@ -97,6 +97,16 @@ function countStars(stars: string): number {
   return (stars.match(/⭐/g) || []).length
 }
 
+// Helper to verify if a date is a Wednesday
+function isWednesday(date: Date): boolean {
+  return date.getDay() === 3; // 0 = Sunday, 3 = Wednesday
+}
+
+// Helper to verify if a date is a Tuesday  
+function isTuesday(date: Date): boolean {
+  return date.getDay() === 2; // 0 = Sunday, 2 = Tuesday
+}
+
 interface WeeklyDataWithDates {
   data: WeeklyData
   weekStartDate: Date
@@ -125,12 +135,14 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
         if (FULL_TIMERS.includes(username)) return
 
         if (!sponsorships.has(username)) {
-          // Initialize with placeholder dates that will be overwritten
+          // Initialize with correct weekly date ranges 
           const weekDates = weeksWithDates.map(
-            ({ weekStartDate, weekEndDate }) => ({
-              start: new Date(weekStartDate),
-              end: new Date(weekEndDate),
-            }),
+            ({ weekStartDate, weekEndDate }) => {
+              return {
+                start: new Date(weekStartDate),
+                end: new Date(weekEndDate),
+              };
+            },
           )
 
           sponsorships.set(username, {
