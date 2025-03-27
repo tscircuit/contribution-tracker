@@ -12,15 +12,81 @@ interface WeeklyData {
   [username: string]: ContributorData
 }
 
-function getLastNWeeklyFiles(n: number): string[] {
+interface WeekData {
+  filePath: string
+  weekStartDate: Date
+  weekEndDate: Date
+}
+
+function getFullWeeksForMonth(year: number, month: number): WeekData[] {
   const overviewsDir = path.join(process.cwd(), "contribution-overviews")
-  const files = fs
+
+  // First day of the target month
+  const monthStart = new Date(year, month - 1, 1)
+  // First day of next month
+  const nextMonthStart = new Date(year, month, 1)
+
+  // We'll collect weeks with data that are relevant for the month
+  const weeks: WeekData[] = []
+
+  // Get all JSON files in the directory
+  const allFiles = fs
     .readdirSync(overviewsDir)
     .filter((file) => file.endsWith(".json"))
-    .sort((a, b) => b.localeCompare(a)) // Sort in descending order
-    .slice(0, n)
+    .map((file) => {
+      const datePart = file.replace(".json", "")
+      const fileDate = new Date(datePart)
+      return {
+        filePath: path.join(overviewsDir, file),
+        fileDate,
+        datePart, // Keep the original date string for debugging
+      }
+    })
+    .filter(({ fileDate }) => !isNaN(fileDate.getTime())) // Filter out invalid dates
+    .sort((a, b) => b.fileDate.getTime() - a.fileDate.getTime()) // Sort in descending order (newest first)
 
-  return files.map((file) => path.join(overviewsDir, file))
+  // For each week's data file
+  for (const { filePath, fileDate, datePart } of allFiles) {
+    // The date in the filename is the START of the week
+    const weekStartDate = new Date(fileDate)
+
+    // End date is the Tuesday following the start date (which should be a Wednesday)
+    const weekEndDate = new Date(fileDate)
+    weekEndDate.setDate(weekEndDate.getDate() + 6) // Wednesday to Tuesday = 6 days
+
+    // For March, we want COMPLETE weeks:
+    // - 02/26, 03/05, 03/12, 03/19 (we exclude 03/26 since it's not a complete week)
+
+    // Include weeks that start in February but end in target month
+    // OR weeks that start AND end in the target month
+    const startsBeforeMonth = weekStartDate < monthStart
+    const endsInMonth =
+      weekEndDate >= monthStart && weekEndDate < nextMonthStart
+    const startsInMonth =
+      weekStartDate >= monthStart && weekStartDate < nextMonthStart
+
+    // Include if it overlaps with the target month
+    if ((startsBeforeMonth && endsInMonth) || startsInMonth) {
+      // But only include if we have complete data for this week
+      // For files generated on the last day of the month, we might not have complete data
+      // Assuming a complete week has data through the end date
+      const today = new Date()
+      if (weekEndDate <= today) {
+        weeks.push({
+          filePath,
+          weekStartDate,
+          weekEndDate,
+        })
+      }
+    }
+
+    // Stop once we've collected 4-5 weeks or gone past the relevant time period
+    if (weeks.length >= 5 || weekStartDate > nextMonthStart) {
+      break
+    }
+  }
+
+  return weeks
 }
 
 function readWeeklyData(filePath: string): WeeklyData {
@@ -33,7 +99,23 @@ function countStars(stars: string): number {
   return (stars.match(/⭐/g) || []).length
 }
 
-function calculateSponsorship(lastFourWeeks: WeeklyData[]): {
+// Helper to verify if a date is a Wednesday
+function isWednesday(date: Date): boolean {
+  return date.getDay() === 3 // 0 = Sunday, 3 = Wednesday
+}
+
+// Helper to verify if a date is a Tuesday
+function isTuesday(date: Date): boolean {
+  return date.getDay() === 2 // 0 = Sunday, 2 = Tuesday
+}
+
+interface WeeklyDataWithDates {
+  data: WeeklyData
+  weekStartDate: Date
+  weekEndDate: Date
+}
+
+function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
   username: string
   amount: number
   remarks: string
@@ -43,44 +125,74 @@ function calculateSponsorship(lastFourWeeks: WeeklyData[]): {
     {
       weeklyStars: number[]
       score: number
+      weekDates: Array<{ start: Date; end: Date }>
     }
   > = new Map()
 
   // Collect data from all weeks
-  lastFourWeeks.forEach((weekData, weekIndex) => {
-    Object.entries(weekData).forEach(([username, data]) => {
-      // Skip full-timers
-      if (FULL_TIMERS.includes(username)) return
+  weeksWithDates.forEach(
+    ({ data: weekData, weekStartDate, weekEndDate }, weekIndex) => {
+      Object.entries(weekData).forEach(([username, data]) => {
+        // Skip full-timers
+        if (FULL_TIMERS.includes(username)) return
 
-      if (!sponsorships.has(username)) {
-        sponsorships.set(username, {
-          weeklyStars: Array(4).fill(0),
-          score: 0,
-        })
-      }
+        if (!sponsorships.has(username)) {
+          // Initialize with correct weekly date ranges
+          const weekDates = weeksWithDates.map(
+            ({ weekStartDate, weekEndDate }) => {
+              return {
+                start: new Date(weekStartDate),
+                end: new Date(weekEndDate),
+              }
+            },
+          )
 
-      const userSponsorship = sponsorships.get(username)!
-      if (data.stars) {
-        userSponsorship.weeklyStars[weekIndex] = countStars(data.stars)
-      }
-      if (data.score) {
-        userSponsorship.score = Math.max(userSponsorship.score, data.score)
-      }
-    })
-  })
+          sponsorships.set(username, {
+            weeklyStars: Array(weeksWithDates.length).fill(0),
+            score: 0,
+            weekDates,
+          })
+        }
+
+        const userSponsorship = sponsorships.get(username)!
+        if (data.stars) {
+          userSponsorship.weeklyStars[weekIndex] = countStars(data.stars)
+        }
+        if (data.score) {
+          userSponsorship.score = Math.max(userSponsorship.score, data.score)
+        }
+
+        // We don't need to update the dates here as they're already initialized correctly
+      })
+    },
+  )
+
+  // Format date as MM/DD
+  const formatDate = (date: Date) => {
+    return `${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getDate().toString().padStart(2, "0")}`
+  }
 
   // Calculate sponsorship amounts
   return Array.from(sponsorships.entries())
     .map(([username, data]) => {
-      const { weeklyStars, score } = data
+      const { weeklyStars, score, weekDates } = data
 
       // Use the getSponsorshipAmount function to calculate the amount
       let amount = getSponsorshipAmount({ weeklyStars, highScore: score })
 
+      // Create remarks with dates for each week's score, sorted from oldest to newest
+      const weeklyScoreWithDates = weeklyStars
+        .map((stars, i) => {
+          const startDate = formatDate(weekDates[i].start)
+          const endDate = formatDate(weekDates[i].end)
+          return `${stars} (${startDate}-${endDate})`
+        })
+        .reverse() // Reverse to show oldest first
+
       return {
         username,
         amount,
-        remarks: `Past 4 weeks stars: [${weeklyStars.join(", ")}]`,
+        remarks: `Weekly scores: [${weeklyScoreWithDates.join(", ")}]`,
       }
     })
     .filter((s) => s.amount > 0) // Only include users who should receive sponsorship
@@ -97,10 +209,7 @@ function generateCSV(
   return header + rows
 }
 
-function getCurrentMonthFile(): string {
-  const date = new Date()
-  const month = date.getMonth() + 1
-  const year = date.getFullYear()
+function getMonthFile(year: number, month: number): string {
   return path.join(
     process.cwd(),
     "sponsorships",
@@ -109,10 +218,34 @@ function getCurrentMonthFile(): string {
 }
 
 function main() {
-  const lastFourFiles = getLastNWeeklyFiles(4)
-  const weeklyData = lastFourFiles.map((file) => readWeeklyData(file))
-  const sponsorships = calculateSponsorship(weeklyData)
+  // Get the current month by default
+  const date = new Date()
+  const currentYear = date.getFullYear()
+  const currentMonth = date.getMonth() + 1
 
+  // Use command line args if provided (format: year month)
+  const args = process.argv.slice(2)
+  const year = args[0] ? parseInt(args[0]) : currentYear
+  const month = args[1] ? parseInt(args[1]) : currentMonth
+
+  // Get full weeks for the specified month
+  const weeks = getFullWeeksForMonth(year, month)
+
+  // Read weekly data for each week
+  const weeksWithData = weeks.map((week) => ({
+    data: readWeeklyData(week.filePath),
+    weekStartDate: week.weekStartDate,
+    weekEndDate: week.weekEndDate,
+  }))
+
+  // Check if we have enough weeks
+  if (weeksWithData.length === 0) {
+    console.error(`No weekly data found for ${year}-${month}`)
+    process.exit(1)
+  }
+
+  // Calculate sponsorships
+  const sponsorships = calculateSponsorship(weeksWithData)
   const csvContent = generateCSV(sponsorships)
 
   // Ensure sponsorships directory exists
@@ -121,11 +254,19 @@ function main() {
     fs.mkdirSync(sponsorshipsDir)
   }
 
-  // Write/update the current month's CSV file
-  const outputPath = getCurrentMonthFile()
+  // Write/update the specified month's CSV file
+  const outputPath = getMonthFile(year, month)
   fs.writeFileSync(outputPath, csvContent)
 
-  console.log(`Updated sponsorship CSV at: ${outputPath}`)
+  console.log(
+    `Updated sponsorship CSV for ${year}-${month.toString().padStart(2, "0")} at: ${outputPath}`,
+  )
+  console.log(`Weeks included: ${weeks.length}`)
+  weeks.forEach((week) => {
+    const startDate = `${week.weekStartDate.getMonth() + 1}/${week.weekStartDate.getDate()}`
+    const endDate = `${week.weekEndDate.getMonth() + 1}/${week.weekEndDate.getDate()}`
+    console.log(`  ${startDate} - ${endDate}: ${path.basename(week.filePath)}`)
+  })
   console.log(`Total sponsorships: ${sponsorships.length}`)
   console.log(
     `Total amount: $${sponsorships.reduce((sum, s) => sum + s.amount, 0)}`,
