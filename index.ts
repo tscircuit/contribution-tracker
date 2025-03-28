@@ -8,6 +8,8 @@ import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
 import { analyzePRWithClaude } from "lib/ai/analyzePRWithClaude"
 import { getLastWednesday } from "lib/ai/date-utils"
+import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
+
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
 
@@ -41,6 +43,10 @@ export async function generateOverview(startDate: string) {
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
           distinctPrsReviewed: 0,
+          discussionComments: 0,
+          discussionParticipating: 0,
+          discussionVeryActive: 0,
+          discussionExtremelyActive: 0,
         }
       }
 
@@ -142,6 +148,45 @@ export async function generateOverview(startDate: string) {
 
     await Promise.all(getIssuesCreatedPromises)
   }
+  // Process GitHub Discussions for all contributors
+  const allGithubDiscussions = await processDiscussionsForContributors(
+    startDateString,
+    contributorData,
+  )
+  const processDiscussionsPromises = Object.keys(allGithubDiscussions).map(
+    async (contributor) => {
+      if (!contributorData[contributor]) {
+        contributorData[contributor] = {
+          reviewsReceived: 0,
+          rejectionsReceived: 0,
+          approvalsReceived: 0,
+          approvalsGiven: 0,
+          rejectionsGiven: 0,
+          prsOpened: 0,
+          prsMerged: 0,
+          issuesCreated: 0,
+          bountiedIssuesCount: 0,
+          bountiedIssuesTotal: 0,
+          distinctPrsReviewed: 0,
+        }
+      }
+      if (contributorData[contributor].discussionComments === undefined) {
+        contributorData[contributor].discussionComments = 0
+        contributorData[contributor].discussionParticipating = 0
+        contributorData[contributor].discussionVeryActive = 0
+        contributorData[contributor].discussionExtremelyActive = 0
+      }
+      contributorData[contributor].discussionComments =
+        allGithubDiscussions[contributor].discussionComments
+      contributorData[contributor].discussionParticipating =
+        allGithubDiscussions[contributor].discussionParticipating
+      contributorData[contributor].discussionVeryActive =
+        allGithubDiscussions[contributor].discussionVeryActive
+      contributorData[contributor].discussionExtremelyActive =
+        allGithubDiscussions[contributor].discussionExtremelyActive
+    },
+  )
+  await Promise.all(processDiscussionsPromises)
 
   // Data processing complete
 

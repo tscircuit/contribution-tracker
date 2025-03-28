@@ -50,9 +50,9 @@ export async function generateMarkdown(
   markdown += "## Contributor Overview\n\n"
 
   markdown +=
-    "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created |\n"
+    "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |\n"
   markdown +=
-    "|-------------|---------|---------|---------|-----|----------------|\n"
+    "|-------------|---------|---------|---------|-----|----------------|--------------------------|\n"
 
   // Group PRs by contributor
   const prsByContributor = prs.reduce(
@@ -93,15 +93,87 @@ export async function generateMarkdown(
   })
 
   // Sort contributors by score
-  const sortedContributors = Object.entries(contributorScores).sort(
-    (a, b) => b[1].score - a[1].score,
+  const sortedContributors = Object.entries(contributorScores).sort((a, b) => {
+    return b[1].score - a[1].score
+  })
+
+  // Find contributors who exist in stats but not in sorted contributors
+  const contributorsHavingOnlyDiscussions = Object.keys(
+    contributorIdToStatsMap,
+  ).filter(
+    (contributor) =>
+      !sortedContributors.some(
+        ([sortedContributor]) => sortedContributor === contributor,
+      ),
   )
+
+  for (const contributor of contributorsHavingOnlyDiscussions) {
+    // Add score for GitHub Discussions contributions
+    // 1 point for each Participating comment (minor contribution)
+    // 2 points for each Very Active comment (major contribution)
+    // 3 points for each Extremely Active comment (two major contributions)
+    const discussionParticipating =
+      contributorIdToStatsMap[contributor].discussionParticipating || 0
+    const discussionVeryActive =
+      contributorIdToStatsMap[contributor].discussionVeryActive || 0
+    const discussionExtremelyActive =
+      contributorIdToStatsMap[contributor].discussionExtremelyActive || 0
+
+    if (!contributorIdToStatsMap[contributor].score) {
+      contributorIdToStatsMap[contributor].score = 0
+    }
+
+    // Add to score based on discussion contribution levels
+    contributorIdToStatsMap[contributor].score += discussionParticipating * 1 // 1 point each
+    contributorIdToStatsMap[contributor].score += discussionVeryActive * 2 // 2 points each
+    contributorIdToStatsMap[contributor].score += discussionExtremelyActive * 4 // 4 points each
+  }
 
   // Generate table rows
   for (const [contributor, effort] of sortedContributors) {
-    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.major} | ${effort.minor} | ${effort.tiny} | ${scoreToStarString(effort.score)} | ${effort.issuesCreated} |\n`
+    // Calculate discussion contributions summary
+    const discussionParticipating =
+      contributorIdToStatsMap[contributor].discussionParticipating || 0
+    const discussionVeryActive =
+      contributorIdToStatsMap[contributor].discussionVeryActive || 0
+    const discussionExtremelyActive =
+      contributorIdToStatsMap[contributor].discussionExtremelyActive || 0
+    const discussionSummary = `${discussionParticipating}🔹 ${discussionVeryActive}🔶 ${discussionExtremelyActive}💎`
+
+    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${
+      effort.major
+    } | ${effort.minor} | ${effort.tiny} | ${scoreToStarString(
+      effort.score,
+    )} | ${effort.issuesCreated} | ${discussionSummary} |\n`
+  }
+
+  for (const contributor of contributorsHavingOnlyDiscussions) {
+    const stats = contributorIdToStatsMap[contributor]
+    if (!contributorIdToStatsMap[contributor].discussionComments) continue
+    // Calculate discussion contributions summary
+    const discussionParticipating =
+      contributorIdToStatsMap[contributor].discussionParticipating || 0
+    const discussionVeryActive =
+      contributorIdToStatsMap[contributor].discussionVeryActive || 0
+    const discussionExtremelyActive =
+      contributorIdToStatsMap[contributor].discussionExtremelyActive || 0
+    const discussionSummary = `${discussionParticipating}🔹 ${discussionVeryActive}🔶 ${discussionExtremelyActive}💎`
+
+    markdown += `| [${contributor}](#${contributor.replace(
+      /\s/g,
+      "-",
+    )}) | 0 | 0 | 0 | - | ${
+      stats?.issuesCreated ?? 0
+    } | ${discussionSummary} |\n`
   }
   markdown += "\n"
+
+  // Add explanation for discussion contribution symbols
+  markdown += "### Discussion Contribution Legend\n\n"
+  markdown += "- 🔹 Participating: Basic participation with minimal effort\n"
+  markdown += "- 🔶 Very Active: Thoughtful participation that adds value\n"
+  markdown +=
+    "- 💎 Extremely Active: Exceptional participation with high-quality content\n\n"
 
   // Generate Review Table
   markdown += "## Review Table\n\n"
@@ -124,7 +196,9 @@ export async function generateMarkdown(
   markdown += Object.entries(columnTitleToDescription)
     .map(
       ([title, description]) =>
-        `[${title.toLowerCase().replace(/\s/g, "-")}-hover]: ## "${description}"`,
+        `[${title
+          .toLowerCase()
+          .replace(/\s/g, "-")}-hover]: ## "${description}"`,
     )
     .join("\n")
   markdown += "\n\n"
@@ -205,7 +279,9 @@ export async function generateMarkdown(
       .forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
           pr.impact,
-        )} | ${pr.contributor} | ${pr.description} | ${pr.isAlignedWithMilestone ? "✅" : "❌"} |\n`
+        )} | ${pr.contributor} | ${pr.description} | ${
+          pr.isAlignedWithMilestone ? "✅" : "❌"
+        } |\n`
       })
     markdown += "\n"
   })

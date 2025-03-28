@@ -8,7 +8,7 @@ export interface ContributorScore {
 }
 
 /**
- * Calculate score for a contributor based on PRs, issues, and reviews
+ * Calculate score for a contributor based on PRs, issues, reviews, and discussions
  */
 export function getContributorScore(
   contributorPRs: AnalyzedPR[],
