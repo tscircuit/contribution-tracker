@@ -1,6 +1,7 @@
 import { octokit } from "lib/sdks"
 import { graphql } from "@octokit/graphql"
 import type { DiscussionComment } from "lib/types"
+
 /**
  * Fetches discussion comments for a specific user in a repository since a given date
  */
