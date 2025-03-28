@@ -4,6 +4,21 @@ export interface ReviewerStats {
   prNumbers?: Set<number> // Set of PR numbers this reviewer has reviewed
 }
 
+export interface DiscussionComment {
+  discussionTitle: string
+  discussionNumber: number
+  discussionUrl: string
+  body: string
+  url: string
+  createdAt: string
+  discussionAuthor: string
+}
+
+export interface DiscussionContribution {
+  level: "Participating" | "VeryActive" | "ExtremelyActive"
+  count: number
+}
+
 export interface ContributorStats {
   reviewsReceived: number
   rejectionsReceived: number
@@ -21,6 +36,10 @@ export interface ContributorStats {
   minor?: number // Count of Minor PRs
   tiny?: number // Count of Tiny PRs
   stars?: string // Either "⭐" or "👑" based on score
+  discussionComments?: number // Total number of discussion comments
+  discussionParticipating?: number // Count of "Participating" level comments
+  discussionVeryActive?: number // Count of "Very Active" level comments
+  discussionExtremelyActive?: number // Count of "Extremely Active" level comments
 }
 
 export interface PullRequest {
