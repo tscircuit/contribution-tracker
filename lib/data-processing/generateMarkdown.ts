@@ -162,7 +162,7 @@ export async function generateMarkdown(
     markdown += `| [${contributor}](#${contributor.replace(
       /\s/g,
       "-",
-    )}) | 0 | 0 | 0 | - | ${
+    )}) | 0 | 0 | 0 | ${scoreToStarString(stats.score || 0)} | ${
       stats?.issuesCreated ?? 0
     } | ${discussionSummary} |\n`
   }
