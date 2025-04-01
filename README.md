@@ -25,13 +25,13 @@ The current week is shown below. There are 3 major sections:
 pie
     "tscircuit/contribution-tracker" : 3
     "tscircuit/checks" : 6
-    "tscircuit/cli" : 7
+    "tscircuit/tscircuit.com" : 27
+    "tscircuit/cli" : 8
     "tscircuit/unravel-autorouter" : 7
     "tscircuit/circuit-json-util" : 1
     "tscircuit/core" : 3
     "tscircuit/circuit-json-to-connectivity-map" : 1
     "tscircuit/math-utils" : 1
-    "tscircuit/tscircuit.com" : 18
     "tscircuit/graphics-debug" : 1
     "tscircuit/docs" : 1
     "tscircuit/props" : 1
@@ -46,13 +46,13 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 8 | 19 | 4 | 👑👑 | 35 | 3🔹 3🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 3 | 10 | 1 | ⭐⭐⭐ | 6 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 9 | 22 | 4 | 👑👑 | 38 | 3🔹 3🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 5 | 12 | 1 | 👑 | 7 | 0🔹 0🔶 0💎 |
 | [Anshgrover23](#Anshgrover23) | 1 | 2 | 0 | ⭐⭐ | 3 | 2🔹 0🔶 0💎 |
 | [ArnavK-09](#ArnavK-09) | 1 | 2 | 1 | ⭐⭐ | 2 | 1🔹 0🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 2 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [Ayushjhawar8](#Ayushjhawar8) | 0 | 2 | 0 | ⭐ | 0 | 2🔹 0🔶 0💎 |
 | [oldbear26](#oldbear26) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 0💎 |
-| [Ayushjhawar8](#Ayushjhawar8) | 0 | 1 | 0 |  | 0 | 2🔹 0🔶 0💎 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 2 |  | 0 | 0🔹 0🔶 0💎 |
 | [dhvll](#dhvll) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 0💎 |
 | [gurjeetsinghvirdee](#gurjeetsinghvirdee) | 0 | 0 | 0 | - | 0 | 0🔹 1🔶 0💎 |
@@ -75,21 +75,21 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [seveibar](#seveibar) | 1 | 0 | 0 | 17 | 4 | 35 | 31 | 35 | 27 | 403 |
+| [seveibar](#seveibar) | 1 | 0 | 0 | 20 | 4 | 38 | 35 | 38 | 29 | 438 |
 | [techmannih](#techmannih) | 5 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 1 | 3 |
 | [Anshgrover23](#Anshgrover23) | 4 | 3 | 1 | 2 | 9 | 4 | 3 | 3 | 1 | 10 |
-| [Ayushjhawar8](#Ayushjhawar8) | 5 | 0 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
+| [Ayushjhawar8](#Ayushjhawar8) | 6 | 0 | 1 | 0 | 0 | 3 | 2 | 0 | 0 | 0 |
 | [onyedikachi-david](#onyedikachi-david) | 3 | 0 | 3 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
 | [oldbear26](#oldbear26) | 1 | 1 | 0 | 0 | 0 | 2 | 2 | 0 | 0 | 0 |
 | [ArnavK-09](#ArnavK-09) | 6 | 6 | 0 | 0 | 2 | 5 | 4 | 2 | 1 | 10 |
 | [copilot-pull-request-reviewer[bot]](#copilot-pull-request-reviewer[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 6 | 5 | 0 | 1 | 3 | 16 | 15 | 6 | 6 | 30 |
+| [imrishabh18](#imrishabh18) | 9 | 8 | 0 | 1 | 3 | 20 | 19 | 7 | 6 | 30 |
+| [MustafaMulla29](#MustafaMulla29) | 16 | 4 | 3 | 0 | 0 | 5 | 2 | 0 | 0 | 0 |
 | [Rishikesh63](#Rishikesh63) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 18 | 4 | 5 | 0 | 0 | 4 | 1 | 0 | 0 | 0 |
-| [guptadeepak8](#guptadeepak8) | 3 | 0 | 3 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
+| [guptadeepak8](#guptadeepak8) | 4 | 0 | 4 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 6 | 2 | 0 | 0 | 0 |
+| [jyoti-ranjan-jena](#jyoti-ranjan-jena) | 1 | 0 | 1 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | [owuzo](#owuzo) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [jyoti-ranjan-jena](#jyoti-ranjan-jena) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [dhvll](#dhvll) | 3 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
 | [deekshatomer](#deekshatomer) | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [gurjeetsinghvirdee](#gurjeetsinghvirdee) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -115,12 +115,45 @@ pie
 | [#23](https://github.com/tscircuit/checks/pull/23) | 🐙 Minor | seveibar | Update circuit JSON utility and add a test to ensure correct handling of via margin. | ✅ |
 | [#22](https://github.com/tscircuit/checks/pull/22) | 🐙 Minor | seveibar | Improves the overlapping trace message and error.center | ✅ |
 
+### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#784](https://github.com/tscircuit/tscircuit.com/pull/784) | 🐳 Major | seveibar | Adds more options to the /package_releases/get API endpoint to support fetching the latest package release by package name or package ID, and handles the corresponding logic in the frontend. | ❌ |
+| [#782](https://github.com/tscircuit/tscircuit.com/pull/782) | 🐳 Major | imrishabh18 | Add the hook for fork mutation of packages | ❌ |
+| [#781](https://github.com/tscircuit/tscircuit.com/pull/781) | 🐳 Major | imrishabh18 | Adds new hooks for creating packages, package files, and package releases, which can be used in the beta page. | ❌ |
+| [#778](https://github.com/tscircuit/tscircuit.com/pull/778) | 🐳 Major | imrishabh18 | Change the `/move_orders_forward` endpoint to update the status of all orders that are not finished. | ✅ |
+| [#785](https://github.com/tscircuit/tscircuit.com/pull/785) | 🐙 Minor | seveibar | Adds a new package file create test and updates existing tests to handle the change that content_text is no longer returned by the get endpoint. | ❌ |
+| [#780](https://github.com/tscircuit/tscircuit.com/pull/780) | 🐙 Minor | seveibar | Force revalidation of the index page on new deployments | ❌ |
+| [#772](https://github.com/tscircuit/tscircuit.com/pull/772) | 🐙 Minor | seveibar | Reduce the cache control header for HTML files to prevent white pages and forced refreshes. | ❌ |
+| [#770](https://github.com/tscircuit/tscircuit.com/pull/770) | 🐙 Minor | seveibar | Add opengraph images and fix image URLs | ✅ |
+| [#769](https://github.com/tscircuit/tscircuit.com/pull/769) | 🐙 Minor | seveibar | Modify SEO tags in middleware to improve the website's search engine optimization. | ❌ |
+| [#754](https://github.com/tscircuit/tscircuit.com/pull/754) | 🐙 Minor | seveibar |  | ❌ |
+| [#789](https://github.com/tscircuit/tscircuit.com/pull/789) | 🐙 Minor | imrishabh18 | Add the fork functionality to the package header component. | ❌ |
+| [#788](https://github.com/tscircuit/tscircuit.com/pull/788) | 🐙 Minor | imrishabh18 | Add star functionality for packages | ❌ |
+| [#777](https://github.com/tscircuit/tscircuit.com/pull/777) | 🐙 Minor | imrishabh18 | Add a new endpoint `/api/_fake/move_orders_forward` to update the order state by moving to the next step, and refactor the `/api/orders/get` endpoint to use the existing order state if it exists. | ✅ |
+| [#775](https://github.com/tscircuit/tscircuit.com/pull/775) | 🐙 Minor | imrishabh18 | Add a tooltip to the snippet type icon to display the type label. | ✅ |
+| [#763](https://github.com/tscircuit/tscircuit.com/pull/763) | 🐙 Minor | imrishabh18 | Update the build script to remove the `build:tsup` and `build:fake-api` scripts and add new `build:fake-api:tsup` and `build:fake-api:bundle` scripts. | ❌ |
+| [#762](https://github.com/tscircuit/tscircuit.com/pull/762) | 🐙 Minor | imrishabh18 | Adds tests to verify the order state before the simulate error scenario | ✅ |
+| [#761](https://github.com/tscircuit/tscircuit.com/pull/761) | 🐙 Minor | imrishabh18 | Modify logic for `/order/create` and support polling for `/order/get` | ✅ |
+| [#760](https://github.com/tscircuit/tscircuit.com/pull/760) | 🐙 Minor | imrishabh18 | This pull request adds new schemas for JLCPCB-related data, including `JlcpcbOrderState` and `JlcpcbOrderStepRun`, to the database schema. | ❌ |
+| [#773](https://github.com/tscircuit/tscircuit.com/pull/773) | 🐌 Tiny | seveibar | Migrate from unpkg to jsdelivr for prettier dependency | ✅ |
+| [#771](https://github.com/tscircuit/tscircuit.com/pull/771) | 🐌 Tiny | seveibar | Add a default opengraph image to the website | ✅ |
+| [#766](https://github.com/tscircuit/tscircuit.com/pull/766) | 🐌 Tiny | seveibar | Removes a console log line in the `find-package-release-id.ts` file. | ✅ |
+| [#759](https://github.com/tscircuit/tscircuit.com/pull/759) | 🟣 | imrishabh18 | Add all the scenarios to fake | ✅ |
+| [#758](https://github.com/tscircuit/tscircuit.com/pull/758) | 🐙 Minor | imrishabh18 | Update the `/order/create` route to handle simulated scenarios. | ❌ |
+| [#787](https://github.com/tscircuit/tscircuit.com/pull/787) | 🐙 Minor | Ayushjhawar8 | Add user avatar and number of snippets in the user profile page. | ❌ |
+| [#765](https://github.com/tscircuit/tscircuit.com/pull/765) | 🐙 Minor | Ayushjhawar8 | Adds a page title and image tag to the editor and view-snippet pages. | ✅ |
+| [#776](https://github.com/tscircuit/tscircuit.com/pull/776) | 🐙 Minor | MustafaMulla29 | Adds a fallback image when the primary image fails to load. | ❌ |
+| [#757](https://github.com/tscircuit/tscircuit.com/pull/757) | 🐙 Minor | MustafaMulla29 | Changed "Snippets" to "Packages" and used the correct "javascript-time-ago" package instead of "timeago.js". | ❌ |
+
 ### [tscircuit/cli](https://github.com/tscircuit/cli)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#146](https://github.com/tscircuit/cli/pull/146) | 🐳 Major | seveibar | Fixes many issues with pushing snippets and adds a "setup" script to install the repository to the global `tsci`. | ✅ |
 | [#143](https://github.com/tscircuit/cli/pull/143) | 🐳 Major | seveibar | Introduces a better detection mechanism for the entrypoint file in a tscircuit project, and adds the ability to save the detected entrypoint to the project configuration file. | ✅ |
+| [#148](https://github.com/tscircuit/cli/pull/148) | 🐙 Minor | seveibar | Fixes a bug in the `cli/dev/DevServer.ts` file related to the `upsertInitialFiles()` method, by using the `getPackageFilePaths()` function to get the list of files to upload instead of using `globbySync`. | ❌ |
 | [#147](https://github.com/tscircuit/cli/pull/147) | 🐙 Minor | seveibar | Fix an issue where the CLI config was being reset whenever tests ran and tests were sharing the same config. | ✅ |
 | [#145](https://github.com/tscircuit/cli/pull/145) | 🐙 Minor | seveibar | Set a default version of "0.0.1" for `tsci push` if no version is detected in the `package.json` file. | ✅ |
 | [#135](https://github.com/tscircuit/cli/pull/135) | 🐙 Minor | ArnavK-09 |  | ✅ |
@@ -164,29 +197,6 @@ pie
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#7](https://github.com/tscircuit/math-utils/pull/7) | 🐙 Minor | seveibar | Implement a function to calculate the minimum distance from a line segment to a circle. | ❌ |
-
-### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#778](https://github.com/tscircuit/tscircuit.com/pull/778) | 🐳 Major | imrishabh18 | Change the `/move_orders_forward` endpoint to update the status of all orders that are not finished. | ✅ |
-| [#772](https://github.com/tscircuit/tscircuit.com/pull/772) | 🐙 Minor | seveibar | Reduce the cache control header for HTML files to prevent white pages and forced refreshes. | ❌ |
-| [#770](https://github.com/tscircuit/tscircuit.com/pull/770) | 🐙 Minor | seveibar | Add opengraph images and fix image URLs | ✅ |
-| [#769](https://github.com/tscircuit/tscircuit.com/pull/769) | 🐙 Minor | seveibar | Modify SEO tags in middleware to improve the website's search engine optimization. | ❌ |
-| [#754](https://github.com/tscircuit/tscircuit.com/pull/754) | 🐙 Minor | seveibar |  | ❌ |
-| [#777](https://github.com/tscircuit/tscircuit.com/pull/777) | 🐙 Minor | imrishabh18 | Add a new endpoint `/api/_fake/move_orders_forward` to update the order state by moving to the next step, and refactor the `/api/orders/get` endpoint to use the existing order state if it exists. | ✅ |
-| [#775](https://github.com/tscircuit/tscircuit.com/pull/775) | 🐙 Minor | imrishabh18 | Add a tooltip to the snippet type icon to display the type label. | ✅ |
-| [#763](https://github.com/tscircuit/tscircuit.com/pull/763) | 🐙 Minor | imrishabh18 | Update the build script to remove the `build:tsup` and `build:fake-api` scripts and add new `build:fake-api:tsup` and `build:fake-api:bundle` scripts. | ❌ |
-| [#762](https://github.com/tscircuit/tscircuit.com/pull/762) | 🐙 Minor | imrishabh18 | Adds tests to verify the order state before the simulate error scenario | ✅ |
-| [#761](https://github.com/tscircuit/tscircuit.com/pull/761) | 🐙 Minor | imrishabh18 | Modify logic for `/order/create` and support polling for `/order/get` | ✅ |
-| [#760](https://github.com/tscircuit/tscircuit.com/pull/760) | 🐙 Minor | imrishabh18 | This pull request adds new schemas for JLCPCB-related data, including `JlcpcbOrderState` and `JlcpcbOrderStepRun`, to the database schema. | ❌ |
-| [#758](https://github.com/tscircuit/tscircuit.com/pull/758) | 🐙 Minor | imrishabh18 | Update the `/order/create` route to handle simulated scenarios. | ❌ |
-| [#765](https://github.com/tscircuit/tscircuit.com/pull/765) | 🐙 Minor | Ayushjhawar8 | Adds a page title and image tag to the editor and view-snippet pages. | ✅ |
-| [#757](https://github.com/tscircuit/tscircuit.com/pull/757) | 🐙 Minor | MustafaMulla29 | Changed "Snippets" to "Packages" and used the correct "javascript-time-ago" package instead of "timeago.js". | ❌ |
-| [#773](https://github.com/tscircuit/tscircuit.com/pull/773) | 🐌 Tiny | seveibar | Migrate from unpkg to jsdelivr for prettier dependency | ✅ |
-| [#771](https://github.com/tscircuit/tscircuit.com/pull/771) | 🐌 Tiny | seveibar | Add a default opengraph image to the website | ✅ |
-| [#766](https://github.com/tscircuit/tscircuit.com/pull/766) | 🐌 Tiny | seveibar | Removes a console log line in the `find-package-release-id.ts` file. | ✅ |
-| [#759](https://github.com/tscircuit/tscircuit.com/pull/759) | 🟣 | imrishabh18 | Add all the scenarios to fake | ✅ |
 
 ### [tscircuit/graphics-debug](https://github.com/tscircuit/graphics-debug)
 
@@ -249,6 +259,7 @@ pie
 |------|--------|-------------|-------------------|
 | [#107](https://github.com/tscircuit/contribution-tracker/pull/107) | 🐳 Major | Updates the script to generate sponsorship CSV to be more idempotent and ensure the correct weeks are picked up. | ❌ |
 | [#21](https://github.com/tscircuit/checks/pull/21) | 🐳 Major | The pull request incorporates layer information and improves the pcb_via test in the DRC (Design Rule Check) check. | ✅ |
+| [#784](https://github.com/tscircuit/tscircuit.com/pull/784) | 🐳 Major | Adds more options to the /package_releases/get API endpoint to support fetching the latest package release by package name or package ID, and handles the corresponding logic in the frontend. | ❌ |
 | [#146](https://github.com/tscircuit/cli/pull/146) | 🐳 Major | Fixes many issues with pushing snippets and adds a "setup" script to install the repository to the global `tsci`. | ✅ |
 | [#143](https://github.com/tscircuit/cli/pull/143) | 🐳 Major | Introduces a better detection mechanism for the entrypoint file in a tscircuit project, and adds the ability to save the detected entrypoint to the project configuration file. | ✅ |
 | [#88](https://github.com/tscircuit/unravel-autorouter/pull/88) | 🐳 Major | Fix for vias sometimes being disconnected during path simplification | ✅ |
@@ -265,11 +276,14 @@ pie
 | [#22](https://github.com/tscircuit/checks/pull/22) | 🐙 Minor | Improves the overlapping trace message and error.center | ✅ |
 | [#9](https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/9) | 🐙 Minor | Adds support for PCB vias when computing full connectivity net | ✅ |
 | [#7](https://github.com/tscircuit/math-utils/pull/7) | 🐙 Minor | Implement a function to calculate the minimum distance from a line segment to a circle. | ❌ |
+| [#785](https://github.com/tscircuit/tscircuit.com/pull/785) | 🐙 Minor | Adds a new package file create test and updates existing tests to handle the change that content_text is no longer returned by the get endpoint. | ❌ |
+| [#780](https://github.com/tscircuit/tscircuit.com/pull/780) | 🐙 Minor | Force revalidation of the index page on new deployments | ❌ |
 | [#772](https://github.com/tscircuit/tscircuit.com/pull/772) | 🐙 Minor | Reduce the cache control header for HTML files to prevent white pages and forced refreshes. | ❌ |
 | [#770](https://github.com/tscircuit/tscircuit.com/pull/770) | 🐙 Minor | Add opengraph images and fix image URLs | ✅ |
 | [#769](https://github.com/tscircuit/tscircuit.com/pull/769) | 🐙 Minor | Modify SEO tags in middleware to improve the website's search engine optimization. | ❌ |
 | [#754](https://github.com/tscircuit/tscircuit.com/pull/754) | 🐙 Minor |  | ❌ |
 | [#51](https://github.com/tscircuit/graphics-debug/pull/51) | 🐙 Minor | Adds a "Show last step" checkbox to the InteractiveGraphics component. | ✅ |
+| [#148](https://github.com/tscircuit/cli/pull/148) | 🐙 Minor | Fixes a bug in the `cli/dev/DevServer.ts` file related to the `upsertInitialFiles()` method, by using the `getPackageFilePaths()` function to get the list of files to upload instead of using `globbySync`. | ❌ |
 | [#147](https://github.com/tscircuit/cli/pull/147) | 🐙 Minor | Fix an issue where the CLI config was being reset whenever tests ran and tests were sharing the same config. | ✅ |
 | [#145](https://github.com/tscircuit/cli/pull/145) | 🐙 Minor | Set a default version of "0.0.1" for `tsci push` if no version is detected in the `package.json` file. | ✅ |
 | [#87](https://github.com/tscircuit/unravel-autorouter/pull/87) | 🐙 Minor | Fix bad routing issue in simplification when tail is forced forward | ❌ |
@@ -307,11 +321,15 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#782](https://github.com/tscircuit/tscircuit.com/pull/782) | 🐳 Major | Add the hook for fork mutation of packages | ❌ |
+| [#781](https://github.com/tscircuit/tscircuit.com/pull/781) | 🐳 Major | Adds new hooks for creating packages, package files, and package releases, which can be used in the beta page. | ❌ |
 | [#778](https://github.com/tscircuit/tscircuit.com/pull/778) | 🐳 Major | Change the `/move_orders_forward` endpoint to update the status of all orders that are not finished. | ✅ |
 | [#401](https://github.com/tscircuit/runframe/pull/401) | 🐳 Major | Add a new UI component for the full order flow, including a shipping address form and order summary. | ❌ |
 | [#395](https://github.com/tscircuit/runframe/pull/395) | 🐳 Major | The pull request introduces the initial implementation of the order flow feature, including creating orders, fetching order state, and displaying the order progress. | ✅ |
 | [#107](https://github.com/tscircuit/dsn-converter/pull/107) | 🐙 Minor | Fix a radius to diameter conversion issue in the code. | ✅ |
 | [#106](https://github.com/tscircuit/dsn-converter/pull/106) | 🐙 Minor | Fixes the padstack name for the 'smtpad' shape 'circle' in the 'process-components-and-pads.ts' file. | ✅ |
+| [#789](https://github.com/tscircuit/tscircuit.com/pull/789) | 🐙 Minor | Add the fork functionality to the package header component. | ❌ |
+| [#788](https://github.com/tscircuit/tscircuit.com/pull/788) | 🐙 Minor | Add star functionality for packages | ❌ |
 | [#777](https://github.com/tscircuit/tscircuit.com/pull/777) | 🐙 Minor | Add a new endpoint `/api/_fake/move_orders_forward` to update the order state by moving to the next step, and refactor the `/api/orders/get` endpoint to use the existing order state if it exists. | ✅ |
 | [#775](https://github.com/tscircuit/tscircuit.com/pull/775) | 🐙 Minor | Add a tooltip to the snippet type icon to display the type label. | ✅ |
 | [#763](https://github.com/tscircuit/tscircuit.com/pull/763) | 🐙 Minor | Update the build script to remove the `build:tsup` and `build:fake-api` scripts and add new `build:fake-api:tsup` and `build:fake-api:bundle` scripts. | ❌ |
@@ -327,12 +345,14 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#787](https://github.com/tscircuit/tscircuit.com/pull/787) | 🐙 Minor | Add user avatar and number of snippets in the user profile page. | ❌ |
 | [#765](https://github.com/tscircuit/tscircuit.com/pull/765) | 🐙 Minor | Adds a page title and image tag to the editor and view-snippet pages. | ✅ |
 
 ### [MustafaMulla29](https://github.com/MustafaMulla29)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#776](https://github.com/tscircuit/tscircuit.com/pull/776) | 🐙 Minor | Adds a fallback image when the primary image fails to load. | ❌ |
 | [#757](https://github.com/tscircuit/tscircuit.com/pull/757) | 🐙 Minor | Changed "Snippets" to "Packages" and used the correct "javascript-time-ago" package instead of "timeago.js". | ❌ |
 
 ### [tscircuitbot](https://github.com/tscircuitbot)
