@@ -138,8 +138,8 @@ export function ContributorOverview({
     },
     {
       position: 2,
-      ringColor: "ring-yellow-200",
-      bgColor: "bg-yellow-200",
+      ringColor: "ring-gray-300",
+      bgColor: "bg-gray-300",
       size: "md" as const,
     },
     {
