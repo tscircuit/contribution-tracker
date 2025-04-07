@@ -24,8 +24,9 @@ The current week is shown below. There are 3 major sections:
 ```mermaid
 pie
     "tscircuit/schematic-viewer" : 1
+    "tscircuit/easyeda-converter" : 1
     "tscircuit/3d-viewer" : 1
-    "tscircuit/tscircuit.com" : 8
+    "tscircuit/tscircuit.com" : 10
     "tscircuit/pcb-viewer" : 1
     "tscircuit/contribution-tracker" : 1
     "tscircuit/runframe" : 3
@@ -39,10 +40,10 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [imrishabh18](#imrishabh18) | 1 | 8 | 2 | ⭐⭐ | 4 | 0🔹 0🔶 0💎 |
-| [seveibar](#seveibar) | 1 | 1 | 0 | ⭐⭐ | 17 | 3🔹 3🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 1 | ⭐ | 1 | 0🔹 0🔶 0💎 |
-| [Ayushjhawar8](#Ayushjhawar8) | 0 | 2 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 1 | 9 | 2 | ⭐⭐ | 6 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 1 | 1 | 0 | ⭐⭐ | 21 | 3🔹 3🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 2 | 1 | ⭐ | 1 | 0🔹 0🔶 0💎 |
+| [Ayushjhawar8](#Ayushjhawar8) | 0 | 3 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
 | [ArnavK-09](#ArnavK-09) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 0💎 |
 | [Rishikesh63](#Rishikesh63) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 0💎 |
 | [gurjeetsinghvirdee](#gurjeetsinghvirdee) | 0 | 0 | 0 | ⭐ | 0 | 0🔹 2🔶 0💎 |
@@ -66,15 +67,16 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [Ayushjhawar8](#Ayushjhawar8) | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 9 | 2 | 3 | 2 | 17 | 14 | 220 |
+| [Ayushjhawar8](#Ayushjhawar8) | 3 | 3 | 0 | 0 | 0 | 4 | 3 | 0 | 0 | 0 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 11 | 1 | 3 | 2 | 21 | 14 | 220 |
 | [oldbear26](#oldbear26) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [ArnavK-09](#ArnavK-09) | 1 | 1 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | [dhvll](#dhvll) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 9 | 3 | 2 | 0 | 1 | 3 | 2 | 1 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 14 | 3 | 0 | 1 | 1 | 15 | 13 | 4 | 3 | 12 |
+| [MustafaMulla29](#MustafaMulla29) | 5 | 4 | 0 | 0 | 1 | 3 | 3 | 1 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 14 | 3 | 0 | 1 | 0 | 16 | 14 | 6 | 3 | 12 |
 | [Rishikesh63](#Rishikesh63) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
 | [Priyanshuthapliyal2005](#Priyanshuthapliyal2005) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [aliraza556](#aliraza556) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [jyoti-ranjan-jena](#jyoti-ranjan-jena) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [gurjeetsinghvirdee](#gurjeetsinghvirdee) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [Anshgrover23](#Anshgrover23) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -86,6 +88,12 @@ pie
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#79](https://github.com/tscircuit/schematic-viewer/pull/79) | 🐙 Minor | Ayushjhawar8 | Add click-to-interact feature to the schematic viewer | ✅ |
+
+### [tscircuit/easyeda-converter](https://github.com/tscircuit/easyeda-converter)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#182](https://github.com/tscircuit/easyeda-converter/pull/182) | 🐙 Minor | Ayushjhawar8 | Fix issue with importing from JLCPCB | ✅ |
 
 ### [tscircuit/3d-viewer](https://github.com/tscircuit/3d-viewer)
 
@@ -99,11 +107,13 @@ pie
 |------|--------|-------------|-------------|-------------------|
 | [#790](https://github.com/tscircuit/tscircuit.com/pull/790) | 🐳 Major | seveibar | Many improvements to the View Package Page, including launching it as the main view package page | ✅ |
 | [#791](https://github.com/tscircuit/tscircuit.com/pull/791) | 🐳 Major | imrishabh18 | The change ports the autoload fetching functionality from `/snippets` to `/packages`. | ❌ |
+| [#806](https://github.com/tscircuit/tscircuit.com/pull/806) | 🐙 Minor | imrishabh18 | Fix the name format being passed on the /packages/create endpoint. | ❌ |
 | [#802](https://github.com/tscircuit/tscircuit.com/pull/802) | 🐙 Minor | imrishabh18 | Add image preview for 3D view in mobile sidebar | ✅ |
 | [#796](https://github.com/tscircuit/tscircuit.com/pull/796) | 🐙 Minor | imrishabh18 | Add a 3D view preview image to the package preview section. | ✅ |
 | [#795](https://github.com/tscircuit/tscircuit.com/pull/795) | 🐙 Minor | imrishabh18 | Hides lockfiles and config files from the file view of the package page. | ❌ |
 | [#794](https://github.com/tscircuit/tscircuit.com/pull/794) | 🐙 Minor | imrishabh18 | This pull request updates the fake `/list` endpoint to omit the `content_text` field from the response, and adds a new feature to fetch the `content_text` for each file individually. | ❌ |
 | [#792](https://github.com/tscircuit/tscircuit.com/pull/792) | 🐙 Minor | imrishabh18 | Update the `useCurrentPackageId` hook to fetch the package ID from the URL or the package name. | ✅ |
+| [#804](https://github.com/tscircuit/tscircuit.com/pull/804) | 🐙 Minor | MustafaMulla29 | Don't show schematic/pcb/3d view buttons if they aren't available for a package | ✅ |
 | [#798](https://github.com/tscircuit/tscircuit.com/pull/798) | 🐙 Minor | Rishikesh63 | Add a page title to the dashboard page | ✅ |
 
 ### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
@@ -159,6 +169,7 @@ pie
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#79](https://github.com/tscircuit/schematic-viewer/pull/79) | 🐙 Minor | Add click-to-interact feature to the schematic viewer | ✅ |
+| [#182](https://github.com/tscircuit/easyeda-converter/pull/182) | 🐙 Minor | Fix issue with importing from JLCPCB | ✅ |
 | [#233](https://github.com/tscircuit/3d-viewer/pull/233) | 🐙 Minor | Add a click to interact feature to the 3D viewer. | ✅ |
 
 ### [seveibar](https://github.com/seveibar)
@@ -179,6 +190,7 @@ pie
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#791](https://github.com/tscircuit/tscircuit.com/pull/791) | 🐳 Major | The change ports the autoload fetching functionality from `/snippets` to `/packages`. | ❌ |
+| [#806](https://github.com/tscircuit/tscircuit.com/pull/806) | 🐙 Minor | Fix the name format being passed on the /packages/create endpoint. | ❌ |
 | [#802](https://github.com/tscircuit/tscircuit.com/pull/802) | 🐙 Minor | Add image preview for 3D view in mobile sidebar | ✅ |
 | [#796](https://github.com/tscircuit/tscircuit.com/pull/796) | 🐙 Minor | Add a 3D view preview image to the package preview section. | ✅ |
 | [#795](https://github.com/tscircuit/tscircuit.com/pull/795) | 🐙 Minor | Hides lockfiles and config files from the file view of the package page. | ❌ |
@@ -192,18 +204,19 @@ pie
 | [#18](https://github.com/tscircuit/browser-preview.tscircuit.com/pull/18) | 🐌 Tiny | Update the version of the "@tscircuit/eval" dependency | ✅ |
 | [#11](https://github.com/tscircuit/browser-preview.tscircuit.com/pull/11) | 🟣 | Update package dependencies and add Renovate configuration | ❌ |
 
+### [MustafaMulla29](https://github.com/MustafaMulla29)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#804](https://github.com/tscircuit/tscircuit.com/pull/804) | 🐙 Minor | Don't show schematic/pcb/3d view buttons if they aren't available for a package | ✅ |
+| [#185](https://github.com/tscircuit/eval/pull/185) | 🐙 Minor | Fixed the eval error for the nine keyboard used in the docs | ✅ |
+| [#28](https://github.com/tscircuit/docs/pull/28) | 🐌 Tiny | Updated the screenshots in the "quickstart CLI" doc to match the new, colorful output | ✅ |
+
 ### [Rishikesh63](https://github.com/Rishikesh63)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#798](https://github.com/tscircuit/tscircuit.com/pull/798) | 🐙 Minor | Add a page title to the dashboard page | ✅ |
-
-### [MustafaMulla29](https://github.com/MustafaMulla29)
-
-| PR # | Impact | Description | Milestone Aligned |
-|------|--------|-------------|-------------------|
-| [#185](https://github.com/tscircuit/eval/pull/185) | 🐙 Minor | Fixed the eval error for the nine keyboard used in the docs | ✅ |
-| [#28](https://github.com/tscircuit/docs/pull/28) | 🐌 Tiny | Updated the screenshots in the "quickstart CLI" doc to match the new, colorful output | ✅ |
 
 
 
