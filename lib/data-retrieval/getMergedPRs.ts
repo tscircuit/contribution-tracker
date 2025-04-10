@@ -30,17 +30,15 @@ export async function getMergedPRs(
         mediaType: { format: "diff" },
       })
 
-      // Check if PR has /major tag in title or body
-      const hasMajorTag =
-        (pr.title && pr.title.includes("/major")) ||
-        (pr.body && pr.body.includes("/major"))
-
       // Fetch comments for the PR
-      const { data: comments } = await octokit.issues.listComments({
-        owner,
-        repo: repo_name,
-        issue_number: pr.number,
-      })
+      const { data: comments } = await octokit.issues
+        .listComments({
+          owner,
+          repo: repo_name,
+          issue_number: pr.number,
+          per_page: 100,
+        })
+        .catch(() => ({ data: [] }))
 
       // Check if any maintainer has added a /major tag in their comments
       const hasMajorTagFromMaintainer = comments.some(
@@ -49,11 +47,10 @@ export async function getMergedPRs(
           comment.body &&
           comment.body.includes("/major"),
       )
-
       return {
         ...pr,
         diff: diffData as unknown as string,
-        hasMajorTag: hasMajorTag || hasMajorTagFromMaintainer,
+        hasMajorTag: hasMajorTagFromMaintainer,
       }
     }),
   )
