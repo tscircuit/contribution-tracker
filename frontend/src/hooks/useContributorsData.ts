@@ -96,19 +96,52 @@ export function useContributorsData(): UseContributorsDataReturn {
             return
           }
 
-          // Match PR rows in tables
-          const prMatch = line.match(
-            /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \|/,
+          // Match PR rows in tables - handle both formats (with and without contributor)
+          // First try to match the format with contributor
+          let prMatch = line.match(
+            /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \| (.*?) \|/,
           )
+
+          let hasContributor = true
+
+          // If that doesn't match, try the format without contributor
+          if (!prMatch) {
+            prMatch = line.match(
+              /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \|/,
+            )
+            hasContributor = false
+          }
+
           if (prMatch && currentRepo) {
             repoStats[currentRepo] = (repoStats[currentRepo] || 0) + 1
-            currentPRs.push({
-              number: parseInt(prMatch[1]),
-              impact: prMatch[2] as PR["impact"],
-              contributor: prMatch[3],
-              description: prMatch[4],
-              url: getPullRequestUrl(currentRepo, parseInt(prMatch[1])),
-            })
+
+            if (hasContributor) {
+              // Format with contributor: number, impact, contributor, description, alignment
+              currentPRs.push({
+                number: parseInt(prMatch[1]),
+                impact: prMatch[2] as PR["impact"],
+                contributor: prMatch[3],
+                description: prMatch[4],
+                isAlignedWithMilestone: prMatch[5].includes("✅"),
+                url: getPullRequestUrl(currentRepo, parseInt(prMatch[1])),
+              })
+            } else {
+              // get markdown content before 'line'
+              const markdownBeforeLine = markdown.split(line)[0] // Get content BEFORE the current line
+              const contributor = markdownBeforeLine
+                .match(/### \[(.*?)\]/g)
+                ?.pop()
+                ?.match(/\[(.*?)\]/)?.[1]
+              // Format without contributor: number, impact, description, alignment
+              currentPRs.push({
+                number: parseInt(prMatch[1]),
+                impact: prMatch[2] as PR["impact"],
+                contributor: contributor ?? "",
+                description: prMatch[3],
+                isAlignedWithMilestone: prMatch[4].includes("✅"),
+                url: getPullRequestUrl(currentRepo, parseInt(prMatch[1])),
+              })
+            }
           }
         })
 
