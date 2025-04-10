@@ -1,5 +1,6 @@
 import { octokit } from "lib/sdks"
 import type { MergedPullRequest } from "lib/types"
+import { FULL_TIMERS } from "frontend/src/constants/contributors"
 
 export async function getMergedPRs(
   repo: string,
@@ -28,7 +29,32 @@ export async function getMergedPRs(
         pull_number: pr.number,
         mediaType: { format: "diff" },
       })
-      return { ...pr, diff: diffData as unknown as string }
+
+      // Check if PR has /major tag in title or body
+      const hasMajorTag =
+        (pr.title && pr.title.includes("/major")) ||
+        (pr.body && pr.body.includes("/major"))
+
+      // Fetch comments for the PR
+      const { data: comments } = await octokit.issues.listComments({
+        owner,
+        repo: repo_name,
+        issue_number: pr.number,
+      })
+
+      // Check if any maintainer has added a /major tag in their comments
+      const hasMajorTagFromMaintainer = comments.some(
+        (comment) =>
+          FULL_TIMERS.includes(comment.user?.login ?? "") &&
+          comment.body &&
+          comment.body.includes("/major"),
+      )
+
+      return {
+        ...pr,
+        diff: diffData as unknown as string,
+        hasMajorTag: hasMajorTag || hasMajorTagFromMaintainer,
+      }
     }),
   )
 

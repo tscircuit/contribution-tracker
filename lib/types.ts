@@ -56,6 +56,7 @@ export interface PullRequest {
 
 export interface MergedPullRequest extends PullRequest {
   diff: string
+  hasMajorTag?: boolean
 }
 
 export interface PullRequestWithReviews extends PullRequest {
