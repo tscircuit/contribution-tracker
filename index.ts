@@ -1,7 +1,10 @@
 import * as fs from "fs"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { getRepos } from "lib/data-retrieval/getRepos"
-import { generateMarkdown } from "lib/data-processing/generateMarkdown"
+import {
+  generateMarkdown,
+  scoreToStarString,
+} from "lib/data-processing/generateMarkdown"
 import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getAllPRs } from "lib/data-retrieval/getAllPRs"
 import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
@@ -168,6 +171,7 @@ export async function generateOverview(startDate: string) {
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
           distinctPrsReviewed: 0,
+          score: 0,
         }
       }
       if (contributorData[contributor].discussionComments === undefined) {
@@ -184,6 +188,23 @@ export async function generateOverview(startDate: string) {
         allGithubDiscussions[contributor].discussionVeryActive
       contributorData[contributor].discussionExtremelyActive =
         allGithubDiscussions[contributor].discussionExtremelyActive
+
+      // Add to score based on discussion contribution levels
+
+      contributorData[contributor].score =
+        (contributorData[contributor].score ?? 0) +
+        (contributorData[contributor].discussionParticipating ?? 0) * 25 // 1 point each
+      contributorData[contributor].score =
+        (contributorData[contributor].score ?? 0) +
+        (contributorData[contributor].discussionVeryActive ?? 0) * 2 // 2 points each
+      contributorData[contributor].score =
+        (contributorData[contributor].score ?? 0) +
+        (contributorData[contributor].discussionExtremelyActive ?? 0) * 4 // 4 points each
+
+      console.log("3434", contributorData[contributor].score)
+      contributorData[contributor].stars = scoreToStarString(
+        contributorData[contributor].score ?? 0,
+      )
     },
   )
   await Promise.all(processDiscussionsPromises)

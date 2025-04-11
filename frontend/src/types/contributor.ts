@@ -14,6 +14,11 @@ export interface ContributorStats {
   tiny?: number
   stars?: string
   score?: number
+  distinctPrsReviewed?: number
+  discussionComments?: number
+  discussionParticipating?: number
+  discussionVeryActive?: number
+  discussionExtremelyActive?: number
 }
 
 export interface ContributorCardProps {
