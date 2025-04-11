@@ -9,6 +9,7 @@ import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
 import { analyzePRWithClaude } from "lib/ai/analyzePRWithClaude"
 import { getLastWednesday } from "lib/ai/date-utils"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
+import { storePrAnalysis } from "lib/data-processing/storePrAnalysis"
 
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
@@ -111,6 +112,8 @@ export async function generateOverview(startDate: string) {
       const analysis = await analyzePRWithClaude(pr, repo)
       mergedPrsWithAnalysis.push(analysis)
     }
+
+    storePrAnalysis(mergedPrsWithAnalysis, startDate)
 
     // Fetch and process bountied issues for all contributors in parallel
     const bountiedIssuesPromises = Object.keys(contributorData).map(
