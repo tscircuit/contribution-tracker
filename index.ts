@@ -109,6 +109,9 @@ export async function generateOverview(startDate: string) {
         continue
       }
       const analysis = await analyzePRWithClaude(pr, repo)
+      if (pr.hasMajorTag) {
+        analysis.impact = "Major"
+      }
       mergedPrsWithAnalysis.push(analysis)
     }
 
