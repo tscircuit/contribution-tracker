@@ -201,7 +201,6 @@ export async function generateOverview(startDate: string) {
         (contributorData[contributor].score ?? 0) +
         (contributorData[contributor].discussionExtremelyActive ?? 0) * 4 // 4 points each
 
-      console.log("3434", contributorData[contributor].score)
       contributorData[contributor].stars = scoreToStarString(
         contributorData[contributor].score ?? 0,
       )
