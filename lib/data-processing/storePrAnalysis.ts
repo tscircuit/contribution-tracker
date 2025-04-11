@@ -2,7 +2,7 @@ import type { AnalyzedPR } from "lib/types"
 import fs from "fs"
 export const storePrAnalysis = (
   mergedPrsWithAnalysis: AnalyzedPR[],
-  startDate: string,
+  weekStartDate: string,
 ) => {
   // Ensure directory exists before writing
   const dir = "pr-analysis"
@@ -11,7 +11,7 @@ export const storePrAnalysis = (
   }
 
   fs.writeFileSync(
-    `${dir}/${startDate}.json`,
+    `${dir}/${weekStartDate}.json`,
     JSON.stringify(
       mergedPrsWithAnalysis.map((pr) => ({
         tag: `${pr.repo}#${pr.number}`,
@@ -20,7 +20,6 @@ export const storePrAnalysis = (
       null,
       2,
     ),
-    {},
   )
-  console.log(`Generated pr-analysis/${startDate}.json`)
+  console.log(`Generated pr-analysis/${weekStartDate}.json`)
 }
