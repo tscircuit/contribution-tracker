@@ -193,7 +193,7 @@ export async function generateOverview(startDate: string) {
 
       contributorData[contributor].score =
         (contributorData[contributor].score ?? 0) +
-        (contributorData[contributor].discussionParticipating ?? 0) * 25 // 1 point each
+        (contributorData[contributor].discussionParticipating ?? 0) * 1 // 1 point each
       contributorData[contributor].score =
         (contributorData[contributor].score ?? 0) +
         (contributorData[contributor].discussionVeryActive ?? 0) * 2 // 2 points each
