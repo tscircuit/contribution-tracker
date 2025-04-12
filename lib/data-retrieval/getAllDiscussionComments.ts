@@ -1,4 +1,3 @@
-import { octokit } from "lib/sdks"
 import { graphql } from "@octokit/graphql"
 import type { DiscussionComment } from "lib/types"
 
@@ -94,7 +93,9 @@ export async function getAllDiscussionComments(
         }
       }
     }
-    return discussionComments
+    return discussionComments.filter(
+      (comment) => new Date(comment.createdAt) >= new Date(formattedDate),
+    )
   } catch (error) {
     console.error(`Error fetching discussion comments}:`, error)
     return []
