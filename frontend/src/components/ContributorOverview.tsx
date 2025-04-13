@@ -155,7 +155,7 @@ export function ContributorOverview({
       <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12">
         {fullTimerContributors.length > 0 && (
           <div className="md:w-[25%]">
-            <h3 className="text-lg font-semibold mb-3">Full-time</h3>
+            <h3 className="text-lg font-semibold mb-3">Staff</h3>
             <div className="space-y-2">
               {fullTimerContributors.map(([username, stats]) => (
                 <div
