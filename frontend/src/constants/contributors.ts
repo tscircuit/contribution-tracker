@@ -1,4 +1,4 @@
-export const FULL_TIMERS = [
+export const STAFF_USERNAMES = [
   "seveibar",
   "imrishabh18",
   "tscircuitbot",

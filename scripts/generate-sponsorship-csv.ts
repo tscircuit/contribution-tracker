@@ -1,6 +1,6 @@
 import fs from "node:fs"
 import path from "node:path"
-import { FULL_TIMERS } from "frontend/src/constants/contributors"
+import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { getSponsorshipAmount } from "../lib/scoring"
 
 interface ContributorData {
@@ -134,7 +134,7 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
     ({ data: weekData, weekStartDate, weekEndDate }, weekIndex) => {
       Object.entries(weekData).forEach(([username, data]) => {
         // Skip full-timers
-        if (FULL_TIMERS.includes(username)) return
+        if (STAFF_USERNAMES.includes(username)) return
 
         if (!sponsorships.has(username)) {
           // Initialize with correct weekly date ranges
