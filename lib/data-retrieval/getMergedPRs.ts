@@ -1,6 +1,6 @@
 import { octokit } from "lib/sdks"
 import type { MergedPullRequest } from "lib/types"
-import { FULL_TIMERS } from "frontend/src/constants/contributors"
+import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 
 export async function getMergedPRs(
   repo: string,
@@ -43,7 +43,7 @@ export async function getMergedPRs(
       // Check if any maintainer has added a /major tag in their comments
       const hasMajorTagFromMaintainer = comments.some(
         (comment) =>
-          FULL_TIMERS.includes(comment.user?.login ?? "") &&
+          STAFF_USERNAMES.includes(comment.user?.login ?? "") &&
           comment.body &&
           comment.body.includes("/major"),
       )

@@ -9,7 +9,7 @@ import { ContributorCard } from "./ContributorCard"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
 import { CONTRIBUTION_TOOLTIPS, STATS_TOOLTIPS } from "../constants/tooltips"
-import { FULL_TIMERS } from "../constants/contributors"
+import { STAFF_USERNAMES } from "../constants/contributors"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 
@@ -22,7 +22,7 @@ export function ContributorOverview({
   // First, separate full-timers from other contributors
   const [fullTimerContributors, otherContributors] = contributors.reduce(
     ([full, other], contributor) => {
-      if (FULL_TIMERS.includes(contributor[0])) {
+      if (STAFF_USERNAMES.includes(contributor[0])) {
         return [[...full, contributor], other]
       }
       return [full, [...other, contributor]]
@@ -34,7 +34,7 @@ export function ContributorOverview({
   const podiumContributors = otherContributors.slice(0, 3)
   const remainingContributors = otherContributors
     .slice(3)
-    .filter(([username]) => !FULL_TIMERS.includes(username))
+    .filter(([username]) => !STAFF_USERNAMES.includes(username))
 
   const PodiumEntry = ({
     position,
@@ -155,7 +155,7 @@ export function ContributorOverview({
       <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12">
         {fullTimerContributors.length > 0 && (
           <div className="md:w-[25%]">
-            <h3 className="text-lg font-semibold mb-3">Full-time</h3>
+            <h3 className="text-lg font-semibold mb-3">Staff</h3>
             <div className="space-y-2">
               {fullTimerContributors.map(([username, stats]) => (
                 <div
