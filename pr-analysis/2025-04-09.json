@@ -11,6 +11,28 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/pcb-viewer#229",
+    "number": 229,
+    "title": "update lockfile to fix npm publish",
+    "description": "Updates the lockfile to fix npm publish",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/229",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/pcb-viewer#226",
+    "number": 226,
+    "title": "fix: apply the edit event movement once",
+    "description": "Fix to apply the edit event movement only once when a component is moved.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/226",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/props#209",
     "number": 209,
     "title": "Add `connections` prop for resistor and capacitor",
@@ -107,6 +129,39 @@
     "contributor": "seveibar",
     "repo": "tscircuit/winterspec",
     "url": "https://github.com/tscircuit/winterspec/pull/34",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#738",
+    "number": 738,
+    "title": "Update Autorouter (LED Matrix Fixes, CFrm transition fixes, Keyboard5 fixes, Useless Via Removal)",
+    "description": "Update the Autorouter to fix issues with LED Matrix, CFrm transition, Keyboard5, and remove useless vias.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/738",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#737",
+    "number": 737,
+    "title": "add missing public export for applyEditsToCircuitJson",
+    "description": "Add missing public export for `applyEditsToCircuitJson` function.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/737",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#736",
+    "number": 736,
+    "title": "porting the `applyEditEvents` method from pcb-viewer to core",
+    "description": "Ports the `applyEditEvents` method from `pcb-viewer` to the `core` library.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/736",
     "isAlignedWithMilestone": false
   },
   {
@@ -253,6 +308,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/tscircuit.com#846",
+    "number": 846,
+    "title": "feat: add clickToInteractEnabled prop",
+    "description": "Add a \"clickToInteractEnabled\" prop to the CadViewer and SchematicViewer components.",
+    "impact": "Minor",
+    "contributor": "Ayushjhawar8",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/846",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#841",
     "number": 841,
     "title": "feat: add new format latest snippet page",
@@ -264,6 +330,61 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#856",
+    "number": 856,
+    "title": "Restricted 'Delete Snippet' and 'Change Package Visibility' button to owner only and fix error toast variant",
+    "description": "Restricts the 'Delete Snippet' and 'Change Package Visibility' buttons to the owner of the snippet and fixes the error toast variant.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/856",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#857",
+    "number": 857,
+    "title": "chore: runframe and core",
+    "description": "Update dependencies for `@tscircuit/core` and `@tscircuit/runframe`",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/857",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#823",
+    "number": 823,
+    "title": "feat(package-details): add license management to package details dialog",
+    "description": "Introduce license selection and automatic LICENSE file generation for packages, enhancing package metadata management and ensuring compliance with licensing requirements.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/823",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#849",
+    "number": 849,
+    "title": "fake order quote schema",
+    "description": "Adds a new schema for order quotes, including information about shipping options, quoted components, and the overall order quote.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/849",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#854",
+    "number": 854,
+    "title": "remove playwright workflow for the time being",
+    "description": "Remove the Playwright workflow for the time being.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/854",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/tscircuit.com#848",
     "number": 848,
     "title": "Fixed the overflow text for BOM view",
@@ -272,17 +393,6 @@
     "contributor": "MustafaMulla29",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/848",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/tscircuit.com#846",
-    "number": 846,
-    "title": "feat: add clickToInteractEnabled prop",
-    "description": "Add a \"clickToInteractEnabled\" prop to the CadViewer and SchematicViewer components.",
-    "impact": "Minor",
-    "contributor": "Ayushjhawar8",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/846",
     "isAlignedWithMilestone": true
   },
   {
@@ -517,6 +627,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/runframe#460",
+    "number": 460,
+    "title": "chore: pcb-viewer & core",
+    "description": "Update versions of @tscircuit/core and @tscircuit/pcb-viewer packages.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/460",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/runframe#452",
     "number": 452,
     "title": "fix example13 (bad entrypoint)",
@@ -580,6 +701,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/runframe",
     "url": "https://github.com/tscircuit/runframe/pull/439",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#163",
+    "number": 163,
+    "title": "support manual edits for schematic viewer in cli",
+    "description": "Update the version of the \"@tscircuit/runframe\" dependency.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/163",
     "isAlignedWithMilestone": true
   },
   {
@@ -679,6 +811,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/docs",
     "url": "https://github.com/tscircuit/docs/pull/32",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/unravel-autorouter#95",
+    "number": 95,
+    "title": "Fix LED Matrix / Closed Form Transition Solver Issue",
+    "description": "Fix an issue with the LED Matrix / Closed Form Transition Solver",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/unravel-autorouter",
+    "url": "https://github.com/tscircuit/unravel-autorouter/pull/95",
     "isAlignedWithMilestone": true
   },
   {
