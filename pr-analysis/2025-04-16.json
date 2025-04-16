@@ -1,0 +1,112 @@
+[
+  {
+    "tag": "tscircuit/3d-viewer#245",
+    "number": 245,
+    "title": "Fix Board Centering, Major Performance Improvements, Incrementally Load Board, Fix Janky Trace Drawings, Fix Tooltip Slowdown",
+    "description": "Introduces major performance improvements, fixes for board centering, trace drawings, and tooltip slowdown.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/245",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#739",
+    "number": 739,
+    "title": "update checks and circuit json to connectivity net, speculative fix for spurious DRC errors",
+    "description": "Update checks and circuit JSON to connectivity net, a speculative fix for spurious DRC errors",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/739",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/contribution-tracker#122",
+    "number": 122,
+    "title": "refactor(pr-analysis): replace PRsByRepository with PrsTable and add PR analysis data handling",
+    "description": "Refactors the PR analysis feature by introducing a new `PrsTable` component to replace the deprecated `PRsByRepository` component, and adds support for fetching and processing PR analysis data, including grouping PRs by repository and contributor.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/122",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#864",
+    "number": 864,
+    "title": "rename to `order_quotes`",
+    "description": "Rename the \"order_quote\" directory to \"order_quotes\"",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/864",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#862",
+    "number": 862,
+    "title": "fix(use-fork-package-mutation): handle error when forking own package",
+    "description": "Fixes an error that occurs when trying to fork one's own package.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/862",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#861",
+    "number": 861,
+    "title": "style(components): improve responsiveness and styling in package header and code viewer",
+    "description": "Improve responsiveness and styling of the package header and code viewer components",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/861",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#860",
+    "number": 860,
+    "title": "fake endpoint for `order_quotes`",
+    "description": "The pull request adds a fake endpoint for `order_quotes` that allows creating, retrieving, and creating all vendor quotes for a package release.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/860",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#859",
+    "number": 859,
+    "title": "fix: image preview",
+    "description": "Fix the image preview in the package page.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/859",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#217",
+    "number": 217,
+    "title": "chore: update @tscircuit/core to v0.0.372",
+    "description": "Automated update of @tscircuit/core to v0.0.372.",
+    "impact": "Tiny",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/217",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#164",
+    "number": 164,
+    "title": "feat(cli): add directory confirmation prompt for init command",
+    "description": "Add a confirmation prompt to the `tsci init` command when no directory is provided.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/164",
+    "isAlignedWithMilestone": true
+  }
+]
