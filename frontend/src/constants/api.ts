@@ -11,5 +11,8 @@ export const getContributionOverviewsUrl = () =>
 export const getContributionOverviewMarkdownUrl = (date: string) =>
   `${RAW_CONTENT_URL}/${CONTRIBUTION_OVERVIEWS_PATH}/${date}.md`
 
+export const getPrAnalysisUrl = (date: string) =>
+  `${RAW_CONTENT_URL}/pr-analysis/${date}.json`
+
 export const getPullRequestUrl = (repo: string, prNumber: number) =>
   `https://github.com/${repo}/pull/${prNumber}`

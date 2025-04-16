@@ -12,7 +12,8 @@
       "cosmos-export",
       "dist",
       "package.json",
-      "contribution-overviews"
+      "contribution-overviews",
+      "pr-analysis"
     ]
   },
   "javascript": {

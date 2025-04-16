@@ -1,20 +1,14 @@
 import { useState, useEffect } from "react"
 import {
   type ContributorStats,
-  type PR,
-  type RepoData,
+  type PrAnalysisResult,
+  type PrsResultant,
 } from "../types/contributor"
-import {
-  getContributionOverviewsUrl,
-  getContributionOverviewMarkdownUrl,
-  getPullRequestUrl,
-} from "../constants/api"
+import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 
 interface UseContributorsDataReturn {
   data: Record<string, ContributorStats>
   dateUsed: string
-  repositories: Record<string, number>
-  repoDetails: RepoData[]
   selectedContributor?: string
   last8WeeksData: (username: string) => any[]
   isModalOpen: boolean
@@ -22,138 +16,109 @@ interface UseContributorsDataReturn {
   setSelectedContributor: (username?: string) => void
   setIsModalOpen: (isOpen: boolean) => void
   loading: boolean
+  prsResultant: PrsResultant | undefined
+  error: Error | null
 }
 
 export function useContributorsData(): UseContributorsDataReturn {
   const [data, setData] = useState<Record<string, ContributorStats>>({})
   const [dateUsed, setDateUsed] = useState<string>("")
-  const [repositories, setRepositories] = useState<Record<string, number>>({})
-  const [repoDetails, setRepoDetails] = useState<RepoData[]>([])
+  const [prsResultant, setPrsResultant] = useState<PrsResultant>()
   const [selectedContributor, setSelectedContributor] = useState<string>()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [jsonRecords, setJsonRecords] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
     async function fetchData() {
       setLoading(true)
+      setError(null)
       try {
-        // First fetch the list of files
         const filesResp = await fetch(getContributionOverviewsUrl())
+        if (!filesResp.ok)
+          throw new Error(
+            `Failed to fetch file list: ${filesResp.statusText} (${filesResp.status})`,
+          )
         const files = await filesResp.json()
 
-        // Filter for JSON files and sort by name to get the latest
         const jsonFiles = files
           .filter((file: { name: string }) => file.name.endsWith(".json"))
           .sort((a: { name: string }, b: { name: string }) =>
             b.name.localeCompare(a.name),
           )
-        if (jsonFiles.length === 0) throw new Error("No JSON files found")
+        if (jsonFiles.length === 0)
+          throw new Error("No JSON overview files found")
 
         const latestFile = jsonFiles[0]
         const date = latestFile.name.replace(".json", "")
         setDateUsed(date)
 
-        for (const file of jsonFiles) {
+        const jsonResp = await fetch(latestFile.download_url)
+        if (!jsonResp.ok)
+          throw new Error(
+            `Failed to fetch latest data (${latestFile.name}): ${jsonResp.statusText} (${jsonResp.status})`,
+          )
+        const latestJsonData = await jsonResp.json()
+        setData(latestJsonData)
+
+        const eightWeeksAgo = new Date()
+        eightWeeksAgo.setDate(eightWeeksAgo.getDate() - 8 * 7)
+
+        const historicalFiles = jsonFiles.filter((file: { name: string }) => {
           const fileName = file.name.replace(".json", "")
           const fileDate = new Date(fileName)
-          const timeDiff = new Date().getTime() - fileDate.getTime()
-          const weeksDiff = timeDiff / (1000 * 60 * 60 * 24 * 7)
-          if (weeksDiff <= 8) {
-            const resp = await fetch(file.download_url)
-            const jsonData = await resp.json()
-            jsonRecords.push({ ...jsonData, date: fileDate })
-          } else {
-            break
-          }
-        }
-
-        // Fetch the JSON data
-        const jsonResp = await fetch(latestFile.download_url)
-        const jsonData = await jsonResp.json()
-        setData(jsonData)
-
-        // Fetch the markdown file
-        const mdResp = await fetch(getContributionOverviewMarkdownUrl(date))
-        const markdown = await mdResp.text()
-
-        // Parse repository data from markdown
-        const repoStats: Record<string, number> = {}
-        const repoDetails: RepoData[] = []
-
-        let currentRepo: string | null = null
-        let currentPRs: PR[] = []
-
-        markdown.split("\n").forEach((line) => {
-          // Match repository headers
-          const repoMatch = line.match(/### \[(.*?)\]/)
-          if (repoMatch) {
-            if (currentRepo && currentPRs.length > 0) {
-              repoDetails.push({ name: currentRepo, prs: [...currentPRs] })
-            }
-            currentRepo = repoMatch[1]
-            currentPRs = []
-            return
-          }
-
-          // Match PR rows in tables - handle both formats (with and without contributor)
-          // First try to match the format with contributor
-          let prMatch = line.match(
-            /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \| (.*?) \|/,
-          )
-
-          let hasContributor = true
-
-          // If that doesn't match, try the format without contributor
-          if (!prMatch) {
-            prMatch = line.match(
-              /\| \[#(\d+)\].*? \| (🐳 Major|🐙 Minor|🐌 Tiny) \| (.*?) \| (.*?) \|/,
-            )
-            hasContributor = false
-          }
-
-          if (prMatch && currentRepo) {
-            repoStats[currentRepo] = (repoStats[currentRepo] || 0) + 1
-
-            if (hasContributor) {
-              // Format with contributor: number, impact, contributor, description, alignment
-              currentPRs.push({
-                number: parseInt(prMatch[1]),
-                impact: prMatch[2] as PR["impact"],
-                contributor: prMatch[3],
-                description: prMatch[4],
-                isAlignedWithMilestone: prMatch[5].includes("✅"),
-                url: getPullRequestUrl(currentRepo, parseInt(prMatch[1])),
-              })
-            } else {
-              // get markdown content before 'line'
-              const markdownBeforeLine = markdown.split(line)[0] // Get content BEFORE the current line
-              const contributor = markdownBeforeLine
-                .match(/### \[(.*?)\]/g)
-                ?.pop()
-                ?.match(/\[(.*?)\]/)?.[1]
-              // Format without contributor: number, impact, description, alignment
-              currentPRs.push({
-                number: parseInt(prMatch[1]),
-                impact: prMatch[2] as PR["impact"],
-                contributor: contributor ?? "",
-                description: prMatch[3],
-                isAlignedWithMilestone: prMatch[4].includes("✅"),
-                url: getPullRequestUrl(currentRepo, parseInt(prMatch[1])),
-              })
-            }
-          }
+          return fileDate >= eightWeeksAgo
         })
 
-        // Add the last repo if exists
-        if (currentRepo && currentPRs.length > 0) {
-          repoDetails.push({ name: currentRepo, prs: currentPRs })
+        const historicalDataPromises = historicalFiles.map(
+          async (file: any) => {
+            const resp = await fetch(file.download_url)
+            if (!resp.ok) {
+              console.warn(
+                `Failed to fetch historical data for ${file.name}: ${resp.statusText}`,
+              )
+              return null
+            }
+            const jsonData = await resp.json()
+            const fileDate = new Date(file.name.replace(".json", ""))
+            return { ...jsonData, date: fileDate }
+          },
+        )
+
+        const historicalDataResults = await Promise.all(historicalDataPromises)
+        const validHistoricalData = historicalDataResults.filter(
+          (data) => data !== null,
+        )
+        setJsonRecords(validHistoricalData)
+
+        const prAnalysisResp = await fetch(getPrAnalysisUrl(date))
+        if (!prAnalysisResp.ok)
+          throw new Error(
+            `Failed to fetch PR analysis (${date}.json): ${prAnalysisResp.statusText} (${prAnalysisResp.status})`,
+          )
+        const prAnalysis = (await prAnalysisResp.json()) as PrAnalysisResult[]
+
+        const prsByContributor: Record<string, PrAnalysisResult[]> = {}
+        const prsByRepo: Record<string, PrAnalysisResult[]> = {}
+        for (const pr of prAnalysis) {
+          if (!prsByRepo[pr.repo]) {
+            prsByRepo[pr.repo] = []
+          }
+          prsByRepo[pr.repo].push(pr)
+          if (!prsByContributor[pr.contributor]) {
+            prsByContributor[pr.contributor] = []
+          }
+          prsByContributor[pr.contributor].push(pr)
         }
 
-        setRepositories(repoStats)
-        setRepoDetails(repoDetails)
+        setPrsResultant({
+          prsByContributors: prsByContributor,
+          prsByRepos: prsByRepo,
+        })
       } catch (error) {
-        console.error("Error fetching data:", error)
+        console.error("Error fetching contributor data:", error)
+        setError(error instanceof Error ? error : new Error(String(error)))
       } finally {
         setLoading(false)
       }
@@ -163,40 +128,44 @@ export function useContributorsData(): UseContributorsDataReturn {
   }, [])
 
   const sortedContributors = Object.entries(data).sort((a, b) => {
-    // Primary sort by score
     const scoreDiff = (b[1].score ?? 0) - (a[1].score ?? 0)
     if (scoreDiff !== 0) return scoreDiff
-
-    // Secondary sort by PR count
     return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
   })
 
   const last8WeeksData = (username: string) => {
-    return jsonRecords
-      .map((x) => ({
-        date: new Date(x.date),
-        ...x[username],
+    if (!jsonRecords || jsonRecords.length === 0) return []
+
+    const userRecords = jsonRecords
+      .filter((record) => record[username])
+      .map((record) => ({
+        date: new Date(record.date),
+        ...(record[username] || {}),
       }))
-      .filter(
-        (record, index, array) =>
-          index ===
-          array.findIndex((r) => r.date.getTime() === record.date.getTime()),
-      )
-      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-      .map(({ date: _date, ...x }) => ({
-        date: _date.toLocaleDateString("en-US", {
-          month: "2-digit",
-          day: "2-digit",
-        }),
-        ...x,
-      }))
+
+    const uniqueDateRecords = userRecords.filter(
+      (record, index, array) =>
+        index ===
+        array.findIndex((r) => r.date.getTime() === record.date.getTime()),
+    )
+
+    const sortedRecords = uniqueDateRecords.sort(
+      (a, b) => a.date.getTime() - b.date.getTime(),
+    )
+
+    return sortedRecords.map(({ date: _date, ...x }) => ({
+      date: _date.toLocaleDateString("en-US", {
+        month: "2-digit",
+        day: "2-digit",
+      }),
+      ...x,
+    }))
   }
 
   return {
     data,
     dateUsed,
-    repositories,
-    repoDetails,
+    prsResultant,
     selectedContributor,
     last8WeeksData,
     isModalOpen,
@@ -204,5 +173,6 @@ export function useContributorsData(): UseContributorsDataReturn {
     setSelectedContributor,
     setIsModalOpen,
     loading,
+    error,
   }
 }

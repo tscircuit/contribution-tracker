@@ -21,6 +21,18 @@ export interface ContributorStats {
   discussionExtremelyActive?: number
 }
 
+export interface PrAnalysisResult {
+  tag: string
+  number: number
+  title: string
+  description: string
+  impact: "Major" | "Minor" | "Tiny"
+  contributor: string
+  repo: string
+  url: string
+  isAlignedWithMilestone: boolean
+}
+
 export interface ContributorCardProps {
   username: string
   contributor: ContributorStats
@@ -57,4 +69,9 @@ export interface PR {
 export interface RepoData {
   name: string
   prs: PR[]
+}
+
+export interface PrsResultant {
+  prsByRepos: Record<string, PrAnalysisResult[]>
+  prsByContributors: Record<string, PrAnalysisResult[]>
 }
