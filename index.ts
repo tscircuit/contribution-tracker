@@ -116,6 +116,7 @@ export async function generateOverview(startDate: string) {
       if (pr.hasMajorTag) {
         analysis.impact = "Major"
       }
+      analysis.impact = analysis.impact.split(" ")[0]
       mergedPrsWithAnalysis.push(analysis)
     }
 
