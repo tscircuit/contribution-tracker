@@ -1,6 +1,7 @@
 import { type PrAnalysisResult } from "../types/contributor"
 import { getProfileUrl } from "../constants/github"
 import { CURRENT_MILESTONE } from "../types/milestones"
+import { CONTRIBUTION_TYPES } from "../constants/metrics"
 
 interface PRsByRepositoryProps {
   prs: PrAnalysisResult[]
@@ -9,6 +10,13 @@ interface PRsByRepositoryProps {
 }
 
 export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
+  const getImpactColor = (impact: string) => {
+    if (impact.includes("Major")) return CONTRIBUTION_TYPES.MAJOR.colorClass
+    if (impact.includes("Minor")) return CONTRIBUTION_TYPES.MINOR.colorClass
+    if (impact.includes("Tiny")) return CONTRIBUTION_TYPES.TINY.colorClass
+    return "text-gray-900"
+  }
+
   return (
     <div className={inModal ? "" : "mb-12"}>
       <div className="space-y-4">
@@ -63,7 +71,11 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
                       </a>
                     </td>
                     <td className="px-3 py-2 whitespace-nowrap text-sm">
-                      {pr.impact.split(" ")[0]}
+                      <span
+                        className={`font-medium ${getImpactColor(pr.impact)}`}
+                      >
+                        {pr.impact.split(" ")[0]}
+                      </span>
                     </td>
                     {!inModal && (
                       <td className="px-3 py-2 whitespace-nowrap text-sm">
