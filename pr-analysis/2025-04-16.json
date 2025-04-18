@@ -66,6 +66,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json#168",
+    "number": 168,
+    "title": "Exported schematic warning from any_circuit_element",
+    "description": "Exported the `schematic_manual_edit_conflict_warning` property from `any_circuit_element`.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/168",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#167",
+    "number": 167,
+    "title": "Defined error obj for sch manual edits conflict",
+    "description": "Defines an error object for handling conflicts between manual edits and explicit schX/schY coordinates in a schematic.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/167",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#166",
     "number": 166,
     "title": "added pcb_board material",
@@ -132,6 +154,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/core#750",
+    "number": 750,
+    "title": "add css-select as prod dep",
+    "description": "Add css-select as a production dependency",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/750",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#748",
+    "number": 748,
+    "title": "optimize selector cache prior to SourceTraceRender (2x speedup on benchmark)",
+    "description": "Optimize selector cache prior to SourceTraceRender, resulting in a 2x speedup on the benchmark.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/748",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#747",
     "number": 747,
     "title": "Use css-select for faster selectOne and selectAll queries, cache selectOne and selectAll queries (~4-8x speedup on overall render times)",
@@ -173,6 +217,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/739",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/contribution-tracker#123",
+    "number": 123,
+    "title": "patch: not able to fetch pr impact gracefully",
+    "description": "Patch to handle cases where the PR impact cannot be determined gracefully.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/123",
     "isAlignedWithMilestone": true
   },
   {
@@ -264,6 +319,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/eval#230",
+    "number": 230,
+    "title": "chore: update @tscircuit/core to v0.0.377",
+    "description": "Update @tscircuit/core to v0.0.377",
+    "impact": "Minor",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/230",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/eval#217",
     "number": 217,
     "title": "chore: update @tscircuit/core to v0.0.372",
@@ -272,6 +338,39 @@
     "contributor": "tscircuitbot",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/217",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#480",
+    "number": 480,
+    "title": "Order dialog in Runframe (Part -1)",
+    "description": "Adds a new feature to the Runframe component to display an order dialog.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/480",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#475",
+    "number": 475,
+    "title": "fix snapping movement back to origin on manual edit",
+    "description": "Fix snapping movement back to origin on manual edit",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/475",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/runframe#478",
+    "number": 478,
+    "title": "fix import errors not throwing, import easyeda",
+    "description": "Fix import errors not throwing and update easyeda dependency to version 0.0.134",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/478",
     "isAlignedWithMilestone": true
   },
   {
@@ -316,6 +415,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/164",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/docs#33",
+    "number": 33,
+    "title": "add iframe with keyboard",
+    "description": "Add an iframe with keyboard example code to the \"build-a-custom-keyboard-with-tscircuit\" tutorial",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/docs",
+    "url": "https://github.com/tscircuit/docs/pull/33",
     "isAlignedWithMilestone": true
   }
 ]
