@@ -66,6 +66,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json#169",
+    "number": 169,
+    "title": "Refactored pcb error to warning",
+    "description": "Refactored the `pcb_manual_edit_conflict_error` to `pcb_manual_edit_conflict_warning`.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/169",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#170",
+    "number": 170,
+    "title": "Some checks for API design standards",
+    "description": "Adds safety checks to ensure that every `AnyCircuitElement` has a type and an `id` property with the key name `{type}_id`.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/170",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#168",
     "number": 168,
     "title": "Exported schematic warning from any_circuit_element",
@@ -253,6 +275,61 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/math-utils#8",
+    "number": 8,
+    "title": "introduce pointToBoxDistance and pointToBoundsDistance",
+    "description": "The pull request introduces two new functions, `pointToBoxDistance` and `pointToBoundsDistance`, that calculate the minimum distance from a point to a box or a bounds rectangle, respectively.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/math-utils",
+    "url": "https://github.com/tscircuit/math-utils/pull/8",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#882",
+    "number": 882,
+    "title": "fix(tree-view): correct syntax error in selectedTreeVariants and sync selected item",
+    "description": "Fix syntax error in `selectedTreeVariants` and refactor `transformFilesToTreeData` to handle hidden files and use an array structure for tree data.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/882",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#878",
+    "number": 878,
+    "title": "patch: icon color update",
+    "description": "Update the icon color in the FileSidebar and CodeEditorHeader components.",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/878",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#862",
+    "number": 862,
+    "title": "fix(use-fork-package-mutation): handle error when forking own package",
+    "description": "Fixes an error that occurs when trying to fork one's own package.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/862",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#845",
+    "number": 845,
+    "title": "Change Editor Page endpoints from `/snippets/*` to `/packages/*`, introduce file tree, multi-file selection in editor",
+    "description": "Change Editor Page endpoints from `/snippets/*` to `/packages/*`, introduce file tree, multi-file selection in editor",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/845",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#865",
     "number": 865,
     "title": "update circuit json to gerber to fix issues with rotated rect",
@@ -272,17 +349,6 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/864",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/tscircuit.com#862",
-    "number": 862,
-    "title": "fix(use-fork-package-mutation): handle error when forking own package",
-    "description": "Fixes an error that occurs when trying to fork one's own package.",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/862",
     "isAlignedWithMilestone": true
   },
   {
@@ -415,6 +481,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/164",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/docs#34",
+    "number": 34,
+    "title": "docs: update quickstart-cli documentation and add images for tsci push",
+    "description": "Adds documentation and images for the `tsci push` command in the quickstart-cli documentation.",
+    "impact": "Minor",
+    "contributor": "dhvll",
+    "repo": "tscircuit/docs",
+    "url": "https://github.com/tscircuit/docs/pull/34",
     "isAlignedWithMilestone": true
   },
   {
