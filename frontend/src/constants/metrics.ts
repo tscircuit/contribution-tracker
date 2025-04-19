@@ -5,7 +5,7 @@ export const CONTRIBUTION_TYPES = {
     label: "major",
     emoji: "🐳",
     value: "major",
-    colorClass: "text-blue-600",
+    colorClass: "text-red-600",
   },
   MINOR: {
     label: "minor",
