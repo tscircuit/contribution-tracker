@@ -33,6 +33,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/pcb-viewer#239",
+    "number": 239,
+    "title": "Fixed press interaction on mobile",
+    "description": "Fixed press interaction on mobile devices",
+    "impact": "Minor\n\nExplanation:\nThe",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/239",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/pcb-viewer#235",
     "number": 235,
     "title": "Patch Mouse Pan Broken (use-mouse-matrix@1.3.2 regression)",
@@ -176,6 +187,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/core#753",
+    "number": 753,
+    "title": "repro Schematic Trace crossing \"hop\" generated incorrectly",
+    "description": "Fixes a bug where the schematic trace crossing \"hop\" is generated incorrectly.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/753",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#751",
+    "number": 751,
+    "title": "Emitted warnings for pcb and sch",
+    "description": "Emits warnings for both schematic and PCB when there are manual placement conflicts with prop-defined coordinates.",
+    "impact": "Major",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/751",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#752",
+    "number": 752,
+    "title": "updating checks to fix Invalid DRC Errors",
+    "description": "Updating the versions of `@tscircuit/checks` and `@tscircuit/math-utils` dependencies to fix Invalid DRC Errors.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/752",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#750",
     "number": 750,
     "title": "add css-select as prod dep",
@@ -264,6 +308,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/checks#32",
+    "number": 32,
+    "title": "solving logic error causing false overlaps errors",
+    "description": "Fixes a logic error causing false overlaps errors in the PCB trace non-overlapping check.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/32",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json-to-gerber#28",
     "number": 28,
     "title": "Fix unsupported shape \"rotated_rect\"",
@@ -275,6 +330,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/math-utils#9",
+    "number": 9,
+    "title": "add midpoint method",
+    "description": "Adds a function to calculate the midpoint between two points.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/math-utils",
+    "url": "https://github.com/tscircuit/math-utils/pull/9",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/math-utils#8",
     "number": 8,
     "title": "introduce pointToBoxDistance and pointToBoundsDistance",
@@ -283,6 +349,61 @@
     "contributor": "seveibar",
     "repo": "tscircuit/math-utils",
     "url": "https://github.com/tscircuit/math-utils/pull/8",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#891",
+    "number": 891,
+    "title": "refactor(CodeEditorHeader): add support for several file types formatting",
+    "description": "Refactor the CodeEditorHeader component to add support for formatting Markdown and HTML files, improve file type detection, and handle errors for unsupported file types.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/891",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#893",
+    "number": 893,
+    "title": "Restricted edit package name button to owner only",
+    "description": "Restricts the edit package name button to only the package owner.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/893",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#886",
+    "number": 886,
+    "title": "feat: enhance UI and error handling in package editor",
+    "description": "Enhance UI and error handling in package editor",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/886",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#879",
+    "number": 879,
+    "title": "Added file selector to /p/editor",
+    "description": "Added a file selector to the /p/editor page.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/879",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#880",
+    "number": 880,
+    "title": "refactor(CodeEditor): simplify file selection logic in useEffect",
+    "description": "Refactor the file selection logic in the `useEffect` hook to improve readability and maintainability.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/880",
     "isAlignedWithMilestone": false
   },
   {
@@ -385,6 +506,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/eval#236",
+    "number": 236,
+    "title": "runTscircuitModule",
+    "description": "Adds a new function `runTscircuitModule` to quickly run a published tscircuit module by its name.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/236",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#234",
+    "number": 234,
+    "title": "chore: update @tscircuit/core to v0.0.378",
+    "description": "Update @tscircuit/core to v0.0.378",
+    "impact": "Tiny",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/234",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/eval#230",
     "number": 230,
     "title": "chore: update @tscircuit/core to v0.0.377",
@@ -451,6 +594,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/cli#173",
+    "number": 173,
+    "title": "ref: rename snippet type to package type",
+    "description": "Rename \"snippet type\" to \"package type\" in the UI",
+    "impact": "Minor",
+    "contributor": "dhvll",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/173",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/cli#170",
     "number": 170,
     "title": "chore: update dependencies to latest versions",
@@ -481,6 +635,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/164",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/docs#36",
+    "number": 36,
+    "title": "docs: enhance tsci-push documentation with image-captions",
+    "description": "Added image captions to enhance the documentation for the `tsci push` command.",
+    "impact": "Tiny",
+    "contributor": "dhvll",
+    "repo": "tscircuit/docs",
+    "url": "https://github.com/tscircuit/docs/pull/36",
     "isAlignedWithMilestone": true
   },
   {
