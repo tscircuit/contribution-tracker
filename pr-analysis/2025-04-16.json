@@ -1,5 +1,16 @@
 [
   {
+    "tag": "tscircuit/schematic-viewer#84",
+    "number": 84,
+    "title": "Fix the double movement of position on manual edits",
+    "description": "Fix the double movement of position on manual edits",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/schematic-viewer",
+    "url": "https://github.com/tscircuit/schematic-viewer/pull/84",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/schematic-viewer#83",
     "number": 83,
     "title": "Revert \"Revert \"fix: update center as per the last position\"\"",
@@ -286,6 +297,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/contribution-tracker#124",
+    "number": 124,
+    "title": "add colors to text in impact column",
+    "description": "Add colors to the \"Impact\" column in the PR table",
+    "impact": "Tiny",
+    "contributor": "Ayushjhawar8",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/124",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/contribution-tracker#123",
     "number": 123,
     "title": "patch: not able to fetch pr impact gracefully",
@@ -349,6 +371,72 @@
     "contributor": "seveibar",
     "repo": "tscircuit/math-utils",
     "url": "https://github.com/tscircuit/math-utils/pull/8",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#907",
+    "number": 907,
+    "title": "refactor(CodeAndPreview): add pkgFilesWithContent to returned object",
+    "description": "This change enhances the returned object by including all files from `pkgFilesWithContent`, improving the completeness of the data structure used in the component.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/907",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#906",
+    "number": 906,
+    "title": "fake endpoint to get the completed order_quote & add env variable `TSCIRCUIT_REGISTRY_API_BASE_URL` for order button",
+    "description": "Adds a fake endpoint to get the completed order_quote and adds an environment variable `TSCIRCUIT_REGISTRY_API_BASE_URL` for the order button.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/906",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#895",
+    "number": 895,
+    "title": "refactor(CodeEditor): support tscircuit.config.json && extract file selection logic into utility function",
+    "description": "Refactor the CodeEditor component to move the logic for finding the target file into a separate utility function, and add support for the `tscircuit.config.json` file.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/895",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#905",
+    "number": 905,
+    "title": "chore: runframe update",
+    "description": "Update the version of `@tscircuit/runframe` dependency",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/905",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#903",
+    "number": 903,
+    "title": "Removed Insert > Chip from editor page and removed footprint dialog",
+    "description": "Removed the \"Insert > Chip\" feature from the code editor and the footprint dialog.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/903",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#899",
+    "number": 899,
+    "title": "add filter to user profile",
+    "description": "Add a filter to the user profile page to sort snippets by various criteria (most recent, least recent, most starred, A-Z, Z-A).",
+    "impact": "Minor",
+    "contributor": "Ayushjhawar8",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/899",
     "isAlignedWithMilestone": false
   },
   {
@@ -506,6 +594,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/eval#238",
+    "number": 238,
+    "title": "chore: update @tscircuit/core to v0.0.379",
+    "description": "Update @tscircuit/core to v0.0.379",
+    "impact": "Minor",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/238",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#239",
+    "number": 239,
+    "title": "runTscircuitModule supports passing props and named exports",
+    "description": "The pull request adds support for passing props to the main component of a module and support for modules with named exports in the `runTscircuitModule` function.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/239",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/eval#236",
     "number": 236,
     "title": "runTscircuitModule",
@@ -550,6 +660,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/runframe#481",
+    "number": 481,
+    "title": "fix the endpoint base url for `tscircuit.com` in local as well as prod",
+    "description": "Fix the endpoint base URL for `tscircuit.com` in local as well as production environments.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/481",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#490",
+    "number": 490,
+    "title": "update schematic-viewer without the snapping",
+    "description": "Update the schematic-viewer without the snapping feature.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/490",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/runframe#480",
     "number": 480,
     "title": "Order dialog in Runframe (Part -1)",
@@ -591,6 +723,39 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/runframe",
     "url": "https://github.com/tscircuit/runframe/pull/473",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#180",
+    "number": 180,
+    "title": "fix(auth): check session before logging out",
+    "description": "Ensure the user is logged in before attempting to clear the session to provide a more user-friendly message when the user is already logged out.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/180",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/cli#171",
+    "number": 171,
+    "title": "Update file server so that API requests work (fixes jlcpcb import not working)",
+    "description": "Update the `@tscircuit/file-server` dependency to version `0.0.19` to fix the issue with the JLCPCB import functionality.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/171",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#176",
+    "number": 176,
+    "title": "feat(cli): add upgrade command to check for CLI updates",
+    "description": "Introduces a new \"upgrade\" command to the CLI that allows users to check for the latest version of the CLI and display a message if the user is already on the latest version.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/176",
     "isAlignedWithMilestone": true
   },
   {
@@ -638,6 +803,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/file-server#10",
+    "number": 10,
+    "title": "ci: update GitHub Actions to use latest versions of actions/checkout and setup-bun",
+    "description": "Update GitHub Actions to use latest versions of actions/checkout and setup-bun",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/file-server",
+    "url": "https://github.com/tscircuit/file-server/pull/10",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/docs#36",
     "number": 36,
     "title": "docs: enhance tsci-push documentation with image-captions",
@@ -668,6 +844,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/docs",
     "url": "https://github.com/tscircuit/docs/pull/33",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/unravel-autorouter#96",
+    "number": 96,
+    "title": "Introduce LED Matrix 4 Example, Introduce MultiSectionPathingSolver, Rewrite TwoTraceCrossing Solver, Run Simplification Twice, Straw Penalty",
+    "description": "Introduce LED Matrix 4 Example, Introduce MultiSectionPathingSolver, Rewrite TwoTraceCrossing Solver, Run Simplification Twice, Straw Penalty",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/unravel-autorouter",
+    "url": "https://github.com/tscircuit/unravel-autorouter/pull/96",
     "isAlignedWithMilestone": true
   }
 ]
