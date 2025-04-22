@@ -330,6 +330,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#199",
+    "number": 199,
+    "title": "fixed automatic dark mode",
+    "description": "Fixed the automatic dark mode for the application.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/199",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/checks#34",
+    "number": 34,
+    "title": "check-traces-are-contiguous",
+    "description": "Adds a new function `checkTracesAreContiguous` that checks if PCB traces are contiguous and aligned at vias, and reports any errors found.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/34",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/checks#32",
     "number": 32,
     "title": "solving logic error causing false overlaps errors",
@@ -372,6 +394,116 @@
     "repo": "tscircuit/math-utils",
     "url": "https://github.com/tscircuit/math-utils/pull/8",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#919",
+    "number": 919,
+    "title": "fix: Added 'No starred packages' where there is no starred packages",
+    "description": "Added a \"No starred packages\" message when there are no starred packages in the user profile.",
+    "impact": "Minor",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/919",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#913",
+    "number": 913,
+    "title": "refactored trending page",
+    "description": "Refactored the trending page to add support for filtering by time period and tags, and added sorting options.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/913",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#904",
+    "number": 904,
+    "title": "fix tscircuit.com/search",
+    "description": "",
+    "impact": "Minor",
+    "contributor": "Ayushjhawar8",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/904",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#861",
+    "number": 861,
+    "title": "style(components): improve responsiveness and styling in package header and code viewer",
+    "description": "Improve responsiveness and styling of the package header and code viewer components",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/861",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#917",
+    "number": 917,
+    "title": "Add `Order` button on the view package page with fake data",
+    "description": "Add an \"Order\" button on the view package page with fake data.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/917",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#916",
+    "number": 916,
+    "title": "update the fake endpoint to support mutiple vendors and add fake data",
+    "description": "Update the fake endpoint to support multiple vendors and add fake data",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/916",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#912",
+    "number": 912,
+    "title": "add missing entrypotin for the `bundle` in package.json",
+    "description": "Add missing entrypoint for the `bundle` in package.json",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/912",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#899",
+    "number": 899,
+    "title": "add filter to user profile",
+    "description": "Add a filter to the user profile page to sort snippets by various criteria (most recent, least recent, most starred, A-Z, Z-A).",
+    "impact": "Minor",
+    "contributor": "Ayushjhawar8",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/899",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#910",
+    "number": 910,
+    "title": "add manual trigger for publishing to npm",
+    "description": "Add manual trigger for publishing to npm",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/910",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#908",
+    "number": 908,
+    "title": "export schema type from `fake`",
+    "description": "The change exports the `schema` type from the `fake` module.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/908",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/tscircuit.com#907",
@@ -426,17 +558,6 @@
     "contributor": "MustafaMulla29",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/903",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/tscircuit.com#899",
-    "number": 899,
-    "title": "add filter to user profile",
-    "description": "Add a filter to the user profile page to sort snippets by various criteria (most recent, least recent, most starred, A-Z, Z-A).",
-    "impact": "Minor",
-    "contributor": "Ayushjhawar8",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/899",
     "isAlignedWithMilestone": false
   },
   {
@@ -561,17 +682,6 @@
     "isAlignedWithMilestone": true
   },
   {
-    "tag": "tscircuit/tscircuit.com#861",
-    "number": 861,
-    "title": "style(components): improve responsiveness and styling in package header and code viewer",
-    "description": "Improve responsiveness and styling of the package header and code viewer components",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/861",
-    "isAlignedWithMilestone": false
-  },
-  {
     "tag": "tscircuit/tscircuit.com#860",
     "number": 860,
     "title": "fake endpoint for `order_quotes`",
@@ -658,6 +768,28 @@
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/217",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#496",
+    "number": 496,
+    "title": "Show the discounted value for the vendors DKRed and JLCPCB",
+    "description": "The pull request adds support for displaying the discounted value for the vendors DKRed and JLCPCB.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/496",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#495",
+    "number": 495,
+    "title": "Modified the whole checkout flow with only the initialScreen",
+    "description": "Modified the whole checkout flow with only the initialScreen",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/495",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/runframe#481",
@@ -801,6 +933,17 @@
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/164",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/file-server#11",
+    "number": 11,
+    "title": "feat(files): add file deletion functionality",
+    "description": "Introduce a new DELETE endpoint for file deletion, supporting deletion by file_id or file_path. The deletion triggers a FILE_DELETED event.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/file-server",
+    "url": "https://github.com/tscircuit/file-server/pull/11",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/file-server#10",

@@ -23,8 +23,8 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/tscircuit.com" : 20
-    "tscircuit/runframe" : 6
+    "tscircuit/tscircuit.com" : 28
+    "tscircuit/runframe" : 8
     "tscircuit/schematic-viewer" : 4
     "tscircuit/3d-viewer" : 3
     "tscircuit/core" : 9
@@ -38,23 +38,26 @@ pie
     "tscircuit/cli" : 7
     "tscircuit/docs" : 3
     "tscircuit/props" : 1
-    "tscircuit/checks" : 1
+    "tscircuit/checks" : 2
     "tscircuit/contribution-tracker" : 3
-    "tscircuit/file-server" : 1
+    "tscircuit/file-server" : 2
+    "tscircuit/circuit-to-svg" : 1
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 6 | 13 | 3 | 👑 | 30 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 3 | 13 | 2 | ⭐⭐⭐ | 15 | 0🔹 0🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 2 | 9 | 1 | ⭐⭐⭐ | 7 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 6 | 13 | 3 | 👑 | 37 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 4 | 11 | 4 | 👑 | 9 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 4 | 13 | 2 | 👑 | 16 | 0🔹 0🔶 0💎 |
 | [Abse2001](#Abse2001) | 2 | 6 | 0 | ⭐⭐ | 1 | 0🔹 0🔶 0💎 |
 | [MustafaMulla29](#MustafaMulla29) | 1 | 7 | 0 | ⭐⭐ | 4 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 2 | 0 | ⭐ | 10 | 0🔹 0🔶 0💎 |
 | [tscircuitbot](#tscircuitbot) | 0 | 2 | 2 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [Ayushjhawar8](#Ayushjhawar8) | 0 | 2 | 1 | ⭐ | 2 | 0🔹 0🔶 0💎 |
 | [dhvll](#dhvll) | 0 | 2 | 1 | ⭐ | 0 | 0🔹 0🔶 0💎 |
-| [Ayushjhawar8](#Ayushjhawar8) | 0 | 1 | 1 | ⭐ | 2 | 0🔹 0🔶 0💎 |
+| [mohan-bee](#mohan-bee) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
 
@@ -74,14 +77,15 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [imrishabh18](#imrishabh18) | 9 | 5 | 0 | 2 | 0 | 12 | 12 | 7 | 4 | 102 |
-| [seveibar](#seveibar) | 2 | 1 | 0 | 38 | 6 | 28 | 22 | 30 | 22 | 513 |
-| [MustafaMulla29](#MustafaMulla29) | 14 | 11 | 2 | 0 | 3 | 10 | 9 | 4 | 1 | 5 |
-| [Abse2001](#Abse2001) | 16 | 8 | 2 | 1 | 0 | 9 | 8 | 1 | 1 | 20 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 5 | 4 | 0 | 0 | 0 | 4 | 3 | 10 | 1 | 15 |
+| [imrishabh18](#imrishabh18) | 11 | 7 | 0 | 4 | 2 | 20 | 19 | 9 | 5 | 112 |
+| [seveibar](#seveibar) | 2 | 1 | 0 | 45 | 6 | 28 | 22 | 37 | 29 | 661 |
+| [MustafaMulla29](#MustafaMulla29) | 14 | 11 | 2 | 0 | 2 | 10 | 9 | 4 | 1 | 5 |
+| [Abse2001](#Abse2001) | 16 | 8 | 2 | 1 | 0 | 10 | 8 | 1 | 1 | 20 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [Ayushjhawar8](#Ayushjhawar8) | 15 | 3 | 2 | 0 | 0 | 3 | 2 | 2 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 24 | 16 | 0 | 4 | 0 | 20 | 18 | 15 | 3 | 35 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 10 | 0 | 0 | 0 | 0 | 1 | 0 | 8 | 0 | 0 |
+| [Ayushjhawar8](#Ayushjhawar8) | 8 | 4 | 2 | 0 | 0 | 4 | 3 | 2 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 25 | 17 | 0 | 4 | 0 | 22 | 19 | 16 | 3 | 35 |
+| [mohan-bee](#mohan-bee) | 5 | 1 | 1 | 0 | 0 | 4 | 1 | 0 | 0 | 0 |
 | [CodeMan62](#CodeMan62) | 1 | 0 | 1 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | [Nitish-Naik](#Nitish-Naik) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 16 | 4 | 0 | 0 | 0 |
@@ -94,9 +98,11 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#916](https://github.com/tscircuit/tscircuit.com/pull/916) | 🐳 Major | imrishabh18 | Update the fake endpoint to support multiple vendors and add fake data | ❌ |
 | [#860](https://github.com/tscircuit/tscircuit.com/pull/860) | 🐳 Major | imrishabh18 | The pull request adds a fake endpoint for `order_quotes` that allows creating, retrieving, and creating all vendor quotes for a package release. | ❌ |
 | [#886](https://github.com/tscircuit/tscircuit.com/pull/886) | 🐳 Major | ArnavK-09 | Enhance UI and error handling in package editor | ❌ |
 | [#845](https://github.com/tscircuit/tscircuit.com/pull/845) | 🐳 Major | ArnavK-09 | Change Editor Page endpoints from `/snippets/*` to `/packages/*`, introduce file tree, multi-file selection in editor | ✅ |
+| [#917](https://github.com/tscircuit/tscircuit.com/pull/917) | 🐙 Minor | imrishabh18 | Add an "Order" button on the view package page with fake data. | ❌ |
 | [#906](https://github.com/tscircuit/tscircuit.com/pull/906) | 🐙 Minor | imrishabh18 | Adds a fake endpoint to get the completed order_quote and adds an environment variable `TSCIRCUIT_REGISTRY_API_BASE_URL` for the order button. | ❌ |
 | [#864](https://github.com/tscircuit/tscircuit.com/pull/864) | 🐙 Minor | imrishabh18 | Rename the "order_quote" directory to "order_quotes" | ✅ |
 | [#859](https://github.com/tscircuit/tscircuit.com/pull/859) | 🐙 Minor | imrishabh18 | Fix the image preview in the package page. | ✅ |
@@ -104,14 +110,20 @@ pie
 | [#903](https://github.com/tscircuit/tscircuit.com/pull/903) | 🐙 Minor | MustafaMulla29 | Removed the "Insert > Chip" feature from the code editor and the footprint dialog. | ❌ |
 | [#893](https://github.com/tscircuit/tscircuit.com/pull/893) | 🐙 Minor | MustafaMulla29 | Restricts the edit package name button to only the package owner. | ✅ |
 | [#879](https://github.com/tscircuit/tscircuit.com/pull/879) | 🐙 Minor | MustafaMulla29 | Added a file selector to the /p/editor page. | ✅ |
+| [#904](https://github.com/tscircuit/tscircuit.com/pull/904) | 🐙 Minor | Ayushjhawar8 |  | ✅ |
 | [#899](https://github.com/tscircuit/tscircuit.com/pull/899) | 🐙 Minor | Ayushjhawar8 | Add a filter to the user profile page to sort snippets by various criteria (most recent, least recent, most starred, A-Z, Z-A). | ❌ |
+| [#861](https://github.com/tscircuit/tscircuit.com/pull/861) | 🐙 Minor | ArnavK-09 | Improve responsiveness and styling of the package header and code viewer components | ❌ |
 | [#907](https://github.com/tscircuit/tscircuit.com/pull/907) | 🐙 Minor | ArnavK-09 | This change enhances the returned object by including all files from `pkgFilesWithContent`, improving the completeness of the data structure used in the component. | ✅ |
 | [#895](https://github.com/tscircuit/tscircuit.com/pull/895) | 🐙 Minor | ArnavK-09 | Refactor the CodeEditor component to move the logic for finding the target file into a separate utility function, and add support for the `tscircuit.config.json` file. | ✅ |
 | [#891](https://github.com/tscircuit/tscircuit.com/pull/891) | 🐙 Minor | ArnavK-09 | Refactor the CodeEditorHeader component to add support for formatting Markdown and HTML files, improve file type detection, and handle errors for unsupported file types. | ✅ |
 | [#880](https://github.com/tscircuit/tscircuit.com/pull/880) | 🐙 Minor | ArnavK-09 | Refactor the file selection logic in the `useEffect` hook to improve readability and maintainability. | ❌ |
 | [#882](https://github.com/tscircuit/tscircuit.com/pull/882) | 🐙 Minor | ArnavK-09 | Fix syntax error in `selectedTreeVariants` and refactor `transformFilesToTreeData` to handle hidden files and use an array structure for tree data. | ✅ |
 | [#862](https://github.com/tscircuit/tscircuit.com/pull/862) | 🐙 Minor | ArnavK-09 | Fixes an error that occurs when trying to fork one's own package. | ✅ |
-| [#861](https://github.com/tscircuit/tscircuit.com/pull/861) | 🐙 Minor | ArnavK-09 | Improve responsiveness and styling of the package header and code viewer components | ❌ |
+| [#913](https://github.com/tscircuit/tscircuit.com/pull/913) | 🐙 Minor | ShiboSoftwareDev | Refactored the trending page to add support for filtering by time period and tags, and added sorting options. | ❌ |
+| [#919](https://github.com/tscircuit/tscircuit.com/pull/919) | 🐙 Minor | mohan-bee | Added a "No starred packages" message when there are no starred packages in the user profile. | ✅ |
+| [#912](https://github.com/tscircuit/tscircuit.com/pull/912) | 🐌 Tiny | imrishabh18 | Add missing entrypoint for the `bundle` in package.json | ✅ |
+| [#910](https://github.com/tscircuit/tscircuit.com/pull/910) | 🐌 Tiny | imrishabh18 | Add manual trigger for publishing to npm | ✅ |
+| [#908](https://github.com/tscircuit/tscircuit.com/pull/908) | 🐌 Tiny | imrishabh18 | The change exports the `schema` type from the `fake` module. | ✅ |
 | [#905](https://github.com/tscircuit/tscircuit.com/pull/905) | 🐌 Tiny | imrishabh18 | Update the version of `@tscircuit/runframe` dependency | ✅ |
 | [#878](https://github.com/tscircuit/tscircuit.com/pull/878) | 🐌 Tiny | ArnavK-09 | Update the icon color in the FileSidebar and CodeEditorHeader components. | ✅ |
 
@@ -119,7 +131,9 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#495](https://github.com/tscircuit/runframe/pull/495) | 🐳 Major | imrishabh18 | Modified the whole checkout flow with only the initialScreen | ❌ |
 | [#480](https://github.com/tscircuit/runframe/pull/480) | 🐳 Major | imrishabh18 | Adds a new feature to the Runframe component to display an order dialog. | ✅ |
+| [#496](https://github.com/tscircuit/runframe/pull/496) | 🐙 Minor | imrishabh18 | The pull request adds support for displaying the discounted value for the vendors DKRed and JLCPCB. | ✅ |
 | [#481](https://github.com/tscircuit/runframe/pull/481) | 🐙 Minor | imrishabh18 | Fix the endpoint base URL for `tscircuit.com` in local as well as production environments. | ✅ |
 | [#490](https://github.com/tscircuit/runframe/pull/490) | 🐙 Minor | imrishabh18 | Update the schematic-viewer without the snapping feature. | ❌ |
 | [#475](https://github.com/tscircuit/runframe/pull/475) | 🐙 Minor | imrishabh18 | Fix snapping movement back to origin on manual edit | ❌ |
@@ -242,6 +256,7 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#34](https://github.com/tscircuit/checks/pull/34) | 🐳 Major | ShiboSoftwareDev | Adds a new function `checkTracesAreContiguous` that checks if PCB traces are contiguous and aligned at vias, and reports any errors found. | ✅ |
 | [#32](https://github.com/tscircuit/checks/pull/32) | 🐙 Minor | Abse2001 | Fixes a logic error causing false overlaps errors in the PCB trace non-overlapping check. | ✅ |
 
 ### [tscircuit/contribution-tracker](https://github.com/tscircuit/contribution-tracker)
@@ -256,7 +271,14 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#11](https://github.com/tscircuit/file-server/pull/11) | 🐳 Major | ArnavK-09 | Introduce a new DELETE endpoint for file deletion, supporting deletion by file_id or file_path. The deletion triggers a FILE_DELETED event. | ❌ |
 | [#10](https://github.com/tscircuit/file-server/pull/10) | 🐌 Tiny | ArnavK-09 | Update GitHub Actions to use latest versions of actions/checkout and setup-bun | ❌ |
+
+### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#199](https://github.com/tscircuit/circuit-to-svg/pull/199) | 🐙 Minor | ShiboSoftwareDev | Fixed the automatic dark mode for the application. | ✅ |
 
 ## Changes by Contributor
 
@@ -264,17 +286,24 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#916](https://github.com/tscircuit/tscircuit.com/pull/916) | 🐳 Major | Update the fake endpoint to support multiple vendors and add fake data | ❌ |
 | [#860](https://github.com/tscircuit/tscircuit.com/pull/860) | 🐳 Major | The pull request adds a fake endpoint for `order_quotes` that allows creating, retrieving, and creating all vendor quotes for a package release. | ❌ |
+| [#495](https://github.com/tscircuit/runframe/pull/495) | 🐳 Major | Modified the whole checkout flow with only the initialScreen | ❌ |
 | [#480](https://github.com/tscircuit/runframe/pull/480) | 🐳 Major | Adds a new feature to the Runframe component to display an order dialog. | ✅ |
 | [#84](https://github.com/tscircuit/schematic-viewer/pull/84) | 🐙 Minor | Fix the double movement of position on manual edits | ❌ |
 | [#82](https://github.com/tscircuit/schematic-viewer/pull/82) | 🐙 Minor | Reverts a previous commit that fixed a bug in the schematic viewer. | ❌ |
 | [#81](https://github.com/tscircuit/schematic-viewer/pull/81) | 🐙 Minor | Update the center position of a schematic component based on the last drag event | ❌ |
+| [#917](https://github.com/tscircuit/tscircuit.com/pull/917) | 🐙 Minor | Add an "Order" button on the view package page with fake data. | ❌ |
 | [#906](https://github.com/tscircuit/tscircuit.com/pull/906) | 🐙 Minor | Adds a fake endpoint to get the completed order_quote and adds an environment variable `TSCIRCUIT_REGISTRY_API_BASE_URL` for the order button. | ❌ |
 | [#864](https://github.com/tscircuit/tscircuit.com/pull/864) | 🐙 Minor | Rename the "order_quote" directory to "order_quotes" | ✅ |
 | [#859](https://github.com/tscircuit/tscircuit.com/pull/859) | 🐙 Minor | Fix the image preview in the package page. | ✅ |
+| [#496](https://github.com/tscircuit/runframe/pull/496) | 🐙 Minor | The pull request adds support for displaying the discounted value for the vendors DKRed and JLCPCB. | ✅ |
 | [#481](https://github.com/tscircuit/runframe/pull/481) | 🐙 Minor | Fix the endpoint base URL for `tscircuit.com` in local as well as production environments. | ✅ |
 | [#490](https://github.com/tscircuit/runframe/pull/490) | 🐙 Minor | Update the schematic-viewer without the snapping feature. | ❌ |
 | [#475](https://github.com/tscircuit/runframe/pull/475) | 🐙 Minor | Fix snapping movement back to origin on manual edit | ❌ |
+| [#912](https://github.com/tscircuit/tscircuit.com/pull/912) | 🐌 Tiny | Add missing entrypoint for the `bundle` in package.json | ✅ |
+| [#910](https://github.com/tscircuit/tscircuit.com/pull/910) | 🐌 Tiny | Add manual trigger for publishing to npm | ✅ |
+| [#908](https://github.com/tscircuit/tscircuit.com/pull/908) | 🐌 Tiny | The change exports the `schema` type from the `fake` module. | ✅ |
 | [#905](https://github.com/tscircuit/tscircuit.com/pull/905) | 🐌 Tiny | Update the version of `@tscircuit/runframe` dependency | ✅ |
 
 ### [seveibar](https://github.com/seveibar)
@@ -335,6 +364,7 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#904](https://github.com/tscircuit/tscircuit.com/pull/904) | 🐙 Minor |  | ✅ |
 | [#899](https://github.com/tscircuit/tscircuit.com/pull/899) | 🐙 Minor | Add a filter to the user profile page to sort snippets by various criteria (most recent, least recent, most starred, A-Z, Z-A). | ❌ |
 | [#124](https://github.com/tscircuit/contribution-tracker/pull/124) | 🐌 Tiny | Add colors to the "Impact" column in the PR table | ✅ |
 
@@ -345,14 +375,15 @@ pie
 | [#122](https://github.com/tscircuit/contribution-tracker/pull/122) | 🐳 Major | Refactors the PR analysis feature by introducing a new `PrsTable` component to replace the deprecated `PRsByRepository` component, and adds support for fetching and processing PR analysis data, including grouping PRs by repository and contributor. | ✅ |
 | [#886](https://github.com/tscircuit/tscircuit.com/pull/886) | 🐳 Major | Enhance UI and error handling in package editor | ❌ |
 | [#845](https://github.com/tscircuit/tscircuit.com/pull/845) | 🐳 Major | Change Editor Page endpoints from `/snippets/*` to `/packages/*`, introduce file tree, multi-file selection in editor | ✅ |
+| [#11](https://github.com/tscircuit/file-server/pull/11) | 🐳 Major | Introduce a new DELETE endpoint for file deletion, supporting deletion by file_id or file_path. The deletion triggers a FILE_DELETED event. | ❌ |
 | [#123](https://github.com/tscircuit/contribution-tracker/pull/123) | 🐙 Minor | Patch to handle cases where the PR impact cannot be determined gracefully. | ✅ |
+| [#861](https://github.com/tscircuit/tscircuit.com/pull/861) | 🐙 Minor | Improve responsiveness and styling of the package header and code viewer components | ❌ |
 | [#907](https://github.com/tscircuit/tscircuit.com/pull/907) | 🐙 Minor | This change enhances the returned object by including all files from `pkgFilesWithContent`, improving the completeness of the data structure used in the component. | ✅ |
 | [#895](https://github.com/tscircuit/tscircuit.com/pull/895) | 🐙 Minor | Refactor the CodeEditor component to move the logic for finding the target file into a separate utility function, and add support for the `tscircuit.config.json` file. | ✅ |
 | [#891](https://github.com/tscircuit/tscircuit.com/pull/891) | 🐙 Minor | Refactor the CodeEditorHeader component to add support for formatting Markdown and HTML files, improve file type detection, and handle errors for unsupported file types. | ✅ |
 | [#880](https://github.com/tscircuit/tscircuit.com/pull/880) | 🐙 Minor | Refactor the file selection logic in the `useEffect` hook to improve readability and maintainability. | ❌ |
 | [#882](https://github.com/tscircuit/tscircuit.com/pull/882) | 🐙 Minor | Fix syntax error in `selectedTreeVariants` and refactor `transformFilesToTreeData` to handle hidden files and use an array structure for tree data. | ✅ |
 | [#862](https://github.com/tscircuit/tscircuit.com/pull/862) | 🐙 Minor | Fixes an error that occurs when trying to fork one's own package. | ✅ |
-| [#861](https://github.com/tscircuit/tscircuit.com/pull/861) | 🐙 Minor | Improve responsiveness and styling of the package header and code viewer components | ❌ |
 | [#473](https://github.com/tscircuit/runframe/pull/473) | 🐙 Minor | Dynamically set the document title based on the package.json name or the guessed entrypoint from the file system map. | ✅ |
 | [#180](https://github.com/tscircuit/cli/pull/180) | 🐙 Minor | Ensure the user is logged in before attempting to clear the session to provide a more user-friendly message when the user is already logged out. | ❌ |
 | [#176](https://github.com/tscircuit/cli/pull/176) | 🐙 Minor | Introduces a new "upgrade" command to the CLI that allows users to check for the latest version of the CLI and display a message if the user is already on the latest version. | ✅ |
@@ -360,6 +391,20 @@ pie
 | [#164](https://github.com/tscircuit/cli/pull/164) | 🐙 Minor | Add a confirmation prompt to the `tsci init` command when no directory is provided. | ✅ |
 | [#878](https://github.com/tscircuit/tscircuit.com/pull/878) | 🐌 Tiny | Update the icon color in the FileSidebar and CodeEditorHeader components. | ✅ |
 | [#10](https://github.com/tscircuit/file-server/pull/10) | 🐌 Tiny | Update GitHub Actions to use latest versions of actions/checkout and setup-bun | ❌ |
+
+### [ShiboSoftwareDev](https://github.com/ShiboSoftwareDev)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#34](https://github.com/tscircuit/checks/pull/34) | 🐳 Major | Adds a new function `checkTracesAreContiguous` that checks if PCB traces are contiguous and aligned at vias, and reports any errors found. | ✅ |
+| [#199](https://github.com/tscircuit/circuit-to-svg/pull/199) | 🐙 Minor | Fixed the automatic dark mode for the application. | ✅ |
+| [#913](https://github.com/tscircuit/tscircuit.com/pull/913) | 🐙 Minor | Refactored the trending page to add support for filtering by time period and tags, and added sorting options. | ❌ |
+
+### [mohan-bee](https://github.com/mohan-bee)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#919](https://github.com/tscircuit/tscircuit.com/pull/919) | 🐙 Minor | Added a "No starred packages" message when there are no starred packages in the user profile. | ✅ |
 
 ### [tscircuitbot](https://github.com/tscircuitbot)
 
