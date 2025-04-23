@@ -1,0 +1,90 @@
+[
+  {
+    "tag": "tscircuit/core#756",
+    "number": 756,
+    "title": "Fix flaky test",
+    "description": "Fix flaky test for schematic trace overlap with manufacturer label.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/756",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/checks#36",
+    "number": 36,
+    "title": "feat: New DRC rule for components out of board",
+    "description": "Introduces a new DRC rule to check if PCB components are out of the board boundary.",
+    "impact": "Major",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/36",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/math-utils#10",
+    "number": 10,
+    "title": "pointToSegmentClosestPoint and distSq functions",
+    "description": "Adds two utility functions: `distSq` to calculate the squared distance between two points, and `pointToSegmentClosestPoint` to find the closest point on a line segment to a given point.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/math-utils",
+    "url": "https://github.com/tscircuit/math-utils/pull/10",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#928",
+    "number": 928,
+    "title": "Fix the overflow and tooltip ui when hovering over code components",
+    "description": "Fix the overflow and tooltip UI when hovering over code components",
+    "impact": "Minor\n\nThe",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/928",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#921",
+    "number": 921,
+    "title": "Add internal user to filter out the analytics from posthog",
+    "description": "Add internal user to filter out the analytics from posthog",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/921",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#925",
+    "number": 925,
+    "title": "Fix/order button",
+    "description": "Update the order button to improve the UI.",
+    "impact": "Minor",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/925",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#497",
+    "number": 497,
+    "title": "feat(PreviewEmptyState): add user tips",
+    "description": "Enhance the PreviewEmptyState component by adding a dynamic tip for users, improving the visual layout, and making the component more informative.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/497",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#183",
+    "number": 183,
+    "title": "feat: `tsci config set` && refactor(clone): improve error message, author name customization ",
+    "description": "Introduces a new configuration option `alwaysCloneWithAuthorName` to control whether the author name is included in the cloned snippet directory by default, and improves error handling for the clone command.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/183",
+    "isAlignedWithMilestone": true
+  }
+]
