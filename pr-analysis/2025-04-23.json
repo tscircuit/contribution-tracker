@@ -33,6 +33,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#937",
+    "number": 937,
+    "title": "feat(SearchComponent): focus input on mount to improve UX",
+    "description": "Add a useRef hook to the input element and focus it on component mount to enhance user experience by immediately allowing keyboard input.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/937",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#926",
+    "number": 926,
+    "title": "feat: Add star timestamp to snippets and update related logic",
+    "description": "Adds a new `starred_at` field to the snippet schema and updates the logic to fetch and display the star timestamp for packages and snippets.",
+    "impact": "Major",
+    "contributor": "dhvll",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/926",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#933",
+    "number": 933,
+    "title": "fix: order dialog to open",
+    "description": "Fix to ensure the order dialog opens correctly.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/933",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#928",
     "number": 928,
     "title": "Fix the overflow and tooltip ui when hovering over code components",
@@ -85,6 +118,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/183",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/docs#38",
+    "number": 38,
+    "title": "style(css): add responsive styles for iframes and prevent horizontal overflow",
+    "description": "Adds responsive styles for iframes and prevents horizontal overflow",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/docs",
+    "url": "https://github.com/tscircuit/docs/pull/38",
     "isAlignedWithMilestone": true
   }
 ]
