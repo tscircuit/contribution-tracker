@@ -1,5 +1,16 @@
 [
   {
+    "tag": "tscircuit/core#760",
+    "number": 760,
+    "title": "refactor(NormalComponent): simplify manual placement condition checks && test: reorganize manual edit conflict warning tests",
+    "description": "Refactors the condition checks for manual placement in the `NormalComponent` class, and reorganizes the manual edit conflict warning tests.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/760",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#756",
     "number": 756,
     "title": "Fix flaky test",
@@ -33,6 +44,83 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#943",
+    "number": 943,
+    "title": "Update fake to have /order_quotes/create accept circuit_json & test",
+    "description": "Update the fake API to accept either `circuit_json` or `package_release_id` when creating an order quote.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/943",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#946",
+    "number": 946,
+    "title": "fix(EditorNav): simplify save logic by removing unused props",
+    "description": "Simplifies the save logic in the EditorNav component by removing unused props.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/946",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#945",
+    "number": 945,
+    "title": "feat(editor): add beta edit option and enhance manual edits import",
+    "description": "Introduce a beta edit option in the dropdown menu for package editing, refactor the manual edits import functionality to support multiple files and improve error handling, and streamline state management in the CodeAndPreview component for better maintainability and performance.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/945",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#922",
+    "number": 922,
+    "title": "feature: Settings view now allows changing visibility and deleting the package",
+    "description": "The pull request adds a settings view that allows changing the visibility and deleting the package.",
+    "impact": "Major",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/922",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#944",
+    "number": 944,
+    "title": "Stripe checkout added and session token being passed to runframe",
+    "description": "Adds Stripe checkout functionality and passes session token to runframe",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/944",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#931",
+    "number": 931,
+    "title": "Add markdown support",
+    "description": "Add support for markdown rendering in the application",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/931",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#934",
+    "number": 934,
+    "title": "Added syntax highlighting to the hover tooltip in code editor",
+    "description": "Added syntax highlighting to the hover tooltip in the code editor.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/934",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/tscircuit.com#937",
     "number": 937,
     "title": "feat(SearchComponent): focus input on mount to improve UX",
@@ -47,7 +135,7 @@
     "tag": "tscircuit/tscircuit.com#926",
     "number": 926,
     "title": "feat: Add star timestamp to snippets and update related logic",
-    "description": "Adds a new `starred_at` field to the snippet schema and updates the logic to fetch and display the star timestamp for packages and snippets.",
+    "description": "Adds a star timestamp to snippets and updates the related logic to allow sorting packages based on the most recently starred ones.",
     "impact": "Major",
     "contributor": "dhvll",
     "repo": "tscircuit/tscircuit.com",
@@ -91,11 +179,33 @@
     "tag": "tscircuit/tscircuit.com#925",
     "number": 925,
     "title": "Fix/order button",
-    "description": "Update the order button to improve the UI.",
+    "description": "Fixed the order button on the package header page.",
     "impact": "Minor",
     "contributor": "mohan-bee",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/925",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#508",
+    "number": 508,
+    "title": "Support create order_qutoue with checkout to stripe",
+    "description": "Adds support for creating an order quote with checkout to Stripe.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/508",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#504",
+    "number": 504,
+    "title": "Add auth tokens, setup for proxying to local registry for testing",
+    "description": "Adds support for authentication tokens and setup for proxying to a local registry for testing",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/504",
     "isAlignedWithMilestone": true
   },
   {
