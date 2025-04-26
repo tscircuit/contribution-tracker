@@ -1,5 +1,27 @@
 [
   {
+    "tag": "tscircuit/pcb-viewer#242",
+    "number": 242,
+    "title": "fix: adjust layer rendering order to ensure components appear on top",
+    "description": "Adjust the rendering order of layers to ensure components appear on top.",
+    "impact": "Minor",
+    "contributor": "guptadeepak8",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/242",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit#613",
+    "number": 613,
+    "title": "The table section needs an update to include the latest libraries",
+    "description": "Updates the table section in the README to include the latest libraries.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit",
+    "url": "https://github.com/tscircuit/tscircuit/pull/613",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#760",
     "number": 760,
     "title": "refactor(NormalComponent): simplify manual placement condition checks && test: reorganize manual edit conflict warning tests",
@@ -44,15 +66,70 @@
     "isAlignedWithMilestone": true
   },
   {
-    "tag": "tscircuit/tscircuit.com#943",
-    "number": 943,
-    "title": "Update fake to have /order_quotes/create accept circuit_json & test",
-    "description": "Update the fake API to accept either `circuit_json` or `package_release_id` when creating an order quote.",
-    "impact": "Minor",
-    "contributor": "Abse2001",
+    "tag": "tscircuit/tscircuit.com#954",
+    "number": 954,
+    "title": "chore: remove additional comment",
+    "description": "Remove additional console log statement.",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/943",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/954",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#964",
+    "number": 964,
+    "title": "feat(SearchComponent): add autofocus prop to control input focus",
+    "description": "Add an `autofocus` prop to the `SearchComponent` to control whether the search input should be focused on component mount.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/964",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#962",
+    "number": 962,
+    "title": "Show \"No packages\" when we don't have packages ",
+    "description": "Add a message to indicate when there are no packages available or starred packages.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/962",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#967",
+    "number": 967,
+    "title": "Stop sending events to posthog during development",
+    "description": "Stops sending events to Posthog during development.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/967",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#966",
+    "number": 966,
+    "title": "Change syntax highlighting for markdown to tsx",
+    "description": "Change syntax highlighting for markdown from TypeScript to TSX.",
+    "impact": "Tiny",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/966",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#950",
+    "number": 950,
+    "title": "fix: readme code syntax highlight",
+    "description": "Fix the code syntax highlighting in the README file",
+    "impact": "Tiny",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/950",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/tscircuit.com#946",
@@ -63,6 +140,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/946",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#943",
+    "number": 943,
+    "title": "Update fake to have /order_quotes/create accept circuit_json & test",
+    "description": "Update the fake API to accept either `circuit_json` or `package_release_id` when creating an order quote.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/943",
     "isAlignedWithMilestone": true
   },
   {
@@ -187,6 +275,50 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/graphics-debug#52",
+    "number": 52,
+    "title": "add context menu with ability to save camera position, ability to add markers",
+    "description": "Add context menu with ability to save camera position, ability to add markers",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/graphics-debug",
+    "url": "https://github.com/tscircuit/graphics-debug/pull/52",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/eval#242",
+    "number": 242,
+    "title": "chore: update @tscircuit/core to v0.0.380",
+    "description": "Update @tscircuit/core dependency to version 0.0.380",
+    "impact": "Tiny",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/242",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#514",
+    "number": 514,
+    "title": "fix tips changing on rerender, improve tip text",
+    "description": "Fix tips changing on rerender and improve tip text",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/514",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/runframe#510",
+    "number": 510,
+    "title": "replace alertDialog with dialog to fix the dialog closing issue when clicked outside",
+    "description": "Replace `AlertDialog` with `Dialog` to fix the dialog closing issue when clicked outside.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/510",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/runframe#508",
     "number": 508,
     "title": "Support create order_qutoue with checkout to stripe",
@@ -201,7 +333,7 @@
     "tag": "tscircuit/runframe#504",
     "number": 504,
     "title": "Add auth tokens, setup for proxying to local registry for testing",
-    "description": "Adds support for authentication tokens and setup for proxying to a local registry for testing",
+    "description": "Add support for authentication tokens and setup for proxying to a local registry for testing.",
     "impact": "Minor",
     "contributor": "seveibar",
     "repo": "tscircuit/runframe",
@@ -212,7 +344,7 @@
     "tag": "tscircuit/runframe#497",
     "number": 497,
     "title": "feat(PreviewEmptyState): add user tips",
-    "description": "Enhance the PreviewEmptyState component by adding a dynamic tip for users, improving the visual layout, and making the component more informative.",
+    "description": "Add dynamic user tips to the PreviewEmptyState component, improving the visual layout and making the component more informative.",
     "impact": "Minor",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/runframe",
@@ -231,6 +363,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/docs#45",
+    "number": 45,
+    "title": "add skeleton until the iframe is loaded",
+    "description": "Add a skeleton until the iframe is loaded",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/docs",
+    "url": "https://github.com/tscircuit/docs/pull/45",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/docs#38",
     "number": 38,
     "title": "style(css): add responsive styles for iframes and prevent horizontal overflow",
@@ -239,6 +382,39 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/docs",
     "url": "https://github.com/tscircuit/docs/pull/38",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/unravel-autorouter#103",
+    "number": 103,
+    "title": "fix for stitch solver connecting routes incorrectly",
+    "description": "Fix for a bug in the `SingleHighDensityRouteStitchSolver` where it was connecting routes incorrectly.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/unravel-autorouter",
+    "url": "https://github.com/tscircuit/unravel-autorouter/pull/103",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/unravel-autorouter#101",
+    "number": 101,
+    "title": "feat: spatial-index using rbush, flatbush",
+    "description": "Introduces a new spatial index implementation using rbush and flatbush libraries to optimize obstacle searching for static and dynamic obstacles.",
+    "impact": "Major",
+    "contributor": "akhilender-bongirwar",
+    "repo": "tscircuit/unravel-autorouter",
+    "url": "https://github.com/tscircuit/unravel-autorouter/pull/101",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/unravel-autorouter#97",
+    "number": 97,
+    "title": "Break on Stage/Node in Debugger, Adjust Quality Parameters",
+    "description": "Adds a new JSON file `cn14003-nodeWithPortPoints.json` and updates the `cn1701-nodeWithPortPoints.json` file with additional details.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/unravel-autorouter",
+    "url": "https://github.com/tscircuit/unravel-autorouter/pull/97",
     "isAlignedWithMilestone": true
   }
 ]

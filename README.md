@@ -23,26 +23,34 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/tscircuit.com" : 13
+    "tscircuit/pcb-viewer" : 1
+    "tscircuit/tscircuit.com" : 19
+    "tscircuit/runframe" : 5
+    "tscircuit/tscircuit" : 1
+    "tscircuit/docs" : 2
     "tscircuit/cli" : 1
     "tscircuit/core" : 2
-    "tscircuit/runframe" : 3
-    "tscircuit/docs" : 1
     "tscircuit/checks" : 1
+    "tscircuit/graphics-debug" : 1
     "tscircuit/math-utils" : 1
+    "tscircuit/unravel-autorouter" : 3
+    "tscircuit/eval" : 1
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [imrishabh18](#imrishabh18) | 3 | 2 | 0 | ⭐⭐ | 6 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 2 | 5 | 0 | ⭐⭐ | 5 | 0🔹 0🔶 0💎 |
-| [seveibar](#seveibar) | 0 | 2 | 0 | ⭐⭐ | 25 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 3 | 5 | 1 | ⭐⭐⭐ | 8 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 1 | 5 | 0 | ⭐⭐ | 39 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 2 | 6 | 1 | ⭐⭐ | 5 | 0🔹 0🔶 0💎 |
 | [Abse2001](#Abse2001) | 1 | 2 | 0 | ⭐ | 1 | 0🔹 0🔶 0💎 |
-| [mohan-bee](#mohan-bee) | 1 | 1 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 | ⭐ | 2 | 0🔹 0🔶 0💎 |
-| [dhvll](#dhvll) | 1 | 0 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [mohan-bee](#mohan-bee) | 1 | 1 | 2 | ⭐ | 1 | 0🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 2 | 0 | ⭐ | 5 | 0🔹 0🔶 0💎 |
+| [dhvll](#dhvll) | 1 | 0 | 0 | ⭐ | 1 | 0🔹 0🔶 0💎 |
+| [akhilender-bongirwar](#akhilender-bongirwar) | 1 | 0 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [guptadeepak8](#guptadeepak8) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 0💎 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
 
@@ -62,39 +70,75 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [guptadeepak8](#guptadeepak8) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 11 | 8 | 0 | 1 | 1 | 8 | 7 | 5 | 0 | 0 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 16 | 1 | 4 | 2 | 25 | 12 | 344 |
-| [Abse2001](#Abse2001) | 12 | 3 | 0 | 0 | 0 | 4 | 3 | 1 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 0 | 1 | 0 | 0 | 2 | 0 | 1 | 0 | 0 |
+| [Abse2001](#Abse2001) | 12 | 3 | 0 | 0 | 0 | 6 | 3 | 1 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 13 | 9 | 0 | 2 | 1 | 12 | 9 | 5 | 1 | 10 |
+| [guptadeepak8](#guptadeepak8) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 20 | 0 | 10 | 6 | 39 | 20 | 549 |
+| [imrishabh18](#imrishabh18) | 3 | 0 | 0 | 6 | 5 | 9 | 9 | 8 | 5 | 79 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 3 | 0 | 2 | 0 | 0 | 4 | 0 | 1 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 10 | 5 | 3 | 0 | 1 | 5 | 3 | 5 | 2 | 25 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [mohan-bee](#mohan-bee) | 7 | 4 | 1 | 0 | 0 | 2 | 2 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 3 | 0 | 0 | 2 | 2 | 5 | 5 | 6 | 5 | 79 |
-| [MustafaMulla29](#MustafaMulla29) | 3 | 2 | 1 | 0 | 1 | 2 | 2 | 2 | 2 | 25 |
-| [dhvll](#dhvll) | 2 | 2 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
+| [mohan-bee](#mohan-bee) | 12 | 7 | 1 | 0 | 0 | 6 | 4 | 1 | 0 | 0 |
+| [dhvll](#dhvll) | 2 | 2 | 0 | 0 | 0 | 4 | 1 | 1 | 0 | 0 |
+| [krushnarout](#krushnarout) | 2 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | [roshanDev-eng](#roshanDev-eng) | 3 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [akhilender-bongirwar](#akhilender-bongirwar) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [akhilender-bongirwar](#akhilender-bongirwar) | 2 | 1 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 
 ## Changes by Repository
+
+### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#242](https://github.com/tscircuit/pcb-viewer/pull/242) | 🐙 Minor | guptadeepak8 | Adjust the rendering order of layers to ensure components appear on top. | ✅ |
 
 ### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#945](https://github.com/tscircuit/tscircuit.com/pull/945) | 🐳 Major | ArnavK-09 | Introduce a beta edit option in the dropdown menu for package editing, refactor the manual edits import functionality to support multiple files and improve error handling, and streamline state management in the CodeAndPreview component for better maintainability and performance. | ✅ |
-| [#922](https://github.com/tscircuit/tscircuit.com/pull/922) | 🐳 Major | mohan-bee | The pull request adds a settings view that allows changing the visibility and deleting the package. | ✅ |
 | [#944](https://github.com/tscircuit/tscircuit.com/pull/944) | 🐳 Major | imrishabh18 | Adds Stripe checkout functionality and passes session token to runframe | ✅ |
 | [#931](https://github.com/tscircuit/tscircuit.com/pull/931) | 🐳 Major | imrishabh18 | Add support for markdown rendering in the application | ✅ |
+| [#945](https://github.com/tscircuit/tscircuit.com/pull/945) | 🐳 Major | ArnavK-09 | Introduce a beta edit option in the dropdown menu for package editing, refactor the manual edits import functionality to support multiple files and improve error handling, and streamline state management in the CodeAndPreview component for better maintainability and performance. | ✅ |
+| [#922](https://github.com/tscircuit/tscircuit.com/pull/922) | 🐳 Major | mohan-bee | The pull request adds a settings view that allows changing the visibility and deleting the package. | ✅ |
 | [#926](https://github.com/tscircuit/tscircuit.com/pull/926) | 🐳 Major | dhvll | Adds a star timestamp to snippets and updates the related logic to allow sorting packages based on the most recently starred ones. | ❌ |
+| [#933](https://github.com/tscircuit/tscircuit.com/pull/933) | 🐙 Minor | imrishabh18 | Fix to ensure the order dialog opens correctly. | ✅ |
+| [#921](https://github.com/tscircuit/tscircuit.com/pull/921) | 🐙 Minor | imrishabh18 | Add internal user to filter out the analytics from posthog | ❌ |
+| [#964](https://github.com/tscircuit/tscircuit.com/pull/964) | 🐙 Minor | ArnavK-09 | Add an `autofocus` prop to the `SearchComponent` to control whether the search input should be focused on component mount. | ❌ |
 | [#946](https://github.com/tscircuit/tscircuit.com/pull/946) | 🐙 Minor | ArnavK-09 | Simplifies the save logic in the EditorNav component by removing unused props. | ✅ |
 | [#937](https://github.com/tscircuit/tscircuit.com/pull/937) | 🐙 Minor | ArnavK-09 | Add a useRef hook to the input element and focus it on component mount to enhance user experience by immediately allowing keyboard input. | ✅ |
 | [#943](https://github.com/tscircuit/tscircuit.com/pull/943) | 🐙 Minor | Abse2001 | Update the fake API to accept either `circuit_json` or `package_release_id` when creating an order quote. | ✅ |
-| [#925](https://github.com/tscircuit/tscircuit.com/pull/925) | 🐙 Minor | mohan-bee | Fixed the order button on the package header page. | ✅ |
-| [#933](https://github.com/tscircuit/tscircuit.com/pull/933) | 🐙 Minor | imrishabh18 | Fix to ensure the order dialog opens correctly. | ✅ |
-| [#921](https://github.com/tscircuit/tscircuit.com/pull/921) | 🐙 Minor | imrishabh18 | Add internal user to filter out the analytics from posthog | ❌ |
+| [#962](https://github.com/tscircuit/tscircuit.com/pull/962) | 🐙 Minor | MustafaMulla29 | Add a message to indicate when there are no packages available or starred packages. | ✅ |
 | [#934](https://github.com/tscircuit/tscircuit.com/pull/934) | 🐙 Minor | MustafaMulla29 | Added syntax highlighting to the hover tooltip in the code editor. | ❌ |
+| [#925](https://github.com/tscircuit/tscircuit.com/pull/925) | 🐙 Minor | mohan-bee | Fixed the order button on the package header page. | ✅ |
+| [#967](https://github.com/tscircuit/tscircuit.com/pull/967) | 🐌 Tiny | imrishabh18 | Stops sending events to Posthog during development. | ✅ |
+| [#954](https://github.com/tscircuit/tscircuit.com/pull/954) | 🐌 Tiny | ArnavK-09 | Remove additional console log statement. | ✅ |
 | [#928](https://github.com/tscircuit/tscircuit.com/pull/928) | 🟣 | MustafaMulla29 | Fix the overflow and tooltip UI when hovering over code components | ✅ |
+| [#966](https://github.com/tscircuit/tscircuit.com/pull/966) | 🐌 Tiny | mohan-bee | Change syntax highlighting for markdown from TypeScript to TSX. | ✅ |
+| [#950](https://github.com/tscircuit/tscircuit.com/pull/950) | 🐌 Tiny | mohan-bee | Fix the code syntax highlighting in the README file | ❌ |
+
+### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#508](https://github.com/tscircuit/runframe/pull/508) | 🐳 Major | imrishabh18 | Adds support for creating an order quote with checkout to Stripe. | ✅ |
+| [#510](https://github.com/tscircuit/runframe/pull/510) | 🐙 Minor | imrishabh18 | Replace `AlertDialog` with `Dialog` to fix the dialog closing issue when clicked outside. | ❌ |
+| [#497](https://github.com/tscircuit/runframe/pull/497) | 🐙 Minor | ArnavK-09 | Add dynamic user tips to the PreviewEmptyState component, improving the visual layout and making the component more informative. | ✅ |
+| [#514](https://github.com/tscircuit/runframe/pull/514) | 🐙 Minor | seveibar | Fix tips changing on rerender and improve tip text | ❌ |
+| [#504](https://github.com/tscircuit/runframe/pull/504) | 🐙 Minor | seveibar | Add support for authentication tokens and setup for proxying to a local registry for testing. | ✅ |
+
+### [tscircuit/tscircuit](https://github.com/tscircuit/tscircuit)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#613](https://github.com/tscircuit/tscircuit/pull/613) | 🐙 Minor | imrishabh18 | Updates the table section in the README to include the latest libraries. | ✅ |
+
+### [tscircuit/docs](https://github.com/tscircuit/docs)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#45](https://github.com/tscircuit/docs/pull/45) | 🐙 Minor | imrishabh18 | Add a skeleton until the iframe is loaded | ✅ |
+| [#38](https://github.com/tscircuit/docs/pull/38) | 🐙 Minor | ArnavK-09 | Adds responsive styles for iframes and prevents horizontal overflow | ✅ |
 
 ### [tscircuit/cli](https://github.com/tscircuit/cli)
 
@@ -109,25 +153,17 @@ pie
 | [#760](https://github.com/tscircuit/core/pull/760) | 🐙 Minor | ArnavK-09 | Refactors the condition checks for manual placement in the `NormalComponent` class, and reorganizes the manual edit conflict warning tests. | ✅ |
 | [#756](https://github.com/tscircuit/core/pull/756) | 🐙 Minor | Abse2001 | Fix flaky test for schematic trace overlap with manufacturer label. | ✅ |
 
-### [tscircuit/runframe](https://github.com/tscircuit/runframe)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#508](https://github.com/tscircuit/runframe/pull/508) | 🐳 Major | imrishabh18 | Adds support for creating an order quote with checkout to Stripe. | ✅ |
-| [#497](https://github.com/tscircuit/runframe/pull/497) | 🐙 Minor | ArnavK-09 | Enhance the PreviewEmptyState component by adding a dynamic tip for users, improving the visual layout, and making the component more informative. | ✅ |
-| [#504](https://github.com/tscircuit/runframe/pull/504) | 🐙 Minor | seveibar | Adds support for authentication tokens and setup for proxying to a local registry for testing | ✅ |
-
-### [tscircuit/docs](https://github.com/tscircuit/docs)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#38](https://github.com/tscircuit/docs/pull/38) | 🐙 Minor | ArnavK-09 | Adds responsive styles for iframes and prevents horizontal overflow | ✅ |
-
 ### [tscircuit/checks](https://github.com/tscircuit/checks)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#36](https://github.com/tscircuit/checks/pull/36) | 🐳 Major | Abse2001 | Introduces a new DRC rule to check if PCB components are out of the board boundary. | ❌ |
+
+### [tscircuit/graphics-debug](https://github.com/tscircuit/graphics-debug)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#52](https://github.com/tscircuit/graphics-debug/pull/52) | 🐳 Major | seveibar | Add context menu with ability to save camera position, ability to add markers | ❌ |
 
 ### [tscircuit/math-utils](https://github.com/tscircuit/math-utils)
 
@@ -135,7 +171,41 @@ pie
 |------|--------|-------------|-------------|-------------------|
 | [#10](https://github.com/tscircuit/math-utils/pull/10) | 🐙 Minor | seveibar | Adds two utility functions: `distSq` to calculate the squared distance between two points, and `pointToSegmentClosestPoint` to find the closest point on a line segment to a given point. | ✅ |
 
+### [tscircuit/unravel-autorouter](https://github.com/tscircuit/unravel-autorouter)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#101](https://github.com/tscircuit/unravel-autorouter/pull/101) | 🐳 Major | akhilender-bongirwar | Introduces a new spatial index implementation using rbush and flatbush libraries to optimize obstacle searching for static and dynamic obstacles. | ✅ |
+| [#103](https://github.com/tscircuit/unravel-autorouter/pull/103) | 🐙 Minor | seveibar | Fix for a bug in the `SingleHighDensityRouteStitchSolver` where it was connecting routes incorrectly. | ✅ |
+| [#97](https://github.com/tscircuit/unravel-autorouter/pull/97) | 🐙 Minor | seveibar | Adds a new JSON file `cn14003-nodeWithPortPoints.json` and updates the `cn1701-nodeWithPortPoints.json` file with additional details. | ✅ |
+
+### [tscircuit/eval](https://github.com/tscircuit/eval)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#242](https://github.com/tscircuit/eval/pull/242) | 🐌 Tiny | tscircuitbot | Update @tscircuit/core dependency to version 0.0.380 | ✅ |
+
 ## Changes by Contributor
+
+### [guptadeepak8](https://github.com/guptadeepak8)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#242](https://github.com/tscircuit/pcb-viewer/pull/242) | 🐙 Minor | Adjust the rendering order of layers to ensure components appear on top. | ✅ |
+
+### [imrishabh18](https://github.com/imrishabh18)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#944](https://github.com/tscircuit/tscircuit.com/pull/944) | 🐳 Major | Adds Stripe checkout functionality and passes session token to runframe | ✅ |
+| [#931](https://github.com/tscircuit/tscircuit.com/pull/931) | 🐳 Major | Add support for markdown rendering in the application | ✅ |
+| [#508](https://github.com/tscircuit/runframe/pull/508) | 🐳 Major | Adds support for creating an order quote with checkout to Stripe. | ✅ |
+| [#613](https://github.com/tscircuit/tscircuit/pull/613) | 🐙 Minor | Updates the table section in the README to include the latest libraries. | ✅ |
+| [#933](https://github.com/tscircuit/tscircuit.com/pull/933) | 🐙 Minor | Fix to ensure the order dialog opens correctly. | ✅ |
+| [#921](https://github.com/tscircuit/tscircuit.com/pull/921) | 🐙 Minor | Add internal user to filter out the analytics from posthog | ❌ |
+| [#510](https://github.com/tscircuit/runframe/pull/510) | 🐙 Minor | Replace `AlertDialog` with `Dialog` to fix the dialog closing issue when clicked outside. | ❌ |
+| [#45](https://github.com/tscircuit/docs/pull/45) | 🐙 Minor | Add a skeleton until the iframe is loaded | ✅ |
+| [#967](https://github.com/tscircuit/tscircuit.com/pull/967) | 🐌 Tiny | Stops sending events to Posthog during development. | ✅ |
 
 ### [ArnavK-09](https://github.com/ArnavK-09)
 
@@ -144,10 +214,12 @@ pie
 | [#945](https://github.com/tscircuit/tscircuit.com/pull/945) | 🐳 Major | Introduce a beta edit option in the dropdown menu for package editing, refactor the manual edits import functionality to support multiple files and improve error handling, and streamline state management in the CodeAndPreview component for better maintainability and performance. | ✅ |
 | [#183](https://github.com/tscircuit/cli/pull/183) | 🐳 Major | Introduces a new configuration option `alwaysCloneWithAuthorName` to control whether the author name is included in the cloned snippet directory by default, and improves error handling for the clone command. | ✅ |
 | [#760](https://github.com/tscircuit/core/pull/760) | 🐙 Minor | Refactors the condition checks for manual placement in the `NormalComponent` class, and reorganizes the manual edit conflict warning tests. | ✅ |
+| [#964](https://github.com/tscircuit/tscircuit.com/pull/964) | 🐙 Minor | Add an `autofocus` prop to the `SearchComponent` to control whether the search input should be focused on component mount. | ❌ |
 | [#946](https://github.com/tscircuit/tscircuit.com/pull/946) | 🐙 Minor | Simplifies the save logic in the EditorNav component by removing unused props. | ✅ |
 | [#937](https://github.com/tscircuit/tscircuit.com/pull/937) | 🐙 Minor | Add a useRef hook to the input element and focus it on component mount to enhance user experience by immediately allowing keyboard input. | ✅ |
-| [#497](https://github.com/tscircuit/runframe/pull/497) | 🐙 Minor | Enhance the PreviewEmptyState component by adding a dynamic tip for users, improving the visual layout, and making the component more informative. | ✅ |
+| [#497](https://github.com/tscircuit/runframe/pull/497) | 🐙 Minor | Add dynamic user tips to the PreviewEmptyState component, improving the visual layout and making the component more informative. | ✅ |
 | [#38](https://github.com/tscircuit/docs/pull/38) | 🐙 Minor | Adds responsive styles for iframes and prevents horizontal overflow | ✅ |
+| [#954](https://github.com/tscircuit/tscircuit.com/pull/954) | 🐌 Tiny | Remove additional console log statement. | ✅ |
 
 ### [Abse2001](https://github.com/Abse2001)
 
@@ -161,8 +233,20 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#52](https://github.com/tscircuit/graphics-debug/pull/52) | 🐳 Major | Add context menu with ability to save camera position, ability to add markers | ❌ |
 | [#10](https://github.com/tscircuit/math-utils/pull/10) | 🐙 Minor | Adds two utility functions: `distSq` to calculate the squared distance between two points, and `pointToSegmentClosestPoint` to find the closest point on a line segment to a given point. | ✅ |
-| [#504](https://github.com/tscircuit/runframe/pull/504) | 🐙 Minor | Adds support for authentication tokens and setup for proxying to a local registry for testing | ✅ |
+| [#514](https://github.com/tscircuit/runframe/pull/514) | 🐙 Minor | Fix tips changing on rerender and improve tip text | ❌ |
+| [#504](https://github.com/tscircuit/runframe/pull/504) | 🐙 Minor | Add support for authentication tokens and setup for proxying to a local registry for testing. | ✅ |
+| [#103](https://github.com/tscircuit/unravel-autorouter/pull/103) | 🐙 Minor | Fix for a bug in the `SingleHighDensityRouteStitchSolver` where it was connecting routes incorrectly. | ✅ |
+| [#97](https://github.com/tscircuit/unravel-autorouter/pull/97) | 🐙 Minor | Adds a new JSON file `cn14003-nodeWithPortPoints.json` and updates the `cn1701-nodeWithPortPoints.json` file with additional details. | ✅ |
+
+### [MustafaMulla29](https://github.com/MustafaMulla29)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#962](https://github.com/tscircuit/tscircuit.com/pull/962) | 🐙 Minor | Add a message to indicate when there are no packages available or starred packages. | ✅ |
+| [#934](https://github.com/tscircuit/tscircuit.com/pull/934) | 🐙 Minor | Added syntax highlighting to the hover tooltip in the code editor. | ❌ |
+| [#928](https://github.com/tscircuit/tscircuit.com/pull/928) | 🟣 | Fix the overflow and tooltip UI when hovering over code components | ✅ |
 
 ### [mohan-bee](https://github.com/mohan-bee)
 
@@ -170,29 +254,26 @@ pie
 |------|--------|-------------|-------------------|
 | [#922](https://github.com/tscircuit/tscircuit.com/pull/922) | 🐳 Major | The pull request adds a settings view that allows changing the visibility and deleting the package. | ✅ |
 | [#925](https://github.com/tscircuit/tscircuit.com/pull/925) | 🐙 Minor | Fixed the order button on the package header page. | ✅ |
-
-### [imrishabh18](https://github.com/imrishabh18)
-
-| PR # | Impact | Description | Milestone Aligned |
-|------|--------|-------------|-------------------|
-| [#944](https://github.com/tscircuit/tscircuit.com/pull/944) | 🐳 Major | Adds Stripe checkout functionality and passes session token to runframe | ✅ |
-| [#931](https://github.com/tscircuit/tscircuit.com/pull/931) | 🐳 Major | Add support for markdown rendering in the application | ✅ |
-| [#508](https://github.com/tscircuit/runframe/pull/508) | 🐳 Major | Adds support for creating an order quote with checkout to Stripe. | ✅ |
-| [#933](https://github.com/tscircuit/tscircuit.com/pull/933) | 🐙 Minor | Fix to ensure the order dialog opens correctly. | ✅ |
-| [#921](https://github.com/tscircuit/tscircuit.com/pull/921) | 🐙 Minor | Add internal user to filter out the analytics from posthog | ❌ |
-
-### [MustafaMulla29](https://github.com/MustafaMulla29)
-
-| PR # | Impact | Description | Milestone Aligned |
-|------|--------|-------------|-------------------|
-| [#934](https://github.com/tscircuit/tscircuit.com/pull/934) | 🐙 Minor | Added syntax highlighting to the hover tooltip in the code editor. | ❌ |
-| [#928](https://github.com/tscircuit/tscircuit.com/pull/928) | 🟣 | Fix the overflow and tooltip UI when hovering over code components | ✅ |
+| [#966](https://github.com/tscircuit/tscircuit.com/pull/966) | 🐌 Tiny | Change syntax highlighting for markdown from TypeScript to TSX. | ✅ |
+| [#950](https://github.com/tscircuit/tscircuit.com/pull/950) | 🐌 Tiny | Fix the code syntax highlighting in the README file | ❌ |
 
 ### [dhvll](https://github.com/dhvll)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#926](https://github.com/tscircuit/tscircuit.com/pull/926) | 🐳 Major | Adds a star timestamp to snippets and updates the related logic to allow sorting packages based on the most recently starred ones. | ❌ |
+
+### [tscircuitbot](https://github.com/tscircuitbot)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#242](https://github.com/tscircuit/eval/pull/242) | 🐌 Tiny | Update @tscircuit/core dependency to version 0.0.380 | ✅ |
+
+### [akhilender-bongirwar](https://github.com/akhilender-bongirwar)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#101](https://github.com/tscircuit/unravel-autorouter/pull/101) | 🐳 Major | Introduces a new spatial index implementation using rbush and flatbush libraries to optimize obstacle searching for static and dynamic obstacles. | ✅ |
 
 
 
