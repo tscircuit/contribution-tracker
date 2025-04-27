@@ -1,5 +1,27 @@
 [
   {
+    "tag": "tscircuit/pcb-viewer#245",
+    "number": 245,
+    "title": "Feat:Highlight DRC Errors (PcbTraceError)",
+    "description": "Adds functionality to highlight DRC (Design Rule Check) errors on the PCB canvas.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/245",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/pcb-viewer#244",
+    "number": 244,
+    "title": "feat: add warning graphics overlay for manual edit conflicts ",
+    "description": "Adds a warning graphics overlay to the PCB viewer for manual edit conflicts.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/244",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/pcb-viewer#242",
     "number": 242,
     "title": "fix: adjust layer rendering order to ensure components appear on top",
@@ -19,6 +41,17 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit",
     "url": "https://github.com/tscircuit/tscircuit/pull/613",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#153",
+    "number": 153,
+    "title": "add via size parameters to route point vias",
+    "description": "Adds support for specifying the hole diameter and outer diameter of route point vias in the PCB trace definition.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/153",
     "isAlignedWithMilestone": true
   },
   {
@@ -44,6 +77,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#202",
+    "number": 202,
+    "title": "draw bottom layer components with dashed lines",
+    "description": "Draw bottom layer components with dashed lines",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/202",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#200",
+    "number": 200,
+    "title": "relative border and text sizes",
+    "description": "Adjusts the relative border and text sizes to ensure small components appear clearly.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/200",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/checks#39",
+    "number": 39,
+    "title": "fixed via in trace margin not erroring",
+    "description": "Fixed an issue where the via was too close to the trace, causing it to not error.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/39",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/checks#36",
     "number": 36,
     "title": "feat: New DRC rule for components out of board",
@@ -66,6 +132,83 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#980",
+    "number": 980,
+    "title": "refactor: rename informManualEditConflicts to toastManualEditConflicts",
+    "description": "Rename `informManualEditConflicts` function to `toastManualEditConflicts`",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/980",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#978",
+    "number": 978,
+    "title": "fix(CodeEditor): ensure consistent path handling in fsMap",
+    "description": "Ensures consistent path handling in the `fsMap` by prefixing paths that don't start with a forward slash.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/978",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#976",
+    "number": 976,
+    "title": "fix: removed fork from own package",
+    "description": "Removed the \"Fork\" button for the package owner.",
+    "impact": "Minor",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/976",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#956",
+    "number": 956,
+    "title": "feat: add manual edit conflict warning handling ",
+    "description": "Adds manual edit conflict warning handling for PCB and schematic",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/956",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#973",
+    "number": 973,
+    "title": "test: fix /order_quotes/create",
+    "description": "The pull request fixes the test cases for the `/order_quotes/create` endpoint, updating the test names and handling the optional `circuit_json` parameter in the request body.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/973",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#968",
+    "number": 968,
+    "title": "fix: add isLoadingFiles check to prevent premature rendering",
+    "description": "Fix to prevent premature rendering when files are still loading",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/968",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#955",
+    "number": 955,
+    "title": "If a user goes to /dashboard, show them an empty state that tells them to login",
+    "description": "Adds an empty state message to the dashboard page if the user is not logged in, prompting them to log in.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/955",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/tscircuit.com#954",
     "number": 954,
     "title": "chore: remove additional comment",
@@ -85,6 +228,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/964",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#963",
+    "number": 963,
+    "title": "commented ai chat box and added snippetcard to show snippets on /dashboard",
+    "description": "Commented out the `CreateNewSnippetWithAiHero` component and added a `SnippetCard` component to display snippets on the `/dashboard` page.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/963",
     "isAlignedWithMilestone": false
   },
   {
@@ -415,6 +569,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/unravel-autorouter",
     "url": "https://github.com/tscircuit/unravel-autorouter/pull/97",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/keyboards#2",
+    "number": 2,
+    "title": "added stabalizer holes for 6.25u spcaebar",
+    "description": "Added stabilizer holes for a 6.25u spacebar",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/keyboards",
+    "url": "https://github.com/tscircuit/keyboards/pull/2",
     "isAlignedWithMilestone": true
   }
 ]
