@@ -132,6 +132,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#977",
+    "number": 977,
+    "title": "Added copy to clipboard option in readme code",
+    "description": "Added a copy to clipboard option for code blocks in the readme.",
+    "impact": "Minor",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/977",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#979",
+    "number": 979,
+    "title": "fixed ctrl/cmd prompt regression",
+    "description": "Fixed a regression in the behavior of the ctrl/cmd prompt in the code editor.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/979",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#980",
     "number": 980,
     "title": "refactor: rename informManualEditConflicts to toastManualEditConflicts",
@@ -572,6 +594,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/chat.tscircuit.com#4",
+    "number": 4,
+    "title": "fix: ui home screen mobile view",
+    "description": "Fixed the zoomed-in view in the mobile view of the home screen.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/chat.tscircuit.com",
+    "url": "https://github.com/tscircuit/chat.tscircuit.com/pull/4",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/keyboards#2",
     "number": 2,
     "title": "added stabalizer holes for 6.25u spcaebar",
@@ -581,5 +614,16 @@
     "repo": "tscircuit/keyboards",
     "url": "https://github.com/tscircuit/keyboards/pull/2",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/parts-engine#1",
+    "number": 1,
+    "title": "Transfer the jlcPartsEngine from `tscircuit.com` to this module",
+    "description": "Transfer the jlcPartsEngine from `tscircuit.com` to this module",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/parts-engine",
+    "url": "https://github.com/tscircuit/parts-engine/pull/1",
+    "isAlignedWithMilestone": false
   }
 ]
