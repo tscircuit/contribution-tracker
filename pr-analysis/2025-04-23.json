@@ -55,6 +55,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/core#765",
+    "number": 765,
+    "title": "allow passing platform configuration into RootCircuit",
+    "description": "Allow passing platform configuration into RootCircuit",
+    "impact": "Minor\n\nExplanation:\nThe",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/765",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#760",
     "number": 760,
     "title": "refactor(NormalComponent): simplify manual placement condition checks && test: reorganize manual edit conflict warning tests",
@@ -132,6 +143,50 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#956",
+    "number": 956,
+    "title": "feat: add manual edit conflict warning handling ",
+    "description": "Adds manual edit conflict warning handling for PCB and schematic",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/956",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#978",
+    "number": 978,
+    "title": "fix(CodeEditor): ensure consistent path handling in fsMap",
+    "description": "Ensures consistent path handling in the `fsMap` by prefixing paths that don't start with a forward slash.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/978",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#980",
+    "number": 980,
+    "title": "refactor: rename informManualEditConflicts to toastManualEditConflicts",
+    "description": "Rename `informManualEditConflicts` function to `toastManualEditConflicts`",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/980",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#986",
+    "number": 986,
+    "title": "refactor: remove jlc-parts-engine",
+    "description": "Removes the `jlc-parts-engine` module.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/986",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/tscircuit.com#977",
     "number": 977,
     "title": "Added copy to clipboard option in readme code",
@@ -154,28 +209,6 @@
     "isAlignedWithMilestone": true
   },
   {
-    "tag": "tscircuit/tscircuit.com#980",
-    "number": 980,
-    "title": "refactor: rename informManualEditConflicts to toastManualEditConflicts",
-    "description": "Rename `informManualEditConflicts` function to `toastManualEditConflicts`",
-    "impact": "Tiny",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/980",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/tscircuit.com#978",
-    "number": 978,
-    "title": "fix(CodeEditor): ensure consistent path handling in fsMap",
-    "description": "Ensures consistent path handling in the `fsMap` by prefixing paths that don't start with a forward slash.",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/978",
-    "isAlignedWithMilestone": true
-  },
-  {
     "tag": "tscircuit/tscircuit.com#976",
     "number": 976,
     "title": "fix: removed fork from own package",
@@ -184,17 +217,6 @@
     "contributor": "mohan-bee",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/976",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/tscircuit.com#956",
-    "number": 956,
-    "title": "feat: add manual edit conflict warning handling ",
-    "description": "Adds manual edit conflict warning handling for PCB and schematic",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/956",
     "isAlignedWithMilestone": true
   },
   {
@@ -462,6 +484,28 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/eval#249",
+    "number": 249,
+    "title": "test: add the test to verify parts engine works",
+    "description": "Adds a test to verify that the parts engine works as expected.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/249",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#248",
+    "number": 248,
+    "title": "platform config via RootCircuit",
+    "description": "Adds a platform configuration mechanism via the `RootCircuit` constructor.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/248",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/eval#242",
     "number": 242,
     "title": "chore: update @tscircuit/core to v0.0.380",
@@ -592,6 +636,17 @@
     "repo": "tscircuit/unravel-autorouter",
     "url": "https://github.com/tscircuit/unravel-autorouter/pull/97",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/chat.tscircuit.com#18",
+    "number": 18,
+    "title": "Remove next-auth with custom auth handling",
+    "description": "Remove next-auth with custom auth handling",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/chat.tscircuit.com",
+    "url": "https://github.com/tscircuit/chat.tscircuit.com/pull/18",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/chat.tscircuit.com#4",
