@@ -1,5 +1,82 @@
 [
   {
+    "tag": "tscircuit/schematic-viewer#86",
+    "number": 86,
+    "title": "transparent background necessary for customization",
+    "description": "Adds transparent background for customization in the SchematicViewer component.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/schematic-viewer",
+    "url": "https://github.com/tscircuit/schematic-viewer/pull/86",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#769",
+    "number": 769,
+    "title": "introduced a smoke test to verify dist after build",
+    "description": "Introduced a smoke test to verify the generated distribution after building the project.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/769",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#768",
+    "number": 768,
+    "title": "Revert \"fixed double schematic traces\"",
+    "description": "Revert a previous change that fixed double schematic traces.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/768",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#766",
+    "number": 766,
+    "title": "fixed double schematic traces",
+    "description": "Fixed double schematic traces",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/766",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#987",
+    "number": 987,
+    "title": "added a tooltip in fork and star buttons if the user is not logged in",
+    "description": "Added a tooltip to the fork and star buttons if the user is not logged in.",
+    "impact": "Minor",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/987",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#995",
+    "number": 995,
+    "title": "refactor: build-status component",
+    "description": "Refactor the build-status component to display the status of each step instead of the overall status.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/995",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#993",
+    "number": 993,
+    "title": "Add build status for the circuit-json",
+    "description": "Adds a new test case to check if the `circuit_json_build_error` field is returned correctly when it exists.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/993",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/status#20",
     "number": 20,
     "title": "Add status check for compile.tscircuit.com",
@@ -8,6 +85,72 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/status",
     "url": "https://github.com/tscircuit/status/pull/20",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#523",
+    "number": 523,
+    "title": "Use a globally stored tip in PreviewEmptyState to prevent re-renders from changing content",
+    "description": "Use a globally stored tip in PreviewEmptyState to prevent re-renders from changing content",
+    "impact": "Minor",
+    "contributor": "mohan-bee",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/523",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#185",
+    "number": 185,
+    "title": "handle INSTALL_PACKAGE and emit corresponding events",
+    "description": "The pull request introduces a new function `addPackage` that handles the installation of a tscircuit component package, including handling different package name formats, ensuring the `.npmrc` file is configured, and using the appropriate package manager. It also adds event handling for `INSTALL_PACKAGE` events, triggering the `handleInstallPackage` function to install the package.",
+    "impact": "Major\n\nExplanation:\n-",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/185",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#107",
+    "number": 107,
+    "title": "Speedup Pathing solver by re-using the nodeEdgeMap",
+    "description": "The pull request optimizes the pathing solver by reusing the nodeEdgeMap, reducing the runtime of the keyboard5 use case from 8.39s to 3.72s (-55%).",
+    "impact": "Major",
+    "contributor": "ricohageman",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/107",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#109",
+    "number": 109,
+    "title": "Capacity Pathing split into 2 stages, integrate new HD PolyLine, ledmatrix4 working again, add failing case for new HD Polyline, % time spent per stage. Add stats for pathingOptimizer. Display stats in autorouting debugger",
+    "description": "Capacity Pathing split into 2 stages, integrate new HD PolyLine, ledmatrix4 working again, add failing case for new HD Polyline, % time spent per stage. Add stats for pathingOptimizer. Display stats in autorouting debugger.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/109",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#108",
+    "number": 108,
+    "title": "New MultiHead Polyline Solver with better/faster initial via possibilities generation",
+    "description": "Introduce a new MultiHead Polyline Solver with better/faster initial via possibilities generation.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/108",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#106",
+    "number": 106,
+    "title": "Hyper Capacity Pathing (Attempt 2)",
+    "description": "Adds a new component, \"ViaPossibilitiesDebugger\", that visualizes the via possibilities for a given \"NodeWithPortPoints\".",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/106",
     "isAlignedWithMilestone": true
   }
 ]
