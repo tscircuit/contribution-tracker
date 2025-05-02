@@ -11,6 +11,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json#173",
+    "number": 173,
+    "title": "feat: add support pill, oval and rotated rect solder paste",
+    "description": "Adds support for pill, oval, and rotated rectangular solder paste shapes in the `pcb_solder_paste` type.",
+    "impact": "Major",
+    "contributor": "techmannih",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/173",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#773",
+    "number": 773,
+    "title": "fix double schematic trace 2",
+    "description": "Fix double schematic trace",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/773",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#770",
+    "number": 770,
+    "title": "removed build step from typecheck workflow",
+    "description": "Removed the build step from the typecheck workflow, making it faster to run.",
+    "impact": "Tiny\n\nExplanation:\nThe",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/770",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#769",
     "number": 769,
     "title": "introduced a smoke test to verify dist after build",
@@ -44,21 +77,208 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#205",
+    "number": 205,
+    "title": "export colormap type",
+    "description": "Exports the ColorMap type from the utils/colors module.",
+    "impact": "Tiny",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/205",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#203",
+    "number": 203,
+    "title": "override any schematic color",
+    "description": "Override any schematic color",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/203",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1013",
+    "number": 1013,
+    "title": "Switch to the stripe prod url",
+    "description": "Switches the Stripe checkout base URL from the test environment to the production environment.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1013",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1012",
+    "number": 1012,
+    "title": "chore: runframe",
+    "description": "Upgrade the `@tscircuit/runframe` package to version `0.0.391`.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1012",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1011",
+    "number": 1011,
+    "title": "feat(important-files-view): add copy button for active file content",
+    "description": "Add a copy button to the important files view component to allow users to copy the content of the active file.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1011",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1003",
+    "number": 1003,
+    "title": "fix(CodeEditor): correct tooltip text and preserve scroll position",
+    "description": "Update the tooltip text for the CodeEditor component and preserve the scroll position when updating the editor content.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1003",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1005",
+    "number": 1005,
+    "title": "feat(view-package): pass file_path to onEditClicked handler",
+    "description": "The change modifies the `onEditClicked` handler to accept an optional `file_path` parameter and include it in the navigation URL, allowing for more precise editing of specific files within the package.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1005",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1004",
+    "number": 1004,
+    "title": "refactor(CodeAndPreview): fix package files not saving for new package",
+    "description": "The PR refactors the `CodeAndPreview` component to extract the logic for handling package visibility changes into a separate function to improve code maintainability and reduce redundancy.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1004",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1008",
+    "number": 1008,
+    "title": "chore: runframe",
+    "description": "Update the `@tscircuit/runframe` dependency to version `0.0.390`.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1008",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#999",
+    "number": 999,
+    "title": "remove edit beta",
+    "description": "Remove the \"Edit Package\" button with the \"BETA\" label from the dropdown menu.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/999",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1002",
+    "number": 1002,
+    "title": "chore: runframe",
+    "description": "Update the `@tscircuit/runframe` dependency to version `0.0.389`.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1002",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1001",
+    "number": 1001,
+    "title": "chore: runframe update",
+    "description": "Updates the \"@tscircuit/runframe\" dependency to version 0.0.388",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1001",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1000",
+    "number": 1000,
+    "title": "Update schema and endpoint of orderQuote to match with the new registry schema",
+    "description": "",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1000",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#998",
+    "number": 998,
+    "title": "Upgrade vite disable terser",
+    "description": "Upgrade Vite and disable Terser",
+    "impact": "Minor\n\nExplanation:\n-",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/998",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#996",
+    "number": 996,
+    "title": "/editor now points to the PackageEditor, update RunFrame, skip broken test",
+    "description": "Update the `/editor` route to point to the `PackageEditorPage` and add a new `/legacy-editor` route to the `EditorPage`.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/996",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#985",
+    "number": 985,
+    "title": "fixed rendering of double boards",
+    "description": "Fixed the rendering of double boards in the PCB viewer.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/985",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#997",
+    "number": 997,
+    "title": "remove ~$50 from order button",
+    "description": "Removes the \"$50\" text from the order button.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/997",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#987",
     "number": 987,
     "title": "added a tooltip in fork and star buttons if the user is not logged in",
-    "description": "Added a tooltip to the fork and star buttons if the user is not logged in.",
+    "description": "Added a tooltip in fork and star buttons if the user is not logged in.",
     "impact": "Minor",
     "contributor": "mohan-bee",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/987",
-    "isAlignedWithMilestone": true
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/tscircuit.com#995",
     "number": 995,
     "title": "refactor: build-status component",
-    "description": "Refactor the build-status component to display the status of each step instead of the overall status.",
+    "description": "Refactor the build-status component to simplify the rendering logic.",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
@@ -77,6 +297,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/status#24",
+    "number": 24,
+    "title": "feat: health checks for SVG, PNG, and browser preview services",
+    "description": "Adds health checks for SVG, PNG, and browser preview services.",
+    "impact": "Minor",
+    "contributor": "krushnarout",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/24",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/status#20",
     "number": 20,
     "title": "Add status check for compile.tscircuit.com",
@@ -85,6 +316,61 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/status",
     "url": "https://github.com/tscircuit/status/pull/20",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#259",
+    "number": 259,
+    "title": "fix build:runner to bundle parts engine",
+    "description": "Fix the `build:runner` script to bundle the `@tscircuit/parts-engine` dependency.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/259",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#535",
+    "number": 535,
+    "title": "add failing message on dialog",
+    "description": "Add a more detailed error message to the dialog when fetching quotes fails.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/535",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#533",
+    "number": 533,
+    "title": "show error message when the error is there in the response",
+    "description": "The pull request adds an error message display when there is an error in the response.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/533",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#532",
+    "number": 532,
+    "title": "Remove the shipping option for now",
+    "description": "Removes the shipping option from the order dialog.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/532",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/runframe#530",
+    "number": 530,
+    "title": "fix: updated the previous `total_cost` to the new field",
+    "description": "Update the previous `total_cost` to the new field `total_cost_without_shipping`",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/530",
     "isAlignedWithMilestone": true
   },
   {
@@ -108,6 +394,28 @@
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/185",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/svg.tscircuit.com#168",
+    "number": 168,
+    "title": "Add build, format and format:check scripts",
+    "description": "Add build, format and format:check scripts",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/svg.tscircuit.com",
+    "url": "https://github.com/tscircuit/svg.tscircuit.com/pull/168",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/svg.tscircuit.com#167",
+    "number": 167,
+    "title": "Make tests run on ci, update core and eval",
+    "description": "This pull request makes tests run on CI, updates the core and eval libraries, and adds some new GitHub Actions workflows.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/svg.tscircuit.com",
+    "url": "https://github.com/tscircuit/svg.tscircuit.com/pull/167",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/tscircuit-autorouter#107",
