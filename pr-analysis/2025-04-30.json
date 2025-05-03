@@ -22,6 +22,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/core#775",
+    "number": 775,
+    "title": "Output PCB Solder Paste Objects for each Smtpad and Plated hole",
+    "description": "Adds solder paste objects for each SMT pad and plated hole in the PCB design.",
+    "impact": "Major",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/775",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#773",
     "number": 773,
     "title": "fix double schematic trace 2",
@@ -99,6 +110,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#1011",
+    "number": 1011,
+    "title": "feat(important-files-view): add copy button for active file content",
+    "description": "Add a copy button to the important files view component to allow users to copy the content of the active file.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1011",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1010",
+    "number": 1010,
+    "title": "refactor(EditorNav): remove unused hasUnrunChanges prop",
+    "description": "Removed the unused `hasUnrunChanges` prop from the `EditorNav` component.",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1010",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#1013",
     "number": 1013,
     "title": "Switch to the stripe prod url",
@@ -121,21 +154,10 @@
     "isAlignedWithMilestone": true
   },
   {
-    "tag": "tscircuit/tscircuit.com#1011",
-    "number": 1011,
-    "title": "feat(important-files-view): add copy button for active file content",
-    "description": "Add a copy button to the important files view component to allow users to copy the content of the active file.",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/1011",
-    "isAlignedWithMilestone": false
-  },
-  {
     "tag": "tscircuit/tscircuit.com#1003",
     "number": 1003,
     "title": "fix(CodeEditor): correct tooltip text and preserve scroll position",
-    "description": "Update the tooltip text for the CodeEditor component and preserve the scroll position when updating the editor content.",
+    "description": "Update the tooltip text and preserve the scroll position when updating the editor content.",
     "impact": "Minor",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
@@ -330,10 +352,21 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/runframe#516",
+    "number": 516,
+    "title": "fix:Some errors aren't shown in the error tab & support for multi errors [nextJS] style.",
+    "description": "Fix some errors not shown in the error tab and add support for multiple errors in the [nextJS] style.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/516",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/runframe#535",
     "number": 535,
     "title": "add failing message on dialog",
-    "description": "Add a more detailed error message to the dialog when fetching quotes fails.",
+    "description": "Add a failing message on the order dialog when there is an error fetching the quotes.",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/runframe",
@@ -344,7 +377,7 @@
     "tag": "tscircuit/runframe#533",
     "number": 533,
     "title": "show error message when the error is there in the response",
-    "description": "The pull request adds an error message display when there is an error in the response.",
+    "description": "Show error message when there is an error in the response.",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/runframe",
@@ -355,7 +388,7 @@
     "tag": "tscircuit/runframe#532",
     "number": 532,
     "title": "Remove the shipping option for now",
-    "description": "Removes the shipping option from the order dialog.",
+    "description": "Removes the shipping option from the order dialog",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/runframe",
