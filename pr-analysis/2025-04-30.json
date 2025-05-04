@@ -1,5 +1,16 @@
 [
   {
+    "tag": "tscircuit/schematic-viewer#90",
+    "number": 90,
+    "title": "fixed the colorOverrides type",
+    "description": "Fixed the type of `colorOverrides` property",
+    "impact": "Tiny\n\nExplanation:\nThe",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/schematic-viewer",
+    "url": "https://github.com/tscircuit/schematic-viewer/pull/90",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/schematic-viewer#86",
     "number": 86,
     "title": "transparent background necessary for customization",
@@ -11,6 +22,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json#179",
+    "number": 179,
+    "title": "Commit new readme after running script",
+    "description": "Commit new readme after running script to regenerate the table of contents for the readme file.",
+    "impact": "Tiny",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/179",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#176",
+    "number": 176,
+    "title": "Added CircuitJsonError Type",
+    "description": "Added a new type, `CircuitJsonError`, that represents different types of errors that can occur in a CircuitJSON file.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/176",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#173",
     "number": 173,
     "title": "feat: add support pill, oval and rotated rect solder paste",
@@ -19,6 +52,28 @@
     "contributor": "techmannih",
     "repo": "tscircuit/circuit-json",
     "url": "https://github.com/tscircuit/circuit-json/pull/173",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#216",
+    "number": 216,
+    "title": "Add diode variants variant=[zener, schottky, photo, tvs]",
+    "description": "Adds support for different diode variants (Zener, Schottky, Photo, TVS) with corresponding boolean flags and validation.",
+    "impact": "Major",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/216",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#776",
+    "number": 776,
+    "title": "fixed trace going into symbol",
+    "description": "Adding a border around the schematic to fix trace going into symbol",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/776",
     "isAlignedWithMilestone": true
   },
   {
@@ -88,6 +143,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#209",
+    "number": 209,
+    "title": "update circuit-json dependencies and fix error",
+    "description": "Update circuit-json dependencies and fix error",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/209",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#206",
+    "number": 206,
+    "title": "exported type ColorOverrides",
+    "description": "Exported a new type `ColorOverrides` to be used in the `Options` interface.",
+    "impact": "Tiny",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/206",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-to-svg#205",
     "number": 205,
     "title": "export colormap type",
@@ -108,6 +185,50 @@
     "repo": "tscircuit/circuit-to-svg",
     "url": "https://github.com/tscircuit/circuit-to-svg/pull/203",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1020",
+    "number": 1020,
+    "title": "chore: fix route",
+    "description": "Fix the route in the `EditorNav` component",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1020",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1009",
+    "number": 1009,
+    "title": "feat(search): add package search functionality",
+    "description": "Add package search functionality",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1009",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1007",
+    "number": 1007,
+    "title": "simplified fsMap that would be passed to runframe",
+    "description": "Simplifies the `fsMap` object that is passed to the `runframe` function.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1007",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1017",
+    "number": 1017,
+    "title": "Added syntax highlighter to package-port/CodeEditor ",
+    "description": "Added syntax highlighter to the package-port/CodeEditor component.",
+    "impact": "Minor\n\nExplanation:\nThe",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1017",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/tscircuit.com#1011",
@@ -319,6 +440,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/status#29",
+    "number": 29,
+    "title": "add format and typecheck workflows",
+    "description": "",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/29",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/status#24",
     "number": 24,
     "title": "feat: health checks for SVG, PNG, and browser preview services",
@@ -341,6 +473,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/eval#266",
+    "number": 266,
+    "title": "feat(types): add mainComponentPath option to executeWithFsMap",
+    "description": "This pull request introduces a new `mainComponentPath` option to the `executeWithFsMap` method in the `CircuitWebWorker` type, allowing users to specify the main component file when executing with a filesystem map. Additionally, new tests are added to verify the functionality of custom components with FSMap, including handling file not found errors and verifying maximum components.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/266",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/eval#259",
     "number": 259,
     "title": "fix build:runner to bundle parts engine",
@@ -349,6 +492,39 @@
     "contributor": "seveibar",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/259",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#541",
+    "number": 541,
+    "title": "dark reader extension friendly colors",
+    "description": "Adds custom color overrides for the schematic preview in the CircuitJsonPreview component to make it compatible with dark reader extensions.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/541",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#542",
+    "number": 542,
+    "title": "feat(RunFrame): add support for custom main component path && updated eval",
+    "description": "Add support for custom main component path in the RunFrame component and update the eval dependency.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/542",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#543",
+    "number": 543,
+    "title": "switched to circuit-json CircuitJsonError type",
+    "description": "Switched to the `circuit-json` library's `CircuitJsonError` type instead of the previously used `getCircuitJsonErrors` function.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/543",
     "isAlignedWithMilestone": true
   },
   {
@@ -377,7 +553,7 @@
     "tag": "tscircuit/runframe#533",
     "number": 533,
     "title": "show error message when the error is there in the response",
-    "description": "Show error message when there is an error in the response.",
+    "description": "The pull request adds an error message display when there is an error in the response.",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/runframe",
@@ -426,6 +602,17 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/185",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/maintenance-tracker#8",
+    "number": 8,
+    "title": "add format and typecheck workflows",
+    "description": "Add format and typecheck workflows",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/maintenance-tracker",
+    "url": "https://github.com/tscircuit/maintenance-tracker/pull/8",
     "isAlignedWithMilestone": false
   },
   {

@@ -23,16 +23,18 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/schematic-viewer" : 1
-    "tscircuit/core" : 6
-    "tscircuit/circuit-to-svg" : 2
-    "tscircuit/tscircuit.com" : 19
+    "tscircuit/schematic-viewer" : 2
+    "tscircuit/core" : 7
+    "tscircuit/circuit-to-svg" : 4
+    "tscircuit/tscircuit.com" : 23
+    "tscircuit/runframe" : 9
     "tscircuit/cli" : 1
-    "tscircuit/circuit-json" : 1
-    "tscircuit/runframe" : 6
-    "tscircuit/status" : 2
+    "tscircuit/circuit-json" : 3
+    "tscircuit/props" : 1
+    "tscircuit/status" : 3
+    "tscircuit/maintenance-tracker" : 1
+    "tscircuit/eval" : 2
     "tscircuit/tscircuit-autorouter" : 4
-    "tscircuit/eval" : 1
     "tscircuit/svg.tscircuit.com" : 2
 ```
 
@@ -40,14 +42,16 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 3 | 5 | 1 | ⭐⭐⭐ | 25 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 3 | 5 | 1 | ⭐⭐⭐ | 30 | 0🔹 0🔶 0💎 |
 | [imrishabh18](#imrishabh18) | 0 | 11 | 3 | ⭐⭐⭐ | 4 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 6 | 1 | ⭐⭐ | 6 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 0 | 4 | 1 | ⭐⭐ | 5 | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 1 | 1 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 1 | 0 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 9 | 2 | ⭐⭐ | 8 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 2 | 6 | 1 | ⭐⭐ | 5 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 1 | 3 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [Anshgrover23](#Anshgrover23) | 1 | 2 | 0 | ⭐ | 1 | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 1 | 1 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
 | [mohan-bee](#mohan-bee) | 0 | 2 | 0 | ⭐ | 3 | 0🔹 0🔶 0💎 |
 | [ricohageman](#ricohageman) | 1 | 0 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 1 |  | 2 | 0🔹 0🔶 0💎 |
 | [krushnarout](#krushnarout) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
@@ -68,19 +72,20 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 28 | 15 | 0 | 0 | 0 | 19 | 14 | 8 | 3 | 95 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 37 | 9 | 12 | 10 | 30 | 21 | 452 |
 | [mohan-bee](#mohan-bee) | 8 | 5 | 2 | 0 | 0 | 5 | 2 | 3 | 0 | 0 |
-| [Anshgrover23](#Anshgrover23) | 1 | 0 | 1 | 1 | 2 | 1 | 0 | 1 | 0 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 3 | 0 | 2 | 0 | 0 | 4 | 0 | 2 | 1 | 5 |
-| [imrishabh18](#imrishabh18) | 2 | 1 | 0 | 4 | 3 | 14 | 14 | 4 | 2 | 25 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 20 | 4 | 12 | 10 | 25 | 18 | 412 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 29 | 10 | 2 | 0 | 0 | 16 | 9 | 6 | 3 | 95 |
+| [Anshgrover23](#Anshgrover23) | 7 | 4 | 2 | 1 | 3 | 5 | 3 | 1 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 11 | 4 | 5 | 0 | 0 | 5 | 2 | 2 | 1 | 5 |
+| [imrishabh18](#imrishabh18) | 2 | 1 | 0 | 9 | 5 | 14 | 14 | 4 | 2 | 25 |
 | [krushnarout](#krushnarout) | 6 | 2 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 12 | 5 | 2 | 1 | 1 | 9 | 5 | 5 | 1 | 20 |
-| [techmannih](#techmannih) | 2 | 1 | 1 | 0 | 0 | 4 | 1 | 0 | 0 | 0 |
-| [Abse2001](#Abse2001) | 4 | 2 | 0 | 0 | 0 | 2 | 2 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 19 | 9 | 2 | 2 | 0 | 14 | 9 | 5 | 1 | 20 |
+| [luffy-orf](#luffy-orf) | 3 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| [techmannih](#techmannih) | 10 | 3 | 4 | 0 | 0 | 7 | 2 | 0 | 0 | 0 |
+| [Abse2001](#Abse2001) | 7 | 4 | 0 | 0 | 0 | 4 | 4 | 0 | 0 | 0 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [dhvll](#dhvll) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
+| [dhvll](#dhvll) | 3 | 2 | 1 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 12 | 0 | 0 | 0 | 0 |
 | [ricohageman](#ricohageman) | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
 
 ## Changes by Repository
@@ -89,12 +94,14 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#90](https://github.com/tscircuit/schematic-viewer/pull/90) | 🟣 | ShiboSoftwareDev | Fixed the type of `colorOverrides` property | ❌ |
 | [#86](https://github.com/tscircuit/schematic-viewer/pull/86) | 🐙 Minor | ShiboSoftwareDev | Adds transparent background for customization in the SchematicViewer component. | ✅ |
 
 ### [tscircuit/core](https://github.com/tscircuit/core)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#776](https://github.com/tscircuit/core/pull/776) | 🐙 Minor | ShiboSoftwareDev | Adding a border around the schematic to fix trace going into symbol | ✅ |
 | [#773](https://github.com/tscircuit/core/pull/773) | 🐙 Minor | ShiboSoftwareDev | Fix double schematic trace | ✅ |
 | [#770](https://github.com/tscircuit/core/pull/770) | 🟣 | ShiboSoftwareDev | Removed the build step from the typecheck workflow, making it faster to run. | ✅ |
 | [#775](https://github.com/tscircuit/core/pull/775) | 🐳 Major | Abse2001 | Adds solder paste objects for each SMT pad and plated hole in the PCB design. | ✅ |
@@ -107,31 +114,51 @@ pie
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#203](https://github.com/tscircuit/circuit-to-svg/pull/203) | 🐙 Minor | ShiboSoftwareDev | Override any schematic color | ✅ |
+| [#209](https://github.com/tscircuit/circuit-to-svg/pull/209) | 🐙 Minor | techmannih | Update circuit-json dependencies and fix error | ✅ |
+| [#206](https://github.com/tscircuit/circuit-to-svg/pull/206) | 🐌 Tiny | ShiboSoftwareDev | Exported a new type `ColorOverrides` to be used in the `Options` interface. | ✅ |
 | [#205](https://github.com/tscircuit/circuit-to-svg/pull/205) | 🐌 Tiny | ShiboSoftwareDev | Exports the ColorMap type from the utils/colors module. | ✅ |
 
 ### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#1009](https://github.com/tscircuit/tscircuit.com/pull/1009) | 🐳 Major | ArnavK-09 | Add package search functionality | ❌ |
+| [#1007](https://github.com/tscircuit/tscircuit.com/pull/1007) | 🐙 Minor | ShiboSoftwareDev | Simplifies the `fsMap` object that is passed to the `runframe` function. | ✅ |
 | [#985](https://github.com/tscircuit/tscircuit.com/pull/985) | 🐙 Minor | ShiboSoftwareDev | Fixed the rendering of double boards in the PCB viewer. | ✅ |
+| [#1017](https://github.com/tscircuit/tscircuit.com/pull/1017) | 🟣 | MustafaMulla29 | Added syntax highlighter to the package-port/CodeEditor component. | ❌ |
 | [#1013](https://github.com/tscircuit/tscircuit.com/pull/1013) | 🐙 Minor | imrishabh18 | Switches the Stripe checkout base URL from the test environment to the production environment. | ✅ |
 | [#1001](https://github.com/tscircuit/tscircuit.com/pull/1001) | 🐙 Minor | imrishabh18 | Updates the "@tscircuit/runframe" dependency to version 0.0.388 | ✅ |
 | [#1000](https://github.com/tscircuit/tscircuit.com/pull/1000) | 🐙 Minor | imrishabh18 |  | ❌ |
 | [#995](https://github.com/tscircuit/tscircuit.com/pull/995) | 🐙 Minor | imrishabh18 | Refactor the build-status component to simplify the rendering logic. | ✅ |
 | [#993](https://github.com/tscircuit/tscircuit.com/pull/993) | 🐙 Minor | imrishabh18 | Adds a new test case to check if the `circuit_json_build_error` field is returned correctly when it exists. | ❌ |
+| [#1020](https://github.com/tscircuit/tscircuit.com/pull/1020) | 🐙 Minor | ArnavK-09 | Fix the route in the `EditorNav` component | ✅ |
 | [#1011](https://github.com/tscircuit/tscircuit.com/pull/1011) | 🐙 Minor | ArnavK-09 | Add a copy button to the important files view component to allow users to copy the content of the active file. | ❌ |
 | [#1003](https://github.com/tscircuit/tscircuit.com/pull/1003) | 🐙 Minor | ArnavK-09 | Update the tooltip text and preserve the scroll position when updating the editor content. | ✅ |
 | [#1005](https://github.com/tscircuit/tscircuit.com/pull/1005) | 🐙 Minor | ArnavK-09 | The change modifies the `onEditClicked` handler to accept an optional `file_path` parameter and include it in the navigation URL, allowing for more precise editing of specific files within the package. | ❌ |
 | [#1004](https://github.com/tscircuit/tscircuit.com/pull/1004) | 🐙 Minor | ArnavK-09 | The PR refactors the `CodeAndPreview` component to extract the logic for handling package visibility changes into a separate function to improve code maintainability and reduce redundancy. | ❌ |
 | [#999](https://github.com/tscircuit/tscircuit.com/pull/999) | 🐙 Minor | seveibar | Remove the "Edit Package" button with the "BETA" label from the dropdown menu. | ✅ |
 | [#996](https://github.com/tscircuit/tscircuit.com/pull/996) | 🐙 Minor | seveibar | Update the `/editor` route to point to the `PackageEditorPage` and add a new `/legacy-editor` route to the `EditorPage`. | ✅ |
+| [#987](https://github.com/tscircuit/tscircuit.com/pull/987) | 🐙 Minor | mohan-bee | Added a tooltip in fork and star buttons if the user is not logged in. | ❌ |
 | [#1012](https://github.com/tscircuit/tscircuit.com/pull/1012) | 🐌 Tiny | imrishabh18 | Upgrade the `@tscircuit/runframe` package to version `0.0.391`. | ✅ |
 | [#1008](https://github.com/tscircuit/tscircuit.com/pull/1008) | 🐌 Tiny | imrishabh18 | Update the `@tscircuit/runframe` dependency to version `0.0.390`. | ✅ |
 | [#1002](https://github.com/tscircuit/tscircuit.com/pull/1002) | 🐌 Tiny | imrishabh18 | Update the `@tscircuit/runframe` dependency to version `0.0.389`. | ✅ |
 | [#1010](https://github.com/tscircuit/tscircuit.com/pull/1010) | 🐌 Tiny | ArnavK-09 | Removed the unused `hasUnrunChanges` prop from the `EditorNav` component. | ✅ |
 | [#998](https://github.com/tscircuit/tscircuit.com/pull/998) | 🟣 | seveibar | Upgrade Vite and disable Terser | ❌ |
-| [#987](https://github.com/tscircuit/tscircuit.com/pull/987) | 🐙 Minor | mohan-bee | Added a tooltip in fork and star buttons if the user is not logged in. | ❌ |
 | [#997](https://github.com/tscircuit/tscircuit.com/pull/997) | 🐌 Tiny | seveibar | Removes the "$50" text from the order button. | ✅ |
+
+### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#541](https://github.com/tscircuit/runframe/pull/541) | 🐙 Minor | ShiboSoftwareDev | Adds custom color overrides for the schematic preview in the CircuitJsonPreview component to make it compatible with dark reader extensions. | ✅ |
+| [#543](https://github.com/tscircuit/runframe/pull/543) | 🐙 Minor | Abse2001 | Switched to the `circuit-json` library's `CircuitJsonError` type instead of the previously used `getCircuitJsonErrors` function. | ✅ |
+| [#516](https://github.com/tscircuit/runframe/pull/516) | 🐙 Minor | Abse2001 | Fix some errors not shown in the error tab and add support for multiple errors in the [nextJS] style. | ❌ |
+| [#535](https://github.com/tscircuit/runframe/pull/535) | 🐙 Minor | imrishabh18 | Add a failing message on the order dialog when there is an error fetching the quotes. | ✅ |
+| [#533](https://github.com/tscircuit/runframe/pull/533) | 🐙 Minor | imrishabh18 | The pull request adds an error message display when there is an error in the response. | ✅ |
+| [#532](https://github.com/tscircuit/runframe/pull/532) | 🐙 Minor | imrishabh18 | Removes the shipping option from the order dialog | ❌ |
+| [#530](https://github.com/tscircuit/runframe/pull/530) | 🐙 Minor | imrishabh18 | Update the previous `total_cost` to the new field `total_cost_without_shipping` | ✅ |
+| [#542](https://github.com/tscircuit/runframe/pull/542) | 🐙 Minor | ArnavK-09 | Add support for custom main component path in the RunFrame component and update the eval dependency. | ✅ |
+| [#523](https://github.com/tscircuit/runframe/pull/523) | 🐙 Minor | mohan-bee | Use a globally stored tip in PreviewEmptyState to prevent re-renders from changing content | ✅ |
 
 ### [tscircuit/cli](https://github.com/tscircuit/cli)
 
@@ -144,24 +171,35 @@ pie
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#173](https://github.com/tscircuit/circuit-json/pull/173) | 🐳 Major | techmannih | Adds support for pill, oval, and rotated rectangular solder paste shapes in the `pcb_solder_paste` type. | ✅ |
+| [#176](https://github.com/tscircuit/circuit-json/pull/176) | 🐙 Minor | Abse2001 | Added a new type, `CircuitJsonError`, that represents different types of errors that can occur in a CircuitJSON file. | ✅ |
+| [#179](https://github.com/tscircuit/circuit-json/pull/179) | 🐌 Tiny | MustafaMulla29 | Commit new readme after running script to regenerate the table of contents for the readme file. | ✅ |
 
-### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+### [tscircuit/props](https://github.com/tscircuit/props)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#516](https://github.com/tscircuit/runframe/pull/516) | 🐙 Minor | Abse2001 | Fix some errors not shown in the error tab and add support for multiple errors in the [nextJS] style. | ❌ |
-| [#535](https://github.com/tscircuit/runframe/pull/535) | 🐙 Minor | imrishabh18 | Add a failing message on the order dialog when there is an error fetching the quotes. | ✅ |
-| [#533](https://github.com/tscircuit/runframe/pull/533) | 🐙 Minor | imrishabh18 | Show error message when there is an error in the response. | ✅ |
-| [#532](https://github.com/tscircuit/runframe/pull/532) | 🐙 Minor | imrishabh18 | Removes the shipping option from the order dialog | ❌ |
-| [#530](https://github.com/tscircuit/runframe/pull/530) | 🐙 Minor | imrishabh18 | Update the previous `total_cost` to the new field `total_cost_without_shipping` | ✅ |
-| [#523](https://github.com/tscircuit/runframe/pull/523) | 🐙 Minor | mohan-bee | Use a globally stored tip in PreviewEmptyState to prevent re-renders from changing content | ✅ |
+| [#216](https://github.com/tscircuit/props/pull/216) | 🐳 Major | Anshgrover23 | Adds support for different diode variants (Zener, Schottky, Photo, TVS) with corresponding boolean flags and validation. | ❌ |
 
 ### [tscircuit/status](https://github.com/tscircuit/status)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#29](https://github.com/tscircuit/status/pull/29) | 🐙 Minor | Anshgrover23 |  | ❌ |
 | [#20](https://github.com/tscircuit/status/pull/20) | 🐙 Minor | imrishabh18 | Add status check for compile.tscircuit.com | ✅ |
 | [#24](https://github.com/tscircuit/status/pull/24) | 🐙 Minor | krushnarout | Adds health checks for SVG, PNG, and browser preview services. | ✅ |
+
+### [tscircuit/maintenance-tracker](https://github.com/tscircuit/maintenance-tracker)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#8](https://github.com/tscircuit/maintenance-tracker/pull/8) | 🐙 Minor | Anshgrover23 | Add format and typecheck workflows | ❌ |
+
+### [tscircuit/eval](https://github.com/tscircuit/eval)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#266](https://github.com/tscircuit/eval/pull/266) | 🐳 Major | ArnavK-09 | This pull request introduces a new `mainComponentPath` option to the `executeWithFsMap` method in the `CircuitWebWorker` type, allowing users to specify the main component file when executing with a filesystem map. Additionally, new tests are added to verify the functionality of custom components with FSMap, including handling file not found errors and verifying maximum components. | ✅ |
+| [#259](https://github.com/tscircuit/eval/pull/259) | 🐙 Minor | seveibar | Fix the `build:runner` script to bundle the `@tscircuit/parts-engine` dependency. | ✅ |
 
 ### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
 
@@ -171,12 +209,6 @@ pie
 | [#108](https://github.com/tscircuit/tscircuit-autorouter/pull/108) | 🐳 Major | seveibar | Introduce a new MultiHead Polyline Solver with better/faster initial via possibilities generation. | ✅ |
 | [#106](https://github.com/tscircuit/tscircuit-autorouter/pull/106) | 🐳 Major | seveibar | Adds a new component, "ViaPossibilitiesDebugger", that visualizes the via possibilities for a given "NodeWithPortPoints". | ✅ |
 | [#107](https://github.com/tscircuit/tscircuit-autorouter/pull/107) | 🐳 Major | ricohageman | The pull request optimizes the pathing solver by reusing the nodeEdgeMap, reducing the runtime of the keyboard5 use case from 8.39s to 3.72s (-55%). | ✅ |
-
-### [tscircuit/eval](https://github.com/tscircuit/eval)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#259](https://github.com/tscircuit/eval/pull/259) | 🐙 Minor | seveibar | Fix the `build:runner` script to bundle the `@tscircuit/parts-engine` dependency. | ✅ |
 
 ### [tscircuit/svg.tscircuit.com](https://github.com/tscircuit/svg.tscircuit.com)
 
@@ -191,28 +223,51 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#90](https://github.com/tscircuit/schematic-viewer/pull/90) | 🟣 | Fixed the type of `colorOverrides` property | ❌ |
 | [#86](https://github.com/tscircuit/schematic-viewer/pull/86) | 🐙 Minor | Adds transparent background for customization in the SchematicViewer component. | ✅ |
+| [#776](https://github.com/tscircuit/core/pull/776) | 🐙 Minor | Adding a border around the schematic to fix trace going into symbol | ✅ |
 | [#773](https://github.com/tscircuit/core/pull/773) | 🐙 Minor | Fix double schematic trace | ✅ |
 | [#770](https://github.com/tscircuit/core/pull/770) | 🟣 | Removed the build step from the typecheck workflow, making it faster to run. | ✅ |
 | [#769](https://github.com/tscircuit/core/pull/769) | 🐙 Minor | Introduced a smoke test to verify the generated distribution after building the project. | ✅ |
 | [#766](https://github.com/tscircuit/core/pull/766) | 🐙 Minor | Fixed double schematic traces | ✅ |
 | [#203](https://github.com/tscircuit/circuit-to-svg/pull/203) | 🐙 Minor | Override any schematic color | ✅ |
+| [#1007](https://github.com/tscircuit/tscircuit.com/pull/1007) | 🐙 Minor | Simplifies the `fsMap` object that is passed to the `runframe` function. | ✅ |
 | [#985](https://github.com/tscircuit/tscircuit.com/pull/985) | 🐙 Minor | Fixed the rendering of double boards in the PCB viewer. | ✅ |
+| [#541](https://github.com/tscircuit/runframe/pull/541) | 🐙 Minor | Adds custom color overrides for the schematic preview in the CircuitJsonPreview component to make it compatible with dark reader extensions. | ✅ |
+| [#206](https://github.com/tscircuit/circuit-to-svg/pull/206) | 🐌 Tiny | Exported a new type `ColorOverrides` to be used in the `Options` interface. | ✅ |
 | [#205](https://github.com/tscircuit/circuit-to-svg/pull/205) | 🐌 Tiny | Exports the ColorMap type from the utils/colors module. | ✅ |
 | [#185](https://github.com/tscircuit/cli/pull/185) | 🟣 | The pull request introduces a new function `addPackage` that handles the installation of a tscircuit component package, including handling different package name formats, ensuring the `.npmrc` file is configured, and using the appropriate package manager. It also adds event handling for `INSTALL_PACKAGE` events, triggering the `handleInstallPackage` function to install the package. | ❌ |
 
-### [techmannih](https://github.com/techmannih)
+### [MustafaMulla29](https://github.com/MustafaMulla29)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
-| [#173](https://github.com/tscircuit/circuit-json/pull/173) | 🐳 Major | Adds support for pill, oval, and rotated rectangular solder paste shapes in the `pcb_solder_paste` type. | ✅ |
+| [#179](https://github.com/tscircuit/circuit-json/pull/179) | 🐌 Tiny | Commit new readme after running script to regenerate the table of contents for the readme file. | ✅ |
+| [#1017](https://github.com/tscircuit/tscircuit.com/pull/1017) | 🟣 | Added syntax highlighter to the package-port/CodeEditor component. | ❌ |
 
 ### [Abse2001](https://github.com/Abse2001)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#775](https://github.com/tscircuit/core/pull/775) | 🐳 Major | Adds solder paste objects for each SMT pad and plated hole in the PCB design. | ✅ |
+| [#176](https://github.com/tscircuit/circuit-json/pull/176) | 🐙 Minor | Added a new type, `CircuitJsonError`, that represents different types of errors that can occur in a CircuitJSON file. | ✅ |
+| [#543](https://github.com/tscircuit/runframe/pull/543) | 🐙 Minor | Switched to the `circuit-json` library's `CircuitJsonError` type instead of the previously used `getCircuitJsonErrors` function. | ✅ |
 | [#516](https://github.com/tscircuit/runframe/pull/516) | 🐙 Minor | Fix some errors not shown in the error tab and add support for multiple errors in the [nextJS] style. | ❌ |
+
+### [techmannih](https://github.com/techmannih)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#173](https://github.com/tscircuit/circuit-json/pull/173) | 🐳 Major | Adds support for pill, oval, and rotated rectangular solder paste shapes in the `pcb_solder_paste` type. | ✅ |
+| [#209](https://github.com/tscircuit/circuit-to-svg/pull/209) | 🐙 Minor | Update circuit-json dependencies and fix error | ✅ |
+
+### [Anshgrover23](https://github.com/Anshgrover23)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#216](https://github.com/tscircuit/props/pull/216) | 🐳 Major | Adds support for different diode variants (Zener, Schottky, Photo, TVS) with corresponding boolean flags and validation. | ❌ |
+| [#29](https://github.com/tscircuit/status/pull/29) | 🐙 Minor |  | ❌ |
+| [#8](https://github.com/tscircuit/maintenance-tracker/pull/8) | 🐙 Minor | Add format and typecheck workflows | ❌ |
 
 ### [imrishabh18](https://github.com/imrishabh18)
 
@@ -226,7 +281,7 @@ pie
 | [#993](https://github.com/tscircuit/tscircuit.com/pull/993) | 🐙 Minor | Adds a new test case to check if the `circuit_json_build_error` field is returned correctly when it exists. | ❌ |
 | [#20](https://github.com/tscircuit/status/pull/20) | 🐙 Minor | Add status check for compile.tscircuit.com | ✅ |
 | [#535](https://github.com/tscircuit/runframe/pull/535) | 🐙 Minor | Add a failing message on the order dialog when there is an error fetching the quotes. | ✅ |
-| [#533](https://github.com/tscircuit/runframe/pull/533) | 🐙 Minor | Show error message when there is an error in the response. | ✅ |
+| [#533](https://github.com/tscircuit/runframe/pull/533) | 🐙 Minor | The pull request adds an error message display when there is an error in the response. | ✅ |
 | [#532](https://github.com/tscircuit/runframe/pull/532) | 🐙 Minor | Removes the shipping option from the order dialog | ❌ |
 | [#530](https://github.com/tscircuit/runframe/pull/530) | 🐙 Minor | Update the previous `total_cost` to the new field `total_cost_without_shipping` | ✅ |
 | [#1012](https://github.com/tscircuit/tscircuit.com/pull/1012) | 🐌 Tiny | Upgrade the `@tscircuit/runframe` package to version `0.0.391`. | ✅ |
@@ -237,10 +292,14 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#1009](https://github.com/tscircuit/tscircuit.com/pull/1009) | 🐳 Major | Add package search functionality | ❌ |
+| [#266](https://github.com/tscircuit/eval/pull/266) | 🐳 Major | This pull request introduces a new `mainComponentPath` option to the `executeWithFsMap` method in the `CircuitWebWorker` type, allowing users to specify the main component file when executing with a filesystem map. Additionally, new tests are added to verify the functionality of custom components with FSMap, including handling file not found errors and verifying maximum components. | ✅ |
+| [#1020](https://github.com/tscircuit/tscircuit.com/pull/1020) | 🐙 Minor | Fix the route in the `EditorNav` component | ✅ |
 | [#1011](https://github.com/tscircuit/tscircuit.com/pull/1011) | 🐙 Minor | Add a copy button to the important files view component to allow users to copy the content of the active file. | ❌ |
 | [#1003](https://github.com/tscircuit/tscircuit.com/pull/1003) | 🐙 Minor | Update the tooltip text and preserve the scroll position when updating the editor content. | ✅ |
 | [#1005](https://github.com/tscircuit/tscircuit.com/pull/1005) | 🐙 Minor | The change modifies the `onEditClicked` handler to accept an optional `file_path` parameter and include it in the navigation URL, allowing for more precise editing of specific files within the package. | ❌ |
 | [#1004](https://github.com/tscircuit/tscircuit.com/pull/1004) | 🐙 Minor | The PR refactors the `CodeAndPreview` component to extract the logic for handling package visibility changes into a separate function to improve code maintainability and reduce redundancy. | ❌ |
+| [#542](https://github.com/tscircuit/runframe/pull/542) | 🐙 Minor | Add support for custom main component path in the RunFrame component and update the eval dependency. | ✅ |
 | [#1010](https://github.com/tscircuit/tscircuit.com/pull/1010) | 🐌 Tiny | Removed the unused `hasUnrunChanges` prop from the `EditorNav` component. | ✅ |
 
 ### [seveibar](https://github.com/seveibar)
