@@ -1,5 +1,16 @@
 [
   {
+    "tag": "tscircuit/schematic-viewer#88",
+    "number": 88,
+    "title": "Fixed 'click to interact' on mobile",
+    "description": "Fixes the \"click to interact\" functionality on mobile devices by adding support for touch events.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/schematic-viewer",
+    "url": "https://github.com/tscircuit/schematic-viewer/pull/88",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/schematic-viewer#90",
     "number": 90,
     "title": "fixed the colorOverrides type",
@@ -19,6 +30,39 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/schematic-viewer",
     "url": "https://github.com/tscircuit/schematic-viewer/pull/86",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/pcb-viewer#255",
+    "number": 255,
+    "title": "fix: touch to interact work on mobile",
+    "description": "Fixes the \"touch to interact\" functionality on mobile devices.",
+    "impact": "Minor",
+    "contributor": "krushnarout",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/255",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#181",
+    "number": 181,
+    "title": "Add `source_missing_property_error` element",
+    "description": "Adds a new `source_missing_property_error` element to the `any_source_component` union type and exports it in the `index.ts` file.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/181",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#180",
+    "number": 180,
+    "title": "Introduce are_pins_interchangeable on source component base",
+    "description": "Introduce a new property `are_pins_interchangeable` on the `source_component_base` type.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/180",
     "isAlignedWithMilestone": true
   },
   {
@@ -64,6 +108,28 @@
     "repo": "tscircuit/props",
     "url": "https://github.com/tscircuit/props/pull/216",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/footprinter#254",
+    "number": 254,
+    "title": "ci: update GitHub Actions workflows to use latest versions",
+    "description": "Update GitHub Actions workflows to use latest versions of actions/checkout, oven-sh/setup-bun, and actions/setup-node",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/254",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#777",
+    "number": 777,
+    "title": "ci: update GitHub Actions to use latest versions of actions/checkout and setup-bun",
+    "description": "Updates GitHub Actions to use the latest versions of `actions/checkout` (v4) and `oven-sh/setup-bun` (v2).",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/777",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/core#776",
@@ -143,6 +209,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#208",
+    "number": 208,
+    "title": "draw drc errors that involve vias",
+    "description": "Adds support for drawing DRC errors that involve vias in the PCB trace error visualization.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/208",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-to-svg#209",
     "number": 209,
     "title": "update circuit-json dependencies and fix error",
@@ -184,6 +261,50 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/circuit-to-svg",
     "url": "https://github.com/tscircuit/circuit-to-svg/pull/203",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#265",
+    "number": 265,
+    "title": "ci: update GitHub Actions to use latest versions of checkout, setup-bun, and setup-node",
+    "description": "Update all GitHub Actions workflows to use the latest versions of actions/checkout (v4), oven-sh/setup-bun (v2), and actions/setup-node (v4) to ensure compatibility and leverage the latest features and improvements.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/265",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1025",
+    "number": 1025,
+    "title": "fix: Add destructive toast variant for download error",
+    "description": "Add a destructive toast variant for download error",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1025",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1023",
+    "number": 1023,
+    "title": "modify the fake error response and update runframe",
+    "description": "Modify the fake error response and update the runframe dependency to version 0.0.403",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1023",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1022",
+    "number": 1022,
+    "title": "Handle package transpilation step and show the error message",
+    "description": "Handles the package transpilation step and shows the error message if any.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1022",
     "isAlignedWithMilestone": true
   },
   {
@@ -440,6 +561,50 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/status#27",
+    "number": 27,
+    "title": "Add specific errors from failure to UI",
+    "description": "Add specific errors from failure to the UI and display them in a modal.",
+    "impact": "Major",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/27",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/status#36",
+    "number": 36,
+    "title": "add report-outage.json file to ignore so it should not format",
+    "description": "Add `reported-outages.json` to the list of ignored files in the `biome.json` configuration.",
+    "impact": "Tiny",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/36",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/status#34",
+    "number": 34,
+    "title": "Add discord notifications when there is an outage last more than 20 min",
+    "description": "Add logic to check for outages lasting more than 20 minutes and send Discord notifications for new outages.",
+    "impact": "Major",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/34",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/status#32",
+    "number": 32,
+    "title": "fix: improve mobile responsiveness for status bars and uptime history",
+    "description": "Improve mobile responsiveness for status bars and uptime history",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/32",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/status#29",
     "number": 29,
     "title": "add format and typecheck workflows",
@@ -492,6 +657,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/259",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#548",
+    "number": 548,
+    "title": "Display error when create order_quote fails",
+    "description": "Adds error handling and display when creating an order quote fails.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/548",
     "isAlignedWithMilestone": true
   },
   {
@@ -603,6 +779,17 @@
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/185",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/pver#2",
+    "number": 2,
+    "title": "chore: bump ci actions versions",
+    "description": "Bump the versions of the GitHub Actions used in the publish workflow",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/pver",
+    "url": "https://github.com/tscircuit/pver/pull/2",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/maintenance-tracker#8",
