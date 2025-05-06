@@ -33,6 +33,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/pcb-viewer#260",
+    "number": 260,
+    "title": "ci: update GitHub Actions dependencies to latest versions",
+    "description": "Update GitHub Actions dependencies to latest versions",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/260",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/pcb-viewer#255",
     "number": 255,
     "title": "fix: touch to interact work on mobile",
@@ -118,6 +129,50 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/footprinter",
     "url": "https://github.com/tscircuit/footprinter/pull/254",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/kicad-component-converter#120",
+    "number": 120,
+    "title": "mobile compatibility",
+    "description": "Adds mobile compatibility by allowing adding files on press/click",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/kicad-component-converter",
+    "url": "https://github.com/tscircuit/kicad-component-converter/pull/120",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#780",
+    "number": 780,
+    "title": "generate are_pins_interchangeable",
+    "description": "Add `are_pins_interchangeable` field to various electrical components like Battery, Capacitor, Crystal, Diode, Inductor, Jumper, LED, PinHeader, Potentiometer, PowerSource, and PushButton.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/780",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#781",
+    "number": 781,
+    "title": "fixing pnp transistor collector pin is numbered incorrectly",
+    "description": "Fixes the incorrect numbering of the collector pin in a PNP transistor component.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/781",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#778",
+    "number": 778,
+    "title": "Trace hints now work with the new autorouter",
+    "description": "The pull request adds support for trace hints in the new autorouter.",
+    "impact": "Major",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/778",
     "isAlignedWithMilestone": true
   },
   {
@@ -273,6 +328,17 @@
     "repo": "tscircuit/schematic-symbols",
     "url": "https://github.com/tscircuit/schematic-symbols/pull/265",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1030",
+    "number": 1030,
+    "title": "Created a skeleton for SnippetCard and used it to remove redundant code",
+    "description": "Created a skeleton for SnippetCard and used it to remove redundant code",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1030",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/tscircuit.com#1025",
@@ -822,6 +888,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/svg.tscircuit.com",
     "url": "https://github.com/tscircuit/svg.tscircuit.com/pull/167",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#110",
+    "number": 110,
+    "title": "Initial Caching Implementation",
+    "description": "Introduces an initial caching implementation with cache warmup and performance testing.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/110",
     "isAlignedWithMilestone": true
   },
   {
