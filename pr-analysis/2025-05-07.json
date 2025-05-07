@@ -1,0 +1,156 @@
+[
+  {
+    "tag": "tscircuit/circuit-to-svg#211",
+    "number": 211,
+    "title": "Only display pin1 indicator for chips, now as a filled up triangle instead of a notch",
+    "description": "Change the pin1 indicator to be a filled up triangle instead of a notch.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/211",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json-to-gerber#31",
+    "number": 31,
+    "title": "feat(gerber): add support for pill shape in gerber aperture generation",
+    "description": "Add support for pill-shaped elements in the Gerber aperture generation process.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/circuit-json-to-gerber",
+    "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/31",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1047",
+    "number": 1047,
+    "title": "chore: runframe (Send shipping carrier to stripe)",
+    "description": "Update the @tscircuit/runframe dependency to version 0.0.415",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1047",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1039",
+    "number": 1039,
+    "title": "add fake for `/packages/list_trending`",
+    "description": "Add a fake implementation for the `/packages/list_trending` endpoint in the testing environment.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1039",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1037",
+    "number": 1037,
+    "title": "chore: update circuit-json-to-gerber dependency to v0.0.18",
+    "description": "Updates the `circuit-json-to-gerber` dependency to version 0.0.18.",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1037",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1035",
+    "number": 1035,
+    "title": "chore: runframe",
+    "description": "Update the version of the \"@tscircuit/runframe\" dependency from 0.0.403 to 0.0.412.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1035",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#274",
+    "number": 274,
+    "title": "ci: update GitHub Actions workflows to use latest versions",
+    "description": "Update GitHub Actions workflows to use latest versions of `actions/checkout` and `oven-sh/setup-bun`.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/274",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#562",
+    "number": 562,
+    "title": "Send the shipping carrier information to stripe",
+    "description": "Send the shipping carrier information to stripe",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/562",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#560",
+    "number": 560,
+    "title": "edge case cover to show the loading state",
+    "description": "Add edge case cover to show the loading state when fetching quotes",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/560",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#558",
+    "number": 558,
+    "title": "fix: `No quote available` error by simplifying this logic",
+    "description": "Simplify the logic for handling errors and loading states in the `InitialOrder` component.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/558",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#556",
+    "number": 556,
+    "title": "update the order-quote dialog",
+    "description": "Update the UI and formatting of the order-quote dialog.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/556",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#187",
+    "number": 187,
+    "title": "feat(cli): add search command to CLI for querying snippets",
+    "description": "Add a search command to the CLI for querying snippets",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/187",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#114",
+    "number": 114,
+    "title": "Path Optimization Schedule for MultiSectionPathing Solver, improve section visualization",
+    "description": "Introduces a JSON file with detailed information about a capacity mesh node (cn27815) and its port points, including their coordinates and connection names.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/114",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#113",
+    "number": 113,
+    "title": "New Autorouting Pipeline Debugger header to allow configuring cache",
+    "description": "Adds a new Autorouting Pipeline Debugger header to allow configuring the cache provider, including options for In Memory, Local Storage, and None.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/113",
+    "isAlignedWithMilestone": true
+  }
+]
