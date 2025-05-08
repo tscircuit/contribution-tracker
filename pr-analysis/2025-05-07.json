@@ -1,5 +1,49 @@
 [
   {
+    "tag": "tscircuit/pcb-viewer#262",
+    "number": 262,
+    "title": "fix: increase zIndex in PCBViewer for improved overlay handling",
+    "description": "Increase the zIndex of the \"Click to Interact\" overlay in the PCBViewer component to improve its handling of overlays.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/262",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#217",
+    "number": 217,
+    "title": "jumper props",
+    "description": "Adds new properties (`pinCount` and `internallyConnectedPins`) to the `jumperProps` type to support 2-pin and 3-pin jumpers with different internal pin connections.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/217",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#255",
+    "number": 255,
+    "title": "introduced solderjumper footprint",
+    "description": "Introduced a new footprint for a \"solderjumper\" component.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/255",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/jscad-electronics#93",
+    "number": 93,
+    "title": "fixed soic8 and tssop8",
+    "description": "Fixed the 3D models for SOIC8 and TSSOP8 footprints.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/jscad-electronics",
+    "url": "https://github.com/tscircuit/jscad-electronics/pull/93",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-to-svg#211",
     "number": 211,
     "title": "Only display pin1 indicator for chips, now as a filled up triangle instead of a notch",
@@ -11,6 +55,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json-to-gerber#33",
+    "number": 33,
+    "title": "fixed rotated_rect not supported bug",
+    "description": "Fixes a bug where \"rotated_rect\" shape is not supported in the Gerber aperture definition.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json-to-gerber",
+    "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/33",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json-to-gerber#31",
     "number": 31,
     "title": "feat(gerber): add support for pill shape in gerber aperture generation",
@@ -19,6 +74,105 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/circuit-json-to-gerber",
     "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/31",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1061",
+    "number": 1061,
+    "title": "Switch from `/snippets/list_latest` to `/packages/list_latest`",
+    "description": "Switch the API endpoint from `/snippets/list_latest` to `/packages/list_latest` to only return non-snippet packages.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1061",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1059",
+    "number": 1059,
+    "title": "Missed type error, getting the correct response for the packages",
+    "description": "Fixes a type error in the code that was returning the wrong data for the packages.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1059",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1057",
+    "number": 1057,
+    "title": "refactor: replacing `/snippets/list` -> `/packages/list`",
+    "description": "Refactor: replacing `/snippets/list` with `/packages/list`",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1057",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1019",
+    "number": 1019,
+    "title": "feat: append  mainComponentPath for custom component runs",
+    "description": "Adds support for custom component paths in the runframe package.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1019",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1036",
+    "number": 1036,
+    "title": "feat: add PackageCard component and update trending page to use packages",
+    "description": "This pull request introduces the new PackageCard component to display package information and updates the trending page to use packages instead of snippets.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1036",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1048",
+    "number": 1048,
+    "title": "refactor: simplify package file updates in CodeAndPreview component",
+    "description": "Refactors the `CodeAndPreview` component to simplify the logic for updating package files.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1048",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1049",
+    "number": 1049,
+    "title": "chore: runframe",
+    "description": "Update the version of the `@tscircuit/runframe` dependency.",
+    "impact": "Tiny\n\nExplanation:\nThe",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1049",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1033",
+    "number": 1033,
+    "title": "feat(CodeEditor): add state to track editor readiness",
+    "description": "Introduce `isCodeEditorReady` state to manage editor opacity based on its readiness, improving user experience.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1033",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1027",
+    "number": 1027,
+    "title": "fix(CodeEditor): support react syntax for old .ts packages",
+    "description": "Ensure that .ts files are correctly processed by replacing the extension with .tsx in the tsFacet configuration.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1027",
     "isAlignedWithMilestone": true
   },
   {
@@ -36,7 +190,7 @@
     "tag": "tscircuit/tscircuit.com#1039",
     "number": 1039,
     "title": "add fake for `/packages/list_trending`",
-    "description": "Add a fake implementation for the `/packages/list_trending` endpoint in the testing environment.",
+    "description": "Add a fake for the `/packages/list_trending` endpoint",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
@@ -66,6 +220,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/eval#271",
+    "number": 271,
+    "title": "test: add cleanup for web worker instances in test files",
+    "description": "Ensures proper cleanup of web worker instances by adding `await worker.kill()` at the end of each test to prevent potential memory leaks and ensure tests run in a clean state.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/271",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/eval#274",
     "number": 274,
     "title": "ci: update GitHub Actions workflows to use latest versions",
@@ -74,6 +239,28 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/274",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#565",
+    "number": 565,
+    "title": "fix: runtime cost undefined error",
+    "description": "Fixes a runtime error related to the `orderQuote.shipping_options` property being undefined.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/565",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#563",
+    "number": 563,
+    "title": "Show breakdown of the total cost from the order_quote",
+    "description": "This pull request adds a breakdown of the total cost from the order quote, including the lowest shipping carrier cost and the original total cost without shipping.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/563",
     "isAlignedWithMilestone": true
   },
   {
@@ -121,6 +308,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/cli#189",
+    "number": 189,
+    "title": "feat(cli): enhance package search with interactive selection and installation",
+    "description": "Enhance package search with interactive selection and installation",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/189",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/cli#187",
     "number": 187,
     "title": "feat(cli): add search command to CLI for querying snippets",
@@ -129,6 +327,17 @@
     "contributor": "Anshgrover23",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/187",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#118",
+    "number": 118,
+    "title": "High Density Intra Node Solvers incorporate connMap (causes overlaid vias w/ same-net, but improves completion)",
+    "description": "The pull request introduces changes to the High Density Intra Node Solvers to incorporate connMap, which causes overlaid vias with the same net but improves completion.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/118",
     "isAlignedWithMilestone": false
   },
   {
