@@ -11,6 +11,50 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json#184",
+    "number": 184,
+    "title": "Add the location of the missing component",
+    "description": "Add the location of the missing component in the `SourceFailedToCreateComponentError` interface.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/184",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#182",
+    "number": 182,
+    "title": "Add `source_failed_to_create_component_error`",
+    "description": "Add a new error type `source_failed_to_create_component_error` to handle errors when a component fails to be constructed.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/182",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#183",
+    "number": 183,
+    "title": "switching to nine point anchor",
+    "description": "Switching the anchor system from a 5-point system to a 9-point system for schematic text.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/183",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#218",
+    "number": 218,
+    "title": "added anchor and color to schematicTextProps for the <schematictext />",
+    "description": "Added anchor and color properties to the `schematicTextProps` object in the `schematic-text.ts` file.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/218",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/props#217",
     "number": 217,
     "title": "jumper props",
@@ -19,6 +63,17 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/props",
     "url": "https://github.com/tscircuit/props/pull/217",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#256",
+    "number": 256,
+    "title": "Feat: each pin in pinrow ft has silkscreenRef",
+    "description": "Adds silkscreen labels for each pin in the pinrow feature.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/256",
     "isAlignedWithMilestone": true
   },
   {
@@ -31,6 +86,39 @@
     "repo": "tscircuit/footprinter",
     "url": "https://github.com/tscircuit/footprinter/pull/255",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#786",
+    "number": 786,
+    "title": "jumper generates solderjumper symbols",
+    "description": "The pull request updates the `Jumper` component to generate different schematic symbol names based on the number of pins and whether the pins are internally connected.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/786",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#784",
+    "number": 784,
+    "title": "Feat: Enable pinLabels silkscreen with pinrow footprint",
+    "description": "Enables pinLabels silkscreen with pinrow footprint",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/784",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/jscad-electronics#94",
+    "number": 94,
+    "title": "fixed pitch & introduces innerDiameter and outerDiameter to FemaleHeader",
+    "description": "The pull request fixes the pitch and introduces the `innerDiameter` and `outerDiameter` properties to the `FemaleHeader` component, allowing for more customization of the component.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/jscad-electronics",
+    "url": "https://github.com/tscircuit/jscad-electronics/pull/94",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/jscad-electronics#93",
@@ -52,6 +140,39 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/circuit-to-svg",
     "url": "https://github.com/tscircuit/circuit-to-svg/pull/211",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#269",
+    "number": 269,
+    "title": "symbols for all solderjumper3 variants",
+    "description": "The pull request adds symbols for all solderjumper3 variants.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/269",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#268",
+    "number": 268,
+    "title": "solderjumper2",
+    "description": "Adds a new solderjumper2.json file with detailed path information.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/268",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#267",
+    "number": 267,
+    "title": "solderjumper2_bridged12",
+    "description": "The PR introduces a new circuit board element, a solder jumper bridge, with detailed path definitions.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/267",
     "isAlignedWithMilestone": true
   },
   {
@@ -77,10 +198,120 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#1063",
+    "number": 1063,
+    "title": "refactor: streamline error handling and update snippet creation logic in JLCPCB component generation",
+    "description": "This pull request refactors the error handling and updates the snippet creation logic in the JLCPCB component generation process.",
+    "impact": "Minor\n\nExplanation:\nThe",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1063",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1064",
+    "number": 1064,
+    "title": "feat: enhance package deletion flow by refetching user packages after successful deletion",
+    "description": "The pull request enhances the package deletion flow by refetching the user's packages after a successful deletion, ensuring the user interface reflects the latest package data.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1064",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1065",
+    "number": 1065,
+    "title": "add order button for mobile",
+    "description": "Add an order button for mobile view of the package header",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1065",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1027",
+    "number": 1027,
+    "title": "fix(CodeEditor): support react syntax for old .ts packages",
+    "description": "Ensure that .ts files are correctly processed by replacing the extension with .tsx in the tsFacet configuration.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1027",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1033",
+    "number": 1033,
+    "title": "feat(CodeEditor): add state to track editor readiness",
+    "description": "Introduce `isCodeEditorReady` state to manage editor opacity based on its readiness, improving user experience.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1033",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1048",
+    "number": 1048,
+    "title": "refactor: simplify package file updates in CodeAndPreview component",
+    "description": "Refactors the `CodeAndPreview` component to simplify the logic for updating package files.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1048",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1019",
+    "number": 1019,
+    "title": "feat: append  mainComponentPath for custom component runs",
+    "description": "Adds support for custom component paths in the runframe package.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1019",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1032",
+    "number": 1032,
+    "title": "refactor(CodeEditorHeader): logic to check if manual imports not used also add support for old spec file ",
+    "description": "The pull request refactors the `checkIfManualEditsImported` function to accept a `file` parameter, allowing it to check for manual edits in different entry points and file types. It also adds support for the old spec file format.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1032",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1062",
+    "number": 1062,
+    "title": "refactor: use `/packages/list_trending` to get rid of duplicates and cleanup",
+    "description": "This pull request refactors the LandingHero component to use the `/packages/list_trending` endpoint to get the trending snippets, and removes the duplicated code.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1062",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1060",
+    "number": 1060,
+    "title": "updated dep",
+    "description": "Update a dependency for the `circuit-json-to-gerber` package from version `0.0.18` to `0.0.19`.",
+    "impact": "Tiny",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1060",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#1061",
     "number": 1061,
     "title": "Switch from `/snippets/list_latest` to `/packages/list_latest`",
-    "description": "Switch the API endpoint from `/snippets/list_latest` to `/packages/list_latest` to only return non-snippet packages.",
+    "description": "Switch the API endpoint from `/snippets/list_latest` to `/packages/list_latest` to return a list of the latest packages, excluding snippets.",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
@@ -102,23 +333,12 @@
     "tag": "tscircuit/tscircuit.com#1057",
     "number": 1057,
     "title": "refactor: replacing `/snippets/list` -> `/packages/list`",
-    "description": "Refactor: replacing `/snippets/list` with `/packages/list`",
+    "description": "Refactor the code to replace `/snippets/list` with `/packages/list`.",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1057",
     "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/tscircuit.com#1019",
-    "number": 1019,
-    "title": "feat: append  mainComponentPath for custom component runs",
-    "description": "Adds support for custom component paths in the runframe package.",
-    "impact": "Major",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/1019",
-    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/tscircuit.com#1036",
@@ -132,17 +352,6 @@
     "isAlignedWithMilestone": true
   },
   {
-    "tag": "tscircuit/tscircuit.com#1048",
-    "number": 1048,
-    "title": "refactor: simplify package file updates in CodeAndPreview component",
-    "description": "Refactors the `CodeAndPreview` component to simplify the logic for updating package files.",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/1048",
-    "isAlignedWithMilestone": true
-  },
-  {
     "tag": "tscircuit/tscircuit.com#1049",
     "number": 1049,
     "title": "chore: runframe",
@@ -151,28 +360,6 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1049",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/tscircuit.com#1033",
-    "number": 1033,
-    "title": "feat(CodeEditor): add state to track editor readiness",
-    "description": "Introduce `isCodeEditorReady` state to manage editor opacity based on its readiness, improving user experience.",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/1033",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/tscircuit.com#1027",
-    "number": 1027,
-    "title": "fix(CodeEditor): support react syntax for old .ts packages",
-    "description": "Ensure that .ts files are correctly processed by replacing the extension with .tsx in the tsFacet configuration.",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/1027",
     "isAlignedWithMilestone": true
   },
   {
@@ -217,6 +404,28 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1035",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/status#33",
+    "number": 33,
+    "title": "remove package-lock.json",
+    "description": "Remove the package-lock.json file",
+    "impact": "Tiny",
+    "contributor": "techmannih",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/33",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/status#41",
+    "number": 41,
+    "title": "Fixed modal opening condition",
+    "description": "Fixed the modal opening condition to check for the presence of an error attribute instead of checking for a specific CSS class.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/41",
     "isAlignedWithMilestone": true
   },
   {
@@ -305,6 +514,17 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/runframe",
     "url": "https://github.com/tscircuit/runframe/pull/556",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#192",
+    "number": 192,
+    "title": "feat(cli): improve CLI update notifications with current version display",
+    "description": "Improve CLI update notifications with current version display",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/192",
     "isAlignedWithMilestone": true
   },
   {
