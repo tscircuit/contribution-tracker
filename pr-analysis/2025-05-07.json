@@ -11,6 +11,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json#185",
+    "number": 185,
+    "title": "new SourceComponent property: internally_connected_source_port_ids",
+    "description": "Adds a new property `internally_connected_source_port_ids` to the `SourceComponentBase` type.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/185",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#186",
+    "number": 186,
+    "title": "Make schematic_component_id Optional for schematic_text",
+    "description": "Make the `schematic_component_id` field optional for `SchematicText` objects.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/186",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#184",
     "number": 184,
     "title": "Add the location of the missing component",
@@ -44,6 +66,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/props#222",
+    "number": 222,
+    "title": "matched the props with cirucitJson type",
+    "description": "Matched the props with circuitJson type",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/222",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#220",
+    "number": 220,
+    "title": "Added nine point anchor props",
+    "description": "Added nine-point anchor props",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/220",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/props#218",
     "number": 218,
     "title": "added anchor and color to schematicTextProps for the <schematictext />",
@@ -63,6 +107,17 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/props",
     "url": "https://github.com/tscircuit/props/pull/217",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#260",
+    "number": 260,
+    "title": "refactor jumper for better connections",
+    "description": "Refactor the jumper to have a variable trace width instead of a fixed width, which can cause problems.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/260",
     "isAlignedWithMilestone": true
   },
   {
@@ -86,6 +141,50 @@
     "repo": "tscircuit/footprinter",
     "url": "https://github.com/tscircuit/footprinter/pull/255",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/winterspec#36",
+    "number": 36,
+    "title": "New bun-compatible dev command \"dev2\"",
+    "description": "Adds a new \"dev2\" command to the Bun CLI, which is a simplified version of the existing \"dev\" command.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/winterspec",
+    "url": "https://github.com/tscircuit/winterspec/pull/36",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#789",
+    "number": 789,
+    "title": "updated footprinter",
+    "description": "The PR updates the version of the `@tscircuit/footprinter` dependency in the `package.json` file.",
+    "impact": "Tiny",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/789",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#788",
+    "number": 788,
+    "title": "new component: PcbTrace",
+    "description": "Adds a new primitive component `PcbTrace` to the project.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/788",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#787",
+    "number": 787,
+    "title": "fixed unwanted pin labels ",
+    "description": "Fixed unwanted pin labels on ports that had \"left\" or \"right\" port hints but didn't have them specified in the port name.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/787",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/core#786",
@@ -176,6 +275,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json-to-gerber#39",
+    "number": 39,
+    "title": "Improve silkscreen text accuracy by adding the Uppercase characters height cap",
+    "description": "Improves silkscreen text accuracy by adjusting the font size based on the uppercase characters height cap.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json-to-gerber",
+    "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/39",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json-to-gerber#38",
+    "number": 38,
+    "title": "top & bottom silkscreen rotation + repro for the gerber fontsize",
+    "description": "The pull request adds support for rotating top and bottom silkscreen text, and fixes a bug related to the gerber font size.",
+    "impact": "Major",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json-to-gerber",
+    "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/38",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json-to-gerber#33",
     "number": 33,
     "title": "fixed rotated_rect not supported bug",
@@ -195,6 +316,28 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/circuit-json-to-gerber",
     "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/31",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json-to-connectivity-map#10",
+    "number": 10,
+    "title": "handle internally_connected_source_port_ids",
+    "description": "Adds support for handling `internally_connected_source_port_ids` in `source_component` objects for `getFullConnectivityMapFromCircuitJson()` and `getSourcePortConnectivityMapFromCircuitJson()` functions.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-json-to-connectivity-map",
+    "url": "https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/10",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1066",
+    "number": 1066,
+    "title": "Add fake for `/packages/images` with the `fs_sha` param",
+    "description": "Adds a fake route for `/packages/images` with the `fs_sha` parameter to handle package image requests.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1066",
     "isAlignedWithMilestone": true
   },
   {
@@ -429,6 +572,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/eval#294",
+    "number": 294,
+    "title": "chore: update @tscircuit/core to v0.0.395",
+    "description": "Update @tscircuit/core to v0.0.395",
+    "impact": "Tiny\n\nExplanation:\nThe",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/294",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#292",
+    "number": 292,
+    "title": "chore: update @tscircuit/core to v0.0.394",
+    "description": "Automated update of @tscircuit/core to v0.0.394.",
+    "impact": "Tiny",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/292",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/eval#271",
     "number": 271,
     "title": "test: add cleanup for web worker instances in test files",
@@ -448,6 +613,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/274",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#574",
+    "number": 574,
+    "title": "fix error tab not being displayed in the initial run",
+    "description": "Fix error tab not being displayed in the initial run of the CircuitJsonPreview component.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/574",
     "isAlignedWithMilestone": true
   },
   {
