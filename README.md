@@ -24,7 +24,7 @@ The current week is shown below. There are 3 major sections:
 ```mermaid
 pie
     "tscircuit/circuit-json-to-gerber" : 4
-    "tscircuit/tscircuit.com" : 20
+    "tscircuit/tscircuit.com" : 24
     "tscircuit/cli" : 3
     "tscircuit/pcb-viewer" : 1
     "tscircuit/eval" : 4
@@ -32,27 +32,29 @@ pie
     "tscircuit/core" : 5
     "tscircuit/schematic-symbols" : 3
     "tscircuit/circuit-json" : 5
-    "tscircuit/footprinter" : 3
+    "tscircuit/footprinter" : 5
     "tscircuit/jscad-electronics" : 2
     "tscircuit/circuit-to-svg" : 1
-    "tscircuit/circuit-json-to-connectivity-map" : 1
+    "tscircuit/circuit-json-to-connectivity-map" : 2
     "tscircuit/runframe" : 7
+    "tscircuit/checks" : 2
+    "tscircuit/status" : 2
     "tscircuit/tscircuit-autorouter" : 3
     "tscircuit/winterspec" : 1
-    "tscircuit/status" : 2
+    "tscircuit/file-server" : 1
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 4 | 13 | 3 | 👑 | 13 | 0🔹 0🔶 0💎 |
 | [imrishabh18](#imrishabh18) | 1 | 15 | 1 | ⭐⭐⭐ | 7 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 4 | 11 | 1 | ⭐⭐⭐ | 12 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 4 | 9 | 1 | ⭐⭐⭐ | 0 | 0🔹 0🔶 0💎 |
-| [seveibar](#seveibar) | 3 | 1 | 0 | ⭐⭐ | 17 | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 1 | 9 | 1 | ⭐⭐ | 9 | 0🔹 0🔶 0💎 |
-| [Anshgrover23](#Anshgrover23) | 0 | 1 | 0 | ⭐ | 2 | 1🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 0 | 0 | 1 | ⭐ | 6 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 4 | 10 | 2 | ⭐⭐⭐ | 1 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 3 | 1 | 0 | ⭐⭐ | 19 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 1 | 10 | 1 | ⭐⭐ | 9 | 0🔹 0🔶 0💎 |
+| [Anshgrover23](#Anshgrover23) | 1 | 1 | 0 | ⭐⭐ | 2 | 1🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 0 | 1 | 2 | ⭐ | 10 | 0🔹 0🔶 0💎 |
 | [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 |  | 4 | 0🔹 0🔶 0💎 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
 | [cluesang](#cluesang) | 0 | 0 | 0 | ⭐ | 0 | 0🔹 1🔶 0💎 |
@@ -75,14 +77,14 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [ArnavK-09](#ArnavK-09) | 24 | 18 | 2 | 1 | 0 | 15 | 15 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 45 | 2 | 5 | 4 | 17 | 7 | 110 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 23 | 16 | 1 | 0 | 0 | 18 | 16 | 12 | 5 | 120 |
-| [Abse2001](#Abse2001) | 18 | 13 | 0 | 0 | 0 | 14 | 11 | 9 | 1 | 15 |
-| [imrishabh18](#imrishabh18) | 18 | 7 | 0 | 10 | 4 | 19 | 18 | 7 | 2 | 10 |
-| [techmannih](#techmannih) | 15 | 1 | 1 | 0 | 0 | 6 | 1 | 6 | 2 | 13 |
+| [ArnavK-09](#ArnavK-09) | 34 | 24 | 2 | 3 | 0 | 22 | 17 | 1 | 0 | 0 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 61 | 4 | 5 | 4 | 19 | 8 | 130 |
+| [Abse2001](#Abse2001) | 21 | 15 | 0 | 0 | 0 | 17 | 12 | 9 | 1 | 15 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [Anshgrover23](#Anshgrover23) | 2 | 1 | 0 | 2 | 1 | 3 | 1 | 2 | 1 | 10 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 28 | 20 | 2 | 0 | 0 | 22 | 20 | 13 | 6 | 135 |
+| [imrishabh18](#imrishabh18) | 20 | 8 | 0 | 13 | 4 | 19 | 18 | 7 | 2 | 10 |
+| [techmannih](#techmannih) | 26 | 5 | 2 | 0 | 0 | 8 | 3 | 10 | 3 | 33 |
+| [Anshgrover23](#Anshgrover23) | 28 | 5 | 1 | 2 | 2 | 7 | 2 | 2 | 1 | 10 |
 | [krushnarout](#krushnarout) | 6 | 0 | 3 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | [MustafaMulla29](#MustafaMulla29) | 2 | 2 | 0 | 0 | 0 | 2 | 1 | 4 | 0 | 0 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 10 | 2 | 0 | 0 | 0 |
@@ -105,24 +107,28 @@ pie
 |------|--------|-------------|-------------|-------------------|
 | [#1019](https://github.com/tscircuit/tscircuit.com/pull/1019) | 🐳 Major | ArnavK-09 | Adds support for custom component paths in the runframe package. | ✅ |
 | [#1036](https://github.com/tscircuit/tscircuit.com/pull/1036) | 🐳 Major | ArnavK-09 | This pull request introduces the new PackageCard component to display package information and updates the trending page to use packages instead of snippets. | ✅ |
-| [#1063](https://github.com/tscircuit/tscircuit.com/pull/1063) | 🟣 | ArnavK-09 | This pull request refactors the error handling and updates the snippet creation logic in the JLCPCB component generation process. | ✅ |
-| [#1064](https://github.com/tscircuit/tscircuit.com/pull/1064) | 🐙 Minor | ArnavK-09 | The pull request enhances the package deletion flow by refetching the user's packages after a successful deletion, ensuring the user interface reflects the latest package data. | ✅ |
+| [#1070](https://github.com/tscircuit/tscircuit.com/pull/1070) | 🐙 Minor | ArnavK-09 | Reverts the previous refactor that removed the `refetch` and `keepPreviousData` options from the `useQuery` hook in the `TrendingPage` component. | ❌ |
 | [#1027](https://github.com/tscircuit/tscircuit.com/pull/1027) | 🐙 Minor | ArnavK-09 | Ensure that .ts files are correctly processed by replacing the extension with .tsx in the tsFacet configuration. | ✅ |
-| [#1033](https://github.com/tscircuit/tscircuit.com/pull/1033) | 🐙 Minor | ArnavK-09 | Introduce `isCodeEditorReady` state to manage editor opacity based on its readiness, improving user experience. | ✅ |
 | [#1048](https://github.com/tscircuit/tscircuit.com/pull/1048) | 🐙 Minor | ArnavK-09 | Refactors the `CodeAndPreview` component to simplify the logic for updating package files. | ✅ |
-| [#1032](https://github.com/tscircuit/tscircuit.com/pull/1032) | 🐙 Minor | ArnavK-09 | The pull request refactors the `checkIfManualEditsImported` function to accept a `file` parameter, allowing it to check for manual edits in different entry points and file types. It also adds support for the old spec file format. | ✅ |
+| [#1069](https://github.com/tscircuit/tscircuit.com/pull/1069) | 🐙 Minor | Abse2001 | Updated a dependency for the `circuit-json-to-gerber` package from version `0.0.19` to `0.0.21`. | ✅ |
 | [#1066](https://github.com/tscircuit/tscircuit.com/pull/1066) | 🐙 Minor | imrishabh18 | Adds a fake route for `/packages/images` with the `fs_sha` parameter to handle package image requests. | ✅ |
 | [#1065](https://github.com/tscircuit/tscircuit.com/pull/1065) | 🐙 Minor | imrishabh18 | Add an order button for mobile view of the package header | ✅ |
 | [#1062](https://github.com/tscircuit/tscircuit.com/pull/1062) | 🐙 Minor | imrishabh18 | This pull request refactors the LandingHero component to use the `/packages/list_trending` endpoint to get the trending snippets, and removes the duplicated code. | ✅ |
 | [#1061](https://github.com/tscircuit/tscircuit.com/pull/1061) | 🐙 Minor | imrishabh18 | Switch the API endpoint from `/snippets/list_latest` to `/packages/list_latest` to return a list of the latest packages, excluding snippets. | ❌ |
 | [#1059](https://github.com/tscircuit/tscircuit.com/pull/1059) | 🐙 Minor | imrishabh18 | Fixes a type error in the code that was returning the wrong data for the packages. | ✅ |
 | [#1057](https://github.com/tscircuit/tscircuit.com/pull/1057) | 🐙 Minor | imrishabh18 | Refactor the code to replace `/snippets/list` with `/packages/list`. | ❌ |
+| [#1047](https://github.com/tscircuit/tscircuit.com/pull/1047) | 🐙 Minor | imrishabh18 | Update the @tscircuit/runframe dependency to version 0.0.415 | ✅ |
+| [#1039](https://github.com/tscircuit/tscircuit.com/pull/1039) | 🐙 Minor | imrishabh18 | Add a fake for the `/packages/list_trending` endpoint | ❌ |
+| [#1068](https://github.com/tscircuit/tscircuit.com/pull/1068) | 🐌 Tiny | ArnavK-09 | Remove unused `refetch` and `keepPreviousData` options from `useQuery` in the TrendingPage component. | ❌ |
+| [#1063](https://github.com/tscircuit/tscircuit.com/pull/1063) | 🟣 | ArnavK-09 | This pull request refactors the error handling and updates the snippet creation logic in the JLCPCB component generation process. | ✅ |
+| [#1064](https://github.com/tscircuit/tscircuit.com/pull/1064) | 🐙 Minor | ArnavK-09 | The pull request enhances the package deletion flow by refetching the user's packages after a successful deletion, ensuring the user interface reflects the latest package data. | ✅ |
+| [#1033](https://github.com/tscircuit/tscircuit.com/pull/1033) | 🐙 Minor | ArnavK-09 | Introduce `isCodeEditorReady` state to manage editor opacity based on its readiness, improving user experience. | ✅ |
+| [#1032](https://github.com/tscircuit/tscircuit.com/pull/1032) | 🐙 Minor | ArnavK-09 | The pull request refactors the `checkIfManualEditsImported` function to accept a `file` parameter, allowing it to check for manual edits in different entry points and file types. It also adds support for the old spec file format. | ✅ |
 | [#1037](https://github.com/tscircuit/tscircuit.com/pull/1037) | 🐌 Tiny | ArnavK-09 | Updates the `circuit-json-to-gerber` dependency to version 0.0.18. | ✅ |
 | [#1060](https://github.com/tscircuit/tscircuit.com/pull/1060) | 🐌 Tiny | Abse2001 | Update a dependency for the `circuit-json-to-gerber` package from version `0.0.18` to `0.0.19`. | ✅ |
 | [#1049](https://github.com/tscircuit/tscircuit.com/pull/1049) | 🟣 | imrishabh18 | Update the version of the `@tscircuit/runframe` dependency. | ✅ |
-| [#1047](https://github.com/tscircuit/tscircuit.com/pull/1047) | 🐙 Minor | imrishabh18 | Update the @tscircuit/runframe dependency to version 0.0.415 | ✅ |
-| [#1039](https://github.com/tscircuit/tscircuit.com/pull/1039) | 🐙 Minor | imrishabh18 | Add a fake for the `/packages/list_trending` endpoint | ❌ |
 | [#1035](https://github.com/tscircuit/tscircuit.com/pull/1035) | 🐌 Tiny | imrishabh18 | Update the version of the "@tscircuit/runframe" dependency from 0.0.403 to 0.0.412. | ✅ |
+| [#1076](https://github.com/tscircuit/tscircuit.com/pull/1076) | 🐌 Tiny | techmannih | Fix the incorrect repository link in the project's documentation. | ❌ |
 
 ### [tscircuit/cli](https://github.com/tscircuit/cli)
 
@@ -142,8 +148,8 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#271](https://github.com/tscircuit/eval/pull/271) | 🐙 Minor | ArnavK-09 | Ensures proper cleanup of web worker instances by adding `await worker.kill()` at the end of each test to prevent potential memory leaks and ensure tests run in a clean state. | ✅ |
 | [#274](https://github.com/tscircuit/eval/pull/274) | 🐙 Minor | ArnavK-09 | Update GitHub Actions workflows to use latest versions of `actions/checkout` and `oven-sh/setup-bun`. | ✅ |
+| [#271](https://github.com/tscircuit/eval/pull/271) | 🐙 Minor | ArnavK-09 | Ensures proper cleanup of web worker instances by adding `await worker.kill()` at the end of each test to prevent potential memory leaks and ensure tests run in a clean state. | ✅ |
 | [#294](https://github.com/tscircuit/eval/pull/294) | 🟣 | tscircuitbot | Update @tscircuit/core to v0.0.395 | ✅ |
 | [#292](https://github.com/tscircuit/eval/pull/292) | 🐌 Tiny | tscircuitbot | Automated update of @tscircuit/core to v0.0.394. | ✅ |
 
@@ -188,9 +194,11 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#263](https://github.com/tscircuit/footprinter/pull/263) | 🐙 Minor | ShiboSoftwareDev | Added `start_pcb_port_id` and `end_pcb_port_id` properties to the `route` object in the `solderjumper.ts` file. | ✅ |
 | [#260](https://github.com/tscircuit/footprinter/pull/260) | 🐙 Minor | ShiboSoftwareDev | Refactor the jumper to have a variable trace width instead of a fixed width, which can cause problems. | ✅ |
 | [#255](https://github.com/tscircuit/footprinter/pull/255) | 🐙 Minor | ShiboSoftwareDev | Introduced a new footprint for a "solderjumper" component. | ❌ |
 | [#256](https://github.com/tscircuit/footprinter/pull/256) | 🐙 Minor | Abse2001 | Adds silkscreen labels for each pin in the pinrow feature. | ✅ |
+| [#257](https://github.com/tscircuit/footprinter/pull/257) | 🐙 Minor | techmannih | Fixes the ordering for pinrows to prevent overlaps. | ✅ |
 
 ### [tscircuit/jscad-electronics](https://github.com/tscircuit/jscad-electronics)
 
@@ -209,6 +217,7 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#11](https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/11) | 🐙 Minor | ShiboSoftwareDev | Add pcb_trace end points to the connectivity map | ✅ |
 | [#10](https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/10) | 🐙 Minor | ShiboSoftwareDev | Adds support for handling `internally_connected_source_port_ids` in `source_component` objects for `getFullConnectivityMapFromCircuitJson()` and `getSourcePortConnectivityMapFromCircuitJson()` functions. | ✅ |
 
 ### [tscircuit/runframe](https://github.com/tscircuit/runframe)
@@ -222,6 +231,20 @@ pie
 | [#560](https://github.com/tscircuit/runframe/pull/560) | 🐙 Minor | imrishabh18 | Add edge case cover to show the loading state when fetching quotes | ✅ |
 | [#558](https://github.com/tscircuit/runframe/pull/558) | 🐙 Minor | imrishabh18 | Simplify the logic for handling errors and loading states in the `InitialOrder` component. | ✅ |
 | [#556](https://github.com/tscircuit/runframe/pull/556) | 🐙 Minor | imrishabh18 | Update the UI and formatting of the order-quote dialog. | ✅ |
+
+### [tscircuit/checks](https://github.com/tscircuit/checks)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#42](https://github.com/tscircuit/checks/pull/42) | 🐌 Tiny | ShiboSoftwareDev | Updates the version of the "circuit-json-to-connectivity-map" dependency from 0.0.21 to 0.0.22. | ✅ |
+| [#41](https://github.com/tscircuit/checks/pull/41) | 🐌 Tiny | ShiboSoftwareDev | Update the version of the "circuit-json-to-connectivity-map" dependency from 0.0.20 to 0.0.21. | ✅ |
+
+### [tscircuit/status](https://github.com/tscircuit/status)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#41](https://github.com/tscircuit/status/pull/41) | 🐙 Minor | MustafaMulla29 | Fixed the modal opening condition to check for the presence of an error attribute instead of checking for a specific CSS class. | ✅ |
+| [#33](https://github.com/tscircuit/status/pull/33) | 🐌 Tiny | techmannih | Remove the package-lock.json file | ❌ |
 
 ### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
 
@@ -237,12 +260,11 @@ pie
 |------|--------|-------------|-------------|-------------------|
 | [#36](https://github.com/tscircuit/winterspec/pull/36) | 🐙 Minor | seveibar | Adds a new "dev2" command to the Bun CLI, which is a simplified version of the existing "dev" command. | ❌ |
 
-### [tscircuit/status](https://github.com/tscircuit/status)
+### [tscircuit/file-server](https://github.com/tscircuit/file-server)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#41](https://github.com/tscircuit/status/pull/41) | 🐙 Minor | MustafaMulla29 | Fixed the modal opening condition to check for the presence of an error attribute instead of checking for a specific CSS class. | ✅ |
-| [#33](https://github.com/tscircuit/status/pull/33) | 🐌 Tiny | techmannih | Remove the package-lock.json file | ❌ |
+| [#13](https://github.com/tscircuit/file-server/pull/13) | 🐳 Major | Anshgrover23 | Adds a new `renameFile` function to the `db-client.ts` file, which allows renaming a file by updating its `file_path` property and emitting `FILE_CREATED` and `FILE_DELETED` events. | ❌ |
 
 ## Changes by Contributor
 
@@ -255,14 +277,16 @@ pie
 | [#1036](https://github.com/tscircuit/tscircuit.com/pull/1036) | 🐳 Major | This pull request introduces the new PackageCard component to display package information and updates the trending page to use packages instead of snippets. | ✅ |
 | [#189](https://github.com/tscircuit/cli/pull/189) | 🐳 Major | Enhance package search with interactive selection and installation | ❌ |
 | [#262](https://github.com/tscircuit/pcb-viewer/pull/262) | 🐙 Minor | Increase the zIndex of the "Click to Interact" overlay in the PCBViewer component to improve its handling of overlays. | ✅ |
+| [#1070](https://github.com/tscircuit/tscircuit.com/pull/1070) | 🐙 Minor | Reverts the previous refactor that removed the `refetch` and `keepPreviousData` options from the `useQuery` hook in the `TrendingPage` component. | ❌ |
+| [#1027](https://github.com/tscircuit/tscircuit.com/pull/1027) | 🐙 Minor | Ensure that .ts files are correctly processed by replacing the extension with .tsx in the tsFacet configuration. | ✅ |
+| [#1048](https://github.com/tscircuit/tscircuit.com/pull/1048) | 🐙 Minor | Refactors the `CodeAndPreview` component to simplify the logic for updating package files. | ✅ |
+| [#274](https://github.com/tscircuit/eval/pull/274) | 🐙 Minor | Update GitHub Actions workflows to use latest versions of `actions/checkout` and `oven-sh/setup-bun`. | ✅ |
+| [#1068](https://github.com/tscircuit/tscircuit.com/pull/1068) | 🐌 Tiny | Remove unused `refetch` and `keepPreviousData` options from `useQuery` in the TrendingPage component. | ❌ |
 | [#1063](https://github.com/tscircuit/tscircuit.com/pull/1063) | 🟣 | This pull request refactors the error handling and updates the snippet creation logic in the JLCPCB component generation process. | ✅ |
 | [#1064](https://github.com/tscircuit/tscircuit.com/pull/1064) | 🐙 Minor | The pull request enhances the package deletion flow by refetching the user's packages after a successful deletion, ensuring the user interface reflects the latest package data. | ✅ |
-| [#1027](https://github.com/tscircuit/tscircuit.com/pull/1027) | 🐙 Minor | Ensure that .ts files are correctly processed by replacing the extension with .tsx in the tsFacet configuration. | ✅ |
 | [#1033](https://github.com/tscircuit/tscircuit.com/pull/1033) | 🐙 Minor | Introduce `isCodeEditorReady` state to manage editor opacity based on its readiness, improving user experience. | ✅ |
-| [#1048](https://github.com/tscircuit/tscircuit.com/pull/1048) | 🐙 Minor | Refactors the `CodeAndPreview` component to simplify the logic for updating package files. | ✅ |
 | [#1032](https://github.com/tscircuit/tscircuit.com/pull/1032) | 🐙 Minor | The pull request refactors the `checkIfManualEditsImported` function to accept a `file` parameter, allowing it to check for manual edits in different entry points and file types. It also adds support for the old spec file format. | ✅ |
 | [#271](https://github.com/tscircuit/eval/pull/271) | 🐙 Minor | Ensures proper cleanup of web worker instances by adding `await worker.kill()` at the end of each test to prevent potential memory leaks and ensure tests run in a clean state. | ✅ |
-| [#274](https://github.com/tscircuit/eval/pull/274) | 🐙 Minor | Update GitHub Actions workflows to use latest versions of `actions/checkout` and `oven-sh/setup-bun`. | ✅ |
 | [#192](https://github.com/tscircuit/cli/pull/192) | 🐙 Minor | Improve CLI update notifications with current version display | ✅ |
 | [#1037](https://github.com/tscircuit/tscircuit.com/pull/1037) | 🐌 Tiny | Updates the `circuit-json-to-gerber` dependency to version 0.0.18. | ✅ |
 
@@ -275,6 +299,7 @@ pie
 | [#269](https://github.com/tscircuit/schematic-symbols/pull/269) | 🐳 Major | The pull request adds symbols for all solderjumper3 variants. | ✅ |
 | [#267](https://github.com/tscircuit/schematic-symbols/pull/267) | 🐳 Major | The PR introduces a new circuit board element, a solder jumper bridge, with detailed path definitions. | ✅ |
 | [#185](https://github.com/tscircuit/circuit-json/pull/185) | 🐙 Minor | Adds a new property `internally_connected_source_port_ids` to the `SourceComponentBase` type. | ✅ |
+| [#263](https://github.com/tscircuit/footprinter/pull/263) | 🐙 Minor | Added `start_pcb_port_id` and `end_pcb_port_id` properties to the `route` object in the `solderjumper.ts` file. | ✅ |
 | [#260](https://github.com/tscircuit/footprinter/pull/260) | 🐙 Minor | Refactor the jumper to have a variable trace width instead of a fixed width, which can cause problems. | ✅ |
 | [#255](https://github.com/tscircuit/footprinter/pull/255) | 🐙 Minor | Introduced a new footprint for a "solderjumper" component. | ❌ |
 | [#787](https://github.com/tscircuit/core/pull/787) | 🐙 Minor | Fixed unwanted pin labels on ports that had "left" or "right" port hints but didn't have them specified in the port name. | ✅ |
@@ -283,9 +308,12 @@ pie
 | [#93](https://github.com/tscircuit/jscad-electronics/pull/93) | 🐙 Minor | Fixed the 3D models for SOIC8 and TSSOP8 footprints. | ✅ |
 | [#211](https://github.com/tscircuit/circuit-to-svg/pull/211) | 🐙 Minor | Change the pin1 indicator to be a filled up triangle instead of a notch. | ✅ |
 | [#268](https://github.com/tscircuit/schematic-symbols/pull/268) | 🐙 Minor | Adds a new solderjumper2.json file with detailed path information. | ❌ |
+| [#11](https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/11) | 🐙 Minor | Add pcb_trace end points to the connectivity map | ✅ |
 | [#10](https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/10) | 🐙 Minor | Adds support for handling `internally_connected_source_port_ids` in `source_component` objects for `getFullConnectivityMapFromCircuitJson()` and `getSourcePortConnectivityMapFromCircuitJson()` functions. | ✅ |
 | [#574](https://github.com/tscircuit/runframe/pull/574) | 🐙 Minor | Fix error tab not being displayed in the initial run of the CircuitJsonPreview component. | ✅ |
 | [#789](https://github.com/tscircuit/core/pull/789) | 🐌 Tiny | The PR updates the version of the `@tscircuit/footprinter` dependency in the `package.json` file. | ✅ |
+| [#42](https://github.com/tscircuit/checks/pull/42) | 🐌 Tiny | Updates the version of the "circuit-json-to-connectivity-map" dependency from 0.0.21 to 0.0.22. | ✅ |
+| [#41](https://github.com/tscircuit/checks/pull/41) | 🐌 Tiny | Update the version of the "circuit-json-to-connectivity-map" dependency from 0.0.20 to 0.0.21. | ✅ |
 
 ### [Abse2001](https://github.com/Abse2001)
 
@@ -301,6 +329,7 @@ pie
 | [#784](https://github.com/tscircuit/core/pull/784) | 🐙 Minor | Enables pinLabels silkscreen with pinrow footprint | ✅ |
 | [#39](https://github.com/tscircuit/circuit-json-to-gerber/pull/39) | 🐙 Minor | Improves silkscreen text accuracy by adjusting the font size based on the uppercase characters height cap. | ✅ |
 | [#33](https://github.com/tscircuit/circuit-json-to-gerber/pull/33) | 🐙 Minor | Fixes a bug where "rotated_rect" shape is not supported in the Gerber aperture definition. | ✅ |
+| [#1069](https://github.com/tscircuit/tscircuit.com/pull/1069) | 🐙 Minor | Updated a dependency for the `circuit-json-to-gerber` package from version `0.0.19` to `0.0.21`. | ✅ |
 | [#1060](https://github.com/tscircuit/tscircuit.com/pull/1060) | 🐌 Tiny | Update a dependency for the `circuit-json-to-gerber` package from version `0.0.18` to `0.0.19`. | ✅ |
 
 ### [imrishabh18](https://github.com/imrishabh18)
@@ -326,6 +355,14 @@ pie
 | [#556](https://github.com/tscircuit/runframe/pull/556) | 🐙 Minor | Update the UI and formatting of the order-quote dialog. | ✅ |
 | [#1035](https://github.com/tscircuit/tscircuit.com/pull/1035) | 🐌 Tiny | Update the version of the "@tscircuit/runframe" dependency from 0.0.403 to 0.0.412. | ✅ |
 
+### [techmannih](https://github.com/techmannih)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#257](https://github.com/tscircuit/footprinter/pull/257) | 🐙 Minor | Fixes the ordering for pinrows to prevent overlaps. | ✅ |
+| [#1076](https://github.com/tscircuit/tscircuit.com/pull/1076) | 🐌 Tiny | Fix the incorrect repository link in the project's documentation. | ❌ |
+| [#33](https://github.com/tscircuit/status/pull/33) | 🐌 Tiny | Remove the package-lock.json file | ❌ |
+
 ### [seveibar](https://github.com/seveibar)
 
 | PR # | Impact | Description | Milestone Aligned |
@@ -334,12 +371,6 @@ pie
 | [#114](https://github.com/tscircuit/tscircuit-autorouter/pull/114) | 🐳 Major | Introduces a JSON file with detailed information about a capacity mesh node (cn27815) and its port points, including their coordinates and connection names. | ❌ |
 | [#113](https://github.com/tscircuit/tscircuit-autorouter/pull/113) | 🐳 Major | Adds a new Autorouting Pipeline Debugger header to allow configuring the cache provider, including options for In Memory, Local Storage, and None. | ✅ |
 | [#36](https://github.com/tscircuit/winterspec/pull/36) | 🐙 Minor | Adds a new "dev2" command to the Bun CLI, which is a simplified version of the existing "dev" command. | ❌ |
-
-### [techmannih](https://github.com/techmannih)
-
-| PR # | Impact | Description | Milestone Aligned |
-|------|--------|-------------|-------------------|
-| [#33](https://github.com/tscircuit/status/pull/33) | 🐌 Tiny | Remove the package-lock.json file | ❌ |
 
 ### [MustafaMulla29](https://github.com/MustafaMulla29)
 
@@ -358,6 +389,7 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#13](https://github.com/tscircuit/file-server/pull/13) | 🐳 Major | Adds a new `renameFile` function to the `db-client.ts` file, which allows renaming a file by updating its `file_path` property and emitting `FILE_CREATED` and `FILE_DELETED` events. | ❌ |
 | [#187](https://github.com/tscircuit/cli/pull/187) | 🐙 Minor | Add a search command to the CLI for querying snippets | ❌ |
 
 

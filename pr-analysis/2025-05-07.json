@@ -110,6 +110,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/footprinter#257",
+    "number": 257,
+    "title": "fix: ordering for pinrows",
+    "description": "Fixes the ordering for pinrows to prevent overlaps.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/257",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#263",
+    "number": 263,
+    "title": "added start/end_pcb_port_id to help with connectivity map",
+    "description": "Added `start_pcb_port_id` and `end_pcb_port_id` properties to the `route` object in the `solderjumper.ts` file.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/263",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/footprinter#260",
     "number": 260,
     "title": "refactor jumper for better connections",
@@ -242,6 +264,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/checks#42",
+    "number": 42,
+    "title": "updated circuit-json-to-connectivity-map",
+    "description": "Updates the version of the \"circuit-json-to-connectivity-map\" dependency from 0.0.21 to 0.0.22.",
+    "impact": "Tiny",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/42",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/checks#41",
+    "number": 41,
+    "title": "updated connectivity map",
+    "description": "Update the version of the \"circuit-json-to-connectivity-map\" dependency from 0.0.20 to 0.0.21.",
+    "impact": "Tiny",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/41",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/schematic-symbols#269",
     "number": 269,
     "title": "symbols for all solderjumper3 variants",
@@ -319,6 +363,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json-to-connectivity-map#11",
+    "number": 11,
+    "title": "Add pcb_trace end points to the connectivity map",
+    "description": "Add pcb_trace end points to the connectivity map",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-json-to-connectivity-map",
+    "url": "https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/11",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json-to-connectivity-map#10",
     "number": 10,
     "title": "handle internally_connected_source_port_ids",
@@ -330,15 +385,48 @@
     "isAlignedWithMilestone": true
   },
   {
-    "tag": "tscircuit/tscircuit.com#1066",
-    "number": 1066,
-    "title": "Add fake for `/packages/images` with the `fs_sha` param",
-    "description": "Adds a fake route for `/packages/images` with the `fs_sha` parameter to handle package image requests.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
+    "tag": "tscircuit/tscircuit.com#1076",
+    "number": 1076,
+    "title": "fix tscircuit.com repo link",
+    "description": "Fix the incorrect repository link in the project's documentation.",
+    "impact": "Tiny",
+    "contributor": "techmannih",
     "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/1066",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1076",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1070",
+    "number": 1070,
+    "title": "Revert \"refactor(TrendingPage): remove unused refetch and keepPreviousData options from useQuery\"",
+    "description": "Reverts the previous refactor that removed the `refetch` and `keepPreviousData` options from the `useQuery` hook in the `TrendingPage` component.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1070",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1069",
+    "number": 1069,
+    "title": "updated dep",
+    "description": "Updated a dependency for the `circuit-json-to-gerber` package from version `0.0.19` to `0.0.21`.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1069",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1068",
+    "number": 1068,
+    "title": "refactor(TrendingPage): remove unused refetch and keepPreviousData options from useQuery",
+    "description": "Remove unused `refetch` and `keepPreviousData` options from `useQuery` in the TrendingPage component.",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1068",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/tscircuit.com#1063",
@@ -349,6 +437,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1063",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1066",
+    "number": 1066,
+    "title": "Add fake for `/packages/images` with the `fs_sha` param",
+    "description": "Adds a fake route for `/packages/images` with the `fs_sha` parameter to handle package image requests.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1066",
     "isAlignedWithMilestone": true
   },
   {
@@ -723,6 +822,17 @@
     "contributor": "Anshgrover23",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/187",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/file-server#13",
+    "number": 13,
+    "title": "add rename endpoint",
+    "description": "Adds a new `renameFile` function to the `db-client.ts` file, which allows renaming a file by updating its `file_path` property and emitting `FILE_CREATED` and `FILE_DELETED` events.",
+    "impact": "Major",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/file-server",
+    "url": "https://github.com/tscircuit/file-server/pull/13",
     "isAlignedWithMilestone": false
   },
   {
