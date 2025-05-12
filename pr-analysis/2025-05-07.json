@@ -11,6 +11,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-json#187",
+    "number": 187,
+    "title": " Added font_size",
+    "description": "Added a new property `font_size` to the `SchematicText` type.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/187",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#185",
     "number": 185,
     "title": "new SourceComponent property: internally_connected_source_port_ids",
@@ -63,6 +74,17 @@
     "contributor": "Abse2001",
     "repo": "tscircuit/circuit-json",
     "url": "https://github.com/tscircuit/circuit-json/pull/183",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#224",
+    "number": 224,
+    "title": " added fontSize",
+    "description": "Added a new `fontSize` property to the `schematic-text` component.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/224",
     "isAlignedWithMilestone": true
   },
   {
@@ -176,6 +198,94 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/core#779",
+    "number": 779,
+    "title": "Add `source_failed_to_create_component_error` to skip complete circuit render failure and add only the failed component to db",
+    "description": "Adds a new `ErrorPlaceholder` component to handle cases where a component fails to create during the circuit rendering process.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/779",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#796",
+    "number": 796,
+    "title": "fixed solderjumper not transforming with parent as layer changes",
+    "description": "Fixed the issue where the solder jumper component was not transforming with its parent layer changes.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/796",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#795",
+    "number": 795,
+    "title": "fix isPcbPrimitive incorrectly on schematic text",
+    "description": "Fix the `isPcbPrimitive` property to be `isSchematicPrimitive` for `SchematicText` component.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/795",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#794",
+    "number": 794,
+    "title": "Add event for tracking board render phase change (more efficient progress bar)",
+    "description": "Adds an event for tracking the start of the board render phase, which can be used to implement a more efficient progress bar.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/794",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#793",
+    "number": 793,
+    "title": "Fix Dependencies, move internal deps to peer deps",
+    "description": "Fix Dependencies, move internal deps to peer deps",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/793",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#790",
+    "number": 790,
+    "title": "Jumper internallyConnectedPins are now actually connected",
+    "description": "The PR fixes an issue where the internallyConnectedPins of a Jumper component were not actually connected.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/790",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#792",
+    "number": 792,
+    "title": "Added font size blocking the circuit-to-svg PR",
+    "description": "Adds font size to the NormalComponent and SchematicText components",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/792",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#791",
+    "number": 791,
+    "title": "New component : <schematictext /> & test",
+    "description": "Adds a new component `SchematicText` and its test",
+    "impact": "Major",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/791",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#789",
     "number": 789,
     "title": "updated footprinter",
@@ -253,6 +363,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/plop#10",
+    "number": 10,
+    "title": "add dependency check github action",
+    "description": "Add a dependency check GitHub action to ensure repos properly maintain peer deps and dev deps.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/plop",
+    "url": "https://github.com/tscircuit/plop/pull/10",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#213",
+    "number": 213,
+    "title": "add support solder paste for smtpads",
+    "description": "Add support for solder paste for SMT pads",
+    "impact": "Major",
+    "contributor": "techmannih",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/213",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#215",
+    "number": 215,
+    "title": "Fix Dependencies",
+    "description": "This pull request fixes dependencies by updating the Dependency Check GitHub workflow and removing unused dependencies.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/215",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-to-svg#211",
     "number": 211,
     "title": "Only display pin1 indicator for chips, now as a filled up triangle instead of a notch",
@@ -262,6 +405,17 @@
     "repo": "tscircuit/circuit-to-svg",
     "url": "https://github.com/tscircuit/circuit-to-svg/pull/211",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/checks#43",
+    "number": 43,
+    "title": "Fix Dependencies",
+    "description": "Fix dependencies by updating package.json and adding a dependency check workflow",
+    "impact": "Minor\n\nExplanation:\nThe",
+    "contributor": "seveibar",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/43",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/checks#42",
@@ -363,6 +517,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/template-api-fake#9",
+    "number": 9,
+    "title": "Switched to ky from redaxios",
+    "description": "Switched the HTTP client library from redaxios to ky.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/template-api-fake",
+    "url": "https://github.com/tscircuit/template-api-fake/pull/9",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/template-api-fake#8",
+    "number": 8,
+    "title": "add format and type-check workflows",
+    "description": "Add format and type-check workflows for the project",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/template-api-fake",
+    "url": "https://github.com/tscircuit/template-api-fake/pull/8",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json-to-connectivity-map#11",
     "number": 11,
     "title": "Add pcb_trace end points to the connectivity map",
@@ -382,6 +558,61 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/circuit-json-to-connectivity-map",
     "url": "https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/10",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1084",
+    "number": 1084,
+    "title": "fix: dialog (dropdown) remains visible during navigation",
+    "description": "Fix a bug where the dropdown menu remains visible during navigation.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1084",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1082",
+    "number": 1082,
+    "title": "refactor: remove redundant components and pages",
+    "description": "The pull request removes redundant components and pages from the `src/App.tsx` file.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1082",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1081",
+    "number": 1081,
+    "title": "refactor: cleanup `SnippetCard` component",
+    "description": "Refactor the `SnippetCard` component and remove its implementation from the codebase.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1081",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1067",
+    "number": 1067,
+    "title": "replace the  url`/snippets/images` with the `/packages/images` in the component",
+    "description": "Replace the URL `/snippets/images` with `/packages/images` in the `PackageCard` component and add a new `CarouselItem` component to the `TrendingPackagesCarousel` component to fetch the package images with the updated URL.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1067",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1080",
+    "number": 1080,
+    "title": "added schematic-symbols as now it's a peer dependency in core",
+    "description": "Added `schematic-symbols` as a peer dependency in the `package.json` file.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1080",
     "isAlignedWithMilestone": true
   },
   {
@@ -476,7 +707,7 @@
     "tag": "tscircuit/tscircuit.com#1027",
     "number": 1027,
     "title": "fix(CodeEditor): support react syntax for old .ts packages",
-    "description": "Ensure that .ts files are correctly processed by replacing the extension with .tsx in the tsFacet configuration.",
+    "description": "Fix support for React syntax in old .ts packages in the CodeEditor component.",
     "impact": "Minor",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
@@ -498,23 +729,23 @@
     "tag": "tscircuit/tscircuit.com#1048",
     "number": 1048,
     "title": "refactor: simplify package file updates in CodeAndPreview component",
-    "description": "Refactors the `CodeAndPreview` component to simplify the logic for updating package files.",
+    "description": "Refactors the `CodeAndPreview` component to simplify the way package file updates are handled.",
     "impact": "Minor",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1048",
-    "isAlignedWithMilestone": true
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/tscircuit.com#1019",
     "number": 1019,
     "title": "feat: append  mainComponentPath for custom component runs",
-    "description": "Adds support for custom component paths in the runframe package.",
-    "impact": "Major",
+    "description": "Append `mainComponentPath` for custom component runs.",
+    "impact": "Minor",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1019",
-    "isAlignedWithMilestone": true
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/tscircuit.com#1032",
@@ -586,7 +817,7 @@
     "tag": "tscircuit/tscircuit.com#1036",
     "number": 1036,
     "title": "feat: add PackageCard component and update trending page to use packages",
-    "description": "This pull request introduces the new PackageCard component to display package information and updates the trending page to use packages instead of snippets.",
+    "description": "This PR introduces a new `PackageCard` component and updates the trending page to use packages instead of snippets.",
     "impact": "Major",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
@@ -597,8 +828,8 @@
     "tag": "tscircuit/tscircuit.com#1049",
     "number": 1049,
     "title": "chore: runframe",
-    "description": "Update the version of the `@tscircuit/runframe` dependency.",
-    "impact": "Tiny\n\nExplanation:\nThe",
+    "description": "Update the `@tscircuit/runframe` dependency to version `0.0.417`.",
+    "impact": "Tiny",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1049",
@@ -608,8 +839,8 @@
     "tag": "tscircuit/tscircuit.com#1047",
     "number": 1047,
     "title": "chore: runframe (Send shipping carrier to stripe)",
-    "description": "Update the @tscircuit/runframe dependency to version 0.0.415",
-    "impact": "Minor",
+    "description": "Update the version of the `@tscircuit/runframe` package from `0.0.413` to `0.0.415`.",
+    "impact": "Tiny",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1047",
@@ -619,7 +850,7 @@
     "tag": "tscircuit/tscircuit.com#1039",
     "number": 1039,
     "title": "add fake for `/packages/list_trending`",
-    "description": "Add a fake for the `/packages/list_trending` endpoint",
+    "description": "Add a fake implementation for the `/packages/list_trending` endpoint in the testing environment.",
     "impact": "Minor",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
@@ -641,12 +872,45 @@
     "tag": "tscircuit/tscircuit.com#1035",
     "number": 1035,
     "title": "chore: runframe",
-    "description": "Update the version of the \"@tscircuit/runframe\" dependency from 0.0.403 to 0.0.412.",
+    "description": "Update the `@tscircuit/runframe` dependency to version `0.0.412`.",
     "impact": "Tiny",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1035",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/status#42",
+    "number": 42,
+    "title": "Improved the outage table for mobile responsiveness",
+    "description": "Improved the outage table for mobile responsiveness by adding more padding and whitespace to the table cells.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/42",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/status#44",
+    "number": 44,
+    "title": "add resolve notification in outage channel when outage is resolved",
+    "description": "Add a resolution notification in the outage channel when an outage is resolved.",
+    "impact": "Major",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/44",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/status#43",
+    "number": 43,
+    "title": "fix: increase the wait timeout for the png_service check",
+    "description": "Increase the wait timeout for the png_service check",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/status",
+    "url": "https://github.com/tscircuit/status/pull/43",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/status#33",
@@ -668,6 +932,72 @@
     "contributor": "MustafaMulla29",
     "repo": "tscircuit/status",
     "url": "https://github.com/tscircuit/status/pull/41",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#315",
+    "number": 315,
+    "title": "chore: update @tscircuit/core to v0.0.402",
+    "description": "Update the @tscircuit/core dependency to version 0.0.402",
+    "impact": "Minor",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/315",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#303",
+    "number": 303,
+    "title": "Make WebWorker a singleton (fixes test suite)",
+    "description": "The pull request makes the WebWorker a singleton to fix the test suite.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/303",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/eval#313",
+    "number": 313,
+    "title": "patch core update",
+    "description": "Update the version of the `@tscircuit/core` package from `0.0.400` to `0.0.401`.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/313",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#309",
+    "number": 309,
+    "title": "Update Core, more efficient worker loading from blob urls, stop tracking anyEvent (too many events, causes segfaults)",
+    "description": "Update Core, more efficient worker loading from blob urls, stop tracking anyEvent (too many events, causes segfaults)",
+    "impact": "Minor\n\nExplanation:\nThe",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/309",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#302",
+    "number": 302,
+    "title": "Revert \"chore: update @tscircuit/core to v0.0.398\"",
+    "description": "Revert the update of the \"@tscircuit/core\" dependency to version 0.0.398",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/302",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/eval#301",
+    "number": 301,
+    "title": "chore: update @tscircuit/core to v0.0.398",
+    "description": "Update @tscircuit/core to v0.0.398",
+    "impact": "Tiny",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/301",
     "isAlignedWithMilestone": true
   },
   {
@@ -712,6 +1042,28 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/274",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#588",
+    "number": 588,
+    "title": "Adapt RunFrame to use board:renderPhaseStarted for progress estimation rather than renderable:renderLifecycle:anyEvent (prevents some crashes)",
+    "description": "Adapts the RunFrame component to use the board:renderPhaseStarted event instead of the renderable:renderLifecycle:anyEvent event for progress estimation, which prevents some crashes.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/588",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#585",
+    "number": 585,
+    "title": "minor tip adjustments",
+    "description": "Minor adjustments to the tips displayed in the application",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/585",
     "isAlignedWithMilestone": true
   },
   {
@@ -792,6 +1144,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/cli#194",
+    "number": 194,
+    "title": "fix(cli): prevent --version/-V from printing version with subcommands",
+    "description": "Fix to prevent the `--version/-V` flags from printing the version when used with subcommands.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/194",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/cli#195",
+    "number": 195,
+    "title": "feat(cli): add remove command for uninstalling tscircuit components",
+    "description": "Adds a new remove command to the tscircuit CLI for uninstalling tscircuit components.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/195",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#197",
+    "number": 197,
+    "title": "fix: Renaming files aren't picked up properly",
+    "description": "Fix an issue where file renames are not properly picked up by the DevServer.",
+    "impact": "Major",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/197",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/cli#192",
     "number": 192,
     "title": "feat(cli): improve CLI update notifications with current version display",
@@ -825,6 +1210,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/file-server#14",
+    "number": 14,
+    "title": "patch: fix backslash normalization",
+    "description": "Patch to fix backslash normalization in the `normalizePath` function.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/file-server",
+    "url": "https://github.com/tscircuit/file-server/pull/14",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/file-server#13",
     "number": 13,
     "title": "add rename endpoint",
@@ -834,6 +1230,17 @@
     "repo": "tscircuit/file-server",
     "url": "https://github.com/tscircuit/file-server/pull/13",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/circuit-json-to-readable-netlist#10",
+    "number": 10,
+    "title": "Fix Dependencies",
+    "description": "Fix dependencies by updating package.json and tsconfig.json",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/circuit-json-to-readable-netlist",
+    "url": "https://github.com/tscircuit/circuit-json-to-readable-netlist/pull/10",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/tscircuit-autorouter#118",
