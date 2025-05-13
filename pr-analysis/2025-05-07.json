@@ -77,6 +77,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/props#226",
+    "number": 226,
+    "title": "cadModel can now be null",
+    "description": "Allowing `cadModel` property to be `null`",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/226",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/props#224",
     "number": 224,
     "title": " added fontSize",
@@ -129,6 +140,28 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/props",
     "url": "https://github.com/tscircuit/props/pull/217",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#264",
+    "number": 264,
+    "title": "silkscreen for solderjumper",
+    "description": "Adds silkscreen outline and reference text for solderjumper footprint",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/264",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#262",
+    "number": 262,
+    "title": "add support potentiometer_ca14_h5",
+    "description": "Adds support for the potentiometer_ca14_h5 component.",
+    "impact": "Major",
+    "contributor": "techmannih",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/262",
     "isAlignedWithMilestone": true
   },
   {
@@ -187,6 +220,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/easyeda-converter#196",
+    "number": 196,
+    "title": "fix z-axis rotation",
+    "description": "Fix the z-axis rotation for the CAD component.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/easyeda-converter",
+    "url": "https://github.com/tscircuit/easyeda-converter/pull/196",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/winterspec#36",
     "number": 36,
     "title": "New bun-compatible dev command \"dev2\"",
@@ -196,6 +240,17 @@
     "repo": "tscircuit/winterspec",
     "url": "https://github.com/tscircuit/winterspec/pull/36",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#800",
+    "number": 800,
+    "title": "fixed solder jumper pins not mapping correctly & disable cadModel with empty string",
+    "description": "Fixed solder jumper pins not mapping correctly and disabled `cadModel` with empty string.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/800",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/core#779",
@@ -517,6 +572,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/template-api-fake#10",
+    "number": 10,
+    "title": "refactor middleware imports",
+    "description": "The pull request refactors the middleware imports to use the correct path to the Middleware type.",
+    "impact": "Tiny",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/template-api-fake",
+    "url": "https://github.com/tscircuit/template-api-fake/pull/10",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/template-api-fake#9",
     "number": 9,
     "title": "Switched to ky from redaxios",
@@ -558,6 +624,72 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/circuit-json-to-connectivity-map",
     "url": "https://github.com/tscircuit/circuit-json-to-connectivity-map/pull/10",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1101",
+    "number": 1101,
+    "title": "Dep update",
+    "description": "Updates the dependency `@tscircuit/runframe` from version `0.0.446` to `0.0.449`.",
+    "impact": "Tiny",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1101",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1100",
+    "number": 1100,
+    "title": "Revert \"fix: unmounting of the dropdown item\"",
+    "description": "Reverts the fix for the unmounting of the dropdown item.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1100",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1087",
+    "number": 1087,
+    "title": "Show sign in, when no user not logged in",
+    "description": "Show sign in, when no user not logged in",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1087",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1096",
+    "number": 1096,
+    "title": "Added skeleton on user's profile page and minor improvements",
+    "description": "Added a skeleton loading component for the user's profile page and made minor improvements to the empty state messages.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1096",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1095",
+    "number": 1095,
+    "title": "fix: unmounting of the dropdown item",
+    "description": "Fix for the unmounting of the dropdown item.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1095",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1090",
+    "number": 1090,
+    "title": "Added Optimized image, so that we show the fallback img when the image doesn't load ",
+    "description": "Added an optimized image component that shows a fallback image when the primary image doesn't load.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1090",
     "isAlignedWithMilestone": true
   },
   {
@@ -880,6 +1012,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/graphics-debug#54",
+    "number": 54,
+    "title": "add strokeDash support for svg generation",
+    "description": "Add support for stroke-dasharray property in SVG generation",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/graphics-debug",
+    "url": "https://github.com/tscircuit/graphics-debug/pull/54",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/graphics-debug#53",
+    "number": 53,
+    "title": "add option that allows setting background color",
+    "description": "Add an option to set the background color for the SVG image.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/graphics-debug",
+    "url": "https://github.com/tscircuit/graphics-debug/pull/53",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/status#42",
     "number": 42,
     "title": "Improved the outage table for mobile responsiveness",
@@ -932,6 +1086,17 @@
     "contributor": "MustafaMulla29",
     "repo": "tscircuit/status",
     "url": "https://github.com/tscircuit/status/pull/41",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#319",
+    "number": 319,
+    "title": "chore: update @tscircuit/core to v0.0.404",
+    "description": "Update @tscircuit/core to v0.0.404",
+    "impact": "Minor",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/319",
     "isAlignedWithMilestone": true
   },
   {
@@ -1042,6 +1207,61 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/274",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#599",
+    "number": 599,
+    "title": "Routing failure to simulate error tab not working, show pcb_autorouting_error in errors tab",
+    "description": "Fix routing failure to simulate error tab not working, show pcb_autorouting_error in errors tab",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/599",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#598",
+    "number": 598,
+    "title": "add the isLoggedIn parameter, for the sign in dialog to show immediately",
+    "description": "Added the `isLoggedIn` parameter to the `useOrderDialog` hook and the `OrderDialog` component, allowing the sign-in dialog to be shown immediately if the user is not logged in.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/598",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/runframe#597",
+    "number": 597,
+    "title": "Update the api paramter to named parameter",
+    "description": "Update the API parameter to a named parameter",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/597",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#594",
+    "number": 594,
+    "title": "fix: add the missing condition of not showing both the loader and error message",
+    "description": "Fix the condition for not showing both the loader and error message in the OrderDialog component.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/594",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#593",
+    "number": 593,
+    "title": "Add the sign-in view on the dialog if the user is not logged in",
+    "description": "Add the sign-in view on the dialog if the user is not logged in",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/593",
     "isAlignedWithMilestone": true
   },
   {
@@ -1240,6 +1460,28 @@
     "contributor": "seveibar",
     "repo": "tscircuit/circuit-json-to-readable-netlist",
     "url": "https://github.com/tscircuit/circuit-json-to-readable-netlist/pull/10",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#121",
+    "number": 121,
+    "title": "Better Pathing with accurate section cost function",
+    "description": "The pull request adds comments with placeholders, uses section score as g in hyper capacity pathing section solver, adds a todo for starting score, updates the optimization schedule, adds a placeholder for cached hyper capacity pathing solver, and attempts to make the g score more efficient.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/121",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#122",
+    "number": 122,
+    "title": "Better Capacity Pathing, More Cache Integration",
+    "description": "The pull request updates the .gitignore file and adds a new JSON file containing details about capacity pathing and multi-section capacity pathing.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/122",
     "isAlignedWithMilestone": true
   },
   {
