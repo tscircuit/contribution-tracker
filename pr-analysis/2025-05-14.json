@@ -1,0 +1,145 @@
+[
+  {
+    "tag": "tscircuit/3d-viewer#275",
+    "number": 275,
+    "title": "handle silkscreen paths",
+    "description": "The pull request adds handling for silkscreen paths in the BoardGeomBuilder.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/275",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#799",
+    "number": 799,
+    "title": "Add support for parent group's transformation",
+    "description": "Add support for parent group's transformation",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/799",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#803",
+    "number": 803,
+    "title": "Update Autorouter (10+ versions)",
+    "description": "Update the timeout for the Bun test command in the GitHub Actions workflow.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/803",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1071",
+    "number": 1071,
+    "title": "refactor(TrendingPage): optimize package filtering and sorting logic  ",
+    "description": "Refactor the package filtering and sorting logic in the TrendingPage component.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1071",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1107",
+    "number": 1107,
+    "title": "fix: flickering issue of OrderDialog because of MobileSidebar and update runframe",
+    "description": "Fix flickering issue of OrderDialog because of MobileSidebar and update `@tscircuit/runframe` dependency",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1107",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1105",
+    "number": 1105,
+    "title": "update runframe",
+    "description": "Update the version of the `@tscircuit/runframe` dependency from `0.0.449` to `0.0.451`.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1105",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1103",
+    "number": 1103,
+    "title": "Remove babel standalone, remove shiki extra deps, remove legacy code editor, reduces bundle size 42mb -> 28mb",
+    "description": "Removes babel standalone, removes shiki extra deps, removes legacy code editor, and reduces bundle size from 42mb to 28mb.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1103",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/eval#325",
+    "number": 325,
+    "title": "updated core",
+    "description": "Update the version of the @tscircuit/core dependency from 0.0.404 to 0.0.406.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/325",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json-to-spice#2",
+    "number": 2,
+    "title": "add format and type check workflows",
+    "description": "Add format and type check workflows for the project.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/circuit-json-to-spice",
+    "url": "https://github.com/tscircuit/circuit-json-to-spice/pull/2",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#581",
+    "number": 581,
+    "title": "feat(CircuitJsonPreview): add cadViewerRef and update CadViewer integration",
+    "description": "Adds a new `cadViewerRef` and updates the integration with the CadViewer component in the CircuitJsonPreview component.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/581",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#606",
+    "number": 606,
+    "title": "Modify the error message body according to the standard structure",
+    "description": "Modify the error message body to conform to a standard structure.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/606",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/docs#53",
+    "number": 53,
+    "title": "Report Autorouter Bugs",
+    "description": "This pull request adds documentation on how to report autorouter bugs in the tscircuit interface and how to simulate the bug using the autorouting debugger.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/docs",
+    "url": "https://github.com/tscircuit/docs/pull/53",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#123",
+    "number": 123,
+    "title": "Fix Stitch Bug",
+    "description": "Fix a bug related to stitching in the JSON file.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/123",
+    "isAlignedWithMilestone": true
+  }
+]
