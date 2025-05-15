@@ -11,6 +11,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/core#804",
+    "number": 804,
+    "title": "Update Autorouter 0.0.66",
+    "description": "Update the Autorouter to version 0.0.66",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/804",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/core#799",
     "number": 799,
     "title": "Add support for parent group's transformation",
@@ -31,6 +42,17 @@
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/803",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#272",
+    "number": 272,
+    "title": "added zigzag resistor for schSmall variant",
+    "description": "Added a new zigzag resistor for the schSmall variant.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/272",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/tscircuit.com#1071",
@@ -75,6 +97,28 @@
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1103",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/graphics-debug#55",
+    "number": 55,
+    "title": "add backgroundColor option to matcher",
+    "description": "Adds a new `backgroundColor` option to the `toMatchGraphicsSvg` matcher.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/graphics-debug",
+    "url": "https://github.com/tscircuit/graphics-debug/pull/55",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/eval#332",
+    "number": 332,
+    "title": "update capacity autorouter and core",
+    "description": "Update capacity autorouter and core dependencies",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/332",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/eval#325",
@@ -129,6 +173,28 @@
     "contributor": "seveibar",
     "repo": "tscircuit/docs",
     "url": "https://github.com/tscircuit/docs/pull/53",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#127",
+    "number": 127,
+    "title": "Fix bugreport1, use better force calculation using nearest-point-on-segment",
+    "description": "Fixes a bug report and improves the force calculation for endpoint using the nearest point on the segment.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/127",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit-autorouter#125",
+    "number": 125,
+    "title": "add bug report, add script to download bug reports",
+    "description": "The pull request adds a bug report feature and a script to download bug reports.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit-autorouter",
+    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/125",
     "isAlignedWithMilestone": true
   },
   {
