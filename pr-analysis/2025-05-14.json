@@ -1,5 +1,71 @@
 [
   {
+    "tag": "tscircuit/circuit-json#189",
+    "number": 189,
+    "title": "missing PcbHolePillWithRectPad",
+    "description": "Adds a new type `PcbHolePillWithRectPad` for a PCB plated hole with a rectangular pad.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/189",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#188",
+    "number": 188,
+    "title": "add links to source in README generation",
+    "description": "Add links to source in README generation",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/188",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#228",
+    "number": 228,
+    "title": "add support for pinCompatibleVariants for chip",
+    "description": "Add support for `pinCompatibleVariants` for `chip`",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/228",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#227",
+    "number": 227,
+    "title": "Docs Generation",
+    "description": "This pull request updates the documentation generation workflow, which includes adding links to the props definitions in the README.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/227",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/footprinter#266",
+    "number": 266,
+    "title": "add electolytic footprint",
+    "description": "Add an electrolytic footprint to the project.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/266",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/3d-viewer#278",
+    "number": 278,
+    "title": "silkscreen text size to match pcb-viewer",
+    "description": "Adjust the silkscreen text size to match the size used in the pcb-viewer.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/278",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/3d-viewer#275",
     "number": 275,
     "title": "handle silkscreen paths",
@@ -44,6 +110,72 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/contribution-tracker#131",
+    "number": 131,
+    "title": "Refactor issue creation metrics to include major issues and calculate contributor scores",
+    "description": "Refactors the issue creation metrics to include major issues and calculate contributor scores.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/131",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/contribution-tracker#130",
+    "number": 130,
+    "title": "Refactor impact assignment logic in PR analysis",
+    "description": "Refactor impact assignment logic in PR analysis",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/130",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/checks#46",
+    "number": 46,
+    "title": "feat: Add DRC check for vias out of board",
+    "description": "Adds a DRC (Design Rule Check) to detect vias that are out of the board boundary.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/46",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#274",
+    "number": 274,
+    "title": "fix all variation for led symbol",
+    "description": "Fix all variations for the LED symbol",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/274",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#277",
+    "number": 277,
+    "title": "add support ferrite bead symbol",
+    "description": "Adds support for the ferrite bead symbol",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/277",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#276",
+    "number": 276,
+    "title": "new schematic symbol boxresistor_small",
+    "description": "Adds a new schematic symbol for a small box resistor.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/276",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/schematic-symbols#272",
     "number": 272,
     "title": "added zigzag resistor for schSmall variant",
@@ -55,6 +187,39 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/tscircuit.com#1115",
+    "number": 1115,
+    "title": "Match the fake with prod version",
+    "description": "The pull request changes the validation logic for the `order_quotes/create` API endpoint, removing the ability to provide both `circuit_json` and `package_release_id`, and instead requiring only `package_release_id`.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1115",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1111",
+    "number": 1111,
+    "title": "refactor(download-gltf): fix model not downlaoding",
+    "description": "Fix for model not downloading in the download-gltf functionality.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1111",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1112",
+    "number": 1112,
+    "title": "feat: add search functionality and enhance footer links",
+    "description": "The pull request adds search functionality and enhances the footer links.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1112",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/tscircuit.com#1071",
     "number": 1071,
     "title": "refactor(TrendingPage): optimize package filtering and sorting logic  ",
@@ -63,6 +228,39 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1071",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1079",
+    "number": 1079,
+    "title": "fix: jlcpcb part already imported",
+    "description": "Fixes an issue where the user is shown an error message when trying to import a JLCPCB part that has already been imported.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1079",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1109",
+    "number": 1109,
+    "title": "fix the annoying dropdown visible on redirect",
+    "description": "Fix the annoying dropdown visible on redirect",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1109",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1106",
+    "number": 1106,
+    "title": "ensure registry token is set on window",
+    "description": "Ensures that the registry token is set on the window object",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1106",
     "isAlignedWithMilestone": false
   },
   {
@@ -96,6 +294,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1103",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/graphics-debug#56",
+    "number": 56,
+    "title": "Add SVG Label Rendering Filtering + Rects and fixture",
+    "description": "Add SVG Label Rendering Filtering + Rects and fixture",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/graphics-debug",
+    "url": "https://github.com/tscircuit/graphics-debug/pull/56",
     "isAlignedWithMilestone": false
   },
   {
@@ -165,6 +374,39 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/cli#199",
+    "number": 199,
+    "title": "Update CLI commands and descriptions to reflect package terminology",
+    "description": "Updates CLI commands and descriptions to reflect package terminology instead of snippet.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/199",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#198",
+    "number": 198,
+    "title": "docs: README update",
+    "description": "Updates the README to reflect the change from \"snippets\" to \"packages\" in the CLI.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/198",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/docs#54",
+    "number": 54,
+    "title": "Support multiple files to be previewed",
+    "description": "Added support for previewing multiple files in the circuit preview component.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/docs",
+    "url": "https://github.com/tscircuit/docs/pull/54",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/docs#53",
     "number": 53,
     "title": "Report Autorouter Bugs",
@@ -207,5 +449,38 @@
     "repo": "tscircuit/tscircuit-autorouter",
     "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/123",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/chat.tscircuit.com#22",
+    "number": 22,
+    "title": "Create authentication-flow.md",
+    "description": "The pull request adds a new file `authentication-flow.md` that contains a Mermaid sequence diagram describing the authentication flow for the application.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/chat.tscircuit.com",
+    "url": "https://github.com/tscircuit/chat.tscircuit.com/pull/22",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/chat.tscircuit.com#21",
+    "number": 21,
+    "title": "fix callback hook",
+    "description": "Fix a callback hook in the authentication flow.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/chat.tscircuit.com",
+    "url": "https://github.com/tscircuit/chat.tscircuit.com/pull/21",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/chat.tscircuit.com#20",
+    "number": 20,
+    "title": "fix broken chat by supporting github login",
+    "description": "Fix broken chat by supporting GitHub login",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/chat.tscircuit.com",
+    "url": "https://github.com/tscircuit/chat.tscircuit.com/pull/20",
+    "isAlignedWithMilestone": false
   }
 ]
