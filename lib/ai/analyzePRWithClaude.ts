@@ -85,7 +85,7 @@ Impact: [Major/Minor/Tiny]`
       number: pr.number,
       title: pr.title,
       description: description.replace("Description: ", "").trim(),
-      impact: impact?.replace("Impact: ", "")?.trim() as
+      impact: impact?.replace("Impact: ", "")?.trim().split(/\s+/)[0] as
         | "Major"
         | "Minor"
         | "Tiny",
