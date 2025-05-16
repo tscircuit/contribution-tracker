@@ -144,14 +144,21 @@ export async function generateOverview(startDate: string) {
 
     const getIssuesCreatedPromises = Object.keys(contributorData).map(
       async (contributor) => {
-        const issuesCreated = await getIssuesCreated(
+        const { totalIssues, majorIssues } = await getIssuesCreated(
           repo,
           contributor,
           startDateString,
         )
 
         contributorData[contributor].issuesCreated =
-          (contributorData[contributor].issuesCreated || 0) + issuesCreated
+          (contributorData[contributor].issuesCreated || 0) + totalIssues
+
+        // Calculate score based on issues created
+        const scoreFromIssues =
+          Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
+
+        contributorData[contributor].score =
+          (contributorData[contributor].score || 0) + scoreFromIssues
       },
     )
 

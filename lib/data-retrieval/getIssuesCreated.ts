@@ -4,7 +4,7 @@ export async function getIssuesCreated(
   repo: string,
   contributor: string,
   startDate: string,
-): Promise<number> {
+): Promise<{ totalIssues: number; majorIssues: number }> {
   try {
     const { data: issues } = await octokit.issues.listForRepo({
       owner: repo.split("/")[0],
@@ -16,16 +16,24 @@ export async function getIssuesCreated(
 
     // Filter out pull requests by checking for the absence of `pull_request` property
     const issueData = issues.filter((issue) => !issue.pull_request)
-    const count = issueData.length
+    const totalIssues = issueData.length
+
+    // Count major issues
+    const majorIssues = issueData.filter((issue) =>
+      issue.labels.some(
+        (label) =>
+          typeof label === "object" && label.name?.toLowerCase() === "major",
+      ),
+    ).length
 
     // Process complete
 
-    return count
+    return { totalIssues, majorIssues }
   } catch (error) {
     console.error(
       `Error fetching issues created by ${contributor} in ${repo}:`,
       error,
     )
-    return 0
+    return { totalIssues: 0, majorIssues: 0 }
   }
 }
