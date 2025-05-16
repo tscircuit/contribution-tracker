@@ -20,8 +20,8 @@ export async function getMergedPRs(
     (pr) =>
       pr.merged_at &&
       new Date(pr.merged_at) >= new Date(since) &&
-      !pr.title.includes("Revert") &&
-      (pr.body ? !pr.body.toLowerCase().includes("reverts") : true),
+      !pr.title?.toLowerCase().includes("revert") &&
+      (pr.body ? !pr.body?.toLowerCase().includes("revert") : true),
   )
 
   // Fetch diff content for each PR
