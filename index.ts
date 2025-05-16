@@ -158,7 +158,8 @@ export async function generateOverview(startDate: string) {
           (contributorData[contributor].issuesCreated || 0) + totalIssues
 
         // Calculate score based on issues created
-        const scoreFromIssues = Math.min(totalIssues, 3) + majorIssues * 3
+        const scoreFromIssues =
+          Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
 
         contributorData[contributor].score =
           (contributorData[contributor].score || 0) + scoreFromIssues
