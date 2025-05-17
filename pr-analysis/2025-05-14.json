@@ -1,5 +1,16 @@
 [
   {
+    "tag": "tscircuit/circuit-json#190",
+    "number": 190,
+    "title": "add `schematic_group`",
+    "description": "Adds a new `schematic_group` type to the codebase.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/190",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#189",
     "number": 189,
     "title": "missing PcbHolePillWithRectPad",
@@ -19,6 +30,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/circuit-json",
     "url": "https://github.com/tscircuit/circuit-json/pull/188",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#231",
+    "number": 231,
+    "title": "Add manual edit events for group",
+    "description": "Add manual edit events for group",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/231",
     "isAlignedWithMilestone": true
   },
   {
@@ -55,6 +77,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/3d-viewer#280",
+    "number": 280,
+    "title": "delete test file in source dir",
+    "description": "Deleting a test file in the source directory.",
+    "impact": "Tiny",
+    "contributor": "techmannih",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/280",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/3d-viewer#278",
     "number": 278,
     "title": "silkscreen text size to match pcb-viewer",
@@ -74,6 +107,17 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/3d-viewer",
     "url": "https://github.com/tscircuit/3d-viewer/pull/275",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#810",
+    "number": 810,
+    "title": "fix: handel smtpad layers correctly",
+    "description": "Fix the handling of the layers for SMT pads to ensure they are correctly flipped when necessary.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/810",
     "isAlignedWithMilestone": true
   },
   {
@@ -132,6 +176,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#217",
+    "number": 217,
+    "title": "feat: silkscreen anchor alignment",
+    "description": "Adds the ability to control the alignment of silkscreen text labels on a PCB.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/217",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/checks#46",
     "number": 46,
     "title": "feat: Add DRC check for vias out of board",
@@ -140,6 +195,17 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/checks",
     "url": "https://github.com/tscircuit/checks/pull/46",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#279",
+    "number": 279,
+    "title": "fixes resistor schRotation",
+    "description": "Fixes the rotation of the resistor symbol.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/279",
     "isAlignedWithMilestone": true
   },
   {
@@ -184,6 +250,17 @@
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-symbols",
     "url": "https://github.com/tscircuit/schematic-symbols/pull/272",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/template-api-fake#11",
+    "number": 11,
+    "title": "Add example admin page at /_fake/admin that shows thing resources",
+    "description": "Adds an example admin page at /_fake/admin that shows thing resources.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/template-api-fake",
+    "url": "https://github.com/tscircuit/template-api-fake/pull/11",
     "isAlignedWithMilestone": false
   },
   {
@@ -338,6 +415,17 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/325",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json-to-spice#3",
+    "number": 3,
+    "title": "add some important workflow",
+    "description": "Add some important workflows for the project, including format check, publishing to npm, and running tests.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/circuit-json-to-spice",
+    "url": "https://github.com/tscircuit/circuit-json-to-spice/pull/3",
     "isAlignedWithMilestone": true
   },
   {
