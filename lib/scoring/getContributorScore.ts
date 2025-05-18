@@ -67,5 +67,16 @@ export function getContributorScore(
   // Cap review points at 20
   result.score += Math.min(distinctPrsReviewed, 10)
 
+  // Add score for discussion participation
+  const discussionParticipating = contributorStats.discussionParticipating || 0
+  const discussionVeryActive = contributorStats.discussionVeryActive || 0
+  const discussionExtremelyActive =
+    contributorStats.discussionExtremelyActive || 0
+
+  // Add points based on discussion contribution levels
+  result.score += discussionParticipating * 1 // 1 point each
+  result.score += discussionVeryActive * 2 // 2 points each
+  result.score += discussionExtremelyActive * 4 // 4 points each
+
   return result
 }
