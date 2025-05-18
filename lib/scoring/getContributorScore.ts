@@ -68,15 +68,17 @@ export function getContributorScore(
   result.score += Math.min(distinctPrsReviewed, 10)
 
   // Add score for discussion participation
-  const discussionParticipating = contributorStats.discussionParticipating || 0
-  const discussionVeryActive = contributorStats.discussionVeryActive || 0
-  const discussionExtremelyActive =
+  const participatingDiscussionCommentCount =
+    contributorStats.discussionParticipating || 0
+  const veryActiveDiscussionCommentCount =
+    contributorStats.discussionVeryActive || 0
+  const extremelyActiveDiscussionCommentCount =
     contributorStats.discussionExtremelyActive || 0
 
   // Add points based on discussion contribution levels
-  result.score += discussionParticipating * 1 // 1 point each
-  result.score += discussionVeryActive * 2 // 2 points each
-  result.score += discussionExtremelyActive * 4 // 4 points each
+  result.score += participatingDiscussionCommentCount * 1 // 1 point each
+  result.score += veryActiveDiscussionCommentCount * 2 // 2 points each
+  result.score += extremelyActiveDiscussionCommentCount * 4 // 4 points each
 
   return result
 }
