@@ -23,23 +23,25 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
+    "tscircuit/pcb-viewer" : 1
+    "tscircuit/circuit-json" : 4
+    "tscircuit/props" : 5
+    "tscircuit/3d-viewer" : 6
+    "tscircuit/circuit-to-svg" : 2
+    "tscircuit/checks" : 1
+    "tscircuit/circuit-json-to-gerber" : 1
+    "tscircuit/core" : 7
+    "tscircuit/eval" : 2
     "tscircuit/docs" : 2
     "tscircuit/chat.tscircuit.com" : 3
-    "tscircuit/circuit-json" : 3
-    "tscircuit/props" : 3
-    "tscircuit/core" : 4
-    "tscircuit/tscircuit.com" : 10
+    "tscircuit/tscircuit.com" : 11
     "tscircuit/runframe" : 2
     "tscircuit/cli" : 2
-    "tscircuit/footprinter" : 1
-    "tscircuit/schematic-symbols" : 5
+    "tscircuit/footprinter" : 2
+    "tscircuit/schematic-symbols" : 7
     "tscircuit/circuit-json-to-spice" : 2
-    "tscircuit/3d-viewer" : 3
     "tscircuit/graphics-debug" : 2
-    "tscircuit/eval" : 2
     "tscircuit/tscircuit-autorouter" : 3
-    "tscircuit/checks" : 1
-    "tscircuit/circuit-to-svg" : 1
     "tscircuit/contribution-tracker" : 2
     "tscircuit/template-api-fake" : 1
 ```
@@ -48,13 +50,14 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 0 | 9 | 6 | ⭐⭐⭐ | 11 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 8 | 4 | 0 | ⭐⭐⭐ | 15 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 0 | 9 | 6 | ⭐⭐⭐ | 19 | 0🔹 0🔶 0💎 |
 | [imrishabh18](#imrishabh18) | 2 | 8 | 2 | ⭐⭐⭐ | 4 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 3 | 4 | 0 | ⭐⭐ | 4 | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 0 | 6 | 1 | ⭐⭐ | 8 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 3 | 0 | ⭐⭐ | 14 | 0🔹 0🔶 0💎 |
-| [Anshgrover23](#Anshgrover23) | 0 | 2 | 0 | ⭐ | 2 | 1🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 0 | 4 | 0 | ⭐ | 2 | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 1 | 10 | 1 | ⭐⭐ | 8 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 3 | 4 | 0 | ⭐⭐ | 5 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 0 | 7 | 0 | ⭐⭐ | 3 | 0🔹 0🔶 0💎 |
+| [Anshgrover23](#Anshgrover23) | 0 | 2 | 0 | ⭐ | 3 | 1🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 |  | 8 | 0🔹 0🔶 0💎 |
 | [ianzone](#ianzone) | 0 | 0 | 0 | ⭐ | 0 | 2🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
@@ -75,19 +78,93 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 19 | 12 | 0 | 0 | 0 | 13 | 12 | 15 | 0 | 0 |
+| [seveibar](#seveibar) | 2 | 0 | 0 | 46 | 0 | 18 | 15 | 19 | 3 | 120 |
 | [imrishabh18](#imrishabh18) | 14 | 7 | 0 | 5 | 0 | 12 | 12 | 4 | 2 | 10 |
-| [seveibar](#seveibar) | 2 | 0 | 0 | 30 | 0 | 17 | 15 | 11 | 3 | 120 |
-| [techmannih](#techmannih) | 26 | 10 | 3 | 1 | 0 | 14 | 7 | 8 | 1 | 10 |
-| [Abse2001](#Abse2001) | 8 | 5 | 0 | 0 | 0 | 6 | 4 | 2 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 8 | 5 | 0 | 0 | 0 | 7 | 5 | 14 | 0 | 0 |
+| [techmannih](#techmannih) | 33 | 15 | 5 | 2 | 0 | 17 | 12 | 8 | 1 | 10 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 27 | 10 | 1 | 0 | 0 | 11 | 8 | 4 | 0 | 0 |
-| [Anshgrover23](#Anshgrover23) | 3 | 2 | 0 | 3 | 3 | 2 | 2 | 2 | 0 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 7 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 | 0 | 0 |
+| [Anshgrover23](#Anshgrover23) | 3 | 2 | 0 | 4 | 5 | 3 | 2 | 3 | 0 | 0 |
+| [Abse2001](#Abse2001) | 12 | 8 | 0 | 0 | 0 | 11 | 7 | 3 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 4 | 3 | 0 | 0 | 1 | 2 | 1 | 8 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 27 | 10 | 1 | 0 | 0 | 11 | 8 | 5 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 14 | 0 | 0 | 0 | 0 |
 | [ianzone](#ianzone) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Changes by Repository
+
+### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#284](https://github.com/tscircuit/pcb-viewer/pull/284) | 🐳 Major | ShiboSoftwareDev | Adds support for PCB cutouts, including rectangular, circular, and polygon-shaped cutouts. | ✅ |
+
+### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#191](https://github.com/tscircuit/circuit-json/pull/191) | 🐳 Major | ShiboSoftwareDev | The pull request introduces a new `pcb_cutout` element for defining rectangular, circular, and polygonal cutouts on a PCB. | ✅ |
+| [#190](https://github.com/tscircuit/circuit-json/pull/190) | 🐙 Minor | imrishabh18 | Adds a new `schematic_group` type to the codebase. | ✅ |
+| [#189](https://github.com/tscircuit/circuit-json/pull/189) | 🐙 Minor | techmannih | Adds a new type `PcbHolePillWithRectPad` for a PCB plated hole with a rectangular pad. | ✅ |
+| [#188](https://github.com/tscircuit/circuit-json/pull/188) | 🐌 Tiny | seveibar | Add links to source in README generation | ✅ |
+
+### [tscircuit/props](https://github.com/tscircuit/props)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#234](https://github.com/tscircuit/props/pull/234) | 🐳 Major | ShiboSoftwareDev | Introduces a new `<cutout />` component with three types of cutouts: rectangular, circular, and polygonal. | ✅ |
+| [#231](https://github.com/tscircuit/props/pull/231) | 🐙 Minor | imrishabh18 | Add manual edit events for group | ✅ |
+| [#233](https://github.com/tscircuit/props/pull/233) | 🐙 Minor | techmannih | Convert `shape` enum to snake_case in `platedhole.ts` | ✅ |
+| [#228](https://github.com/tscircuit/props/pull/228) | 🐙 Minor | seveibar | Add support for `pinCompatibleVariants` for `chip` | ✅ |
+| [#227](https://github.com/tscircuit/props/pull/227) | 🐌 Tiny | seveibar | This pull request updates the documentation generation workflow, which includes adding links to the props definitions in the README. | ❌ |
+
+### [tscircuit/3d-viewer](https://github.com/tscircuit/3d-viewer)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#288](https://github.com/tscircuit/3d-viewer/pull/288) | 🐳 Major | ShiboSoftwareDev | Adds support for PCB cutouts, including rectangular, circular, and polygon-shaped cutouts. | ✅ |
+| [#275](https://github.com/tscircuit/3d-viewer/pull/275) | 🐳 Major | ShiboSoftwareDev | The pull request adds handling for silkscreen paths in the BoardGeomBuilder. | ✅ |
+| [#278](https://github.com/tscircuit/3d-viewer/pull/278) | 🐙 Minor | ShiboSoftwareDev | Adjust the silkscreen text size to match the size used in the pcb-viewer. | ✅ |
+| [#287](https://github.com/tscircuit/3d-viewer/pull/287) | 🐙 Minor | Abse2001 | Fixes a bug where SMT pads were not showing when the component was rotated. | ✅ |
+| [#286](https://github.com/tscircuit/3d-viewer/pull/286) | 🐙 Minor | Abse2001 | The pull request fixes the rotation of components in the `RotationOffsets.stories.tsx` file, adds a new story for `CadComponentBottomRotation.stories.tsx`, and updates the dependencies. | ✅ |
+| [#280](https://github.com/tscircuit/3d-viewer/pull/280) | 🐌 Tiny | techmannih | Deleting a test file in the source directory. | ✅ |
+
+### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#218](https://github.com/tscircuit/circuit-to-svg/pull/218) | 🐳 Major | ShiboSoftwareDev | Adds support for handling PCB cutouts in the circuit-to-svg conversion process. | ✅ |
+| [#217](https://github.com/tscircuit/circuit-to-svg/pull/217) | 🐙 Minor | ShiboSoftwareDev | Adds the ability to control the alignment of silkscreen text labels on a PCB. | ✅ |
+
+### [tscircuit/checks](https://github.com/tscircuit/checks)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#46](https://github.com/tscircuit/checks/pull/46) | 🐳 Major | ShiboSoftwareDev | Adds a DRC (Design Rule Check) to detect vias that are out of the board boundary. | ✅ |
+
+### [tscircuit/circuit-json-to-gerber](https://github.com/tscircuit/circuit-json-to-gerber)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#40](https://github.com/tscircuit/circuit-json-to-gerber/pull/40) | 🐳 Major | ShiboSoftwareDev | Adds support for PCB cutouts in the Gerber conversion process. | ✅ |
+
+### [tscircuit/core](https://github.com/tscircuit/core)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#808](https://github.com/tscircuit/core/pull/808) | 🐳 Major | techmannih | Adds support for circular holes with rectangular pads in the PlatedHole component. | ✅ |
+| [#811](https://github.com/tscircuit/core/pull/811) | 🐙 Minor | ShiboSoftwareDev | The GND symbol is moved slightly down for left/right facing pins. | ✅ |
+| [#799](https://github.com/tscircuit/core/pull/799) | 🐙 Minor | imrishabh18 | Add support for parent group's transformation | ✅ |
+| [#804](https://github.com/tscircuit/core/pull/804) | 🐙 Minor | seveibar | Update the Autorouter to version 0.0.66 | ✅ |
+| [#812](https://github.com/tscircuit/core/pull/812) | 🐙 Minor | Abse2001 | Fixed the bottom layer rotation of the CAD component. | ✅ |
+| [#810](https://github.com/tscircuit/core/pull/810) | 🐙 Minor | Abse2001 | Fix the handling of the layers for SMT pads to ensure they are correctly flipped when necessary. | ✅ |
+| [#803](https://github.com/tscircuit/core/pull/803) | 🐌 Tiny | seveibar | Update the timeout for the Bun test command in the GitHub Actions workflow. | ✅ |
+
+### [tscircuit/eval](https://github.com/tscircuit/eval)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#325](https://github.com/tscircuit/eval/pull/325) | 🐙 Minor | ShiboSoftwareDev | Update the version of the @tscircuit/core dependency from 0.0.404 to 0.0.406. | ✅ |
+| [#332](https://github.com/tscircuit/eval/pull/332) | 🐙 Minor | seveibar | Update capacity autorouter and core dependencies | ✅ |
 
 ### [tscircuit/docs](https://github.com/tscircuit/docs)
 
@@ -104,31 +181,6 @@ pie
 | [#21](https://github.com/tscircuit/chat.tscircuit.com/pull/21) | 🐙 Minor | imrishabh18 | Fix a callback hook in the authentication flow. | ❌ |
 | [#22](https://github.com/tscircuit/chat.tscircuit.com/pull/22) | 🐌 Tiny | imrishabh18 | The pull request adds a new file `authentication-flow.md` that contains a Mermaid sequence diagram describing the authentication flow for the application. | ✅ |
 
-### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#190](https://github.com/tscircuit/circuit-json/pull/190) | 🐙 Minor | imrishabh18 | Adds a new `schematic_group` type to the codebase. | ✅ |
-| [#189](https://github.com/tscircuit/circuit-json/pull/189) | 🐙 Minor | techmannih | Adds a new type `PcbHolePillWithRectPad` for a PCB plated hole with a rectangular pad. | ✅ |
-| [#188](https://github.com/tscircuit/circuit-json/pull/188) | 🐌 Tiny | seveibar | Add links to source in README generation | ✅ |
-
-### [tscircuit/props](https://github.com/tscircuit/props)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#231](https://github.com/tscircuit/props/pull/231) | 🐙 Minor | imrishabh18 | Add manual edit events for group | ✅ |
-| [#228](https://github.com/tscircuit/props/pull/228) | 🐙 Minor | seveibar | Add support for `pinCompatibleVariants` for `chip` | ✅ |
-| [#227](https://github.com/tscircuit/props/pull/227) | 🐌 Tiny | seveibar | This pull request updates the documentation generation workflow, which includes adding links to the props definitions in the README. | ❌ |
-
-### [tscircuit/core](https://github.com/tscircuit/core)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#799](https://github.com/tscircuit/core/pull/799) | 🐙 Minor | imrishabh18 | Add support for parent group's transformation | ✅ |
-| [#804](https://github.com/tscircuit/core/pull/804) | 🐙 Minor | seveibar | Update the Autorouter to version 0.0.66 | ✅ |
-| [#810](https://github.com/tscircuit/core/pull/810) | 🐙 Minor | Abse2001 | Fix the handling of the layers for SMT pads to ensure they are correctly flipped when necessary. | ✅ |
-| [#803](https://github.com/tscircuit/core/pull/803) | 🐌 Tiny | seveibar | Update the timeout for the Bun test command in the GitHub Actions workflow. | ✅ |
-
 ### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
@@ -138,6 +190,7 @@ pie
 | [#1115](https://github.com/tscircuit/tscircuit.com/pull/1115) | 🐙 Minor | imrishabh18 | The pull request changes the validation logic for the `order_quotes/create` API endpoint, removing the ability to provide both `circuit_json` and `package_release_id`, and instead requiring only `package_release_id`. | ❌ |
 | [#1109](https://github.com/tscircuit/tscircuit.com/pull/1109) | 🐙 Minor | imrishabh18 | Fix the annoying dropdown visible on redirect | ✅ |
 | [#1107](https://github.com/tscircuit/tscircuit.com/pull/1107) | 🐙 Minor | imrishabh18 | Fix flickering issue of OrderDialog because of MobileSidebar and update `@tscircuit/runframe` dependency | ✅ |
+| [#1122](https://github.com/tscircuit/tscircuit.com/pull/1122) | 🐙 Minor | techmannih | Fix the display of question text in the accordion on small devices. | ✅ |
 | [#1079](https://github.com/tscircuit/tscircuit.com/pull/1079) | 🐙 Minor | techmannih | Fixes an issue where the user is shown an error message when trying to import a JLCPCB part that has already been imported. | ✅ |
 | [#1103](https://github.com/tscircuit/tscircuit.com/pull/1103) | 🐙 Minor | seveibar | Removes babel standalone, removes shiki extra deps, removes legacy code editor, and reduces bundle size from 42mb to 28mb. | ❌ |
 | [#1111](https://github.com/tscircuit/tscircuit.com/pull/1111) | 🐙 Minor | ArnavK-09 | Fix for model not downloading in the download-gltf functionality. | ❌ |
@@ -163,11 +216,14 @@ pie
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#266](https://github.com/tscircuit/footprinter/pull/266) | 🐙 Minor | techmannih | Add an electrolytic footprint to the project. | ✅ |
+| [#250](https://github.com/tscircuit/footprinter/pull/250) | 🐙 Minor | MustafaMulla29 | Implemented a new component footprint for SON (3x3) package. | ✅ |
 
 ### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#282](https://github.com/tscircuit/schematic-symbols/pull/282) | 🐙 Minor | techmannih | Adds support for a new ground symbol with left, right, down, and up variations. | ✅ |
+| [#281](https://github.com/tscircuit/schematic-symbols/pull/281) | 🐙 Minor | techmannih | Fix ground symbol | ✅ |
 | [#274](https://github.com/tscircuit/schematic-symbols/pull/274) | 🐙 Minor | techmannih | Fix all variations for the LED symbol | ✅ |
 | [#277](https://github.com/tscircuit/schematic-symbols/pull/277) | 🐙 Minor | techmannih | Adds support for the ferrite bead symbol | ❌ |
 | [#279](https://github.com/tscircuit/schematic-symbols/pull/279) | 🐙 Minor | Abse2001 | Fixes the rotation of the resistor symbol. | ✅ |
@@ -181,27 +237,12 @@ pie
 | [#3](https://github.com/tscircuit/circuit-json-to-spice/pull/3) | 🐙 Minor | techmannih | Add some important workflows for the project, including format check, publishing to npm, and running tests. | ✅ |
 | [#2](https://github.com/tscircuit/circuit-json-to-spice/pull/2) | 🐙 Minor | Anshgrover23 | Add format and type check workflows for the project. | ✅ |
 
-### [tscircuit/3d-viewer](https://github.com/tscircuit/3d-viewer)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#275](https://github.com/tscircuit/3d-viewer/pull/275) | 🐳 Major | ShiboSoftwareDev | The pull request adds handling for silkscreen paths in the BoardGeomBuilder. | ✅ |
-| [#278](https://github.com/tscircuit/3d-viewer/pull/278) | 🐙 Minor | ShiboSoftwareDev | Adjust the silkscreen text size to match the size used in the pcb-viewer. | ✅ |
-| [#280](https://github.com/tscircuit/3d-viewer/pull/280) | 🐌 Tiny | techmannih | Deleting a test file in the source directory. | ✅ |
-
 ### [tscircuit/graphics-debug](https://github.com/tscircuit/graphics-debug)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#56](https://github.com/tscircuit/graphics-debug/pull/56) | 🐙 Minor | seveibar | Add SVG Label Rendering Filtering + Rects and fixture | ❌ |
 | [#55](https://github.com/tscircuit/graphics-debug/pull/55) | 🐙 Minor | seveibar | Adds a new `backgroundColor` option to the `toMatchGraphicsSvg` matcher. | ❌ |
-
-### [tscircuit/eval](https://github.com/tscircuit/eval)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#332](https://github.com/tscircuit/eval/pull/332) | 🐙 Minor | seveibar | Update capacity autorouter and core dependencies | ✅ |
-| [#325](https://github.com/tscircuit/eval/pull/325) | 🐙 Minor | ShiboSoftwareDev | Update the version of the @tscircuit/core dependency from 0.0.404 to 0.0.406. | ✅ |
 
 ### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
 
@@ -210,18 +251,6 @@ pie
 | [#127](https://github.com/tscircuit/tscircuit-autorouter/pull/127) | 🐙 Minor | seveibar | Fixes a bug report and improves the force calculation for endpoint using the nearest point on the segment. | ✅ |
 | [#125](https://github.com/tscircuit/tscircuit-autorouter/pull/125) | 🐙 Minor | seveibar | The pull request adds a bug report feature and a script to download bug reports. | ✅ |
 | [#123](https://github.com/tscircuit/tscircuit-autorouter/pull/123) | 🐙 Minor | seveibar | Fix a bug related to stitching in the JSON file. | ✅ |
-
-### [tscircuit/checks](https://github.com/tscircuit/checks)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#46](https://github.com/tscircuit/checks/pull/46) | 🐳 Major | ShiboSoftwareDev | Adds a DRC (Design Rule Check) to detect vias that are out of the board boundary. | ✅ |
-
-### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#217](https://github.com/tscircuit/circuit-to-svg/pull/217) | 🐙 Minor | ShiboSoftwareDev | Adds the ability to control the alignment of silkscreen text labels on a PCB. | ✅ |
 
 ### [tscircuit/contribution-tracker](https://github.com/tscircuit/contribution-tracker)
 
@@ -237,6 +266,23 @@ pie
 | [#11](https://github.com/tscircuit/template-api-fake/pull/11) | 🐙 Minor | Anshgrover23 | Adds an example admin page at /_fake/admin that shows thing resources. | ❌ |
 
 ## Changes by Contributor
+
+### [ShiboSoftwareDev](https://github.com/ShiboSoftwareDev)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#284](https://github.com/tscircuit/pcb-viewer/pull/284) | 🐳 Major | Adds support for PCB cutouts, including rectangular, circular, and polygon-shaped cutouts. | ✅ |
+| [#191](https://github.com/tscircuit/circuit-json/pull/191) | 🐳 Major | The pull request introduces a new `pcb_cutout` element for defining rectangular, circular, and polygonal cutouts on a PCB. | ✅ |
+| [#234](https://github.com/tscircuit/props/pull/234) | 🐳 Major | Introduces a new `<cutout />` component with three types of cutouts: rectangular, circular, and polygonal. | ✅ |
+| [#288](https://github.com/tscircuit/3d-viewer/pull/288) | 🐳 Major | Adds support for PCB cutouts, including rectangular, circular, and polygon-shaped cutouts. | ✅ |
+| [#275](https://github.com/tscircuit/3d-viewer/pull/275) | 🐳 Major | The pull request adds handling for silkscreen paths in the BoardGeomBuilder. | ✅ |
+| [#218](https://github.com/tscircuit/circuit-to-svg/pull/218) | 🐳 Major | Adds support for handling PCB cutouts in the circuit-to-svg conversion process. | ✅ |
+| [#46](https://github.com/tscircuit/checks/pull/46) | 🐳 Major | Adds a DRC (Design Rule Check) to detect vias that are out of the board boundary. | ✅ |
+| [#40](https://github.com/tscircuit/circuit-json-to-gerber/pull/40) | 🐳 Major | Adds support for PCB cutouts in the Gerber conversion process. | ✅ |
+| [#278](https://github.com/tscircuit/3d-viewer/pull/278) | 🐙 Minor | Adjust the silkscreen text size to match the size used in the pcb-viewer. | ✅ |
+| [#811](https://github.com/tscircuit/core/pull/811) | 🐙 Minor | The GND symbol is moved slightly down for left/right facing pins. | ✅ |
+| [#217](https://github.com/tscircuit/circuit-to-svg/pull/217) | 🐙 Minor | Adds the ability to control the alignment of silkscreen text labels on a PCB. | ✅ |
+| [#325](https://github.com/tscircuit/eval/pull/325) | 🐙 Minor | Update the version of the @tscircuit/core dependency from 0.0.404 to 0.0.406. | ✅ |
 
 ### [imrishabh18](https://github.com/imrishabh18)
 
@@ -259,10 +305,15 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#808](https://github.com/tscircuit/core/pull/808) | 🐳 Major | Adds support for circular holes with rectangular pads in the PlatedHole component. | ✅ |
 | [#189](https://github.com/tscircuit/circuit-json/pull/189) | 🐙 Minor | Adds a new type `PcbHolePillWithRectPad` for a PCB plated hole with a rectangular pad. | ✅ |
+| [#233](https://github.com/tscircuit/props/pull/233) | 🐙 Minor | Convert `shape` enum to snake_case in `platedhole.ts` | ✅ |
 | [#266](https://github.com/tscircuit/footprinter/pull/266) | 🐙 Minor | Add an electrolytic footprint to the project. | ✅ |
+| [#282](https://github.com/tscircuit/schematic-symbols/pull/282) | 🐙 Minor | Adds support for a new ground symbol with left, right, down, and up variations. | ✅ |
+| [#281](https://github.com/tscircuit/schematic-symbols/pull/281) | 🐙 Minor | Fix ground symbol | ✅ |
 | [#274](https://github.com/tscircuit/schematic-symbols/pull/274) | 🐙 Minor | Fix all variations for the LED symbol | ✅ |
 | [#277](https://github.com/tscircuit/schematic-symbols/pull/277) | 🐙 Minor | Adds support for the ferrite bead symbol | ❌ |
+| [#1122](https://github.com/tscircuit/tscircuit.com/pull/1122) | 🐙 Minor | Fix the display of question text in the accordion on small devices. | ✅ |
 | [#1079](https://github.com/tscircuit/tscircuit.com/pull/1079) | 🐙 Minor | Fixes an issue where the user is shown an error message when trying to import a JLCPCB part that has already been imported. | ✅ |
 | [#3](https://github.com/tscircuit/circuit-json-to-spice/pull/3) | 🐙 Minor | Add some important workflows for the project, including format check, publishing to npm, and running tests. | ✅ |
 | [#280](https://github.com/tscircuit/3d-viewer/pull/280) | 🐌 Tiny | Deleting a test file in the source directory. | ✅ |
@@ -287,20 +338,19 @@ pie
 | [#1105](https://github.com/tscircuit/tscircuit.com/pull/1105) | 🐌 Tiny | Update the version of the `@tscircuit/runframe` dependency from `0.0.449` to `0.0.451`. | ✅ |
 | [#53](https://github.com/tscircuit/docs/pull/53) | 🐌 Tiny | This pull request adds documentation on how to report autorouter bugs in the tscircuit interface and how to simulate the bug using the autorouting debugger. | ✅ |
 
-### [ShiboSoftwareDev](https://github.com/ShiboSoftwareDev)
+### [MustafaMulla29](https://github.com/MustafaMulla29)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
-| [#275](https://github.com/tscircuit/3d-viewer/pull/275) | 🐳 Major | The pull request adds handling for silkscreen paths in the BoardGeomBuilder. | ✅ |
-| [#46](https://github.com/tscircuit/checks/pull/46) | 🐳 Major | Adds a DRC (Design Rule Check) to detect vias that are out of the board boundary. | ✅ |
-| [#278](https://github.com/tscircuit/3d-viewer/pull/278) | 🐙 Minor | Adjust the silkscreen text size to match the size used in the pcb-viewer. | ✅ |
-| [#217](https://github.com/tscircuit/circuit-to-svg/pull/217) | 🐙 Minor | Adds the ability to control the alignment of silkscreen text labels on a PCB. | ✅ |
-| [#325](https://github.com/tscircuit/eval/pull/325) | 🐙 Minor | Update the version of the @tscircuit/core dependency from 0.0.404 to 0.0.406. | ✅ |
+| [#250](https://github.com/tscircuit/footprinter/pull/250) | 🐙 Minor | Implemented a new component footprint for SON (3x3) package. | ✅ |
 
 ### [Abse2001](https://github.com/Abse2001)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
+| [#287](https://github.com/tscircuit/3d-viewer/pull/287) | 🐙 Minor | Fixes a bug where SMT pads were not showing when the component was rotated. | ✅ |
+| [#286](https://github.com/tscircuit/3d-viewer/pull/286) | 🐙 Minor | The pull request fixes the rotation of components in the `RotationOffsets.stories.tsx` file, adds a new story for `CadComponentBottomRotation.stories.tsx`, and updates the dependencies. | ✅ |
+| [#812](https://github.com/tscircuit/core/pull/812) | 🐙 Minor | Fixed the bottom layer rotation of the CAD component. | ✅ |
 | [#810](https://github.com/tscircuit/core/pull/810) | 🐙 Minor | Fix the handling of the layers for SMT pads to ensure they are correctly flipped when necessary. | ✅ |
 | [#279](https://github.com/tscircuit/schematic-symbols/pull/279) | 🐙 Minor | Fixes the rotation of the resistor symbol. | ✅ |
 | [#276](https://github.com/tscircuit/schematic-symbols/pull/276) | 🐙 Minor | Adds a new schematic symbol for a small box resistor. | ✅ |

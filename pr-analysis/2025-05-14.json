@@ -1,5 +1,27 @@
 [
   {
+    "tag": "tscircuit/pcb-viewer#284",
+    "number": 284,
+    "title": "feat: pcb_cutout",
+    "description": "Adds support for PCB cutouts, including rectangular, circular, and polygon-shaped cutouts.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/284",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#191",
+    "number": 191,
+    "title": "feat: pcb_cutout element",
+    "description": "The pull request introduces a new `pcb_cutout` element for defining rectangular, circular, and polygonal cutouts on a PCB.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/191",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#190",
     "number": 190,
     "title": "add `schematic_group`",
@@ -30,6 +52,28 @@
     "contributor": "seveibar",
     "repo": "tscircuit/circuit-json",
     "url": "https://github.com/tscircuit/circuit-json/pull/188",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#234",
+    "number": 234,
+    "title": "feat: cutout component props",
+    "description": "Introduces a new `<cutout />` component with three types of cutouts: rectangular, circular, and polygonal.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/234",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#233",
+    "number": 233,
+    "title": "fix: convert shape enum to snake_case in plated hole props",
+    "description": "Convert `shape` enum to snake_case in `platedhole.ts`",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/233",
     "isAlignedWithMilestone": true
   },
   {
@@ -66,6 +110,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/footprinter#250",
+    "number": 250,
+    "title": "Implemented SON (3x3)",
+    "description": "Implemented a new component footprint for SON (3x3) package.",
+    "impact": "Minor",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/250",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/footprinter#266",
     "number": 266,
     "title": "add electolytic footprint",
@@ -74,6 +129,39 @@
     "contributor": "techmannih",
     "repo": "tscircuit/footprinter",
     "url": "https://github.com/tscircuit/footprinter/pull/266",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/3d-viewer#288",
+    "number": 288,
+    "title": "feat: pcb_cutout",
+    "description": "Adds support for PCB cutouts, including rectangular, circular, and polygon-shaped cutouts.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/288",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/3d-viewer#287",
+    "number": 287,
+    "title": "fix: smtPad not showing when component is rotated",
+    "description": "Fixes a bug where SMT pads were not showing when the component was rotated.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/287",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/3d-viewer#286",
+    "number": 286,
+    "title": "fix the rotation , test & updated dep",
+    "description": "The pull request fixes the rotation of components in the `RotationOffsets.stories.tsx` file, adds a new story for `CadComponentBottomRotation.stories.tsx`, and updates the dependencies.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/286",
     "isAlignedWithMilestone": true
   },
   {
@@ -107,6 +195,39 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/3d-viewer",
     "url": "https://github.com/tscircuit/3d-viewer/pull/275",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#812",
+    "number": 812,
+    "title": "fixed the cad_component bottom layer rotation",
+    "description": "Fixed the bottom layer rotation of the CAD component.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/812",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#811",
+    "number": 811,
+    "title": "GND symbol goes down slightly on right/left facing pins",
+    "description": "The GND symbol is moved slightly down for left/right facing pins.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/811",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#808",
+    "number": 808,
+    "title": "add support circular hole with rect pad platedhole",
+    "description": "Adds support for circular holes with rectangular pads in the PlatedHole component.",
+    "impact": "Major",
+    "contributor": "techmannih",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/808",
     "isAlignedWithMilestone": true
   },
   {
@@ -176,6 +297,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#218",
+    "number": 218,
+    "title": "feat: pcb_cutout",
+    "description": "Adds support for handling PCB cutouts in the circuit-to-svg conversion process.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/218",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-to-svg#217",
     "number": 217,
     "title": "feat: silkscreen anchor alignment",
@@ -195,6 +327,28 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/checks",
     "url": "https://github.com/tscircuit/checks/pull/46",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#282",
+    "number": 282,
+    "title": "add support ground_alt symbol with left, right, down and up variations",
+    "description": "Adds support for a new ground symbol with left, right, down, and up variations.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/282",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#281",
+    "number": 281,
+    "title": "fix ground symbol",
+    "description": "Fix ground symbol",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/281",
     "isAlignedWithMilestone": true
   },
   {
@@ -253,6 +407,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/circuit-json-to-gerber#40",
+    "number": 40,
+    "title": "feat: pcb_cutout",
+    "description": "Adds support for PCB cutouts in the Gerber conversion process.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-json-to-gerber",
+    "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/40",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/template-api-fake#11",
     "number": 11,
     "title": "Add example admin page at /_fake/admin that shows thing resources",
@@ -262,6 +427,17 @@
     "repo": "tscircuit/template-api-fake",
     "url": "https://github.com/tscircuit/template-api-fake/pull/11",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1122",
+    "number": 1122,
+    "title": "fix(refactor): question text in accordion on small devices",
+    "description": "Fix the display of question text in the accordion on small devices.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1122",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/tscircuit.com#1115",
