@@ -125,7 +125,7 @@
     "number": 266,
     "title": "add electolytic footprint",
     "description": "Add an electrolytic footprint to the project.",
-    "impact": "Minor",
+    "impact": "Major",
     "contributor": "techmannih",
     "repo": "tscircuit/footprinter",
     "url": "https://github.com/tscircuit/footprinter/pull/266",
@@ -195,6 +195,28 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/3d-viewer",
     "url": "https://github.com/tscircuit/3d-viewer/pull/275",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#817",
+    "number": 817,
+    "title": "Update DEVELOPMENT.md with \"How to do benchmarking\" video",
+    "description": "Adds a section in the DEVELOPMENT.md file with instructions on how to do benchmarking and debug performance.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/817",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#816",
+    "number": 816,
+    "title": "feat: Cutout component",
+    "description": "Introduces a new Cutout component, which can be used to create cutouts in the PCB design.",
+    "impact": "Major",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/816",
     "isAlignedWithMilestone": true
   },
   {
@@ -275,6 +297,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/contribution-tracker#141",
+    "number": 141,
+    "title": "Sort contributor data alphabetically before writing to JSON file in contribution overviews",
+    "description": "Sort contributor data alphabetically before writing to JSON file in contribution overviews",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/141",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/contribution-tracker#142",
+    "number": 142,
+    "title": "Support PR scoring to include major tag from labels",
+    "description": "Adds support for detecting \"major\" label in addition to \"/major\" comment to determine if a pull request has a major impact.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/142",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/contribution-tracker#145",
+    "number": 145,
+    "title": "feat(modal): add support for closing modal with Escape key",
+    "description": "Add support for closing modal with Escape key",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/145",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/contribution-tracker#131",
     "number": 131,
     "title": "Refactor issue creation metrics to include major issues and calculate contributor scores",
@@ -294,6 +349,17 @@
     "contributor": "ArnavK-09",
     "repo": "tscircuit/contribution-tracker",
     "url": "https://github.com/tscircuit/contribution-tracker/pull/130",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#219",
+    "number": 219,
+    "title": "implemented schematic text font size & migrated to bun.lock",
+    "description": "Implemented schematic text font size and migrated to bun.lock.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/219",
     "isAlignedWithMilestone": true
   },
   {
@@ -429,6 +495,39 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/tscircuit.com#1127",
+    "number": 1127,
+    "title": "refactor: redirect mobile users to /search page",
+    "description": "Refactor the mobile header to redirect users to the /search page instead of opening the search modal.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1127",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1114",
+    "number": 1114,
+    "title": "fix: jlcpcb part on already imported",
+    "description": "Fix issue with displaying message when a JLCPCB part has already been imported.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1114",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1133",
+    "number": 1133,
+    "title": "update runframe with render fix, mutation update and cleanup old dialog",
+    "description": "Update runframe with render fix, mutation update and cleanup old dialog",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1133",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#1122",
     "number": 1122,
     "title": "fix(refactor): question text in accordion on small devices",
@@ -550,6 +649,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/jlcsearch#43",
+    "number": 43,
+    "title": "Add potentiometer",
+    "description": "Adds a new derived table for potentiometers, including functionality to list all available potentiometers with various filtering options.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/jlcsearch",
+    "url": "https://github.com/tscircuit/jlcsearch/pull/43",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/graphics-debug#56",
     "number": 56,
     "title": "Add SVG Label Rendering Filtering + Rects and fixture",
@@ -616,6 +726,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/runframe#628",
+    "number": 628,
+    "title": "refactor to fix the mutation and update the fixture to use fake",
+    "description": "",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/628",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/runframe#627",
+    "number": 627,
+    "title": "Memoize order dialog",
+    "description": "Memoize the `OrderDialog` component to improve performance.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/627",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/runframe#581",
     "number": 581,
     "title": "feat(CircuitJsonPreview): add cadViewerRef and update CadViewer integration",
@@ -642,7 +774,7 @@
     "number": 199,
     "title": "Update CLI commands and descriptions to reflect package terminology",
     "description": "Updates CLI commands and descriptions to reflect package terminology instead of snippet.",
-    "impact": "Minor",
+    "impact": "Major",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/199",
@@ -746,5 +878,27 @@
     "repo": "tscircuit/chat.tscircuit.com",
     "url": "https://github.com/tscircuit/chat.tscircuit.com/pull/20",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/parts-engine#3",
+    "number": 3,
+    "title": "Add the missing components",
+    "description": "Adds support for various electronic components (potentiometers, diodes, chips, transistors, power sources, inductors, crystals, MOSFETs, resonators, switches) in the JLC parts engine.",
+    "impact": "Major",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/parts-engine",
+    "url": "https://github.com/tscircuit/parts-engine/pull/3",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/mash-layout#3",
+    "number": 3,
+    "title": "Large Refactor of Core Builder Code",
+    "description": "This pull request introduces a large refactor of the core builder code, including the addition of new methods for managing pin positioning and layout.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/mash-layout",
+    "url": "https://github.com/tscircuit/mash-layout/pull/3",
+    "isAlignedWithMilestone": true
   }
 ]
