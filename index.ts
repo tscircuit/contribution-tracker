@@ -264,7 +264,7 @@ async function generateAndWriteFiles(
   )
 
   // Sort contributor data alphabetically by contributor name
-  const sortedContributorData = Object.keys(contributorData)
+  const alphabeticalContributorData = Object.keys(contributorData)
     .sort()
     .reduce(
       (acc, key) => {
@@ -279,7 +279,7 @@ async function generateAndWriteFiles(
   console.log(`Generated contribution-overviews/${startDateString}.md`)
   fs.writeFileSync(
     `contribution-overviews/${startDateString}.json`,
-    JSON.stringify(sortedContributorData, null, 2),
+    JSON.stringify(alphabeticalContributorData, null, 2),
   )
   console.log(`Generated contribution-overviews/${startDateString}.json`)
 
