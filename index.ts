@@ -257,17 +257,29 @@ async function generateAndWriteFiles(
 
   // Flatten the sorted PRs back into a single array
   const sortedPRs = Object.values(contributorPRs).flat()
-
   const markdown = await generateMarkdown(
     sortedPRs,
     contributorData,
     startDateString,
   )
+
+  // Sort contributor data alphabetically by contributor name
+  const alphabeticalContributorData = Object.keys(contributorData)
+    .sort()
+    .reduce(
+      (acc, key) => {
+        acc[key] = contributorData[key]
+        return acc
+      },
+      {} as Record<string, ContributorStats>,
+    )
+
   fs.writeFileSync(`contribution-overviews/${startDateString}.md`, markdown)
+
   console.log(`Generated contribution-overviews/${startDateString}.md`)
   fs.writeFileSync(
     `contribution-overviews/${startDateString}.json`,
-    JSON.stringify(contributorData, null, 2),
+    JSON.stringify(alphabeticalContributorData, null, 2),
   )
   console.log(`Generated contribution-overviews/${startDateString}.json`)
 
