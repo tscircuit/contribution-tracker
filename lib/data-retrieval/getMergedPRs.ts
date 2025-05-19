@@ -51,10 +51,11 @@ export async function getMergedPRs(
           comment.body &&
           comment.body.includes("/major"),
       )
+      const hasMajorTag = pr.labels.some((label) => label.name === "major")
       return {
         ...pr,
         diff: diffData as unknown as string,
-        hasMajorTag: hasMajorTagFromMaintainer,
+        hasMajorTag: hasMajorTagFromMaintainer || hasMajorTag,
       }
     }),
   )
