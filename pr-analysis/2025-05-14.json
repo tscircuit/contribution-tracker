@@ -11,6 +11,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit#646",
+    "number": 646,
+    "title": "Add @tscircuit/eval exports, install all dependent tscircuit modules and ensure versions match with core",
+    "description": "Add `@tscircuit/eval` exports, install all dependent `tscircuit` modules, and ensure versions match with the core.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit",
+    "url": "https://github.com/tscircuit/tscircuit/pull/646",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#192",
+    "number": 192,
+    "title": "Add the relation of source_group_id to source_components",
+    "description": "Add the relation of `source_group_id` to `source_components`",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/192",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#191",
     "number": 191,
     "title": "feat: pcb_cutout element",
@@ -52,6 +74,17 @@
     "contributor": "seveibar",
     "repo": "tscircuit/circuit-json",
     "url": "https://github.com/tscircuit/circuit-json/pull/188",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json-util#32",
+    "number": 32,
+    "title": "be more accepting for input circuit json to reduce downstream casting",
+    "description": "Improve the acceptance of input circuit JSON to reduce downstream casting",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/circuit-json-util",
+    "url": "https://github.com/tscircuit/circuit-json-util/pull/32",
     "isAlignedWithMilestone": true
   },
   {
@@ -195,6 +228,28 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/3d-viewer",
     "url": "https://github.com/tscircuit/3d-viewer/pull/275",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#815",
+    "number": 815,
+    "title": "fix: using the standard font_siz",
+    "description": "Fixing the font size used in the NormalComponent",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/815",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#818",
+    "number": 818,
+    "title": "update schematic symbols to fix boxresistor issue",
+    "description": "Update schematic symbols to fix boxresistor issue",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/818",
     "isAlignedWithMilestone": true
   },
   {
@@ -495,6 +550,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/tscircuit.com#1135",
+    "number": 1135,
+    "title": "Fixed the heading on search page ",
+    "description": "Fixed the heading on the search page.",
+    "impact": "Tiny",
+    "contributor": "MustafaMulla29",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1135",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/tscircuit.com#1127",
     "number": 1127,
     "title": "refactor: redirect mobile users to /search page",
@@ -680,6 +746,28 @@
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/55",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/eval#353",
+    "number": 353,
+    "title": "chore: parts-engine",
+    "description": "Update the version of the \"@tscircuit/parts-engine\" package from \"^0.0.1\" to \"^0.0.2\".",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/353",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#350",
+    "number": 350,
+    "title": "chore: update @tscircuit/core to v0.0.414",
+    "description": "Update @tscircuit/core to v0.0.414",
+    "impact": "Minor",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/350",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/eval#332",
