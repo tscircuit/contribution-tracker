@@ -1,0 +1,112 @@
+[
+  {
+    "tag": "tscircuit/footprinter#272",
+    "number": 272,
+    "title": "add nosquareplating flag support in pinrow",
+    "description": "Add support for the `nosquareplating` flag in the `pinrow` function, which allows for a circular pad to be used for the first pin instead of a rectangular pad.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/272",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#270",
+    "number": 270,
+    "title": "updated circuit-to-svg and ss",
+    "description": "Updated the `circuit-to-svg` and `ss` packages",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/270",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#220",
+    "number": 220,
+    "title": "updated dep",
+    "description": "Update dependency version for \"@tscircuit/core\"",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/220",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/autorouting#111",
+    "number": 111,
+    "title": "updated deps and snapshots",
+    "description": "Updated dependencies and snapshots",
+    "impact": "Tiny",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/autorouting",
+    "url": "https://github.com/tscircuit/autorouting/pull/111",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1142",
+    "number": 1142,
+    "title": "Invalidate cache after delete and update runframe",
+    "description": "Invalidates the cache after deleting or updating a package in the runframe.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1142",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1141",
+    "number": 1141,
+    "title": "cleanup `/preview` page",
+    "description": "Removes the `/preview` page from the application.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1141",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1140",
+    "number": 1140,
+    "title": "fix `cmd + k` search which showed the same packages multiple times",
+    "description": "Fix the `cmd + k` search functionality to show unique packages instead of duplicates.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1140",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/runframe#637",
+    "number": 637,
+    "title": "chore: easyeda update",
+    "description": "Update the `easyeda` dependency to version `0.0.142`",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/637",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#200",
+    "number": 200,
+    "title": "chore: runframe update",
+    "description": "Update the `@tscircuit/runframe` dependency to version `0.0.481`",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/200",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/mash-layout#4",
+    "number": 4,
+    "title": "Complex tscircuit-based layouts, normalization fixes, apply and get net lists from Circuit JSON",
+    "description": "Introduces complex tscircuit-based layouts, normalization fixes, and the ability to apply and get net lists from Circuit JSON.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/mash-layout",
+    "url": "https://github.com/tscircuit/mash-layout/pull/4",
+    "isAlignedWithMilestone": true
+  }
+]
