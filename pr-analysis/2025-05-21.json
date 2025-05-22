@@ -1,5 +1,60 @@
 [
   {
+    "tag": "tscircuit/pcb-viewer#288",
+    "number": 288,
+    "title": "remove circuit-to-svg package (causing issue in dependendant packages)",
+    "description": "Remove the \"circuit-to-svg\" package as it is causing issues in dependent packages.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/288",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/circuit-json#197",
+    "number": 197,
+    "title": "updated schematic_box type",
+    "description": "Update the `schematic_box` type to include a new `is_dashed` property.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/197",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-json#198",
+    "number": 198,
+    "title": "ninePointAnchor for silkscreen text",
+    "description": "Replaces the `anchor_alignment` field in the `pcb_silkscreen_text` type with a new type called `NinePointAnchor`.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/198",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#236",
+    "number": 236,
+    "title": "Updated schematic-box props",
+    "description": "Added new properties to the `schematic-box` component, including `padding`, `title`, `overlay`, and `strokeStyle`.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/236",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#238",
+    "number": 238,
+    "title": "nine_point_anchor for silkscreen text",
+    "description": "Adds support for nine-point anchoring of silkscreen text",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/238",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/footprinter#272",
     "number": 272,
     "title": "add nosquareplating flag support in pinrow",
@@ -22,6 +77,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#221",
+    "number": 221,
+    "title": "support nine point anchor alignment for silkscreen texts",
+    "description": "Adds support for nine-point anchor alignment for silkscreen texts",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/221",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-to-svg#220",
     "number": 220,
     "title": "updated dep",
@@ -41,6 +107,28 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/autorouting",
     "url": "https://github.com/tscircuit/autorouting/pull/111",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/checks#47",
+    "number": 47,
+    "title": "missing typecheck workflow",
+    "description": "Adds a GitHub workflow to perform type checking using Bun for the repository.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/checks",
+    "url": "https://github.com/tscircuit/checks/pull/47",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/template-api-fake#12",
+    "number": 12,
+    "title": "add some important workflows",
+    "description": "Add GitHub Actions workflows for format checking, testing, and publishing to npm",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/template-api-fake",
+    "url": "https://github.com/tscircuit/template-api-fake/pull/12",
     "isAlignedWithMilestone": true
   },
   {
@@ -77,6 +165,28 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/runframe#634",
+    "number": 634,
+    "title": "Fix: Display errors correctly on first run failure",
+    "description": "Fixes a bug where the \"Errors\" tab fails to display error details on the first run failure.",
+    "impact": "Minor",
+    "contributor": "andrii-balitskyi",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/634",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#639",
+    "number": 639,
+    "title": "chore: file-server",
+    "description": "Update the version of the `@tscircuit/file-server` dependency from `0.0.23` to `0.0.24`.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/639",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/runframe#637",
     "number": 637,
     "title": "chore: easyeda update",
@@ -88,6 +198,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/cli#204",
+    "number": 204,
+    "title": "Fix: importing jlcpcb parts not being added to the file system",
+    "description": "Fix issue with importing JLCPCB parts not being added to the file system",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/204",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#202",
+    "number": 202,
+    "title": "fix: upgrade command",
+    "description": "Fix the `upgrade` command to correctly check for and update the CLI to the latest version.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/202",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/cli#203",
+    "number": 203,
+    "title": "fix packages import from the dialog",
+    "description": "Fix packages import from the dialog",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/cli",
+    "url": "https://github.com/tscircuit/cli/pull/203",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/cli#200",
     "number": 200,
     "title": "chore: runframe update",
@@ -96,6 +239,28 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/200",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/file-server#15",
+    "number": 15,
+    "title": "Add support for HTTP/2",
+    "description": "Add support for HTTP/2 by setting the \"authority\" header in addition to the \"Host\" header.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/file-server",
+    "url": "https://github.com/tscircuit/file-server/pull/15",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/mash-layout#5",
+    "number": 5,
+    "title": "Template Adaptation",
+    "description": "The change adds new types for various edit operations, such as adding labels to pins, adding pins to sides, removing pins from sides, adding passives to pins, clearing pins, and removing chips. It also adds a function to adapt a template circuit to a target netlist by applying these edit operations.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/mash-layout",
+    "url": "https://github.com/tscircuit/mash-layout/pull/5",
     "isAlignedWithMilestone": true
   },
   {
