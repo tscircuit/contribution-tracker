@@ -22,9 +22,9 @@ function getFullWeeksForMonth(year: number, month: number): WeekData[] {
   const overviewsDir = path.join(process.cwd(), "contribution-overviews")
 
   // First day of the target month
-  const monthStart = new Date(year, month - 1, 1)
+  const monthStart = new Date(Date.UTC(year, month - 1, 1))
   // First day of next month
-  const nextMonthStart = new Date(year, month, 1)
+  const nextMonthStart = new Date(Date.UTC(year, month, 1))
 
   // We'll collect weeks with data that are relevant for the month
   const weeks: WeekData[] = []
@@ -48,11 +48,22 @@ function getFullWeeksForMonth(year: number, month: number): WeekData[] {
   // For each week's data file
   for (const { filePath, fileDate, datePart } of allFiles) {
     // The date in the filename is the START of the week
-    const weekStartDate = new Date(fileDate)
+    const weekStartDate = new Date(
+      Date.UTC(
+        fileDate.getUTCFullYear(),
+        fileDate.getUTCMonth(),
+        fileDate.getUTCDate(),
+      ),
+    )
 
     // End date is the Tuesday following the start date (which should be a Wednesday)
-    const weekEndDate = new Date(fileDate)
-    weekEndDate.setDate(weekEndDate.getDate() + 6) // Wednesday to Tuesday = 6 days
+    const weekEndDate = new Date(
+      Date.UTC(
+        fileDate.getUTCFullYear(),
+        fileDate.getUTCMonth(),
+        fileDate.getUTCDate() + 6,
+      ),
+    )
 
     // For March, we want COMPLETE weeks:
     // - 02/26, 03/05, 03/12, 03/19 (we exclude 03/26 since it's not a complete week)
@@ -101,12 +112,12 @@ function countStars(stars: string): number {
 
 // Helper to verify if a date is a Wednesday
 function isWednesday(date: Date): boolean {
-  return date.getDay() === 3 // 0 = Sunday, 3 = Wednesday
+  return date.getUTCDay() === 3 // 0 = Sunday, 3 = Wednesday
 }
 
 // Helper to verify if a date is a Tuesday
 function isTuesday(date: Date): boolean {
-  return date.getDay() === 2 // 0 = Sunday, 2 = Tuesday
+  return date.getUTCDay() === 2 // 0 = Sunday, 2 = Tuesday
 }
 
 interface WeeklyDataWithDates {
@@ -169,7 +180,7 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
 
   // Format date as MM/DD
   const formatDate = (date: Date) => {
-    return `${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getDate().toString().padStart(2, "0")}`
+    return `${(date.getUTCMonth() + 1).toString().padStart(2, "0")}/${date.getUTCDate().toString().padStart(2, "0")}`
   }
 
   // Calculate sponsorship amounts
@@ -220,8 +231,8 @@ function getMonthFile(year: number, month: number): string {
 function main() {
   // Get the current month by default
   const date = new Date()
-  const currentYear = date.getFullYear()
-  const currentMonth = date.getMonth() + 1
+  const currentYear = date.getUTCFullYear()
+  const currentMonth = date.getUTCMonth() + 1
 
   // Use command line args if provided (format: year month)
   const args = process.argv.slice(2)
@@ -263,8 +274,8 @@ function main() {
   )
   console.log(`Weeks included: ${weeks.length}`)
   weeks.forEach((week) => {
-    const startDate = `${week.weekStartDate.getMonth() + 1}/${week.weekStartDate.getDate()}`
-    const endDate = `${week.weekEndDate.getMonth() + 1}/${week.weekEndDate.getDate()}`
+    const startDate = `${week.weekStartDate.getUTCMonth() + 1}/${week.weekStartDate.getUTCDate()}`
+    const endDate = `${week.weekEndDate.getUTCMonth() + 1}/${week.weekEndDate.getUTCDate()}`
     console.log(`  ${startDate} - ${endDate}: ${path.basename(week.filePath)}`)
   })
   console.log(`Total sponsorships: ${sponsorships.length}`)

@@ -56,8 +56,8 @@ test("handles year boundary correctly", () => {
 test("normalizes to midnight", () => {
   const date = new Date("2024-01-17T15:30:45.123Z") // Wednesday with time
   const result = getLastWednesday(date)
-  expect(result.getHours()).toBe(0)
-  expect(result.getMinutes()).toBe(0)
-  expect(result.getSeconds()).toBe(0)
+  expect(result.getUTCHours()).toBe(0)
+  expect(result.getUTCMinutes()).toBe(0)
+  expect(result.getUTCSeconds()).toBe(0)
   expect(result.getMilliseconds()).toBe(0)
 })
