@@ -59,5 +59,5 @@ test("normalizes to midnight", () => {
   expect(result.getUTCHours()).toBe(0)
   expect(result.getUTCMinutes()).toBe(0)
   expect(result.getUTCSeconds()).toBe(0)
-   expect(result.getUTCMilliseconds()).toBe(0)
+  expect(result.getUTCMilliseconds()).toBe(0)
 })
