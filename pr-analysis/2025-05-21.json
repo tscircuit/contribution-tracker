@@ -1,5 +1,16 @@
 [
   {
+    "tag": "tscircuit/schematic-viewer#94",
+    "number": 94,
+    "title": "Refactor z-index values in EditIcon and SchematicViewer components",
+    "description": "Refactor z-index values in EditIcon and SchematicViewer components",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/schematic-viewer",
+    "url": "https://github.com/tscircuit/schematic-viewer/pull/94",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/pcb-viewer#288",
     "number": 288,
     "title": "remove circuit-to-svg package (causing issue in dependendant packages)",
@@ -77,6 +88,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/contribution-tracker#149",
+    "number": 149,
+    "title": "Apply SPONSORSHIP_MULTIPLIER (1.25) to sponsorship amount calculations",
+    "description": "Apply a 1.25 multiplier to the sponsorship amount calculations.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/149",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/circuit-to-svg#221",
     "number": 221,
     "title": "support nine point anchor alignment for silkscreen texts",
@@ -132,6 +154,72 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/tscircuit.com#1146",
+    "number": 1146,
+    "title": "Update terminology in QuickstartPage to reflect package usage instead of snippets",
+    "description": "Update terminology in QuickstartPage to reflect package usage instead of snippets",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1146",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1154",
+    "number": 1154,
+    "title": "chore: update runframe (report button issue fix)",
+    "description": "Update runframe package to fix report button issue",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1154",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1152",
+    "number": 1152,
+    "title": "removing 3d-viewer as it's redudant package",
+    "description": "",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1152",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1147",
+    "number": 1147,
+    "title": "fix error not being shown on first run",
+    "description": "Fix an issue where an error is not being shown on the first run.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1147",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1144",
+    "number": 1144,
+    "title": "fix: important file preview not updating",
+    "description": "Fixes a bug where the important file preview doesn't update when the list of important files changes.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1144",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1148",
+    "number": 1148,
+    "title": "Make code editor interactive before full type checking is ready",
+    "description": "Make the code editor interactive before full type checking is ready.",
+    "impact": "Minor",
+    "contributor": "andrii-balitskyi",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1148",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/tscircuit.com#1142",
     "number": 1142,
     "title": "Invalidate cache after delete and update runframe",
@@ -162,6 +250,50 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1140",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/eval#366",
+    "number": 366,
+    "title": "add copy core versions in postinstall (sync dependency versions with core)",
+    "description": "Add a script to copy core dependency versions to the current package.json file during postinstall.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/366",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#654",
+    "number": 654,
+    "title": "add fallback file entrypoint to the report issue button",
+    "description": "Add a fallback file entrypoint to the report issue button",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/654",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#653",
+    "number": 653,
+    "title": "fix: report issue button having missing circuit code",
+    "description": "Fixed the issue where the \"Report issue\" button was missing the circuit code.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/653",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#647",
+    "number": 647,
+    "title": "update packages",
+    "description": "Updating dependencies, including adding the `@tscircuit/footprinter` package and updating versions of `@tscircuit/pcb-viewer`, `circuit-to-svg`, and `schematic-symbols`.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/647",
     "isAlignedWithMilestone": false
   },
   {
@@ -253,25 +385,36 @@
     "isAlignedWithMilestone": true
   },
   {
-    "tag": "tscircuit/mash-layout#5",
+    "tag": "tscircuit/pmars-layout#7",
+    "number": 7,
+    "title": "Matching and scoring system, better grid stringification",
+    "description": "Adds a matching and scoring system for circuit boards, along with a better grid stringification feature.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/pmars-layout",
+    "url": "https://github.com/tscircuit/pmars-layout/pull/7",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/pmars-layout#5",
     "number": 5,
     "title": "Template Adaptation",
     "description": "The change adds new types for various edit operations, such as adding labels to pins, adding pins to sides, removing pins from sides, adding passives to pins, clearing pins, and removing chips. It also adds a function to adapt a template circuit to a target netlist by applying these edit operations.",
     "impact": "Major",
     "contributor": "seveibar",
-    "repo": "tscircuit/mash-layout",
-    "url": "https://github.com/tscircuit/mash-layout/pull/5",
+    "repo": "tscircuit/pmars-layout",
+    "url": "https://github.com/tscircuit/pmars-layout/pull/5",
     "isAlignedWithMilestone": true
   },
   {
-    "tag": "tscircuit/mash-layout#4",
+    "tag": "tscircuit/pmars-layout#4",
     "number": 4,
     "title": "Complex tscircuit-based layouts, normalization fixes, apply and get net lists from Circuit JSON",
     "description": "Introduces complex tscircuit-based layouts, normalization fixes, and the ability to apply and get net lists from Circuit JSON.",
     "impact": "Major",
     "contributor": "seveibar",
-    "repo": "tscircuit/mash-layout",
-    "url": "https://github.com/tscircuit/mash-layout/pull/4",
+    "repo": "tscircuit/pmars-layout",
+    "url": "https://github.com/tscircuit/pmars-layout/pull/4",
     "isAlignedWithMilestone": true
   }
 ]
