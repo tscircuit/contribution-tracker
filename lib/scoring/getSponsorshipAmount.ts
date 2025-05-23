@@ -1,12 +1,14 @@
 /**
  * Calculates sponsorship amount based on weekly stars over the past 4 weeks
  * @param weeklyStars Array of star counts for the past 4 weeks
+ * @param highScore Highest recorded score
  * @returns Calculated sponsorship amount in USD
  */
 export function getSponsorshipAmount({
   weeklyStars,
   highScore,
 }: { weeklyStars: number[]; highScore: number }): number {
+  const SPONSORSHIP_MULTIPLIER = 1.25
   // Calculate the median of stars
   const sortedStars = [...weeklyStars].sort((a, b) => a - b)
   const medianStars =
@@ -17,24 +19,25 @@ export function getSponsorshipAmount({
       : sortedStars[Math.floor(sortedStars.length / 2)]
   const maxStarCount = Math.max(...weeklyStars)
 
-  // Determine amount based on median stars
+  // Determine base amount based on median stars
+  let baseAmount = 0
   if (medianStars >= 3) {
-    return 400
+    baseAmount = 400
   } else if (medianStars >= 2.5) {
-    return 200
+    baseAmount = 200
   } else if (medianStars >= 2) {
-    return 150
+    baseAmount = 150
   } else if (medianStars >= 1.5) {
-    return 70
+    baseAmount = 70
   } else if (medianStars >= 1) {
-    return 50
+    baseAmount = 50
   } else if (maxStarCount >= 2) {
-    return 25
+    baseAmount = 25
   } else if (maxStarCount >= 1) {
-    return 15
+    baseAmount = 15
   } else if (highScore >= 3) {
-    return 5
+    baseAmount = 5
   }
 
-  return 0
+  return baseAmount * SPONSORSHIP_MULTIPLIER
 }
