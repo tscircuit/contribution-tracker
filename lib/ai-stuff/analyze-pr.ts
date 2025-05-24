@@ -1,4 +1,3 @@
-import { openai } from "@ai-sdk/openai"
 import { z } from "zod"
 import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "lib/types"
@@ -21,7 +20,6 @@ export async function analyzePRWithAI(
   repo: string,
 ): Promise<AnalyzedPR> {
   const result = await generateAiObjectCached({
-    model: openai("gpt-4.1-nano"),
     schema: prSchema,
     prompt: generateAnalyzePRPrompt(pr, repo),
   })

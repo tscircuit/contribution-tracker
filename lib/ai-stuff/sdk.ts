@@ -44,7 +44,7 @@ async function setCached(params: any, data: any): Promise<void> {
 export async function generateAiObjectCached(options: any) {
   const optionsWithDefault = {
     ...options,
-    model: options.model || openai("o4-mini"),
+    model: options.model || openai("gpt-4o-mini"),
   }
 
   const cached = await getCached(optionsWithDefault)
