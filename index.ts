@@ -160,6 +160,10 @@ export async function generateOverview(startDate: string) {
           startDateString,
         )
 
+        console.log(
+          `Processed issues created for ${contributor} - totalIssues: ${totalIssues} - majorIssues: ${majorIssues} in ${repo}`,
+        )
+
         contributorData[contributor].issuesCreated =
           (contributorData[contributor].issuesCreated || 0) + totalIssues
 
@@ -203,6 +207,9 @@ export async function generateOverview(startDate: string) {
         contributorData[contributor].discussionGreatInformativeComments = 0
         contributorData[contributor].discussionIncredibleComments = 0
       }
+      console.log(
+        `Processed discussion for ${contributor} - discussionComments: ${allGithubDiscussions[contributor].discussionComments}`,
+      )
       contributorData[contributor].discussionComments =
         allGithubDiscussions[contributor].discussionComments
       contributorData[contributor].discussionNormalComments =
@@ -232,7 +239,6 @@ export async function generateOverview(startDate: string) {
   await Promise.all(processDiscussionsPromises)
 
   // Data processing complete
-
   await generateAndWriteFiles(
     mergedPrsWithAnalysis,
     contributorData,
@@ -245,6 +251,7 @@ async function generateAndWriteFiles(
   contributorData: Record<string, ContributorStats>,
   startDateString: string,
 ) {
+  console.log("Generating markdown")
   // Group PRs by contributor
   const contributorPRs = mergedPrsWithAnalysis.reduce(
     (acc, pr) => {
@@ -272,6 +279,7 @@ async function generateAndWriteFiles(
     contributorData,
     startDateString,
   )
+  console.log("Generated markdown", markdown)
 
   // Sort contributor data alphabetically by contributor name
   const alphabeticalContributorData = Object.keys(contributorData)
