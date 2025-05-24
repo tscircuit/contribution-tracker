@@ -7,7 +7,9 @@ import {
   type Milestone,
 } from "../../shared/types/milestones"
 
-// Exported for testing
+/**
+ * @deprecated
+ */
 export async function checkMilestoneAlignment(
   pr: MergedPullRequest,
 ): Promise<boolean> {
@@ -44,6 +46,9 @@ Respond with only "true" or "false".`
   }
 }
 
+/**
+ * @deprecated
+ */
 export async function analyzePRWithClaude(
   pr: MergedPullRequest,
   repo: string,

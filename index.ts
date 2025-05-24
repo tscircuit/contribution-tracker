@@ -9,10 +9,11 @@ import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getAllPRs } from "lib/data-retrieval/getAllPRs"
 import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
+import { getLastWednesday } from "lib/ai/date-utils"
+import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { analyzePRWithClaude } from "lib/ai/analyzePRWithClaude"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { storePrAnalysis } from "lib/data-processing/storePrAnalysis"
-import { getLastWednesday } from "lib/ai/date-utils"
 
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
@@ -112,7 +113,16 @@ export async function generateOverview(startDate: string) {
       if (pr.user.login.includes("renovate")) {
         continue
       }
-      const analysis = await analyzePRWithClaude(pr, repo)
+      const analysis = await analyzePRWithAI(pr, repo).catch((e) => {
+        console.error(
+          `Error analyzing PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
+          e,
+        )
+        return null
+      })
+      if (!analysis) {
+        continue
+      }
       if (pr.hasMajorTag) {
         analysis.impact = "Major"
       }
