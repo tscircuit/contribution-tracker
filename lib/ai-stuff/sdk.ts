@@ -10,6 +10,7 @@ function estimateTokenCount(text: string): number {
 }
 
 function truncatePrompt(prompt: string, maxTokens: number = 120000): string {
+  if (!prompt) return ""
   const estimatedTokens = estimateTokenCount(prompt)
   if (estimatedTokens <= maxTokens) {
     return prompt

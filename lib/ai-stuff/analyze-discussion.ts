@@ -4,9 +4,12 @@ import { generateAiObjectCached } from "./sdk"
 import { generateAnalyzeDiscussionPrompt } from "./prompts"
 
 const discussionSchema = z.object({
-  level: z.enum(["Participating", "VeryActive", "ExtremelyActive"]),
+  level: z.enum([
+    "NormalComment",
+    "GreatInformativeComment",
+    "IncredibleCommentTopTier",
+  ]),
   count: z.number(),
-  reasoning: z.string(),
 })
 
 export async function analyzeDiscussionWithAI(
@@ -23,5 +26,5 @@ export async function analyzeDiscussionWithAI(
   return {
     level: result.object.level,
     count: result.object.count,
-  }
+  } as DiscussionContribution
 }

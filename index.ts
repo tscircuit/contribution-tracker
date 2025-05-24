@@ -49,9 +49,9 @@ export async function generateOverview(startDate: string) {
           bountiedIssuesTotal: 0,
           distinctPrsReviewed: 0,
           discussionComments: 0,
-          discussionParticipating: 0,
-          discussionVeryActive: 0,
-          discussionExtremelyActive: 0,
+          discussionNormalComments: 0,
+          discussionGreatInformativeComments: 0,
+          discussionIncredibleComments: 0,
         }
       }
 
@@ -199,30 +199,30 @@ export async function generateOverview(startDate: string) {
       }
       if (contributorData[contributor].discussionComments === undefined) {
         contributorData[contributor].discussionComments = 0
-        contributorData[contributor].discussionParticipating = 0
-        contributorData[contributor].discussionVeryActive = 0
-        contributorData[contributor].discussionExtremelyActive = 0
+        contributorData[contributor].discussionNormalComments = 0
+        contributorData[contributor].discussionGreatInformativeComments = 0
+        contributorData[contributor].discussionIncredibleComments = 0
       }
       contributorData[contributor].discussionComments =
         allGithubDiscussions[contributor].discussionComments
-      contributorData[contributor].discussionParticipating =
-        allGithubDiscussions[contributor].discussionParticipating
-      contributorData[contributor].discussionVeryActive =
-        allGithubDiscussions[contributor].discussionVeryActive
-      contributorData[contributor].discussionExtremelyActive =
-        allGithubDiscussions[contributor].discussionExtremelyActive
+      contributorData[contributor].discussionNormalComments =
+        allGithubDiscussions[contributor].discussionNormalComments
+      contributorData[contributor].discussionGreatInformativeComments =
+        allGithubDiscussions[contributor].discussionGreatInformativeComments
+      contributorData[contributor].discussionIncredibleComments =
+        allGithubDiscussions[contributor].discussionIncredibleComments
 
       // Add to score based on discussion contribution levels
-
       contributorData[contributor].score =
         (contributorData[contributor].score ?? 0) +
-        (contributorData[contributor].discussionParticipating ?? 0) * 1 // 1 point each
+        (contributorData[contributor].discussionNormalComments ?? 0) * 1 // 1 point each
       contributorData[contributor].score =
         (contributorData[contributor].score ?? 0) +
-        (contributorData[contributor].discussionVeryActive ?? 0) * 2 // 2 points each
+        (contributorData[contributor].discussionGreatInformativeComments ?? 0) *
+          2 // 2 points each
       contributorData[contributor].score =
         (contributorData[contributor].score ?? 0) +
-        (contributorData[contributor].discussionExtremelyActive ?? 0) * 4 // 4 points each
+        (contributorData[contributor].discussionIncredibleComments ?? 0) * 4 // 4 points each
 
       contributorData[contributor].stars = scoreToStarString(
         contributorData[contributor].score ?? 0,

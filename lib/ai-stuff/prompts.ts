@@ -1,20 +1,22 @@
 import type { DiscussionComment } from "lib/types"
 import { CURRENT_MILESTONE } from "shared/types/milestones"
 
-export async function generateAnalyzeDiscussionPrompt(
+export function generateAnalyzeDiscussionPrompt(
   comment: DiscussionComment,
-): Promise<string> {
+): string {
   return `
-Analyze the following GitHub Discussion comment and classify its contribution level as "Participating", "VeryActive", or "ExtremelyActive" based on these criteria:
+Analyze the following GitHub Discussion comment and classify its contribution level as "NormalComment", "GreatInformativeComment", or "IncredibleCommentTopTier" based on these criteria:
 
-Participating: Basic participation with minimal effort. Short comments that don't add significant value to the discussion. (count: 1)
-VeryActive: Thoughtful participation that adds value. Detailed explanations, helpful suggestions, or meaningful questions that advance the discussion. (count: 2)
-ExtremelyActive: Exceptional participation with high-quality content. In-depth analysis, comprehensive explanations, code examples, or solutions that significantly help others. (count: 3)
+NormalComment: Basic participation with minimal effort. Short comments that don't add significant value to the discussion. (count: 1)
+GreatInformativeComment: Thoughtful participation that adds value. Detailed explanations, helpful suggestions, or meaningful questions that advance the discussion. (count: 2)
+IncredibleCommentTopTier: Exceptional participation with high-quality content. In-depth analysis, comprehensive explanations, code examples, or solutions that significantly help others. (count: 3)
 
 Discussion Title: ${comment.discussionTitle}
 Comment Body: ${comment.body}
 
-Provide the classification level, corresponding count (1-3), and brief reasoning for your decision.`
+Provide the classification level, corresponding count (1-3)
+
+Return the analysis in the specified format.`
 }
 
 export function generateAnalyzePRPrompt(
