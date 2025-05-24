@@ -1,9 +1,9 @@
 import type { DiscussionComment } from "lib/types"
 import { CURRENT_MILESTONE } from "shared/types/milestones"
 
-export async function generateAnalyzeDiscussionPrompt(
+export function generateAnalyzeDiscussionPrompt(
   comment: DiscussionComment,
-): Promise<string> {
+): string {
   return `
 Analyze the following GitHub Discussion comment and classify its contribution level as "Participating", "VeryActive", or "ExtremelyActive" based on these criteria:
 

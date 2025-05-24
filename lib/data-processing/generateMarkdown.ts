@@ -123,13 +123,6 @@ export async function generateMarkdown(
     if (!contributorIdToStatsMap[contributor].score) {
       contributorIdToStatsMap[contributor].score = 0
     }
-
-    // Add to score based on discussion contribution levels
-    contributorIdToStatsMap[contributor].score += discussionNormalComments * 1 // 1 point each
-    contributorIdToStatsMap[contributor].score +=
-      discussionGreatInformativeComments * 2 // 2 points each
-    contributorIdToStatsMap[contributor].score +=
-      discussionIncredibleComments * 4 // 4 points each
   }
 
   // Generate table rows

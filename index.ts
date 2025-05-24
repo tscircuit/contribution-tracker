@@ -213,7 +213,6 @@ export async function generateOverview(startDate: string) {
         allGithubDiscussions[contributor].discussionIncredibleComments
 
       // Add to score based on discussion contribution levels
-
       contributorData[contributor].score =
         (contributorData[contributor].score ?? 0) +
         (contributorData[contributor].discussionNormalComments ?? 0) * 1 // 1 point each
