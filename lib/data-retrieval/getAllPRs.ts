@@ -34,8 +34,8 @@ export async function getAllPRs(
     const mergedDate = pr.merged_at ? new Date(pr.merged_at) : null
     const sinceDate = new Date(since)
     return (
-      (createdDate && createdDate >= sinceDate) ||
-      (mergedDate && mergedDate >= sinceDate)
+      (createdDate && createdDate.getTime() >= sinceDate.getTime()) ||
+      (mergedDate && mergedDate.getTime() >= sinceDate.getTime())
     )
   })
 

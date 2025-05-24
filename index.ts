@@ -10,9 +10,9 @@ import { getAllPRs } from "lib/data-retrieval/getAllPRs"
 import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
 import { analyzePRWithClaude } from "lib/ai/analyzePRWithClaude"
-import { getLastWednesday } from "lib/ai/date-utils"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { storePrAnalysis } from "lib/data-processing/storePrAnalysis"
+import { getLastWednesday } from "lib/ai/date-utils"
 
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
