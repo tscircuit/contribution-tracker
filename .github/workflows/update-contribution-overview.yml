@@ -19,7 +19,7 @@ jobs:
       - name: Cache directory
         uses: actions/cache@v4
         with:
-          path: .cache-anthropic
+          path: .cache-ai
           key: cache-ai-${{ runner.os }}-${{ github.job }}-${{ github.run_id }}
           restore-keys: |
             cache-ai-${{ runner.os }}-${{ github.job }}-

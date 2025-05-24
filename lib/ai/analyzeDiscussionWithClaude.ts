@@ -5,6 +5,7 @@ import type { DiscussionComment, DiscussionContribution } from "../types"
  * Analyzes a GitHub Discussion comment using Claude AI to determine its quality level
  * @param comment The discussion comment to analyze
  * @returns The contribution level assessment
+ * @deprecated
  */
 export async function analyzeDiscussionWithClaude(
   comment: DiscussionComment,
