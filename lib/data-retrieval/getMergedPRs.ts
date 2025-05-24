@@ -19,7 +19,7 @@ export async function getMergedPRs(
   const filteredPRs = data.filter(
     (pr) =>
       pr.merged_at &&
-      new Date(pr.merged_at) >= new Date(since) &&
+      new Date(pr.merged_at).getTime() >= new Date(since).getTime() &&
       !pr.title?.toLowerCase().includes("revert") &&
       (pr.body ? !pr.body?.toLowerCase().includes("revert") : true),
   )
