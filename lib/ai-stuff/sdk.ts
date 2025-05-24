@@ -66,7 +66,6 @@ export async function generateAiObjectCached(options: any) {
   }
 
   const cached = await getCached(optionsWithDefault)
-  console.log(`Cached hit for ${options.prompt.slice(0, 10)}...`)
   if (cached) return cached
 
   const response = await generateObject(optionsWithDefault)
