@@ -31,7 +31,7 @@ jobs:
         run: bun scripts/generate-weekly-overview.ts
         env:
           GITHUB_TOKEN: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.TSCIRCUIT_BOT_ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.TSCIRCUIT_BOT_OPENAI_KEY }}
           
       - name: Commit changes
         run: |
