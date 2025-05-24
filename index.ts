@@ -15,7 +15,6 @@ import { analyzePRWithClaude } from "lib/ai/analyzePRWithClaude"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { storePrAnalysis } from "lib/data-processing/storePrAnalysis"
 
-
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
 
@@ -114,7 +113,16 @@ export async function generateOverview(startDate: string) {
       if (pr.user.login.includes("renovate")) {
         continue
       }
-      const analysis = await analyzePRWithAI(pr, repo)
+      const analysis = await analyzePRWithAI(pr, repo).catch((e) => {
+        console.error(
+          `Error analyzing PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
+          e,
+        )
+        return null
+      })
+      if (!analysis) {
+        continue
+      }
       if (pr.hasMajorTag) {
         analysis.impact = "Major"
       }

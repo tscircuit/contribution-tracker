@@ -12,6 +12,9 @@ const discussionSchema = z.object({
 export async function analyzeDiscussionWithAI(
   comment: DiscussionComment,
 ): Promise<DiscussionContribution> {
+  console.log(
+    `Analyzing discussion comment by ${comment.discussionAuthor} with title ${comment.discussionTitle}`,
+  )
   const result = await generateAiObjectCached({
     schema: discussionSchema,
     prompt: generateAnalyzeDiscussionPrompt(comment),

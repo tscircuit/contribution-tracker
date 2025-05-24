@@ -19,6 +19,9 @@ export async function analyzePRWithAI(
   pr: MergedPullRequest,
   repo: string,
 ): Promise<AnalyzedPR> {
+  console.log(
+    `Analyzing PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
+  )
   const result = await generateAiObjectCached({
     schema: prSchema,
     prompt: generateAnalyzePRPrompt(pr, repo),
