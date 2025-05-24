@@ -5,7 +5,7 @@ export function generateAnalyzeDiscussionPrompt(
   comment: DiscussionComment,
 ): string {
   return `
-Analyze the following GitHub Discussion comment and classify its contribution level as "Participating", "VeryActive", or "ExtremelyActive" based on these criteria:
+Analyze the following GitHub Discussion comment and classify its contribution level as "NormalComment", "GreatInformativeComment", or "IncredibleCommentTopTier" based on these criteria:
 
 NormalComment: Basic participation with minimal effort. Short comments that don't add significant value to the discussion. (count: 1)
 GreatInformativeComment: Thoughtful participation that adds value. Detailed explanations, helpful suggestions, or meaningful questions that advance the discussion. (count: 2)
