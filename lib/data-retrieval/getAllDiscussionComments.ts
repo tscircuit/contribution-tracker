@@ -78,10 +78,7 @@ export async function getAllDiscussionComments(
           })
           for (const comment of discussion.comments.nodes) {
             // Only include comments by the specified user and after the start date
-            if (
-              new Date(comment.createdAt).getTime() >=
-              new Date(formattedDate).getTime()
-            ) {
+            if (new Date(comment.createdAt) >= new Date(formattedDate)) {
               discussionComments.push({
                 discussionTitle: discussion.title,
                 discussionNumber: discussion.number,
@@ -97,9 +94,7 @@ export async function getAllDiscussionComments(
       }
     }
     return discussionComments.filter(
-      (comment) =>
-        new Date(comment.createdAt).getTime() >=
-        new Date(formattedDate).getTime(),
+      (comment) => new Date(comment.createdAt) >= new Date(formattedDate),
     )
   } catch (error) {
     console.error(`Error fetching discussion comments}:`, error)

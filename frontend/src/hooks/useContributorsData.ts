@@ -63,7 +63,7 @@ export function useContributorsData(): UseContributorsDataReturn {
         setData(latestJsonData)
 
         const eightWeeksAgo = new Date()
-        eightWeeksAgo.setUTCDate(eightWeeksAgo.getUTCDate() - 8 * 7)
+        eightWeeksAgo.setDate(eightWeeksAgo.getDate() - 8 * 7)
 
         const historicalFiles = jsonFiles.filter((file: { name: string }) => {
           const fileName = file.name.replace(".json", "")
@@ -157,7 +157,6 @@ export function useContributorsData(): UseContributorsDataReturn {
       date: _date.toLocaleDateString("en-US", {
         month: "2-digit",
         day: "2-digit",
-        timeZone: "UTC",
       }),
       ...x,
     }))
