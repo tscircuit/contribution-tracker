@@ -1,5 +1,5 @@
 import { getAllDiscussionComments } from "./getAllDiscussionComments"
-import { analyzeDiscussionWithClaude } from "../ai/analyzeDiscussionWithClaude"
+import { analyzeDiscussionWithAI } from "../ai-stuff/analyze-discussion"
 import type { ContributorStats } from "lib/types"
 
 export async function processDiscussionsForContributors(
@@ -14,7 +14,7 @@ export async function processDiscussionsForContributors(
     const discussionComments = await getAllDiscussionComments(startDate)
     // Analyze each comment and update stats based on contribution level
     for (const comment of discussionComments) {
-      const analysis = await analyzeDiscussionWithClaude(comment)
+      const analysis = await analyzeDiscussionWithAI(comment)
       if (
         !contributorsStats[comment.discussionAuthor] ||
         contributorsStats[comment.discussionAuthor]?.discussionComments ===
@@ -22,9 +22,9 @@ export async function processDiscussionsForContributors(
       ) {
         contributorsStats[comment.discussionAuthor] = {
           discussionComments: 0,
-          discussionParticipating: 0,
-          discussionVeryActive: 0,
-          discussionExtremelyActive: 0,
+          discussionNormalComments: 0,
+          discussionGreatInformativeComments: 0,
+          discussionIncredibleComments: 0,
           ...contributorsStats[comment.discussionAuthor],
         }
       }
@@ -32,22 +32,24 @@ export async function processDiscussionsForContributors(
         (contributorsStats[comment.discussionAuthor]?.discussionComments || 0) +
         1
       switch (analysis.level) {
-        case "Participating":
-          contributorsStats[comment.discussionAuthor].discussionParticipating =
+        case "NormalComment":
+          contributorsStats[comment.discussionAuthor].discussionNormalComments =
             (contributorsStats[comment.discussionAuthor]
-              ?.discussionParticipating || 0) + 1
+              ?.discussionNormalComments || 0) + 1
           break
-        case "VeryActive":
-          contributorsStats[comment.discussionAuthor].discussionVeryActive =
-            (contributorsStats[comment.discussionAuthor]
-              ?.discussionVeryActive || 0) + 1
-          break
-        case "ExtremelyActive":
+        case "GreatInformativeComment":
           contributorsStats[
             comment.discussionAuthor
-          ].discussionExtremelyActive =
+          ].discussionGreatInformativeComments =
             (contributorsStats[comment.discussionAuthor]
-              ?.discussionExtremelyActive || 0) + 1
+              ?.discussionGreatInformativeComments || 0) + 1
+          break
+        case "IncredibleCommentTopTier":
+          contributorsStats[
+            comment.discussionAuthor
+          ].discussionIncredibleComments =
+            (contributorsStats[comment.discussionAuthor]
+              ?.discussionIncredibleComments || 0) + 1
           break
       }
     }

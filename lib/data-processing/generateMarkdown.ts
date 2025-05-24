@@ -110,35 +110,39 @@ export async function generateMarkdown(
   for (const contributor of contributorsHavingOnlyDiscussions) {
     // Add score for GitHub Discussions contributions
     // 1 point for each Participating comment (minor contribution)
-    // 2 points for each Very Active comment (major contribution)
-    // 3 points for each Extremely Active comment (two major contributions)
-    const discussionParticipating =
-      contributorIdToStatsMap[contributor].discussionParticipating || 0
-    const discussionVeryActive =
-      contributorIdToStatsMap[contributor].discussionVeryActive || 0
-    const discussionExtremelyActive =
-      contributorIdToStatsMap[contributor].discussionExtremelyActive || 0
+    // 2 points for each Great Informative comment (major contribution)
+    // 4 points for each Incredible comment (two major contributions)
+    const discussionNormalComments =
+      contributorIdToStatsMap[contributor].discussionNormalComments || 0
+    const discussionGreatInformativeComments =
+      contributorIdToStatsMap[contributor].discussionGreatInformativeComments ||
+      0
+    const discussionIncredibleComments =
+      contributorIdToStatsMap[contributor].discussionIncredibleComments || 0
 
     if (!contributorIdToStatsMap[contributor].score) {
       contributorIdToStatsMap[contributor].score = 0
     }
 
     // Add to score based on discussion contribution levels
-    contributorIdToStatsMap[contributor].score += discussionParticipating * 1 // 1 point each
-    contributorIdToStatsMap[contributor].score += discussionVeryActive * 2 // 2 points each
-    contributorIdToStatsMap[contributor].score += discussionExtremelyActive * 4 // 4 points each
+    contributorIdToStatsMap[contributor].score += discussionNormalComments * 1 // 1 point each
+    contributorIdToStatsMap[contributor].score +=
+      discussionGreatInformativeComments * 2 // 2 points each
+    contributorIdToStatsMap[contributor].score +=
+      discussionIncredibleComments * 4 // 4 points each
   }
 
   // Generate table rows
   for (const [contributor, effort] of sortedContributors) {
     // Calculate discussion contributions summary
-    const discussionParticipating =
-      contributorIdToStatsMap[contributor].discussionParticipating || 0
-    const discussionVeryActive =
-      contributorIdToStatsMap[contributor].discussionVeryActive || 0
-    const discussionExtremelyActive =
-      contributorIdToStatsMap[contributor].discussionExtremelyActive || 0
-    const discussionSummary = `${discussionParticipating}🔹 ${discussionVeryActive}🔶 ${discussionExtremelyActive}💎`
+    const discussionNormalComments =
+      contributorIdToStatsMap[contributor].discussionNormalComments || 0
+    const discussionGreatInformativeComments =
+      contributorIdToStatsMap[contributor].discussionGreatInformativeComments ||
+      0
+    const discussionIncredibleComments =
+      contributorIdToStatsMap[contributor].discussionIncredibleComments || 0
+    const discussionSummary = `${discussionNormalComments}🔹 ${discussionGreatInformativeComments}🔶 ${discussionIncredibleComments}💎`
 
     markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${
       effort.major
@@ -151,13 +155,14 @@ export async function generateMarkdown(
     const stats = contributorIdToStatsMap[contributor]
     if (!contributorIdToStatsMap[contributor].discussionComments) continue
     // Calculate discussion contributions summary
-    const discussionParticipating =
-      contributorIdToStatsMap[contributor].discussionParticipating || 0
-    const discussionVeryActive =
-      contributorIdToStatsMap[contributor].discussionVeryActive || 0
-    const discussionExtremelyActive =
-      contributorIdToStatsMap[contributor].discussionExtremelyActive || 0
-    const discussionSummary = `${discussionParticipating}🔹 ${discussionVeryActive}🔶 ${discussionExtremelyActive}💎`
+    const discussionNormalComments =
+      contributorIdToStatsMap[contributor].discussionNormalComments || 0
+    const discussionGreatInformativeComments =
+      contributorIdToStatsMap[contributor].discussionGreatInformativeComments ||
+      0
+    const discussionIncredibleComments =
+      contributorIdToStatsMap[contributor].discussionIncredibleComments || 0
+    const discussionSummary = `${discussionNormalComments}🔹 ${discussionGreatInformativeComments}🔶 ${discussionIncredibleComments}💎`
 
     markdown += `| [${contributor}](#${contributor.replace(
       /\s/g,

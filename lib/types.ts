@@ -15,7 +15,10 @@ export interface DiscussionComment {
 }
 
 export interface DiscussionContribution {
-  level: "Participating" | "VeryActive" | "ExtremelyActive"
+  level:
+    | "NormalComment"
+    | "GreatInformativeComment"
+    | "IncredibleCommentTopTier"
   count: number
 }
 
@@ -37,9 +40,9 @@ export interface ContributorStats {
   tiny?: number // Count of Tiny PRs
   stars?: string // Either "⭐" or "👑" based on score
   discussionComments?: number // Total number of discussion comments
-  discussionParticipating?: number // Count of "Participating" level comments
-  discussionVeryActive?: number // Count of "Very Active" level comments
-  discussionExtremelyActive?: number // Count of "Extremely Active" level comments
+  discussionNormalComments?: number // Count of "NormalComment" level comments
+  discussionGreatInformativeComments?: number // Count of "GreatInformativeComment" level comments
+  discussionIncredibleComments?: number // Count of "IncredibleCommentTopTier" level comments
 }
 
 export interface PullRequest {
