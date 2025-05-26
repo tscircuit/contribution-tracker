@@ -11,6 +11,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/pcb-viewer#293",
+    "number": 293,
+    "title": "add support pill_hole_with_rect_pad and circular_hole_with_rect_pad",
+    "description": "This pull request adds support for two new shapes: 'pill_hole_with_rect_pad' and 'circular_hole_with_rect_pad' in the PCB viewer. It modifies the conversion logic to handle these new shapes and updates the relevant stories to demonstrate their usage.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/293",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/pcb-viewer#288",
     "number": 288,
     "title": "remove circuit-to-svg package (causing issue in dependendant packages)",
@@ -55,6 +66,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/props#237",
+    "number": 237,
+    "title": "feat: add fuse component with props",
+    "description": "This pull request introduces a new Fuse component with defined properties, including current and voltage ratings, options for displaying ratings on schematics, and connections to other components. The FuseProps interface is created to define the expected properties, and a validation schema using Zod is provided to ensure the props are correctly structured. Additionally, the Fuse component is exported for use in other parts of the library.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/237",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/props#240",
+    "number": 240,
+    "title": "feat(refractor): add support for pill hole with rectangular pad shape",
+    "description": "This pull request introduces a new feature that adds support for a pill hole with a rectangular pad shape in the component library. It includes the definition of a new interface for the pill hole with rectangular pad shape and updates the existing props validation to accommodate this new shape. Additionally, it updates the package dependency for 'circuit-json'.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/240",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/props#239",
     "number": 239,
     "title": "feat(refractor): add wavelength to led props",
@@ -88,6 +121,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/footprinter#278",
+    "number": 278,
+    "title": "fixed tssop footptint",
+    "description": "This pull request updates the TSSOP footprint dimensions in the codebase, specifically changing the width and adding new parameters for the footprint. It also includes a new test case for the TSSOP8 footprint to ensure the changes are validated.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/278",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#277",
+    "number": 277,
+    "title": "add optional 'pw' and 'pl' to extendSoicDef",
+    "description": "This pull request makes the parameters 'pw' and 'pl' optional in the 'extendSoicDef' function, allowing for more flexibility in defining footprints. It updates the function to handle these parameters with default values if they are not provided, enhancing the usability of the function for different footprints.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/277",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/footprinter#258",
+    "number": 258,
+    "title": "add support sot457 footprint",
+    "description": "This pull request adds support for the SOT-457 footprint in the footprinter library. It introduces a new file for the SOT-457 configuration, updates the main footprinter file to include the new footprint, and adds tests to ensure functionality. The changes allow users to generate circuit elements for the SOT-457 package, which is relevant for PCB design, particularly in keyboard building.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/258",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/footprinter#275",
     "number": 275,
     "title": "add support to92_2",
@@ -118,6 +184,17 @@
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/footprinter",
     "url": "https://github.com/tscircuit/footprinter/pull/270",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/3d-viewer#297",
+    "number": 297,
+    "title": "Refactored the manifold viewer logic for cleaner code",
+    "description": "This pull request refactors the manifold viewer logic to improve code clarity and maintainability. It introduces new utility functions for creating geometry and texture meshes, streamlining the rendering process for the CAD viewer. The changes enhance the overall structure of the code, making it easier to understand and work with.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/297",
     "isAlignedWithMilestone": true
   },
   {
@@ -272,6 +349,28 @@
     "contributor": "techmannih",
     "repo": "tscircuit/template-api-fake",
     "url": "https://github.com/tscircuit/template-api-fake/pull/12",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1171",
+    "number": 1171,
+    "title": "fix: add overflow handling to important files view for better mobile experience",
+    "description": "This pull request addresses the overflow handling in the important files view component, enhancing the mobile experience by allowing horizontal scrolling for content that exceeds the viewable area. This change is aimed at improving usability on mobile devices.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1171",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1173",
+    "number": 1173,
+    "title": "fix: update sign-out link to redirect to home instead of sign-out page",
+    "description": "This pull request updates the sign-out link in the HeaderLogin component to redirect users to the home page (/) instead of the sign-out page (/sign-out). This change addresses issue #1172.",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1173",
     "isAlignedWithMilestone": false
   },
   {
@@ -449,6 +548,39 @@
     "repo": "tscircuit/alphabet",
     "url": "https://github.com/tscircuit/alphabet/pull/4",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/jlcsearch#50",
+    "number": 50,
+    "title": "make all test pass",
+    "description": "This pull request updates the test cases in the repository to ensure that all tests pass. It modifies existing tests to check for required properties in the response data and improves the validation of the returned components. The changes include updating search queries and enhancing the checks for expected properties in the response objects.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/jlcsearch",
+    "url": "https://github.com/tscircuit/jlcsearch/pull/50",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/jlcsearch#49",
+    "number": 49,
+    "title": "add new component BJT transistors",
+    "description": "This pull request introduces a new component for BJT (Bipolar Junction Transistor) transistors into the project. It includes the definition of the BJTTransistor interface, the specification for a derived table in the database, and the necessary routes and tests to support listing and filtering BJT transistors. This addition enhances the component library by providing detailed attributes and functionalities specific to BJT transistors, allowing users to query and utilize this component effectively.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/jlcsearch",
+    "url": "https://github.com/tscircuit/jlcsearch/pull/49",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/jlcsearch#45",
+    "number": 45,
+    "title": "add new component fuse",
+    "description": "This pull request introduces a new component called 'fuse' to the project. It includes the definition of the Fuse interface, the specification for the fuse table, and the necessary routes and database interactions to manage fuses. The implementation allows for the listing and filtering of fuses based on various attributes such as current rating, voltage rating, and response time. Additionally, it includes tests to ensure the functionality of the new fuse routes.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/jlcsearch",
+    "url": "https://github.com/tscircuit/jlcsearch/pull/45",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/eval#366",
