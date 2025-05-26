@@ -60,17 +60,7 @@ export class CachedOctokit {
     ): Promise<{
       data: Endpoints["GET /repos/{owner}/{repo}/pulls"]["response"]["data"]
     }> => {
-      const cached = await this.getCached<
-        Endpoints["GET /repos/{owner}/{repo}/pulls"]["response"]["data"]
-      >("pulls.list", params as Record<string, unknown>)
-      if (cached) return { data: cached }
-
       const response = await this.octokit.pulls.list(params)
-      await this.setCached(
-        "pulls.list",
-        params as Record<string, unknown>,
-        response.data,
-      )
       return response
     },
 
@@ -126,17 +116,7 @@ export class CachedOctokit {
     ): Promise<{
       data: Endpoints["GET /repos/{owner}/{repo}/issues"]["response"]["data"]
     }> => {
-      const cached = await this.getCached<
-        Endpoints["GET /repos/{owner}/{repo}/issues"]["response"]["data"]
-      >("issues.listForRepo", params as Record<string, unknown>)
-      if (cached) return { data: cached }
-
       const response = await this.octokit.issues.listForRepo(params)
-      await this.setCached(
-        "issues.listForRepo",
-        params as Record<string, unknown>,
-        response.data,
-      )
       return response
     },
 
