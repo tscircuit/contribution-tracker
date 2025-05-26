@@ -95,17 +95,7 @@ export class CachedOctokit {
     ): Promise<{
       data: Endpoints["GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews"]["response"]["data"]
     }> => {
-      const cached = await this.getCached<
-        Endpoints["GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews"]["response"]["data"]
-      >("pulls.listReviews", params as Record<string, unknown>)
-      if (cached) return { data: cached }
-
       const response = await this.octokit.pulls.listReviews(params)
-      await this.setCached(
-        "pulls.listReviews",
-        params as Record<string, unknown>,
-        response.data,
-      )
       return response
     },
   }
