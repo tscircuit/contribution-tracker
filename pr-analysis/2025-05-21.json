@@ -33,6 +33,28 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/circuit-json#205",
+    "number": 205,
+    "title": "changed sch text default size to default + migrated to bun.lock",
+    "description": "This pull request changes the default font size for schematic text from 1 to 0.18 and migrates the project to use bun.lock for dependency management. The change in font size may improve the visual representation of schematic texts in the application.",
+    "impact": "Tiny",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/205",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/circuit-json#203",
+    "number": 203,
+    "title": "changed the sch text default size + migrated to bun.lock",
+    "description": "This pull request changes the default font size for schematic text from 1 to 0.18 and migrates the project to use bun.lock for dependency management. The change in font size may affect how schematic texts are rendered in the application, making them smaller by default. The migration to bun.lock indicates a shift in how dependencies are managed, which could improve build performance and consistency.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/203",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/circuit-json#193",
     "number": 193,
     "title": "add simple source led and extend diode",
@@ -187,6 +209,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/3d-viewer#300",
+    "number": 300,
+    "title": "support cutouts",
+    "description": "This pull request introduces functionality to support cutouts in the 3D viewer. It adds a new utility function to process various types of cutouts (rectangular, circular, and polygonal) and integrates this functionality into the existing manifold board builder. The changes allow for more complex board designs by enabling the inclusion of cutouts, which are essential for certain PCB layouts.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/300",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/3d-viewer#299",
+    "number": 299,
+    "title": "right click menu fix",
+    "description": "This pull request introduces a fix for the right-click context menu in the application. The menu now only appears if the mouse has not been moved, enhancing the user experience. Additionally, for mobile users, the context menu can be opened by holding down on the screen, providing a more intuitive interaction method. This change improves the usability of the context menu feature.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/299",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/3d-viewer#297",
     "number": 297,
     "title": "Refactored the manifold viewer logic for cleaner code",
@@ -209,6 +253,28 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/core#827",
+    "number": 827,
+    "title": "calculate the pcb_group dimension",
+    "description": "This pull request implements the calculation of the dimensions of the pcb_group based on its child components. It introduces a new method to determine the bounds of PCB components and updates the database with the calculated width, height, and center of the pcb_group. Additionally, it includes a test to verify the functionality of the new feature.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/827",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#826",
+    "number": 826,
+    "title": "feat: add group relationship in pcb_component, sch_component and source_component",
+    "description": "This pull request introduces a new feature that adds group relationships in the `pcb_component`, `sch_component`, and `source_component`. It includes updates to the Group class to manage group IDs for schematic and PCB components, ensuring that components are properly associated with their respective groups. The changes also include updates to the database to reflect these relationships and new tests to verify the functionality.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/826",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/core#825",
     "number": 825,
     "title": "Add VIN and EN nets to selectors",
@@ -228,6 +294,28 @@
     "contributor": "Anshgrover23",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/824",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/contribution-tracker#158",
+    "number": 158,
+    "title": "Update discussion contribution symbols for clarity and consistency in markdown generation",
+    "description": "This pull request updates the contribution symbols used in the markdown generation for discussions. It changes the labels for participation levels to provide clearer and more consistent terminology, enhancing the understanding of contribution levels in the documentation.",
+    "impact": "Tiny",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/158",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/contribution-tracker#161",
+    "number": 161,
+    "title": "refactor(cachedOctokit): remove caching logic for pulls and issues list methods",
+    "description": "This pull request refactors the CachedOctokit class by removing the caching logic for the methods that retrieve lists of pull requests and issues. The changes simplify the code by eliminating unnecessary caching, which may improve performance and reduce complexity.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/contribution-tracker",
+    "url": "https://github.com/tscircuit/contribution-tracker/pull/161",
     "isAlignedWithMilestone": false
   },
   {
@@ -295,6 +383,17 @@
     "repo": "tscircuit/contribution-tracker",
     "url": "https://github.com/tscircuit/contribution-tracker/pull/149",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#222",
+    "number": 222,
+    "title": "Refactor: now sch text real size calculated in svg bounds",
+    "description": "This pull request refactors the way schematic text sizes are calculated in SVG bounds. It introduces a new utility function to determine the font size based on the text type and updates the bounds accordingly. Additionally, it includes a new test to ensure the correct sizing of schematic text in the SVG output.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/222",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/circuit-to-svg#221",
@@ -537,313 +636,5 @@
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1140",
     "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/alphabet#4",
-    "number": 4,
-    "title": "svg snapshot test",
-    "description": "This pull request adds a new SVG snapshot test for the characters in the svgAlphabet. It includes a new test file that generates an SVG representation of all characters and verifies it against a snapshot. The PR also introduces a new dependency for matching SVG snapshots and updates the package configuration accordingly.",
-    "impact": "Minor",
-    "contributor": "ShiboSoftwareDev",
-    "repo": "tscircuit/alphabet",
-    "url": "https://github.com/tscircuit/alphabet/pull/4",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/jlcsearch#50",
-    "number": 50,
-    "title": "make all test pass",
-    "description": "This pull request updates the test cases in the repository to ensure that all tests pass. It modifies existing tests to check for required properties in the response data and improves the validation of the returned components. The changes include updating search queries and enhancing the checks for expected properties in the response objects.",
-    "impact": "Minor",
-    "contributor": "Anshgrover23",
-    "repo": "tscircuit/jlcsearch",
-    "url": "https://github.com/tscircuit/jlcsearch/pull/50",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/jlcsearch#49",
-    "number": 49,
-    "title": "add new component BJT transistors",
-    "description": "This pull request introduces a new component for BJT (Bipolar Junction Transistor) transistors into the project. It includes the definition of the BJTTransistor interface, the specification for a derived table in the database, and the necessary routes and tests to support listing and filtering BJT transistors. This addition enhances the component library by providing detailed attributes and functionalities specific to BJT transistors, allowing users to query and utilize this component effectively.",
-    "impact": "Minor",
-    "contributor": "Anshgrover23",
-    "repo": "tscircuit/jlcsearch",
-    "url": "https://github.com/tscircuit/jlcsearch/pull/49",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/jlcsearch#45",
-    "number": 45,
-    "title": "add new component fuse",
-    "description": "This pull request introduces a new component called 'fuse' to the project. It includes the definition of the Fuse interface, the specification for the fuse table, and the necessary routes and database interactions to manage fuses. The implementation allows for the listing and filtering of fuses based on various attributes such as current rating, voltage rating, and response time. Additionally, it includes tests to ensure the functionality of the new fuse routes.",
-    "impact": "Minor",
-    "contributor": "Anshgrover23",
-    "repo": "tscircuit/jlcsearch",
-    "url": "https://github.com/tscircuit/jlcsearch/pull/45",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/eval#366",
-    "number": 366,
-    "title": "add copy core versions in postinstall (sync dependency versions with core)",
-    "description": "This pull request adds a postinstall script that synchronizes the dependency versions in the current package with those in the core package. It introduces a new script that checks the core package's dependencies and updates the current package's dependencies accordingly, ensuring consistency between the two packages.",
-    "impact": "Minor",
-    "contributor": "seveibar",
-    "repo": "tscircuit/eval",
-    "url": "https://github.com/tscircuit/eval/pull/366",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/runframe#654",
-    "number": 654,
-    "title": "add fallback file entrypoint to the report issue button",
-    "description": "This pull request modifies the RunFrame component to use a fallback file entrypoint for the report issue button. Instead of using a hardcoded 'entrypoint.tsx', it now uses 'props.mainComponentPath' if 'props.entrypoint' is not provided. This change enhances the flexibility of the component by allowing it to reference a different main component path when necessary.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/runframe",
-    "url": "https://github.com/tscircuit/runframe/pull/654",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/runframe#653",
-    "number": 653,
-    "title": "fix: report issue button having missing circuit code",
-    "description": "This pull request addresses an issue where the report issue button was missing the necessary circuit code. The changes include modifications to the ErrorTabContent and RunFrame components to ensure that the button functions correctly by including the appropriate circuit code.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/runframe",
-    "url": "https://github.com/tscircuit/runframe/pull/653",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/runframe#647",
-    "number": 647,
-    "title": "update packages",
-    "description": "This pull request updates several package dependencies in the project, including adding the 'footprinter' package due to a peer dependency requirement. It also updates the versions of existing packages such as 'pcb-viewer', 'circuit-to-svg', and 'schematic-symbols'.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/runframe",
-    "url": "https://github.com/tscircuit/runframe/pull/647",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/runframe#634",
-    "number": 634,
-    "title": "Fix: Display errors correctly on first run failure",
-    "description": "This pull request addresses an issue where the 'Errors' tab fails to display error details on the first execution of user code in a fresh application load. The fix modifies the conditional rendering for the 'Errors' tab content to ensure that errors from an initial failed run are shown, by displaying the 'ErrorTabContent' if either the 'errorMessage' prop is present or if 'circuitJsonErrors' indicates errors.",
-    "impact": "Minor",
-    "contributor": "andrii-balitskyi",
-    "repo": "tscircuit/runframe",
-    "url": "https://github.com/tscircuit/runframe/pull/634",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/runframe#639",
-    "number": 639,
-    "title": "chore: file-server",
-    "description": "This pull request updates the version of the @tscircuit/file-server package from ^0.0.23 to ^0.0.24 in the package.json file.",
-    "impact": "Tiny",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/runframe",
-    "url": "https://github.com/tscircuit/runframe/pull/639",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/runframe#637",
-    "number": 637,
-    "title": "chore: easyeda update",
-    "description": "This pull request updates the version of the 'easyeda' package in the package.json file from version 0.0.134 to 0.0.142. No additional description is provided, but this change typically involves bug fixes, performance improvements, or new features introduced in the updated package version.",
-    "impact": "Tiny",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/runframe",
-    "url": "https://github.com/tscircuit/runframe/pull/637",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/cli#205",
-    "number": 205,
-    "title": "update packages and the test server (latest schematic-symbols support)",
-    "description": "This pull request updates several package dependencies in the project, including the test server setup. It also modifies test cases to handle a warning related to LocalStorage not being available, ensuring that the tests can run without failing due to this warning. The updates include version bumps for various packages, which may improve functionality and compatibility with the latest features, particularly related to schematic-symbols support.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/cli",
-    "url": "https://github.com/tscircuit/cli/pull/205",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/cli#204",
-    "number": 204,
-    "title": "Fix: importing jlcpcb parts not being added to the file system",
-    "description": "This pull request addresses an issue where imported jlcpcb parts were not being correctly added to the file system. The changes include ensuring that the directory structure is created if it doesn't exist before writing the file, and improving the logging of file save operations. This enhances the functionality of the DevServer by ensuring that files are properly managed and saved in the expected locations.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/cli",
-    "url": "https://github.com/tscircuit/cli/pull/204",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/cli#202",
-    "number": 202,
-    "title": "fix: upgrade command",
-    "description": "This pull request updates the CLI upgrade command by replacing the previous method of checking for updates with a new method that directly checks for the latest version and updates the CLI if a new version is available. It enhances the upgrade process by streamlining the logic and improving user interaction during the update process.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/cli",
-    "url": "https://github.com/tscircuit/cli/pull/202",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/cli#203",
-    "number": 203,
-    "title": "fix packages import from the dialog",
-    "description": "This pull request updates the import statements in several files to use type imports where applicable, and it also updates the version numbers of two dependencies in the package.json file. Specifically, it changes the import of 'Command' from 'commander' to a type import, removes an unused import from 'getIndex.ts', and updates the versions of '@tscircuit/file-server' and '@tscircuit/runframe'.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/cli",
-    "url": "https://github.com/tscircuit/cli/pull/203",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/cli#200",
-    "number": 200,
-    "title": "chore: runframe update",
-    "description": "This pull request updates the version of the @tscircuit/runframe package in the package.json file from ^0.0.341 to ^0.0.481. This is a dependency update that may include bug fixes, performance improvements, or new features from the runframe package.",
-    "impact": "Tiny",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/cli",
-    "url": "https://github.com/tscircuit/cli/pull/200",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/file-server#15",
-    "number": 15,
-    "title": "Add support for HTTP/2",
-    "description": "This pull request adds support for HTTP/2 by modifying the way the `Host` header is set in the request. It replaces the existing `Host` header with a value derived from the `X-Sender-Host` header, and also sets the `authority` header to ensure compatibility with HTTP/2 requirements.",
-    "impact": "Minor",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/file-server",
-    "url": "https://github.com/tscircuit/file-server/pull/15",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/tscircuit-autorouter#128",
-    "number": 128,
-    "title": "remove warning message, when local-cache is not present",
-    "description": "This pull request removes the warning message that is displayed when localStorage is not available, simplifying the constructor of the LocalStorageCache class.",
-    "impact": "Tiny",
-    "contributor": "imrishabh18",
-    "repo": "tscircuit/tscircuit-autorouter",
-    "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/128",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/pmars-layout#14",
-    "number": 14,
-    "title": "Large change: ASCII is proportional to SVG (Fixes ASCII vs SVG Scaling), fixes and pipeline breakup for adaptation, `.intersectsAt`, `.connectToMark`",
-    "description": "This pull request introduces significant changes to the ASCII and SVG rendering of circuit layouts, ensuring that the ASCII representation is proportional to the SVG output. It also includes fixes for the adaptation pipeline and introduces new methods `.intersectsAt` and `.connectToMark` for better handling of connections in the layout. These changes aim to improve the overall functionality and usability of the circuit layout system.",
-    "impact": "Major",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/14",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/pmars-layout#13",
-    "number": 13,
-    "title": "Create Website to test tscircuit PMARS layouts",
-    "description": "This pull request introduces a new website that allows users to paste TSCircuit code, run it, and visualize both the original and optimized layouts using the PMARS layout pipeline. It includes a code editor, real-time execution, layout comparison, and URL sharing features. The website is built with React and TypeScript, and it enhances the usability of the tscircuit library by providing a user-friendly interface for testing and visualizing circuit layouts.",
-    "impact": "Major",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/13",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/pmars-layout#12",
-    "number": 12,
-    "title": "Fix e2e2, support for adding labels to passives connected to chips during adaptation",
-    "description": "This pull request introduces a new operation for adding passives with labels to pins in a circuit adaptation context. It modifies the existing edit operation interfaces and adds a new function to handle the application of this operation. The changes include updates to the edit operation types, the addition of a new function to apply the new operation, and modifications to existing logic to incorporate this new functionality. Additionally, tests have been updated to ensure the new operation works correctly within the adaptation process.",
-    "impact": "Minor",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/12",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/pmars-layout#11",
-    "number": 11,
-    "title": "More Adaptation fixes, starting more e2e tests",
-    "description": "This pull request introduces several adaptation fixes to improve the matching of components in the netlist. It adds functionality to remove unmatched components and ensures that connections between matched boxes are properly validated. Additionally, it includes the initiation of end-to-end tests to verify these adaptations.",
-    "impact": "Minor",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/11",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/pmars-layout#10",
-    "number": 10,
-    "title": "Fix e2e, improve adaptation (particularly adding missing pins)",
-    "description": "This pull request addresses issues related to end-to-end (e2e) testing and improves the adaptation process by adding missing pins to the circuit layout. It includes modifications to the EditOperation interface, enhancements in the adaptTemplateToTarget function to handle pin counts more effectively, and the addition of a new e2e test to validate the changes. The changes ensure that the adaptation process correctly adds and removes pins as needed, improving the overall functionality of the circuit builder.",
-    "impact": "Minor",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/10",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/pmars-layout#9",
-    "number": 9,
-    "title": "When adapting, transform input passives to consistent orientation",
-    "description": "This pull request introduces functionality to change the orientation of passive components in a circuit layout. It adds a new operation type for changing passive orientation, modifies the target netlist to ensure compatibility with the template's passive structures, and includes tests to verify the correct application of these changes. The changes allow for better adaptation of circuit templates to match the expected passive configurations, enhancing the overall flexibility and usability of the circuit design tool.",
-    "impact": "Minor",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/9",
-    "isAlignedWithMilestone": false
-  },
-  {
-    "tag": "tscircuit/pmars-layout#8",
-    "number": 8,
-    "title": "Public API, E2E Testing Initial (MA only), Many Adaptation Fixes, Fix Passive offset issue",
-    "description": "This pull request introduces a public API, initial end-to-end testing for the MA (Model Adaptation) functionality, and various fixes related to adaptation processes and passive offset issues. It includes new files for testing guidelines and architecture overview, as well as updates to existing files to improve functionality and documentation.",
-    "impact": "Minor",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/8",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/pmars-layout#7",
-    "number": 7,
-    "title": "Matching and scoring system, better grid stringification",
-    "description": "This pull request introduces a matching and scoring system for netlists, enhancing the ability to compare different netlist pairings based on their similarity. It also improves the grid stringification process for better visualization of circuit layouts. Key changes include the addition of new functions for computing similarity distances, identifying issues in matched boxes, and generating auto labels for chips. The changes aim to facilitate the building of keyboards by providing better tools for netlist management and visualization.",
-    "impact": "Major",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/7",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/pmars-layout#5",
-    "number": 5,
-    "title": "Template Adaptation",
-    "description": "This pull request introduces a set of new functionalities for adapting circuit templates to match target netlists. It includes the addition of various edit operations such as adding labels to pins, adding and removing pins from sides, and clearing pins. The changes are primarily focused on enhancing the adaptability of circuit templates, allowing for better alignment with specified target configurations.",
-    "impact": "Minor",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/5",
-    "isAlignedWithMilestone": true
-  },
-  {
-    "tag": "tscircuit/pmars-layout#4",
-    "number": 4,
-    "title": "Complex tscircuit-based layouts, normalization fixes, apply and get net lists from Circuit JSON",
-    "description": "This pull request introduces complex layouts based on tscircuit, implements normalization fixes, and adds functionality to apply and retrieve net lists from Circuit JSON. It includes significant changes to the ChipBuilder and CircuitBuilder classes, enhancing their capabilities to handle layouts and net lists more effectively. The changes also involve the addition of new files for converting Circuit JSON to input netlists and applying layouts to Circuit JSON, which are essential for improving the overall functionality of the tscircuit library.",
-    "impact": "Major",
-    "contributor": "seveibar",
-    "repo": "tscircuit/pmars-layout",
-    "url": "https://github.com/tscircuit/pmars-layout/pull/4",
-    "isAlignedWithMilestone": true
   }
 ]
