@@ -168,10 +168,11 @@ export async function generateMarkdown(
 
   // Add explanation for discussion contribution symbols
   markdown += "### Discussion Contribution Legend\n\n"
-  markdown += "- 🔹 Participating: Basic participation with minimal effort\n"
-  markdown += "- 🔶 Very Active: Thoughtful participation that adds value\n"
+  markdown += "- 🔹 Normal Comments: Basic participation with minimal effort\n"
   markdown +=
-    "- 💎 Extremely Active: Exceptional participation with high-quality content\n\n"
+    "- 🔶 Great Informative Comments: Thoughtful participation that adds value\n"
+  markdown +=
+    "- 💎 Incredible Comments: Exceptional participation with high-quality content\n\n"
 
   // Generate Review Table
   markdown += "## Review Table\n\n"
