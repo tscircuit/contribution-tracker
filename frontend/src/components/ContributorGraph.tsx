@@ -26,13 +26,13 @@ const DROPDOWN_MENU_ITEMS = [
   { key: "bountiedIssuesTotal", label: "Bountied Issues (Total)" },
 ]
 
-const SCORE_LABELS = {
-  4: "⭐",
-  11: "⭐⭐",
-  31: "⭐⭐⭐",
-  51: "👑",
-  76: "👑👑",
-  101: "👑👑👑",
+const WEEKLY_SCORE_LABELS = {
+  3: "⭐",
+  10: "⭐⭐",
+  30: "⭐⭐⭐",
+  50: "👑",
+  75: "👑👑",
+  100: "👑👑👑",
 }
 
 export default function ContributorGraph({ username }: { username: string }) {
@@ -69,7 +69,7 @@ export default function ContributorGraph({ username }: { username: string }) {
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={graphData}>
             {selectedMetric === "score" &&
-              Object.entries(SCORE_LABELS).map(([score, label]) => (
+              Object.entries(WEEKLY_SCORE_LABELS).map(([score, label]) => (
                 <ReferenceLine
                   key={score}
                   y={Number(score)}
