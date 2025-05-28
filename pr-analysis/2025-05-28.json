@@ -1,0 +1,112 @@
+[
+  {
+    "tag": "tscircuit/pcb-viewer#297",
+    "number": 297,
+    "title": "support nine point anchor alignment for silkscreen texts",
+    "description": "This pull request introduces support for nine-point anchor alignment for silkscreen texts in the PCB viewer. It enhances the text rendering capabilities by allowing more precise positioning of silkscreen text on printed circuit boards. The changes include updates to the text alignment logic and adjustments to the drawing functions to accommodate the new alignment options. Additionally, it aligns font sizes with the circuit-to-svg specifications, ensuring consistency in text rendering across different components.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/pcb-viewer",
+    "url": "https://github.com/tscircuit/pcb-viewer/pull/297",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/circuit-json#200",
+    "number": 200,
+    "title": "feat: add support for simple_fuse component with ratings and schematic display",
+    "description": "This pull request adds support for a new component called 'simple_fuse' to the circuit JSON library. It includes the definition of the component with its properties, such as current and voltage ratings, and integrates it into the existing component structure.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/200",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/props#243",
+    "number": 243,
+    "title": "Add footprintLibraryMap to platformConfig",
+    "description": "This PR extends the `PlatformConfig` interface by adding an optional `footprintLibraryMap` property, which is a record structure. It also updates the Zod schema for platform configuration to include this new property. The changes aim to enhance the platform configuration capabilities.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/243",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#242",
+    "number": 242,
+    "title": "Add connector component",
+    "description": "This pull request introduces a new `<connector />` component to the project. It includes the following changes: a new component is added, documentation is updated in the README and generated docs, the connector is exported from the public index, tests for the connector props are added, the prop `type` is renamed to `standard`, and the `pinCount` prop is removed from the connector.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/242",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/props#241",
+    "number": 241,
+    "title": "add schPinArrangement prop for PinHeaders",
+    "description": "This pull request adds a new property `schPinArrangement` to the `PinHeaderProps` interface, which allows for specifying the pin arrangement in schematic view. This enhancement is aimed at improving the flexibility and functionality of the PinHeader component in the context of schematic representations.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/241",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#834",
+    "number": 834,
+    "title": "Update jumper schematic defaults",
+    "description": "This pull request updates the default behavior of the <jumper/> component to create a single-sided schematic box. It also includes updates to snapshots to reflect the new rendering of the jumper schematic.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/834",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#831",
+    "number": 831,
+    "title": "Add SHLD net selector",
+    "description": "This pull request adds support for the `SHLD` net selector in the codebase. It allows the use of `sel.net.SHLD` and `sel.U1.SHLD`, and includes tests to verify the functionality of these new selectors.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/831",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-symbols#284",
+    "number": 284,
+    "title": "VCC symbol",
+    "description": "This pull request introduces a new VCC symbol to the schematic symbols repository. It adds a JSON representation of the VCC symbol and updates the TypeScript files to include this new symbol in the base symbol names and symbols index. The PR also creates multiple variations of the VCC symbol for different orientations (up, down, left, right).",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/schematic-symbols",
+    "url": "https://github.com/tscircuit/schematic-symbols/pull/284",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1162",
+    "number": 1162,
+    "title": "feat(refactor): apply consistent capitalization to user-facing strings",
+    "description": "This pull request applies consistent capitalization to user-facing strings in the application, specifically changing 'Log in' to 'Log In' and 'Sign out' to 'Sign Out'. Additionally, it updates a message in the dashboard to refer to 'packages' instead of 'snippets'.",
+    "impact": "Tiny",
+    "contributor": "techmannih",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1162",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1170",
+    "number": 1170,
+    "title": "feat: restrict access to private packages based on user session",
+    "description": "This pull request introduces a feature that restricts access to private packages based on the user's session. If a package is marked as private and the authenticated user is not the owner of the package, a 404 error is returned, indicating that the package is not found. This change enhances security by ensuring that only authorized users can access private packages.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1170",
+    "isAlignedWithMilestone": true
+  }
+]
