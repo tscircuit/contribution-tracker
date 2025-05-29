@@ -139,14 +139,7 @@ export class CachedOctokit {
       const cached = await this.getCached<
         Endpoints["GET /orgs/{org}/repos"]["response"]["data"]
       >("repos.listForOrg", params as Record<string, unknown>)
-      if (cached) return { data: cached }
-
       const response = await this.octokit.repos.listForOrg(params)
-      await this.setCached(
-        "repos.listForOrg",
-        params as Record<string, unknown>,
-        response.data,
-      )
       return response
     },
   }
