@@ -11,6 +11,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/tscircuit#661",
+    "number": 661,
+    "title": "chore: update dependency",
+    "description": "This pull request updates several dependencies in the project, including versions for '@tscircuit/capacity-autorouter', '@tscircuit/core', '@tscircuit/props', 'circuit-json', and 'schematic-symbols'.",
+    "impact": "Tiny",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit",
+    "url": "https://github.com/tscircuit/tscircuit/pull/661",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/circuit-json#200",
     "number": 200,
     "title": "feat: add support for simple_fuse component with ratings and schematic display",
@@ -20,6 +31,28 @@
     "repo": "tscircuit/circuit-json",
     "url": "https://github.com/tscircuit/circuit-json/pull/200",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/props#247",
+    "number": 247,
+    "title": "added paddingTop , Bottom , Right , Left",
+    "description": "This PR adds optional padding properties (paddingTop, paddingBottom, paddingLeft, paddingRight) to the schematicBoxProps in the schematic-box.ts file, allowing for more flexible layout options in the component.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/247",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/props#245",
+    "number": 245,
+    "title": "extend footprint library map with support for async footprints, add localCacheEngine",
+    "description": "This pull request extends the footprint library map to support asynchronous footprints and introduces a local cache engine. It modifies the `PlatformConfig` interface to allow for a new structure in the `footprintLibraryMap`, enabling it to handle both arrays and asynchronous functions that return circuit JSON. Additionally, it adds a `localCacheEngine` property that follows a subset of the localStorage interface.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/245",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/props#243",
@@ -52,6 +85,116 @@
     "contributor": "imrishabh18",
     "repo": "tscircuit/props",
     "url": "https://github.com/tscircuit/props/pull/241",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/footprinter#282",
+    "number": 282,
+    "title": "refactor pinrow",
+    "description": "This pull request refactors the `pinrow` functionality in the footprinter module. It introduces new parameters for pin label positioning and modifies the logic for determining the anchor position of pin labels. The changes enhance the flexibility of pin label placement and improve the overall structure of the code, making it easier to maintain and extend in the future.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/282",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/easyeda-converter#205",
+    "number": 205,
+    "title": "Remove the normalize function and import it from core",
+    "description": "This pull request removes the local implementation of the `normalizePinLabels` function and imports it from the `@tscircuit/core` package instead. This change helps to centralize the function's implementation and potentially reduce code duplication. Additionally, it updates the relevant tests and package dependencies to reflect this change.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/easyeda-converter",
+    "url": "https://github.com/tscircuit/easyeda-converter/pull/205",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/easyeda-converter#204",
+    "number": 204,
+    "title": "add missing parts",
+    "description": "This pull request adds missing parts to the project, specifically two new components (C1046 and C281113) that are essential for the functionality of the easyeda-converter. It includes new test cases to ensure the conversion of these components into TypeScript files and verifies their correctness in generating circuit JSON without errors.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/easyeda-converter",
+    "url": "https://github.com/tscircuit/easyeda-converter/pull/204",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/easyeda-converter#202",
+    "number": 202,
+    "title": "add missing part C9900017879",
+    "description": "This pull request adds a missing component (C9900017879) to the easyeda-converter project. It includes updates to the JSON schema to allow for null values in the component parameters, adds a new test case for the component, and includes the component's data in the repository. This enhances the library's capability to handle additional components, specifically for keyboard building.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/easyeda-converter",
+    "url": "https://github.com/tscircuit/easyeda-converter/pull/202",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/3d-viewer#304",
+    "number": 304,
+    "title": "updated jscad-electronics fixing tssop and soic",
+    "description": "This pull request updates the jscad-electronics package from version 0.0.27 to 0.0.29 and adds a new chip component with a SOIC footprint to the BoardOutline story. This change aims to fix issues related to TSSOP and SOIC footprints in the circuit design.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/304",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/3d-viewer#302",
+    "number": 302,
+    "title": "support nine point anchor alignment for silkscreen texts",
+    "description": "This pull request introduces support for nine-point anchor alignment for silkscreen texts in the PCB design tool. It modifies the geometry generation for silkscreen text to allow for more flexible positioning based on various anchor points, enhancing the usability and precision of text placement on PCBs. The changes include adjustments to the height calculations and the addition of new alignment options in the text rendering functions.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/3d-viewer",
+    "url": "https://github.com/tscircuit/3d-viewer/pull/302",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#844",
+    "number": 844,
+    "title": "export normalizePinLabels function",
+    "description": "This pull request exports the normalizePinLabels function from the schematic module, making it available for use in other parts of the application. This change is necessary to address an issue related to pin label normalization as referenced in issue #100.",
+    "impact": "Minor",
+    "contributor": "Anshgrover23",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/844",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#835",
+    "number": 835,
+    "title": "Add support for pin order in PinHeader",
+    "description": "This pull request adds support for specifying the order of pins in the PinHeader component. It introduces a new property, `schPinArrangement`, which allows users to define the arrangement of pins on both the left and right sides of the component. Additionally, it updates the package dependency for `@tscircuit/props` and includes tests to ensure the new functionality works as expected.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/835",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#839",
+    "number": 839,
+    "title": "Add parts engine caching",
+    "description": "This pull request introduces local caching for parts engine queries, allowing for improved performance by reducing redundant queries. It exposes a new type, LocalCacheEngine, and extends the platform configuration to support this caching mechanism. Additionally, it includes tests to verify the caching logic for parts engine queries.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/839",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#838",
+    "number": 838,
+    "title": "add support for jumpers with custom pins as string union (function selectors)",
+    "description": "This pull request adds support for jumpers with custom pins defined as string unions, allowing for more flexible function selectors in the codebase. It modifies type definitions to include new pin names and updates the relevant records to accommodate these changes, enhancing the functionality of the library for keyboard building.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/838",
     "isAlignedWithMilestone": true
   },
   {
@@ -88,6 +231,50 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/tscircuit.com#1180",
+    "number": 1180,
+    "title": "fake: add support to get the account by github_username",
+    "description": "This pull request adds support for retrieving user accounts by their GitHub username. It introduces a new POST method to the existing account retrieval API, allowing users to fetch account details based on their GitHub username. Additionally, it includes tests to ensure the functionality works as expected, handling both successful and error scenarios.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1180",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1179",
+    "number": 1179,
+    "title": "Change \"Open Online Example\" to link to USBC Flashlight",
+    "description": "This pull request reintroduces the `PrefetchPageLink` for the Online Example button, changing its link to point internally to `/seveibar/usb-c-flashlight#3d`. This modification allows users to access the USBC Flashlight example directly from the landing page.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1179",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1178",
+    "number": 1178,
+    "title": "refactor(landing): enhance button responsiveness and layout for better mobile experience",
+    "description": "This pull request refactors the landing page to improve the responsiveness and layout of buttons for a better mobile experience. It adjusts the button widths and layout to ensure they are more user-friendly on mobile devices, enhancing the overall user interface.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1178",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1175",
+    "number": 1175,
+    "title": "Inject package content into page prior to initial render",
+    "description": "This pull request introduces server-side rendering (SSR) data injection into the HTML response before the initial render. It modifies the existing HTML generation function to include SSR package data, which allows for improved performance and reduced API calls on the initial page load. The changes include new tags for SSR data in the HTML and a new utility function to populate the React Query cache with this SSR data, enhancing the overall user experience by preloading necessary data.",
+    "impact": "Minor",
+    "contributor": "andrii-balitskyi",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1175",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/tscircuit.com#1162",
     "number": 1162,
     "title": "feat(refactor): apply consistent capitalization to user-facing strings",
@@ -108,5 +295,60 @@
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1170",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/runframe#667",
+    "number": 667,
+    "title": "fix: Prevent execution hang when stopping and rerunning circuit compilation",
+    "description": "This PR addresses an issue where the execution would hang indefinitely when users clicked the stop button during circuit compilation and then tried to run again. It resolves problems related to mutex deadlock, race conditions, and stale UI state by implementing a cancellation mechanism and ensuring proper cleanup of resources. Users can now stop execution cleanly, rerun immediately, and see accurate progress indicators.",
+    "impact": "Minor",
+    "contributor": "andrii-balitskyi",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/667",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/schematic-match-adapt#19",
+    "number": 19,
+    "title": "template8",
+    "description": "This pull request introduces a new template (template8) for circuit building. It adds a new file for template8 and updates the index to include this new template in the TEMPLATE_FN_MAP. The new template provides a schematic layout for a chip with specific pin configurations and labels, which can be used in building circuits.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/schematic-match-adapt",
+    "url": "https://github.com/tscircuit/schematic-match-adapt/pull/19",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-match-adapt#18",
+    "number": 18,
+    "title": "Template7 and force directed netlist visualization",
+    "description": "This pull request introduces a new template (Template7) for circuit design and adds a force-directed graph visualization for netlists. The changes include new files for the template and visualization components, as well as modifications to existing files to integrate these features. The visualization allows users to interactively view connections between components in a circuit, enhancing the usability and functionality of the schematic match adapt tool.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/schematic-match-adapt",
+    "url": "https://github.com/tscircuit/schematic-match-adapt/pull/18",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/schematic-match-adapt#17",
+    "number": 17,
+    "title": "New template6, fix adaptations changing perfect matching boxes, make `remove_chip` adaptation remove all connected lines",
+    "description": "No description provided",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/schematic-match-adapt",
+    "url": "https://github.com/tscircuit/schematic-match-adapt/pull/17",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/schematic-match-adapt#16",
+    "number": 16,
+    "title": "Break up adaptation into multiple solvers, show output Circuit Json SVG, fix applying layout to circuit json to include proper net labels",
+    "description": "This pull request breaks up the adaptation process into multiple solvers, allowing for independent adaptation of matched templates. It also introduces functionality to display the output of the circuit in SVG format after layout has been applied, and fixes issues related to applying layouts to circuit JSON, ensuring that proper net labels are included. The changes enhance the modularity and usability of the adaptation process, making it easier to manage and visualize circuit layouts.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/schematic-match-adapt",
+    "url": "https://github.com/tscircuit/schematic-match-adapt/pull/16",
+    "isAlignedWithMilestone": false
   }
 ]
