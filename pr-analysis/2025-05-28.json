@@ -33,6 +33,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/props#248",
+    "number": 248,
+    "title": "improved schematicBox props",
+    "description": "This pull request enhances the `schematicBoxProps` by introducing a union type that allows for more flexible properties, including additional options for title positioning, color, and font size. It refactors the existing props to accommodate these changes, making the component more versatile for different schematic box configurations.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/248",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/props#247",
     "number": 247,
     "title": "added paddingTop , Bottom , Right , Left",
@@ -154,6 +165,50 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/core#852",
+    "number": 852,
+    "title": "updated deps + updated ss + fixed square pad plated hole for pinrow",
+    "description": "This pull request updates several dependencies in the package.json file and modifies the createComponentsFromCircuitJson function to handle a new shape for plated holes, specifically 'circular_hole_with_rect_pad'. This change allows for better representation of PCB components in the circuit design.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/852",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#851",
+    "number": 851,
+    "title": "fix: timeout issue for `compile`",
+    "description": "This pull request addresses a timeout issue in the `compile` function of the NormalComponent class. It modifies the handling of the result from a supplier part number lookup, ensuring that if the result is 'Not found', an empty object is returned instead. This change improves the caching mechanism by preventing the storage of a 'Not found' string and instead caching an empty object, which is more appropriate for further processing.",
+    "impact": "Minor",
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/851",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#848",
+    "number": 848,
+    "title": "feat: add Fuse component support",
+    "description": "This pull request introduces a new Fuse component to the tscircuit library. The Fuse component is designed to represent a fuse in electrical circuits, allowing users to specify current and voltage ratings. The implementation includes the component's configuration, rendering logic, and a corresponding test case to ensure its functionality. Additionally, the Fuse component is integrated into the existing component index and JSX intrinsic elements.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/848",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/core#845",
+    "number": 845,
+    "title": "feat(refactor):add support simple_led",
+    "description": "This pull request refactors the Led component to support a new source type 'simple_led' instead of 'simple_diode'. It also updates the package dependencies related to this change. The changes include modifications to the Led class to accommodate the new source type and additional properties like wavelength and color.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/845",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/core#844",
     "number": 844,
     "title": "export normalizePinLabels function",
@@ -220,6 +275,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#223",
+    "number": 223,
+    "title": "fixed silkscreen text from getting blurry in big boards",
+    "description": "This pull request addresses an issue where silkscreen text becomes blurry when rendered on larger printed circuit boards (PCBs). The change involves modifying the stroke property of the silkscreen text elements to 'none', which helps in maintaining clarity and sharpness of the text in the SVG output. Additionally, it includes tests to ensure that the rendering works correctly for both small and large boards.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/223",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/schematic-symbols#284",
     "number": 284,
     "title": "VCC symbol",
@@ -228,6 +294,28 @@
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-symbols",
     "url": "https://github.com/tscircuit/schematic-symbols/pull/284",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1149",
+    "number": 1149,
+    "title": "feat(editor)!!: fully refactored package based editor for dx and new features",
+    "description": "This pull request introduces a fully refactored package-based editor that enhances the user experience (dx) and adds new features. Key changes include:\n- A dropdown menu in the FileSidebar for deleting files, integrating the handleDeleteFile function.\n- Updates to CodeAndPreview and CodeEditor components to support file deletion, including necessary state management and error handling.\n- Introduction of DeleteFileProps interface for type safety in file deletion operations.\n- Enhancements to the useFileManagement hook to include handleDeleteFile logic, ensuring proper API interaction and user feedback through toast notifications.\n- Major bug fixes.",
+    "impact": "Major",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1149",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1181",
+    "number": 1181,
+    "title": "update some important dependencies",
+    "description": "This pull request updates several important dependencies in the project, including versions of `@tscircuit/footprinter`, `@tscircuit/props`, `circuit-json`, `@tscircuit/core`, `@tscircuit/runframe`, and `circuit-to-svg`. These updates may include bug fixes, performance improvements, and new features from the respective libraries.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1181",
     "isAlignedWithMilestone": false
   },
   {
@@ -295,6 +383,28 @@
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1170",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/eval#400",
+    "number": 400,
+    "title": "chore: update @tscircuit/core to v0.0.430",
+    "description": "Automated update of @tscircuit/core to v0.0.430. This PR updates the version of the @tscircuit/core package in the package.json file from v0.0.418 to v0.0.430, which is a routine maintenance task to keep dependencies up to date.",
+    "impact": "Tiny",
+    "contributor": "tscircuitbot",
+    "repo": "tscircuit/eval",
+    "url": "https://github.com/tscircuit/eval/pull/400",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/runframe#672",
+    "number": 672,
+    "title": "update dependencies",
+    "description": "This pull request updates several dependencies in the project, including the versions of `@tscircuit/3d-viewer`, `@tscircuit/footprinter`, and `@tscircuit/pcb-viewer`. Additionally, it introduces a new component, `platedhole`, in the example render logs fixture.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/runframe",
+    "url": "https://github.com/tscircuit/runframe/pull/672",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/runframe#667",
