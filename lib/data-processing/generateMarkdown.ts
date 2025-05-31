@@ -261,8 +261,24 @@ export async function generateMarkdown(
     {} as Record<string, AnalyzedPR[]>,
   )
 
+  const repoOwners = Object.entries(contributorIdToStatsMap)
+    .filter(([_, stats]) => stats.reposOwned && stats.reposOwned.length > 0)
+    .reduce(
+      (ownersMap, [ownerName, contributorStats]) => {
+        contributorStats.reposOwned?.forEach(({ repo: repoName }) => {
+          if (!ownersMap[repoName]) {
+            ownersMap[repoName] = []
+          }
+          ownersMap[repoName].push(ownerName)
+        })
+        return ownersMap
+      },
+      {} as Record<string, string[]>,
+    )
+
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
+    markdown += `> Owners: ${repoOwners[repo]?.map((owner) => `[${owner}](https://github.com/${repo}/blob/main/.github/CODEOWNERS)`).join(", ")}\n\n`
     markdown +=
       "| PR # | Impact | Contributor | Description | Milestone Aligned |\n"
     markdown +=

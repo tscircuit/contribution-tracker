@@ -17,6 +17,7 @@ export class CachedOctokit {
     "issues.listForRepo": DEFAULT_CACHE_EXPIRY,
     "issues.listComments": 6 * 60 * 60 * 1000, // 6 hours for comments
     "repos.listForOrg": DEFAULT_CACHE_EXPIRY,
+    "raw.fetchFile": DEFAULT_CACHE_EXPIRY,
   }
 
   constructor(options?: ConstructorParameters<typeof Octokit>[0]) {
@@ -148,6 +149,33 @@ export class CachedOctokit {
         response.data,
       )
       return response
+    },
+  }
+
+  public raw = {
+    fetchFile: async (params: {
+      owner: string
+      repo: string
+      path: string
+      ref?: string
+    }): Promise<{ data: string }> => {
+      const cached = await this.getCached<string>("raw.fetchFile", params)
+      if (cached) return { data: cached }
+
+      const { owner, repo, path, ref = "main" } = params
+      const url = `https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/${ref}/${path}`
+
+      const response = await fetch(url)
+      if (!response.ok) {
+        throw new Error(
+          `Failed to fetch file: ${response.status} ${response.statusText}`,
+        )
+      }
+
+      const content = await response.text()
+      await this.setCached("raw.fetchFile", params, content)
+
+      return { data: content }
     },
   }
 }

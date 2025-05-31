@@ -43,6 +43,10 @@ export interface ContributorStats {
   discussionNormalComments?: number // Count of "NormalComment" level comments
   discussionGreatInformativeComments?: number // Count of "GreatInformativeComment" level comments
   discussionIncredibleComments?: number // Count of "IncredibleCommentTopTier" level comments
+  reposOwned?: Array<{
+    repo: string
+    paths: string[]
+  }>
 }
 
 export interface PullRequest {
