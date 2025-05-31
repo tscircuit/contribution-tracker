@@ -1,5 +1,16 @@
 [
   {
+    "tag": "tscircuit/schematic-viewer#96",
+    "number": 96,
+    "title": "Fix background color when panning schematic",
+    "description": "This pull request fixes the background color of the schematic viewer by parsing the background color from the generated SVG and applying it to the viewer container. This ensures that the panning experience matches the SVG background color, enhancing the visual consistency of the schematic viewer.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/schematic-viewer",
+    "url": "https://github.com/tscircuit/schematic-viewer/pull/96",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/pcb-viewer#297",
     "number": 297,
     "title": "support nine point anchor alignment for silkscreen texts",
@@ -22,6 +33,17 @@
     "isAlignedWithMilestone": false
   },
   {
+    "tag": "tscircuit/circuit-json#206",
+    "number": 206,
+    "title": "filled boolean prop to pcb_silkscreen_rect",
+    "description": "This pull request adds an optional boolean property `filled` to the `pcb_silkscreen_rect` interface, allowing users to specify whether the silkscreen rectangle should be filled. The default value for this property is set to `true`.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/circuit-json",
+    "url": "https://github.com/tscircuit/circuit-json/pull/206",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/circuit-json#200",
     "number": 200,
     "title": "feat: add support for simple_fuse component with ratings and schematic display",
@@ -30,6 +52,50 @@
     "contributor": "techmannih",
     "repo": "tscircuit/circuit-json",
     "url": "https://github.com/tscircuit/circuit-json/pull/200",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/props#246",
+    "number": 246,
+    "title": "enable disabling pcb/schematic/parts engine inside platform config",
+    "description": "This pull request introduces new optional boolean properties to the PlatformConfig interface, allowing users to disable the PCB, schematic, and parts engine functionalities within the platform configuration. This enhancement provides greater flexibility in configuring the platform according to user needs.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/246",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/props#252",
+    "number": 252,
+    "title": "add match-adapt layout method",
+    "description": "This pull request introduces a new layout mode called 'match-adapt' to the layout configuration. It modifies the existing layout configuration schema to include 'match-adapt' as an option for layoutMode and adds a corresponding boolean property 'matchAdapt' to the LayoutConfig interface.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/252",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#251",
+    "number": 251,
+    "title": "require either width & height or overlay",
+    "description": "This pull request modifies the `schematicBoxProps` validation to require either both `width` and `height` to be provided or a non-empty `overlay` array. This change ensures that the component has the necessary properties for rendering correctly, enhancing the robustness of the component's props validation.",
+    "impact": "Minor",
+    "contributor": "Abse2001",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/251",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/props#250",
+    "number": 250,
+    "title": "Add tscircuit platform configuration docs",
+    "description": "This pull request updates the README generation script to include documentation for the tscircuit platform configuration. It adds a new section in the README that describes the PlatformConfig interface, which outlines various properties related to the platform's configuration. The changes also include running the documentation generation script to reflect these updates in the README file.",
+    "impact": "Tiny",
+    "contributor": "seveibar",
+    "repo": "tscircuit/props",
+    "url": "https://github.com/tscircuit/props/pull/250",
     "isAlignedWithMilestone": false
   },
   {
@@ -99,6 +165,17 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/footprinter#283",
+    "number": 283,
+    "title": "fixed pinrow pinlabel orientation options",
+    "description": "This pull request introduces improvements to the pinrow component by adding new options for pin label orientation. It replaces the previous boolean flags for pin label positions (top, bottom, left, right) with more flexible options for text alignment (left, center, right) and vertical inversion. This change enhances the configurability of pin labels in the design process, allowing for better customization in PCB layouts.",
+    "impact": "Minor",
+    "contributor": "ShiboSoftwareDev",
+    "repo": "tscircuit/footprinter",
+    "url": "https://github.com/tscircuit/footprinter/pull/283",
+    "isAlignedWithMilestone": true
+  },
+  {
     "tag": "tscircuit/footprinter#282",
     "number": 282,
     "title": "refactor pinrow",
@@ -163,6 +240,17 @@
     "repo": "tscircuit/3d-viewer",
     "url": "https://github.com/tscircuit/3d-viewer/pull/302",
     "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/core#855",
+    "number": 855,
+    "title": "Add footprint URL support",
+    "description": "This pull request introduces support for loading footprints from URLs in a new `FootprintRender` phase. It includes documentation updates for the new render phase and ensures that footprint URL loading is completed before initializing ports. The changes also involve updates to tests to verify the new functionality.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/core",
+    "url": "https://github.com/tscircuit/core/pull/855",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/core#852",
@@ -275,6 +363,39 @@
     "isAlignedWithMilestone": true
   },
   {
+    "tag": "tscircuit/circuit-to-svg#230",
+    "number": 230,
+    "title": "update schematic-symbols dependencies",
+    "description": "This pull request updates the version of the 'schematic-symbols' dependency from 0.0.125 to 0.0.140 in the package.json file. This change may include bug fixes or improvements from the dependency that could enhance the functionality of the project.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/230",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#228",
+    "number": 228,
+    "title": "Add board aspect ratio option for PCB SVG",
+    "description": "This PR introduces a new option `matchBoardAspectRatio` for the `convertCircuitJsonToPcbSvg` function, allowing the SVG dimensions to adjust according to the aspect ratio of the `pcb_board` found in the circuit JSON. It also includes documentation updates in the README and adds tests to verify the new functionality.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/228",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/circuit-to-svg#226",
+    "number": 226,
+    "title": "Add PCB rendering context, support `{ layer: \"top\" | \"bottom\" }` options, major refactor for context passing pattern",
+    "description": "This pull request refactors the PCB rendering process to utilize a new `PcbContext` for managing rendering options such as layer and transformation. It introduces support for filtering layers directly in SVG object creation, enhancing the flexibility of the rendering process. Additionally, it updates the solder paste mask converter to align with the new context API, ensuring consistent behavior across the rendering pipeline.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/circuit-to-svg",
+    "url": "https://github.com/tscircuit/circuit-to-svg/pull/226",
+    "isAlignedWithMilestone": false
+  },
+  {
     "tag": "tscircuit/circuit-to-svg#223",
     "number": 223,
     "title": "fixed silkscreen text from getting blurry in big boards",
@@ -295,6 +416,39 @@
     "repo": "tscircuit/schematic-symbols",
     "url": "https://github.com/tscircuit/schematic-symbols/pull/284",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1184",
+    "number": 1184,
+    "title": "update circuit-to-svg and schematic-symbols dependencies",
+    "description": "This pull request updates the dependencies for 'circuit-to-svg' from version 0.0.131 to 0.0.135 and 'schematic-symbols' from version 0.0.132 to 0.0.140 in the package.json file. These updates likely include bug fixes and improvements from the respective libraries, which can enhance the functionality and performance of the project.",
+    "impact": "Minor",
+    "contributor": "techmannih",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1184",
+    "isAlignedWithMilestone": true
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1178",
+    "number": 1178,
+    "title": "refactor(landing): enhance button responsiveness and layout for better mobile experience",
+    "description": "This pull request refactors the landing page to improve the responsiveness and layout of buttons for a better mobile experience. It adjusts the button widths and layout to ensure they are more user-friendly on mobile devices, enhancing the overall user interface.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1178",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/tscircuit.com#1170",
+    "number": 1170,
+    "title": "feat: restrict access to private packages based on user session",
+    "description": "This pull request introduces a feature that restricts access to private packages based on the user's session. If a package is marked as private and the authenticated user is not the owner of the package, a 404 error is returned, indicating that the package is not found. This change enhances security by ensuring that only authorized users can access private packages.",
+    "impact": "Minor",
+    "contributor": "ArnavK-09",
+    "repo": "tscircuit/tscircuit.com",
+    "url": "https://github.com/tscircuit/tscircuit.com/pull/1170",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/tscircuit.com#1149",
@@ -341,17 +495,6 @@
     "isAlignedWithMilestone": false
   },
   {
-    "tag": "tscircuit/tscircuit.com#1178",
-    "number": 1178,
-    "title": "refactor(landing): enhance button responsiveness and layout for better mobile experience",
-    "description": "This pull request refactors the landing page to improve the responsiveness and layout of buttons for a better mobile experience. It adjusts the button widths and layout to ensure they are more user-friendly on mobile devices, enhancing the overall user interface.",
-    "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/1178",
-    "isAlignedWithMilestone": false
-  },
-  {
     "tag": "tscircuit/tscircuit.com#1175",
     "number": 1175,
     "title": "Inject package content into page prior to initial render",
@@ -374,15 +517,15 @@
     "isAlignedWithMilestone": false
   },
   {
-    "tag": "tscircuit/tscircuit.com#1170",
-    "number": 1170,
-    "title": "feat: restrict access to private packages based on user session",
-    "description": "This pull request introduces a feature that restricts access to private packages based on the user's session. If a package is marked as private and the authenticated user is not the owner of the package, a 404 error is returned, indicating that the package is not found. This change enhances security by ensuring that only authorized users can access private packages.",
+    "tag": "tscircuit/jlcsearch#54",
+    "number": 54,
+    "title": "Fallback route when the category doesn't matches of the parts",
+    "description": "This pull request introduces a fallback route that handles requests for non-existent categories by returning a 404 error response. It includes both the implementation of the route and a test case to verify its functionality.",
     "impact": "Minor",
-    "contributor": "ArnavK-09",
-    "repo": "tscircuit/tscircuit.com",
-    "url": "https://github.com/tscircuit/tscircuit.com/pull/1170",
-    "isAlignedWithMilestone": true
+    "contributor": "imrishabh18",
+    "repo": "tscircuit/jlcsearch",
+    "url": "https://github.com/tscircuit/jlcsearch/pull/54",
+    "isAlignedWithMilestone": false
   },
   {
     "tag": "tscircuit/eval#400",
@@ -416,6 +559,17 @@
     "repo": "tscircuit/runframe",
     "url": "https://github.com/tscircuit/runframe/pull/667",
     "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/schematic-match-adapt#20",
+    "number": 20,
+    "title": "pathTo pathfinding, major fixes for adaptation, pinMargin for adaptation, FD graph fixes, many fixes for issues and scoring",
+    "description": "This PR introduces several significant changes and improvements to the adaptation process in the schematic matching tool. Key features include:\n- Implementation of a new pathfinding method to navigate around obstacles in netlists.\n- Major fixes related to pin margins, which may break existing functionality but enhance adaptability.\n- Improvements to the force-directed graph layout, including better pin positioning and mouse event handling.\n- Numerous bug fixes and enhancements to existing features, ensuring a more robust adaptation process.\n- Introduction of new tests and updates to existing ones to ensure reliability and correctness of the adaptation logic.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/schematic-match-adapt",
+    "url": "https://github.com/tscircuit/schematic-match-adapt/pull/20",
+    "isAlignedWithMilestone": true
   },
   {
     "tag": "tscircuit/schematic-match-adapt#19",
@@ -459,6 +613,39 @@
     "contributor": "seveibar",
     "repo": "tscircuit/schematic-match-adapt",
     "url": "https://github.com/tscircuit/schematic-match-adapt/pull/16",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/simple-3d-svg#9",
+    "number": 9,
+    "title": "Initial STL Support",
+    "description": "This pull request introduces initial support for STL (Stereolithography) file rendering in the simple-3d-svg library. It includes the addition of a new STL loader, updates to the rendering logic to accommodate STL meshes, and tests to ensure functionality. The changes allow users to load and render 3D models from STL files, enhancing the library's capabilities for 3D graphics rendering.",
+    "impact": "Major",
+    "contributor": "seveibar",
+    "repo": "tscircuit/simple-3d-svg",
+    "url": "https://github.com/tscircuit/simple-3d-svg/pull/9",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/simple-3d-svg#6",
+    "number": 6,
+    "title": "Add support for box top images",
+    "description": "This pull request adds support for rendering perspective-correct top face images on 3D boxes in the SVG renderer. It introduces a new property for boxes to specify images for the top face, implements the necessary rendering logic, and includes tests to ensure functionality. The changes enhance the visual representation of 3D boxes by allowing images to be mapped onto their top faces, improving the overall rendering capabilities of the library.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/simple-3d-svg",
+    "url": "https://github.com/tscircuit/simple-3d-svg/pull/6",
+    "isAlignedWithMilestone": false
+  },
+  {
+    "tag": "tscircuit/simple-3d-svg#5",
+    "number": 5,
+    "title": "Add top face image support",
+    "description": "This pull request adds support for rendering images on the top face of 3D boxes in the SVG renderer. It introduces a new property `faceImages.top` to the Box interface, allowing users to specify an image that will be mapped onto the top face of the box. The implementation includes updates to the README for usage instructions, a snapshot test to ensure the feature works as intended, and the necessary code changes to handle the image rendering with perspective accuracy.",
+    "impact": "Minor",
+    "contributor": "seveibar",
+    "repo": "tscircuit/simple-3d-svg",
+    "url": "https://github.com/tscircuit/simple-3d-svg/pull/5",
     "isAlignedWithMilestone": false
   }
 ]
