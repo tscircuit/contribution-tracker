@@ -278,7 +278,7 @@ export async function generateMarkdown(
 
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
-    markdown += `> Owners: ${repoOwners[repo]?.map((owner) => `[${owner}](https://github.com/${owner})`).join(", ")}\n\n`
+    markdown += `> Owners: ${repoOwners[repo]?.map((owner) => `[${owner}](https://github.com/${repo}/blob/main/.github/CODEOWNERS)`).join(", ")}\n\n`
     markdown +=
       "| PR # | Impact | Contributor | Description | Milestone Aligned |\n"
     markdown +=

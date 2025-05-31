@@ -64,9 +64,9 @@ export async function generateOverview(startDate: string) {
             contributorData[contributor].reposOwned ?? []
           ).concat({
             repo,
-            paths:
-              repoOwners.find((content) => content.owners.includes(contributor))
-                ?.paths ?? "*",
+            paths: repoOwners.find((content) =>
+              content.owners.includes(contributor),
+            )?.paths ?? ["*"],
           })
         }
       }

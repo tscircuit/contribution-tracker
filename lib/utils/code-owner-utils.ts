@@ -1,7 +1,7 @@
 import { octokit } from "lib/sdks"
 
 interface CodeOwnerEntry {
-  paths: string
+  paths: string[]
   owners: string[]
 }
 
@@ -17,7 +17,7 @@ export const parseCodeownersFile = (fileContent: string): CodeOwnerEntry[] => {
       const trimmedLine = line.trim()
       const [paths, ...owners] = trimmedLine.split(/\s+/)
       return {
-        paths,
+        paths: paths.split(" "),
         owners: owners
           .filter((owner) => owner && !owner.includes("/"))
           .map((owner) => owner.replace(/^@/, "")),

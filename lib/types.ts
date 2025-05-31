@@ -45,7 +45,7 @@ export interface ContributorStats {
   discussionIncredibleComments?: number // Count of "IncredibleCommentTopTier" level comments
   reposOwned?: Array<{
     repo: string
-    paths: string
+    paths: string[]
   }>
 }
 
