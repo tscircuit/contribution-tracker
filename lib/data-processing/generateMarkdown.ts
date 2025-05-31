@@ -264,21 +264,21 @@ export async function generateMarkdown(
   const repoOwners = Object.entries(contributorIdToStatsMap)
     .filter(([_, stats]) => stats.reposOwned && stats.reposOwned.length > 0)
     .reduce(
-      (acc, [contributor, stats]) => {
-        stats.reposOwned?.forEach((repo: string) => {
-          if (!acc[repo]) {
-            acc[repo] = []
+      (ownersMap, [ownerName, contributorStats]) => {
+        contributorStats.reposOwned?.forEach(({ repo: repoName }) => {
+          if (!ownersMap[repoName]) {
+            ownersMap[repoName] = []
           }
-          acc[repo].push(contributor)
+          ownersMap[repoName].push(ownerName)
         })
-        return acc
+        return ownersMap
       },
       {} as Record<string, string[]>,
     )
 
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
-    markdown += `> Owners: ${repoOwners[repo]?.join(", ")}\n\n`
+    markdown += `> Owners: ${repoOwners[repo]?.map((owner) => `[${owner}](https://github.com/${owner})`).join(", ")}\n\n`
     markdown +=
       "| PR # | Impact | Contributor | Description | Milestone Aligned |\n"
     markdown +=

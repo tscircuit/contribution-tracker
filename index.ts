@@ -62,7 +62,12 @@ export async function generateOverview(startDate: string) {
         if (isRepoOwner) {
           contributorData[contributor].reposOwned = (
             contributorData[contributor].reposOwned ?? []
-          ).concat(repo)
+          ).concat({
+            repo,
+            paths:
+              repoOwners.find((content) => content.owners.includes(contributor))
+                ?.paths ?? "*",
+          })
         }
       }
       contributorData[contributor].reviewsReceived += pr.reviewsReceived
