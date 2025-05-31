@@ -11,9 +11,9 @@ import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
 import { getLastWednesday } from "lib/ai/date-utils"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
-import { analyzePRWithClaude } from "lib/ai/analyzePRWithClaude"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { storePrAnalysis } from "lib/data-processing/storePrAnalysis"
+import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
@@ -26,7 +26,7 @@ export async function generateOverview(startDate: string) {
 
   for (const repo of repos) {
     console.log(`\nAnalyzing ${repo}`)
-
+    const repoOwners = await fetchCodeownersFile(repo)
     const prsWithReviews = await getAllPRs(repo, startDate)
     console.log(`Found ${prsWithReviews.length} total PRs`)
     for (const pr of prsWithReviews) {
@@ -55,6 +55,16 @@ export async function generateOverview(startDate: string) {
         }
       }
 
+      if (repoOwners.length > 0) {
+        const isRepoOwner = repoOwners.some((content) =>
+          content.owners.includes(contributor),
+        )
+        if (isRepoOwner) {
+          contributorData[contributor].reposOwned = (
+            contributorData[contributor].reposOwned ?? []
+          ).concat(repo)
+        }
+      }
       contributorData[contributor].reviewsReceived += pr.reviewsReceived
       contributorData[contributor].rejectionsReceived += pr.rejectionsReceived
       contributorData[contributor].approvalsReceived += pr.approvalsReceived
