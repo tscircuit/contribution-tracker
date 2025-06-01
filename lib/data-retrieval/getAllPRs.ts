@@ -120,6 +120,12 @@ export async function getAllPRs(
         rejectionsReceived,
         reviewsByUser,
         isClosed: pr.state === "closed",
+        state:
+          pr.state === "closed" && !pr.merged_at
+            ? "closed"
+            : pr.merged_at
+              ? "merged"
+              : "opened",
       } as PullRequestWithReviews
     }),
   )

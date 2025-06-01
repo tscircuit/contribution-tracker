@@ -27,6 +27,8 @@ export async function analyzePRWithAI(
     prompt: generateAnalyzePRPrompt(pr, repo),
   })
   return {
+    ...pr,
+    state: pr.state,
     number: result.object.number,
     title: result.object.title,
     description: result.object.analysis,
