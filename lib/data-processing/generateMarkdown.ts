@@ -278,7 +278,6 @@ export async function generateMarkdown(
 
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
-    markdown += `> Owners: ${repoOwners[repo]?.map((owner) => `[${owner}](https://github.com/${repo}/blob/main/.github/CODEOWNERS)`).join(", ")}\n\n`
     markdown +=
       "| PR # | Impact | Contributor | Description | Milestone Aligned |\n"
     markdown +=
@@ -316,6 +315,43 @@ export async function generateMarkdown(
     })
     markdown += "\n"
   })
+
+  // Generate Repository Owners Table
+  markdown += "## Repository Owners\n\n"
+  markdown += "| Repository | Codeowners | Paths | Edit |\n"
+  markdown += "|------------|------------|-------|------|\n"
+
+  const repoOwnersWithPaths = Object.entries(contributorIdToStatsMap)
+    .filter(([_, stats]) => stats.reposOwned && stats.reposOwned.length > 0)
+    .reduce(
+      (ownersMap, [ownerName, contributorStats]) => {
+        contributorStats.reposOwned?.forEach(({ repo: repoName, paths }) => {
+          if (!ownersMap[repoName]) {
+            ownersMap[repoName] = { owners: [], paths: [] }
+          }
+          if (!ownersMap[repoName].owners.includes(ownerName)) {
+            ownersMap[repoName].owners.push(ownerName)
+          }
+          if (paths && paths.length > 0) {
+            paths.forEach((path) => {
+              if (!ownersMap[repoName].paths.includes(path)) {
+                ownersMap[repoName].paths.push(path)
+              }
+            })
+          }
+        })
+        return ownersMap
+      },
+      {} as Record<string, { owners: string[]; paths: string[] }>,
+    )
+
+  Object.entries(repoOwnersWithPaths).forEach(([repo, { owners, paths }]) => {
+    const ownersLinks = owners
+      .map((owner) => `[${owner}](https://github.com/${owner})`)
+      .join(", ")
+    markdown += `| [${repo}](https://github.com/${repo}) | ${ownersLinks} | ${paths.join(", ")} | [Edit](https://github.com/${repo}/edit/main/.github/CODEOWNERS) |\n`
+  })
+  markdown += "\n"
 
   return markdown
 }
