@@ -51,6 +51,7 @@ export interface ContributorStats {
 
 export interface PullRequest {
   number: number
+  state: "merged" | "opened" | "closed"
   title: string
   body: string
   user: {
@@ -74,7 +75,7 @@ export interface PullRequestWithReviews extends PullRequest {
   reviewsByUser?: Record<string, ReviewerStats>
 }
 
-export interface AnalyzedPR {
+export interface AnalyzedPR extends PullRequest {
   number: number
   title: string
   description: string

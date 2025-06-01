@@ -7,7 +7,7 @@ import { generateAiObjectCached } from "./sdk"
 const prSchema = z.object({
   number: z.number(),
   title: z.string(),
-  description: z.string(),
+  analysis: z.string(),
   impact: z.enum(["Major", "Minor", "Tiny"]),
   contributor: z.string(),
   repo: z.string(),
@@ -27,9 +27,11 @@ export async function analyzePRWithAI(
     prompt: generateAnalyzePRPrompt(pr, repo),
   })
   return {
+    ...pr,
+    state: pr.state,
     number: result.object.number,
     title: result.object.title,
-    description: result.object.description,
+    description: result.object.analysis,
     impact: result.object.impact,
     contributor: result.object.contributor,
     repo: result.object.repo,
