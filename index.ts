@@ -11,7 +11,6 @@ import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
 import { getLastWednesday } from "lib/ai/date-utils"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
-import { analyzePRWithClaude } from "lib/ai/analyzePRWithClaude"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { storePrAnalysis } from "lib/data-processing/storePrAnalysis"
 

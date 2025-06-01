@@ -1,5 +1,5 @@
 import type { DiscussionComment } from "lib/types"
-import { CURRENT_MILESTONE } from "shared/types/milestones"
+import { CURRENT_MILESTONES } from "milestones"
 
 export function generateAnalyzeDiscussionPrompt(
   comment: DiscussionComment,
@@ -50,6 +50,12 @@ export function generateAnalyzePRPrompt(
   },
   repo: string,
 ): string {
+  const currentMilestones = CURRENT_MILESTONES.filter((milestone) => {
+    if (!milestone.isActive) return false
+    if (milestone.repos && !milestone.repos.includes(repo)) return false
+    return true
+  })
+
   return `
 <task>Conduct a strict and thorough analysis of the following pull request in the context of its impact, change type, and alignment with the current development milestone.</task>
 
@@ -66,11 +72,18 @@ export function generateAnalyzePRPrompt(
 ${pr.diff || "No diff provided"}
 </diff>
 
-<milestone>
-- Name: ${CURRENT_MILESTONE.name}
-- Description: ${CURRENT_MILESTONE.description}
-- Keywords: ${CURRENT_MILESTONE.keywords.join(", ")}
-</milestone>
+<current-milestones>
+${currentMilestones
+  .map(
+    (milestone) => `
+- Name: ${milestone.name}
+- Description: ${milestone.description}
+- Keywords: ${milestone.keywords.join(", ")}
+${milestone.customRequirements ? `- Custom Requirements: ${milestone.customRequirements}` : ""}
+`,
+  )
+  .join("\n---\n")}
+</current-milestones>
 
 <instructions>
 Strictly assess the PR across the following dimensions:
@@ -88,6 +101,7 @@ Strictly assess the PR across the following dimensions:
      - Typo fixes.
      - Changes involving only \`package.json\`, \`package-lock.json\`, or \`yarn.lock\`.
      - Cosmetic or non-functional adjustments.
+     - Minor workflow only changes
 
    ❗ Package or lock file changes must be treated as "Tiny", regardless of description.
 </impact-assessment>
