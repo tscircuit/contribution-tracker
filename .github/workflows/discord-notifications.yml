@@ -1,0 +1,41 @@
+name: Hourly Run
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Run every hour
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
+
+    - name: Install dependencies
+      run: bun install
+
+    - name: Post Recent PRs to Discord
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ANTHROPIC_API_KEY: ${{ secrets.TSCIRCUIT_BOT_ANTHROPIC_API_KEY }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        HTTP_WEBHOOK_URL: ${{ secrets.HTTP_WEBHOOK_URL }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        GITHUB_ORG: 'tscircuit'
+        FULL_REPO_LIST: 'true'
+      run: bun run scripts/pr-notifications.ts
+
+    - name: Post Recent Issues to Discord
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ISSUES_DISCORD_WEBHOOK_URL: ${{ secrets.ISSUES_DISCORD_WEBHOOK_URL }}
+        GITHUB_ORG: 'tscircuit'
+        FULL_REPO_LIST: 'true'
+      run: bun run scripts/issue-notifications.ts
