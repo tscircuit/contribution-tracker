@@ -5,7 +5,7 @@ import { Modal } from "./components/Modal"
 import { useContributorsData } from "./hooks/useContributorsData"
 import ContributorGraph from "./components/ContributorGraph"
 import { PrsTable } from "./components/PrsTable"
-import { CURRENT_MILESTONE } from "./types/milestones"
+import { CURRENT_MILESTONES } from "milestones"
 import { AlertCircleIcon } from "lucide-react"
 import { type PrAnalysisResult } from "./types/contributor"
 
@@ -24,13 +24,21 @@ const PrSection = ({
     <>
       <div className="mb-4">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
-        <div className="text-sm text-gray-600">
-          Current Milestone:{" "}
-          <span className="font-semibold">{CURRENT_MILESTONE.name}</span>
-          <span className="ml-2 text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">
-            {CURRENT_MILESTONE.startDate} to {CURRENT_MILESTONE.endDate}
-          </span>
-        </div>
+        {CURRENT_MILESTONES.filter((milestone) => milestone.isActive).map(
+          (milestone) => (
+            <div
+              key={milestone.name}
+              className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-md border border-gray-200"
+            >
+              <span className="font-medium text-gray-700">
+                Current Milestone:
+              </span>
+              <span className="font-semibold text-gray-900">
+                {milestone.name}
+              </span>
+            </div>
+          ),
+        )}
       </div>
       {Object.entries(prsData).map(([key, prs]) => {
         if (prs && prs.length > 0) {

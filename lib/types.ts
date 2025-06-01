@@ -80,3 +80,12 @@ export interface AnalyzedPR {
   url: string
   isAlignedWithMilestone?: boolean // Whether the PR aligns with the current milestone
 }
+
+export interface Milestone {
+  name: string
+  description: string
+  keywords: string[]
+  isActive: boolean
+  repos?: string[]
+  customRequirements?: string
+}
