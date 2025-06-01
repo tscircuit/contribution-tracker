@@ -87,6 +87,7 @@ Impact: [Major/Minor/Tiny]`
     const impact = content.split("Impact:")?.[1] ?? ""
 
     return {
+      ...pr,
       number: pr.number,
       title: pr.title,
       description: description.replace("Description: ", "").trim(),
@@ -101,6 +102,7 @@ Impact: [Major/Minor/Tiny]`
     }
   } catch (error) {
     return {
+      ...pr,
       number: pr.number,
       title: pr.title,
       description: "",
