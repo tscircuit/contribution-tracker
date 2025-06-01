@@ -303,8 +303,8 @@ export async function generateMarkdown(
 
   // Generate Repository Owners Table
   markdown += "## Repository Owners\n\n"
-  markdown += "| Repository | Codeowners | Paths | Edit |\n"
-  markdown += "|------------|------------|-------|------|\n"
+  markdown += "| Repository | Codeowners |\n"
+  markdown += "|------------|------------|\n"
 
   const repoOwnersWithPaths = Object.entries(contributorIdToStatsMap)
     .filter(([_, stats]) => stats.reposOwned && stats.reposOwned.length > 0)
@@ -330,11 +330,45 @@ export async function generateMarkdown(
       {} as Record<string, { owners: string[]; paths: string[] }>,
     )
 
-  Object.entries(repoOwnersWithPaths).forEach(([repo, { owners, paths }]) => {
+  Object.entries(repoOwnersWithPaths).forEach(([repo, { owners }]) => {
     const ownersLinks = owners
       .map((owner) => `[${owner}](https://github.com/${owner})`)
       .join(", ")
-    markdown += `| [${repo}](https://github.com/${repo}) | ${ownersLinks} | ${paths.join(", ")} | [Edit](https://github.com/${repo}/edit/main/.github/CODEOWNERS) |\n`
+    markdown += `| [${repo}](https://github.com/${repo}/blob/main/.github/CODEOWNERS) | ${ownersLinks} |\n`
+  })
+  markdown += "\n"
+
+  // Generate Repos by Owner Table
+  markdown += "## Repos by Owner\n\n"
+  markdown += "| User | Repo | Paths |\n"
+  markdown += "|------|------|-------|\n"
+
+  const ownerRepos = Object.entries(contributorIdToStatsMap)
+    .filter(([_, stats]) => stats.reposOwned && stats.reposOwned.length > 0)
+    .reduce(
+      (ownersMap, [ownerName, contributorStats]) => {
+        if (!ownersMap[ownerName]) {
+          ownersMap[ownerName] = []
+        }
+        contributorStats.reposOwned?.forEach(({ repo: repoName, paths }) => {
+          ownersMap[ownerName].push({
+            repo: repoName,
+            paths: paths || [],
+          })
+        })
+        return ownersMap
+      },
+      {} as Record<string, Array<{ repo: string; paths: string[] }>>,
+    )
+
+  Object.entries(ownerRepos).forEach(([owner, repos]) => {
+    repos.forEach((repoData, index) => {
+      const userCell =
+        index === 0 ? `[${owner}](https://github.com/${owner})` : ""
+      const pathsText =
+        repoData.paths.length > 0 ? repoData.paths.join(", ") : "*"
+      markdown += `| ${userCell} | [${repoData.repo}](https://github.com/${repoData.repo}/blob/main/.github/CODEOWNERS) | ${pathsText} |\n`
+    })
   })
   markdown += "\n"
 
