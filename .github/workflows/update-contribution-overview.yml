@@ -1,57 +1,55 @@
-name: Update Contribution Overview
+name: Hourly Run
 
 on:
   schedule:
-    - cron: "0 18 * * *" # 6am PST
-  workflow_dispatch: # Allow manual triggering
+    - cron: '0 * * * *'  # Run every hour
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
-  update-chart:
+  run-script:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-          
-      - name: Cache AI directory
-        uses: actions/cache@v4
-        with:
-          path: .cache-ai
-          key: cache-ai-${{ runner.os }}-${{ github.job }}-${{ github.run_id }}
-          restore-keys: |
-            cache-ai-${{ runner.os }}-${{ github.job }}-
-          
-      - name: Cache GitHub directory
-        uses: actions/cache@v4
-        with:
-          path: .cache
-          key: cache-github-${{ runner.os }}-${{ github.job }}-${{ github.run_id }}
-          restore-keys: |
-            cache-github-${{ runner.os }}-${{ github.job }}-
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
 
-      - name: Install dependencies
-        run: bun install
+    - name: Get current week
+      id: date
+      run: echo "week=$(date +'%G-W%V')" >> $GITHUB_OUTPUT
 
-      - name: Run script
-        run: bun scripts/generate-weekly-overview.ts
-        env:
-          GITHUB_TOKEN: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.TSCIRCUIT_BOT_OPENAI_KEY }}
-          
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add contribution-overviews
-          git add README.md
-          git add pr-analysis
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update contribution overviews"
+    - name: Cache shared directories
+      uses: actions/cache@v4
+      with:
+        path: |
+          .cache
+          .cache-ai
+        key: shared-cache-${{ runner.os }}-${{ steps.date.outputs.week }}
+        restore-keys: |
+          shared-cache-${{ runner.os }}-
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+    - name: Install dependencies
+      run: bun install
+
+    - name: Post Recent PRs to Discord
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ANTHROPIC_API_KEY: ${{ secrets.TSCIRCUIT_BOT_ANTHROPIC_API_KEY }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        HTTP_WEBHOOK_URL: ${{ secrets.HTTP_WEBHOOK_URL }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        GITHUB_ORG: 'tscircuit'
+        FULL_REPO_LIST: 'true'
+      run: bun run scripts/pr-notifications.ts
+
+    - name: Post Recent Issues to Discord
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ISSUES_DISCORD_WEBHOOK_URL: ${{ secrets.ISSUES_DISCORD_WEBHOOK_URL }}
+        GITHUB_ORG: 'tscircuit'
+        FULL_REPO_LIST: 'true'
+      run: bun run scripts/issue-notifications.ts
