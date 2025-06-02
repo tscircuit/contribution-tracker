@@ -287,7 +287,6 @@ export async function generateMarkdown(
 
   // Generate changes by contributor
   markdown += "## Changes by Contributor\n\n"
-  // Reuse prsByContributor from above
 
   Object.entries(prsByContributor).forEach(([contributor, contributorPRs]) => {
     markdown += `### [${contributor}](https://github.com/${contributor})\n\n`
@@ -334,7 +333,8 @@ export async function generateMarkdown(
     const ownersLinks = owners
       .map((owner) => `[${owner}](https://github.com/${owner})`)
       .join(", ")
-    markdown += `| [${repo}](https://github.com/${repo}/blob/main/.github/CODEOWNERS) | ${ownersLinks} |\n`
+    const repoDisplayName = repo.replace(/^tscircuit\//, "")
+    markdown += `| [${repoDisplayName}](https://github.com/${repo}/blob/main/.github/CODEOWNERS) | ${ownersLinks} |\n`
   })
   markdown += "\n"
 
@@ -367,7 +367,8 @@ export async function generateMarkdown(
         index === 0 ? `[${owner}](https://github.com/${owner})` : ""
       const pathsText =
         repoData.paths.length > 0 ? repoData.paths.join(", ") : "*"
-      markdown += `| ${userCell} | [${repoData.repo}](https://github.com/${repoData.repo}/blob/main/.github/CODEOWNERS) | ${pathsText} |\n`
+      const repoDisplayName = repoData.repo.replace(/^tscircuit\//, "")
+      markdown += `| ${userCell} | [${repoDisplayName}](https://github.com/${repoData.repo}/blob/main/.github/CODEOWNERS) | ${pathsText} |\n`
     })
   })
   markdown += "\n"
