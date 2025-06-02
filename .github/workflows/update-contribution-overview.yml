@@ -39,12 +39,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
         OPENAI_API_KEY: ${{ secrets.TSCIRCUIT_BOT_OPENAI_KEY }}
-
+      
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add contribution-overviews README.md pr-analysis
+        git add contribution-overviews
+        git add README.md
+        git add pr-analysis
         git diff --quiet && git diff --staged --quiet || git commit -m "Update contribution overviews"
 
     - name: Push changes
