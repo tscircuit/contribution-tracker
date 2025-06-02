@@ -340,8 +340,8 @@ export async function generateMarkdown(
 
   // Generate Repos by Owner Table
   markdown += "## Repos by Owner\n\n"
-  markdown += "| User | Repo | Paths |\n"
-  markdown += "|------|------|-------|\n"
+  markdown += "| User | Repo |\n"
+  markdown += "|------|------|\n"
 
   const ownerRepos = Object.entries(contributorIdToStatsMap)
     .filter(([_, stats]) => stats.reposOwned && stats.reposOwned.length > 0)
@@ -365,10 +365,8 @@ export async function generateMarkdown(
     repos.forEach((repoData, index) => {
       const userCell =
         index === 0 ? `[${owner}](https://github.com/${owner})` : ""
-      const pathsText =
-        repoData.paths.length > 0 ? repoData.paths.join(", ") : "*"
       const repoDisplayName = repoData.repo.replace(/^tscircuit\//, "")
-      markdown += `| ${userCell} | [${repoDisplayName}](https://github.com/${repoData.repo}/blob/main/.github/CODEOWNERS) | ${pathsText} |\n`
+      markdown += `| ${userCell} | [${repoDisplayName}](https://github.com/${repoData.repo}/blob/main/.github/CODEOWNERS) |\n`
     })
   })
   markdown += "\n"
