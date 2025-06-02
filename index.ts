@@ -141,6 +141,12 @@ export async function generateOverview(startDate: string) {
       if (pr.hasMajorTag) {
         analysis.impact = "Major"
       }
+      if (analysis.isAlignedWithMilestone) {
+        analysis.impact = "Major"
+        console.log(
+          `PR #${pr.number} by ${pr.user.login} in ${repo} is aligned with milestone, setting impact to Major`,
+        )
+      }
       mergedPrsWithAnalysis.push(analysis)
     }
 
