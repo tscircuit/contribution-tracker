@@ -1,12 +1,12 @@
-name: Hourly Run
+name: Update Contribution Overview
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Run every hour
-  workflow_dispatch:  # Allow manual triggering
+    - cron: "0 18 * * *" # 6am PST
+  workflow_dispatch: # Allow manual triggering
 
 jobs:
-  run-script:
+  update-chart:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,43 +17,38 @@ jobs:
       with:
         bun-version: latest
 
-          
-      - name: Cache GitHub directory
-        uses: actions/cache@v4
-        with:
-          path: .cache
-          key: cache-github-${{ runner.os }}-${{ github.job }}-${{ github.run_id }}
-          restore-keys: |
-            cache-github-${{ runner.os }}-${{ github.job }}-
+    - name: Get current week
+      id: date
+      run: echo "week=$(date +'%G-W%V')" >> $GITHUB_OUTPUT
 
-
-      - name: Cache AI directory
-        uses: actions/cache@v4
-        with:
-          path: .cache-ai
-          key: cache-ai-${{ runner.os }}-${{ github.job }}-${{ github.run_id }}
-          restore-keys: |
-            cache-ai-${{ runner.os }}-${{ github.job }}-
+    - name: Cache shared directories
+      uses: actions/cache@v4
+      with:
+        path: |
+          .cache
+          .cache-ai
+        key: shared-cache-${{ runner.os }}-${{ steps.date.outputs.week }}
+        restore-keys: |
+          shared-cache-${{ runner.os }}-
 
     - name: Install dependencies
       run: bun install
 
-    - name: Post Recent PRs to Discord
+    - name: Run script
+      run: bun scripts/generate-weekly-overview.ts
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
         OPENAI_API_KEY: ${{ secrets.TSCIRCUIT_BOT_OPENAI_KEY }}
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        HTTP_WEBHOOK_URL: ${{ secrets.HTTP_WEBHOOK_URL }}
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
-        GITHUB_ORG: 'tscircuit'
-        FULL_REPO_LIST: 'true'
-      run: bun run scripts/pr-notifications.ts
 
-    - name: Post Recent Issues to Discord
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ISSUES_DISCORD_WEBHOOK_URL: ${{ secrets.ISSUES_DISCORD_WEBHOOK_URL }}
-        GITHUB_ORG: 'tscircuit'
-        FULL_REPO_LIST: 'true'
-      run: bun run scripts/issue-notifications.ts
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add contribution-overviews README.md pr-analysis
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update contribution overviews"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
