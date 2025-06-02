@@ -17,6 +17,16 @@ jobs:
       with:
         bun-version: latest
 
+          
+      - name: Cache GitHub directory
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: cache-github-${{ runner.os }}-${{ github.job }}-${{ github.run_id }}
+          restore-keys: |
+            cache-github-${{ runner.os }}-${{ github.job }}-
+
+
       - name: Cache AI directory
         uses: actions/cache@v4
         with:
