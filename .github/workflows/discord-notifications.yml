@@ -23,7 +23,7 @@ jobs:
     - name: Post Recent PRs to Discord
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ANTHROPIC_API_KEY: ${{ secrets.TSCIRCUIT_BOT_ANTHROPIC_API_KEY }}
+        OPENAI_API_KEY: ${{ secrets.TSCIRCUIT_BOT_OPENAI_KEY }}
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         HTTP_WEBHOOK_URL: ${{ secrets.HTTP_WEBHOOK_URL }}
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
