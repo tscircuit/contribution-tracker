@@ -37,6 +37,17 @@ async function main() {
     )
 
     for (const pullRequest of [...recentlyMergedPRs, ...activePullRequests]) {
+      // Skip PRs from Renovate bot and TSCircuitBot
+      if (
+        pullRequest.user?.login === "renovate" ||
+        pullRequest.user?.login === "tscircuitbot"
+      ) {
+        console.log(
+          `[${getUTCDateTime()}] Skipping PR #${pullRequest.number} from ${pullRequest.user?.login} in ${repository}`,
+        )
+        continue
+      }
+
       console.log(
         `[${getUTCDateTime()}] Analyzing PR #${pullRequest.number} in ${repository}`,
       )

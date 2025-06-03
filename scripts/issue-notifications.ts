@@ -40,7 +40,9 @@ async function getRecentIssues(repo: string): Promise<Issue[]> {
   const filteredIssues = data.filter(
     (issue) =>
       !issue.pull_request &&
-      new Date(issue.created_at) >= new Date(sixtyMinutesAgo),
+      new Date(issue.created_at) >= new Date(sixtyMinutesAgo) &&
+      issue.user?.login !== "renovate" &&
+      issue.user?.login !== "tscircuitbot",
   ) as Issue[]
   console.log(
     `[${getUTCDateTime()}] Found ${filteredIssues.length} new issues in ${repo}`,
