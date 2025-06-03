@@ -3,6 +3,7 @@ import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getOpenedPRs } from "lib/data-retrieval/getOpenedPRs"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { notifyPRChange } from "lib/notifications/notify-pr-change"
+import { EXCLUDED_BOTS } from "lib/constants"
 import type { AnalyzedPR } from "lib/types"
 
 function getUTCDateTime(): string {
@@ -37,13 +38,15 @@ async function main() {
     )
 
     for (const pullRequest of [...recentlyMergedPRs, ...activePullRequests]) {
-      // Skip PRs from Renovate bot and TSCircuitBot
+      // Skip PRs from excluded bots
       if (
-        pullRequest.user?.login === "renovate" ||
-        pullRequest.user?.login === "tscircuitbot"
+        pullRequest.user?.login &&
+        EXCLUDED_BOTS.includes(
+          pullRequest.user.login as (typeof EXCLUDED_BOTS)[number],
+        )
       ) {
         console.log(
-          `[${getUTCDateTime()}] Skipping PR #${pullRequest.number} from ${pullRequest.user?.login} in ${repository}`,
+          `[${getUTCDateTime()}] Skipping PR #${pullRequest.number} from ${pullRequest.user.login} in ${repository}`,
         )
         continue
       }
