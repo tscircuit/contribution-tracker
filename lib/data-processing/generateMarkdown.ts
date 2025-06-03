@@ -351,10 +351,12 @@ export async function generateMarkdown(
           ownersMap[ownerName] = []
         }
         contributorStats.reposOwned?.forEach(({ repo: repoName, paths }) => {
-          ownersMap[ownerName].push({
-            repo: repoName,
-            paths: paths || [],
-          })
+          if (!ownersMap[ownerName].some((repo) => repo.repo === repoName)) {
+            ownersMap[ownerName].push({
+              repo: repoName,
+              paths: paths || [],
+            })
+          }
         })
         return ownersMap
       },

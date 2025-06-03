@@ -43,7 +43,6 @@ export const fetchCodeownersFile = async (
     const parsedData = parseCodeownersFile(response.data)
     return parsedData
   } catch (error) {
-    console.log(`Failed to fetch CODEOWNERS for ${repo}:`, error)
     return []
   }
 }

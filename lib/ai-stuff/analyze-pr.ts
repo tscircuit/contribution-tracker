@@ -27,7 +27,11 @@ export async function analyzePRWithAI(
     prompt: generateAnalyzePRPrompt(pr, repo),
   })
   return {
-    ...pr,
+    user: pr.user,
+    html_url: pr.html_url,
+    created_at: pr.created_at,
+    merged_at: pr.merged_at,
+    body: pr.body,
     state: pr.state,
     number: result.object.number,
     title: result.object.title,
