@@ -1,6 +1,7 @@
 import { WebhookClient, type MessageCreateOptions } from "discord.js"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
+import { EXCLUDED_BOTS } from "lib/constants"
 
 const discordWebhook = new WebhookClient({
   url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
@@ -40,7 +41,11 @@ async function getRecentIssues(repo: string): Promise<Issue[]> {
   const filteredIssues = data.filter(
     (issue) =>
       !issue.pull_request &&
-      new Date(issue.created_at) >= new Date(sixtyMinutesAgo),
+      new Date(issue.created_at) >= new Date(sixtyMinutesAgo) &&
+      issue.user?.login &&
+      !EXCLUDED_BOTS.includes(
+        issue.user.login as (typeof EXCLUDED_BOTS)[number],
+      ),
   ) as Issue[]
   console.log(
     `[${getUTCDateTime()}] Found ${filteredIssues.length} new issues in ${repo}`,
