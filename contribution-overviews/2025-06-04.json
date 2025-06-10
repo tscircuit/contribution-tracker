@@ -63,13 +63,13 @@
     "tiny": 2
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 26,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 14,
+    "reviewsReceived": 33,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 17,
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 14,
+    "prsOpened": 26,
+    "prsMerged": 19,
     "issuesCreated": 10,
     "bountiedIssuesCount": 1,
     "bountiedIssuesTotal": 18,
@@ -86,19 +86,19 @@
         ]
       }
     ],
-    "score": 26,
-    "stars": "⭐⭐",
+    "score": 33,
+    "stars": "⭐⭐⭐",
     "major": 0,
-    "minor": 8,
-    "tiny": 5
+    "minor": 10,
+    "tiny": 8
   },
   "andrii-balitskyi": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 3,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 3,
     "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -125,26 +125,44 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 12,
+    "distinctPrsReviewed": 13,
     "score": 0,
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 11,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 13,
+    "rejectionsReceived": 2,
     "approvalsReceived": 5,
     "approvalsGiven": 6,
     "rejectionsGiven": 1,
-    "prsOpened": 14,
-    "prsMerged": 11,
-    "issuesCreated": 5,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
+    "prsOpened": 17,
+    "prsMerged": 14,
+    "issuesCreated": 6,
+    "bountiedIssuesCount": 1,
+    "bountiedIssuesTotal": 5,
     "distinctPrsReviewed": 7,
-    "score": 28,
+    "score": 35,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-to-svg",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
         "paths": [
           "*"
         ]
@@ -222,24 +240,24 @@
         ]
       }
     ],
-    "stars": "⭐⭐",
+    "stars": "⭐⭐⭐",
     "major": 0,
-    "minor": 10,
+    "minor": 13,
     "tiny": 1
   },
   "seveibar": {
-    "reviewsReceived": 20,
+    "reviewsReceived": 22,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 48,
-    "rejectionsGiven": 10,
-    "prsOpened": 110,
-    "prsMerged": 82,
-    "issuesCreated": 5,
+    "approvalsGiven": 52,
+    "rejectionsGiven": 14,
+    "prsOpened": 130,
+    "prsMerged": 98,
+    "issuesCreated": 6,
     "bountiedIssuesCount": 2,
     "bountiedIssuesTotal": 10,
-    "distinctPrsReviewed": 60,
-    "score": 172,
+    "distinctPrsReviewed": 65,
+    "score": 200,
     "reposOwned": [
       {
         "repo": "tscircuit/jscad-electronics",
@@ -261,6 +279,36 @@
       },
       {
         "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
         "paths": [
           "*"
         ]
@@ -418,18 +466,18 @@
     ],
     "stars": "👑👑👑",
     "major": 1,
-    "minor": 77,
-    "tiny": 3
+    "minor": 90,
+    "tiny": 5
   },
   "techmannih": {
-    "reviewsReceived": 40,
-    "rejectionsReceived": 6,
+    "reviewsReceived": 43,
+    "rejectionsReceived": 8,
     "approvalsReceived": 20,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 28,
     "prsMerged": 17,
-    "issuesCreated": 2,
+    "issuesCreated": 3,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewed": 0,
@@ -475,7 +523,7 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 34,
+    "prsOpened": 36,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
