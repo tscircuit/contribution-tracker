@@ -152,6 +152,17 @@ export class CachedOctokit {
     },
   }
 
+  public search = {
+    issuesAndPullRequests: async (
+      params: Endpoints["GET /search/issues"]["parameters"],
+    ): Promise<{
+      data: Endpoints["GET /search/issues"]["response"]["data"]
+    }> => {
+      const response = await this.octokit.search.issuesAndPullRequests(params)
+      return response
+    },
+  }
+
   public raw = {
     fetchFile: async (params: {
       owner: string

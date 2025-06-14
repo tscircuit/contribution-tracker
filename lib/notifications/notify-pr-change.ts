@@ -1,6 +1,7 @@
 import { WebhookClient } from "discord.js"
 import { WebClient } from "@slack/web-api"
 import type { AnalyzedPR } from "lib/types"
+import { octokit } from "lib/sdks"
 
 // Initialize Discord webhook client if the environment variable is set
 let discordWebhook: WebhookClient | null = null
@@ -69,6 +70,68 @@ async function postToHttpWebhook(message: string) {
       console.error("[HTTP Webhook] Failed to send message:", error)
     }
   }
+}
+
+export async function isFirstTimeContributor(
+  contributor: string,
+): Promise<boolean> {
+  try {
+    // Search across all tscircuit repositories for PRs by this contributor
+    const { data: searchResults } = await octokit.search.issuesAndPullRequests({
+      q: `org:tscircuit type:pr author:${contributor}`,
+      sort: "created",
+      order: "asc",
+      per_page: 2,
+    })
+    if (searchResults.total_count === 1) {
+      return true
+    }
+
+    return false
+  } catch (error) {
+    console.error(
+      `[First-time check] Error checking contributor history for ${contributor}:`,
+      error,
+    )
+    return false
+  }
+}
+
+export async function notifyFirstTimeContributor(pr: AnalyzedPR) {
+  const notificationChannelUrl =
+    process.env.NEW_CONTRIBUTOR_NOTIFICATION_CHANNEL
+  if (!notificationChannelUrl) {
+    console.warn(
+      "[Celebration] New contributor notification channel not configured - skipping",
+    )
+    return
+  }
+
+  const discordWebhookClient = new WebhookClient({
+    url: notificationChannelUrl,
+  })
+
+  console.info(
+    `[Celebration] Sending first-time contributor celebration for ${pr.contributor}`,
+  )
+
+  const welcomeMessage = `
+🎉 Welcome to the [tscircuit](<https://github.com/tscircuit>) community, [${pr.contributor}](<https://github.com/${pr.contributor}>)!
+Thanks for your first contribution to [${pr.repo}](<https://github.com/${pr.repo}>)! Your ${pr.impact.toLowerCase()} PR has been merged and we're excited to have you on board!
+🚀 Keep the awesome contributions coming! 🎉
+
+Check out your contribution here: [PR Link](${pr.url})
+`.trim()
+
+  try {
+    await discordWebhookClient.send(welcomeMessage)
+    console.info("[Celebration] Message sent successfully")
+  } catch (error) {
+    console.error("[Celebration] Failed to send message:", error)
+  }
+  console.info(
+    `[Celebration] Completed sending celebration for ${pr.contributor}`,
+  )
 }
 
 export async function notifyPRChange(pr: AnalyzedPR) {
