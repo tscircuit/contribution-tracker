@@ -6,7 +6,7 @@ export async function getRepos(): Promise<string[]> {
       return process.env.SHORT_REPO_LIST.split(",")
     }
     return [
-      "tscircuit/snippets",
+      "tscircuit/tscircuit.com",
       "tscircuit/tscircuit",
       "tscircuit/cli",
       "tscircuit/react-fiber",
