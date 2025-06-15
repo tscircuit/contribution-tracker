@@ -2,7 +2,11 @@ import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getOpenedPRs } from "lib/data-retrieval/getOpenedPRs"
 import { getRepos } from "lib/data-retrieval/getRepos"
-import { notifyPRChange } from "lib/notifications/notify-pr-change"
+import {
+  notifyPRChange,
+  notifyFirstTimeContributor,
+  isFirstTimeContributor,
+} from "lib/notifications/notify-pr-change"
 import { EXCLUDED_BOTS } from "lib/constants"
 import type { AnalyzedPR } from "lib/types"
 
@@ -56,6 +60,26 @@ async function main() {
       )
       const prAnalysis = await analyzePRWithAI(pullRequest, repository)
       analyzedPullRequests.push(prAnalysis)
+
+      const contributor = pullRequest.user?.login
+      if (contributor && pullRequest.merged_at) {
+        console.log(
+          `[${getUTCDateTime()}] Checking if ${contributor} is a first-time contributor`,
+        )
+        const isFirstTime = await isFirstTimeContributor(contributor)
+
+        if (isFirstTime) {
+          console.log(
+            `[${getUTCDateTime()}] 🎉 ${contributor} is a first-time contributor! Sending celebration`,
+          )
+          await notifyFirstTimeContributor(prAnalysis)
+        } else {
+          console.log(
+            `[${getUTCDateTime()}] ${contributor} has contributed before`,
+          )
+        }
+      }
+
       await notifyPRChange(prAnalysis)
       console.log(
         `[${getUTCDateTime()}] Completed analysis and notification for PR #${pullRequest.number}`,
