@@ -23,19 +23,21 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/runframe" : 8
+    "tscircuit/runframe" : 9
     "tscircuit/pcb-viewer" : 1
     "tscircuit/contribution-tracker" : 2
-    "tscircuit/tscircuit.com" : 38
-    "tscircuit/cli" : 5
+    "tscircuit/tscircuit.com" : 42
+    "tscircuit/cli" : 7
     "tscircuit/circuit-json" : 12
     "tscircuit/circuit-json-util" : 1
     "tscircuit/props" : 13
     "tscircuit/footprinter" : 6
     "tscircuit/kicad-component-converter" : 1
-    "tscircuit/3d-viewer" : 2
-    "tscircuit/core" : 23
+    "tscircuit/easyeda-converter" : 3
+    "tscircuit/3d-viewer" : 3
+    "tscircuit/core" : 27
     "tscircuit/circuit-to-svg" : 3
+    "tscircuit/circuit-json-to-gerber" : 1
     "tscircuit/alphabet" : 1
     "tscircuit/circuit-json-to-readable-netlist" : 1
     "tscircuit/svg.tscircuit.com" : 3
@@ -45,23 +47,22 @@ pie
     "tscircuit/eval" : 5
     "tscircuit/docs" : 4
     "tscircuit/schematic-symbols" : 2
-    "tscircuit/easyeda-converter" : 2
-    "tscircuit/sparkfun-boards" : 1
     "tscircuit/parts-engine" : 1
     "tscircuit/browser-preview.tscircuit.com" : 1
+    "tscircuit/sparkfun-boards" : 1
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 0 | 63 | 11 | 👑👑👑 | 9 | 0🔹 0🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 1 | 13 | 6 | ⭐⭐⭐ | 6 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 1 | 17 | 1 | ⭐⭐⭐ | 9 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 0 | 66 | 12 | 👑👑👑 | 9 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 1 | 17 | 6 | 👑 | 8 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 1 | 19 | 1 | ⭐⭐⭐ | 10 | 0🔹 0🔶 0💎 |
 | [techmannih](#techmannih) | 0 | 14 | 0 | ⭐⭐⭐ | 1 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 6 | 4 | ⭐⭐ | 4 | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 0 | 8 | 3 | ⭐⭐ | 3 | 0🔹 0🔶 0💎 |
-| [andrii-balitskyi](#andrii-balitskyi) | 0 | 2 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 7 | 5 | ⭐⭐ | 5 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 0 | 8 | 4 | ⭐⭐ | 4 | 0🔹 0🔶 0💎 |
+| [andrii-balitskyi](#andrii-balitskyi) | 0 | 3 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
 | [Anshgrover23](#Anshgrover23) | 0 | 1 | 0 | ⭐ | 5 | 0🔹 0🔶 0💎 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 2 |  | 0 | 0🔹 0🔶 0💎 |
 | [dope39](#dope39) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
@@ -84,18 +85,19 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [ArnavK-09](#ArnavK-09) | 30 | 19 | 3 | 1 | 0 | 20 | 19 | 9 | 1 | 10 |
-| [seveibar](#seveibar) | 19 | 1 | 1 | 62 | 9 | 103 | 76 | 9 | 4 | 61 |
-| [techmannih](#techmannih) | 24 | 17 | 2 | 1 | 5 | 20 | 14 | 1 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 30 | 22 | 1 | 2 | 0 | 25 | 21 | 10 | 1 | 10 |
+| [seveibar](#seveibar) | 20 | 1 | 1 | 70 | 8 | 107 | 80 | 9 | 4 | 61 |
+| [techmannih](#techmannih) | 24 | 17 | 2 | 1 | 6 | 22 | 14 | 1 | 0 | 0 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [Abse2001](#Abse2001) | 13 | 10 | 0 | 0 | 0 | 13 | 11 | 3 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 21 | 12 | 4 | 2 | 1 | 22 | 11 | 4 | 0 | 0 |
+| [Abse2001](#Abse2001) | 14 | 11 | 0 | 0 | 0 | 14 | 12 | 4 | 1 | 30 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 27 | 15 | 5 | 3 | 1 | 30 | 13 | 5 | 0 | 0 |
 | [Anshgrover23](#Anshgrover23) | 2 | 2 | 0 | 2 | 0 | 1 | 1 | 5 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 13 | 7 | 1 | 4 | 1 | 25 | 20 | 6 | 4 | 25 |
-| [andrii-balitskyi](#andrii-balitskyi) | 6 | 2 | 1 | 0 | 0 | 3 | 2 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 19 | 9 | 1 | 4 | 1 | 31 | 24 | 8 | 4 | 25 |
+| [MustafaMulla29](#MustafaMulla29) | 5 | 0 | 1 | 0 | 0 | 1 | 0 | 3 | 0 | 0 |
+| [andrii-balitskyi](#andrii-balitskyi) | 7 | 3 | 1 | 0 | 0 | 3 | 3 | 0 | 0 | 0 |
 | [abhiiii482](#abhiiii482) | 6 | 0 | 4 | 0 | 0 | 4 | 0 | 0 | 0 | 0 |
 | [dope39](#dope39) | 2 | 2 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 46 | 2 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 52 | 2 | 0 | 0 | 0 |
 
 ## Changes by Repository
 
@@ -103,94 +105,101 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#721](https://github.com/tscircuit/runframe/pull/721) | 🐳 Major | ArnavK-09 | Enhancements to component details improve user experience and functionality. | ❌ |
+| [#721](https://github.com/tscircuit/runframe/pull/721) | 🐳 Major | ArnavK-09 | Enhancements to component details improve user experience and functionality in the import process. | ❌ |
 | [#748](https://github.com/tscircuit/runframe/pull/748) | 🐙 Minor | ArnavK-09 | Enhances user experience by preventing background scrolling when the CircuitJsonPreview component is in fullscreen mode. | ❌ |
-| [#758](https://github.com/tscircuit/runframe/pull/758) | 🐙 Minor | seveibar | Enhancements to error reporting by including eval version details and software used, improving debugging capabilities. | ❌ |
-| [#750](https://github.com/tscircuit/runframe/pull/750) | 🐙 Minor | seveibar | Integrating an AI Review dialog enhances user interaction by allowing users to request and view AI-generated reviews directly from the CLI. | ❌ |
+| [#758](https://github.com/tscircuit/runframe/pull/758) | 🐙 Minor | seveibar | Enhancements to error reporting by including eval version details and software used string improve debugging and user experience. | ❌ |
+| [#750](https://github.com/tscircuit/runframe/pull/750) | 🐙 Minor | seveibar | Integrating an AI Review dialog enhances user interaction and feedback mechanisms within the CLI, promoting a more efficient workflow. | ❌ |
 | [#741](https://github.com/tscircuit/runframe/pull/741) | 🐙 Minor | imrishabh18 | Enhancements to error handling in the order quote dialog improve user experience by providing clearer feedback. | ❌ |
+| [#771](https://github.com/tscircuit/runframe/pull/771) | 🐌 Tiny | seveibar | The PR updates dependency exclusion patterns in the Renovate configuration to enhance package management for circuit JSON conversion. | ❌ |
 | [#767](https://github.com/tscircuit/runframe/pull/767) | 🐌 Tiny | seveibar | Refactoring of dependency management to improve compatibility and prevent CLI dependency overrides. | ❌ |
+| [#757](https://github.com/tscircuit/runframe/pull/757) | 🐌 Tiny | imrishabh18 | Removing unnecessary dependencies can streamline the project and reduce potential conflicts. | ❌ |
 | [#742](https://github.com/tscircuit/runframe/pull/742) | 🐌 Tiny | ShiboSoftwareDev | Refactoring of dependencies to improve project structure and maintainability. | ❌ |
-| [#757](https://github.com/tscircuit/runframe/pull/757) | 🐌 Tiny | imrishabh18 | Removing unnecessary dependencies can help streamline the project and reduce potential issues. | ❌ |
 
 ### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#331](https://github.com/tscircuit/pcb-viewer/pull/331) | 🐙 Minor | ArnavK-09 | Adjusting the z-index of the toolbar overlay enhances user accessibility by ensuring the toolbar is accessible even when errors are present. | ❌ |
+| [#331](https://github.com/tscircuit/pcb-viewer/pull/331) | 🐙 Minor | ArnavK-09 | Adjusts the z-index of the toolbar overlay to ensure accessibility during error states. | ❌ |
 
 ### [tscircuit/contribution-tracker](https://github.com/tscircuit/contribution-tracker)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#175](https://github.com/tscircuit/contribution-tracker/pull/175) | 🐙 Minor | ArnavK-09 | Introduces a notification system for first-time contributors when their pull requests are merged, enhancing community engagement. | ❌ |
+| [#175](https://github.com/tscircuit/contribution-tracker/pull/175) | 🐙 Minor | ArnavK-09 | Enhances contributor engagement by notifying first-time contributors upon PR merge. | ❌ |
 | [#176](https://github.com/tscircuit/contribution-tracker/pull/176) | 🐌 Tiny | dope39 | Updating the repository name enhances clarity and consistency in the codebase. | ❌ |
 
 ### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
+| [#1303](https://github.com/tscircuit/tscircuit.com/pull/1303) | 🐙 Minor | ArnavK-09 | Enhancement of SEO capabilities by adding descriptive meta tags for various pages, improving search engine visibility. | ❌ |
+| [#1289](https://github.com/tscircuit/tscircuit.com/pull/1289) | 🐙 Minor | ArnavK-09 | Enhances user experience by adding SEO-friendly meta tags for user profiles. | ❌ |
 | [#1301](https://github.com/tscircuit/tscircuit.com/pull/1301) | 🐙 Minor | ArnavK-09 | Enhancements to mobile search functionality significantly improve user experience. | ❌ |
 | [#1300](https://github.com/tscircuit/tscircuit.com/pull/1300) | 🐙 Minor | ArnavK-09 | Enhances the safety of accessing the GitHub username in user profiles by adding optional chaining. | ❌ |
 | [#1295](https://github.com/tscircuit/tscircuit.com/pull/1295) | 🐙 Minor | ArnavK-09 | Enhancements to file importance scoring and README support improve the overall functionality and user experience. | ❌ |
 | [#1291](https://github.com/tscircuit/tscircuit.com/pull/1291) | 🐙 Minor | ArnavK-09 | Refactoring the logic for determining important files enhances code clarity and maintainability. | ❌ |
 | [#1268](https://github.com/tscircuit/tscircuit.com/pull/1268) | 🐙 Minor | ArnavK-09 | Improves the user interface by preventing important file tabs from overlapping, enhancing usability. | ❌ |
 | [#1276](https://github.com/tscircuit/tscircuit.com/pull/1276) | 🐙 Minor | ArnavK-09 | Enhances user experience by preventing misclicks that could lead to navigation errors. | ❌ |
-| [#1275](https://github.com/tscircuit/tscircuit.com/pull/1275) | 🐙 Minor | ArnavK-09 | Fixes a bug related to saving package names by ensuring that whitespace is trimmed from user input. | ❌ |
+| [#1275](https://github.com/tscircuit/tscircuit.com/pull/1275) | 🐙 Minor | ArnavK-09 | Fixes a bug related to saving package names by ensuring that whitespace is trimmed from the input values before submission. | ❌ |
 | [#1267](https://github.com/tscircuit/tscircuit.com/pull/1267) | 🐙 Minor | ArnavK-09 | Fixes an issue where templates were not being loaded correctly, ensuring proper functionality of the file management system. | ❌ |
-| [#1266](https://github.com/tscircuit/tscircuit.com/pull/1266) | 🐙 Minor | ArnavK-09 | Enhancements to user experience during the authentication process by providing visual feedback during redirects. | ❌ |
+| [#1266](https://github.com/tscircuit/tscircuit.com/pull/1266) | 🐙 Minor | ArnavK-09 | Enhances user experience by providing visual feedback during the authentication redirect process. | ❌ |
 | [#1252](https://github.com/tscircuit/tscircuit.com/pull/1252) | 🐙 Minor | ArnavK-09 | Enhancements to the SearchComponent and UI layout significantly improve user interaction and experience. | ❌ |
-| [#1253](https://github.com/tscircuit/tscircuit.com/pull/1253) | 🐙 Minor | ArnavK-09 | Enhancements to the sign-in process and redirect handling improve user experience by preventing code loss during authentication. | ❌ |
+| [#1253](https://github.com/tscircuit/tscircuit.com/pull/1253) | 🐙 Minor | ArnavK-09 | Enhancements to the sign-in process and redirect handling significantly improve user experience by preventing code loss during authentication. | ❌ |
 | [#1251](https://github.com/tscircuit/tscircuit.com/pull/1251) | 🐙 Minor | ArnavK-09 | Refactoring the import dialog to handle packages instead of snippets enhances the functionality of the editor. | ❌ |
 | [#1248](https://github.com/tscircuit/tscircuit.com/pull/1248) | 🐙 Minor | ArnavK-09 | Enhancements to error handling and state management significantly improve user experience and maintainability. | ❌ |
 | [#1285](https://github.com/tscircuit/tscircuit.com/pull/1285) | 🐙 Minor | seveibar | Refactoring the ai_reviews/create endpoint to accept a JSON body enhances the API's usability and aligns with modern practices. | ❌ |
-| [#1284](https://github.com/tscircuit/tscircuit.com/pull/1284) | 🐙 Minor | seveibar | Refactoring the API endpoint to accept a JSON body enhances the flexibility and usability of the endpoint. | ❌ |
-| [#1283](https://github.com/tscircuit/tscircuit.com/pull/1283) | 🐙 Minor | seveibar | Enhances user experience by ensuring the search dropdown closes upon selection, improving usability. | ❌ |
+| [#1284](https://github.com/tscircuit/tscircuit.com/pull/1284) | 🐙 Minor | seveibar | Enhancing the API endpoint to accept JSON body improves data handling and aligns with modern API practices. | ❌ |
+| [#1283](https://github.com/tscircuit/tscircuit.com/pull/1283) | 🐙 Minor | seveibar | Enhances user experience by ensuring the search dropdown closes upon selection, improving interface responsiveness. | ❌ |
 | [#1281](https://github.com/tscircuit/tscircuit.com/pull/1281) | 🐙 Minor | seveibar | Integrating AI reviews into the package release workflow enhances the functionality and user experience of the application. | ❌ |
 | [#1280](https://github.com/tscircuit/tscircuit.com/pull/1280) | 🐙 Minor | seveibar | Enhancing keyboard navigation for search results significantly improves user experience and accessibility. | ❌ |
-| [#1279](https://github.com/tscircuit/tscircuit.com/pull/1279) | 🐙 Minor | seveibar | The addition of datasheet support enhances the API's functionality by allowing users to create, retrieve, and process datasheets, which is a valuable feature for managing chip information. | ❌ |
+| [#1279](https://github.com/tscircuit/tscircuit.com/pull/1279) | 🐙 Minor | seveibar | Enhancing the API with datasheet management capabilities significantly improves functionality and usability. | ❌ |
 | [#1278](https://github.com/tscircuit/tscircuit.com/pull/1278) | 🐙 Minor | seveibar | The addition of AI review endpoints enhances the application's functionality by enabling CRUD operations for AI reviews. | ❌ |
-| [#1258](https://github.com/tscircuit/tscircuit.com/pull/1258) | 🐙 Minor | seveibar | Enhancements to the API for conditional inclusion of AI review data improve flexibility and usability. | ❌ |
-| [#1239](https://github.com/tscircuit/tscircuit.com/pull/1239) | 🐙 Minor | seveibar | Refactoring the toast notification system to utilize a more efficient library enhances user experience and code maintainability. | ❌ |
-| [#1257](https://github.com/tscircuit/tscircuit.com/pull/1257) | 🐙 Minor | seveibar | Enhances user experience by ensuring the README file is displayed correctly after package files load. | ❌ |
+| [#1258](https://github.com/tscircuit/tscircuit.com/pull/1258) | 🐙 Minor | seveibar | Enhancements to the AI review functionality improve the API's flexibility and usability. | ❌ |
+| [#1239](https://github.com/tscircuit/tscircuit.com/pull/1239) | 🐙 Minor | seveibar | Refactoring the toast notification system enhances maintainability and leverages a more efficient library. | ❌ |
+| [#1257](https://github.com/tscircuit/tscircuit.com/pull/1257) | 🐙 Minor | seveibar | Enhancement of the README display logic to ensure it is selected after package files load, improving user experience. | ❌ |
 | [#1256](https://github.com/tscircuit/tscircuit.com/pull/1256) | 🐙 Minor | seveibar | Enhancements to the package build status polling mechanism improve responsiveness and user experience. | ❌ |
 | [#1255](https://github.com/tscircuit/tscircuit.com/pull/1255) | 🐙 Minor | seveibar | Enhances user experience by providing real-time build time updates, making it easier to track build progress. | ❌ |
 | [#1298](https://github.com/tscircuit/tscircuit.com/pull/1298) | 🐙 Minor | andrii-balitskyi | Enhancements to server-side rendering query caching improve data retrieval efficiency. | ❌ |
+| [#1304](https://github.com/tscircuit/tscircuit.com/pull/1304) | 🐙 Minor | imrishabh18 | Enhancing user experience by preventing unnecessary data refetching when navigating back to the package page. | ❌ |
 | [#1286](https://github.com/tscircuit/tscircuit.com/pull/1286) | 🐙 Minor | imrishabh18 | Enhances the prefetching mechanism for specific pages and user profiles, improving performance and user experience. | ❌ |
-| [#1288](https://github.com/tscircuit/tscircuit.com/pull/1288) | 🐙 Minor | imrishabh18 | Enhances the filtering logic for important files in the root directory, improving the accuracy of file importance display. | ❌ |
-| [#1263](https://github.com/tscircuit/tscircuit.com/pull/1263) | 🐙 Minor | imrishabh18 | Enhances user experience by ensuring the newly created file is immediately selected in the sidebar, streamlining file management. | ❌ |
+| [#1288](https://github.com/tscircuit/tscircuit.com/pull/1288) | 🐙 Minor | imrishabh18 | Enhances the filtering logic for important files in the root directory, improving the accuracy of displayed files. | ❌ |
+| [#1263](https://github.com/tscircuit/tscircuit.com/pull/1263) | 🐙 Minor | imrishabh18 | Enhances user experience by ensuring the newly created file is immediately selected in the sidebar, improving workflow efficiency. | ❌ |
 | [#1260](https://github.com/tscircuit/tscircuit.com/pull/1260) | 🐙 Minor | imrishabh18 | Enhancements to error handling provide clearer feedback to users during fork operations, improving user experience. | ❌ |
-| [#1259](https://github.com/tscircuit/tscircuit.com/pull/1259) | 🐙 Minor | imrishabh18 | Adjusts the position of the Toaster component to enhance user experience by ensuring it appears at the bottom right of the screen. | ❌ |
+| [#1259](https://github.com/tscircuit/tscircuit.com/pull/1259) | 🐙 Minor | imrishabh18 | Adjusts the Toaster component's position for improved user experience. | ❌ |
 | [#1254](https://github.com/tscircuit/tscircuit.com/pull/1254) | 🐙 Minor | imrishabh18 | Enhances user experience by allowing users to reload build logs easily. | ❌ |
 | [#1302](https://github.com/tscircuit/tscircuit.com/pull/1302) | 🐌 Tiny | ArnavK-09 | Refines the package release logic by removing an unnecessary condition, enhancing code clarity and maintainability. | ❌ |
-| [#1297](https://github.com/tscircuit/tscircuit.com/pull/1297) | 🐌 Tiny | seveibar | Refactoring of dependencies to improve package management and prevent version conflicts. | ❌ |
+| [#1297](https://github.com/tscircuit/tscircuit.com/pull/1297) | 🐌 Tiny | seveibar | Refactoring of dependencies to ensure proper package management and avoid version conflicts. | ❌ |
 | [#1277](https://github.com/tscircuit/tscircuit.com/pull/1277) | 🐌 Tiny | seveibar | Bumping the version of a dependency enhances the project's capabilities and ensures compatibility with the latest features. | ❌ |
 | [#1273](https://github.com/tscircuit/tscircuit.com/pull/1273) | 🐌 Tiny | seveibar | Adding a new development dependency enhances the project's capabilities for evaluation tasks. | ❌ |
-| [#1265](https://github.com/tscircuit/tscircuit.com/pull/1265) | 🐌 Tiny | ShiboSoftwareDev | Removing a nested dependency streamlines the project and potentially reduces complexity. | ❌ |
 | [#1287](https://github.com/tscircuit/tscircuit.com/pull/1287) | 🐌 Tiny | imrishabh18 | Updating the runframe version ensures the project benefits from the latest improvements and fixes in that dependency. | ❌ |
+| [#1308](https://github.com/tscircuit/tscircuit.com/pull/1308) | 🐌 Tiny | ShiboSoftwareDev | Enhancing the user interface for better accessibility on smaller devices. | ❌ |
+| [#1265](https://github.com/tscircuit/tscircuit.com/pull/1265) | 🐌 Tiny | ShiboSoftwareDev | Removing a nested dependency streamlines the project and potentially reduces complexity. | ❌ |
 
 ### [tscircuit/cli](https://github.com/tscircuit/cli)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#226](https://github.com/tscircuit/cli/pull/226) | 🐙 Minor | ArnavK-09 | Enhances user experience by prompting for a desired directory when project initialization is declined in the current directory. | ❌ |
+| [#231](https://github.com/tscircuit/cli/pull/231) | 🐙 Minor | seveibar | Enhances the build process by generating circuit.json outputs for circuit files, improving project structure and usability. | ❌ |
 | [#229](https://github.com/tscircuit/cli/pull/229) | 🐙 Minor | seveibar | Enhancements to the GitHub Actions setup process improve workflow management and ensure compatibility with the latest commander version. | ❌ |
-| [#228](https://github.com/tscircuit/cli/pull/228) | 🐙 Minor | seveibar | Enhances the CLI by securely injecting a session token into the runframe HTML, improving user authentication. | ❌ |
-| [#225](https://github.com/tscircuit/cli/pull/225) | 🐙 Minor | seveibar | Enhancing the CLI with 3D snapshot capabilities significantly improves its functionality and user experience. | ❌ |
-| [#227](https://github.com/tscircuit/cli/pull/227) | 🐌 Tiny | ShiboSoftwareDev | Updating dependencies to ensure compatibility and potentially improve performance. | ❌ |
+| [#228](https://github.com/tscircuit/cli/pull/228) | 🐙 Minor | seveibar | Enhances the CLI by injecting a session token into the runframe HTML, improving security and user experience. | ❌ |
+| [#225](https://github.com/tscircuit/cli/pull/225) | 🐙 Minor | seveibar | Enhancements to the snapshot command with the addition of 3D SVG generation and corresponding tests significantly improve the CLI's functionality. | ❌ |
+| [#232](https://github.com/tscircuit/cli/pull/232) | 🐙 Minor | ShiboSoftwareDev | Enhancement of the snapshot command to support new file types, improving functionality and usability. | ❌ |
+| [#227](https://github.com/tscircuit/cli/pull/227) | 🐌 Tiny | ShiboSoftwareDev | The update consolidates dependencies to ensure only one version of @tscircuit/eval is present, enhancing consistency and reducing potential conflicts. | ❌ |
 
 ### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#231](https://github.com/tscircuit/circuit-json/pull/231) | 🐙 Minor | seveibar | Enhancing circuit element schemas with optional subcircuit identification improves modularity and organization in circuit design. | ❌ |
+| [#231](https://github.com/tscircuit/circuit-json/pull/231) | 🐙 Minor | seveibar | Enhancing circuit element schemas with optional subcircuit_id improves modularity and organization in circuit design. | ❌ |
 | [#230](https://github.com/tscircuit/circuit-json/pull/230) | 🐙 Minor | seveibar | Enhancements to the README generator ensure deprecated properties are ignored, improving documentation accuracy and usability. | ❌ |
-| [#226](https://github.com/tscircuit/circuit-json/pull/226) | 🐙 Minor | seveibar | Enhancing flexibility in the schematic_box interface by making the schematic_component_id optional adds value to the codebase. | ❌ |
+| [#226](https://github.com/tscircuit/circuit-json/pull/226) | 🐙 Minor | seveibar | Enhancing flexibility in the schematic_box interface by making schematic_component_id optional adds value to the codebase. | ❌ |
 | [#225](https://github.com/tscircuit/circuit-json/pull/225) | 🐙 Minor | seveibar | Enhancements to type validation across multiple schemas improve type safety and maintainability. | ❌ |
 | [#221](https://github.com/tscircuit/circuit-json/pull/221) | 🐙 Minor | seveibar | The addition of new ground plane types enhances the PCB design capabilities, allowing for more detailed and specific configurations. | ❌ |
 | [#228](https://github.com/tscircuit/circuit-json/pull/228) | 🐙 Minor | techmannih | Enhancement of the inductor component by introducing an optional maximum current rating, improving its configurability. | ❌ |
-| [#229](https://github.com/tscircuit/circuit-json/pull/229) | 🐙 Minor | techmannih | Enhancement of the simple inductor component by adding an optional maximum current rating property. | ❌ |
+| [#229](https://github.com/tscircuit/circuit-json/pull/229) | 🐙 Minor | techmannih | Enhancement of the simple inductor component by introducing an optional maximum current rating, improving its configurability. | ❌ |
 | [#223](https://github.com/tscircuit/circuit-json/pull/223) | 🐙 Minor | techmannih | Enhances type safety by ensuring type consistency for the SourceSimplePinHeader interface. | ❌ |
-| [#222](https://github.com/tscircuit/circuit-json/pull/222) | 🐙 Minor | techmannih | Enhancement of type safety by ensuring type consistency between defined and inferred types for the simple potentiometer component. | ❌ |
+| [#222](https://github.com/tscircuit/circuit-json/pull/222) | 🐙 Minor | techmannih | Enhancement of type safety by ensuring type consistency in the simple potentiometer implementation. | ❌ |
 | [#219](https://github.com/tscircuit/circuit-json/pull/219) | 🐙 Minor | techmannih | Enhancing type safety through the use of discriminated unions improves code reliability and maintainability. | ❌ |
 | [#220](https://github.com/tscircuit/circuit-json/pull/220) | 🐙 Minor | Abse2001 | Adding the NinePointAnchor export enhances the module's functionality by making it accessible for other parts of the application. | ❌ |
 | [#227](https://github.com/tscircuit/circuit-json/pull/227) | 🐌 Tiny | Abse2001 | Adjusts package dependencies to resolve type checking issues, enhancing compatibility and stability. | ❌ |
@@ -199,21 +208,21 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#36](https://github.com/tscircuit/circuit-json-util/pull/36) | 🐙 Minor | seveibar | The pull request addresses build errors by normalizing numeric conversions and dimensions in PCB element transformations, enhancing code reliability. | ❌ |
+| [#36](https://github.com/tscircuit/circuit-json-util/pull/36) | 🐙 Minor | seveibar | The pull request addresses build errors by normalizing numeric conversions and dimensions in PCB elements, enhancing the reliability of the codebase. | ❌ |
 
 ### [tscircuit/props](https://github.com/tscircuit/props)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
 | [#288](https://github.com/tscircuit/props/pull/288) | 🐙 Minor | seveibar | Renaming a type to prevent potential naming conflicts enhances code clarity and maintainability. | ❌ |
-| [#283](https://github.com/tscircuit/props/pull/283) | 🐙 Minor | seveibar | Enhancements to documentation generation ensure consistent and organized output. | ❌ |
+| [#283](https://github.com/tscircuit/props/pull/283) | 🐙 Minor | seveibar | Enhancements to documentation generation ensure consistent and sorted output, improving usability and maintainability. | ❌ |
 | [#282](https://github.com/tscircuit/props/pull/282) | 🐙 Minor | seveibar | Enhancing flexibility in border properties by allowing null values improves usability for developers. | ❌ |
 | [#281](https://github.com/tscircuit/props/pull/281) | 🐙 Minor | seveibar | Enhancing the `<group/>` component with a new `border` property improves layout customization options for users. | ❌ |
-| [#280](https://github.com/tscircuit/props/pull/280) | 🐙 Minor | seveibar | Enhancement of group properties by introducing an optional cellBorder feature, improving layout customization. | ❌ |
+| [#280](https://github.com/tscircuit/props/pull/280) | 🐙 Minor | seveibar | Enhancement of group properties by introducing a new optional cellBorder feature for better layout customization. | ❌ |
 | [#277](https://github.com/tscircuit/props/pull/277) | 🐙 Minor | seveibar | Removing the default value for the footprintVariant enhances the flexibility of the testpoint component by requiring explicit definitions, which can lead to more accurate configurations. | ❌ |
-| [#287](https://github.com/tscircuit/props/pull/287) | 🐙 Minor | techmannih | Enhancing the transistor properties by including the IGBT type adds versatility to the component library. | ❌ |
-| [#285](https://github.com/tscircuit/props/pull/285) | 🐙 Minor | techmannih | Enhancement of inductor properties by introducing a maximum current rating, improving component specifications. | ❌ |
-| [#279](https://github.com/tscircuit/props/pull/279) | 🐙 Minor | techmannih | Enhancing type safety through the use of discriminated unions improves code reliability and maintainability. | ❌ |
+| [#287](https://github.com/tscircuit/props/pull/287) | 🐙 Minor | techmannih | Enhancing the transistor properties by adding support for IGBT type improves the versatility of the component library. | ❌ |
+| [#285](https://github.com/tscircuit/props/pull/285) | 🐙 Minor | techmannih | Enhancement of inductor properties by introducing an optional maxCurrentRating, improving component configurability. | ❌ |
+| [#279](https://github.com/tscircuit/props/pull/279) | 🐙 Minor | techmannih | Enhancing type safety through the implementation of discriminated unions improves code reliability and maintainability. | ❌ |
 | [#275](https://github.com/tscircuit/props/pull/275) | 🐙 Minor | techmannih | Enhancing type safety in the codebase by implementing a discriminated union for smtPadProps. | ❌ |
 | [#284](https://github.com/tscircuit/props/pull/284) | 🐙 Minor | Abse2001 | Enhancements to group properties improve layout flexibility and customization options. | ❌ |
 | [#276](https://github.com/tscircuit/props/pull/276) | 🐙 Minor | Abse2001 | Refactoring and renaming of anchor constants for consistency and clarity in the codebase. | ❌ |
@@ -223,8 +232,8 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#294](https://github.com/tscircuit/footprinter/pull/294) | 🐙 Minor | seveibar | Enhancement of the plated hole feature by introducing a square pad option, improving design flexibility. | ❌ |
-| [#292](https://github.com/tscircuit/footprinter/pull/292) | 🐙 Minor | seveibar | The addition of a new footprint generator enhances the library's functionality for circuit design. | ❌ |
+| [#294](https://github.com/tscircuit/footprinter/pull/294) | 🐙 Minor | seveibar | Enhancement of the plated hole functionality by introducing a square pad option, improving design flexibility. | ❌ |
+| [#292](https://github.com/tscircuit/footprinter/pull/292) | 🐙 Minor | seveibar | Introducing a new footprint generator enhances the library's functionality for circuit design. | ❌ |
 | [#299](https://github.com/tscircuit/footprinter/pull/299) | 🐙 Minor | techmannih | Enhancements to the pad function improve the output by including parameters, which aids in debugging and testing. | ❌ |
 | [#296](https://github.com/tscircuit/footprinter/pull/296) | 🐙 Minor | techmannih | The addition of the SOT-6 footprint enhances the library's capabilities for PCB design, allowing for more component options. | ❌ |
 | [#291](https://github.com/tscircuit/footprinter/pull/291) | 🐙 Minor | andrii-balitskyi | Enhancements to the footprinter API with new SMT pad shapes improve functionality and usability for users. | ❌ |
@@ -236,40 +245,53 @@ pie
 |------|--------|-------------|-------------|-------------------|
 | [#121](https://github.com/tscircuit/kicad-component-converter/pull/121) | 🐙 Minor | seveibar | The transition to ESM modules enhances compatibility with modern JavaScript environments and improves the overall modularity of the library. | ❌ |
 
+### [tscircuit/easyeda-converter](https://github.com/tscircuit/easyeda-converter)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#247](https://github.com/tscircuit/easyeda-converter/pull/247) | 🐙 Minor | seveibar | Enhances the EasyEDA converter by adding support for generating PCB cutouts from specific shapes, improving functionality for users. | ❌ |
+| [#243](https://github.com/tscircuit/easyeda-converter/pull/243) | 🐙 Minor | Abse2001 | Enhancements to the import functionality for JLCPCB components, improving reliability and user experience. | ❌ |
+| [#234](https://github.com/tscircuit/easyeda-converter/pull/234) | 🐙 Minor | Anshgrover23 | Enhancements to data type handling for improved flexibility in the schema. | ❌ |
+
 ### [tscircuit/3d-viewer](https://github.com/tscircuit/3d-viewer)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#336](https://github.com/tscircuit/3d-viewer/pull/336) | 🐙 Minor | seveibar | Enhancements to grid sizing based on board dimensions significantly improve the user experience in the viewer. | ❌ |
+| [#336](https://github.com/tscircuit/3d-viewer/pull/336) | 🐙 Minor | seveibar | Enhances the viewer's grid sizing based on board dimensions, improving visual representation and usability. | ❌ |
+| [#346](https://github.com/tscircuit/3d-viewer/pull/346) | 🐙 Minor | imrishabh18 | Enhancement of user experience by providing contextual error information through tooltips on hover. | ❌ |
 | [#338](https://github.com/tscircuit/3d-viewer/pull/338) | 🐙 Minor | ShiboSoftwareDev | The changes ensure that board outlines are accurately positioned according to their specified coordinates, enhancing the precision of the 3D viewer. | ❌ |
 
 ### [tscircuit/core](https://github.com/tscircuit/core)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#935](https://github.com/tscircuit/core/pull/935) | 🐳 Major | ShiboSoftwareDev | Enhancements to obstacle handling for specific pad shapes improve the functionality of the circuit design tool. | ✅ |
 | [#911](https://github.com/tscircuit/core/pull/911) | 🐳 Major | imrishabh18 | Enhancements to pin mapping detection and regression testing improve the reliability of the schematic rendering. | ✅ |
+| [#935](https://github.com/tscircuit/core/pull/935) | 🐳 Major | ShiboSoftwareDev | Enhancements to obstacle handling for specific pad shapes improve the functionality of the circuit design tool. | ✅ |
 | [#932](https://github.com/tscircuit/core/pull/932) | 🐙 Minor | seveibar | Enhancements to the autorouter's performance through optimized netlabel replacement, contributing to overall efficiency. | ❌ |
-| [#928](https://github.com/tscircuit/core/pull/928) | 🐙 Minor | seveibar | Enhancements to jumper components ensure they default to single-sided layouts when schematic port arrangements are empty, improving usability and functionality. | ❌ |
-| [#925](https://github.com/tscircuit/core/pull/925) | 🐙 Minor | seveibar | Enhancing error handling in autorouting by introducing a dedicated error class that includes package version information. | ❌ |
-| [#923](https://github.com/tscircuit/core/pull/923) | 🐙 Minor | seveibar | Enhancements to the RootCircuit class improve its robustness by allowing it to encapsulate non-group elements, thus enhancing circuit rendering capabilities. | ❌ |
+| [#928](https://github.com/tscircuit/core/pull/928) | 🐙 Minor | seveibar | Enhancements to jumper components ensure they default to single-sided layouts when schematic port arrangements are empty, improving usability. | ❌ |
+| [#925](https://github.com/tscircuit/core/pull/925) | 🐙 Minor | seveibar | Introducing a new error handling class enhances the robustness of autorouting functionality by providing clearer error messages with versioning context. | ❌ |
+| [#923](https://github.com/tscircuit/core/pull/923) | 🐙 Minor | seveibar | Enhancements to the root circuit structure improve flexibility in circuit design by allowing non-group elements to be encapsulated within a subcircuit. | ❌ |
 | [#922](https://github.com/tscircuit/core/pull/922) | 🐙 Minor | seveibar | Enables circuits to function without a mandatory top-level board, enhancing flexibility in circuit design. | ❌ |
 | [#918](https://github.com/tscircuit/core/pull/918) | 🐙 Minor | seveibar | Enhancements to the net selection functionality through generics provide greater flexibility and customization for users. | ❌ |
 | [#912](https://github.com/tscircuit/core/pull/912) | 🐙 Minor | seveibar | The addition of the TestPoint component enhances the library's functionality by providing a new component for PCB design, which is essential for building keyboards. | ❌ |
 | [#905](https://github.com/tscircuit/core/pull/905) | 🐙 Minor | seveibar | The addition of the SolderJumper component enhances the library's functionality by providing a new component for circuit design, which is essential for building keyboards. | ❌ |
-| [#894](https://github.com/tscircuit/core/pull/894) | 🐙 Minor | techmannih | Enhances the SmtPad component by adding support for polygon shapes, improving flexibility in PCB design. | ❌ |
+| [#894](https://github.com/tscircuit/core/pull/894) | 🐙 Minor | techmannih | Enhancement of the SmtPad component to support polygon shapes, adding versatility to PCB design. | ❌ |
 | [#924](https://github.com/tscircuit/core/pull/924) | 🐙 Minor | Abse2001 | Enhances the schematic rendering capabilities by allowing groups to have customizable borders with padding. | ❌ |
 | [#921](https://github.com/tscircuit/core/pull/921) | 🐙 Minor | Abse2001 | Enhancement of the SchematicBox component's positioning logic for improved layout accuracy. | ❌ |
 | [#891](https://github.com/tscircuit/core/pull/891) | 🐙 Minor | Abse2001 | Enhances the SchematicBox component by adding nine-point title alignment functionality, improving layout flexibility. | ❌ |
+| [#919](https://github.com/tscircuit/core/pull/919) | 🐙 Minor | andrii-balitskyi | Enhancing the TestPoint component with SMTPAD support significantly improves its functionality for users. | ❌ |
+| [#933](https://github.com/tscircuit/core/pull/933) | 🐙 Minor | imrishabh18 | Enhancement of board component functionality by ensuring user-defined dimensions are preserved during auto-calculation. | ❌ |
+| [#936](https://github.com/tscircuit/core/pull/936) | 🐙 Minor | imrishabh18 | The addition of a test case for handling net labels in subcircuits enhances the robustness of the circuit simulation framework. | ❌ |
+| [#908](https://github.com/tscircuit/core/pull/908) | 🐙 Minor | imrishabh18 | Enhancing error messages for net names improves user experience and debugging efficiency. | ❌ |
 | [#934](https://github.com/tscircuit/core/pull/934) | 🐙 Minor | ShiboSoftwareDev | Enhancements to obstacle creation logic improve the functionality of the PCB routing system. | ❌ |
 | [#920](https://github.com/tscircuit/core/pull/920) | 🐙 Minor | ShiboSoftwareDev | Addresses a bug in the schematic symbol name derivation for solder jumpers, enhancing the reliability of the schematic rendering process. | ❌ |
-| [#915](https://github.com/tscircuit/core/pull/915) | 🐙 Minor | ShiboSoftwareDev | Enhancement of trace display functionality by ensuring proper label rendering for schematic connections. | ❌ |
+| [#915](https://github.com/tscircuit/core/pull/915) | 🐙 Minor | ShiboSoftwareDev | Enhancements to the display of schematic labels improve usability and testing coverage. | ❌ |
 | [#907](https://github.com/tscircuit/core/pull/907) | 🐙 Minor | ShiboSoftwareDev | The implementation of a restriction against nesting boards enhances the integrity of the component structure. | ❌ |
-| [#908](https://github.com/tscircuit/core/pull/908) | 🐙 Minor | imrishabh18 | Enhancing error messages for better clarity improves user experience and debugging. | ❌ |
 | [#931](https://github.com/tscircuit/core/pull/931) | 🐌 Tiny | seveibar | The update enhances the autorouter's resilience by upgrading its version, ensuring better performance and reliability in routing tasks. | ❌ |
-| [#929](https://github.com/tscircuit/core/pull/929) | 🐌 Tiny | Abse2001 | Updating the dependency version for circuit-to-svg enhances the project's compatibility and functionality. | ❌ |
+| [#940](https://github.com/tscircuit/core/pull/940) | 🐌 Tiny | Abse2001 | Refactoring code to enhance clarity and maintainability by removing unnecessary conditions. | ❌ |
+| [#929](https://github.com/tscircuit/core/pull/929) | 🐌 Tiny | Abse2001 | Updating the dependency version for 'circuit-to-svg' enhances the project's compatibility and functionality. | ❌ |
+| [#926](https://github.com/tscircuit/core/pull/926) | 🐌 Tiny | imrishabh18 | The addition of the import syntax type enhances the clarity and correctness of the package import. | ❌ |
 | [#917](https://github.com/tscircuit/core/pull/917) | 🐌 Tiny | ShiboSoftwareDev | Updating the autorouter dependency enhances the project's capabilities and ensures compatibility with the latest features. | ❌ |
-| [#926](https://github.com/tscircuit/core/pull/926) | 🐌 Tiny | imrishabh18 | The addition of the import syntax type enhances the clarity and correctness of the code, ensuring proper handling of JSON imports. | ❌ |
 
 ### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
 
@@ -278,6 +300,12 @@ pie
 | [#259](https://github.com/tscircuit/circuit-to-svg/pull/259) | 🐙 Minor | seveibar | Enhancing the visual quality of schematic symbols by rounding line caps improves the overall aesthetics and usability of the SVG output. | ❌ |
 | [#256](https://github.com/tscircuit/circuit-to-svg/pull/256) | 🐙 Minor | techmannih | Enhancements to bounding box calculations for net labels improve schematic rendering accuracy. | ❌ |
 | [#258](https://github.com/tscircuit/circuit-to-svg/pull/258) | 🐙 Minor | Abse2001 | Enhancing the visual representation of schematic boxes by dynamically scaling stroke widths improves overall design consistency and usability. | ❌ |
+
+### [tscircuit/circuit-json-to-gerber](https://github.com/tscircuit/circuit-json-to-gerber)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#41](https://github.com/tscircuit/circuit-json-to-gerber/pull/41) | 🐙 Minor | seveibar | Enhancements to support new features in the circuit design process, specifically for pin rows and SMT pads. | ❌ |
 
 ### [tscircuit/alphabet](https://github.com/tscircuit/alphabet)
 
@@ -289,7 +317,7 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#15](https://github.com/tscircuit/circuit-json-to-readable-netlist/pull/15) | 🐙 Minor | seveibar | The pull request enhances the project by migrating dependencies and improving code structure, which is essential for maintaining compatibility and performance. | ❌ |
+| [#15](https://github.com/tscircuit/circuit-json-to-readable-netlist/pull/15) | 🐙 Minor | seveibar | The pull request enhances the project by migrating dependencies and improving the codebase's structure. | ❌ |
 
 ### [tscircuit/svg.tscircuit.com](https://github.com/tscircuit/svg.tscircuit.com)
 
@@ -314,7 +342,7 @@ pie
 |------|--------|-------------|-------------|-------------------|
 | [#42](https://github.com/tscircuit/schematic-match-adapt/pull/42) | 🐙 Minor | seveibar | Enhancements to capacitor symbol orientation improve layout accuracy and testing reliability. | ❌ |
 | [#41](https://github.com/tscircuit/schematic-match-adapt/pull/41) | 🐙 Minor | seveibar | The addition of a new corpus layout and snapshot update enhances the functionality and testing capabilities of the project. | ❌ |
-| [#39](https://github.com/tscircuit/schematic-match-adapt/pull/39) | 🐙 Minor | seveibar | Enhancements and bug fixes improve application stability and functionality. | ❌ |
+| [#39](https://github.com/tscircuit/schematic-match-adapt/pull/39) | 🐙 Minor | seveibar | The changes enhance the application's functionality by fixing issues and updating test snapshots, ensuring better reliability and accuracy in testing. | ❌ |
 | [#38](https://github.com/tscircuit/schematic-match-adapt/pull/38) | 🐙 Minor | seveibar | Enhancements to circuit layout and path reconstruction improve overall functionality and usability. | ❌ |
 | [#40](https://github.com/tscircuit/schematic-match-adapt/pull/40) | 🐌 Tiny | seveibar | Enhancements to testing capabilities for layout validation in the schematic match adaptation. | ❌ |
 
@@ -322,16 +350,16 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#27](https://github.com/tscircuit/simple-3d-svg/pull/27) | 🐙 Minor | seveibar | The addition of a new test case enhances the testing framework by providing a specific example for rendering a 3D scene, which is valuable for ensuring the correctness of the rendering functionality. | ❌ |
+| [#27](https://github.com/tscircuit/simple-3d-svg/pull/27) | 🐙 Minor | seveibar | The addition of a new test file enhances the testing framework by providing a specific example for rendering 3D models, which is valuable for ensuring functionality and correctness in the application. | ❌ |
 | [#25](https://github.com/tscircuit/simple-3d-svg/pull/25) | 🐙 Minor | seveibar | Enhancements to rendering precision and file size optimization through rounding adjustments. | ❌ |
 | [#24](https://github.com/tscircuit/simple-3d-svg/pull/24) | 🐙 Minor | seveibar | Enhancements to number formatting for polygon points improve rendering precision in SVG outputs. | ❌ |
 | [#23](https://github.com/tscircuit/simple-3d-svg/pull/23) | 🐙 Minor | seveibar | Enhancement of model positioning capabilities for STL and OBJ formats in the rendering process. | ❌ |
-| [#22](https://github.com/tscircuit/simple-3d-svg/pull/22) | 🐙 Minor | seveibar | Enhancements to mesh scaling functionality improve rendering flexibility and control. | ❌ |
+| [#22](https://github.com/tscircuit/simple-3d-svg/pull/22) | 🐙 Minor | seveibar | Enhancements to mesh scaling functionality improve flexibility in rendering STL and OBJ files. | ❌ |
 | [#21](https://github.com/tscircuit/simple-3d-svg/pull/21) | 🐙 Minor | seveibar | Enhancing color rendering by rounding RGBA values improves visual consistency in SVG outputs. | ❌ |
 | [#19](https://github.com/tscircuit/simple-3d-svg/pull/19) | 🐙 Minor | seveibar | Enhancements to STL/OBJ rendering with bounding box visualization improve debugging and model fitting. | ❌ |
-| [#18](https://github.com/tscircuit/simple-3d-svg/pull/18) | 🐙 Minor | seveibar | Enhances the rendering capabilities by allowing OBJ meshes to utilize their own colors when box colors are not specified, improving visual fidelity. | ❌ |
-| [#17](https://github.com/tscircuit/simple-3d-svg/pull/17) | 🐙 Minor | seveibar | Enhancements to color handling and shading for 3D mesh rendering significantly improve visual fidelity. | ❌ |
-| [#12](https://github.com/tscircuit/simple-3d-svg/pull/12) | 🐙 Minor | seveibar | Enhancing the library's functionality by enabling the loading and rendering of OBJ files, which broadens the scope of 3D model support. | ❌ |
+| [#18](https://github.com/tscircuit/simple-3d-svg/pull/18) | 🐙 Minor | seveibar | Enhancements to OBJ rendering by allowing per-triangle colors and optional box colors improve visual fidelity and flexibility in 3D rendering. | ❌ |
+| [#17](https://github.com/tscircuit/simple-3d-svg/pull/17) | 🐙 Minor | seveibar | Enhancements to color handling and shading for 3D mesh rendering significantly improve visual output. | ❌ |
+| [#12](https://github.com/tscircuit/simple-3d-svg/pull/12) | 🐙 Minor | seveibar | Enhances the library by enabling the loading and rendering of OBJ files, expanding its 3D model support. | ❌ |
 
 ### [tscircuit/eval](https://github.com/tscircuit/eval)
 
@@ -350,27 +378,14 @@ pie
 | [#70](https://github.com/tscircuit/docs/pull/70) | 🐙 Minor | imrishabh18 | Enhances the user interface by ensuring equal width for both panes in the CircuitPreview component, improving usability. | ❌ |
 | [#71](https://github.com/tscircuit/docs/pull/71) | 🐌 Tiny | seveibar | Enhancing documentation for jumper and solderjumper components improves usability and understanding for developers. | ❌ |
 | [#72](https://github.com/tscircuit/docs/pull/72) | 🐌 Tiny | seveibar | Updating the version of the 'repomix' package enhances the project's dependencies, ensuring compatibility and potentially introducing new features or fixes from the updated package. | ❌ |
-| [#61](https://github.com/tscircuit/docs/pull/61) | 🐌 Tiny | imrishabh18 | The addition of comprehensive documentation for the `tsci export` command enhances user understanding and usability of the tool. | ❌ |
+| [#61](https://github.com/tscircuit/docs/pull/61) | 🐌 Tiny | imrishabh18 | Enhances documentation by providing comprehensive usage instructions and examples for the `tsci export` command. | ❌ |
 
 ### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#306](https://github.com/tscircuit/schematic-symbols/pull/306) | 🐙 Minor | techmannih | Enhancing the schematic symbols library by adding multiple orientations of the Schottky diode symbol significantly improves design flexibility. | ❌ |
+| [#306](https://github.com/tscircuit/schematic-symbols/pull/306) | 🐙 Minor | techmannih | Enhancing the schematic symbols library by adding multiple orientations of the Schottky diode symbol improves usability for circuit designers. | ❌ |
 | [#308](https://github.com/tscircuit/schematic-symbols/pull/308) | 🐙 Minor | imrishabh18 | Enhancements to the polarized capacitor symbols ensure compliance with IPC conventions, improving design accuracy. | ❌ |
-
-### [tscircuit/easyeda-converter](https://github.com/tscircuit/easyeda-converter)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#243](https://github.com/tscircuit/easyeda-converter/pull/243) | 🐙 Minor | Abse2001 | Enhancements to the import functionality for JLCPCB components, improving reliability and user experience. | ❌ |
-| [#234](https://github.com/tscircuit/easyeda-converter/pull/234) | 🐙 Minor | Anshgrover23 | Enhancements to data type handling for improved flexibility in the schema. | ❌ |
-
-### [tscircuit/sparkfun-boards](https://github.com/tscircuit/sparkfun-boards)
-
-| PR # | Impact | Contributor | Description | Milestone Aligned |
-|------|--------|-------------|-------------|-------------------|
-| [#4](https://github.com/tscircuit/sparkfun-boards/pull/4) | 🐙 Minor | ShiboSoftwareDev | Enhancing the repository's CI/CD capabilities by introducing format and type check workflows improves code quality and maintainability. | ❌ |
 
 ### [tscircuit/parts-engine](https://github.com/tscircuit/parts-engine)
 
@@ -382,7 +397,13 @@ pie
 
 | PR # | Impact | Contributor | Description | Milestone Aligned |
 |------|--------|-------------|-------------|-------------------|
-| [#191](https://github.com/tscircuit/browser-preview.tscircuit.com/pull/191) | 🐌 Tiny | imrishabh18 | Updating the core dependency to the latest version addresses an outage issue, ensuring improved stability and functionality. | ❌ |
+| [#191](https://github.com/tscircuit/browser-preview.tscircuit.com/pull/191) | 🐌 Tiny | imrishabh18 | Updating the core dependency to the latest version to address an outage issue. | ❌ |
+
+### [tscircuit/sparkfun-boards](https://github.com/tscircuit/sparkfun-boards)
+
+| PR # | Impact | Contributor | Description | Milestone Aligned |
+|------|--------|-------------|-------------|-------------------|
+| [#4](https://github.com/tscircuit/sparkfun-boards/pull/4) | 🐙 Minor | ShiboSoftwareDev | Enhancing the repository's CI/CD capabilities by introducing format and type check workflows improves code quality and maintainability. | ❌ |
 
 ## Changes by Contributor
 
@@ -390,20 +411,22 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
-| [#721](https://github.com/tscircuit/runframe/pull/721) | 🐳 Major | Enhancements to component details improve user experience and functionality. | ❌ |
-| [#331](https://github.com/tscircuit/pcb-viewer/pull/331) | 🐙 Minor | Adjusting the z-index of the toolbar overlay enhances user accessibility by ensuring the toolbar is accessible even when errors are present. | ❌ |
-| [#175](https://github.com/tscircuit/contribution-tracker/pull/175) | 🐙 Minor | Introduces a notification system for first-time contributors when their pull requests are merged, enhancing community engagement. | ❌ |
+| [#721](https://github.com/tscircuit/runframe/pull/721) | 🐳 Major | Enhancements to component details improve user experience and functionality in the import process. | ❌ |
+| [#331](https://github.com/tscircuit/pcb-viewer/pull/331) | 🐙 Minor | Adjusts the z-index of the toolbar overlay to ensure accessibility during error states. | ❌ |
+| [#175](https://github.com/tscircuit/contribution-tracker/pull/175) | 🐙 Minor | Enhances contributor engagement by notifying first-time contributors upon PR merge. | ❌ |
+| [#1303](https://github.com/tscircuit/tscircuit.com/pull/1303) | 🐙 Minor | Enhancement of SEO capabilities by adding descriptive meta tags for various pages, improving search engine visibility. | ❌ |
+| [#1289](https://github.com/tscircuit/tscircuit.com/pull/1289) | 🐙 Minor | Enhances user experience by adding SEO-friendly meta tags for user profiles. | ❌ |
 | [#1301](https://github.com/tscircuit/tscircuit.com/pull/1301) | 🐙 Minor | Enhancements to mobile search functionality significantly improve user experience. | ❌ |
 | [#1300](https://github.com/tscircuit/tscircuit.com/pull/1300) | 🐙 Minor | Enhances the safety of accessing the GitHub username in user profiles by adding optional chaining. | ❌ |
 | [#1295](https://github.com/tscircuit/tscircuit.com/pull/1295) | 🐙 Minor | Enhancements to file importance scoring and README support improve the overall functionality and user experience. | ❌ |
 | [#1291](https://github.com/tscircuit/tscircuit.com/pull/1291) | 🐙 Minor | Refactoring the logic for determining important files enhances code clarity and maintainability. | ❌ |
 | [#1268](https://github.com/tscircuit/tscircuit.com/pull/1268) | 🐙 Minor | Improves the user interface by preventing important file tabs from overlapping, enhancing usability. | ❌ |
 | [#1276](https://github.com/tscircuit/tscircuit.com/pull/1276) | 🐙 Minor | Enhances user experience by preventing misclicks that could lead to navigation errors. | ❌ |
-| [#1275](https://github.com/tscircuit/tscircuit.com/pull/1275) | 🐙 Minor | Fixes a bug related to saving package names by ensuring that whitespace is trimmed from user input. | ❌ |
+| [#1275](https://github.com/tscircuit/tscircuit.com/pull/1275) | 🐙 Minor | Fixes a bug related to saving package names by ensuring that whitespace is trimmed from the input values before submission. | ❌ |
 | [#1267](https://github.com/tscircuit/tscircuit.com/pull/1267) | 🐙 Minor | Fixes an issue where templates were not being loaded correctly, ensuring proper functionality of the file management system. | ❌ |
-| [#1266](https://github.com/tscircuit/tscircuit.com/pull/1266) | 🐙 Minor | Enhancements to user experience during the authentication process by providing visual feedback during redirects. | ❌ |
+| [#1266](https://github.com/tscircuit/tscircuit.com/pull/1266) | 🐙 Minor | Enhances user experience by providing visual feedback during the authentication redirect process. | ❌ |
 | [#1252](https://github.com/tscircuit/tscircuit.com/pull/1252) | 🐙 Minor | Enhancements to the SearchComponent and UI layout significantly improve user interaction and experience. | ❌ |
-| [#1253](https://github.com/tscircuit/tscircuit.com/pull/1253) | 🐙 Minor | Enhancements to the sign-in process and redirect handling improve user experience by preventing code loss during authentication. | ❌ |
+| [#1253](https://github.com/tscircuit/tscircuit.com/pull/1253) | 🐙 Minor | Enhancements to the sign-in process and redirect handling significantly improve user experience by preventing code loss during authentication. | ❌ |
 | [#1251](https://github.com/tscircuit/tscircuit.com/pull/1251) | 🐙 Minor | Refactoring the import dialog to handle packages instead of snippets enhances the functionality of the editor. | ❌ |
 | [#1248](https://github.com/tscircuit/tscircuit.com/pull/1248) | 🐙 Minor | Enhancements to error handling and state management significantly improve user experience and maintainability. | ❌ |
 | [#748](https://github.com/tscircuit/runframe/pull/748) | 🐙 Minor | Enhances user experience by preventing background scrolling when the CircuitJsonPreview component is in fullscreen mode. | ❌ |
@@ -414,50 +437,53 @@ pie
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
-| [#231](https://github.com/tscircuit/circuit-json/pull/231) | 🐙 Minor | Enhancing circuit element schemas with optional subcircuit identification improves modularity and organization in circuit design. | ❌ |
+| [#231](https://github.com/tscircuit/circuit-json/pull/231) | 🐙 Minor | Enhancing circuit element schemas with optional subcircuit_id improves modularity and organization in circuit design. | ❌ |
 | [#230](https://github.com/tscircuit/circuit-json/pull/230) | 🐙 Minor | Enhancements to the README generator ensure deprecated properties are ignored, improving documentation accuracy and usability. | ❌ |
-| [#226](https://github.com/tscircuit/circuit-json/pull/226) | 🐙 Minor | Enhancing flexibility in the schematic_box interface by making the schematic_component_id optional adds value to the codebase. | ❌ |
+| [#226](https://github.com/tscircuit/circuit-json/pull/226) | 🐙 Minor | Enhancing flexibility in the schematic_box interface by making schematic_component_id optional adds value to the codebase. | ❌ |
 | [#225](https://github.com/tscircuit/circuit-json/pull/225) | 🐙 Minor | Enhancements to type validation across multiple schemas improve type safety and maintainability. | ❌ |
 | [#221](https://github.com/tscircuit/circuit-json/pull/221) | 🐙 Minor | The addition of new ground plane types enhances the PCB design capabilities, allowing for more detailed and specific configurations. | ❌ |
-| [#36](https://github.com/tscircuit/circuit-json-util/pull/36) | 🐙 Minor | The pull request addresses build errors by normalizing numeric conversions and dimensions in PCB element transformations, enhancing code reliability. | ❌ |
+| [#36](https://github.com/tscircuit/circuit-json-util/pull/36) | 🐙 Minor | The pull request addresses build errors by normalizing numeric conversions and dimensions in PCB elements, enhancing the reliability of the codebase. | ❌ |
 | [#288](https://github.com/tscircuit/props/pull/288) | 🐙 Minor | Renaming a type to prevent potential naming conflicts enhances code clarity and maintainability. | ❌ |
-| [#283](https://github.com/tscircuit/props/pull/283) | 🐙 Minor | Enhancements to documentation generation ensure consistent and organized output. | ❌ |
+| [#283](https://github.com/tscircuit/props/pull/283) | 🐙 Minor | Enhancements to documentation generation ensure consistent and sorted output, improving usability and maintainability. | ❌ |
 | [#282](https://github.com/tscircuit/props/pull/282) | 🐙 Minor | Enhancing flexibility in border properties by allowing null values improves usability for developers. | ❌ |
 | [#281](https://github.com/tscircuit/props/pull/281) | 🐙 Minor | Enhancing the `<group/>` component with a new `border` property improves layout customization options for users. | ❌ |
-| [#280](https://github.com/tscircuit/props/pull/280) | 🐙 Minor | Enhancement of group properties by introducing an optional cellBorder feature, improving layout customization. | ❌ |
+| [#280](https://github.com/tscircuit/props/pull/280) | 🐙 Minor | Enhancement of group properties by introducing a new optional cellBorder feature for better layout customization. | ❌ |
 | [#277](https://github.com/tscircuit/props/pull/277) | 🐙 Minor | Removing the default value for the footprintVariant enhances the flexibility of the testpoint component by requiring explicit definitions, which can lead to more accurate configurations. | ❌ |
-| [#294](https://github.com/tscircuit/footprinter/pull/294) | 🐙 Minor | Enhancement of the plated hole feature by introducing a square pad option, improving design flexibility. | ❌ |
-| [#292](https://github.com/tscircuit/footprinter/pull/292) | 🐙 Minor | The addition of a new footprint generator enhances the library's functionality for circuit design. | ❌ |
+| [#294](https://github.com/tscircuit/footprinter/pull/294) | 🐙 Minor | Enhancement of the plated hole functionality by introducing a square pad option, improving design flexibility. | ❌ |
+| [#292](https://github.com/tscircuit/footprinter/pull/292) | 🐙 Minor | Introducing a new footprint generator enhances the library's functionality for circuit design. | ❌ |
 | [#121](https://github.com/tscircuit/kicad-component-converter/pull/121) | 🐙 Minor | The transition to ESM modules enhances compatibility with modern JavaScript environments and improves the overall modularity of the library. | ❌ |
-| [#336](https://github.com/tscircuit/3d-viewer/pull/336) | 🐙 Minor | Enhancements to grid sizing based on board dimensions significantly improve the user experience in the viewer. | ❌ |
+| [#247](https://github.com/tscircuit/easyeda-converter/pull/247) | 🐙 Minor | Enhances the EasyEDA converter by adding support for generating PCB cutouts from specific shapes, improving functionality for users. | ❌ |
+| [#336](https://github.com/tscircuit/3d-viewer/pull/336) | 🐙 Minor | Enhances the viewer's grid sizing based on board dimensions, improving visual representation and usability. | ❌ |
 | [#932](https://github.com/tscircuit/core/pull/932) | 🐙 Minor | Enhancements to the autorouter's performance through optimized netlabel replacement, contributing to overall efficiency. | ❌ |
-| [#928](https://github.com/tscircuit/core/pull/928) | 🐙 Minor | Enhancements to jumper components ensure they default to single-sided layouts when schematic port arrangements are empty, improving usability and functionality. | ❌ |
-| [#925](https://github.com/tscircuit/core/pull/925) | 🐙 Minor | Enhancing error handling in autorouting by introducing a dedicated error class that includes package version information. | ❌ |
-| [#923](https://github.com/tscircuit/core/pull/923) | 🐙 Minor | Enhancements to the RootCircuit class improve its robustness by allowing it to encapsulate non-group elements, thus enhancing circuit rendering capabilities. | ❌ |
+| [#928](https://github.com/tscircuit/core/pull/928) | 🐙 Minor | Enhancements to jumper components ensure they default to single-sided layouts when schematic port arrangements are empty, improving usability. | ❌ |
+| [#925](https://github.com/tscircuit/core/pull/925) | 🐙 Minor | Introducing a new error handling class enhances the robustness of autorouting functionality by providing clearer error messages with versioning context. | ❌ |
+| [#923](https://github.com/tscircuit/core/pull/923) | 🐙 Minor | Enhancements to the root circuit structure improve flexibility in circuit design by allowing non-group elements to be encapsulated within a subcircuit. | ❌ |
 | [#922](https://github.com/tscircuit/core/pull/922) | 🐙 Minor | Enables circuits to function without a mandatory top-level board, enhancing flexibility in circuit design. | ❌ |
 | [#918](https://github.com/tscircuit/core/pull/918) | 🐙 Minor | Enhancements to the net selection functionality through generics provide greater flexibility and customization for users. | ❌ |
 | [#912](https://github.com/tscircuit/core/pull/912) | 🐙 Minor | The addition of the TestPoint component enhances the library's functionality by providing a new component for PCB design, which is essential for building keyboards. | ❌ |
 | [#905](https://github.com/tscircuit/core/pull/905) | 🐙 Minor | The addition of the SolderJumper component enhances the library's functionality by providing a new component for circuit design, which is essential for building keyboards. | ❌ |
 | [#259](https://github.com/tscircuit/circuit-to-svg/pull/259) | 🐙 Minor | Enhancing the visual quality of schematic symbols by rounding line caps improves the overall aesthetics and usability of the SVG output. | ❌ |
+| [#41](https://github.com/tscircuit/circuit-json-to-gerber/pull/41) | 🐙 Minor | Enhancements to support new features in the circuit design process, specifically for pin rows and SMT pads. | ❌ |
 | [#1285](https://github.com/tscircuit/tscircuit.com/pull/1285) | 🐙 Minor | Refactoring the ai_reviews/create endpoint to accept a JSON body enhances the API's usability and aligns with modern practices. | ❌ |
-| [#1284](https://github.com/tscircuit/tscircuit.com/pull/1284) | 🐙 Minor | Refactoring the API endpoint to accept a JSON body enhances the flexibility and usability of the endpoint. | ❌ |
-| [#1283](https://github.com/tscircuit/tscircuit.com/pull/1283) | 🐙 Minor | Enhances user experience by ensuring the search dropdown closes upon selection, improving usability. | ❌ |
+| [#1284](https://github.com/tscircuit/tscircuit.com/pull/1284) | 🐙 Minor | Enhancing the API endpoint to accept JSON body improves data handling and aligns with modern API practices. | ❌ |
+| [#1283](https://github.com/tscircuit/tscircuit.com/pull/1283) | 🐙 Minor | Enhances user experience by ensuring the search dropdown closes upon selection, improving interface responsiveness. | ❌ |
 | [#1281](https://github.com/tscircuit/tscircuit.com/pull/1281) | 🐙 Minor | Integrating AI reviews into the package release workflow enhances the functionality and user experience of the application. | ❌ |
 | [#1280](https://github.com/tscircuit/tscircuit.com/pull/1280) | 🐙 Minor | Enhancing keyboard navigation for search results significantly improves user experience and accessibility. | ❌ |
-| [#1279](https://github.com/tscircuit/tscircuit.com/pull/1279) | 🐙 Minor | The addition of datasheet support enhances the API's functionality by allowing users to create, retrieve, and process datasheets, which is a valuable feature for managing chip information. | ❌ |
+| [#1279](https://github.com/tscircuit/tscircuit.com/pull/1279) | 🐙 Minor | Enhancing the API with datasheet management capabilities significantly improves functionality and usability. | ❌ |
 | [#1278](https://github.com/tscircuit/tscircuit.com/pull/1278) | 🐙 Minor | The addition of AI review endpoints enhances the application's functionality by enabling CRUD operations for AI reviews. | ❌ |
-| [#1258](https://github.com/tscircuit/tscircuit.com/pull/1258) | 🐙 Minor | Enhancements to the API for conditional inclusion of AI review data improve flexibility and usability. | ❌ |
-| [#1239](https://github.com/tscircuit/tscircuit.com/pull/1239) | 🐙 Minor | Refactoring the toast notification system to utilize a more efficient library enhances user experience and code maintainability. | ❌ |
-| [#1257](https://github.com/tscircuit/tscircuit.com/pull/1257) | 🐙 Minor | Enhances user experience by ensuring the README file is displayed correctly after package files load. | ❌ |
+| [#1258](https://github.com/tscircuit/tscircuit.com/pull/1258) | 🐙 Minor | Enhancements to the AI review functionality improve the API's flexibility and usability. | ❌ |
+| [#1239](https://github.com/tscircuit/tscircuit.com/pull/1239) | 🐙 Minor | Refactoring the toast notification system enhances maintainability and leverages a more efficient library. | ❌ |
+| [#1257](https://github.com/tscircuit/tscircuit.com/pull/1257) | 🐙 Minor | Enhancement of the README display logic to ensure it is selected after package files load, improving user experience. | ❌ |
 | [#1256](https://github.com/tscircuit/tscircuit.com/pull/1256) | 🐙 Minor | Enhancements to the package build status polling mechanism improve responsiveness and user experience. | ❌ |
 | [#1255](https://github.com/tscircuit/tscircuit.com/pull/1255) | 🐙 Minor | Enhances user experience by providing real-time build time updates, making it easier to track build progress. | ❌ |
 | [#11](https://github.com/tscircuit/alphabet/pull/11) | 🐙 Minor | Enhancing the SVG alphabet by including additional characters improves the versatility of the library. | ❌ |
-| [#758](https://github.com/tscircuit/runframe/pull/758) | 🐙 Minor | Enhancements to error reporting by including eval version details and software used, improving debugging capabilities. | ❌ |
-| [#750](https://github.com/tscircuit/runframe/pull/750) | 🐙 Minor | Integrating an AI Review dialog enhances user interaction by allowing users to request and view AI-generated reviews directly from the CLI. | ❌ |
+| [#758](https://github.com/tscircuit/runframe/pull/758) | 🐙 Minor | Enhancements to error reporting by including eval version details and software used string improve debugging and user experience. | ❌ |
+| [#750](https://github.com/tscircuit/runframe/pull/750) | 🐙 Minor | Integrating an AI Review dialog enhances user interaction and feedback mechanisms within the CLI, promoting a more efficient workflow. | ❌ |
+| [#231](https://github.com/tscircuit/cli/pull/231) | 🐙 Minor | Enhances the build process by generating circuit.json outputs for circuit files, improving project structure and usability. | ❌ |
 | [#229](https://github.com/tscircuit/cli/pull/229) | 🐙 Minor | Enhancements to the GitHub Actions setup process improve workflow management and ensure compatibility with the latest commander version. | ❌ |
-| [#228](https://github.com/tscircuit/cli/pull/228) | 🐙 Minor | Enhances the CLI by securely injecting a session token into the runframe HTML, improving user authentication. | ❌ |
-| [#225](https://github.com/tscircuit/cli/pull/225) | 🐙 Minor | Enhancing the CLI with 3D snapshot capabilities significantly improves its functionality and user experience. | ❌ |
-| [#15](https://github.com/tscircuit/circuit-json-to-readable-netlist/pull/15) | 🐙 Minor | The pull request enhances the project by migrating dependencies and improving code structure, which is essential for maintaining compatibility and performance. | ❌ |
+| [#228](https://github.com/tscircuit/cli/pull/228) | 🐙 Minor | Enhances the CLI by injecting a session token into the runframe HTML, improving security and user experience. | ❌ |
+| [#225](https://github.com/tscircuit/cli/pull/225) | 🐙 Minor | Enhancements to the snapshot command with the addition of 3D SVG generation and corresponding tests significantly improve the CLI's functionality. | ❌ |
+| [#15](https://github.com/tscircuit/circuit-json-to-readable-netlist/pull/15) | 🐙 Minor | The pull request enhances the project by migrating dependencies and improving the codebase's structure. | ❌ |
 | [#203](https://github.com/tscircuit/svg.tscircuit.com/pull/203) | 🐙 Minor | Introducing support for 3D SVG output enhances the functionality of the application, allowing for more advanced visual representations of circuit designs. | ❌ |
 | [#148](https://github.com/tscircuit/tscircuit-autorouter/pull/148) | 🐙 Minor | Disabling closed form solvers enhances the solver's performance and reliability by removing potentially problematic features. | ❌ |
 | [#145](https://github.com/tscircuit/tscircuit-autorouter/pull/145) | 🐙 Minor | Enhancements to the routing solver and DRC checks improve the overall functionality and reliability of the autorouter. | ❌ |
@@ -465,24 +491,25 @@ pie
 | [#143](https://github.com/tscircuit/tscircuit-autorouter/pull/143) | 🐙 Minor | The addition of a high-density fixture and DRC failure test enhances the testing framework for the HighDensitySolver, ensuring better reliability and performance. | ❌ |
 | [#42](https://github.com/tscircuit/schematic-match-adapt/pull/42) | 🐙 Minor | Enhancements to capacitor symbol orientation improve layout accuracy and testing reliability. | ❌ |
 | [#41](https://github.com/tscircuit/schematic-match-adapt/pull/41) | 🐙 Minor | The addition of a new corpus layout and snapshot update enhances the functionality and testing capabilities of the project. | ❌ |
-| [#39](https://github.com/tscircuit/schematic-match-adapt/pull/39) | 🐙 Minor | Enhancements and bug fixes improve application stability and functionality. | ❌ |
+| [#39](https://github.com/tscircuit/schematic-match-adapt/pull/39) | 🐙 Minor | The changes enhance the application's functionality by fixing issues and updating test snapshots, ensuring better reliability and accuracy in testing. | ❌ |
 | [#38](https://github.com/tscircuit/schematic-match-adapt/pull/38) | 🐙 Minor | Enhancements to circuit layout and path reconstruction improve overall functionality and usability. | ❌ |
-| [#27](https://github.com/tscircuit/simple-3d-svg/pull/27) | 🐙 Minor | The addition of a new test case enhances the testing framework by providing a specific example for rendering a 3D scene, which is valuable for ensuring the correctness of the rendering functionality. | ❌ |
+| [#27](https://github.com/tscircuit/simple-3d-svg/pull/27) | 🐙 Minor | The addition of a new test file enhances the testing framework by providing a specific example for rendering 3D models, which is valuable for ensuring functionality and correctness in the application. | ❌ |
 | [#25](https://github.com/tscircuit/simple-3d-svg/pull/25) | 🐙 Minor | Enhancements to rendering precision and file size optimization through rounding adjustments. | ❌ |
 | [#24](https://github.com/tscircuit/simple-3d-svg/pull/24) | 🐙 Minor | Enhancements to number formatting for polygon points improve rendering precision in SVG outputs. | ❌ |
 | [#23](https://github.com/tscircuit/simple-3d-svg/pull/23) | 🐙 Minor | Enhancement of model positioning capabilities for STL and OBJ formats in the rendering process. | ❌ |
-| [#22](https://github.com/tscircuit/simple-3d-svg/pull/22) | 🐙 Minor | Enhancements to mesh scaling functionality improve rendering flexibility and control. | ❌ |
+| [#22](https://github.com/tscircuit/simple-3d-svg/pull/22) | 🐙 Minor | Enhancements to mesh scaling functionality improve flexibility in rendering STL and OBJ files. | ❌ |
 | [#21](https://github.com/tscircuit/simple-3d-svg/pull/21) | 🐙 Minor | Enhancing color rendering by rounding RGBA values improves visual consistency in SVG outputs. | ❌ |
 | [#19](https://github.com/tscircuit/simple-3d-svg/pull/19) | 🐙 Minor | Enhancements to STL/OBJ rendering with bounding box visualization improve debugging and model fitting. | ❌ |
-| [#18](https://github.com/tscircuit/simple-3d-svg/pull/18) | 🐙 Minor | Enhances the rendering capabilities by allowing OBJ meshes to utilize their own colors when box colors are not specified, improving visual fidelity. | ❌ |
-| [#17](https://github.com/tscircuit/simple-3d-svg/pull/17) | 🐙 Minor | Enhancements to color handling and shading for 3D mesh rendering significantly improve visual fidelity. | ❌ |
-| [#12](https://github.com/tscircuit/simple-3d-svg/pull/12) | 🐙 Minor | Enhancing the library's functionality by enabling the loading and rendering of OBJ files, which broadens the scope of 3D model support. | ❌ |
+| [#18](https://github.com/tscircuit/simple-3d-svg/pull/18) | 🐙 Minor | Enhancements to OBJ rendering by allowing per-triangle colors and optional box colors improve visual fidelity and flexibility in 3D rendering. | ❌ |
+| [#17](https://github.com/tscircuit/simple-3d-svg/pull/17) | 🐙 Minor | Enhancements to color handling and shading for 3D mesh rendering significantly improve visual output. | ❌ |
+| [#12](https://github.com/tscircuit/simple-3d-svg/pull/12) | 🐙 Minor | Enhances the library by enabling the loading and rendering of OBJ files, expanding its 3D model support. | ❌ |
 | [#297](https://github.com/tscircuit/footprinter/pull/297) | 🐌 Tiny | Transitioning from a binary to a text-based lockfile enhances readability and compatibility with version control systems. | ❌ |
 | [#931](https://github.com/tscircuit/core/pull/931) | 🐌 Tiny | The update enhances the autorouter's resilience by upgrading its version, ensuring better performance and reliability in routing tasks. | ❌ |
-| [#1297](https://github.com/tscircuit/tscircuit.com/pull/1297) | 🐌 Tiny | Refactoring of dependencies to improve package management and prevent version conflicts. | ❌ |
+| [#1297](https://github.com/tscircuit/tscircuit.com/pull/1297) | 🐌 Tiny | Refactoring of dependencies to ensure proper package management and avoid version conflicts. | ❌ |
 | [#1277](https://github.com/tscircuit/tscircuit.com/pull/1277) | 🐌 Tiny | Bumping the version of a dependency enhances the project's capabilities and ensures compatibility with the latest features. | ❌ |
 | [#1273](https://github.com/tscircuit/tscircuit.com/pull/1273) | 🐌 Tiny | Adding a new development dependency enhances the project's capabilities for evaluation tasks. | ❌ |
 | [#483](https://github.com/tscircuit/eval/pull/483) | 🐌 Tiny | The addition of a lightweight wrapper for the worker export enhances modularity and clarity in the package structure. | ❌ |
+| [#771](https://github.com/tscircuit/runframe/pull/771) | 🐌 Tiny | The PR updates dependency exclusion patterns in the Renovate configuration to enhance package management for circuit JSON conversion. | ❌ |
 | [#767](https://github.com/tscircuit/runframe/pull/767) | 🐌 Tiny | Refactoring of dependency management to improve compatibility and prevent CLI dependency overrides. | ❌ |
 | [#205](https://github.com/tscircuit/svg.tscircuit.com/pull/205) | 🐌 Tiny | The PR simplifies dependency management by consolidating to a single package, potentially improving maintainability. | ❌ |
 | [#71](https://github.com/tscircuit/docs/pull/71) | 🐌 Tiny | Enhancing documentation for jumper and solderjumper components improves usability and understanding for developers. | ❌ |
@@ -494,19 +521,19 @@ pie
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#228](https://github.com/tscircuit/circuit-json/pull/228) | 🐙 Minor | Enhancement of the inductor component by introducing an optional maximum current rating, improving its configurability. | ❌ |
-| [#229](https://github.com/tscircuit/circuit-json/pull/229) | 🐙 Minor | Enhancement of the simple inductor component by adding an optional maximum current rating property. | ❌ |
+| [#229](https://github.com/tscircuit/circuit-json/pull/229) | 🐙 Minor | Enhancement of the simple inductor component by introducing an optional maximum current rating, improving its configurability. | ❌ |
 | [#223](https://github.com/tscircuit/circuit-json/pull/223) | 🐙 Minor | Enhances type safety by ensuring type consistency for the SourceSimplePinHeader interface. | ❌ |
-| [#222](https://github.com/tscircuit/circuit-json/pull/222) | 🐙 Minor | Enhancement of type safety by ensuring type consistency between defined and inferred types for the simple potentiometer component. | ❌ |
+| [#222](https://github.com/tscircuit/circuit-json/pull/222) | 🐙 Minor | Enhancement of type safety by ensuring type consistency in the simple potentiometer implementation. | ❌ |
 | [#219](https://github.com/tscircuit/circuit-json/pull/219) | 🐙 Minor | Enhancing type safety through the use of discriminated unions improves code reliability and maintainability. | ❌ |
-| [#287](https://github.com/tscircuit/props/pull/287) | 🐙 Minor | Enhancing the transistor properties by including the IGBT type adds versatility to the component library. | ❌ |
-| [#285](https://github.com/tscircuit/props/pull/285) | 🐙 Minor | Enhancement of inductor properties by introducing a maximum current rating, improving component specifications. | ❌ |
-| [#279](https://github.com/tscircuit/props/pull/279) | 🐙 Minor | Enhancing type safety through the use of discriminated unions improves code reliability and maintainability. | ❌ |
+| [#287](https://github.com/tscircuit/props/pull/287) | 🐙 Minor | Enhancing the transistor properties by adding support for IGBT type improves the versatility of the component library. | ❌ |
+| [#285](https://github.com/tscircuit/props/pull/285) | 🐙 Minor | Enhancement of inductor properties by introducing an optional maxCurrentRating, improving component configurability. | ❌ |
+| [#279](https://github.com/tscircuit/props/pull/279) | 🐙 Minor | Enhancing type safety through the implementation of discriminated unions improves code reliability and maintainability. | ❌ |
 | [#275](https://github.com/tscircuit/props/pull/275) | 🐙 Minor | Enhancing type safety in the codebase by implementing a discriminated union for smtPadProps. | ❌ |
 | [#299](https://github.com/tscircuit/footprinter/pull/299) | 🐙 Minor | Enhancements to the pad function improve the output by including parameters, which aids in debugging and testing. | ❌ |
 | [#296](https://github.com/tscircuit/footprinter/pull/296) | 🐙 Minor | The addition of the SOT-6 footprint enhances the library's capabilities for PCB design, allowing for more component options. | ❌ |
-| [#894](https://github.com/tscircuit/core/pull/894) | 🐙 Minor | Enhances the SmtPad component by adding support for polygon shapes, improving flexibility in PCB design. | ❌ |
+| [#894](https://github.com/tscircuit/core/pull/894) | 🐙 Minor | Enhancement of the SmtPad component to support polygon shapes, adding versatility to PCB design. | ❌ |
 | [#256](https://github.com/tscircuit/circuit-to-svg/pull/256) | 🐙 Minor | Enhancements to bounding box calculations for net labels improve schematic rendering accuracy. | ❌ |
-| [#306](https://github.com/tscircuit/schematic-symbols/pull/306) | 🐙 Minor | Enhancing the schematic symbols library by adding multiple orientations of the Schottky diode symbol significantly improves design flexibility. | ❌ |
+| [#306](https://github.com/tscircuit/schematic-symbols/pull/306) | 🐙 Minor | Enhancing the schematic symbols library by adding multiple orientations of the Schottky diode symbol improves usability for circuit designers. | ❌ |
 
 ### [Abse2001](https://github.com/Abse2001)
 
@@ -522,13 +549,15 @@ pie
 | [#258](https://github.com/tscircuit/circuit-to-svg/pull/258) | 🐙 Minor | Enhancing the visual representation of schematic boxes by dynamically scaling stroke widths improves overall design consistency and usability. | ❌ |
 | [#227](https://github.com/tscircuit/circuit-json/pull/227) | 🐌 Tiny | Adjusts package dependencies to resolve type checking issues, enhancing compatibility and stability. | ❌ |
 | [#286](https://github.com/tscircuit/props/pull/286) | 🐌 Tiny | Adjusts the default title alignment for schematic boxes to 'top_left', enhancing layout control. | ❌ |
-| [#929](https://github.com/tscircuit/core/pull/929) | 🐌 Tiny | Updating the dependency version for circuit-to-svg enhances the project's compatibility and functionality. | ❌ |
+| [#940](https://github.com/tscircuit/core/pull/940) | 🐌 Tiny | Refactoring code to enhance clarity and maintainability by removing unnecessary conditions. | ❌ |
+| [#929](https://github.com/tscircuit/core/pull/929) | 🐌 Tiny | Updating the dependency version for 'circuit-to-svg' enhances the project's compatibility and functionality. | ❌ |
 
 ### [andrii-balitskyi](https://github.com/andrii-balitskyi)
 
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#291](https://github.com/tscircuit/footprinter/pull/291) | 🐙 Minor | Enhancements to the footprinter API with new SMT pad shapes improve functionality and usability for users. | ❌ |
+| [#919](https://github.com/tscircuit/core/pull/919) | 🐙 Minor | Enhancing the TestPoint component with SMTPAD support significantly improves its functionality for users. | ❌ |
 | [#1298](https://github.com/tscircuit/tscircuit.com/pull/1298) | 🐙 Minor | Enhancements to server-side rendering query caching improve data retrieval efficiency. | ❌ |
 
 ### [Anshgrover23](https://github.com/Anshgrover23)
@@ -536,6 +565,35 @@ pie
 | PR # | Impact | Description | Milestone Aligned |
 |------|--------|-------------|-------------------|
 | [#234](https://github.com/tscircuit/easyeda-converter/pull/234) | 🐙 Minor | Enhancements to data type handling for improved flexibility in the schema. | ❌ |
+
+### [imrishabh18](https://github.com/imrishabh18)
+
+| PR # | Impact | Description | Milestone Aligned |
+|------|--------|-------------|-------------------|
+| [#911](https://github.com/tscircuit/core/pull/911) | 🐳 Major | Enhancements to pin mapping detection and regression testing improve the reliability of the schematic rendering. | ✅ |
+| [#346](https://github.com/tscircuit/3d-viewer/pull/346) | 🐙 Minor | Enhancement of user experience by providing contextual error information through tooltips on hover. | ❌ |
+| [#933](https://github.com/tscircuit/core/pull/933) | 🐙 Minor | Enhancement of board component functionality by ensuring user-defined dimensions are preserved during auto-calculation. | ❌ |
+| [#936](https://github.com/tscircuit/core/pull/936) | 🐙 Minor | The addition of a test case for handling net labels in subcircuits enhances the robustness of the circuit simulation framework. | ❌ |
+| [#908](https://github.com/tscircuit/core/pull/908) | 🐙 Minor | Enhancing error messages for net names improves user experience and debugging efficiency. | ❌ |
+| [#308](https://github.com/tscircuit/schematic-symbols/pull/308) | 🐙 Minor | Enhancements to the polarized capacitor symbols ensure compliance with IPC conventions, improving design accuracy. | ❌ |
+| [#1304](https://github.com/tscircuit/tscircuit.com/pull/1304) | 🐙 Minor | Enhancing user experience by preventing unnecessary data refetching when navigating back to the package page. | ❌ |
+| [#1286](https://github.com/tscircuit/tscircuit.com/pull/1286) | 🐙 Minor | Enhances the prefetching mechanism for specific pages and user profiles, improving performance and user experience. | ❌ |
+| [#1288](https://github.com/tscircuit/tscircuit.com/pull/1288) | 🐙 Minor | Enhances the filtering logic for important files in the root directory, improving the accuracy of displayed files. | ❌ |
+| [#1263](https://github.com/tscircuit/tscircuit.com/pull/1263) | 🐙 Minor | Enhances user experience by ensuring the newly created file is immediately selected in the sidebar, improving workflow efficiency. | ❌ |
+| [#1260](https://github.com/tscircuit/tscircuit.com/pull/1260) | 🐙 Minor | Enhancements to error handling provide clearer feedback to users during fork operations, improving user experience. | ❌ |
+| [#1259](https://github.com/tscircuit/tscircuit.com/pull/1259) | 🐙 Minor | Adjusts the Toaster component's position for improved user experience. | ❌ |
+| [#1254](https://github.com/tscircuit/tscircuit.com/pull/1254) | 🐙 Minor | Enhances user experience by allowing users to reload build logs easily. | ❌ |
+| [#473](https://github.com/tscircuit/eval/pull/473) | 🐙 Minor | Enhancements to nested board handling logic improve component rendering and update core dependencies for better functionality. | ❌ |
+| [#741](https://github.com/tscircuit/runframe/pull/741) | 🐙 Minor | Enhancements to error handling in the order quote dialog improve user experience by providing clearer feedback. | ❌ |
+| [#211](https://github.com/tscircuit/svg.tscircuit.com/pull/211) | 🐙 Minor | Eliminating the board wrapper enhances the flexibility of component rendering in the circuit. | ❌ |
+| [#70](https://github.com/tscircuit/docs/pull/70) | 🐙 Minor | Enhances the user interface by ensuring equal width for both panes in the CircuitPreview component, improving usability. | ❌ |
+| [#4](https://github.com/tscircuit/parts-engine/pull/4) | 🐙 Minor | Enhances the LED component functionality by allowing users to search for different LED categories. | ❌ |
+| [#926](https://github.com/tscircuit/core/pull/926) | 🐌 Tiny | The addition of the import syntax type enhances the clarity and correctness of the package import. | ❌ |
+| [#1287](https://github.com/tscircuit/tscircuit.com/pull/1287) | 🐌 Tiny | Updating the runframe version ensures the project benefits from the latest improvements and fixes in that dependency. | ❌ |
+| [#504](https://github.com/tscircuit/eval/pull/504) | 🐌 Tiny | Updating the parts-engine dependency to a newer version enhances the project's package management. | ❌ |
+| [#757](https://github.com/tscircuit/runframe/pull/757) | 🐌 Tiny | Removing unnecessary dependencies can streamline the project and reduce potential conflicts. | ❌ |
+| [#61](https://github.com/tscircuit/docs/pull/61) | 🐌 Tiny | Enhances documentation by providing comprehensive usage instructions and examples for the `tsci export` command. | ❌ |
+| [#191](https://github.com/tscircuit/browser-preview.tscircuit.com/pull/191) | 🐌 Tiny | Updating the core dependency to the latest version to address an outage issue. | ❌ |
 
 ### [ShiboSoftwareDev](https://github.com/ShiboSoftwareDev)
 
@@ -545,38 +603,15 @@ pie
 | [#338](https://github.com/tscircuit/3d-viewer/pull/338) | 🐙 Minor | The changes ensure that board outlines are accurately positioned according to their specified coordinates, enhancing the precision of the 3D viewer. | ❌ |
 | [#934](https://github.com/tscircuit/core/pull/934) | 🐙 Minor | Enhancements to obstacle creation logic improve the functionality of the PCB routing system. | ❌ |
 | [#920](https://github.com/tscircuit/core/pull/920) | 🐙 Minor | Addresses a bug in the schematic symbol name derivation for solder jumpers, enhancing the reliability of the schematic rendering process. | ❌ |
-| [#915](https://github.com/tscircuit/core/pull/915) | 🐙 Minor | Enhancement of trace display functionality by ensuring proper label rendering for schematic connections. | ❌ |
+| [#915](https://github.com/tscircuit/core/pull/915) | 🐙 Minor | Enhancements to the display of schematic labels improve usability and testing coverage. | ❌ |
 | [#907](https://github.com/tscircuit/core/pull/907) | 🐙 Minor | The implementation of a restriction against nesting boards enhances the integrity of the component structure. | ❌ |
+| [#232](https://github.com/tscircuit/cli/pull/232) | 🐙 Minor | Enhancement of the snapshot command to support new file types, improving functionality and usability. | ❌ |
 | [#4](https://github.com/tscircuit/sparkfun-boards/pull/4) | 🐙 Minor | Enhancing the repository's CI/CD capabilities by introducing format and type check workflows improves code quality and maintainability. | ❌ |
 | [#917](https://github.com/tscircuit/core/pull/917) | 🐌 Tiny | Updating the autorouter dependency enhances the project's capabilities and ensures compatibility with the latest features. | ❌ |
+| [#1308](https://github.com/tscircuit/tscircuit.com/pull/1308) | 🐌 Tiny | Enhancing the user interface for better accessibility on smaller devices. | ❌ |
 | [#1265](https://github.com/tscircuit/tscircuit.com/pull/1265) | 🐌 Tiny | Removing a nested dependency streamlines the project and potentially reduces complexity. | ❌ |
 | [#742](https://github.com/tscircuit/runframe/pull/742) | 🐌 Tiny | Refactoring of dependencies to improve project structure and maintainability. | ❌ |
-| [#227](https://github.com/tscircuit/cli/pull/227) | 🐌 Tiny | Updating dependencies to ensure compatibility and potentially improve performance. | ❌ |
-
-### [imrishabh18](https://github.com/imrishabh18)
-
-| PR # | Impact | Description | Milestone Aligned |
-|------|--------|-------------|-------------------|
-| [#911](https://github.com/tscircuit/core/pull/911) | 🐳 Major | Enhancements to pin mapping detection and regression testing improve the reliability of the schematic rendering. | ✅ |
-| [#908](https://github.com/tscircuit/core/pull/908) | 🐙 Minor | Enhancing error messages for better clarity improves user experience and debugging. | ❌ |
-| [#308](https://github.com/tscircuit/schematic-symbols/pull/308) | 🐙 Minor | Enhancements to the polarized capacitor symbols ensure compliance with IPC conventions, improving design accuracy. | ❌ |
-| [#1286](https://github.com/tscircuit/tscircuit.com/pull/1286) | 🐙 Minor | Enhances the prefetching mechanism for specific pages and user profiles, improving performance and user experience. | ❌ |
-| [#1288](https://github.com/tscircuit/tscircuit.com/pull/1288) | 🐙 Minor | Enhances the filtering logic for important files in the root directory, improving the accuracy of file importance display. | ❌ |
-| [#1263](https://github.com/tscircuit/tscircuit.com/pull/1263) | 🐙 Minor | Enhances user experience by ensuring the newly created file is immediately selected in the sidebar, streamlining file management. | ❌ |
-| [#1260](https://github.com/tscircuit/tscircuit.com/pull/1260) | 🐙 Minor | Enhancements to error handling provide clearer feedback to users during fork operations, improving user experience. | ❌ |
-| [#1259](https://github.com/tscircuit/tscircuit.com/pull/1259) | 🐙 Minor | Adjusts the position of the Toaster component to enhance user experience by ensuring it appears at the bottom right of the screen. | ❌ |
-| [#1254](https://github.com/tscircuit/tscircuit.com/pull/1254) | 🐙 Minor | Enhances user experience by allowing users to reload build logs easily. | ❌ |
-| [#473](https://github.com/tscircuit/eval/pull/473) | 🐙 Minor | Enhancements to nested board handling logic improve component rendering and update core dependencies for better functionality. | ❌ |
-| [#741](https://github.com/tscircuit/runframe/pull/741) | 🐙 Minor | Enhancements to error handling in the order quote dialog improve user experience by providing clearer feedback. | ❌ |
-| [#211](https://github.com/tscircuit/svg.tscircuit.com/pull/211) | 🐙 Minor | Eliminating the board wrapper enhances the flexibility of component rendering in the circuit. | ❌ |
-| [#70](https://github.com/tscircuit/docs/pull/70) | 🐙 Minor | Enhances the user interface by ensuring equal width for both panes in the CircuitPreview component, improving usability. | ❌ |
-| [#4](https://github.com/tscircuit/parts-engine/pull/4) | 🐙 Minor | Enhances the LED component functionality by allowing users to search for different LED categories. | ❌ |
-| [#926](https://github.com/tscircuit/core/pull/926) | 🐌 Tiny | The addition of the import syntax type enhances the clarity and correctness of the code, ensuring proper handling of JSON imports. | ❌ |
-| [#1287](https://github.com/tscircuit/tscircuit.com/pull/1287) | 🐌 Tiny | Updating the runframe version ensures the project benefits from the latest improvements and fixes in that dependency. | ❌ |
-| [#504](https://github.com/tscircuit/eval/pull/504) | 🐌 Tiny | Updating the parts-engine dependency to a newer version enhances the project's package management. | ❌ |
-| [#757](https://github.com/tscircuit/runframe/pull/757) | 🐌 Tiny | Removing unnecessary dependencies can help streamline the project and reduce potential issues. | ❌ |
-| [#61](https://github.com/tscircuit/docs/pull/61) | 🐌 Tiny | The addition of comprehensive documentation for the `tsci export` command enhances user understanding and usability of the tool. | ❌ |
-| [#191](https://github.com/tscircuit/browser-preview.tscircuit.com/pull/191) | 🐌 Tiny | Updating the core dependency to the latest version addresses an outage issue, ensuring improved stability and functionality. | ❌ |
+| [#227](https://github.com/tscircuit/cli/pull/227) | 🐌 Tiny | The update consolidates dependencies to ensure only one version of @tscircuit/eval is present, enhancing consistency and reducing potential conflicts. | ❌ |
 
 ### [dope39](https://github.com/dope39)
 
@@ -597,6 +632,7 @@ pie
 |------------|------------|
 | [cli](https://github.com/tscircuit/cli/blob/main/.github/CODEOWNERS) | [ArnavK-09](https://github.com/ArnavK-09), [seveibar](https://github.com/seveibar) |
 | [footprinter](https://github.com/tscircuit/footprinter/blob/main/.github/CODEOWNERS) | [seveibar](https://github.com/seveibar), [techmannih](https://github.com/techmannih) |
+| [circuit-json-to-gerber](https://github.com/tscircuit/circuit-json-to-gerber/blob/main/.github/CODEOWNERS) | [seveibar](https://github.com/seveibar) |
 | [tscircuit.com](https://github.com/tscircuit/tscircuit.com/blob/main/.github/CODEOWNERS) | [seveibar](https://github.com/seveibar), [imrishabh18](https://github.com/imrishabh18) |
 | [schematic-symbols](https://github.com/tscircuit/schematic-symbols/blob/main/.github/CODEOWNERS) | [imrishabh18](https://github.com/imrishabh18) |
 
@@ -606,6 +642,7 @@ pie
 |------|------|
 | [ArnavK-09](https://github.com/ArnavK-09) | [cli](https://github.com/tscircuit/cli/blob/main/.github/CODEOWNERS) |
 | [seveibar](https://github.com/seveibar) | [footprinter](https://github.com/tscircuit/footprinter/blob/main/.github/CODEOWNERS) |
+|  | [circuit-json-to-gerber](https://github.com/tscircuit/circuit-json-to-gerber/blob/main/.github/CODEOWNERS) |
 |  | [tscircuit.com](https://github.com/tscircuit/tscircuit.com/blob/main/.github/CODEOWNERS) |
 |  | [cli](https://github.com/tscircuit/cli/blob/main/.github/CODEOWNERS) |
 | [techmannih](https://github.com/techmannih) | [footprinter](https://github.com/tscircuit/footprinter/blob/main/.github/CODEOWNERS) |
