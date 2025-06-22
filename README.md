@@ -2,6 +2,7 @@
 
 Generates weekly contribution overviews for tscircuit contributors. Check out all
 the [contribution overviews here](./contribution-overviews/)
+You can find AI-generated monthly changelogs in the [changelogs directory](./changelogs/).
 
 * All PRs in the tscircuit org are scanned/summarized via Claude Haiku
 * Claude classifies each Diff/PR as a Major, Minor or Tiny contribution
