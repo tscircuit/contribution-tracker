@@ -74,7 +74,7 @@ export async function generateAiObjectCached(
   const cached = await getCached(optionsWithDefault)
   if (cached) return cached
 
-  const response = await generateObject(optionsWithDefault)
+  const response = await generateObject(optionsWithDefault as any)
   await setCached(optionsWithDefault, response)
   return response
 }
