@@ -57,7 +57,12 @@ async function setCached(params: any, data: any): Promise<void> {
   await cache.set(cacheKey, { data, timestamp: Date.now() })
 }
 
-export async function generateAiObjectCached(options: any) {
+export async function generateAiObjectCached(
+  options: Partial<Parameters<typeof generateObject>[0]> & {
+    prompt: string
+    schema?: any
+  },
+) {
   const truncatedPrompt = truncatePrompt(options.prompt)
 
   const optionsWithDefault = {

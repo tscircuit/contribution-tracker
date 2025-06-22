@@ -2,6 +2,16 @@ import fs from "node:fs"
 import path from "node:path"
 import { z } from "zod"
 import { generateAiObjectCached } from "../lib/ai-stuff/sdk"
+import { openai } from "@ai-sdk/openai"
+
+const GUIDELINES = [
+  "Ignore PRs that are vague",
+  "Ignore PRs that update dependencies",
+  "PRs that state clearly an end-user behavior change should be included",
+  "PRs that don't mention specific, identifiable changes should be ignored",
+  'Anything with a vague notion of "enhancement" should be ignored',
+  "Link to PRs in markdown, e.g. [#123](https://github.com/tscircuit/pcb-viewer/pull/123)",
+]
 
 async function main() {
   const today = new Date()
@@ -31,10 +41,14 @@ async function main() {
     }
   }
 
-  const prompt = `Create a concise bullet point changelog highlighting the key pull requests from ${year}-${month.toString().padStart(2, "0")}.\n${summaries.join("\n")}`
+  const prompt = `Create a concise bullet point changelog highlighting the key pull requests from ${year}-${month.toString().padStart(2, "0")}.\n${summaries.join("\n")}\n\n##Guidelines: ${GUIDELINES.map((g) => `- ${g}`).join("\n")}`
 
   const schema = z.object({ changelog: z.string() })
-  const { object } = await generateAiObjectCached({ schema, prompt })
+  const { object } = await generateAiObjectCached({
+    schema,
+    prompt,
+    model: openai("o3"),
+  })
 
   const outDir = path.join(process.cwd(), "changelogs")
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
