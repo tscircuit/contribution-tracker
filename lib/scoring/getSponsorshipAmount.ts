@@ -8,7 +8,7 @@ export function getSponsorshipAmount({
   weeklyStars,
   highScore,
 }: { weeklyStars: number[]; highScore: number }): number {
-  const SPONSORSHIP_MULTIPLIER = 1.25
+  const SPONSORSHIP_MULTIPLIER = 1.5
   // Calculate the median of stars
   const sortedStars = [...weeklyStars].sort((a, b) => a - b)
   const medianStars =
