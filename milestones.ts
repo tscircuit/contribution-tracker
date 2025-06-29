@@ -2,11 +2,11 @@ import type { Milestone } from "lib/types"
 
 export const CURRENT_MILESTONES: Milestone[] = [
   {
-    name: "Build Keyboards",
+    name: "Build SparkFun Boards",
     description:
-      "Tools and improvements that enable the building of keyboards with tscircuit",
-    keywords: ["keyboard"],
+      "Tools and improvements that enable the building of SparkFun boards with tscircuit",
+    keywords: ["sparkfun", "boards"],
     isActive: true,
-    repos: ["tscircuit/core"],
+    repos: ["tscircuit/core", "tscircuit/sparkfun-boards"],
   },
 ]
