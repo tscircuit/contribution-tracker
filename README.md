@@ -8,6 +8,59 @@ You can find AI-generated monthly changelogs in the [changelogs directory](./cha
 * Claude classifies each Diff/PR as a Major, Minor or Tiny contribution
 * All the PRs, summaries, and classifications are organized into charts and tables
 
+## Getting Started
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) runtime
+- `.env` file with required API keys:
+  ```
+  GITHUB_TOKEN=your_github_token
+  OPENAI_API_KEY=your_openai_api_key
+  DISCORD_TOKEN=your_discord_token (optional, for Discord integration)
+  SLACK_BOT_TOKEN=your_slack_token (optional, for Slack integration)
+  ```
+
+### Available Scripts
+
+#### Core Generation Scripts
+- `bun run generate:weekly` - Generate current week's contribution overview
+- `bun run generate:monthly` - Generate current month's contribution overview  
+- `bun run generate:changelog` - Generate monthly changelog from PRs
+
+#### Analysis & Testing
+- `bun run analyze-pr` - Analyze a single PR (interactive prompt)
+- `bun run test:github` - Test GitHub API integration
+
+#### Notifications & Sync
+- `bun run notifications:issues` - Send notifications for new issues
+- `bun run notifications:pr` - Send notifications for new PRs
+- `bun run sync:discord` - Sync contributor roles with Discord
+
+#### Data Export
+- `bun run export:sponsorship` - Generate sponsorship data CSV
+
+#### Development
+- `bun run dev` - Start development server for web UI
+- `bun run build` - Build for production
+- `bun run format` - Format code with Biome
+
+### Usage Examples
+
+```bash
+# Generate this week's contribution overview
+bun run generate:weekly
+
+# Generate current month's overview
+bun run generate:monthly
+
+# Analyze a specific PR
+bun run analyze-pr
+
+# Test your GitHub token setup
+bun run test:github
+```
+
 The current week is shown below. There are 3 major sections:
 
 * [Contributor Overview](#contributor-overview)
