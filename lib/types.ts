@@ -83,7 +83,8 @@ export interface AnalyzedPR extends PullRequest {
   contributor: string
   repo: string
   url: string
-  isAlignedWithMilestone?: boolean // Whether the PR aligns with the current milestone
+  isAlignedWithMilestone: boolean
+  starRating: 1 | 2 | 3 | 4 | 5
 }
 
 export interface Milestone {

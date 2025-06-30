@@ -3,6 +3,7 @@ import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "lib/types"
 import { generateAnalyzePRPrompt } from "lib/ai-stuff/prompts"
 import { generateAiObjectCached } from "./sdk"
+import { pr_attribute_schema } from "./pr-attributes"
 
 const prSchema = z
   .object({
@@ -42,6 +43,7 @@ export async function analyzePRWithAI(
     contributor: result.object.contributor,
     repo: result.object.repo,
     url: result.object.url,
-    isAlignedWithMilestone: result.object.isAlignedWithMilestone ?? false,
+    isAlignedWithMilestone: false,
+    starRating: getContributionStarRatingFromAttributes(result),
   }
 }
