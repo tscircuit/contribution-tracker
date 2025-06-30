@@ -44,6 +44,6 @@ export async function analyzePRWithAI(
     repo: result.object.repo,
     url: result.object.url,
     isAlignedWithMilestone: false,
-    starRating: getContributionStarRatingFromAttributes(result),
+    // starRating: getContributionStarRatingFromAttributes(result),
   }
 }

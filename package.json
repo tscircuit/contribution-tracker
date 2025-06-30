@@ -6,6 +6,7 @@
     "format": "biome format . --write",
     "format:check": "biome format .",
     "test:github": "bun --env-file=.env scripts/test-github-issues.ts",
+    "analyze-pr": "bun --env-file=.env scripts/analyze-single-pr.ts",
     "dev": "vite",
     "build": "vite build",
     "vercel-build": "bun run build",

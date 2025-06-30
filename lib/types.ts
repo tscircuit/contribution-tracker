@@ -1,3 +1,6 @@
+import type { z } from "zod"
+import type { pr_attribute_schema } from "./ai-stuff/pr-attributes"
+
 export interface ReviewerStats {
   approvalsGiven: number
   rejectionsGiven: number
@@ -85,6 +88,7 @@ export interface AnalyzedPR extends PullRequest {
   url: string
   isAlignedWithMilestone: boolean
   starRating: 1 | 2 | 3 | 4 | 5
+  object: z.infer<typeof pr_attribute_schema>
 }
 
 export interface Milestone {
