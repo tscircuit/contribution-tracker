@@ -8,7 +8,7 @@ export const getContributionStarRatingFromAttributes = (
   let score = 1
 
   if (a.only_dependency_update) score *= 0.5
-  if (a.shitty_title) score *= 0.5
+  if (a.bad_title) score *= 0.5
 
   if (a.mostly_style) score *= 0.75
 

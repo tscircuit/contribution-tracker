@@ -8,7 +8,7 @@ export const PR_ATTRIBUTES = {
   core_change: "The PR changes tscircuit/core with new functionality",
   only_dependency_update:
     "The PR is only a dependency update without any new functionality",
-  shitty_title:
+  bad_title:
     "The PR title is overly vague or generic, it can't be used to communicate the PR's purpose in a changelog",
   introduces_new_circuit_board:
     "The PR introduces a new circuit board, the circuit board didn't previously exist and this PR introduces the circuit board in it's entirety",
