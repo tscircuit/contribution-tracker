@@ -89,7 +89,7 @@ async function main() {
 
     // Output results
     console.log("\n=== PR Analysis Results ===")
-    console.log(analysis.object)
+    console.log(analysis)
   } catch (error) {
     console.error("Error analyzing PR:", error)
     process.exit(1)

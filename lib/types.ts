@@ -1,5 +1,8 @@
 import type { z } from "zod"
-import type { pr_attribute_schema } from "./ai-stuff/pr-attributes"
+import type {
+  pr_attribute_schema,
+  PrAttributeSchema,
+} from "./ai-stuff/pr-attributes"
 
 export interface ReviewerStats {
   approvalsGiven: number
@@ -67,6 +70,8 @@ export interface PullRequest {
 
 export interface MergedPullRequest extends PullRequest {
   diff: string
+  manualStarRating?: StarRating
+  /** @deprecated */
   hasMajorTag?: boolean
 }
 
@@ -78,17 +83,20 @@ export interface PullRequestWithReviews extends PullRequest {
   reviewsByUser?: Record<string, ReviewerStats>
 }
 
-export interface AnalyzedPR extends PullRequest {
+export type StarRating = 0 | 1 | 2 | 3 | 4 | 5
+
+export interface AnalyzedPR extends PullRequest, PrAttributeSchema {
   number: number
   title: string
   description: string
+  /** @deprecated */
   impact: "Major" | "Minor" | "Tiny"
   contributor: string
   repo: string
   url: string
+  /** @deprecated */
   isAlignedWithMilestone: boolean
-  starRating: 1 | 2 | 3 | 4 | 5
-  object: z.infer<typeof pr_attribute_schema>
+  starRating: StarRating
 }
 
 export interface Milestone {

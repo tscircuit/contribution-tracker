@@ -76,29 +76,17 @@ ${pr.diff || "No diff provided"}
 <instructions>
 Strictly assess the PR across the following dimensions:
 
-1. <summary>
-   Provide a concise 1-line summary clearly stating what this PR does.
-</summary>
+<description>
+   Provide a concise 1-line summary clearly stating what this PR changes for users
 
-2. <impact-assessment>
-   Categorize the impact of the PR strictly as:
-   - "Major": Large features, architectural changes, or breaking changes.
-   - "Minor": Moderate features, bug fixes, performance tuning, or code enhancements.
-   - "Tiny": Any of the following:
-     - Pure documentation or comment changes.
-     - Typo fixes.
-     - Changes involving only \`package.json\`, \`package-lock.json\`, or \`yarn.lock\`.
-     - Cosmetic or non-functional adjustments.
-     - Minor workflow only changes
+   Give precise details, avoid vague or generic "improves XXX" or "enhances XXX",
+   if the PR fixes a precise bug, be precise e.g.
 
-   ❗ Package or lock file changes must be treated as "Tiny", regardless of description.
-</impact-assessment>
-
-3. <analysis>
-   Provide a brief, expressive one-line expressive analysis of the PR's nature and value.
-   Do not start with "This PR" or "This PR does".
-   Just give an analysis of the PR.
-</analysis>
+   - "Fixes autorouting failure when pinheaders are connected to same nets within a subcircuit"
+   - "Solves discord bug where user can't see boards with many traces inside RunFrame preview"
+   - "Add Mosfet symbol"
+   - "Fixes KiCad symbol export when jumper is misaligned"
+</description>
 
 ${Object.entries(PR_ATTRIBUTES)
   .map(

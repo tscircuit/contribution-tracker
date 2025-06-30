@@ -14,11 +14,15 @@ export const PR_ATTRIBUTES = {
     "The PR introduces a new circuit board, the circuit board didn't previously exist and this PR introduces the circuit board in it's entirety",
   fixes_circuit_board:
     "This PR fixes a circuit board, the circuit board previously existed and this PR fixes it in some way",
+  fixes_subtle_important_bug:
+    "Fixes a subtle but important bug in rendering or calculations",
   minor_fix: "The PR is a minor fix, not particularly impactful",
   major_autorouter_bug_fix:
     "This PR to the tscircuit/tscircuit-autorouter or tscircuit/core fixes a major bug in the autorouting system an algorithm change",
-  reproduces_a_bug:
+  only_reproduces_a_bug:
     "This PR reproduces a bug with a comprehensive test, the test may be skipped if it's still failing, but the PR makes it a lot easier for people to fix the bug with a thorough reproduction. The user has described and linked to the situation that caused the bug or where they sourced the bug from",
+  reproduces_and_fixes_a_bug:
+    "This PR introduces a bug AND fixes the bug with a change in the implementation",
   major_experience_improvement:
     "This PR greatly improves the developer experience with improvements to the website code editor, the command line, RunFrame or user-facing tools",
   introduces_new_schematic_symbol: "Introduces a new schematic symbol",
@@ -40,3 +44,7 @@ export const pr_attribute_schema = z.object(
     ]),
   ),
 )
+
+export type PrAttributeSchema = {
+  [key in keyof typeof PR_ATTRIBUTES]: boolean
+}
