@@ -4,16 +4,17 @@ import type { AnalyzedPR } from "lib/types"
 import { generateAnalyzePRPrompt } from "lib/ai-stuff/prompts"
 import { generateAiObjectCached } from "./sdk"
 
-const prSchema = z.object({
-  number: z.number(),
-  title: z.string(),
-  analysis: z.string(),
-  impact: z.enum(["Major", "Minor", "Tiny"]),
-  contributor: z.string(),
-  repo: z.string(),
-  url: z.string(),
-  isAlignedWithMilestone: z.boolean(),
-})
+const prSchema = z
+  .object({
+    number: z.number(),
+    title: z.string(),
+    analysis: z.string(),
+    impact: z.enum(["Major", "Minor", "Tiny"]),
+    contributor: z.string(),
+    repo: z.string(),
+    url: z.string(),
+  })
+  .merge(pr_attribute_schema)
 
 export async function analyzePRWithAI(
   pr: MergedPullRequest,
@@ -27,6 +28,7 @@ export async function analyzePRWithAI(
     prompt: generateAnalyzePRPrompt(pr, repo),
   })
   return {
+    ...result,
     user: pr.user,
     html_url: pr.html_url,
     created_at: pr.created_at,

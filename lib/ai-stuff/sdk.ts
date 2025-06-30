@@ -21,7 +21,7 @@ function truncatePrompt(prompt: string, maxTokens: number = 120000): string {
   return truncated + "\n\n[Note: Content truncated due to length limit]"
 }
 
-async function getCached(params: any): Promise<any | null> {
+async function getAiCacheItem(params: any): Promise<any | null> {
   const cacheKey = JSON.stringify({
     model: params.model?.modelId || params.model,
     schema: params.schema?._def || params.schema,
@@ -68,10 +68,10 @@ export async function generateAiObjectCached(
   const optionsWithDefault = {
     ...options,
     prompt: truncatedPrompt,
-    model: options.model || openai("gpt-4o-mini"),
+    model: options.model || openai("gpt-4.1"),
   }
 
-  const cached = await getCached(optionsWithDefault)
+  const cached = await getAiCacheItem(optionsWithDefault)
   if (cached) return cached
 
   const response = await generateObject(optionsWithDefault as any)

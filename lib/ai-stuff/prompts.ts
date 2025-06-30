@@ -1,5 +1,6 @@
 import type { DiscussionComment } from "lib/types"
 import { CURRENT_MILESTONES } from "milestones"
+import { PR_ATTRIBUTES } from "./pr-attributes"
 
 export function generateAnalyzeDiscussionPrompt(
   comment: DiscussionComment,
@@ -72,19 +73,6 @@ export function generateAnalyzePRPrompt(
 ${pr.diff || "No diff provided"}
 </diff>
 
-<current-milestones>
-${currentMilestones
-  .map(
-    (milestone) => `
-- Name: ${milestone.name}
-- Description: ${milestone.description}
-- Keywords: ${milestone.keywords.join(", ")}
-${milestone.customRequirements ? `- Custom Requirements: ${milestone.customRequirements}` : ""}
-`,
-  )
-  .join("\n---\n")}
-</current-milestones>
-
 <instructions>
 Strictly assess the PR across the following dimensions:
 
@@ -112,14 +100,16 @@ Strictly assess the PR across the following dimensions:
    Just give an analysis of the PR.
 </analysis>
 
-4. <milestone-alignment>
-   Determine strict alignment to the current milestone. Set as \`true\` only if:
-   - The PR's intent directly advances the milestone's main objectives.
-   - The scope of the PR is relevant to the milestone's defined keywords and description.
-   - It is not tangential or unrelated to milestone goals.
+${Object.entries(PR_ATTRIBUTES)
+  .map(
+    ([attributeName, attributeDescription]) => `
+- <${attributeName}>
+  ${attributeDescription}
+</${attributeName}>
+`,
+  )
+  .join("\n")}
 
-   Set to \`false\` if the PR is off-topic, only partially relevant, or misaligned.
-</milestone-alignment>
 </instructions>
 
 `.trim()
