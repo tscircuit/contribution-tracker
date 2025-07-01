@@ -41,7 +41,7 @@ export function PrAttributeBadges({ pr }: PrAttributeBadgesProps) {
   }
 
   return (
-    <div className="w-[50px] flex items-center">
+    <div className="flex items-center">
       <div className="relative">
         <div
           className="flex items-center cursor-pointer"

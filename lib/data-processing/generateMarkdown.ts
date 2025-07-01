@@ -294,9 +294,9 @@ export async function generateMarkdown(
 
     if (majorMinorPRs.length > 0) {
       markdown +=
-        "| PR # | Impact | Contributor | Description | Milestone Aligned |\n"
+        "| PR # | Impact | Contributor | Description |\n"
       markdown +=
-        "|------|--------|-------------|-------------|-------------------|\n"
+        "|------|--------|-------------|-------------|\n"
       majorMinorPRs
         .sort((a, b) => {
           const impactOrder = { Major: 0, Minor: 1, Tiny: 2 }
@@ -308,24 +308,20 @@ export async function generateMarkdown(
         .forEach((pr) => {
           markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
             pr.impact,
-          )} | ${pr.contributor} | ${pr.description} | ${
-            pr.isAlignedWithMilestone ? "✅" : "❌"
-          } |\n`
+          )} | ${pr.contributor} | ${pr.description} |\n`
         })
     }
 
     if (tinyPRs.length > 0) {
       markdown += `\n<details>\n<summary>🐌 Tiny Contributions (${tinyPRs.length})</summary>\n\n`
       markdown +=
-        "| PR # | Impact | Contributor | Description | Milestone Aligned |\n"
+        "| PR # | Impact | Contributor | Description |\n"
       markdown +=
-        "|------|--------|-------------|-------------|-------------------|\n"
+        "|------|--------|-------------|-------------|\n"
       tinyPRs.forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
           pr.impact,
-        )} | ${pr.contributor} | ${pr.description} | ${
-          pr.isAlignedWithMilestone ? "✅" : "❌"
-        } |\n`
+        )} | ${pr.contributor} | ${pr.description} |\n`
       })
       markdown += "\n</details>\n"
     }
@@ -343,23 +339,23 @@ export async function generateMarkdown(
     markdown += `### [${contributor}](https://github.com/${contributor})\n\n`
 
     if (majorMinorPRs.length > 0) {
-      markdown += "| PR # | Impact | Description | Milestone Aligned |\n"
-      markdown += "|------|--------|-------------|-------------------|\n"
+      markdown += "| PR # | Impact | Description |\n"
+      markdown += "|------|--------|-------------|\n"
       majorMinorPRs.forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(pr.impact)} | ${
           pr.description
-        } | ${pr.isAlignedWithMilestone ? "✅" : "❌"} |\n`
+        } |\n`
       })
     }
 
     if (tinyPRs.length > 0) {
       markdown += `\n<details>\n<summary>🐌 Tiny Contributions (${tinyPRs.length})</summary>\n\n`
-      markdown += "| PR # | Impact | Description | Milestone Aligned |\n"
-      markdown += "|------|--------|-------------|-------------------|\n"
+      markdown += "| PR # | Impact | Description |\n"
+      markdown += "|------|--------|-------------|\n"
       tinyPRs.forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(pr.impact)} | ${
           pr.description
-        } | ${pr.isAlignedWithMilestone ? "✅" : "❌"} |\n`
+        } |\n`
       })
       markdown += "\n</details>\n"
     }

@@ -44,7 +44,7 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
             <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               Description
             </th>
-            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[50px]">
+            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               Tags
             </th>
           </tr>

@@ -15,11 +15,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 13.5,
+    "score": 12,
     "stars": "⭐⭐",
-    "major": 2,
+    "major": 1,
     "minor": 0,
-    "tiny": 9
+    "tiny": 10
   },
   "Anshgrover23": {
     "reviewsReceived": 30,
@@ -55,7 +55,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 13.5,
+    "score": 11,
     "reposOwned": [
       {
         "repo": "tscircuit/cli",
@@ -65,9 +65,9 @@
       }
     ],
     "stars": "⭐⭐",
-    "major": 2,
-    "minor": 3,
-    "tiny": 10
+    "major": 0,
+    "minor": 4,
+    "tiny": 11
   },
   "MustafaMulla29": {
     "reviewsReceived": 8,
@@ -107,7 +107,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 13.75,
+    "score": 12.25,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
@@ -117,9 +117,9 @@
       }
     ],
     "stars": "⭐⭐",
-    "major": 2,
+    "major": 1,
     "minor": 1,
-    "tiny": 8
+    "tiny": 9
   },
   "andrii-balitskyi": {
     "reviewsReceived": 2,
@@ -189,7 +189,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 21,
+    "score": 20.25,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-to-svg",
@@ -229,8 +229,8 @@
       }
     ],
     "stars": "⭐⭐",
-    "major": 4,
-    "minor": 2,
+    "major": 3,
+    "minor": 3,
     "tiny": 15
   },
   "ricohageman": {
@@ -305,9 +305,9 @@
       }
     ],
     "stars": "⭐⭐⭐",
-    "major": 18,
+    "major": 16,
     "minor": 7,
-    "tiny": 26
+    "tiny": 28
   },
   "techmannih": {
     "reviewsReceived": 47,
