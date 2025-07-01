@@ -32,11 +32,11 @@ async function fetchPRData(
   const octokit = new CachedOctokit({ auth: process.env.GITHUB_TOKEN })
 
   // Fetch basic PR data
-  const { data: pr } = await octokit.pulls.get({
+  const { data: pr } = (await octokit.pulls.get({
     owner,
     repo,
     pull_number: number,
-  }) as { data: PullRequest }
+  })) as { data: PullRequest }
 
   // Fetch diff data
   const { data: diffData } = await octokit.pulls.get({

@@ -293,10 +293,8 @@ export async function generateMarkdown(
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
 
     if (majorMinorPRs.length > 0) {
-      markdown +=
-        "| PR # | Impact | Contributor | Description |\n"
-      markdown +=
-        "|------|--------|-------------|-------------|\n"
+      markdown += "| PR # | Impact | Contributor | Description |\n"
+      markdown += "|------|--------|-------------|-------------|\n"
       majorMinorPRs
         .sort((a, b) => {
           const impactOrder = { Major: 0, Minor: 1, Tiny: 2 }
@@ -314,10 +312,8 @@ export async function generateMarkdown(
 
     if (tinyPRs.length > 0) {
       markdown += `\n<details>\n<summary>🐌 Tiny Contributions (${tinyPRs.length})</summary>\n\n`
-      markdown +=
-        "| PR # | Impact | Contributor | Description |\n"
-      markdown +=
-        "|------|--------|-------------|-------------|\n"
+      markdown += "| PR # | Impact | Contributor | Description |\n"
+      markdown += "|------|--------|-------------|-------------|\n"
       tinyPRs.forEach((pr) => {
         markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
           pr.impact,

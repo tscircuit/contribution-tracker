@@ -7,9 +7,7 @@ interface LocalDataServerOptions {
   prAnalysisPath?: string
 }
 
-export function localDataServer(
-  options: LocalDataServerOptions = {},
-): Plugin {
+export function localDataServer(options: LocalDataServerOptions = {}): Plugin {
   const {
     contributionOverviewsPath = "contribution-overviews",
     prAnalysisPath = "pr-analysis",
@@ -23,7 +21,7 @@ export function localDataServer(
         "/api/repos/tscircuit/contribution-tracker/contents/contribution-overviews",
         (req, res, next) => {
           const dirPath = path.resolve(contributionOverviewsPath)
-          
+
           if (!fs.existsSync(dirPath)) {
             res.statusCode = 404
             res.end("Directory not found")
@@ -52,7 +50,7 @@ export function localDataServer(
       server.middlewares.use("/local-data", (req, res, next) => {
         const url = new URL(req.url!, `http://localhost`)
         const filePath = path.resolve(url.pathname.slice(1)) // Remove leading slash
-        
+
         if (!fs.existsSync(filePath)) {
           res.statusCode = 404
           res.end("File not found")
@@ -74,7 +72,7 @@ export function localDataServer(
         const url = new URL(req.url!, `http://localhost`)
         const fileName = url.pathname.slice(1) // Remove leading slash
         const filePath = path.resolve(prAnalysisPath, fileName)
-        
+
         if (!fs.existsSync(filePath)) {
           res.statusCode = 404
           res.end("File not found")
