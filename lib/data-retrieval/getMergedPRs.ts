@@ -72,7 +72,8 @@ export async function getMergedPRs(
           comments.find(
             (c) =>
               c.body &&
-              c.body.includes(":star:") &&
+              c.body.includes(":star::star::star:") &&
+              c.body.split(":star:").length > 3 &&
               c.body.split(":star:").length - 1,
           ) ??
           undefined,
