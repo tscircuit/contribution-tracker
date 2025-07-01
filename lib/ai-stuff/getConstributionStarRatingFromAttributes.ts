@@ -16,9 +16,10 @@ export const getContributionStarRatingFromAttributes = (
   if (a.core_change) score *= 1.4
   if (a.fixes_subtle_important_bug) score *= 1.5
   if (a.only_reproduces_a_bug) score *= 0.75
+  if (a.substantially_improves_svg_generation) score *= 1.6
 
-  if (a.only_adds_autorouter_fixtures) return 1
-  if (a.minor_developer_experience_improvement) return 1
+  if (a.only_adds_autorouter_fixtures) maxRating = 1
+  if (a.minor_developer_experience_improvement) maxRating = 1
   if (a.introduces_new_circuit_board && repo === "tscircuit/sparkfun-boards")
     return 3
   if (a.major_autorouter_bug_fix) return 3

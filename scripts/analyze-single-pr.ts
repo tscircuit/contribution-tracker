@@ -1,6 +1,6 @@
 import { CachedOctokit } from "lib/data-retrieval/cachedOctokit"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
-import type { MergedPullRequest } from "lib/types"
+import type { MergedPullRequest, StarRating } from "lib/types"
 import { filterDiff } from "lib/data-processing/filter-diff"
 import type { components } from "@octokit/openapi-types"
 
@@ -48,6 +48,15 @@ async function fetchPRData(
 
   const filteredDiff = filterDiff(diffData as string)
 
+  const manualStarRating = pr.labels
+    .map(
+      (label) =>
+        (label.name.includes("star") && label.name.split("star").length - 1) ||
+        (label.name.includes("⭐") && label.name.split("⭐").length - 1) ||
+        null,
+    )
+    .find((l) => l !== null)
+
   return {
     number: pr.number,
     state: pr.merged_at ? "merged" : (pr.state as "opened" | "closed"),
@@ -60,6 +69,7 @@ async function fetchPRData(
     created_at: pr.created_at,
     merged_at: pr.merged_at || "",
     diff: filteredDiff,
+    manualStarRating: manualStarRating as StarRating,
   }
 }
 

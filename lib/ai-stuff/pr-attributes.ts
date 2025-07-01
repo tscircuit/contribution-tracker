@@ -40,6 +40,8 @@ export const PR_ATTRIBUTES = {
     "Improves data modeling within tscircuit/core, adds accuracy or features to obstacle generation for autorouting, better parts engine integration. This is non-trivial and may fix an existing bug",
   major_library_algorithm_contribution:
     "This PR contributes a major algorithm improvement to a library, the algorithm is non-trivial, well-tested and has good documentation and comments",
+  substantially_improves_svg_generation:
+    "This contribution to circuit-to-svg introduces brand new functionality and support for rendering a new element or handling of a previously unhandled element",
 }
 
 export type PrAttribute = keyof typeof PR_ATTRIBUTES

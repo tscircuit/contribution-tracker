@@ -33,11 +33,11 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewed": 5,
-    "score": 12.5,
+    "score": 13.5,
     "stars": "⭐⭐",
     "major": 1,
-    "minor": 0,
-    "tiny": 20
+    "minor": 1,
+    "tiny": 19
   },
   "ArnavK-09": {
     "reviewsReceived": 22,
@@ -55,7 +55,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 16.75,
+    "score": 19.5,
     "reposOwned": [
       {
         "repo": "tscircuit/cli",
@@ -66,8 +66,8 @@
     ],
     "stars": "⭐⭐",
     "major": 5,
-    "minor": 1,
-    "tiny": 9
+    "minor": 2,
+    "tiny": 8
   },
   "MustafaMulla29": {
     "reviewsReceived": 8,
@@ -107,7 +107,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 15,
+    "score": 16.5,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
@@ -189,7 +189,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 18,
+    "score": 19,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-to-svg",
@@ -229,9 +229,9 @@
       }
     ],
     "stars": "⭐⭐",
-    "major": 2,
-    "minor": 3,
-    "tiny": 16
+    "major": 1,
+    "minor": 6,
+    "tiny": 14
   },
   "ricohageman": {
     "reviewsReceived": 1,
@@ -271,7 +271,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 37.5,
+    "score": 39.25,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
@@ -305,9 +305,9 @@
       }
     ],
     "stars": "⭐⭐⭐",
-    "major": 13,
-    "minor": 7,
-    "tiny": 31
+    "major": 16,
+    "minor": 9,
+    "tiny": 26
   },
   "techmannih": {
     "reviewsReceived": 47,
@@ -325,7 +325,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 11.25,
+    "score": 12.25,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -336,8 +336,8 @@
     ],
     "stars": "⭐⭐",
     "major": 0,
-    "minor": 1,
-    "tiny": 13
+    "minor": 2,
+    "tiny": 12
   },
   "tscircuitbot": {
     "reviewsReceived": 0,

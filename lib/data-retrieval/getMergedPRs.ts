@@ -55,6 +55,15 @@ export async function getMergedPRs(
           comment.body.includes("/major"),
       )
       const hasMajorTag = pr.labels.some((label) => label.name === "major")
+      const manualStarRating = pr.labels
+        .map(
+          (label) =>
+            (label.name.includes("star") &&
+              label.name.split("star").length - 1) ||
+            (label.name.includes("⭐") && label.name.split("⭐").length - 1) ||
+            null,
+        )
+        .find((l) => l !== null)
       return {
         ...pr,
         user: {
@@ -63,20 +72,7 @@ export async function getMergedPRs(
         state: "merged",
         diff: filteredDiff,
         hasMajorTag: hasMajorTagFromMaintainer || hasMajorTag,
-        manualStarRating:
-          pr.labels.find(
-            (label) =>
-              label.name.includes("star") &&
-              label.name.split("star").length - 1,
-          ) ??
-          comments.find(
-            (c) =>
-              c.body &&
-              c.body.includes(":star::star::star:") &&
-              c.body.split(":star:").length > 3 &&
-              c.body.split(":star:").length - 1,
-          ) ??
-          undefined,
+        manualStarRating: manualStarRating ?? undefined,
       }
     }),
   )

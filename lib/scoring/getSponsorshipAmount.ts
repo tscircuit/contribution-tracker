@@ -1,3 +1,14 @@
+import { MAINTAINERS } from "./maintainers"
+
+const MAINTAINER_BASE = {
+  maintainer1: 0,
+  maintainer2: 0,
+  maintainer3: 0,
+  // These start in July
+  // maintainer1: 200,
+  // maintainer2: 350,
+  // maintainer3: 500,
+}
 /**
  * Calculates sponsorship amount based on weekly stars over the past 4 weeks
  * @param weeklyStars Array of star counts for the past 4 weeks
@@ -7,7 +18,8 @@
 export function getSponsorshipAmount({
   weeklyStars,
   highScore,
-}: { weeklyStars: number[]; highScore: number }): number {
+  username,
+}: { weeklyStars: number[]; highScore: number; username?: string }): number {
   // Calculate the median of stars
   const sortedStars = [...weeklyStars].sort((a, b) => a - b)
   const medianStars =
@@ -17,24 +29,32 @@ export function getSponsorshipAmount({
         2
       : sortedStars[Math.floor(sortedStars.length / 2)]
   const maxStarCount = Math.max(...weeklyStars)
+  const minStarCount = Math.min(...weeklyStars)
 
-  console.log({
-    weeklyStars,
-    highScore,
-  })
+  const maintainerBase =
+    (username &&
+      MAINTAINERS[username as keyof typeof MAINTAINERS] &&
+      MAINTAINER_BASE[
+        MAINTAINERS[
+          username as keyof typeof MAINTAINERS
+        ] as keyof typeof MAINTAINER_BASE
+      ]) ||
+    0
 
   // Determine base amount based on median stars
   let baseAmount = 0
-  if (medianStars >= 3) {
-    baseAmount = 400
+  if (minStarCount >= 3) {
+    baseAmount = 500
+  } else if (medianStars >= 3) {
+    baseAmount = 450
   } else if (medianStars >= 2.5) {
-    baseAmount = 200
+    baseAmount = 300
   } else if (medianStars >= 2) {
-    baseAmount = 150
+    baseAmount = 200
   } else if (medianStars >= 1.5) {
-    baseAmount = 70
+    baseAmount = 100
   } else if (medianStars >= 1) {
-    baseAmount = 50
+    baseAmount = 75
   } else if (maxStarCount >= 2) {
     baseAmount = 25
   } else if (maxStarCount >= 1) {
@@ -43,5 +63,5 @@ export function getSponsorshipAmount({
     baseAmount = 5
   }
 
-  return baseAmount
+  return baseAmount + maintainerBase
 }
