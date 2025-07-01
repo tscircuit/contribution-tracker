@@ -37,23 +37,23 @@ export async function getMergedPRs(
 
       const filteredDiff = filterDiff(String(diffData))
 
-      // Fetch comments for the PR
-      const { data: comments } = await octokit.issues
-        .listComments({
-          owner,
-          repo: repo_name,
-          issue_number: pr.number,
-          per_page: 100,
-        })
-        .catch(() => ({ data: [] }))
+      // // Fetch comments for the PR
+      // const { data: comments } = await octokit.issues
+      //   .listComments({
+      //     owner,
+      //     repo: repo_name,
+      //     issue_number: pr.number,
+      //     per_page: 100,
+      //   })
+      //   .catch(() => ({ data: [] }))
 
-      // Check if any maintainer has added a /major tag in their comments
-      const hasMajorTagFromMaintainer = comments.some(
-        (comment) =>
-          STAFF_USERNAMES.includes(comment.user?.login ?? "") &&
-          comment.body &&
-          comment.body.includes("/major"),
-      )
+      // // Check if any maintainer has added a /major tag in their comments
+      // const hasMajorTagFromMaintainer = comments.some(
+      //   (comment) =>
+      //     STAFF_USERNAMES.includes(comment.user?.login ?? "") &&
+      //     comment.body &&
+      //     comment.body.includes("/major"),
+      // )
       const hasMajorTag = pr.labels.some((label) => label.name === "major")
       const manualStarRating = pr.labels
         .map(
@@ -71,7 +71,7 @@ export async function getMergedPRs(
         },
         state: "merged",
         diff: filteredDiff,
-        hasMajorTag: hasMajorTagFromMaintainer || hasMajorTag,
+        hasMajorTag: hasMajorTag,
         manualStarRating: manualStarRating ?? undefined,
       }
     }),

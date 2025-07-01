@@ -15,7 +15,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 12.5,
+    "score": 20,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 1,
@@ -33,7 +33,7 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewed": 5,
-    "score": 13.5,
+    "score": 22,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 1,
@@ -55,7 +55,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 19.5,
+    "score": 37,
     "reposOwned": [
       {
         "repo": "tscircuit/cli",
@@ -64,7 +64,7 @@
         ]
       }
     ],
-    "stars": "⭐⭐",
+    "stars": "⭐⭐⭐",
     "major": 5,
     "minor": 2,
     "tiny": 8
@@ -85,8 +85,8 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 1.75,
-    "stars": "",
+    "score": 3.5,
+    "stars": "⭐",
     "major": 0,
     "minor": 1,
     "tiny": 2
@@ -107,7 +107,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 16.5,
+    "score": 28,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
@@ -137,7 +137,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 1,
+    "score": 2,
     "stars": "",
     "major": 0,
     "minor": 1,
@@ -189,7 +189,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 19,
+    "score": 33,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-to-svg",
@@ -228,7 +228,7 @@
         ]
       }
     ],
-    "stars": "⭐⭐",
+    "stars": "⭐⭐⭐",
     "major": 1,
     "minor": 6,
     "tiny": 14
@@ -249,8 +249,8 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 2,
-    "stars": "",
+    "score": 4,
+    "stars": "⭐",
     "major": 1,
     "minor": 0,
     "tiny": 0
@@ -271,7 +271,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 39.25,
+    "score": 73.5,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
@@ -304,7 +304,7 @@
         ]
       }
     ],
-    "stars": "⭐⭐⭐",
+    "stars": "👑",
     "major": 16,
     "minor": 9,
     "tiny": 26
@@ -325,7 +325,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 12.25,
+    "score": 19.5,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -355,7 +355,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0.5,
+    "score": 1,
     "stars": "",
     "major": 0,
     "minor": 0,
