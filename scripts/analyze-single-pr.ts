@@ -2,6 +2,9 @@ import { CachedOctokit } from "lib/data-retrieval/cachedOctokit"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import type { MergedPullRequest } from "lib/types"
 import { filterDiff } from "lib/data-processing/filter-diff"
+import type { components } from "@octokit/openapi-types"
+
+type PullRequest = components["schemas"]["pull-request"]
 
 function parsePRUrl(url: string): {
   owner: string
@@ -33,7 +36,7 @@ async function fetchPRData(
     owner,
     repo,
     pull_number: number,
-  })
+  }) as { data: PullRequest }
 
   // Fetch diff data
   const { data: diffData } = await octokit.pulls.get({
@@ -43,7 +46,7 @@ async function fetchPRData(
     mediaType: { format: "diff" },
   })
 
-  const filteredDiff = filterDiff(String(diffData))
+  const filteredDiff = filterDiff(diffData as string)
 
   return {
     number: pr.number,
