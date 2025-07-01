@@ -11,26 +11,6 @@ const ATTRIBUTE_DISPLAY_NAMES: Record<string, string> = {
   ...Object.fromEntries(
     Object.keys(PR_ATTRIBUTES).map((key) => [key, key.replace(/_/g, " ")]),
   ),
-  mostly_style: "Style",
-  new_page_or_component: "New Component",
-  introduces_or_fixes_a_footprint: "Footprint",
-  core_change: "Core",
-  only_dependency_update: "Deps",
-  bad_title: "Poor Title",
-  introduces_new_circuit_board: "New Board",
-  fixes_circuit_board: "Board Fix",
-  fixes_subtle_important_bug: "Bug Fix",
-  minor_fix: "Minor Fix",
-  major_autorouter_bug_fix: "Autorouter",
-  only_reproduces_a_bug: "Bug Repro",
-  reproduces_and_fixes_a_bug: "Repro+Fix",
-  major_experience_improvement: "UX",
-  introduces_new_schematic_symbol: "Symbol",
-  fixes_schematic_representation: "Schematic Fix",
-  improves_parts_engine: "Parts Engine",
-  add_design_to_schematic_corpus: "Design",
-  major_improvement_to_core_data_modeling: "Architecture",
-  major_library_algorithm_contribution: "Algorithm",
 }
 
 // Function to generate HSL color from string hash

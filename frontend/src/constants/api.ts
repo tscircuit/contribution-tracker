@@ -5,14 +5,24 @@ const REPO_BASE_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`
 const RAW_CONTENT_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main`
 const CONTRIBUTION_OVERVIEWS_PATH = "contribution-overviews"
 
+// Use local data in development
+const isDev = import.meta.env.DEV
+const LOCAL_BASE_URL = "http://localhost:5173"
+
 export const getContributionOverviewsUrl = () =>
-  `${REPO_BASE_URL}/contents/${CONTRIBUTION_OVERVIEWS_PATH}`
+  isDev
+    ? `${LOCAL_BASE_URL}/api/repos/tscircuit/contribution-tracker/contents/contribution-overviews`
+    : `${REPO_BASE_URL}/contents/${CONTRIBUTION_OVERVIEWS_PATH}`
 
 export const getContributionOverviewMarkdownUrl = (date: string) =>
-  `${RAW_CONTENT_URL}/${CONTRIBUTION_OVERVIEWS_PATH}/${date}.md`
+  isDev
+    ? `${LOCAL_BASE_URL}/local-data/${CONTRIBUTION_OVERVIEWS_PATH}/${date}.md`
+    : `${RAW_CONTENT_URL}/${CONTRIBUTION_OVERVIEWS_PATH}/${date}.md`
 
 export const getPrAnalysisUrl = (date: string) =>
-  `${RAW_CONTENT_URL}/pr-analysis/${date}.json`
+  isDev
+    ? `${LOCAL_BASE_URL}/local-pr-analysis/${date}.json`
+    : `${RAW_CONTENT_URL}/pr-analysis/${date}.json`
 
 export const getPullRequestUrl = (repo: string, prNumber: number) =>
   `https://github.com/${repo}/pull/${prNumber}`
