@@ -27,6 +27,7 @@ export async function generateOverview(startDate: string) {
   for (const repo of repos) {
     console.log(`\nAnalyzing ${repo}`)
     const repoOwners = await fetchCodeownersFile(repo)
+    console.log(`Found ${repoOwners.length} repo owners`)
     const prsWithReviews = await getAllPRs(repo, startDate)
     console.log(`Found ${prsWithReviews.length} total PRs`)
     for (const pr of prsWithReviews) {
@@ -124,31 +125,36 @@ export async function generateOverview(startDate: string) {
 
     const mergedPrs = await getMergedPRs(repo, startDateString)
     console.log(`Found ${mergedPrs.length} merged PRs`)
-    for (const pr of mergedPrs) {
-      if (pr.user.login.includes("renovate")) {
-        continue
-      }
-      const analysis = await analyzePRWithAI(pr, repo).catch((e) => {
-        console.error(
-          `Error analyzing PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
-          e,
-        )
-        return null
-      })
-      if (!analysis) {
-        continue
-      }
-      if (pr.hasMajorTag) {
-        analysis.impact = "Major"
-      }
-      if (analysis.isAlignedWithMilestone) {
-        analysis.impact = "Major"
-        console.log(
-          `PR #${pr.number} by ${pr.user.login} in ${repo} is aligned with milestone, setting impact to Major`,
-        )
-      }
-      mergedPrsWithAnalysis.push(analysis)
-    }
+    const mergedPrsWithAnalysisResults = await Promise.all(
+      mergedPrs.map(async (pr) => {
+        if (pr.user.login.includes("renovate")) {
+          return null
+        }
+        const analysis = await analyzePRWithAI(pr, repo).catch((e) => {
+          console.error(
+            `Error analyzing PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
+            e,
+          )
+          return null
+        })
+        if (!analysis) {
+          return null
+        }
+        if (pr.hasMajorTag) {
+          analysis.impact = "Major"
+        }
+        if (analysis.isAlignedWithMilestone) {
+          analysis.impact = "Major"
+          console.log(
+            `PR #${pr.number} by ${pr.user.login} in ${repo} is aligned with milestone, setting impact to Major`,
+          )
+        }
+        return analysis
+      }),
+    )
+    mergedPrsWithAnalysis.push(
+      ...mergedPrsWithAnalysisResults.filter((a) => a !== null),
+    )
 
     storePrAnalysis(mergedPrsWithAnalysis, startDate)
 

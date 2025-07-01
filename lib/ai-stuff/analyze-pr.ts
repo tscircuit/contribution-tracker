@@ -3,17 +3,19 @@ import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "lib/types"
 import { generateAnalyzePRPrompt } from "lib/ai-stuff/prompts"
 import { generateAiObjectCached } from "./sdk"
+import { pr_attribute_schema } from "./pr-attributes"
+import { getContributionStarRatingFromAttributes } from "./getConstributionStarRatingFromAttributes"
 
-const prSchema = z.object({
-  number: z.number(),
-  title: z.string(),
-  analysis: z.string(),
-  impact: z.enum(["Major", "Minor", "Tiny"]),
-  contributor: z.string(),
-  repo: z.string(),
-  url: z.string(),
-  isAlignedWithMilestone: z.boolean(),
-})
+const prSchema = z
+  .object({
+    number: z.number(),
+    title: z.string(),
+    description: z.string(),
+    contributor: z.string(),
+    repo: z.string(),
+    url: z.string(),
+  })
+  .merge(pr_attribute_schema)
 
 export async function analyzePRWithAI(
   pr: MergedPullRequest,
@@ -26,7 +28,11 @@ export async function analyzePRWithAI(
     schema: prSchema,
     prompt: generateAnalyzePRPrompt(pr, repo),
   })
+  const starRating =
+    pr.manualStarRating ??
+    getContributionStarRatingFromAttributes(result.object)
   return {
+    ...result.object,
     user: pr.user,
     html_url: pr.html_url,
     created_at: pr.created_at,
@@ -35,11 +41,11 @@ export async function analyzePRWithAI(
     state: pr.state,
     number: result.object.number,
     title: result.object.title,
-    description: result.object.analysis,
-    impact: result.object.impact,
     contributor: result.object.contributor,
     repo: result.object.repo,
     url: result.object.url,
-    isAlignedWithMilestone: result.object.isAlignedWithMilestone ?? false,
+    isAlignedWithMilestone: false,
+    starRating,
+    impact: starRating >= 3 ? "Major" : starRating >= 2 ? "Minor" : "Tiny",
   }
 }

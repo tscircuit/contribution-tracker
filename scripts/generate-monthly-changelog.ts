@@ -11,6 +11,7 @@ const GUIDELINES = [
   "PRs that don't mention specific, identifiable changes should be ignored",
   'Anything with a vague notion of "enhancement" should be ignored',
   "Link to PRs in markdown, e.g. [#123](https://github.com/tscircuit/pcb-viewer/pull/123)",
+  `Output regular markdown, use "-" for bullet points`,
 ]
 
 async function main() {

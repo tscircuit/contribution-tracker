@@ -1,22 +1,24 @@
 import { Octokit } from "@octokit/rest"
 import FileSystemCache from "file-system-cache"
 import type { Endpoints } from "@octokit/types"
+import kleur from "kleur"
+import ms from "ms"
 
 // Initialize cache with 24h default expiration
 const cache = FileSystemCache({ basePath: ".cache" })
-const DEFAULT_CACHE_EXPIRY = 24 * 60 * 60 * 1000 // 24 hours
+const DEFAULT_CACHE_EXPIRY = ms("6h")
 
 type OctokitInstance = InstanceType<typeof Octokit>
 
 export class CachedOctokit {
   private octokit: OctokitInstance
   private methodExpirations: Record<string, number> = {
-    "pulls.list": DEFAULT_CACHE_EXPIRY,
+    "pulls.list": ms("6h"),
     "pulls.get": DEFAULT_CACHE_EXPIRY,
     "pulls.listReviews": DEFAULT_CACHE_EXPIRY,
-    "issues.listForRepo": DEFAULT_CACHE_EXPIRY,
-    "issues.listComments": 6 * 60 * 60 * 1000, // 6 hours for comments
-    "repos.listForOrg": DEFAULT_CACHE_EXPIRY,
+    "issues.listForRepo": ms("6h"),
+    "issues.listComments": ms("6h"),
+    "repos.listForOrg": ms("6h"),
     "raw.fetchFile": DEFAULT_CACHE_EXPIRY,
   }
 
@@ -33,7 +35,10 @@ export class CachedOctokit {
 
     try {
       const cached = await cache.get(cacheKey)
-      if (!cached) return null
+      if (!cached) {
+        console.log(kleur.red("cache miss"), cacheKey.slice(0, 100))
+        return null
+      }
 
       const { data, timestamp } = cached as { data: T; timestamp: number }
       if (Date.now() - timestamp > expiry) {
@@ -61,7 +66,17 @@ export class CachedOctokit {
     ): Promise<{
       data: Endpoints["GET /repos/{owner}/{repo}/pulls"]["response"]["data"]
     }> => {
+      const cached = await this.getCached<
+        Endpoints["GET /repos/{owner}/{repo}/pulls"]["response"]["data"]
+      >("pulls.list", params as Record<string, unknown>)
+      if (cached) return { data: cached }
+
       const response = await this.octokit.pulls.list(params)
+      await this.setCached(
+        "pulls.list",
+        params as Record<string, unknown>,
+        response.data,
+      )
       return response
     },
 
@@ -96,7 +111,17 @@ export class CachedOctokit {
     ): Promise<{
       data: Endpoints["GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews"]["response"]["data"]
     }> => {
+      const cached = await this.getCached<
+        Endpoints["GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews"]["response"]["data"]
+      >("pulls.listReviews", params as Record<string, unknown>)
+      if (cached) return { data: cached }
+
       const response = await this.octokit.pulls.listReviews(params)
+      await this.setCached(
+        "pulls.listReviews",
+        params as Record<string, unknown>,
+        response.data,
+      )
       return response
     },
   }
@@ -107,7 +132,17 @@ export class CachedOctokit {
     ): Promise<{
       data: Endpoints["GET /repos/{owner}/{repo}/issues"]["response"]["data"]
     }> => {
+      const cached = await this.getCached<
+        Endpoints["GET /repos/{owner}/{repo}/issues"]["response"]["data"]
+      >("issues.listForRepo", params as Record<string, unknown>)
+      if (cached) return { data: cached }
+
       const response = await this.octokit.issues.listForRepo(params)
+      await this.setCached(
+        "issues.listForRepo",
+        params as Record<string, unknown>,
+        response.data,
+      )
       return response
     },
 
@@ -170,13 +205,31 @@ export class CachedOctokit {
       path: string
       ref?: string
     }): Promise<{ data: string }> => {
-      const cached = await this.getCached<string>("raw.fetchFile", params)
-      if (cached) return { data: cached }
+      const existingCache = await this.getCached<{
+        content: string
+        status: number
+      }>("raw.fetchFile", params)
+      if (existingCache) {
+        if (typeof existingCache === "string") {
+          return { data: existingCache }
+        }
+        if (existingCache.status === 404) {
+          throw new Error("File not found")
+        }
+        return { data: existingCache.content }
+      }
 
       const { owner, repo, path, ref = "main" } = params
       const url = `https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/${ref}/${path}`
 
       const response = await fetch(url)
+      if (response.status === 404) {
+        await this.setCached("raw.fetchFile", params, {
+          content: "",
+          status: 404,
+        })
+        throw new Error("File not found")
+      }
       if (!response.ok) {
         throw new Error(
           `Failed to fetch file: ${response.status} ${response.statusText}`,
@@ -184,7 +237,10 @@ export class CachedOctokit {
       }
 
       const content = await response.text()
-      await this.setCached("raw.fetchFile", params, content)
+      await this.setCached("raw.fetchFile", params, {
+        content,
+        status: response.status,
+      })
 
       return { data: content }
     },

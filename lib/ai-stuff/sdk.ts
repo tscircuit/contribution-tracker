@@ -1,27 +1,28 @@
 import { generateObject } from "ai"
 import { openai } from "@ai-sdk/openai"
 import FileSystemCache from "file-system-cache"
+import ms from "ms"
 
 const cache = FileSystemCache({ basePath: ".cache-ai" })
-const DEFAULT_CACHE_EXPIRY = 7 * 24 * 60 * 60 * 1000 // 1 week
+const DEFAULT_CACHE_EXPIRY = ms("7d")
 
 function estimateTokenCount(text: string): number {
   return Math.ceil(text.length / 4)
 }
 
-function truncatePrompt(prompt: string, maxTokens: number = 120000): string {
+function truncatePrompt(prompt: string, maxTokens: number = 15000): string {
   if (!prompt) return ""
   const estimatedTokens = estimateTokenCount(prompt)
   if (estimatedTokens <= maxTokens) {
     return prompt
   }
 
-  const maxChars = maxTokens * 4
+  const maxChars = maxTokens * 2
   const truncated = prompt.slice(0, maxChars)
   return truncated + "\n\n[Note: Content truncated due to length limit]"
 }
 
-async function getCached(params: any): Promise<any | null> {
+async function getAiCacheItem(params: any): Promise<any | null> {
   const cacheKey = JSON.stringify({
     model: params.model?.modelId || params.model,
     schema: params.schema?._def || params.schema,
@@ -68,10 +69,10 @@ export async function generateAiObjectCached(
   const optionsWithDefault = {
     ...options,
     prompt: truncatedPrompt,
-    model: options.model || openai("gpt-4o-mini"),
+    model: options.model || openai("gpt-4.1"),
   }
 
-  const cached = await getCached(optionsWithDefault)
+  const cached = await getAiCacheItem(optionsWithDefault)
   if (cached) return cached
 
   const response = await generateObject(optionsWithDefault as any)

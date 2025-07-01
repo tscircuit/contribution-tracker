@@ -1,5 +1,6 @@
 import type { DiscussionComment } from "lib/types"
 import { CURRENT_MILESTONES } from "milestones"
+import { PR_ATTRIBUTES } from "./pr-attributes"
 
 export function generateAnalyzeDiscussionPrompt(
   comment: DiscussionComment,
@@ -72,54 +73,31 @@ export function generateAnalyzePRPrompt(
 ${pr.diff || "No diff provided"}
 </diff>
 
-<current-milestones>
-${currentMilestones
-  .map(
-    (milestone) => `
-- Name: ${milestone.name}
-- Description: ${milestone.description}
-- Keywords: ${milestone.keywords.join(", ")}
-${milestone.customRequirements ? `- Custom Requirements: ${milestone.customRequirements}` : ""}
-`,
-  )
-  .join("\n---\n")}
-</current-milestones>
-
 <instructions>
 Strictly assess the PR across the following dimensions:
 
-1. <summary>
-   Provide a concise 1-line summary clearly stating what this PR does.
-</summary>
+<description>
+   Provide a concise 1-line summary clearly stating what this PR changes for users
 
-2. <impact-assessment>
-   Categorize the impact of the PR strictly as:
-   - "Major": Large features, architectural changes, or breaking changes.
-   - "Minor": Moderate features, bug fixes, performance tuning, or code enhancements.
-   - "Tiny": Any of the following:
-     - Pure documentation or comment changes.
-     - Typo fixes.
-     - Changes involving only \`package.json\`, \`package-lock.json\`, or \`yarn.lock\`.
-     - Cosmetic or non-functional adjustments.
-     - Minor workflow only changes
+   Give precise details, DO NOT SAY "improves XXX" or "enhances XXX",
+   if the PR fixes a precise bug, be precise e.g.
 
-   ❗ Package or lock file changes must be treated as "Tiny", regardless of description.
-</impact-assessment>
+   - "Fixes autorouting failure when pinheaders are connected to same nets within a subcircuit"
+   - "Solves discord bug where user can't see boards with many traces inside RunFrame preview"
+   - "Add Mosfet symbol"
+   - "Fixes KiCad symbol export when jumper is misaligned"
+</description>
 
-3. <analysis>
-   Provide a brief, expressive one-line expressive analysis of the PR's nature and value.
-   Do not start with "This PR" or "This PR does".
-   Just give an analysis of the PR.
-</analysis>
+${Object.entries(PR_ATTRIBUTES)
+  .map(
+    ([attributeName, attributeDescription]) => `
+- <${attributeName}>
+  ${attributeDescription}
+</${attributeName}>
+`,
+  )
+  .join("\n")}
 
-4. <milestone-alignment>
-   Determine strict alignment to the current milestone. Set as \`true\` only if:
-   - The PR's intent directly advances the milestone's main objectives.
-   - The scope of the PR is relevant to the milestone's defined keywords and description.
-   - It is not tangential or unrelated to milestone goals.
-
-   Set to \`false\` if the PR is off-topic, only partially relevant, or misaligned.
-</milestone-alignment>
 </instructions>
 
 `.trim()

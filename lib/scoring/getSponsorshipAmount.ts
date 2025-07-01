@@ -8,7 +8,6 @@ export function getSponsorshipAmount({
   weeklyStars,
   highScore,
 }: { weeklyStars: number[]; highScore: number }): number {
-  const SPONSORSHIP_MULTIPLIER = 1.25
   // Calculate the median of stars
   const sortedStars = [...weeklyStars].sort((a, b) => a - b)
   const medianStars =
@@ -18,6 +17,11 @@ export function getSponsorshipAmount({
         2
       : sortedStars[Math.floor(sortedStars.length / 2)]
   const maxStarCount = Math.max(...weeklyStars)
+
+  console.log({
+    weeklyStars,
+    highScore,
+  })
 
   // Determine base amount based on median stars
   let baseAmount = 0
@@ -39,5 +43,5 @@ export function getSponsorshipAmount({
     baseAmount = 5
   }
 
-  return baseAmount * SPONSORSHIP_MULTIPLIER
+  return baseAmount
 }

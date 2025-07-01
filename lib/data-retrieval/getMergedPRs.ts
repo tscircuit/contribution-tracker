@@ -57,9 +57,26 @@ export async function getMergedPRs(
       const hasMajorTag = pr.labels.some((label) => label.name === "major")
       return {
         ...pr,
+        user: {
+          login: pr.user?.login ?? "unknown",
+        },
         state: "merged",
         diff: filteredDiff,
         hasMajorTag: hasMajorTagFromMaintainer || hasMajorTag,
+        manualStarRating:
+          pr.labels.find(
+            (label) =>
+              label.name.includes("star") &&
+              label.name.split("star").length - 1,
+          ) ??
+          comments.find(
+            (c) =>
+              c.body &&
+              c.body.includes(":star::star::star:") &&
+              c.body.split(":star:").length > 3 &&
+              c.body.split(":star:").length - 1,
+          ) ??
+          undefined,
       }
     }),
   )
