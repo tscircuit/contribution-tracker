@@ -22,7 +22,7 @@ it("should count distinct PRs reviewed", () => {
   expect(result.score).toBe(2) // Should get 2 points for reviewing 2 distinct PRs
 })
 
-it("should cap review points at 10", () => {
+it("should cap review points at 5", () => {
   const mockPRs: AnalyzedPR[] = []
   const stats: ContributorStats = {
     reviewsReceived: 0,
@@ -39,7 +39,7 @@ it("should cap review points at 10", () => {
   }
 
   const result = getContributorScore(mockPRs, stats)
-  expect(result.score).toBe(10) // Should be capped at 10 points
+  expect(result.score).toBe(5) // Should be capped at 5 points
 })
 
 it("should handle edge cases", () => {
@@ -104,7 +104,7 @@ describe("distinct PRs reviewed functionality", () => {
     expect(result.score).toBe(1) // Should get 1 point for one distinct PR reviewed
   })
 
-  it("should cap review points at 10 even with many distinct PRs", () => {
+  it("should cap review points at 5 even with many distinct PRs", () => {
     const mockPRs: AnalyzedPR[] = []
     const contributorStats: ContributorStats = {
       reviewsReceived: 0,
@@ -121,7 +121,7 @@ describe("distinct PRs reviewed functionality", () => {
     }
 
     const result = getContributorScore(mockPRs, contributorStats)
-    expect(result.score).toBe(10) // Should be capped at 10 points
+    expect(result.score).toBe(5) // Should be capped at 5 points
   })
 
   it("should handle edge case of no reviews", () => {
