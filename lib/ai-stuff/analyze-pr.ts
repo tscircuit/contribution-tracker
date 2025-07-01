@@ -17,6 +17,15 @@ const prSchema = z
   })
   .merge(pr_attribute_schema)
 
+function cleanDescription(description: string): string {
+  return description
+    .replace(/^\s*[-*•]\s+/gm, '') // Remove bullet points (-, *, •)
+    .replace(/\n+/g, ' ') // Replace newlines with spaces
+    .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+    .replace(/[^\w\s.,!?;:()\-]/g, '') // Remove special characters except basic punctuation
+    .trim()
+}
+
 export async function analyzePRWithAI(
   pr: MergedPullRequest,
   repo: string,
@@ -33,6 +42,7 @@ export async function analyzePRWithAI(
     getContributionStarRatingFromAttributes(result.object, repo)
   return {
     ...result.object,
+    description: cleanDescription(result.object.description),
     user: pr.user,
     html_url: pr.html_url,
     created_at: pr.created_at,
