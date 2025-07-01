@@ -21,7 +21,7 @@ const PrSection = ({
 
   return (
     <>
-      <div className="mb-4">
+      <div className="mb-4" id={title.toLowerCase().replace(/ /g, "-")}>
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
       </div>
       {Object.entries(prsData).map(([key, prs]) => {
@@ -100,6 +100,33 @@ function App() {
             setIsModalOpen(true)
           }}
         />
+
+        <div className="flex flex-wrap gap-4 mb-6">
+          <a
+            href="#prs-by-repository"
+            className="inline-block px-4 py-2 rounded bg-blue-100 text-blue-700 font-medium hover:bg-blue-200 transition"
+            onClick={(e) => {
+              e.preventDefault()
+              document
+                .getElementById("prs-by-repository")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }}
+          >
+            PRs by Repository
+          </a>
+          <a
+            href="#prs-by-contributors"
+            className="inline-block px-4 py-2 rounded bg-blue-100 text-blue-700 font-medium hover:bg-blue-200 transition"
+            onClick={(e) => {
+              e.preventDefault()
+              document
+                .getElementById("prs-by-contributors")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }}
+          >
+            PRs by Contributors
+          </a>
+        </div>
 
         <PrSection
           title="PRs by Repository"

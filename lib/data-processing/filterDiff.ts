@@ -1,8 +1,13 @@
 import parseDiff from "parse-diff"
 
-export function filterDiff(diffContent: string): string {
-  const filesToExclude = ["package-lock.json", "bun.lockb", "bun.lock"]
+const filesToExclude = ["package-lock.json", "bun.lockb", "bun.lock"]
 
+function isLimitedFile(filename: string | undefined): boolean {
+  if (!filename) return false
+  return filename.endsWith(".json") || filename.endsWith(".svg")
+}
+
+export function filterDiff(diffContent: string): string {
   // Parse the diff content
   const files = parseDiff(diffContent)
 
@@ -31,7 +36,16 @@ export function filterDiff(diffContent: string): string {
     for (const chunk of file.chunks) {
       result += `@@ -${chunk.oldStart},${chunk.oldLines} +${chunk.newStart},${chunk.newLines} @@\n`
       for (const change of chunk.changes) {
-        result += change.type + change.content + "\n"
+        if (isLimitedFile(file.to)) {
+          // Limit content to 100 characters for .json or .svg files
+          let content = change.content
+          if (content.length > 100) {
+            content = content.slice(0, 100) + "…"
+          }
+          result += change.type + content + "\n"
+        } else {
+          result += change.type + change.content + "\n"
+        }
       }
     }
   }

@@ -30,7 +30,7 @@ export async function analyzePRWithAI(
   })
   const starRating =
     pr.manualStarRating ??
-    getContributionStarRatingFromAttributes(result.object)
+    getContributionStarRatingFromAttributes(result.object, repo)
   return {
     ...result.object,
     user: pr.user,
