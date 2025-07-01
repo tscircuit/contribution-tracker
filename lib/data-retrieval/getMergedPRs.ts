@@ -68,7 +68,14 @@ export async function getMergedPRs(
             (label) =>
               label.name.includes("star") &&
               label.name.split("star").length - 1,
-          ) ?? undefined,
+          ) ??
+          comments.find(
+            (c) =>
+              c.body &&
+              c.body.includes(":star:") &&
+              c.body.split(":star:").length - 1,
+          ) ??
+          undefined,
       }
     }),
   )

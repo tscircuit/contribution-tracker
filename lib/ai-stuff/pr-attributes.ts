@@ -11,7 +11,7 @@ export const PR_ATTRIBUTES = {
   bad_title:
     "The PR title is overly vague or generic, it can't be used to communicate the PR's purpose in a changelog",
   introduces_new_circuit_board:
-    "The PR introduces a new circuit board, the circuit board didn't previously exist and this PR introduces the circuit board in it's entirety (PCB and schematic). There is a PCB and schematic snapshot generated in the PR",
+    "The PR introduces a new circuit board, the circuit board didn't previously exist and this PR introduces the circuit board in it's entirety (PCB and schematic). There is a PCB and schematic snapshot generated in the PR, and the circuit board is not a toy board, it has a real use case.",
   fixes_circuit_board:
     "This PR fixes a circuit board, the circuit board previously existed and this PR fixes it in some way",
   fixes_subtle_important_bug:
@@ -30,6 +30,8 @@ export const PR_ATTRIBUTES = {
     "Fixes how schematics or symbols are represented",
   improves_parts_engine:
     "Improves tscircuit generation of circuit board Bill of Materials",
+  add_design_to_schematic_corpus:
+    "Creates a design in the schematic-corpus repository",
   major_library_algorithm_contribution:
     "This PR contributes a major algorithm improvement to a library, the algorithm is non-trivial, well-tested and has good documentation and comments",
 }
