@@ -3,7 +3,7 @@
     "tag": "tscircuit/tscircuit#694",
     "number": 694,
     "title": "update core and eval",
-    "description": "Updates @tscircuit/core to v0.0.526 and @tscircuit/eval to v0.0.240 in package.json (dependency update only).",
+    "description": "Updates @tscircuit/core from 0.0.520 to 0.0.526 and @tscircuit/eval from 0.0.239 to 0.0.240; no other changes.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit",
     "url": "https://github.com/tscircuit/tscircuit/pull/694",
@@ -24,6 +24,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -62,6 +63,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -86,7 +88,7 @@
     "mostly_style": false,
     "new_page_or_component": false,
     "introduces_or_fixes_a_footprint": false,
-    "core_change": false,
+    "core_change": true,
     "only_dependency_update": false,
     "bad_title": false,
     "introduces_new_circuit_board": false,
@@ -100,6 +102,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -117,7 +120,7 @@
     "tag": "tscircuit/props#304",
     "number": 304,
     "title": "add connections prop to led",
-    "description": "Adds an optional 'connections' property to the LED component, allowing users to specify net connections for each LED pin and validates them with comprehensive tests.",
+    "description": "Adds an optional 'connections' property to the LED component, allowing users to specify net connections for each LED pin, with comprehensive validation and tests.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/props",
     "url": "https://github.com/tscircuit/props/pull/304",
@@ -138,6 +141,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -155,7 +159,7 @@
     "tag": "tscircuit/footprinter#307",
     "number": 307,
     "title": "Add nopinlabels option to pinrow",
-    "description": "Adds a `nopinlabels` option to the `pinrow` footprint definition, allowing users to omit silkscreen pin labels when generating pin rows.",
+    "description": "Adds a `nopinlabels` option to the `pinrow` footprint definition and builder, allowing users to omit silkscreen pin labels when generating pin rows.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/footprinter",
     "url": "https://github.com/tscircuit/footprinter/pull/307",
@@ -176,6 +180,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -193,7 +198,7 @@
     "tag": "tscircuit/footprinter#306",
     "number": 306,
     "title": "fix 1210 footprint to have tall pads",
-    "description": "Corrects the 1210 (3225 metric) footprint dimensions to use taller and wider pads, addressing incorrect pad sizing in the previous version (fixes #304).",
+    "description": "Corrects the 1210 (3225 metric) passive footprint dimensions to use taller and wider pads, fixing incorrect pad sizing in generated footprints (fixes #304).",
     "contributor": "techmannih",
     "repo": "tscircuit/footprinter",
     "url": "https://github.com/tscircuit/footprinter/pull/306",
@@ -209,11 +214,12 @@
     "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
-    "reproduces_and_fixes_a_bug": true,
+    "reproduces_and_fixes_a_bug": false,
     "major_experience_improvement": false,
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -224,14 +230,14 @@
     "body": "fix #304 ",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 2,
+    "impact": "Minor"
   },
   {
     "tag": "tscircuit/easyeda-converter#270",
     "number": 270,
     "title": "Add via support for TSX conversion",
-    "description": "Adds support for converting vias from EasyEDA JSON to TSX in generateFootprintTsx, enabling footprints with vias to be exported correctly.",
+    "description": "Adds support for converting vias to TSX format in generateFootprintTsx, enabling components with vias to be correctly converted and represented in TypeScript output.",
     "contributor": "seveibar",
     "repo": "tscircuit/easyeda-converter",
     "url": "https://github.com/tscircuit/easyeda-converter/pull/270",
@@ -252,6 +258,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -269,7 +276,7 @@
     "tag": "tscircuit/easyeda-converter#269",
     "number": 269,
     "title": "Add VIA shape handling",
-    "description": "Adds support for parsing and converting VIA shapes from EasyEDA packages to pcb_via elements in tscircuit, including schema, conversion logic, and tests for a real-world part (C46497) with VIAs.",
+    "description": "Adds support for parsing and converting VIA shapes from EasyEDA JSON to tscircuit circuit JSON, enabling correct handling of vias in imported packages and boards. Includes new schema, conversion logic, and tests for a real-world part (C46497) with vias.",
     "contributor": "seveibar",
     "repo": "tscircuit/easyeda-converter",
     "url": "https://github.com/tscircuit/easyeda-converter/pull/269",
@@ -290,6 +297,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -307,7 +315,7 @@
     "tag": "tscircuit/3d-viewer#365",
     "number": 365,
     "title": "Enable JSX board definitions in Manifold engine",
-    "description": "Allows users to define circuit boards using JSX children in the Manifold 3D viewer, not just circuitJson, enabling more flexible board creation workflows.",
+    "description": "Allows users to define circuit boards using JSX children in the Manifold 3D viewer, not just via circuitJson, enabling more flexible and React-friendly board definitions.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/3d-viewer",
     "url": "https://github.com/tscircuit/3d-viewer/pull/365",
@@ -328,6 +336,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -345,7 +354,7 @@
     "tag": "tscircuit/3d-viewer#364",
     "number": 364,
     "title": "manifold handling of empty boards",
-    "description": "Fixes bug where 3D viewer would fail or hang when attempting to render an empty board (zero width/height or insufficient outline), now gracefully renders nothing for the board and shows components if present.",
+    "description": "Fixes bug where 3D viewer would fail or hang when attempting to render an empty board by gracefully handling empty board data and rendering only components if present.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/3d-viewer",
     "url": "https://github.com/tscircuit/3d-viewer/pull/364",
@@ -366,6 +375,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -383,7 +393,7 @@
     "tag": "tscircuit/core#1016",
     "number": 1016,
     "title": "New Match Adapt algorithm with BPC Graphs",
-    "description": "Replaces the schematic match-adapt layout algorithm with a new approach based on BPC (Box-Pin-Connection) graphs, enabling more robust and flexible schematic auto-layout for groups using a corpus of graph templates and adaptation logic. Updates dependencies and test fixtures to support the new algorithm.",
+    "description": "Rewrites the schematic match-adapt layout algorithm to use BPC (Box-Pin-Connection) graphs, enabling improved schematic layout matching and adaptation using a graph-based approach and a schematic corpus.",
     "contributor": "seveibar",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1016",
@@ -404,6 +414,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -421,7 +432,7 @@
     "tag": "tscircuit/core#1015",
     "number": 1015,
     "title": "Add schOrientation support tests",
-    "description": "Adds support for mapping `schOrientation` to schematic symbol rotation, removes outdated orientation tests, and adds comprehensive test snapshots for polarized capacitor orientations.",
+    "description": "Maps `schOrientation` prop to schematic symbol rotation and adds comprehensive tests (with snapshots) for polarized capacitor orientations, ensuring correct symbol mapping for all supported orientations.",
     "contributor": "seveibar",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1015",
@@ -430,7 +441,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": true,
     "only_dependency_update": false,
-    "bad_title": true,
+    "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -442,6 +453,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -452,14 +464,14 @@
     "body": "## Summary\n- map `schOrientation` to schematic symbol rotation\n- remove old orientation tests\n- add test snapshot for polarized capacitor orientations\n\n## Testing\n- `BUN_UPDATE_SNAPSHOTS=1 bun test tests/components/normal-components/capacitor-schOrientation.test.tsx`\n\n\n------\nhttps://chatgpt.com/codex/tasks/task_b_68600e31f0dc832e81e3977900c9d960",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 2,
+    "impact": "Minor"
   },
   {
     "tag": "tscircuit/core#1014",
     "number": 1014,
     "title": "update schematic symbol and add testpoint test with netlabel",
-    "description": "Updates schematic-symbols dependency and adds a test for testpoint components with netlabels in schematics, ensuring correct netlabel connections and schematic rendering.",
+    "description": "Updates the schematic symbol dependency and adds a test for testpoint components with netlabels in the schematic, ensuring correct netlabel connections and snapshot testing.",
     "contributor": "techmannih",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1014",
@@ -480,6 +492,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -497,7 +510,7 @@
     "tag": "tscircuit/core#1013",
     "number": 1013,
     "title": "use the package version `5.1.0` for css-select",
-    "description": "Pins the css-select dependency to version 5.1.0 to avoid breaking type errors introduced in newer versions.",
+    "description": "Pins the css-select dependency to version 5.1.0 to avoid breaking type errors caused by newer versions.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1013",
@@ -506,7 +519,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": true,
-    "bad_title": false,
+    "bad_title": true,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -518,6 +531,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -528,14 +542,14 @@
     "body": "Don't upgrade to the latest version of the package, as it is breaking the types",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 1,
+    "starRating": 0,
     "impact": "Tiny"
   },
   {
     "tag": "tscircuit/core#1009",
     "number": 1009,
     "title": "Added repro to jumper netlabel connection",
-    "description": "Adds a comprehensive test that reproduces issues with jumper and netlabel connections in circuit schematics and PCB layouts.",
+    "description": "Adds a comprehensive test that reproduces the bug where jumper netlabel connections are not handled correctly, enabling easier future fixes.",
     "contributor": "MustafaMulla29",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1009",
@@ -556,6 +570,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "MustafaMulla29"
@@ -573,7 +588,7 @@
     "tag": "tscircuit/core#998",
     "number": 998,
     "title": "add board information to the board silkscreen with `printBoardInformationToSilkscreen`",
-    "description": "Adds automatic printing of project name, version, and URL to the PCB silkscreen when `printBoardInformationToSilkscreen` is enabled in the platform config.",
+    "description": "Adds automatic printing of project name, version, and URL to the PCB silkscreen if enabled in the platform config via `printBoardInformationToSilkscreen`.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/998",
@@ -594,6 +609,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -632,6 +648,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -649,7 +666,7 @@
     "tag": "tscircuit/core#1005",
     "number": 1005,
     "title": "Remove TODO_REMOVE_THIS fallback",
-    "description": "Removes the 'TODO_REMOVE_THIS' placeholder from PrimitiveComponent name getter and ensures NormalComponent footprint generation uses a fallback name if needed, preventing placeholder names from appearing in user-facing outputs.",
+    "description": "Removes the 'TODO_REMOVE_THIS' placeholder from PrimitiveComponent name getter and ensures NormalComponent footprint generation uses a fallback name if needed, eliminating placeholder leakage into user-facing component names.",
     "contributor": "seveibar",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1005",
@@ -658,11 +675,11 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": true,
     "only_dependency_update": false,
-    "bad_title": true,
+    "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
-    "fixes_subtle_important_bug": false,
-    "minor_fix": true,
+    "fixes_subtle_important_bug": true,
+    "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
@@ -670,6 +687,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -680,14 +698,14 @@
     "body": "## Summary\n- remove TODO placeholder from PrimitiveComponent name getter\n- ensure NormalComponent footprint generation uses a fallback name\n\n## Testing\n- `BUN_UPDATE_SNAPSHOTS=1 bun test tests/repros/repro22-unnamed-component.test.tsx`\n\n------\nhttps://chatgpt.com/codex/tasks/task_b_685ed2bcc484832eaddca1676f960f55",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 2,
+    "impact": "Minor"
   },
   {
     "tag": "tscircuit/core#1004",
     "number": 1004,
     "title": "Fix netlabel center offset",
-    "description": "Fixes schematic netlabel center calculation so that netlabel text is correctly centered based on the anchor side, improving netlabel placement accuracy in schematics.",
+    "description": "Fixes incorrect placement of schematic netlabel centers by computing their position based on anchor side, ensuring accurate netlabel alignment in schematics.",
     "contributor": "seveibar",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1004",
@@ -708,6 +726,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -725,7 +744,7 @@
     "tag": "tscircuit/core#1002",
     "number": 1002,
     "title": "fix: subcircuit having multiple traces between same pins",
-    "description": "Fixes autorouter bug where subcircuits could generate multiple traces between the same pins, causing redundant routing and potential errors. Now, only unrouted traces are considered for autorouting within subcircuits, preventing duplicate connections.",
+    "description": "Fixes autorouter bug where subcircuits could have multiple traces between the same pins, causing redundant routing and errors. Now, only unrouted traces are considered for autorouting, preventing duplicate connections.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1002",
@@ -746,6 +765,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -763,7 +783,7 @@
     "tag": "tscircuit/core#1003",
     "number": 1003,
     "title": "fix net ids on schematic net labels",
-    "description": "Fixes incorrect assignment of source_net_id on schematic net labels to ensure they reference the correct net object rather than just the net name.",
+    "description": "Fixes incorrect assignment of net IDs to schematic net labels, ensuring that net labels reference the correct source net ID instead of the net name.",
     "contributor": "seveibar",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1003",
@@ -779,11 +799,12 @@
     "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
-    "reproduces_and_fixes_a_bug": true,
+    "reproduces_and_fixes_a_bug": false,
     "major_experience_improvement": false,
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -794,8 +815,8 @@
     "body": null,
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 2,
+    "impact": "Minor"
   },
   {
     "tag": "tscircuit/core#976",
@@ -822,6 +843,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -839,7 +861,7 @@
     "tag": "tscircuit/core#997",
     "number": 997,
     "title": "Repro for the duplicate traces inside of subcircuit",
-    "description": "Adds a comprehensive skipped test that reproduces the issue of duplicate traces being generated between the same pins inside a subcircuit (see issue #693), making it easier for future contributors to fix the bug.",
+    "description": "Adds a comprehensive skipped test that reproduces the bug where duplicate traces are created between the same pins inside a subcircuit (see issue #693).",
     "contributor": "imrishabh18",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/997",
@@ -860,6 +882,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -877,7 +900,7 @@
     "tag": "tscircuit/core#1000",
     "number": 1000,
     "title": "implement obstacles for cutout components",
-    "description": "Implements obstacle generation for PCB cutout components (rectangular, circular, and polygonal) so that cutouts are respected during board layout and routing.",
+    "description": "Adds support for generating PCB routing obstacles for rectangular, circular, and polygonal cutout components, ensuring traces avoid these regions during autorouting.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/1000",
@@ -886,7 +909,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": true,
     "only_dependency_update": false,
-    "bad_title": false,
+    "bad_title": true,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -898,7 +921,8 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
-    "major_library_algorithm_contribution": true,
+    "add_design_to_schematic_corpus": false,
+    "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
     },
@@ -908,14 +932,14 @@
     "body": null,
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/core#999",
     "number": 999,
     "title": "updated footprinter",
-    "description": "Updates @tscircuit/footprinter dependency to v0.0.186, resulting in minor floating-point precision changes in PCB pad dimensions in tests (e.g., 0.6000000000000001 → 0.6). No new features or bugfixes introduced.",
+    "description": "Updates @tscircuit/footprinter dependency from 0.0.182 to 0.0.186 and updates test snapshots to reflect improved floating point precision in pad and group dimensions (e.g., 0.6000000000000001 → 0.6). No new features or bug fixes beyond dependency update and test maintenance.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/999",
@@ -936,6 +960,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -953,7 +978,7 @@
     "tag": "tscircuit/core#996",
     "number": 996,
     "title": "feat(sel): add support for TP selectors like sel.TP1.pin1",
-    "description": "Adds support for selectors of test points (TP) such as sel.TP1.pin1, enabling users to reference test point pins in selector expressions.",
+    "description": "Adds support for selecting test point pins using selectors like sel.TP1.pin1, enabling users to reference test point pins in selection expressions.",
     "contributor": "Abse2001",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/996",
@@ -974,6 +999,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -991,7 +1017,7 @@
     "tag": "tscircuit/core#992",
     "number": 992,
     "title": "solderJumper handling the props.symbolName",
-    "description": "Allows the SolderJumper component to accept a custom symbolName via props, enabling explicit schematic symbol naming for solder jumpers.",
+    "description": "Allows users to specify a custom schematic symbol name for the SolderJumper component via the symbolName prop, falling back to the default naming if not provided.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/992",
@@ -1012,6 +1038,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -1029,7 +1056,7 @@
     "tag": "tscircuit/core#995",
     "number": 995,
     "title": "add connections test to led",
-    "description": "Adds a test to verify that the <Led/> component correctly creates traces for specified connections, ensuring that nets are assigned and schematic output is as expected.",
+    "description": "Adds a test to verify that the <Led/> component correctly creates traces for specified connections (GND and VCC), ensuring the component's connections prop is handled as expected.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/core",
     "url": "https://github.com/tscircuit/core/pull/995",
@@ -1050,6 +1077,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -1088,6 +1116,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -1105,7 +1134,7 @@
     "tag": "tscircuit/circuit-to-svg#276",
     "number": 276,
     "title": "don't place overline on net labels for now, reduce font size for pin labels with overline",
-    "description": "Removes overline rendering from net labels and reduces font size for negated (overlined) pin labels in schematics, addressing incorrect visual representation of negated signals.",
+    "description": "Removes overline rendering from net labels and reduces font size for negated (overlined) pin labels in schematics, addressing #272.",
     "contributor": "seveibar",
     "repo": "tscircuit/circuit-to-svg",
     "url": "https://github.com/tscircuit/circuit-to-svg/pull/276",
@@ -1126,6 +1155,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -1143,7 +1173,7 @@
     "tag": "tscircuit/circuit-to-svg#270",
     "number": 270,
     "title": "feat: show pads/pins/hole in the assembly svg",
-    "description": "Assembly SVGs now render pads, pins, and holes, providing a more complete and accurate board visualization for users.",
+    "description": "Adds rendering of pads, pins, and holes to the assembly SVG output, allowing users to visually identify these features in generated assembly diagrams.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/circuit-to-svg",
     "url": "https://github.com/tscircuit/circuit-to-svg/pull/270",
@@ -1152,7 +1182,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": false,
-    "bad_title": true,
+    "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -1164,6 +1194,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -1181,7 +1212,7 @@
     "tag": "tscircuit/circuit-to-svg#268",
     "number": 268,
     "title": "Support newline in pcb silkscreen text",
-    "description": "Adds support for rendering multi-line PCB silkscreen text by splitting on newlines and generating <tspan> elements for each line, with a test and documentation update.",
+    "description": "Adds support for rendering multi-line PCB silkscreen text by splitting on newlines and generating a <tspan> per line in SVG output, with a test and documentation update.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/circuit-to-svg",
     "url": "https://github.com/tscircuit/circuit-to-svg/pull/268",
@@ -1202,6 +1233,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -1219,7 +1251,7 @@
     "tag": "tscircuit/checks#52",
     "number": 52,
     "title": "Add runAllChecks utility",
-    "description": "Adds a runAllChecks utility function that executes all available PCB checks on tscircuit code, exports it, and provides a unit test for validation.",
+    "description": "Adds a new runAllChecks utility function that executes all available PCB checks on tscircuit code, exports it for external use, and includes a unit test for validation.",
     "contributor": "seveibar",
     "repo": "tscircuit/checks",
     "url": "https://github.com/tscircuit/checks/pull/52",
@@ -1240,6 +1272,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -1257,7 +1290,7 @@
     "tag": "tscircuit/schematic-symbols#316",
     "number": 316,
     "title": "Add oriented not_connected symbol",
-    "description": "Adds a new 'not connected' schematic symbol with support for multiple orientations (up, down, left, right) for use in circuit diagrams.",
+    "description": "Adds a new 'not connected' schematic symbol with support for all four orientations (up, down, left, right), making it available for use in schematics.",
     "contributor": "techmannih",
     "repo": "tscircuit/schematic-symbols",
     "url": "https://github.com/tscircuit/schematic-symbols/pull/316",
@@ -1278,6 +1311,7 @@
     "introduces_new_schematic_symbol": true,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -1295,7 +1329,7 @@
     "tag": "tscircuit/schematic-symbols#315",
     "number": 315,
     "title": "shrink testpoint symbol size",
-    "description": "Reduces the size of the testpoint schematic symbol, making it more compact in circuit diagrams.",
+    "description": "Reduces the size of the testpoint schematic symbol for more compact schematic layouts.",
     "contributor": "techmannih",
     "repo": "tscircuit/schematic-symbols",
     "url": "https://github.com/tscircuit/schematic-symbols/pull/315",
@@ -1316,6 +1350,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -1333,7 +1368,7 @@
     "tag": "tscircuit/circuit-json-to-gerber#45",
     "number": 45,
     "title": "Fix silkscreen text anchor handling on gerber",
-    "description": "Fixes incorrect alignment of silkscreen text in Gerber output by supporting additional anchor alignments and the anchor_side property, with tests verifying correct behavior.",
+    "description": "Fixes incorrect alignment of silkscreen text in Gerber output by supporting additional anchor alignments and the `anchor_side` property, with tests verifying correct behavior.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/circuit-json-to-gerber",
     "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/45",
@@ -1354,6 +1389,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -1371,7 +1407,7 @@
     "tag": "tscircuit/circuit-json-to-gerber#44",
     "number": 44,
     "title": "Support nine-point text anchors",
-    "description": "Adds support for all nine standard text anchor alignments (top_left, top_center, top_right, center_left, center, center_right, bottom_left, bottom_center, bottom_right) in Gerber conversion, and covers them with new silkscreen text test snapshots.",
+    "description": "Adds support for all nine text anchor alignments (top_left, top_center, top_right, center_left, center, center_right, bottom_left, bottom_center, bottom_right) in Gerber conversion, and covers them with new silkscreen text test snapshots.",
     "contributor": "seveibar",
     "repo": "tscircuit/circuit-json-to-gerber",
     "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/44",
@@ -1392,6 +1428,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -1409,7 +1446,7 @@
     "tag": "tscircuit/tscircuit.com#1395",
     "number": 1395,
     "title": "update footprint dependency",
-    "description": "Updates the @tscircuit/footprinter package dependency from version ^0.0.176 to ^0.0.186, with no other changes.",
+    "description": "Updates @tscircuit/footprinter dependency from version 0.0.176 to 0.0.186 in package.json; no user-facing changes or new functionality introduced.",
     "contributor": "techmannih",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1395",
@@ -1430,6 +1467,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -1447,7 +1485,7 @@
     "tag": "tscircuit/tscircuit.com#1394",
     "number": 1394,
     "title": "update runframe package",
-    "description": "Updates the @tscircuit/runframe dependency from version ^0.0.647 to ^0.0.653. No other changes are included.",
+    "description": "Update @tscircuit/runframe dependency from version ^0.0.647 to ^0.0.653. No user-facing changes or new features introduced.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1394",
@@ -1468,6 +1506,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -1485,7 +1524,7 @@
     "tag": "tscircuit/tscircuit.com#1393",
     "number": 1393,
     "title": "Add tooltip to AI autocomplete button",
-    "description": "Adds a tooltip to the AI autocomplete toggle button in the code editor header, providing users with a description of its function.",
+    "description": "Adds a tooltip to the AI autocomplete button in the code editor header, providing users with a description of its function.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1393",
@@ -1506,6 +1545,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -1523,7 +1563,7 @@
     "tag": "tscircuit/tscircuit.com#1389",
     "number": 1389,
     "title": "update circuit-to-svg dependency",
-    "description": "Updates the 'circuit-to-svg' package dependency from version ^0.0.160 to ^0.0.163; no user-facing changes or new functionality introduced.",
+    "description": "Updates the 'circuit-to-svg' package dependency from version ^0.0.160 to ^0.0.163; no user-facing changes or new features are introduced.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1389",
@@ -1544,6 +1584,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -1561,7 +1602,7 @@
     "tag": "tscircuit/tscircuit.com#1388",
     "number": 1388,
     "title": "feat! Ctrl+Shift+F Vscode type find and replace across files",
-    "description": "Adds a VSCode-style global find and replace (Ctrl+Shift+F) feature to the code editor, allowing users to search and replace text across all files in a project with support for regex, case sensitivity, and whole word matching.",
+    "description": "Adds a VSCode-style global find and replace feature (Ctrl+Shift+F) to the code editor, allowing users to search and replace text across all files with support for regex, case sensitivity, and whole word matching.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1388",
@@ -1582,6 +1623,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1599,7 +1641,7 @@
     "tag": "tscircuit/tscircuit.com#1325",
     "number": 1325,
     "title": "Improve TypeScript lib caching",
-    "description": "Caches TypeScript default libraries in the browser using IndexedDB and loads them on CodeEditor mount, reducing load times for users editing TypeScript code.",
+    "description": "Caches TypeScript default library files in the browser using IndexedDB and loads them on CodeEditor mount, reducing load times for users.",
     "contributor": "seveibar",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1325",
@@ -1620,6 +1662,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -1637,7 +1680,7 @@
     "tag": "tscircuit/tscircuit.com#1387",
     "number": 1387,
     "title": "update neccessary deps",
-    "description": "Updates several dependencies in package.json to newer versions; no user-facing features or bugfixes introduced.",
+    "description": "Updates several project dependencies to newer versions, including @tscircuit/core, @tscircuit/pcb-viewer, @tscircuit/props, @tscircuit/runframe, and circuit-json related packages.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1387",
@@ -1658,6 +1701,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1675,7 +1719,7 @@
     "tag": "tscircuit/tscircuit.com#1382",
     "number": 1382,
     "title": "package native share option for devices",
-    "description": "Adds a native share option to package cards, allowing users to share package links via device-native sharing or clipboard fallback.",
+    "description": "Adds a native share option to the package card, allowing users to share package links via device-native sharing or clipboard fallback.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1382",
@@ -1688,14 +1732,15 @@
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
-    "minor_fix": false,
+    "minor_fix": true,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
-    "major_experience_improvement": true,
+    "major_experience_improvement": false,
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1713,7 +1758,7 @@
     "tag": "tscircuit/tscircuit.com#1384",
     "number": 1384,
     "title": "update runframe and limit editor and runframe optimal size",
-    "description": "Limits the height of the RunFrame and CodeEditor components to 98vh for improved layout consistency and updates @tscircuit/runframe dependency to ^0.0.642.",
+    "description": "Limits the height of the RunFrame and CodeEditor components to 98vh for improved layout consistency and updates @tscircuit/runframe dependency version.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1384",
@@ -1734,6 +1779,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1751,7 +1797,7 @@
     "tag": "tscircuit/tscircuit.com#1383",
     "number": 1383,
     "title": "patch: remvoe extra spacing in cmdkmenu",
-    "description": "Removes extra horizontal spacing from highlighted characters in the command menu for a more compact appearance.",
+    "description": "Removes extra horizontal spacing from highlighted characters in the command menu, resulting in more compact and visually consistent text highlighting.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1383",
@@ -1772,6 +1818,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1789,7 +1836,7 @@
     "tag": "tscircuit/tscircuit.com#1381",
     "number": 1381,
     "title": "prevent misclick to 404 page if package is still loading",
-    "description": "Prevents users from being redirected to a 404 error page by disabling file navigation actions until the package is fully loaded on the View Package page.",
+    "description": "Prevents users from being redirected to a 404 error page when clicking files or edit before the package has finished loading on the View Package page.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1381",
@@ -1810,6 +1857,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1827,7 +1875,7 @@
     "tag": "tscircuit/tscircuit.com#1379",
     "number": 1379,
     "title": "better responsviness to build pages",
-    "description": "Improves the responsiveness and layout of the Package Build Details page and related components for better usability on smaller screens and various devices.",
+    "description": "Improves the responsiveness and layout of the Package Build Details page for better usability on mobile and small screens (fixes #1340).",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1379",
@@ -1848,6 +1896,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1865,7 +1914,7 @@
     "tag": "tscircuit/tscircuit.com#1378",
     "number": 1378,
     "title": "feat!: revamp of cmd+k menu",
-    "description": "Completely redesigns the Cmd+K command menu with improved search, keyboard navigation, categorized options, and a modern UI, making it easier and faster for users to find and launch actions or packages.",
+    "description": "Completely redesigns the Cmd+K command menu with improved search, keyboard navigation, categorized options, and enhanced UI for package and template selection.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1378",
@@ -1874,7 +1923,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": false,
-    "bad_title": true,
+    "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -1886,6 +1935,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1896,14 +1946,14 @@
     "body": "fix #1352",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 2,
+    "impact": "Minor"
   },
   {
     "tag": "tscircuit/tscircuit.com#1374",
     "number": 1374,
     "title": "check for gh user name instead of account id for settings dialog, to make sure it is shown  locally",
-    "description": "Fixes bug where package settings dialog would not show for package owners if their GitHub account ID did not match the stored creator_account_id, by switching to username-based ownership check.",
+    "description": "Fixes bug where package settings dialog would not show for package owners if their GitHub account ID did not match, by checking GitHub username instead.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1374",
@@ -1924,6 +1974,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1954,7 +2005,7 @@
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
-    "minor_fix": true,
+    "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
@@ -1962,6 +2013,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -1979,7 +2031,7 @@
     "tag": "tscircuit/tscircuit.com#1372",
     "number": 1372,
     "title": "feat: add mock AI autocomplete toggle button in CodeEditorHeader",
-    "description": "Adds a toggle button to the CodeEditorHeader allowing users to enable or disable a mock AI autocomplete feature (UI only, no backend functionality).",
+    "description": "Adds a toggle button to the CodeEditorHeader allowing users to enable or disable a mock AI autocomplete feature in the code editor UI.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1372",
@@ -2000,6 +2052,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -2017,7 +2070,7 @@
     "tag": "tscircuit/tscircuit.com#1368",
     "number": 1368,
     "title": "Fix AI review loader state",
-    "description": "Fixes delayed loading spinner when requesting an AI review by immediately showing the spinner and maintaining local loading state during the request.",
+    "description": "Fixes delayed or missing loading spinner when requesting an AI review by immediately showing a loading indicator and maintaining local loading state during the request.",
     "contributor": "andrii-balitskyi",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1368",
@@ -2029,8 +2082,8 @@
     "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
-    "fixes_subtle_important_bug": true,
-    "minor_fix": false,
+    "fixes_subtle_important_bug": false,
+    "minor_fix": true,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
@@ -2038,6 +2091,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "andrii-balitskyi"
@@ -2048,14 +2102,14 @@
     "body": "## Summary\n- show loading spinner immediately after requesting an AI review\n- maintain local loading state during AI review requests\n\n## Testing\n- `bun run lint`\n\n------\nhttps://chatgpt.com/codex/tasks/task_b_685a5d46c620832c94dbaddfd48b3c28",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 2,
-    "impact": "Minor"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/tscircuit.com#1371",
     "number": 1371,
     "title": "sort the packages after fetch on the dashboard page",
-    "description": "Packages on the dashboard page are now sorted by most recently updated or created, improving package list order for users.",
+    "description": "Packages on the dashboard page are now consistently sorted by most recently updated or created, improving package list order for users.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1371",
@@ -2064,7 +2118,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": false,
-    "bad_title": true,
+    "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -2076,6 +2130,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -2093,7 +2148,7 @@
     "tag": "tscircuit/tscircuit.com#1370",
     "number": 1370,
     "title": "Fix dashboard package ordering",
-    "description": "Fixes a bug where sorting packages on the dashboard mutated cached data, potentially causing stale or incorrect package lists to be displayed to users.",
+    "description": "Fixes bug where sorting packages on the dashboard would mutate the cached package list, potentially causing stale or incorrect data to be displayed elsewhere.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/tscircuit.com",
     "url": "https://github.com/tscircuit/tscircuit.com/pull/1370",
@@ -2114,6 +2169,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -2131,7 +2187,7 @@
     "tag": "tscircuit/jlcsearch#62",
     "number": 62,
     "title": "Add measurement filtering for gas sensors",
-    "description": "Adds a measurement filter dropdown to the Gas Sensors page, allowing users to filter gas sensors by the type of gas measured (e.g., oxygen, CO2, methane) via a new query parameter and backend logic.",
+    "description": "Adds a measurement filter dropdown to the Gas Sensors page, allowing users to filter sensors by the type of gas they measure.",
     "contributor": "seveibar",
     "repo": "tscircuit/jlcsearch",
     "url": "https://github.com/tscircuit/jlcsearch/pull/62",
@@ -2152,6 +2208,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2169,7 +2226,7 @@
     "tag": "tscircuit/jlcsearch#61",
     "number": 61,
     "title": "Add gas sensor measurement flags",
-    "description": "Adds a new Gas Sensors page and API endpoint that lists gas sensors with detailed boolean flags for each gas type detected, including new DB schema, filtering, and tests.",
+    "description": "Adds gas sensor measurement capability flags to the database and API, allowing users to filter and view which gases each sensor can detect via a new /gas_sensors/list page and endpoint.",
     "contributor": "seveibar",
     "repo": "tscircuit/jlcsearch",
     "url": "https://github.com/tscircuit/jlcsearch/pull/61",
@@ -2190,6 +2247,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2207,7 +2265,7 @@
     "tag": "tscircuit/jlcsearch#60",
     "number": 60,
     "title": "Add Boost DC-DC converter page",
-    "description": "Adds a searchable Boost DC-DC converter list page and API endpoint, including database integration, filtering, and tests.",
+    "description": "Adds a searchable and filterable Boost DC-DC converter listing page and API endpoint, including database integration, UI, and tests.",
     "contributor": "seveibar",
     "repo": "tscircuit/jlcsearch",
     "url": "https://github.com/tscircuit/jlcsearch/pull/60",
@@ -2228,6 +2286,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2258,7 +2317,7 @@
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
-    "minor_fix": false,
+    "minor_fix": true,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
@@ -2266,6 +2325,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2283,7 +2343,7 @@
     "tag": "tscircuit/graphics-debug#67",
     "number": 67,
     "title": "Change includeTextLabels default",
-    "description": "Changes the default behavior of getSvgFromGraphicsObject to exclude text labels from SVG output unless explicitly enabled, and updates tests to match this new default.",
+    "description": "Changes the default value of the includeTextLabels option in getSvgFromGraphicsObject to false, so text labels are no longer included in SVG output unless explicitly requested.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/67",
@@ -2304,6 +2364,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2342,6 +2403,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2359,7 +2421,7 @@
     "tag": "tscircuit/graphics-debug#66",
     "number": 66,
     "title": "Add svg size parameters",
-    "description": "Allows users to customize the SVG width and height generated by getSvgFromGraphicsObject, enabling flexible output dimensions for SVG graphics.",
+    "description": "Allows users to customize the SVG width and height generated by getSvgFromGraphicsObject via new svgWidth and svgHeight parameters, and adds a test for this functionality.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/66",
@@ -2372,7 +2434,7 @@
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
-    "minor_fix": false,
+    "minor_fix": true,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
@@ -2380,6 +2442,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2397,7 +2460,7 @@
     "tag": "tscircuit/graphics-debug#65",
     "number": 65,
     "title": "Fix graphics grid row order",
-    "description": "Fixes Y offset calculation in graphics grid creation so that rows are no longer reversed, ensuring correct visual row order for users.",
+    "description": "Fixes the Y offset calculation in graphics grid creation so that rows are no longer reversed, ensuring correct visual row order for users of the graphics grid API.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/65",
@@ -2418,6 +2481,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2435,7 +2499,7 @@
     "tag": "tscircuit/graphics-debug#63",
     "number": 63,
     "title": "Adjust font size for rect labels",
-    "description": "Dynamically scales rectangle label font size in SVG output based on rectangle dimensions, improving label readability for varying rectangle sizes.",
+    "description": "Dynamically calculates and applies font size for rectangle labels in SVG output based on rectangle dimensions, ensuring label text scales appropriately with shape size.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/63",
@@ -2456,6 +2520,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2473,7 +2538,7 @@
     "tag": "tscircuit/graphics-debug#62",
     "number": 62,
     "title": "Add gap options to createGraphicsGrid",
-    "description": "Adds support for specifying gaps between cells in createGraphicsGrid, including fixed gap and gap as a fraction of cell width, with tests.",
+    "description": "Adds support for specifying gaps (absolute or as a fraction of cell width) between cells in createGraphicsGrid, allowing more flexible grid layouts.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/62",
@@ -2494,6 +2559,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2511,7 +2577,7 @@
     "tag": "tscircuit/graphics-debug#61",
     "number": 61,
     "title": "new createGraphicsGrid method",
-    "description": "Adds a createGraphicsGrid method to arrange multiple graphics objects in a grid layout, and updates tests to verify correct grid arrangement.",
+    "description": "Adds a createGraphicsGrid method to arrange multiple graphics objects in a grid layout, and updates tests to cover this new functionality.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/61",
@@ -2532,6 +2598,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2549,7 +2616,7 @@
     "tag": "tscircuit/graphics-debug#60",
     "number": 60,
     "title": "Add graphics stacking utilities",
-    "description": "Adds stackGraphicsHorizontally and stackGraphicsVertically functions to the graphics-debug library, allowing users to combine multiple graphics objects by translation, with documentation and tests included.",
+    "description": "Adds stackGraphicsHorizontally and stackGraphicsVertically functions to allow users to combine multiple graphics objects by translation, exports these utilities from the library, documents their usage in the README, and adds tests for the new stacking utilities.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/60",
@@ -2570,6 +2637,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2587,7 +2655,7 @@
     "tag": "tscircuit/graphics-debug#59",
     "number": 59,
     "title": "Improve text sizing logic",
-    "description": "Accurately computes text bounds and scales font sizes in graphics rendering, ensuring text is properly sized and positioned according to transform matrices and anchor settings; adds tests for new text sizing logic.",
+    "description": "Accurately computes text bounds and scales font sizes using transform matrices in graphics rendering, ensuring correct text placement and sizing in SVG and canvas outputs; adds tests for new text sizing logic.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/59",
@@ -2608,6 +2676,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2625,7 +2694,7 @@
     "tag": "tscircuit/graphics-debug#58",
     "number": 58,
     "title": "Add text objects to graphics",
-    "description": "Adds support for rendering and manipulating text objects within graphics, including SVG and canvas output, merging, translation, bounds calculation, and interactive components.",
+    "description": "Adds support for rendering and manipulating text objects within graphics, including SVG and canvas output, merging, translation, and interactive components.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/58",
@@ -2646,6 +2715,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2663,7 +2733,7 @@
     "tag": "tscircuit/graphics-debug#57",
     "number": 57,
     "title": "Add mergeGraphics utility",
-    "description": "Adds a new `mergeGraphics` utility function to combine two graphics objects, exports it from the library, documents its usage in the README, and provides tests for both `mergeGraphics` and `translateGraphics`.",
+    "description": "Adds a new `mergeGraphics` utility function to combine two GraphicsObject instances, exports it from the library, documents its usage in the README, and provides tests for the new function.",
     "contributor": "seveibar",
     "repo": "tscircuit/graphics-debug",
     "url": "https://github.com/tscircuit/graphics-debug/pull/57",
@@ -2684,6 +2754,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -2701,7 +2772,7 @@
     "tag": "tscircuit/eval#624",
     "number": 624,
     "title": "update parts-engine",
-    "description": "Updates @tscircuit/parts-engine dependency to ^0.0.8 and enhances the test to verify that all board components (resistor and capacitor) have valid JLCPCB supplier part numbers.",
+    "description": "Updates @tscircuit/parts-engine dependency from v0.0.3 to v0.0.8 and expands the test to check that all board components (resistor and capacitor) have valid JLCPCB supplier part numbers, ensuring improved Bill of Materials generation and validation.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/624",
@@ -2722,6 +2793,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": true,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -2760,6 +2832,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "tscircuitbot"
@@ -2777,7 +2850,7 @@
     "tag": "tscircuit/eval#608",
     "number": 608,
     "title": "update core",
-    "description": "Updates the @tscircuit/core dependency from version 0.0.510 to 0.0.526. No other changes are included.",
+    "description": "Updates the @tscircuit/core dependency from version 0.0.510 to 0.0.526; no user-facing changes or new functionality are introduced in this repository by this PR.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/eval",
     "url": "https://github.com/tscircuit/eval/pull/608",
@@ -2798,6 +2871,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -2815,7 +2889,7 @@
     "tag": "tscircuit/runframe#830",
     "number": 830,
     "title": "Fix RunFrame on tscircuit.com pulling \"latest\" version of @tscircuit/eval rather than the specific version (and as a result not using an up-to-date version because of jsdelivr caching)",
-    "description": "Fixes RunFrame so it fetches and uses the actual latest version of @tscircuit/eval instead of relying on the \"latest\" tag, avoiding stale versions due to jsdelivr caching.",
+    "description": "Fixes RunFrame so it fetches and uses the actual latest version of @tscircuit/eval from jsdelivr, avoiding stale versions due to CDN caching, and refactors version resolution logic.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/runframe",
     "url": "https://github.com/tscircuit/runframe/pull/830",
@@ -2832,10 +2906,11 @@
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
-    "major_experience_improvement": false,
+    "major_experience_improvement": true,
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -2846,14 +2921,14 @@
     "body": "## Summary\n- fetch `@tscircuit/eval` latest version when preloading the web worker\n- keep the latest version in the runner store\n- refactor version fetching to a reusable helper\n\n## Testing\n- `bun run format:check`\n- `bun test`\n\n\n------\nhttps://chatgpt.com/codex/tasks/task_b_6862765796ec8327b878758785424d34",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 2,
-    "impact": "Minor"
+    "starRating": 3,
+    "impact": "Major"
   },
   {
     "tag": "tscircuit/runframe#824",
     "number": 824,
     "title": "feat: presistant tabs whenver errors occurs",
-    "description": "Fixes bug where the active tab in CircuitJsonPreview is lost when an error occurs, now restoring the last active tab after error is resolved (fixes #749)",
+    "description": "Fixes bug where the active tab in CircuitJsonPreview is lost when an error occurs, now restoring the previous tab after error is resolved.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/runframe",
     "url": "https://github.com/tscircuit/runframe/pull/824",
@@ -2874,6 +2949,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -2891,7 +2967,7 @@
     "tag": "tscircuit/runframe#823",
     "number": 823,
     "title": "followup patch to fix height issues to address fulscreen and cli runframe previews",
-    "description": "Fixes incorrect height handling in fullscreen and CLI RunFrame previews by updating container height logic and Tailwind classes.",
+    "description": "Fixes incorrect height handling in fullscreen and CLI RunFrame previews by updating Tailwind classes for more consistent layout rendering.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/runframe",
     "url": "https://github.com/tscircuit/runframe/pull/823",
@@ -2912,6 +2988,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -2950,6 +3027,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -2967,7 +3045,7 @@
     "tag": "tscircuit/cli#255",
     "number": 255,
     "title": "update circuit-to-svg & runframe dependency",
-    "description": "Updates the versions of the 'circuit-to-svg' and '@tscircuit/runframe' dependencies in package.json; no user-facing features or bugfixes are introduced.",
+    "description": "Updates the versions of the 'circuit-to-svg' and '@tscircuit/runframe' dependencies in package.json. No user-facing features or bug fixes are introduced; this is a maintenance update to keep dependencies current.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/255",
@@ -2988,6 +3066,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3005,7 +3084,7 @@
     "tag": "tscircuit/cli#254",
     "number": 254,
     "title": "updated deps & runframe for height adjustments",
-    "description": "Updates several development dependencies, including @tscircuit/circuit-json-util, @tscircuit/props, and @tscircuit/simple-3d-svg, with no functional code changes.",
+    "description": "Updates several development dependencies, including @tscircuit/circuit-json-util, @tscircuit/props, and @tscircuit/simple-3d-svg, to newer versions; no functional or user-facing changes are introduced.",
     "contributor": "ArnavK-09",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/254",
@@ -3026,6 +3105,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ArnavK-09"
@@ -3043,7 +3123,7 @@
     "tag": "tscircuit/cli#253",
     "number": 253,
     "title": "Fix CLI build to use peer tscircuit (don't bundle core/eval/tscircuit)",
-    "description": "Ensures the CLI uses the user's installed tscircuit peer dependency for core functionality instead of bundling its own versions, preventing version conflicts and reducing bundle size.",
+    "description": "Ensures the CLI uses the user's installed tscircuit peer dependency for core functionality instead of bundling its own, preventing version mismatches and reducing bundle size.",
     "contributor": "seveibar",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/253",
@@ -3064,6 +3144,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -3081,7 +3162,7 @@
     "tag": "tscircuit/cli#252",
     "number": 252,
     "title": "update eval and tscircuit",
-    "description": "Updates @tscircuit/eval from 0.0.238 to 0.0.240 and tscircuit from 0.0.505 to 0.0.510; no user-facing changes beyond dependency updates.",
+    "description": "Updates @tscircuit/eval from 0.0.238 to 0.0.240 and tscircuit from 0.0.505 to 0.0.510 in package.json; no other changes.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/252",
@@ -3102,6 +3183,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -3119,7 +3201,7 @@
     "tag": "tscircuit/cli#251",
     "number": 251,
     "title": "generated workflows now use node version 22",
-    "description": "Generated GitHub Actions workflows now use Node.js version 22 for setup, ensuring compatibility with the latest Node.js features and security updates.",
+    "description": "Updates the generated GitHub Actions workflows to use Node.js version 22 for CI steps.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/cli",
     "url": "https://github.com/tscircuit/cli/pull/251",
@@ -3140,6 +3222,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -3178,6 +3261,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -3195,7 +3279,7 @@
     "tag": "tscircuit/docs#94",
     "number": 94,
     "title": "Document schOrientation feature",
-    "description": "Documents the `schOrientation` property for capacitors, explaining its usage and valid values in the layout property guide and capacitor documentation, enabling users to control schematic symbol orientation for polarized capacitors.",
+    "description": "Documents the `schOrientation` property for schematic elements, explaining its usage and valid values for orienting polarized capacitors in the schematic, and updates the layout properties guide accordingly.",
     "contributor": "seveibar",
     "repo": "tscircuit/docs",
     "url": "https://github.com/tscircuit/docs/pull/94",
@@ -3216,6 +3300,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -3254,6 +3339,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -3271,7 +3357,7 @@
     "tag": "tscircuit/docs#92",
     "number": 92,
     "title": "Add selector pattern documentation",
-    "description": "Documents how to group typed nets using the `sel.net` selector pattern in the documentation, providing an example for users to organize reusable selectors.",
+    "description": "Documents how to group typed nets using the `sel.net` selector pattern in the tscircuit documentation, providing a new example for users to organize reusable selectors.",
     "contributor": "seveibar",
     "repo": "tscircuit/docs",
     "url": "https://github.com/tscircuit/docs/pull/92",
@@ -3292,6 +3378,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -3309,7 +3396,7 @@
     "tag": "tscircuit/tscircuit-autorouter#180",
     "number": 180,
     "title": "Fix caching issue by rounding the deltas with a higher precision",
-    "description": "Fixes a subtle but important bug in the autorouter's caching logic by rounding delta values to higher precision, preventing cache misses due to floating-point rounding errors in the unravelMultiSectionSolver.",
+    "description": "Fixes a bug where cached results in the unravelMultiSectionSolver could be missed due to insufficient rounding precision of delta values, leading to inconsistent caching behavior.",
     "contributor": "ricohageman",
     "repo": "tscircuit/tscircuit-autorouter",
     "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/180",
@@ -3323,13 +3410,14 @@
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": true,
     "minor_fix": false,
-    "major_autorouter_bug_fix": false,
+    "major_autorouter_bug_fix": true,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
     "major_experience_improvement": false,
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ricohageman"
@@ -3340,19 +3428,19 @@
     "body": "### Why are we changing this?\r\nWe've observed cases where the `unravelMultiSectionSolver` was not completely caches during the second time it was solved. The working theory was that there were some rounding issues causing this.\r\n\r\n### What has changed?\r\nDelta values used in in the cached values of the `unravelMultiSectionSolver` are now rounded to a higher precision than the coordinates. This prevents issues from accumulated errors due to rounding.\r\n\r\n### Visualisation\r\nhttps://streamable.com/yr0hm1",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 2,
-    "impact": "Minor"
+    "starRating": 3,
+    "impact": "Major"
   },
   {
     "tag": "tscircuit/tscircuit-autorouter#177",
     "number": 177,
     "title": "Add high‑density fixtures for nodes cn2776 and cn1722",
-    "description": "Adds high-density test fixtures and associated node data for nodes cn2776 and cn1722 to improve autorouter testing coverage (ref #162)",
+    "description": "Adds two new high-density test fixtures for nodes cn2776 and cn1722, including associated nodeWithPortPoints JSON assets and fixture files for HyperHighDensityDebugger visualization.",
     "contributor": "techmannih",
     "repo": "tscircuit/tscircuit-autorouter",
     "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/177",
     "mostly_style": false,
-    "new_page_or_component": true,
+    "new_page_or_component": false,
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": false,
@@ -3360,7 +3448,7 @@
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
-    "minor_fix": false,
+    "minor_fix": true,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
@@ -3368,6 +3456,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -3385,7 +3474,7 @@
     "tag": "tscircuit/tscircuit-autorouter#172",
     "number": 172,
     "title": "add more fixtures for autorouting hypersolver bugs",
-    "description": "Adds new high-density nodeWithPortPoints fixtures and test cases to reproduce autorouting hypersolver bugs (see #134), enabling easier debugging and future fixes.",
+    "description": "Adds new high-density node fixtures and test cases to reproduce specific autorouting hypersolver bugs (see #134), enabling easier debugging and future fixes.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/tscircuit-autorouter",
     "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/172",
@@ -3406,6 +3495,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3423,7 +3513,7 @@
     "tag": "tscircuit/tscircuit-autorouter#171",
     "number": 171,
     "title": "add more fixtures for autorouting hyperdensity bugs",
-    "description": "Adds new high-density autorouting test fixtures to reproduce and diagnose hyperdensity routing bugs (see #141)",
+    "description": "Adds new test fixtures to reproduce and debug specific autorouting failures in high-density scenarios (see #141), enabling easier diagnosis and future fixes.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/tscircuit-autorouter",
     "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/171",
@@ -3444,6 +3534,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3461,7 +3552,7 @@
     "tag": "tscircuit/tscircuit-autorouter#170",
     "number": 170,
     "title": "exclude json files from formatting",
-    "description": "Excludes all JSON files in examples/assets from being formatted by Biome, simplifying formatting rules and preventing unwanted formatting changes to example asset files.",
+    "description": "Excludes all JSON files in examples/assets from being formatted by the Biome formatter by updating the ignore pattern in biome.json.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/tscircuit-autorouter",
     "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/170",
@@ -3482,6 +3573,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3499,7 +3591,7 @@
     "tag": "tscircuit/tscircuit-autorouter#165",
     "number": 165,
     "title": "add new fixtures for hyperdensity solver bugs",
-    "description": "Adds new high-density node fixtures and test cases to reproduce specific hyperdensity solver bugs (see #163), enabling easier debugging and future fixes.",
+    "description": "Adds new high-density node fixtures and corresponding test cases to reproduce and debug specific hyperdensity solver bugs (see #163), enabling targeted testing and debugging of autorouter failures in complex scenarios.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/tscircuit-autorouter",
     "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/165",
@@ -3508,7 +3600,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": false,
-    "bad_title": true,
+    "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -3520,6 +3612,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3530,14 +3623,14 @@
     "body": "Fixes #163 ",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 0,
+    "starRating": 1,
     "impact": "Tiny"
   },
   {
     "tag": "tscircuit/tscircuit-autorouter#168",
     "number": 168,
     "title": "add reproduction highdensity62",
-    "description": "Adds a new test fixture and JSON asset to reproduce the bug described in #167, providing a comprehensive reproduction case for debugging high-density autorouting issues.",
+    "description": "Fixes #167",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/tscircuit-autorouter",
     "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/168",
@@ -3558,6 +3651,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3575,7 +3669,7 @@
     "tag": "tscircuit/parts-engine#9",
     "number": 9,
     "title": "fix: search by the value and SI unit, not the absolute value",
-    "description": "Fixes bug where resistor and capacitor searches ignored SI units, now searches use display value with SI unit (e.g., 10kΩ, 1μF) if available, improving part matching accuracy.",
+    "description": "Fixes bug where resistor and capacitor searches used absolute values instead of value+SI unit, ensuring correct part matching in BOM generation.",
     "contributor": "imrishabh18",
     "repo": "tscircuit/parts-engine",
     "url": "https://github.com/tscircuit/parts-engine/pull/9",
@@ -3596,6 +3690,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": true,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -3613,7 +3708,7 @@
     "tag": "tscircuit/parts-engine#8",
     "number": 8,
     "title": "fix: handle undefined fuses in findPart",
-    "description": "Fixes a bug where findPart would throw an error if the 'fuses' array is undefined, ensuring robust handling of missing part data.",
+    "description": "Fixes a bug where findPart would throw an error if the 'fuses' variable is undefined, by defaulting to an empty array before mapping.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/parts-engine",
     "url": "https://github.com/tscircuit/parts-engine/pull/8",
@@ -3634,6 +3729,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": true,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3651,7 +3747,7 @@
     "tag": "tscircuit/sparkfun-boards#37",
     "number": 37,
     "title": "Fixed my old board - HMC6343",
-    "description": "Substantially revises the SparkFun HMC6343 Breakout board layout, updating component placements, footprints, and mechanical features to correct and improve the existing board design.",
+    "description": "Substantially revises the existing SparkFun HMC6343 Breakout board by updating component footprints, repositioning parts, and correcting board dimensions and mounting holes to match the real hardware, resulting in a more accurate and manufacturable PCB and schematic.",
     "contributor": "MustafaMulla29",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/37",
@@ -3672,6 +3768,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "MustafaMulla29"
@@ -3689,7 +3786,7 @@
     "tag": "tscircuit/sparkfun-boards#33",
     "number": 33,
     "title": "refactor: add jumperFootprint into its own file",
-    "description": "Refactors the SparkFun Human Presence and Motion Sensor board by extracting the JST04_1MM_RA jumper footprint into a separate file for reuse and maintainability; no functional or user-facing changes.",
+    "description": "Moves the JST04_1MM_RA jumper footprint definition into its own file and updates references to use the new import, improving code modularity and maintainability without changing user-facing functionality.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/33",
@@ -3710,6 +3807,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3744,10 +3842,11 @@
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
-    "major_experience_improvement": false,
+    "major_experience_improvement": true,
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3758,8 +3857,8 @@
     "body": null,
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 2,
+    "impact": "Minor"
   },
   {
     "tag": "tscircuit/sparkfun-boards#31",
@@ -3786,6 +3885,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -3803,7 +3903,7 @@
     "tag": "tscircuit/sparkfun-boards#30",
     "number": 30,
     "title": "I2CDACBREAKOUT sch adjustments",
-    "description": "Adjusts schematic component and netlabel positions for the SparkFun I2C DAC Breakout - MCP4725 board to improve schematic clarity and alignment; no functional or electrical changes.",
+    "description": "Adjusts schematic component and net label positions for the SparkFun I2C DAC Breakout - MCP4725 board to improve schematic clarity and alignment; no functional or footprint changes.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/30",
@@ -3824,6 +3924,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -3841,7 +3942,7 @@
     "tag": "tscircuit/sparkfun-boards#29",
     "number": 29,
     "title": "(new board): SparkFun-Transceiver-Breakout-MAX3232",
-    "description": "Adds the SparkFun Transceiver Breakout - MAX3232 board, including schematic, PCB layout, custom footprints, and documentation.",
+    "description": "Adds the SparkFun Transceiver Breakout - MAX3232 board, including schematic, PCB layout, custom footprints, and all supporting files for integration into the tscircuit/sparkfun-boards repository.",
     "contributor": "Abse2001",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/29",
@@ -3862,6 +3963,7 @@
     "introduces_new_schematic_symbol": true,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -3879,7 +3981,7 @@
     "tag": "tscircuit/sparkfun-boards#12",
     "number": 12,
     "title": "fix USBToSerialBreakout board",
-    "description": "Refactors and corrects the SparkFun USB-to-Serial Breakout (FT232RL) board definition, fixing pin assignments, updating net connections, and introducing a dedicated switch component with proper footprint and schematic integration.",
+    "description": "Fixes and refactors the SparkFun USB-to-Serial Breakout (FT232RL) board by correcting pin labels, updating schematic connections, introducing a dedicated switch component with proper footprint, and improving net assignments for accurate board generation.",
     "contributor": "techmannih",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/12",
@@ -3900,6 +4002,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -3938,6 +4041,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3955,7 +4059,7 @@
     "tag": "tscircuit/sparkfun-boards#24",
     "number": 24,
     "title": "update snapshot of RFM69-BREAKOUT BOARD",
-    "description": "Updates the RFM69-BREAKOUT BOARD circuit definition to use explicit connection props and updates the PCB and schematic snapshots to reflect the new net and autorouter configuration.",
+    "description": "Updates the RFM69 Breakout board definition to use explicit connection props and autorouter, and refreshes PCB and schematic snapshots to match the new implementation.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/24",
@@ -3976,6 +4080,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -3993,7 +4098,7 @@
     "tag": "tscircuit/sparkfun-boards#25",
     "number": 25,
     "title": "fix workflows by running them on node version 22 + updated deps",
-    "description": "Fixes GitHub Actions workflows by updating Node.js to v22 and bumping tscircuit dependencies, enabling snapshot verification of user changes.",
+    "description": "Fixes GitHub Actions workflows by updating Node.js to v22 and bumping tscircuit dependencies, ensuring snapshot verification works for all PRs.",
     "contributor": "ShiboSoftwareDev",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/25",
@@ -4014,6 +4119,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "ShiboSoftwareDev"
@@ -4031,7 +4137,7 @@
     "tag": "tscircuit/sparkfun-boards#18",
     "number": 18,
     "title": "add SparkFun Human Presence and Motion Sensor - STHS34PF80 (Qwiic)",
-    "description": "Adds a complete new board definition, schematic, PCB layout, and component footprint for the SparkFun Human Presence and Motion Sensor - STHS34PF80 (Qwiic), including symbol, 3D model, and all supporting files.",
+    "description": "Adds a complete implementation (schematic, PCB, and component definition) for the SparkFun Human Presence and Motion Sensor - STHS34PF80 (Qwiic) board, including all supporting files and snapshots.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/18",
@@ -4052,6 +4158,7 @@
     "introduces_new_schematic_symbol": true,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -4069,7 +4176,7 @@
     "tag": "tscircuit/sparkfun-boards#21",
     "number": 21,
     "title": "Update snapshots and update cli, props deps",
-    "description": "Updates @tscircuit/cli and @tscircuit/props dependencies and refreshes board and schematic snapshots to reflect changes in those dependencies.",
+    "description": "Updates @tscircuit/cli and @tscircuit/props dependencies and regenerates board and schematic snapshots for SparkFun HMC6343 Breakout and SparkFun RFM69 Breakout (915MHz) to reflect changes from updated dependencies.",
     "contributor": "MustafaMulla29",
     "repo": "tscircuit/sparkfun-boards",
     "url": "https://github.com/tscircuit/sparkfun-boards/pull/21",
@@ -4090,6 +4197,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "MustafaMulla29"
@@ -4128,6 +4236,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "imrishabh18"
@@ -4145,7 +4254,7 @@
     "tag": "tscircuit/bpc-graph#20",
     "number": 20,
     "title": "Get BPC Graph Distance Example",
-    "description": "Adds example tests and documentation for computing Weisfeiler-Leman (WL) distance between BPC graphs, and introduces a utility to visualize flat BPC graph representations.",
+    "description": "Adds example tests and documentation for computing Weisfeiler-Leman graph distance between BPC graphs, and introduces a utility to visualize flat BPC graph representations.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/20",
@@ -4166,6 +4275,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -4183,7 +4293,7 @@
     "tag": "tscircuit/bpc-graph#19",
     "number": 19,
     "title": "Merging Example",
-    "description": "Adds a usage example and visual snapshot for mergeBoxSideSubgraphs in the README and test suite, demonstrating how to merge two subgraphs and the resulting output.",
+    "description": "Adds a usage example and snapshot test for mergeBoxSideSubgraphs, demonstrating how to merge two subgraphs and visualizing the result in the documentation and tests.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/19",
@@ -4204,6 +4314,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -4221,14 +4332,14 @@
     "tag": "tscircuit/bpc-graph#18",
     "number": 18,
     "title": "Fix Floating Box Assignment and generate README image",
-    "description": "Fixes incorrect assignment of positions to floating boxes in BPC graphs and adds a visual example to the README, ensuring floating boxes are placed based on network connections rather than defaulting to origin or averaging, and documents the behavior with a new test and image.",
+    "description": "Fixes incorrect assignment of positions to floating boxes in BPC graphs and adds a visual example to the README, ensuring floating boxes are positioned based on network connections and providing a test and image for documentation.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/18",
     "mostly_style": false,
     "new_page_or_component": false,
     "introduces_or_fixes_a_footprint": false,
-    "core_change": false,
+    "core_change": true,
     "only_dependency_update": false,
     "bad_title": false,
     "introduces_new_circuit_board": false,
@@ -4237,11 +4348,12 @@
     "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
-    "reproduces_and_fixes_a_bug": true,
+    "reproduces_and_fixes_a_bug": false,
     "major_experience_improvement": false,
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -4252,14 +4364,14 @@
     "body": null,
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 2,
+    "impact": "Minor"
   },
   {
     "tag": "tscircuit/bpc-graph#17",
     "number": 17,
     "title": "better renetwork example for readme",
-    "description": "Improves the README with a more comprehensive and realistic example for the renetworking functionality, updates example code and images, and adds related tests and documentation for bpc-graph users.",
+    "description": "Improves the README with a more comprehensive and realistic example for the renetworkWithCondition function, updates example code and images, and adds new snapshot tests for documentation accuracy.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/17",
@@ -4280,6 +4392,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -4297,7 +4410,7 @@
     "tag": "tscircuit/bpc-graph#13",
     "number": 13,
     "title": "Add API README and example tests",
-    "description": "Adds comprehensive API documentation and usage examples to the README, and introduces snapshot-based example tests for key library functions.",
+    "description": "Adds comprehensive API documentation and usage examples to the README, and introduces snapshot-based example tests for key BPC graph utilities.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/13",
@@ -4318,6 +4431,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -4335,7 +4449,7 @@
     "tag": "tscircuit/bpc-graph#12",
     "number": 12,
     "title": "Partitioning, Flat BPC Graph node creates edges between pins and center of box improving WL Distance scoring for matches, introducing renetworking to do heuristic graph cuts",
-    "description": "Introduces partitioning and renetworking functions to enable heuristic graph cuts and side-based subgraph extraction in BPC graphs, improving graph matching and scoring for schematic partitioning workflows.",
+    "description": "Introduces partitioning and renetworking functions to enable heuristic graph cuts and improved subgraph extraction, adds new graph utilities and tests for schematic partitioning and matching, and enhances flat BPC graph node connectivity for better WL Distance scoring.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/12",
@@ -4356,6 +4470,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -4373,7 +4488,7 @@
     "tag": "tscircuit/bpc-graph#11",
     "number": 11,
     "title": "Subgraph Partitioning",
-    "description": "Adds subgraph partitioning and re-networking utilities to enable partitioning BPC graphs by box sides, including new core functions for conditional network splitting, merging, and matching, with comprehensive tests and integration with schematic corpus matching.",
+    "description": "Adds subgraph partitioning and re-networking utilities to enable partitioning BPC graphs by box sides, including new core functions for conditional network splitting, merging, and matching against a schematic corpus, with comprehensive tests and API exposure.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/11",
@@ -4394,6 +4509,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -4411,7 +4527,7 @@
     "tag": "tscircuit/bpc-graph#10",
     "number": 10,
     "title": "Implement box side graph utilities",
-    "description": "Adds utilities to extract, merge, and analyze the connectivity of individual sides of a box in a BpcGraph, including detection of isolated or connected box sides, with comprehensive tests.",
+    "description": "Adds utilities to extract, merge, and analyze connectivity of individual box sides in a BpcGraph, enabling detection of isolated or connected box sides for a given box.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/10",
@@ -4420,7 +4536,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": false,
-    "bad_title": true,
+    "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -4432,6 +4548,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -4449,14 +4566,14 @@
     "tag": "tscircuit/bpc-graph#9",
     "number": 9,
     "title": "Net Adapt Fixes and additional snapshot testing",
-    "description": "Fixes multiple subtle bugs in the net adaptation logic for BPC graphs, adds robust snapshot-based tests for adaptation correctness, and improves error handling and pin/box mapping safety.",
+    "description": "Fixes multiple bugs in net adaptation logic for BPC graphs, adds comprehensive snapshot-based tests for net adaptation across diverse schematic cases, and removes obsolete GraphNetworkTransformer debugger pages.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/9",
     "mostly_style": false,
     "new_page_or_component": false,
     "introduces_or_fixes_a_footprint": false,
-    "core_change": true,
+    "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
     "introduces_new_circuit_board": false,
@@ -4470,6 +4587,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -4487,7 +4605,7 @@
     "tag": "tscircuit/bpc-graph#8",
     "number": 8,
     "title": "Implementation for net adaption and floating box assignment",
-    "description": "Adds new algorithms and utilities for adapting a source BPC graph to match the netlist and structure of a target BPC graph, including assignment of floating box positions and edit operations for adjacency matrices. Removes the previous GraphNetworkTransformer and related operation-based transformation system, replacing it with a matrix-edit-based approach. Includes comprehensive new tests for assignment, matrix editing, and net adaptation.",
+    "description": "Adds net adaptation and floating box assignment algorithms, enabling transformation of a source BPC graph to match the netlist and structure of a target BPC graph, including new edit operation logic and comprehensive tests for graph editing and assignment. Removes legacy graph transformation code and related tests.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/8",
@@ -4508,6 +4626,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -4525,7 +4644,7 @@
     "tag": "tscircuit/bpc-graph#7",
     "number": 7,
     "title": "Adjacency Matrices for Matching",
-    "description": "Adds adjacency matrix-based graph similarity algorithms (including eigenvalue and Weisfeiler-Lehman methods) for matching and comparing BPC graphs, integrates these into the matching UI and core solver, and introduces new conversion utilities and comprehensive tests for these algorithms.",
+    "description": "Introduces adjacency matrix-based graph similarity algorithms (including eigenvalue and Weisfeiler-Lehman methods) for matching and comparing BPC graphs, refactors matching logic to use these algorithms, and adds comprehensive tests and utilities for matrix-based graph analysis.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/7",
@@ -4534,7 +4653,7 @@
     "introduces_or_fixes_a_footprint": false,
     "core_change": true,
     "only_dependency_update": false,
-    "bad_title": false,
+    "bad_title": true,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
@@ -4546,6 +4665,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -4563,7 +4683,7 @@
     "tag": "tscircuit/bpc-graph#6",
     "number": 6,
     "title": "Flat BPC Graph",
-    "description": "Renames and refactors the network similarity heuristic to 'assignment combinations network similarity', introduces a new flat BPC graph type, and updates all usages, tests, and UI to use the new naming and structure.",
+    "description": "Renames and refactors the network similarity algorithm to 'assignment-combinations-network-similarity', introduces a new 'FlatBpcGraph' type for non-hierarchical graph representation, and updates all usages and tests to use the new structure and naming.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/6",
@@ -4584,7 +4704,8 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
-    "major_library_algorithm_contribution": true,
+    "add_design_to_schematic_corpus": false,
+    "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
     },
@@ -4594,14 +4715,14 @@
     "body": "- **Operation Costs, Solve for Graph Transform with A*, heuristic matching function (#2)**\n- **v0.0.7**\n- **rewrite test input to make a color change more reasonable**\n- **v0.0.8**\n- **feat: add corpus matcher page**\n- **fix corpus matching page**\n- **tailwind loading**\n- **add mouse hover**\n- **corpus match with hovering**\n- **remove other bpc matching page**\n- **add match button**\n- **add preview for texxt area**\n- **v0.0.9**\n- **add \"adapted match\" display on the corpus match page**\n- **add ignoreTopMatch, possibly fix adaptation**\n- **fix ignore top match logic**\n- **introduce placeholder test**\n- **repro infinite load bug**\n- **v0.0.10**\n- **Match-Adapt against Corpus (#5)**\n- **v0.0.11**\n- **flat bpc graph type**\n- **wip**\n- **rename similarity distance measure**\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/bpc-graph#5",
     "number": 5,
     "title": "Match-Adapt against Corpus",
-    "description": "Adds a new corpus matcher page that allows users to match and adapt schematic graphs against a corpus using an A* graph transformation algorithm with operation costs and heuristic matching, including interactive UI features such as mouse hover, match button, and preview display.",
+    "description": "Adds a new corpus matcher page and implements A*-based graph transformation with operation costs and heuristic matching, enabling users to match and adapt schematic graphs against a reference corpus with interactive UI and debugging support.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/5",
@@ -4622,6 +4743,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": true,
     "user": {
       "login": "seveibar"
@@ -4639,7 +4761,7 @@
     "tag": "tscircuit/bpc-graph#4",
     "number": 4,
     "title": "Add corpus matcher page",
-    "description": "Adds a new page that allows users to compare a BPC graph against a corpus of schematic graphs, displaying similarity distances for each corpus entry.",
+    "description": "Adds a new page that allows users to compare a BPC graph against a schematic corpus using a heuristic similarity metric. Introduces @tscircuit/schematic-corpus as a dependency and provides a UI for input and result display.",
     "contributor": "seveibar",
     "repo": "tscircuit/bpc-graph",
     "url": "https://github.com/tscircuit/bpc-graph/pull/4",
@@ -4660,6 +4782,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -4677,7 +4800,7 @@
     "tag": "tscircuit/circuit-json-to-bpc#2",
     "number": 2,
     "title": "Add net label box-pin conversion",
-    "description": "Converts schematic net labels into boxes with pins in the BPC graph, enabling net labels to be represented as physical connection points in downstream tools.",
+    "description": "Converts schematic net labels in circuit JSON to boxes with pins in the BPC graph, enabling net labels to be represented as physical connection points in downstream tools. Adds a test for this conversion and updates dependencies.",
     "contributor": "seveibar",
     "repo": "tscircuit/circuit-json-to-bpc",
     "url": "https://github.com/tscircuit/circuit-json-to-bpc/pull/2",
@@ -4698,6 +4821,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -4715,7 +4839,7 @@
     "tag": "tscircuit/schematic-corpus#37",
     "number": 37,
     "title": "Schematic Corpus Site",
-    "description": "Adds a new interactive gallery website for browsing schematic corpus BPC graphs and SVGs, including build scripts and improved image preview functionality.",
+    "description": "Adds a new interactive gallery site for browsing schematic corpus designs as BPC graphs and SVGs, with improved preview and build tooling.",
     "contributor": "seveibar",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/37",
@@ -4736,6 +4860,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -4753,7 +4878,7 @@
     "tag": "tscircuit/schematic-corpus#36",
     "number": 36,
     "title": "add design 029",
-    "description": "Introduces a new circuit board design (design029) featuring a 9-pin header, two LEDs, and two resistors with labeled nets for VCC, DTR, RX_I, and TX_O.",
+    "description": "Adds a new schematic and PCB design (design029) to the schematic-corpus repository, featuring a 10mm x 10mm board with a pin header, two LEDs, and associated resistors.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/36",
@@ -4774,6 +4899,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -4791,7 +4917,7 @@
     "tag": "tscircuit/schematic-corpus#35",
     "number": 35,
     "title": "add design028",
-    "description": "Introduces a new circuit board design (design028) featuring a single chip with labeled V5 and GND nets in a 10mm x 10mm board.",
+    "description": "Adds a new schematic design (design028) to the schematic-corpus repository, featuring a simple board with a chip and labeled nets for V5 and GND.",
     "contributor": "techmannih",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/35",
@@ -4801,7 +4927,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -4812,6 +4938,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -4822,24 +4949,24 @@
     "body": "![image](https://github.com/user-attachments/assets/14ee7195-64bc-4759-bfa6-88ff5a9621b4)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#34",
     "number": 34,
     "title": "add design 26",
-    "description": "Adds a new circuit schematic (design026) featuring a jumper, two capacitors, and netlabels for V3_3 and GND, with manual schematic placements.",
+    "description": "Adds a new schematic design (design026) featuring a jumper and two capacitors with specific net labels and manual schematic placements to the schematic-corpus repository.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/34",
     "mostly_style": false,
-    "new_page_or_component": true,
+    "new_page_or_component": false,
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -4850,6 +4977,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -4860,14 +4988,14 @@
     "body": "![image](https://github.com/user-attachments/assets/4c88a127-7383-4f78-a69e-39fc6ad16d96)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#33",
     "number": 33,
     "title": "add design027",
-    "description": "Introduces a new circuit board design (design027) featuring a pinrow8 jumper and labeled power/ground nets.",
+    "description": "Adds a new schematic and board design (design027) to the schematic-corpus repository, featuring a pinrow8 jumper and labeled nets for VIN, GND, V5, V3_3, VCC, and N_RESET.",
     "contributor": "techmannih",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/33",
@@ -4877,7 +5005,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -4888,6 +5016,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -4898,14 +5027,14 @@
     "body": "![image](https://github.com/user-attachments/assets/6c53067b-cf8b-4dad-bfcb-ed4f95126abf)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#31",
     "number": 31,
     "title": "change design025",
-    "description": "Updates design025 to add a third pin to U1 and relabels/rewires netlabels to VCC, COPI, and GND, improving schematic clarity and accuracy.",
+    "description": "Updates the schematic for design025 by adding a third pin to the right side of U1, relabeling and repositioning netlabels to VCC, COPI, and GND, and adjusting their positions and connections accordingly.",
     "contributor": "techmannih",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/31",
@@ -4926,6 +5055,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -4943,7 +5073,7 @@
     "tag": "tscircuit/schematic-corpus#32",
     "number": 32,
     "title": "add design 24",
-    "description": "Introduces a new circuit board design (design024) featuring a 10-pin jumper with labeled net connections including D8-D10, COPI, CIPO, SCK, GND, AREF, A4, and A5.",
+    "description": "Adds a new schematic design (design024) featuring a 10-pin jumper (JP12) with labeled net connections for D8, D9, D10, COPI, CIPO, SCK, GND, AREF, A4, and A5, expanding the schematic-corpus repository's collection of reference designs.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/32",
@@ -4953,7 +5083,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -4964,6 +5094,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -4974,14 +5105,14 @@
     "body": "![image](https://github.com/user-attachments/assets/1d57fff3-86bc-487d-bc43-44fd172348ab)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#27",
     "number": 27,
     "title": "add design025",
-    "description": "Introduces a new circuit board design (design025) featuring a chip with two labeled pins (A6, A7) on a 10mm x 10mm board.",
+    "description": "Adds a new schematic design (design025) to the schematic-corpus repository, featuring a board with a chip (U1) and two netlabels (A6, A7) connected to its pins.",
     "contributor": "techmannih",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/27",
@@ -4991,7 +5122,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5002,6 +5133,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -5012,14 +5144,14 @@
     "body": "![image](https://github.com/user-attachments/assets/2d9c60b0-9958-4fa5-9206-7e86e2d967ef)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#26",
     "number": 26,
     "title": "add design023",
-    "description": "Introduces a new circuit board design (design023) featuring a 10mm x 10mm board with a resistor and LED circuit.",
+    "description": "Adds a new schematic design (design023) featuring a 10k resistor and a red LED with VCC and GND netlabels to the schematic-corpus repository.",
     "contributor": "techmannih",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/26",
@@ -5029,7 +5161,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5040,6 +5172,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -5050,14 +5183,14 @@
     "body": "![image](https://github.com/user-attachments/assets/bca641ed-bb1d-4da9-862a-cfd215b2c06f)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#25",
     "number": 25,
     "title": "add BPC graphics",
-    "description": "Generates and saves SVG graphics for BPC (Box Pin Color) graphs alongside BPC JSON files for each circuit in the corpus.",
+    "description": "Generates and saves SVG graphics for each BPC (Box-Pin-Color) graph in the schematic corpus, alongside the existing JSON output.",
     "contributor": "seveibar",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/25",
@@ -5078,6 +5211,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -5095,7 +5229,7 @@
     "tag": "tscircuit/schematic-corpus#24",
     "number": 24,
     "title": "add design022",
-    "description": "Adds a new circuit board design (design022) featuring a 1k resistor, red LED, and solder jumper for V3_3 to GND connection.",
+    "description": "Adds a new schematic design (design022) featuring a power net, solder jumper, resistor, and LED to the schematic-corpus repository.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/24",
@@ -5105,7 +5239,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5116,6 +5250,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -5126,14 +5261,14 @@
     "body": "![image](https://github.com/user-attachments/assets/5e255732-6c56-40a1-be3f-f66d08e7b80d)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#22",
     "number": 22,
     "title": "add design 21",
-    "description": "Introduces a new circuit board design (design021) featuring a pinrow8 jumper and labeled nets (VIN, GND, V5, VDD, N_RESET).",
+    "description": "Adds a new schematic and board design (design021) to the schematic-corpus repository, featuring a pinrow8 jumper and labeled nets for VIN, GND, V5, VDD, and N_RESET.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/22",
@@ -5154,6 +5289,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -5171,7 +5307,7 @@
     "tag": "tscircuit/schematic-corpus#21",
     "number": 21,
     "title": "add design020",
-    "description": "Introduces a new circuit board design (design020) featuring a 4-pin chip with labeled nets for SCL, SDA, V3_3, and GND.",
+    "description": "Adds a new schematic design (design020) to the schematic-corpus repository, featuring a 4-pin chip with labeled nets for SCL, SDA, V3_3, and GND.",
     "contributor": "techmannih",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/21",
@@ -5181,7 +5317,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5192,6 +5328,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "techmannih"
@@ -5202,14 +5339,14 @@
     "body": "![image](https://github.com/user-attachments/assets/1c0e93a2-d524-4589-919a-e6cedb2a211d)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#20",
     "number": 20,
     "title": "design019",
-    "description": "Introduces a new circuit board design (design019) with a 16-pin chip and labeled net connections.",
+    "description": "Adds a new schematic design (design019) featuring a 16-pin chip with labeled net connections to the schematic-corpus repository.",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/20",
@@ -5219,7 +5356,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5230,6 +5367,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5240,14 +5378,14 @@
     "body": "![image](https://github.com/user-attachments/assets/dd428780-15a7-470d-b2ec-1abe7b6790ea)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#10",
     "number": 10,
     "title": "add design 18 to examples",
-    "description": "Adds a new example circuit board design (design018) featuring a 4-pin jumper with SCL, SDA, MISO, and GND nets to the schematic-corpus examples.",
+    "description": "Adds a new example circuit design (design 18) to the schematic-corpus repository, featuring a 4-pin jumper with SCL, SDA, MISO, and GND nets.",
     "contributor": "Anshgrover23",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/10",
@@ -5257,7 +5395,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5268,6 +5406,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Anshgrover23"
@@ -5278,14 +5417,14 @@
     "body": "# note: used different nets name because of type errors\r\n![image](https://github.com/user-attachments/assets/009573dd-3fe6-4780-93d4-ffb784531ef1)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#19",
     "number": 19,
     "title": "design017",
-    "description": "Expands the design017 circuit board schematic by adding additional pins and netlabels for more signals and power connections.",
+    "description": "Adds or updates the schematic design017 with expanded netlabels and pin connections for U1, providing a more detailed schematic representation in the schematic-corpus repository.",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/19",
@@ -5306,6 +5445,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": true,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5323,7 +5463,7 @@
     "tag": "tscircuit/schematic-corpus#18",
     "number": 18,
     "title": "design017",
-    "description": "Introduces a new schematic circuit board design (design017) featuring a single chip with labeled nets for V3_3, SCL, SDA, and GND.",
+    "description": "Adds a new schematic design (design017) to the schematic-corpus repository, featuring a chip with labeled net connections (V3_3, SCL, SDA, GND).",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/18",
@@ -5333,7 +5473,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5344,6 +5484,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5354,14 +5495,14 @@
     "body": "![image](https://github.com/user-attachments/assets/131397a9-2e3c-4eb8-8699-2aae382e7ca9)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#17",
     "number": 17,
     "title": "design016",
-    "description": "Adds a new circuit board design (design016) featuring a chip with 9 pins and labeled SDIO/GND/V3_3 nets, as a new entry in the schematic corpus.",
+    "description": "Adds a new schematic design (design016) to the schematic-corpus repository, featuring a 9-pin chip with labeled SDIO and power nets.",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/17",
@@ -5371,7 +5512,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5382,6 +5523,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5392,14 +5534,14 @@
     "body": "![image](https://github.com/user-attachments/assets/485d9358-3887-469d-b305-21c2b9c63cee)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#16",
     "number": 16,
     "title": "design015",
-    "description": "Introduces a new circuit board design (design015) featuring a switch, capacitor, resistor, and labeled nets for V3_3, RESET, and GND.",
+    "description": "Adds a new schematic design (design015) featuring a switch, capacitor, resistor, and netlabels for V3_3, RESET, and GND to the schematic-corpus repository.",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/16",
@@ -5409,7 +5551,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5420,6 +5562,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5430,24 +5573,24 @@
     "body": "![image](https://github.com/user-attachments/assets/f0e37f7b-b7c5-44f0-92e9-4e30aed89fa3)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#15",
     "number": 15,
     "title": "design014",
-    "description": "Introduces a new 10mm x 10mm circuit board design (design014) featuring a switch (SW1) and labeled nets BOOT0 and V3_3.",
+    "description": "Adds a new schematic design (design014) featuring a switch (SW1) with labeled nets BOOT0 and V3_3 to the schematic-corpus repository.",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/15",
     "mostly_style": false,
-    "new_page_or_component": true,
+    "new_page_or_component": false,
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5458,6 +5601,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5468,14 +5612,14 @@
     "body": "![image](https://github.com/user-attachments/assets/6a52950e-67a5-4377-bb57-2d82defe3f2d)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#14",
     "number": 14,
     "title": "design013",
-    "description": "Introduces a new circuit board design (design013) featuring two diodes and labeled power nets.",
+    "description": "Adds a new schematic design (design013) featuring two diodes and labeled nets (V_USB, VIN, V_BATT) to the schematic-corpus repository. Note: schottky_diode symbol is not working as per author comment.",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/14",
@@ -5485,7 +5629,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5496,6 +5640,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5506,14 +5651,14 @@
     "body": "PS: schottky_diode symbol not working.\r\n![image](https://github.com/user-attachments/assets/f58dba3f-d48d-4a30-b135-5557addbb6e5)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#13",
     "number": 13,
     "title": "design012",
-    "description": "Adds a new 10mm x 10mm circuit board design (design012) featuring four 0.1uF capacitors with specific schematic placements and net labels for V3_3 and GND.",
+    "description": "Adds a new schematic design (design012) featuring four 0.1uF capacitors with specific manual placements and netlabels for V3_3 and GND, to the schematic-corpus repository.",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/13",
@@ -5523,7 +5668,7 @@
     "core_change": false,
     "only_dependency_update": false,
     "bad_title": true,
-    "introduces_new_circuit_board": true,
+    "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
     "minor_fix": false,
@@ -5534,6 +5679,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5544,14 +5690,14 @@
     "body": "![image](https://github.com/user-attachments/assets/6d6a1c20-c4fb-4dc3-b165-097c4e1c5a8c)\r\n",
     "state": "merged",
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny"
   },
   {
     "tag": "tscircuit/schematic-corpus#12",
     "number": 12,
     "title": "design011",
-    "description": "Adds a new 32.768kHz crystal oscillator circuit board design (design011) with two 15pF capacitors and ground netlabels, and updates tscircuit dependencies.",
+    "description": "Adds a new 32.768kHz crystal oscillator circuit design (design011) with two 15pF capacitors and ground netlabels to the schematic-corpus repository.",
     "contributor": "Abse2001",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/12",
@@ -5572,6 +5718,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": true,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "Abse2001"
@@ -5589,7 +5736,7 @@
     "tag": "tscircuit/schematic-corpus#11",
     "number": 11,
     "title": "Update BPC Generation to include netlabels",
-    "description": "Updates dependencies to support BPC (Board Production Config) generation with netlabel information, enabling downstream tools to access netlabel data in generated BPC files.",
+    "description": "Updates dependencies to support BPC generation with netlabels by bumping 'circuit-json-to-bpc' and 'tscircuit' versions, and adds '@types/bun' to types in tsconfig.",
     "contributor": "seveibar",
     "repo": "tscircuit/schematic-corpus",
     "url": "https://github.com/tscircuit/schematic-corpus/pull/11",
@@ -5597,7 +5744,7 @@
     "new_page_or_component": false,
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
-    "only_dependency_update": true,
+    "only_dependency_update": false,
     "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
@@ -5610,6 +5757,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -5627,7 +5775,7 @@
     "tag": "tscircuit/deps.tscircuit.com#23",
     "number": 23,
     "title": "Add @tscircuit/cli downstream dependency",
-    "description": "Adds @tscircuit/cli as a dependency, categorizes it as 'Downstream', updates the dependency graph, and adds a test to ensure correct categorization.",
+    "description": "Adds @tscircuit/cli as a dependency, categorizes it as 'Downstream' in the dependency graph, and tests its recognition as such.",
     "contributor": "seveibar",
     "repo": "tscircuit/deps.tscircuit.com",
     "url": "https://github.com/tscircuit/deps.tscircuit.com/pull/23",
@@ -5648,6 +5796,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"
@@ -5665,7 +5814,7 @@
     "tag": "tscircuit/calculate-cell-boundaries#7",
     "number": 7,
     "title": "Refactor internal layout",
-    "description": "Refactors the internal structure of the calculate-cell-boundaries library by moving algorithm code out of the claude folder, modularizing core logic into separate files, and updating imports, without changing user-facing functionality.",
+    "description": "Refactors the internal algorithm code by moving logic out of the `claude` folder into a new `lib` structure, modularizing core cell boundary calculation logic, and updating imports and file names for improved maintainability; no user-facing functionality changes.",
     "contributor": "seveibar",
     "repo": "tscircuit/calculate-cell-boundaries",
     "url": "https://github.com/tscircuit/calculate-cell-boundaries/pull/7",
@@ -5678,7 +5827,7 @@
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": false,
     "fixes_subtle_important_bug": false,
-    "minor_fix": true,
+    "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_reproduces_a_bug": false,
     "reproduces_and_fixes_a_bug": false,
@@ -5686,6 +5835,7 @@
     "introduces_new_schematic_symbol": false,
     "fixes_schematic_representation": false,
     "improves_parts_engine": false,
+    "add_design_to_schematic_corpus": false,
     "major_library_algorithm_contribution": false,
     "user": {
       "login": "seveibar"

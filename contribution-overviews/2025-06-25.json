@@ -15,11 +15,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 48,
-    "stars": "⭐⭐⭐",
-    "major": 9,
+    "score": 27,
+    "stars": "⭐⭐",
+    "major": 2,
     "minor": 0,
-    "tiny": 2
+    "tiny": 9
   },
   "Anshgrover23": {
     "reviewsReceived": 30,
@@ -33,11 +33,11 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewed": 5,
-    "score": 48,
+    "score": 37,
     "stars": "⭐⭐⭐",
-    "major": 7,
-    "minor": 1,
-    "tiny": 13
+    "major": 3,
+    "minor": 2,
+    "tiny": 16
   },
   "ArnavK-09": {
     "reviewsReceived": 22,
@@ -55,7 +55,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 25,
+    "score": 26,
     "reposOwned": [
       {
         "repo": "tscircuit/cli",
@@ -66,8 +66,8 @@
     ],
     "stars": "⭐⭐",
     "major": 2,
-    "minor": 2,
-    "tiny": 11
+    "minor": 3,
+    "tiny": 10
   },
   "MustafaMulla29": {
     "reviewsReceived": 8,
@@ -107,7 +107,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 29,
+    "score": 26,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
@@ -117,9 +117,9 @@
       }
     ],
     "stars": "⭐⭐",
-    "major": 2,
+    "major": 1,
     "minor": 1,
-    "tiny": 8
+    "tiny": 9
   },
   "andrii-balitskyi": {
     "reviewsReceived": 2,
@@ -137,11 +137,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 2,
+    "score": 1,
     "stars": "",
     "major": 0,
-    "minor": 1,
-    "tiny": 0
+    "minor": 0,
+    "tiny": 1
   },
   "cursor[bot]": {
     "reviewsReceived": 0,
@@ -189,7 +189,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 43,
+    "score": 45,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-to-svg",
@@ -229,8 +229,8 @@
       }
     ],
     "stars": "⭐⭐⭐",
-    "major": 3,
-    "minor": 3,
+    "major": 4,
+    "minor": 2,
     "tiny": 15
   },
   "ricohageman": {
@@ -249,10 +249,10 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 2,
-    "stars": "",
-    "major": 0,
-    "minor": 1,
+    "score": 4,
+    "stars": "⭐",
+    "major": 1,
+    "minor": 0,
     "tiny": 0
   },
   "seveibar": {
@@ -271,7 +271,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 118,
+    "score": 113,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
@@ -305,9 +305,9 @@
       }
     ],
     "stars": "👑👑👑",
-    "major": 16,
-    "minor": 4,
-    "tiny": 31
+    "major": 13,
+    "minor": 8,
+    "tiny": 30
   },
   "techmannih": {
     "reviewsReceived": 47,
@@ -325,7 +325,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 43,
+    "score": 26,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -334,10 +334,10 @@
         ]
       }
     ],
-    "stars": "⭐⭐⭐",
-    "major": 6,
-    "minor": 1,
-    "tiny": 7
+    "stars": "⭐⭐",
+    "major": 0,
+    "minor": 2,
+    "tiny": 12
   },
   "tscircuitbot": {
     "reviewsReceived": 0,

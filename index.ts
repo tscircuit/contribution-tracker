@@ -27,6 +27,7 @@ export async function generateOverview(startDate: string) {
   for (const repo of repos) {
     console.log(`\nAnalyzing ${repo}`)
     const repoOwners = await fetchCodeownersFile(repo)
+    console.log(`Found ${repoOwners.length} repo owners`)
     const prsWithReviews = await getAllPRs(repo, startDate)
     console.log(`Found ${prsWithReviews.length} total PRs`)
     for (const pr of prsWithReviews) {
