@@ -1,9 +1,26 @@
 import type { AnalyzedPR, ContributorStats } from "../types"
 
 export interface ContributorScore {
+  /**
+   * @deprecated
+   */
   tiny: number
+  /**
+   * @deprecated
+   */
   minor: number
+  /**
+   * @deprecated
+   */
   major: number
+
+  rating0Count: number
+  rating1Count: number
+  rating2Count: number
+  rating3Count: number
+  rating4Count: number
+  rating5Count: number
+
   score: number
 }
 
@@ -19,6 +36,12 @@ export function getContributorScore(
     minor: 0,
     tiny: 0,
     score: 0,
+    rating0Count: 0,
+    rating1Count: 0,
+    rating2Count: 0,
+    rating3Count: 0,
+    rating4Count: 0,
+    rating5Count: 0,
   }
 
   // Impact values for scoring
@@ -39,11 +62,17 @@ export function getContributorScore(
         break
     }
 
-    // Add score based on impact
-    const impactScore = impactWorth[pr.impact]
-    if (!Number.isNaN(impactScore) && typeof impactScore === "number") {
-      result.score += impactScore
+    if (pr.starRating !== undefined) {
+      result[`rating${pr.starRating}Count`]++
     }
+
+    // Add score based on impact
+    // const impactScore = impactWorth[pr.impact]
+    // if (!Number.isNaN(impactScore) && typeof impactScore === "number") {
+    //   result.score += impactScore
+    // }
+
+    result.score += 2 ** ((pr.starRating ?? 0) - 2)
   }
 
   // If no contributor stats, we're done
@@ -51,21 +80,8 @@ export function getContributorScore(
     return result
   }
 
-  // Add score for bountied issues
-  const bountiedAmount = contributorStats.bountiedIssuesTotal || 0
-  // Convert bounty amount to tiny contributions
-  // $1-10 = 1 tiny contribution, $10-20 = 2 tiny contributions etc.
-  let tinyContributionsFromBounties = Math.ceil(bountiedAmount / 10)
-  // Cap at 6 tiny contributions as a maximum for issues
-  tinyContributionsFromBounties = Math.min(tinyContributionsFromBounties, 6)
-  // Add to score (tiny contributions are worth 1 point each)
-  result.score += tinyContributionsFromBounties
-
-  // Add score for reviews
-  // Use distinctPrsReviewed for scoring instead of raw review counts
   const distinctPrsReviewed = contributorStats.distinctPrsReviewed || 0
-  // Cap review points at 20
-  result.score += Math.min(distinctPrsReviewed, 10)
+  result.score += Math.min(distinctPrsReviewed, 5)
 
   return result
 }

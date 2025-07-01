@@ -116,14 +116,14 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 13 | 8 | 30 | 👑👑👑 | 5 | 0🔹 0🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 4 | 2 | 15 | ⭐⭐⭐ | 1 | 0🔹 0🔶 0💎 |
-| [Anshgrover23](#Anshgrover23) | 3 | 2 | 16 | ⭐⭐⭐ | 9 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 13 | 8 | 30 | 👑 | 5 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 4 | 2 | 15 | ⭐⭐ | 1 | 0🔹 0🔶 0💎 |
+| [Anshgrover23](#Anshgrover23) | 3 | 2 | 16 | ⭐⭐ | 9 | 0🔹 0🔶 0💎 |
 | [Abse2001](#Abse2001) | 2 | 0 | 9 | ⭐⭐ | 1 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 1 | 9 | ⭐⭐ | 7 | 0🔹 0🔶 0💎 |
 | [techmannih](#techmannih) | 0 | 2 | 12 | ⭐⭐ | 2 | 0🔹 0🔶 0💎 |
 | [ArnavK-09](#ArnavK-09) | 2 | 3 | 10 | ⭐⭐ | 7 | 0🔹 0🔶 0💎 |
-| [ricohageman](#ricohageman) | 1 | 0 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 1 | 9 | ⭐⭐ | 7 | 0🔹 0🔶 0💎 |
+| [ricohageman](#ricohageman) | 1 | 0 | 0 |  | 0 | 0🔹 0🔶 0💎 |
 | [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 3 |  | 6 | 0🔹 0🔶 0💎 |
 | [andrii-balitskyi](#andrii-balitskyi) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |

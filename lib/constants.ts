@@ -3,4 +3,5 @@ export const EXCLUDED_BOTS = [
   "tscircuitbot",
   "algora-pbc[bot]",
   "graphite-app[bot]",
+  "cursor[bot]",
 ] as const
