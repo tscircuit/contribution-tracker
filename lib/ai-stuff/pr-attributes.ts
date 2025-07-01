@@ -32,6 +32,8 @@ export const PR_ATTRIBUTES = {
     "Improves tscircuit generation of circuit board Bill of Materials",
   add_design_to_schematic_corpus:
     "Creates a design in the schematic-corpus repository",
+  major_improvement_to_core_data_modeling:
+    "Improves data modeling within tscircuit/core, adds accuracy or features to obstacle generation for autorouting, better parts engine integration. This is non-trivial and may fix an existing bug",
   major_library_algorithm_contribution:
     "This PR contributes a major algorithm improvement to a library, the algorithm is non-trivial, well-tested and has good documentation and comments",
 }

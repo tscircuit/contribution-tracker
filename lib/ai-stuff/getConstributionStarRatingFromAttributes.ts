@@ -8,7 +8,7 @@ export const getContributionStarRatingFromAttributes = (
   let score = 1
 
   if (a.only_dependency_update) score *= 0.5
-  if (a.bad_title) score *= 0.5
+  if (a.bad_title) score *= 0.8
 
   if (a.mostly_style) score *= 0.75
 
@@ -25,6 +25,7 @@ export const getContributionStarRatingFromAttributes = (
   if (a.improves_parts_engine) score *= 1.5
   if (a.reproduces_and_fixes_a_bug) score *= 2
   if (a.new_page_or_component) score *= 1.25
+  if (a.major_improvement_to_core_data_modeling) score *= 1.5
 
   return Math.min(maxRating, Math.round(score)) as StarRating
 }
