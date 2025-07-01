@@ -5,6 +5,15 @@ import { getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES } from "../constants/metrics"
 import { PrAttributeBadges } from "./PrAttributeBadges"
 
+const shortenRepoName = (repo: string) => {
+  const shortName = repo
+    .replace("tscircuit/", "")
+    .replace("tscircuit-", "")
+    .replace("sparkfun", "sf")
+
+  return shortName.length > 10 ? shortName.slice(0, 10) + "…" : shortName
+}
+
 interface PRsByRepositoryProps {
   prs: PrAnalysisResult[]
   inModal?: boolean
@@ -59,7 +68,7 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800"
                 >
-                  #{pr.number}
+                  {shortenRepoName(pr.repo)}#{pr.number}
                 </a>
               </td>
               <td className="px-3 py-2 whitespace-nowrap text-sm">

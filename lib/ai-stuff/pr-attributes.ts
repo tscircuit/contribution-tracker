@@ -19,19 +19,23 @@ export const PR_ATTRIBUTES = {
   minor_fix: "The PR is a minor fix, not particularly impactful",
   major_autorouter_bug_fix:
     "This PR to the tscircuit/tscircuit-autorouter or tscircuit/core fixes a major bug in the autorouting system an algorithm change",
+  only_adds_autorouter_fixtures:
+    "This PR adds JSON objects and fixture.tsx files, but doesn't actually change the algorithm",
   only_reproduces_a_bug:
     "This PR reproduces a bug with a comprehensive test, the test may be skipped if it's still failing, but the PR makes it a lot easier for people to fix the bug with a thorough reproduction. The user has described and linked to the situation that caused the bug or where they sourced the bug from",
   reproduces_and_fixes_a_bug:
     "This PR introduces a bug AND fixes the bug with a change in the implementation",
+  minor_developer_experience_improvement:
+    "This PR introduces github workflows, adds package.json scripts, formats or otherwise just improves the developer experience in a minor way",
   major_experience_improvement:
-    "This PR greatly improves the developer experience with improvements to the website code editor, the command line, RunFrame or user-facing tools",
+    "This PR greatly improves the USER experience with improvements to the website code editor, the command line, RunFrame or user-facing tools",
   introduces_new_schematic_symbol: "Introduces a new schematic symbol",
   fixes_schematic_representation:
     "Fixes how schematics or symbols are represented",
   improves_parts_engine:
     "Improves tscircuit generation of circuit board Bill of Materials",
   add_design_to_schematic_corpus:
-    "Creates a design in the schematic-corpus repository",
+    "Creates a new schematic design in the tscircuit/schematic-corpus repository",
   major_improvement_to_core_data_modeling:
     "Improves data modeling within tscircuit/core, adds accuracy or features to obstacle generation for autorouting, better parts engine integration. This is non-trivial and may fix an existing bug",
   major_library_algorithm_contribution:

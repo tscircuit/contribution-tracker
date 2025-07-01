@@ -69,7 +69,7 @@ export async function generateAiObjectCached(
   const optionsWithDefault = {
     ...options,
     prompt: truncatedPrompt,
-    model: options.model || openai("gpt-4.1"),
+    model: options.model || openai("gpt-4o-mini"),
   }
 
   const cached = await getAiCacheItem(optionsWithDefault)
