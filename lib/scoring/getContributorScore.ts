@@ -64,6 +64,10 @@ export function getContributorScore(
 
     if (pr.starRating !== undefined) {
       result[`rating${pr.starRating}Count`]++
+
+      if (result[`rating${pr.starRating}Count`] <= 10) {
+        result.score += 2 ** ((pr.starRating ?? 0) - 2)
+      }
     }
 
     // Add score based on impact
@@ -71,8 +75,6 @@ export function getContributorScore(
     // if (!Number.isNaN(impactScore) && typeof impactScore === "number") {
     //   result.score += impactScore
     // }
-
-    result.score += 2 ** ((pr.starRating ?? 0) - 2)
   }
 
   // If no contributor stats, we're done

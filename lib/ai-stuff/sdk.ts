@@ -1,22 +1,23 @@
 import { generateObject } from "ai"
 import { openai } from "@ai-sdk/openai"
 import FileSystemCache from "file-system-cache"
+import ms from "ms"
 
 const cache = FileSystemCache({ basePath: ".cache-ai" })
-const DEFAULT_CACHE_EXPIRY = 7 * 24 * 60 * 60 * 1000 // 1 week
+const DEFAULT_CACHE_EXPIRY = ms("7d")
 
 function estimateTokenCount(text: string): number {
   return Math.ceil(text.length / 4)
 }
 
-function truncatePrompt(prompt: string, maxTokens: number = 120000): string {
+function truncatePrompt(prompt: string, maxTokens: number = 15000): string {
   if (!prompt) return ""
   const estimatedTokens = estimateTokenCount(prompt)
   if (estimatedTokens <= maxTokens) {
     return prompt
   }
 
-  const maxChars = maxTokens * 4
+  const maxChars = maxTokens * 2
   const truncated = prompt.slice(0, maxChars)
   return truncated + "\n\n[Note: Content truncated due to length limit]"
 }
