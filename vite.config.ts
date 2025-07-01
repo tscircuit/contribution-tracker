@@ -1,3 +1,4 @@
+import path from "node:path"
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 
@@ -5,4 +6,10 @@ import react from "@vitejs/plugin-react"
 export default defineConfig({
   plugins: [react()],
   root: "./frontend",
+
+  resolve: {
+    alias: {
+      lib: path.resolve(__dirname, "lib"),
+    },
+  },
 })

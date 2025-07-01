@@ -17,7 +17,7 @@ export function ContributorOverview({
   contributors,
   onSelectContributor,
 }: ContributorOverviewProps) {
-  const [showAllContributors, setShowAllContributors] = useState(false)
+  const [showAllContributors, setShowAllContributors] = useState(true)
 
   // First, separate full-timers from other contributors
   const [fullTimerContributors, otherContributors] = contributors.reduce(
@@ -280,7 +280,7 @@ export function ContributorOverview({
           >
             {showAllContributors ? (
               <>
-                Hide Other Contributors
+                Hide Contributors
                 <ChevronUp className="w-4 h-4" />
               </>
             ) : (

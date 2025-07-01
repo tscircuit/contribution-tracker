@@ -79,7 +79,7 @@ Strictly assess the PR across the following dimensions:
 <description>
    Provide a concise 1-line summary clearly stating what this PR changes for users
 
-   Give precise details, avoid vague or generic "improves XXX" or "enhances XXX",
+   Give precise details, DO NOT SAY "improves XXX" or "enhances XXX",
    if the PR fixes a precise bug, be precise e.g.
 
    - "Fixes autorouting failure when pinheaders are connected to same nets within a subcircuit"

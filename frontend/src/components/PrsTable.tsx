@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp } from "lucide-react"
 import { type PrAnalysisResult } from "../types/contributor"
 import { getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES } from "../constants/metrics"
+import { PrAttributeBadges } from "./PrAttributeBadges"
 
 interface PRsByRepositoryProps {
   prs: PrAnalysisResult[]
@@ -12,7 +13,7 @@ interface PRsByRepositoryProps {
 
 export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
   const [showTinyContributions, setShowTinyContributions] = useState(false)
-  
+
   const getImpactColor = (impact: string) => {
     if (impact.includes("Major")) return CONTRIBUTION_TYPES.MAJOR.colorClass
     if (impact.includes("Minor")) return CONTRIBUTION_TYPES.MINOR.colorClass
@@ -21,8 +22,8 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
   }
 
   // Separate PRs by impact level
-  const majorMinorPRs = prs.filter(pr => !pr.impact.includes("Tiny"))
-  const tinyPRs = prs.filter(pr => pr.impact.includes("Tiny"))
+  const majorMinorPRs = prs.filter((pr) => !pr.impact.includes("Tiny"))
+  const tinyPRs = prs.filter((pr) => pr.impact.includes("Tiny"))
 
   const renderPRTable = (prsToRender: PrAnalysisResult[]) => (
     <div className="overflow-x-auto">
@@ -43,6 +44,9 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
             <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               Description
             </th>
+            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-[50px]">
+              Tags
+            </th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
@@ -59,9 +63,7 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
                 </a>
               </td>
               <td className="px-3 py-2 whitespace-nowrap text-sm">
-                <span
-                  className={`font-medium ${getImpactColor(pr.impact)}`}
-                >
+                <span className={`font-medium ${getImpactColor(pr.impact)}`}>
                   {pr.impact.split(" ")[0]}
                 </span>
               </td>
@@ -79,6 +81,9 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
               )}
               <td className="px-3 py-2 text-sm text-gray-900 break-words">
                 {pr.description}
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap text-sm">
+                <PrAttributeBadges pr={pr} />
               </td>
             </tr>
           ))}
@@ -123,7 +128,7 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
                   <ChevronDown className="w-4 h-4" />
                 )}
               </button>
-              
+
               {showTinyContributions && (
                 <div className="border-t border-gray-100">
                   {renderPRTable(tinyPRs)}

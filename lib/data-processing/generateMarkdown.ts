@@ -250,7 +250,7 @@ export async function generateMarkdown(
 
   // Generate pie chart for top 7 repos by points
   markdown += "## Top 7 Repositories by Contribution Points\n\n"
-  
+
   // Calculate points by repository
   const repoPoints = prs.reduce(
     (acc, pr) => {
@@ -287,11 +287,11 @@ export async function generateMarkdown(
   )
 
   Object.entries(prsByRepo).forEach(([repo, repoPRs]) => {
-    const majorMinorPRs = repoPRs.filter(pr => pr.impact !== "Tiny")
-    const tinyPRs = repoPRs.filter(pr => pr.impact === "Tiny")
-    
+    const majorMinorPRs = repoPRs.filter((pr) => pr.impact !== "Tiny")
+    const tinyPRs = repoPRs.filter((pr) => pr.impact === "Tiny")
+
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
-    
+
     if (majorMinorPRs.length > 0) {
       markdown +=
         "| PR # | Impact | Contributor | Description | Milestone Aligned |\n"
@@ -313,7 +313,7 @@ export async function generateMarkdown(
           } |\n`
         })
     }
-    
+
     if (tinyPRs.length > 0) {
       markdown += `\n<details>\n<summary>🐌 Tiny Contributions (${tinyPRs.length})</summary>\n\n`
       markdown +=
@@ -329,7 +329,7 @@ export async function generateMarkdown(
       })
       markdown += "\n</details>\n"
     }
-    
+
     markdown += "\n"
   })
 
@@ -337,11 +337,11 @@ export async function generateMarkdown(
   markdown += "## Changes by Contributor\n\n"
 
   Object.entries(prsByContributor).forEach(([contributor, contributorPRs]) => {
-    const majorMinorPRs = contributorPRs.filter(pr => pr.impact !== "Tiny")
-    const tinyPRs = contributorPRs.filter(pr => pr.impact === "Tiny")
-    
+    const majorMinorPRs = contributorPRs.filter((pr) => pr.impact !== "Tiny")
+    const tinyPRs = contributorPRs.filter((pr) => pr.impact === "Tiny")
+
     markdown += `### [${contributor}](https://github.com/${contributor})\n\n`
-    
+
     if (majorMinorPRs.length > 0) {
       markdown += "| PR # | Impact | Description | Milestone Aligned |\n"
       markdown += "|------|--------|-------------|-------------------|\n"
@@ -351,7 +351,7 @@ export async function generateMarkdown(
         } | ${pr.isAlignedWithMilestone ? "✅" : "❌"} |\n`
       })
     }
-    
+
     if (tinyPRs.length > 0) {
       markdown += `\n<details>\n<summary>🐌 Tiny Contributions (${tinyPRs.length})</summary>\n\n`
       markdown += "| PR # | Impact | Description | Milestone Aligned |\n"
@@ -363,7 +363,7 @@ export async function generateMarkdown(
       })
       markdown += "\n</details>\n"
     }
-    
+
     markdown += "\n"
   })
 
