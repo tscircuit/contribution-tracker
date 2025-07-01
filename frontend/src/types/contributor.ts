@@ -27,6 +27,7 @@ export interface PrAnalysisResult {
   title: string
   description: string
   impact: "Major" | "Minor" | "Tiny"
+  starRating?: number
   contributor: string
   repo: string
   url: string

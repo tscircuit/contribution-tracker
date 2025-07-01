@@ -5,6 +5,11 @@ import { getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES } from "../constants/metrics"
 import { PrAttributeBadges } from "./PrAttributeBadges"
 
+const getStarRatingDisplay = (starRating: number | undefined) => {
+  if (!starRating) return ""
+  return "⭐".repeat(Math.max(0, Math.min(5, starRating)))
+}
+
 const shortenRepoName = (repo: string) => {
   const shortName = repo
     .replace("tscircuit/", "")
@@ -43,7 +48,7 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
               PR
             </th>
             <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-24">
-              Impact
+              Rating
             </th>
             {!inModal && (
               <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">
@@ -72,8 +77,8 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
                 </a>
               </td>
               <td className="px-3 py-2 whitespace-nowrap text-sm">
-                <span className={`font-medium ${getImpactColor(pr.impact)}`}>
-                  {pr.impact.split(" ")[0]}
+                <span className="font-medium text-yellow-500">
+                  {getStarRatingDisplay(pr.starRating)}
                 </span>
               </td>
               {!inModal && (
