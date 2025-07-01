@@ -11,7 +11,7 @@ export const PR_ATTRIBUTES = {
   bad_title:
     "The PR title is overly vague or generic, it can't be used to communicate the PR's purpose in a changelog",
   introduces_new_circuit_board:
-    "The PR introduces a new circuit board, the circuit board didn't previously exist and this PR introduces the circuit board in it's entirety",
+    "The PR introduces a new circuit board, the circuit board didn't previously exist and this PR introduces the circuit board in it's entirety (PCB and schematic). There is a PCB and schematic snapshot generated in the PR",
   fixes_circuit_board:
     "This PR fixes a circuit board, the circuit board previously existed and this PR fixes it in some way",
   fixes_subtle_important_bug:
