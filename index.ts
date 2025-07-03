@@ -127,7 +127,10 @@ export async function generateOverview(startDate: string) {
     console.log(`Found ${mergedPrs.length} merged PRs`)
     const mergedPrsWithAnalysisResults = await Promise.all(
       mergedPrs.map(async (pr) => {
-        if (pr.user.login.includes("renovate")) {
+        if (
+          pr.user.login.includes("renovate") ||
+          pr.user.login.includes("[bot]")
+        ) {
           return null
         }
         const analysis = await analyzePRWithAI(pr, repo).catch((e) => {

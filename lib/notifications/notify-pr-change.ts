@@ -2,6 +2,7 @@ import { WebhookClient } from "discord.js"
 import { WebClient } from "@slack/web-api"
 import type { AnalyzedPR } from "lib/types"
 import { octokit } from "lib/sdks"
+import { getContributionStarRatingFromAttributes } from "lib/ai-stuff/getConstributionStarRatingFromAttributes"
 
 // Initialize Discord webhook client if the environment variable is set
 let discordWebhook: WebhookClient | null = null
@@ -136,9 +137,11 @@ Check out your contribution here: [PR Link](${pr.url})
 
 export async function notifyPRChange(pr: AnalyzedPR) {
   console.info(`[Notification] Processing PR change: ${pr.repo} #${pr.number}`)
-
+  const starRating =
+    pr.starRating ?? getContributionStarRatingFromAttributes(pr, pr.repo)
+  const stars = "⭐".repeat(starRating)
   const message = `
-[${pr.state === "merged" ? "merged" : "opened"}] ${pr.contributor} ${pr.impact} PR in ${pr.repo}: ${pr.url}
+[${pr.state === "merged" ? "merged" : "opened"}] ${pr.contributor} ${stars} PR in ${pr.repo}: ${pr.url}
 ${pr.description.slice(0, 300).replace(/\n/g, " ")}`.trim()
 
   await postToDiscord(message)

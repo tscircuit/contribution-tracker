@@ -19,10 +19,10 @@ const prSchema = z
 
 function cleanDescription(description: string): string {
   return description
-    .replace(/^\s*[-*•]\s+/gm, '') // Remove bullet points (-, *, •)
-    .replace(/\n+/g, ' ') // Replace newlines with spaces
-    .replace(/\s+/g, ' ') // Replace multiple spaces with single space
-    .replace(/[^\w\s.,!?;:()\-]/g, '') // Remove special characters except basic punctuation
+    .replace(/^\s*[-*•]\s+/gm, "") // Remove bullet points (-, *, •)
+    .replace(/\n+/g, " ") // Replace newlines with spaces
+    .replace(/\s+/g, " ") // Replace multiple spaces with single space
+    .replace(/[^\w\s.,!?;:()\-]/g, "") // Remove special characters except basic punctuation
     .trim()
 }
 
