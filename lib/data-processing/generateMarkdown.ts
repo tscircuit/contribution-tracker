@@ -293,20 +293,14 @@ export async function generateMarkdown(
     markdown += `### [${repo}](https://github.com/${repo})\n\n`
 
     if (majorMinorPRs.length > 0) {
-      markdown += "| PR # | Impact | Contributor | Description |\n"
-      markdown += "|------|--------|-------------|-------------|\n"
+      markdown += "| PR # | Impact | Rating | Contributor | Description |\n"
+      markdown += "|------|--------|--------|-------------|-------------|\n"
       majorMinorPRs
         .sort((a, b) => {
-          const impactOrder = { Major: 0, Minor: 1, Tiny: 2 }
-          return (
-            impactOrder[a.impact as keyof typeof impactOrder] -
-            impactOrder[b.impact as keyof typeof impactOrder]
-          )
+          return (b.starRating ?? 0) - (a.starRating ?? 0)
         })
         .forEach((pr) => {
-          markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
-            pr.impact,
-          )} | ${pr.contributor} | ${pr.description} |\n`
+          markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(pr.impact)} | ${"⭐".repeat(pr.starRating ?? 0)} | ${pr.contributor} | ${pr.description} |\n`
         })
     }
 
@@ -329,18 +323,22 @@ export async function generateMarkdown(
   markdown += "## Changes by Contributor\n\n"
 
   Object.entries(prsByContributor).forEach(([contributor, contributorPRs]) => {
-    const majorMinorPRs = contributorPRs.filter((pr) => pr.impact !== "Tiny")
+    const majorMinorPRs = contributorPRs
+      .filter((pr) => pr.impact !== "Tiny")
+      .sort((a, b) => {
+        return (b.starRating ?? 0) - (a.starRating ?? 0)
+      })
     const tinyPRs = contributorPRs.filter((pr) => pr.impact === "Tiny")
 
     markdown += `### [${contributor}](https://github.com/${contributor})\n\n`
 
     if (majorMinorPRs.length > 0) {
-      markdown += "| PR # | Impact | Description |\n"
-      markdown += "|------|--------|-------------|\n"
+      markdown += "| PRs # | Impact | Rating | Description |\n"
+      markdown += "|------|--------|--------|-------------|\n"
       majorMinorPRs.forEach((pr) => {
-        markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(pr.impact)} | ${
-          pr.description
-        } |\n`
+        markdown += `| [#${pr.number}](${pr.url}) | ${impactIcon(
+          pr.impact,
+        )} | ${"⭐".repeat(pr.starRating ?? 0)} | ${pr.description} |\n`
       })
     }
 

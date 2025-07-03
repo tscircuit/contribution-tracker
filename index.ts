@@ -341,9 +341,7 @@ async function generateAndWriteFiles(
 }
 
 export async function generateWeeklyOverview() {
-  const d = new Date()
-  d.setDate(d.getDate() - 14)
-  const weekStart = getLastWednesday(d)
+  const weekStart = getLastWednesday(new Date())
   const weekStartString = weekStart.toISOString().split("T")[0]
   await generateOverview(weekStartString)
 }
