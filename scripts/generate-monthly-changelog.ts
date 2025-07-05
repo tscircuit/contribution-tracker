@@ -58,9 +58,13 @@ async function main() {
     outDir,
     `${year}-${month.toString().padStart(2, "0")}.md`,
   )
+  const formatted = object.changelog
+    .replace(/^•\s+/gm, "- ")
+    .replace(/^\*\s+/gm, "- ")
+    .trim()
   fs.writeFileSync(
     filePath,
-    `# Changelog ${year}-${month.toString().padStart(2, "0")}\n\n${object.changelog}\n`,
+    `# Changelog ${year}-${month.toString().padStart(2, "0")}\n\n${formatted}\n`,
   )
   console.log(`Updated ${filePath}`)
 }
