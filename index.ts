@@ -8,7 +8,7 @@ import {
 import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getAllPRs } from "lib/data-retrieval/getAllPRs"
 import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
-import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
+import { getRecentIssues } from "lib/data-retrieval/getRecentIssues"
 import { getLastWednesday } from "lib/ai/date-utils"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
@@ -182,31 +182,40 @@ export async function generateOverview(startDate: string) {
     // Wait for all bounty fetching to complete
     await Promise.all(bountiedIssuesPromises)
 
-    const getIssuesCreatedPromises = Object.keys(contributorData).map(
-      async (contributor) => {
-        const { totalIssues, majorIssues } = await getIssuesCreated(
-          repo,
-          contributor,
-          startDateString,
+    const recentIssues = await getRecentIssues(repo, startDateString)
+    const issuesByAuthor: Record<string, { total: number; major: number }> = {}
+
+    for (const issue of recentIssues) {
+      const author = issue.user?.login
+      if (!author || !contributorData[author]) continue
+      if (!issuesByAuthor[author]) {
+        issuesByAuthor[author] = { total: 0, major: 0 }
+      }
+      issuesByAuthor[author].total++
+      if (
+        issue.labels.some(
+          (label) =>
+            typeof label === "object" && label.name?.toLowerCase() === "major",
         )
+      ) {
+        issuesByAuthor[author].major++
+      }
+    }
 
-        console.log(
-          `Processed issues created for ${contributor} - totalIssues: ${totalIssues} - majorIssues: ${majorIssues} in ${repo}`,
-        )
+    for (const [contributor, counts] of Object.entries(issuesByAuthor)) {
+      console.log(
+        `Processed issues created for ${contributor} - totalIssues: ${counts.total} - majorIssues: ${counts.major} in ${repo}`,
+      )
 
-        contributorData[contributor].issuesCreated =
-          (contributorData[contributor].issuesCreated || 0) + totalIssues
+      contributorData[contributor].issuesCreated =
+        (contributorData[contributor].issuesCreated || 0) + counts.total
 
-        // Calculate score based on issues created
-        const scoreFromIssues =
-          Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
+      const scoreFromIssues =
+        Math.min(counts.total, 5) * 0.5 + counts.major * 1.5
 
-        contributorData[contributor].score =
-          (contributorData[contributor].score || 0) + scoreFromIssues
-      },
-    )
-
-    await Promise.all(getIssuesCreatedPromises)
+      contributorData[contributor].score =
+        (contributorData[contributor].score || 0) + scoreFromIssues
+    }
   }
   // Process GitHub Discussions for all contributors
   const allGithubDiscussions = await processDiscussionsForContributors(
