@@ -1,22 +1,30 @@
+#!/usr/bin/env bun
+/**
+ * Fixed version of generateOverview that uses proper date range filtering
+ */
+
 import * as fs from "fs"
-import type { AnalyzedPR, ContributorStats } from "lib/types"
-import { getRepos } from "lib/data-retrieval/getRepos"
+import type { AnalyzedPR, ContributorStats } from "../lib/types"
+import { getRepos } from "../lib/data-retrieval/getRepos"
 import {
   generateMarkdown,
   scoreToStarString,
-} from "lib/data-processing/generateMarkdown"
-import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
-import { getAllPRs } from "lib/data-retrieval/getAllPRs"
-import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
-import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
-import { getLastWednesday } from "lib/ai/date-utils"
-import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
-import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
-import { storePrAnalysis } from "lib/data-processing/storePrAnalysis"
-import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
+} from "../lib/data-processing/generateMarkdown"
+import { getAllPRsFixed } from "../lib/data-retrieval/getAllPRs-fixed"
+import { getMergedPRsFixed } from "../lib/data-retrieval/getMergedPRs-fixed"
+import { getBountiedIssues } from "../lib/data-retrieval/getBountiedIssues"
+import { getIssuesCreatedFixed } from "../lib/data-retrieval/getIssuesCreated-fixed"
+import { analyzePRWithAI } from "../lib/ai-stuff/analyze-pr"
+import { processDiscussionsForContributors } from "../lib/data-retrieval/processDiscussions"
+import { storePrAnalysis } from "../lib/data-processing/storePrAnalysis"
+import { fetchCodeownersFile } from "../lib/utils/code-owner-utils"
+import { getWeekEndDate } from "../lib/utils/date-range-utils"
 
-export async function generateOverview(startDate: string) {
+export async function generateFixedOverview(startDate: string) {
   const startDateString = startDate
+  const endDate = getWeekEndDate(startDate)
+  
+  console.log(`Generating overview for ${startDateString} to ${endDate}`)
 
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
@@ -28,8 +36,11 @@ export async function generateOverview(startDate: string) {
     console.log(`\nAnalyzing ${repo}`)
     const repoOwners = await fetchCodeownersFile(repo)
     console.log(`Found ${repoOwners.length} repo owners`)
-    const prsWithReviews = await getAllPRs(repo, startDate)
+    
+    // Use fixed function with proper date range filtering
+    const prsWithReviews = await getAllPRsFixed(repo, startDate)
     console.log(`Found ${prsWithReviews.length} total PRs`)
+    
     for (const pr of prsWithReviews) {
       if (pr.user.login.includes("renovate")) {
         continue
@@ -123,8 +134,10 @@ export async function generateOverview(startDate: string) {
       }
     })
 
-    const mergedPrs = await getMergedPRs(repo, startDateString)
+    // Use fixed function with proper date range filtering
+    const mergedPrs = await getMergedPRsFixed(repo, startDateString)
     console.log(`Found ${mergedPrs.length} merged PRs`)
+    
     const mergedPrsWithAnalysisResults = await Promise.all(
       mergedPrs.map(async (pr) => {
         if (
@@ -179,35 +192,37 @@ export async function generateOverview(startDate: string) {
       },
     )
 
-  //   // Wait for all bounty fetching to complete
-  //   await Promise.all(bountiedIssuesPromises)
+    // Wait for all bounty fetching to complete
+    await Promise.all(bountiedIssuesPromises)
 
-  //   const getIssuesCreatedPromises = Object.keys(contributorData).map(
-  //     async (contributor) => {
-  //       const { totalIssues, majorIssues } = await getIssuesCreated(
-  //         repo,
-  //         contributor,
-  //         startDateString,
-  //       )
+    // Use fixed function with proper date range filtering
+    const getIssuesCreatedPromises = Object.keys(contributorData).map(
+      async (contributor) => {
+        const { totalIssues, majorIssues } = await getIssuesCreatedFixed(
+          repo,
+          contributor,
+          startDateString,
+        )
 
-  //       console.log(
-  //         `Processed issues created for ${contributor} - totalIssues: ${totalIssues} - majorIssues: ${majorIssues} in ${repo}`,
-  //       )
+        console.log(
+          `Processed issues created for ${contributor} - totalIssues: ${totalIssues} - majorIssues: ${majorIssues} in ${repo}`,
+        )
 
-  //       contributorData[contributor].issuesCreated =
-  //         (contributorData[contributor].issuesCreated || 0) + totalIssues
+        contributorData[contributor].issuesCreated =
+          (contributorData[contributor].issuesCreated || 0) + totalIssues
 
-  //       // Calculate score based on issues created
-  //       const scoreFromIssues =
-  //         Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
+        // Calculate score based on issues created
+        const scoreFromIssues =
+          Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
 
-  //       contributorData[contributor].score =
-  //         (contributorData[contributor].score || 0) + scoreFromIssues
-  //     },
-  //   )
+        contributorData[contributor].score =
+          (contributorData[contributor].score || 0) + scoreFromIssues
+      },
+    )
 
-  //   await Promise.all(getIssuesCreatedPromises)
-  // }
+    await Promise.all(getIssuesCreatedPromises)
+  }
+  
   // Process GitHub Discussions for all contributors
   const allGithubDiscussions = await processDiscussionsForContributors(
     startDateString,
@@ -309,7 +324,6 @@ async function generateAndWriteFiles(
     contributorData,
     startDateString,
   )
-  console.log("Generated markdown", markdown)
 
   // Sort contributor data alphabetically by contributor name
   const alphabeticalContributorData = Object.keys(contributorData)
@@ -323,8 +337,8 @@ async function generateAndWriteFiles(
     )
 
   fs.writeFileSync(`contribution-overviews/${startDateString}.md`, markdown)
-
   console.log(`Generated contribution-overviews/${startDateString}.md`)
+  
   fs.writeFileSync(
     `contribution-overviews/${startDateString}.json`,
     JSON.stringify(alphabeticalContributorData, null, 2),
@@ -338,10 +352,4 @@ async function generateAndWriteFiles(
     `<!-- START_CURRENT_WEEK -->\n\n${markdown}\n\n<!-- END_CURRENT_WEEK -->`,
   )
   fs.writeFileSync("README.md", updatedReadme)
-}
-
-export async function generateWeeklyOverview() {
-  const weekStart = getLastWednesday(new Date())
-  const weekStartString = weekStart.toISOString().split("T")[0]
-  await generateOverview(weekStartString)
 }
