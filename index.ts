@@ -179,35 +179,35 @@ export async function generateOverview(startDate: string) {
       },
     )
 
-    // Wait for all bounty fetching to complete
-    await Promise.all(bountiedIssuesPromises)
+  //   // Wait for all bounty fetching to complete
+  //   await Promise.all(bountiedIssuesPromises)
 
-    const getIssuesCreatedPromises = Object.keys(contributorData).map(
-      async (contributor) => {
-        const { totalIssues, majorIssues } = await getIssuesCreated(
-          repo,
-          contributor,
-          startDateString,
-        )
+  //   const getIssuesCreatedPromises = Object.keys(contributorData).map(
+  //     async (contributor) => {
+  //       const { totalIssues, majorIssues } = await getIssuesCreated(
+  //         repo,
+  //         contributor,
+  //         startDateString,
+  //       )
 
-        console.log(
-          `Processed issues created for ${contributor} - totalIssues: ${totalIssues} - majorIssues: ${majorIssues} in ${repo}`,
-        )
+  //       console.log(
+  //         `Processed issues created for ${contributor} - totalIssues: ${totalIssues} - majorIssues: ${majorIssues} in ${repo}`,
+  //       )
 
-        contributorData[contributor].issuesCreated =
-          (contributorData[contributor].issuesCreated || 0) + totalIssues
+  //       contributorData[contributor].issuesCreated =
+  //         (contributorData[contributor].issuesCreated || 0) + totalIssues
 
-        // Calculate score based on issues created
-        const scoreFromIssues =
-          Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
+  //       // Calculate score based on issues created
+  //       const scoreFromIssues =
+  //         Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
 
-        contributorData[contributor].score =
-          (contributorData[contributor].score || 0) + scoreFromIssues
-      },
-    )
+  //       contributorData[contributor].score =
+  //         (contributorData[contributor].score || 0) + scoreFromIssues
+  //     },
+  //   )
 
-    await Promise.all(getIssuesCreatedPromises)
-  }
+  //   await Promise.all(getIssuesCreatedPromises)
+  // }
   // Process GitHub Discussions for all contributors
   const allGithubDiscussions = await processDiscussionsForContributors(
     startDateString,

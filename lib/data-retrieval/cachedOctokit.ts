@@ -6,19 +6,19 @@ import ms from "ms"
 
 // Initialize cache with 24h default expiration
 const cache = FileSystemCache({ basePath: ".cache" })
-const DEFAULT_CACHE_EXPIRY = ms("6h")
+const DEFAULT_CACHE_EXPIRY = ms("24h")
 
 type OctokitInstance = InstanceType<typeof Octokit>
 
 export class CachedOctokit {
   private octokit: OctokitInstance
   private methodExpirations: Record<string, number> = {
-    "pulls.list": ms("6h"),
+    "pulls.list": DEFAULT_CACHE_EXPIRY,
     "pulls.get": DEFAULT_CACHE_EXPIRY,
     "pulls.listReviews": DEFAULT_CACHE_EXPIRY,
-    "issues.listForRepo": ms("6h"),
-    "issues.listComments": ms("6h"),
-    "repos.listForOrg": ms("6h"),
+    "issues.listForRepo": DEFAULT_CACHE_EXPIRY,
+    "issues.listComments": DEFAULT_CACHE_EXPIRY,
+    "repos.listForOrg": DEFAULT_CACHE_EXPIRY,
     "raw.fetchFile": DEFAULT_CACHE_EXPIRY,
   }
 
