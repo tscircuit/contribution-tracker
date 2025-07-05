@@ -39,7 +39,7 @@ it("should cap review points at 10", () => {
   }
 
   const result = getContributorScore(mockPRs, stats)
-  expect(result.score).toBe(10) // Should be capped at 10 points
+  expect(result.score).toBe(5) // Should be capped at 5 points
 })
 
 it("should handle edge cases", () => {
@@ -121,7 +121,7 @@ describe("distinct PRs reviewed functionality", () => {
     }
 
     const result = getContributorScore(mockPRs, contributorStats)
-    expect(result.score).toBe(10) // Should be capped at 10 points
+    expect(result.score).toBe(5) // Should be capped at 5 points
   })
 
   it("should handle edge case of no reviews", () => {

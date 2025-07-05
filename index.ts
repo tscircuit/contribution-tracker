@@ -161,52 +161,53 @@ export async function generateOverview(startDate: string) {
 
     storePrAnalysis(mergedPrsWithAnalysis, startDate)
 
-    // Fetch and process bountied issues for all contributors in parallel
-    const bountiedIssuesPromises = Object.keys(contributorData).map(
-      async (contributor) => {
-        const bountiedIssues = await getBountiedIssues(
-          repo,
-          contributor,
-          startDateString,
-        )
+    /*
+     * Fetching bountied issues and issues created for every contributor at this
+     * stage results in a massive number of GitHub API requests. In production
+     * this regularly trips the GitHub rate limits and causes failures. Until we
+     * can optimize or cache these requests, this section is commented out.
+     */
+    // const bountiedIssuesPromises = Object.keys(contributorData).map(
+    //   async (contributor) => {
+    //     const bountiedIssues = await getBountiedIssues(
+    //       repo,
+    //       contributor,
+    //       startDateString,
+    //     )
+    //
+    //     contributorData[contributor].bountiedIssuesCount =
+    //       (contributorData[contributor].bountiedIssuesCount || 0) +
+    //       bountiedIssues.length
+    //     contributorData[contributor].bountiedIssuesTotal =
+    //       (contributorData[contributor].bountiedIssuesTotal || 0) +
+    //       bountiedIssues.reduce((total, issue) => total + issue.amount, 0)
+    //   },
+    // )
+    // await Promise.all(bountiedIssuesPromises)
 
-        contributorData[contributor].bountiedIssuesCount =
-          (contributorData[contributor].bountiedIssuesCount || 0) +
-          bountiedIssues.length
-        contributorData[contributor].bountiedIssuesTotal =
-          (contributorData[contributor].bountiedIssuesTotal || 0) +
-          bountiedIssues.reduce((total, issue) => total + issue.amount, 0)
-      },
-    )
-
-    // Wait for all bounty fetching to complete
-    await Promise.all(bountiedIssuesPromises)
-
-    const getIssuesCreatedPromises = Object.keys(contributorData).map(
-      async (contributor) => {
-        const { totalIssues, majorIssues } = await getIssuesCreated(
-          repo,
-          contributor,
-          startDateString,
-        )
-
-        console.log(
-          `Processed issues created for ${contributor} - totalIssues: ${totalIssues} - majorIssues: ${majorIssues} in ${repo}`,
-        )
-
-        contributorData[contributor].issuesCreated =
-          (contributorData[contributor].issuesCreated || 0) + totalIssues
-
-        // Calculate score based on issues created
-        const scoreFromIssues =
-          Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
-
-        contributorData[contributor].score =
-          (contributorData[contributor].score || 0) + scoreFromIssues
-      },
-    )
-
-    await Promise.all(getIssuesCreatedPromises)
+    // const getIssuesCreatedPromises = Object.keys(contributorData).map(
+    //   async (contributor) => {
+    //     const { totalIssues, majorIssues } = await getIssuesCreated(
+    //       repo,
+    //       contributor,
+    //       startDateString,
+    //     )
+    //
+    //     console.log(
+    //       `Processed issues created for ${contributor} - totalIssues: ${totalIssues} - majorIssues: ${majorIssues} in ${repo}`,
+    //     )
+    //
+    //     contributorData[contributor].issuesCreated =
+    //       (contributorData[contributor].issuesCreated || 0) + totalIssues
+    //
+    //     const scoreFromIssues =
+    //       Math.min(totalIssues, 5) * 0.5 + majorIssues * 1.5
+    //
+    //     contributorData[contributor].score =
+    //       (contributorData[contributor].score || 0) + scoreFromIssues
+    //   },
+    // )
+    // await Promise.all(getIssuesCreatedPromises)
   }
   // Process GitHub Discussions for all contributors
   const allGithubDiscussions = await processDiscussionsForContributors(
