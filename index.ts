@@ -61,7 +61,7 @@ export async function generateOverview(startDate: string) {
       )
       if (isRepoOwner) {
         const existingRepo = contributorData[contributor].reposOwned?.find(
-          (ownedRepo) => ownedRepo.repo === repo
+          (ownedRepo) => ownedRepo.repo === repo,
         )
         if (!existingRepo) {
           contributorData[contributor].reposOwned = (
