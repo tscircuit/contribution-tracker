@@ -39,71 +39,121 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
   const majorMinorPRs = prs.filter((pr) => !pr.impact.includes("Tiny"))
   const tinyPRs = prs.filter((pr) => pr.impact.includes("Tiny"))
 
+  const renderMobileCard = (pr: PrAnalysisResult) => (
+    <div
+      key={pr.number}
+      className="bg-white border border-gray-200 rounded-lg p-4 mb-3"
+    >
+      <div className="flex items-start justify-between mb-2">
+        <a
+          href={pr.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:text-blue-800 font-medium text-xl"
+        >
+          {pr.repo}#{pr.number}
+        </a>
+        <span className="font-medium text-yellow-500 text-sm ml-2">
+          {getStarRatingDisplay(pr.starRating)}
+        </span>
+      </div>
+
+      {!inModal && (
+        <div className="mb-2">
+          <a
+            href={getProfileUrl(pr.contributor)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 text-sm"
+          >
+            by {pr.contributor}
+          </a>
+        </div>
+      )}
+
+      <p className="text-gray-900 text-sm mb-3 leading-relaxed">
+        {pr.description}
+      </p>
+
+      <div className="flex flex-wrap gap-1">
+        <PrAttributeBadges pr={pr} />
+      </div>
+    </div>
+  )
+
   const renderPRTable = (prsToRender: PrAnalysisResult[]) => (
-    <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
-          <tr>
-            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">
-              PR
-            </th>
-            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-24">
-              Rating
-            </th>
-            {!inModal && (
-              <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">
-                By
+    <>
+      {/* Mobile Card Layout */}
+      <div className="md:hidden">
+        <div className="space-y-0">{prsToRender.map(renderMobileCard)}</div>
+      </div>
+
+      {/* Desktop Table Layout */}
+      <div className="hidden md:block overflow-x-auto">
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">
+                PR
               </th>
-            )}
-            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Description
-            </th>
-            <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Tags
-            </th>
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
-          {prsToRender.map((pr) => (
-            <tr key={pr.number} className="hover:bg-gray-50">
-              <td className="px-3 py-2 whitespace-nowrap text-sm">
-                <a
-                  href={pr.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  {shortenRepoName(pr.repo)}#{pr.number}
-                </a>
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap text-sm">
-                <span className="font-medium text-yellow-500">
-                  {getStarRatingDisplay(pr.starRating)}
-                </span>
-              </td>
+              <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-24">
+                Rating
+              </th>
               {!inModal && (
+                <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">
+                  By
+                </th>
+              )}
+              <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Description
+              </th>
+              <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Tags
+              </th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {prsToRender.map((pr) => (
+              <tr key={pr.number} className="hover:bg-gray-50">
                 <td className="px-3 py-2 whitespace-nowrap text-sm">
                   <a
-                    href={getProfileUrl(pr.contributor)}
+                    href={pr.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800"
                   >
-                    {pr.contributor}
+                    {shortenRepoName(pr.repo)}#{pr.number}
                   </a>
                 </td>
-              )}
-              <td className="px-3 py-2 text-sm text-gray-900 break-words">
-                {pr.description}
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap text-sm">
-                <PrAttributeBadges pr={pr} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+                <td className="px-3 py-2 whitespace-nowrap text-sm">
+                  <span className="font-medium text-yellow-500">
+                    {getStarRatingDisplay(pr.starRating)}
+                  </span>
+                </td>
+                {!inModal && (
+                  <td className="px-3 py-2 whitespace-nowrap text-sm">
+                    <a
+                      href={getProfileUrl(pr.contributor)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800"
+                    >
+                      {pr.contributor}
+                    </a>
+                  </td>
+                )}
+                <td className="px-3 py-2 text-sm text-gray-900 break-words">
+                  {pr.description}
+                </td>
+                <td className="px-3 py-2 whitespace-nowrap text-sm">
+                  <PrAttributeBadges pr={pr} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   )
 
   return (
