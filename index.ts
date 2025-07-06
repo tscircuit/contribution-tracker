@@ -22,7 +22,10 @@ export async function generateOverview(startDate: string) {
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
   const contributorData: Record<string, ContributorStats> = {}
   // Map to collect unique PR numbers for each reviewer
-  const reviewerToReviewedPrs: Record<string, Set<number>> = {}
+  const reviewerToReviewedPrs: Record<
+    string,
+    Set<{ number: number; isReviewerRepoOwner: boolean }>
+  > = {}
 
   for (const repo of repos) {
     console.log(`\nAnalyzing ${repo}`)
@@ -83,6 +86,9 @@ export async function generateOverview(startDate: string) {
       if (pr.reviewsByUser) {
         Object.entries(pr.reviewsByUser).forEach(
           ([reviewer, reviewerStats]) => {
+            const isReviewerRepoOwner = repoOwners.some((content) =>
+              content.owners.includes(reviewer),
+            )
             if (!contributorData[reviewer]) {
               contributorData[reviewer] = {
                 reviewsReceived: 0,
@@ -96,6 +102,7 @@ export async function generateOverview(startDate: string) {
                 bountiedIssuesCount: 0,
                 bountiedIssuesTotal: 0,
                 distinctPrsReviewed: 0,
+                distinctPrsReviewedAsCodeOwner: 0,
               }
             }
             contributorData[reviewer].approvalsGiven +=
@@ -105,11 +112,17 @@ export async function generateOverview(startDate: string) {
 
             // Collect unique PR numbers for each reviewer
             if (!reviewerToReviewedPrs[reviewer]) {
-              reviewerToReviewedPrs[reviewer] = new Set<number>()
+              reviewerToReviewedPrs[reviewer] = new Set<{
+                number: number
+                isReviewerRepoOwner: boolean
+              }>()
             }
             if (reviewerStats.prNumbers) {
               reviewerStats.prNumbers.forEach((prNum) =>
-                reviewerToReviewedPrs[reviewer].add(prNum),
+                reviewerToReviewedPrs[reviewer].add({
+                  number: prNum,
+                  isReviewerRepoOwner: isReviewerRepoOwner || false,
+                }),
               )
             }
           },
@@ -121,11 +134,18 @@ export async function generateOverview(startDate: string) {
     }
 
     // After processing all PRs, set distinctPrsReviewed for each reviewer
-    Object.entries(reviewerToReviewedPrs).forEach(([reviewer, prNumbers]) => {
-      if (contributorData[reviewer]) {
-        contributorData[reviewer].distinctPrsReviewed = prNumbers.size
-      }
-    })
+    Object.entries(reviewerToReviewedPrs).forEach(
+      ([reviewer, prReviewMeta]) => {
+        if (contributorData[reviewer]) {
+          contributorData[reviewer].distinctPrsReviewed = Array.from(
+            prReviewMeta,
+          ).filter((pr) => !pr.isReviewerRepoOwner).length
+          contributorData[reviewer].distinctPrsReviewedAsCodeOwner = Array.from(
+            prReviewMeta,
+          ).filter((pr) => pr.isReviewerRepoOwner).length
+        }
+      },
+    )
 
     const mergedPrs = await getMergedPRs(repo, startDateString)
     console.log(`Found ${mergedPrs.length} merged PRs`)
