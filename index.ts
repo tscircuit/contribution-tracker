@@ -56,11 +56,14 @@ export async function generateOverview(startDate: string) {
         }
       }
 
-      if (repoOwners.length > 0) {
-        const isRepoOwner = repoOwners.some((content) =>
-          content.owners.includes(contributor),
+      const isRepoOwner = repoOwners.some((content) =>
+        content.owners.includes(contributor),
+      )
+      if (isRepoOwner) {
+        const existingRepo = contributorData[contributor].reposOwned?.find(
+          (ownedRepo) => ownedRepo.repo === repo
         )
-        if (isRepoOwner) {
+        if (!existingRepo) {
           contributorData[contributor].reposOwned = (
             contributorData[contributor].reposOwned ?? []
           ).concat({
@@ -71,6 +74,7 @@ export async function generateOverview(startDate: string) {
           })
         }
       }
+
       contributorData[contributor].reviewsReceived += pr.reviewsReceived
       contributorData[contributor].rejectionsReceived += pr.rejectionsReceived
       contributorData[contributor].approvalsReceived += pr.approvalsReceived
