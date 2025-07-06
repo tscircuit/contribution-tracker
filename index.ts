@@ -51,7 +51,7 @@ export async function generateOverview(startDate: string) {
           issuesCreated: 0,
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
-          distinctPrsReviewed: 0,
+          distinctPrsReviewedNonCodeOwner: 0,
           discussionComments: 0,
           discussionNormalComments: 0,
           discussionGreatInformativeComments: 0,
@@ -101,8 +101,8 @@ export async function generateOverview(startDate: string) {
                 issuesCreated: 0,
                 bountiedIssuesCount: 0,
                 bountiedIssuesTotal: 0,
-                distinctPrsReviewed: 0,
-                distinctPrsReviewedAsCodeOwner: 0,
+                distinctPrsReviewedNonCodeOwner: 0,
+                distinctPrsReviewedNonCodeOwnerAsCodeOwner: 0,
               }
             }
             contributorData[reviewer].approvalsGiven +=
@@ -133,16 +133,18 @@ export async function generateOverview(startDate: string) {
         contributorData[contributor].prsMerged += 1
     }
 
-    // After processing all PRs, set distinctPrsReviewed for each reviewer
+    // After processing all PRs, set distinctPrsReviewedNonCodeOwner for each reviewer
     Object.entries(reviewerToReviewedPrs).forEach(
       ([reviewer, prReviewMeta]) => {
         if (contributorData[reviewer]) {
-          contributorData[reviewer].distinctPrsReviewed = Array.from(
-            prReviewMeta,
-          ).filter((pr) => !pr.isReviewerRepoOwner).length
-          contributorData[reviewer].distinctPrsReviewedAsCodeOwner = Array.from(
-            prReviewMeta,
-          ).filter((pr) => pr.isReviewerRepoOwner).length
+          contributorData[reviewer].distinctPrsReviewedNonCodeOwner =
+            Array.from(prReviewMeta).filter(
+              (pr) => !pr.isReviewerRepoOwner,
+            ).length
+          contributorData[reviewer].distinctPrsReviewedNonCodeOwnerAsCodeOwner =
+            Array.from(prReviewMeta).filter(
+              (pr) => pr.isReviewerRepoOwner,
+            ).length
         }
       },
     )
@@ -252,7 +254,7 @@ export async function generateOverview(startDate: string) {
           issuesCreated: 0,
           bountiedIssuesCount: 0,
           bountiedIssuesTotal: 0,
-          distinctPrsReviewed: 0,
+          distinctPrsReviewedNonCodeOwner: 0,
           score: 0,
         }
       }

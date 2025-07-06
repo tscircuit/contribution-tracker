@@ -82,11 +82,12 @@ export function getContributorScore(
     return result
   }
 
-  const distinctPrsReviewed = contributorStats.distinctPrsReviewed || 0
-  result.score += Math.min(distinctPrsReviewed, 5)
-  const distinctPrsReviewedAsCodeOwner =
-    contributorStats.distinctPrsReviewedAsCodeOwner || 0
-  result.score += Math.min(distinctPrsReviewedAsCodeOwner, 10)
+  const distinctPrsReviewedNonCodeOwner =
+    contributorStats.distinctPrsReviewedNonCodeOwner || 0
+  result.score += Math.min(distinctPrsReviewedNonCodeOwner, 5)
+  const distinctPrsReviewedNonCodeOwnerAsCodeOwner =
+    contributorStats.distinctPrsReviewedNonCodeOwnerAsCodeOwner || 0
+  result.score += Math.min(distinctPrsReviewedNonCodeOwnerAsCodeOwner, 10)
 
   return result
 }

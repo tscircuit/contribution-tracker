@@ -14,7 +14,7 @@ export interface ContributorStats {
   tiny?: number
   stars?: string
   score?: number
-  distinctPrsReviewed?: number
+  distinctPrsReviewedNonCodeOwner?: number
   discussionComments?: number
   discussionParticipating?: number
   discussionVeryActive?: number
