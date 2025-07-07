@@ -102,7 +102,7 @@ export async function generateOverview(startDate: string) {
                 bountiedIssuesCount: 0,
                 bountiedIssuesTotal: 0,
                 distinctPrsReviewedNonCodeOwner: 0,
-                distinctPrsReviewedNonCodeOwnerAsCodeOwner: 0,
+                distinctPrsReviewedAsCodeOwner: 0,
               }
             }
             contributorData[reviewer].approvalsGiven +=
@@ -141,10 +141,9 @@ export async function generateOverview(startDate: string) {
             Array.from(prReviewMeta).filter(
               (pr) => !pr.isReviewerRepoOwner,
             ).length
-          contributorData[reviewer].distinctPrsReviewedNonCodeOwnerAsCodeOwner =
-            Array.from(prReviewMeta).filter(
-              (pr) => pr.isReviewerRepoOwner,
-            ).length
+          contributorData[reviewer].distinctPrsReviewedAsCodeOwner = Array.from(
+            prReviewMeta,
+          ).filter((pr) => pr.isReviewerRepoOwner).length
         }
       },
     )

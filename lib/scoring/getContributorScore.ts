@@ -85,9 +85,9 @@ export function getContributorScore(
   const distinctPrsReviewedNonCodeOwner =
     contributorStats.distinctPrsReviewedNonCodeOwner || 0
   result.score += Math.min(distinctPrsReviewedNonCodeOwner, 5)
-  const distinctPrsReviewedNonCodeOwnerAsCodeOwner =
-    contributorStats.distinctPrsReviewedNonCodeOwnerAsCodeOwner || 0
-  result.score += Math.min(distinctPrsReviewedNonCodeOwnerAsCodeOwner, 10)
+  const distinctPrsReviewedAsCodeOwner =
+    contributorStats.distinctPrsReviewedAsCodeOwner || 0
+  result.score += Math.min(distinctPrsReviewedAsCodeOwner, 10)
 
   return result
 }

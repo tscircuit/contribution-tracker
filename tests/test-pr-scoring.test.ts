@@ -15,7 +15,7 @@ it("should count distinct PRs reviewed", () => {
     issuesCreated: 0,
     bountiedIssuesCount: 0,
     bountiedIssuesTotal: 0,
-    distinctPrsReviewed: 2, // Two distinct PRs reviewed
+    distinctPrsReviewedNonCodeOwner: 2, // Two distinct PRs reviewed
   }
 
   const result = getContributorScore(mockPRs, stats)
@@ -35,7 +35,7 @@ it("should cap review points at 10", () => {
     issuesCreated: 0,
     bountiedIssuesCount: 0,
     bountiedIssuesTotal: 0,
-    distinctPrsReviewed: 15, // More than 10 distinct PRs
+    distinctPrsReviewedNonCodeOwner: 15, // More than 10 distinct PRs
   }
 
   const result = getContributorScore(mockPRs, stats)
@@ -55,7 +55,7 @@ it("should handle edge cases", () => {
     issuesCreated: 0,
     bountiedIssuesCount: 0,
     bountiedIssuesTotal: 0,
-    distinctPrsReviewed: 0, // No PRs reviewed
+    distinctPrsReviewedNonCodeOwner: 0, // No PRs reviewed
   }
 
   const result = getContributorScore(mockPRs, stats)
@@ -75,7 +75,7 @@ it("should correctly calculate score from distinct PRs reviewed", () => {
     issuesCreated: 0,
     bountiedIssuesCount: 0,
     bountiedIssuesTotal: 0,
-    distinctPrsReviewed: 5, // Five distinct PRs reviewed
+    distinctPrsReviewedNonCodeOwner: 5, // Five distinct PRs reviewed
   }
 
   const result = getContributorScore(mockPRs, stats)
@@ -97,7 +97,7 @@ describe("distinct PRs reviewed functionality", () => {
       issuesCreated: 0,
       bountiedIssuesCount: 0,
       bountiedIssuesTotal: 0,
-      distinctPrsReviewed: 1, // Should only count as one PR
+      distinctPrsReviewedNonCodeOwner: 1, // Should only count as one PR
     }
 
     const result = getContributorScore(mockPRs, contributorStats)
@@ -117,7 +117,7 @@ describe("distinct PRs reviewed functionality", () => {
       issuesCreated: 0,
       bountiedIssuesCount: 0,
       bountiedIssuesTotal: 0,
-      distinctPrsReviewed: 30, // More than the cap
+      distinctPrsReviewedNonCodeOwner: 30, // More than the cap
     }
 
     const result = getContributorScore(mockPRs, contributorStats)
@@ -137,7 +137,7 @@ describe("distinct PRs reviewed functionality", () => {
       issuesCreated: 0,
       bountiedIssuesCount: 0,
       bountiedIssuesTotal: 0,
-      distinctPrsReviewed: 0,
+      distinctPrsReviewedNonCodeOwner: 0,
     }
 
     const result = getContributorScore(mockPRs, contributorStats)
@@ -157,10 +157,65 @@ describe("distinct PRs reviewed functionality", () => {
       issuesCreated: 0,
       bountiedIssuesCount: 0,
       bountiedIssuesTotal: 0,
-      distinctPrsReviewed: 5, // 5 different PRs reviewed
+      distinctPrsReviewedNonCodeOwner: 5, // 5 different PRs reviewed
     }
 
     const result = getContributorScore(mockPRs, contributorStats)
     expect(result.score).toBe(5) // Should get 5 points for 5 distinct PRs reviewed
+  })
+
+  it("should count distinct PRs reviewed as code owner", () => {
+    const mockPRs: AnalyzedPR[] = []
+    const statsAsCodeOwner: ContributorStats = {
+      reviewsReceived: 0,
+      rejectionsReceived: 0,
+      approvalsReceived: 0,
+      approvalsGiven: 0,
+      rejectionsGiven: 0,
+      prsOpened: 0,
+      prsMerged: 0,
+      issuesCreated: 0,
+      bountiedIssuesCount: 0,
+      bountiedIssuesTotal: 0,
+      distinctPrsReviewedAsCodeOwner: 29,
+    }
+
+    const scoreAsCodeOwner = getContributorScore(mockPRs, statsAsCodeOwner)
+    expect(scoreAsCodeOwner.score).toBe(10)
+
+    const statsNonCodeOwner: ContributorStats = {
+      reviewsReceived: 0,
+      rejectionsReceived: 0,
+      approvalsReceived: 0,
+      approvalsGiven: 0,
+      rejectionsGiven: 0,
+      prsOpened: 0,
+      prsMerged: 0,
+      issuesCreated: 0,
+      bountiedIssuesCount: 0,
+      bountiedIssuesTotal: 0,
+      distinctPrsReviewedNonCodeOwner: 29,
+    }
+
+    const scoreNonCodeOwner = getContributorScore(mockPRs, statsNonCodeOwner)
+    expect(scoreNonCodeOwner.score).toBe(5)
+
+    const statsMixed: ContributorStats = {
+      reviewsReceived: 0,
+      rejectionsReceived: 0,
+      approvalsReceived: 0,
+      approvalsGiven: 0,
+      rejectionsGiven: 0,
+      prsOpened: 0,
+      prsMerged: 0,
+      issuesCreated: 0,
+      bountiedIssuesCount: 0,
+      bountiedIssuesTotal: 0,
+      distinctPrsReviewedNonCodeOwner: 15,
+      distinctPrsReviewedAsCodeOwner: 15,
+    }
+
+    const scoreMixed = getContributorScore(mockPRs, statsMixed)
+    expect(scoreMixed.score).toBe(15)
   })
 })

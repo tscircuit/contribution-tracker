@@ -41,7 +41,7 @@ export interface ContributorStats {
   approvalsGiven: number
   rejectionsGiven: number
   distinctPrsReviewedNonCodeOwner?: number // Number of unique PRs reviewed by this contributor
-  distinctPrsReviewedNonCodeOwnerAsCodeOwner?: number // Number of unique PRs reviewed by this contributor as a code owner
+  distinctPrsReviewedAsCodeOwner?: number // Number of unique PRs reviewed by this contributor as a code owner
   major?: number // Count of Major PRs
   minor?: number // Count of Minor PRs
   tiny?: number // Count of Tiny PRs
