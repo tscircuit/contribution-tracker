@@ -160,7 +160,7 @@ export async function getAllPRs(
           issuesCreated: 0,
           approvalsGiven: 0,
           rejectionsGiven: 0,
-          distinctPrsReviewed: 0,
+          distinctPrsReviewedNonCodeOwner: 0,
         }
       }
 
@@ -170,11 +170,12 @@ export async function getAllPRs(
     })
   })
 
-  // Second pass: set distinctPRsReviewed from aggregated PR numbers
+  // Second pass: set distinctPrsReviewedNonCodeOwner from aggregated PR numbers
   Object.entries(reviewerUserNameToReviewedPrsSet).forEach(
     ([reviewer, prNumbers]) => {
       if (contributorStats[reviewer]) {
-        contributorStats[reviewer].distinctPrsReviewed = prNumbers.size
+        contributorStats[reviewer].distinctPrsReviewedNonCodeOwner =
+          prNumbers.size
       }
     },
   )
