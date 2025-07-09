@@ -12,6 +12,10 @@ export const getContributionStarRatingFromAttributes = (
   if (a.bad_title) score *= 0.8
 
   if (a.mostly_style) score *= 0.75
+  if (a.introduces_or_fixes_a_footprint) score *= 1.6
+  if (a.introduces_new_schematic_symbol) score *= 1.4
+  if (a.add_design_to_schematic_corpus) score *= 1.25
+  if (a.fixes_circuit_board) score *= 1
 
   if (a.core_change) score *= 1.4
   if (a.fixes_subtle_important_bug) score *= 1.5
