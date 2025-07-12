@@ -1,58 +1,35 @@
 {
   "Abse2001": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "approvalsGiven": 8,
+    "approvalsReceived": 7,
+    "approvalsGiven": 9,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 5,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 11,
-    "stars": "⭐⭐",
-    "major": 0,
-    "minor": 1,
-    "tiny": 4
-  },
-  "ArnavK-09": {
-    "reviewsReceived": 23,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 9,
-    "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 11,
+    "prsOpened": 10,
     "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 9,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 19,
+    "score": 17,
     "stars": "⭐⭐",
-    "major": 2,
+    "major": 0,
     "minor": 2,
-    "tiny": 6
+    "tiny": 8
   },
-  "MustafaMulla29": {
-    "reviewsReceived": 19,
+  "ArnavK-09": {
+    "reviewsReceived": 33,
     "rejectionsReceived": 2,
-    "approvalsReceived": 8,
+    "approvalsReceived": 12,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 6,
+    "prsOpened": 15,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -62,31 +39,57 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 6.5,
+    "score": 26,
+    "stars": "⭐⭐",
+    "major": 3,
+    "minor": 4,
+    "tiny": 5
+  },
+  "MustafaMulla29": {
+    "reviewsReceived": 22,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 11,
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 14,
+    "prsMerged": 9,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 8.5,
     "stars": "⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 6
+    "tiny": 9
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "approvalsGiven": 1,
+    "reviewsReceived": 8,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 5,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 0,
+    "prsOpened": 7,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 0,
-    "stars": ""
+    "score": 14,
+    "stars": "⭐⭐",
+    "major": 2,
+    "minor": 0,
+    "tiny": 2
   },
   "abimaelmartell": {
     "reviewsReceived": 3,
@@ -112,9 +115,9 @@
     "tiny": 1
   },
   "andrii-balitskyi": {
-    "reviewsReceived": 2,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "reviewsReceived": 5,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 3,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 6,
@@ -141,7 +144,7 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 9,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
@@ -157,24 +160,24 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 11,
+    "reviewsReceived": 14,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "approvalsGiven": 3,
-    "rejectionsGiven": 1,
-    "prsOpened": 15,
-    "prsMerged": 11,
+    "approvalsReceived": 11,
+    "approvalsGiven": 4,
+    "rejectionsGiven": 2,
+    "prsOpened": 20,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit.com",
@@ -189,11 +192,11 @@
         ]
       }
     ],
-    "score": 16,
+    "score": 20,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 1,
-    "tiny": 8
+    "major": 0,
+    "minor": 2,
+    "tiny": 12
   },
   "nuraci": {
     "reviewsReceived": 0,
@@ -215,25 +218,31 @@
     "stars": ""
   },
   "seveibar": {
-    "reviewsReceived": 20,
+    "reviewsReceived": 37,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 24,
-    "rejectionsGiven": 2,
-    "prsOpened": 55,
-    "prsMerged": 41,
+    "approvalsGiven": 39,
+    "rejectionsGiven": 5,
+    "prsOpened": 74,
+    "prsMerged": 54,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 11,
+    "distinctPrsReviewedNonCodeOwner": 20,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 16,
+    "distinctPrsReviewedAsCodeOwner": 24,
     "reposOwned": [
       {
         "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
         "paths": [
           "*"
         ]
@@ -245,20 +254,20 @@
         ]
       }
     ],
-    "score": 48,
-    "stars": "⭐⭐⭐",
-    "major": 4,
+    "score": 68,
+    "stars": "👑",
+    "major": 9,
     "minor": 1,
-    "tiny": 34
+    "tiny": 42
   },
   "techmannih": {
-    "reviewsReceived": 15,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 6,
+    "reviewsReceived": 17,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 7,
     "approvalsGiven": 0,
     "rejectionsGiven": 1,
-    "prsOpened": 10,
-    "prsMerged": 6,
+    "prsOpened": 12,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -276,11 +285,11 @@
         ]
       }
     ],
-    "score": 7.5,
-    "stars": "⭐",
-    "major": 0,
+    "score": 14.5,
+    "stars": "⭐⭐",
+    "major": 2,
     "minor": 0,
-    "tiny": 6
+    "tiny": 5
   },
   "tscircuitbot": {
     "reviewsReceived": 1,
@@ -288,8 +297,8 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 2,
+    "prsOpened": 22,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -298,10 +307,10 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 2,
+    "score": 3,
     "stars": "",
     "major": 0,
     "minor": 0,
-    "tiny": 2
+    "tiny": 3
   }
 }
