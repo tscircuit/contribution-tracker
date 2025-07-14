@@ -189,7 +189,11 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
       const { weeklyStars, score, weekDates } = data
 
       // Use the getSponsorshipAmount function to calculate the amount
-      let amount = getSponsorshipAmount({ weeklyStars, highScore: score })
+      let amount = getSponsorshipAmount({
+        weeklyStars,
+        highScore: score,
+        username,
+      })
 
       // Create remarks with dates for each week's score, sorted from oldest to newest
       const weeklyScoreWithDates = weeklyStars
