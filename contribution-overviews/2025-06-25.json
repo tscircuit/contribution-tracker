@@ -7,15 +7,30 @@
     "rejectionsGiven": 0,
     "prsOpened": 13,
     "prsMerged": 11,
-    "issuesCreated": 1,
+    "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 13,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 20,
+    "distinctPrsReviewedAsCodeOwner": 11,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/sparkfun-boards",
+        "paths": [
+          "/boards/SparkFun-Transceiver-Breakout-MAX3232/"
+        ]
+      },
+      {
+        "repo": "tscircuit/schematic-corpus",
+        "paths": [
+          "/designs/**"
+        ]
+      }
+    ],
+    "score": 27,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 1,
@@ -25,37 +40,46 @@
     "reviewsReceived": 30,
     "rejectionsReceived": 4,
     "approvalsReceived": 21,
-    "approvalsGiven": 3,
-    "rejectionsGiven": 6,
+    "approvalsGiven": 4,
+    "rejectionsGiven": 5,
     "prsOpened": 25,
     "prsMerged": 21,
-    "issuesCreated": 9,
+    "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 5,
-    "score": 22,
+    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedAsCodeOwner": 2,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/sparkfun-boards",
+        "paths": [
+          "/boards/SparkFun-Human-Presence-and-Motion-Sensor-STHS34PF80-Qwiic/"
+        ]
+      }
+    ],
+    "score": 21,
     "stars": "⭐⭐",
     "major": 1,
-    "minor": 1,
-    "tiny": 19
+    "minor": 0,
+    "tiny": 20
   },
   "ArnavK-09": {
-    "reviewsReceived": 22,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 14,
+    "reviewsReceived": 23,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 16,
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 17,
-    "prsMerged": 15,
-    "issuesCreated": 7,
+    "prsMerged": 16,
+    "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 2,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 37,
+    "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
         "repo": "tscircuit/cli",
@@ -64,27 +88,36 @@
         ]
       }
     ],
+    "score": 35,
     "stars": "⭐⭐⭐",
     "major": 5,
-    "minor": 2,
+    "minor": 1,
     "tiny": 8
   },
   "MustafaMulla29": {
     "reviewsReceived": 8,
-    "rejectionsReceived": 4,
-    "approvalsReceived": 3,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 6,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 3,
-    "issuesCreated": 6,
+    "prsOpened": 8,
+    "prsMerged": 4,
+    "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/sparkfun-boards",
+        "paths": [
+          "/boards/SparkFun-HMC6343-Breakout/"
+        ]
+      }
+    ],
     "score": 3.5,
     "stars": "⭐",
     "major": 0,
@@ -92,56 +125,60 @@
     "tiny": 2
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 14,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
-    "approvalsGiven": 13,
-    "rejectionsGiven": 2,
-    "prsOpened": 15,
-    "prsMerged": 11,
-    "issuesCreated": 7,
-    "bountiedIssuesCount": 1,
-    "bountiedIssuesTotal": 5,
-    "distinctPrsReviewed": 15,
+    "approvalsReceived": 11,
+    "approvalsGiven": 14,
+    "rejectionsGiven": 1,
+    "prsOpened": 17,
+    "prsMerged": 14,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 28,
+    "distinctPrsReviewedAsCodeOwner": 12,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/sparkfun-boards",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "stars": "⭐⭐",
+    "score": 38.5,
+    "stars": "⭐⭐⭐",
     "major": 2,
     "minor": 3,
-    "tiny": 6
+    "tiny": 9
   },
   "andrii-balitskyi": {
     "reviewsReceived": 2,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 2,
-    "prsMerged": 1,
+    "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 2,
-    "stars": "",
-    "major": 0,
-    "minor": 1,
-    "tiny": 0
+    "score": 0,
+    "stars": ""
   },
   "cursor[bot]": {
     "reviewsReceived": 0,
@@ -154,7 +191,8 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 0,
+    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
@@ -169,27 +207,28 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 6,
+    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 18,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 19,
+    "rejectionsReceived": 1,
     "approvalsReceived": 9,
-    "approvalsGiven": 9,
-    "rejectionsGiven": 2,
-    "prsOpened": 23,
-    "prsMerged": 21,
-    "issuesCreated": 1,
+    "approvalsGiven": 10,
+    "rejectionsGiven": 1,
+    "prsOpened": 26,
+    "prsMerged": 22,
+    "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 12,
+    "distinctPrsReviewedNonCodeOwner": 8,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 33,
+    "distinctPrsReviewedAsCodeOwner": 4,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-to-svg",
@@ -204,74 +243,58 @@
         ]
       },
       {
-        "repo": "tscircuit/tscircuit.com",
-        "paths": [
-          "*"
-        ]
-      },
-      {
-        "repo": "tscircuit/tscircuit.com",
-        "paths": [
-          "*"
-        ]
-      },
-      {
-        "repo": "tscircuit/tscircuit.com",
-        "paths": [
-          "*"
-        ]
-      },
-      {
         "repo": "tscircuit/cli",
         "paths": [
           "*"
         ]
       }
     ],
+    "score": 37,
     "stars": "⭐⭐⭐",
-    "major": 1,
-    "minor": 6,
-    "tiny": 14
+    "major": 2,
+    "minor": 5,
+    "tiny": 12
   },
   "ricohageman": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 3,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 1,
+    "prsOpened": 3,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 4,
-    "stars": "⭐",
-    "major": 1,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 12,
+    "stars": "⭐⭐",
+    "major": 3,
     "minor": 0,
     "tiny": 0
   },
   "seveibar": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 16,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
-    "approvalsGiven": 41,
+    "approvalsGiven": 47,
     "rejectionsGiven": 4,
-    "prsOpened": 66,
-    "prsMerged": 51,
-    "issuesCreated": 5,
-    "bountiedIssuesCount": 2,
-    "bountiedIssuesTotal": 50,
-    "distinctPrsReviewed": 45,
+    "prsOpened": 78,
+    "prsMerged": 63,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 32,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 73.5,
+    "distinctPrsReviewedAsCodeOwner": 20,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-json-to-gerber",
@@ -286,58 +309,60 @@
         ]
       },
       {
-        "repo": "tscircuit/tscircuit.com",
-        "paths": [
-          "*"
-        ]
-      },
-      {
-        "repo": "tscircuit/tscircuit.com",
-        "paths": [
-          "*"
-        ]
-      },
-      {
         "repo": "tscircuit/cli",
         "paths": [
           "*"
         ]
       }
     ],
-    "stars": "👑",
-    "major": 16,
-    "minor": 9,
-    "tiny": 26
+    "score": 79,
+    "stars": "👑👑",
+    "major": 21,
+    "minor": 7,
+    "tiny": 33
   },
   "techmannih": {
-    "reviewsReceived": 47,
+    "reviewsReceived": 48,
     "rejectionsReceived": 7,
     "approvalsReceived": 20,
-    "approvalsGiven": 1,
-    "rejectionsGiven": 4,
+    "approvalsGiven": 2,
+    "rejectionsGiven": 3,
     "prsOpened": 26,
     "prsMerged": 14,
-    "issuesCreated": 2,
+    "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 11,
+    "distinctPrsReviewedNonCodeOwner": 10,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 19.5,
+    "distinctPrsReviewedAsCodeOwner": 3,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/sparkfun-boards",
+        "paths": [
+          "/boards/SparkFun-USB-to-Serial-Breakout-FT232RL/"
+        ]
       }
     ],
+    "score": 20.5,
     "stars": "⭐⭐",
     "major": 0,
-    "minor": 2,
-    "tiny": 12
+    "minor": 1,
+    "tiny": 13
   },
   "tscircuitbot": {
     "reviewsReceived": 0,
@@ -345,12 +370,12 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 32,
-    "prsMerged": 1,
+    "prsOpened": 36,
+    "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewed": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
