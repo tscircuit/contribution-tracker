@@ -1,13 +1,9 @@
 import { MAINTAINERS } from "./maintainers"
 
 const MAINTAINER_BASE = {
-  maintainer1: 0,
-  maintainer2: 0,
-  maintainer3: 0,
-  // These start in July
-  // maintainer1: 200,
-  // maintainer2: 350,
-  // maintainer3: 500,
+  maintainer1: 200,
+  maintainer2: 350,
+  maintainer3: 500,
 }
 /**
  * Calculates sponsorship amount based on weekly stars over the past 4 weeks
