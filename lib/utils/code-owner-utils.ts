@@ -32,17 +32,28 @@ export const fetchCodeownersFile = async (
 ): Promise<CodeOwnerEntry[]> => {
   console.log(`Fetching CODEOWNERS file for ${repo}`)
 
-  try {
-    const [owner, repoName] = repo.split("/")
-    const response = await octokit.raw.fetchFile({
-      owner,
-      repo: repoName,
-      path: ".github/CODEOWNERS",
-    })
+  const [owner, repoName] = repo.split("/")
+  const pathsToTry = [".github/CODEOWNERS", "CODEOWNERS"]
 
-    const parsedData = parseCodeownersFile(response.data)
-    return parsedData
-  } catch (error) {
-    return []
+  for (const path of pathsToTry) {
+    try {
+      const response = await octokit.raw.fetchFile({
+        owner,
+        repo: repoName,
+        path,
+      })
+      return parseCodeownersFile(response.data)
+    } catch (error: any) {
+      if (error.status === 404 || error.message === "File not found") {
+        continue
+      }
+      console.error(
+        `Error fetching CODEOWNERS from ${path} for ${repo}:`,
+        error,
+      )
+      return []
+    }
   }
+
+  return []
 }
