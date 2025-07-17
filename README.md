@@ -28,20 +28,34 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/core" : 1
-    "tscircuit/eval" : 1
+    "tscircuit/cli" : 2
+    "tscircuit/schematic-symbols" : 3
+    "tscircuit/tscircuit" : 2
+    "tscircuit/schematic-corpus" : 1
+    "tscircuit/core" : 2
+    "tscircuit/eval" : 2
     "tscircuit/sparkfun-boards" : 1
-    "tscircuit/schematic-symbols" : 2
-    "tscircuit/tscircuit.com" : 1
+    "tscircuit/contribution-tracker" : 1
+    "tscircuit/tscircuit.com" : 5
+    "tscircuit/runframe" : 2
+    "tscircuit/docs" : 1
+    "tscircuit/bpc-graph" : 1
+    "tscircuit/api" : 1
+    "tscircuit/iframe" : 2
+    "tscircuit/led-water-accelerometer" : 1
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [techmannih](#techmannih) | 0 | 2 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 3 |  | 0 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 1 | 0 | 5 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 1 | 1 | 3 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 0 | 2 | 4 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 0 | 3 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 1 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 5 |  | 0 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
 
@@ -61,32 +75,86 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
-| [MustafaMulla29](#MustafaMulla29) | 3 | 3 | 0 | 0 | 0 | 3 | 3 | 0 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [techmannih](#techmannih) | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 1 | 0 | 0 | 4 | 0 | 2 | 0 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [Abse2001](#Abse2001) | 4 | 2 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 2 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
+| [Abse2001](#Abse2001) | 7 | 5 | 0 | 0 | 0 | 6 | 5 | 0 | 0 | 0 |
+| [seveibar](#seveibar) | 1 | 0 | 0 | 15 | 0 | 8 | 6 | 0 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 3 | 3 | 0 | 0 | 0 | 5 | 5 | 0 | 0 | 0 |
+| [techmannih](#techmannih) | 4 | 3 | 0 | 0 | 0 | 3 | 3 | 0 | 0 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 1 | 0 | 3 | 0 | 1 | 1 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 0 | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 10 | 7 | 0 | 0 | 0 | 9 | 6 | 0 | 0 | 0 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 |
+| [andrii-balitskyi](#andrii-balitskyi) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | [cursor[bot]](#cursor[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Top 7 Repositories by Contribution Points
 
 ```mermaid
 pie
-    "tscircuit/schematic-symbols" : 4
-    "tscircuit/core" : 1
-    "tscircuit/eval" : 1
-    "tscircuit/sparkfun-boards" : 1
-    "tscircuit/tscircuit.com" : 1
+    "tscircuit/tscircuit.com" : 7
+    "tscircuit/schematic-symbols" : 6
+    "tscircuit/cli" : 5
+    "tscircuit/runframe" : 5
+    "tscircuit/core" : 3
+    "tscircuit/tscircuit" : 2
+    "tscircuit/eval" : 2
 ```
 
 ## Changes by Repository
 
+### [tscircuit/cli](https://github.com/tscircuit/cli)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#281](https://github.com/tscircuit/cli/pull/281) | 🐳 Major | ⭐⭐⭐ | Abse2001 | Introduces image-based visual diffing to enhance the reliability of snapshot verification in the CLI tool. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#282](https://github.com/tscircuit/cli/pull/282) | 🐌 Tiny | Abse2001 | Fixes the static import of the looks-same library to ensure it is correctly imported and utilized in the snapshot comparison functionality. |
+
+</details>
+
+### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#334](https://github.com/tscircuit/schematic-symbols/pull/334) | 🐙 Minor | ⭐⭐ | Abse2001 | Refactors the symbol generation script and updates text anchor positioning logic for schematic symbols. |
+| [#336](https://github.com/tscircuit/schematic-symbols/pull/336) | 🐙 Minor | ⭐⭐ | techmannih | Adds alternative pin labels (Base, Emitter, Collector) to NPN and PNP bipolar transistor symbols for better clarity and usability. |
+| [#335](https://github.com/tscircuit/schematic-symbols/pull/335) | 🐙 Minor | ⭐⭐ | techmannih | Fixes pin numbering for PNP and NPN bipolar transistors to follow a clockwise convention, ensuring consistency in schematic representations. |
+
+### [tscircuit/tscircuit](https://github.com/tscircuit/tscircuit)
+
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#709](https://github.com/tscircuit/tscircuit/pull/709) | 🐌 Tiny | Abse2001 | Updates the CLI dependency version from 0.1.175 to 0.1.176 in package.json. |
+| [#708](https://github.com/tscircuit/tscircuit/pull/708) | 🐌 Tiny | MustafaMulla29 | Updates the version of the tscircuiteval package from 0.0.260 to 0.0.261 in package.json. |
+
+</details>
+
+### [tscircuit/schematic-corpus](https://github.com/tscircuit/schematic-corpus)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#94](https://github.com/tscircuit/schematic-corpus/pull/94) | 🐌 Tiny | Abse2001 | Updates the tscircuit dependency version from 0.0.532 to 0.0.546 in package.json. |
+
+</details>
+
 ### [tscircuit/core](https://github.com/tscircuit/core)
 
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#1077](https://github.com/tscircuit/core/pull/1077) | 🐙 Minor | ⭐⭐ | techmannih | Fixes pin aliases for transistors to use standard labels (collector, emitter, base) in connections, ensuring correct schematic representation. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
@@ -101,11 +169,12 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#707](https://github.com/tscircuit/eval/pull/707) | 🐌 Tiny | MustafaMulla29 | Updates the tscircuitcore dependency from version 0.0.564 to 0.0.571 in package.json. |
+| [#709](https://github.com/tscircuit/eval/pull/709) | 🐌 Tiny | MustafaMulla29 | Updates the version of the tscircuitfootprinter dependency from 0.0.193 to 0.0.203 in package.json. |
+| [#707](https://github.com/tscircuit/eval/pull/707) | 🐌 Tiny | MustafaMulla29 | Updates the tscircuitcore dependency to version 0.0.571 in package.json. |
 
 </details>
 
@@ -121,14 +190,7 @@ pie
 
 </details>
 
-### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#336](https://github.com/tscircuit/schematic-symbols/pull/336) | 🐙 Minor | ⭐⭐ | techmannih | Adds alternative pin labels (Base, Emitter, Collector) to NPN and PNP bipolar transistor symbols for better clarity and usability. |
-| [#335](https://github.com/tscircuit/schematic-symbols/pull/335) | 🐙 Minor | ⭐⭐ | techmannih | Fixes pin numbering for PNP and NPN bipolar transistors to follow a clockwise convention, ensuring consistency in schematic representations. |
-
-### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
+### [tscircuit/contribution-tracker](https://github.com/tscircuit/contribution-tracker)
 
 
 <details>
@@ -136,22 +198,136 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#1476](https://github.com/tscircuit/tscircuit.com/pull/1476) | 🐌 Tiny | ArnavK-09 | Adds a session token check to ensure users are logged in before importing components from jlcpcb. |
+| [#202](https://github.com/tscircuit/contribution-tracker/pull/202) | 🐌 Tiny | ShiboSoftwareDev | Adds functionality to fetch and parse the CODEOWNERS file from the root or .github directory, improving code ownership management. |
+
+</details>
+
+### [tscircuit/tscircuit.com](https://github.com/tscircuit/tscircuit.com)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#1481](https://github.com/tscircuit/tscircuit.com/pull/1481) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Prevents the entire page from loading when rendering the 3D preview by implementing a Suspense fallback for the CadViewer component. |
+| [#1475](https://github.com/tscircuit/tscircuit.com/pull/1475) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Replaces plain text loading indicator with animated placeholders in ShikiCodeViewer for improved user experience during loading states. |
+
+<details>
+<summary>🐌 Tiny Contributions (3)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#1484](https://github.com/tscircuit/tscircuit.com/pull/1484) | 🐌 Tiny | ArnavK-09 | Removes a line that causes an error during the JLCPCB import process in the CodeEditorHeader component. |
+| [#1479](https://github.com/tscircuit/tscircuit.com/pull/1479) | 🐌 Tiny | ArnavK-09 | Fixes the jlcpcb import functionality by correcting the fetch request headers and method handling in the CodeEditorHeader component. |
+| [#1476](https://github.com/tscircuit/tscircuit.com/pull/1476) | 🐌 Tiny | ArnavK-09 | Adds session token validation for importing components from jlcpcb, ensuring users are logged in before proceeding with the import. |
+
+</details>
+
+### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#885](https://github.com/tscircuit/runframe/pull/885) | 🐳 Major | ⭐⭐⭐ | seveibar | Add availableTabs and defaultTab props to RunFrame, forward props to CircuitJsonPreview, support availableTabsdefaultTab in preview and standalone preview, document the new props in README. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#887](https://github.com/tscircuit/runframe/pull/887) | 🐌 Tiny | ArnavK-09 | Adjusted the width of the dialog content for better responsiveness. Improved text sizes and spacing for dialog titles, descriptions, and buttons. Enhanced the layout of search results and component details for better usability. Updated styles for various elements to ensure consistency across different screen sizes. Fixed minor layout issues in the component details dialog for improved visual clarity. fix black background issue |
+
+</details>
+
+### [tscircuit/docs](https://github.com/tscircuit/docs)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#101](https://github.com/tscircuit/docs/pull/101) | 🐌 Tiny | seveibar | Adds documentation for the compile.tscircuit.com API, detailing usage, endpoints, and examples for compiling tscircuit user code into Circuit JSON. |
+
+</details>
+
+### [tscircuit/bpc-graph](https://github.com/tscircuit/bpc-graph)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#66](https://github.com/tscircuit/bpc-graph/pull/66) | 🐌 Tiny | seveibar | Removes tscircuitschematic-corpus as a peer dependency from the package.json file. |
+
+</details>
+
+### [tscircuit/api](https://github.com/tscircuit/api)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#5](https://github.com/tscircuit/api/pull/5) | 🐌 Tiny | seveibar | Adds a new API client method for compiling user code into Circuit JSON format via client.compile.compileCode, along with documentation and tests for this functionality. |
+
+</details>
+
+### [tscircuit/iframe](https://github.com/tscircuit/iframe)
+
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#3](https://github.com/tscircuit/iframe/pull/3) | 🐌 Tiny | seveibar | Documents the props of the TscircuitIframe component in the README file, providing clear descriptions and types for each prop. |
+| [#2](https://github.com/tscircuit/iframe/pull/2) | 🐌 Tiny | seveibar | Adds error handling events and additional properties to the TscircuitIframe component, enhancing its functionality for better user interaction and debugging. |
+
+</details>
+
+### [tscircuit/led-water-accelerometer](https://github.com/tscircuit/led-water-accelerometer)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#6](https://github.com/tscircuit/led-water-accelerometer/pull/6) | 🐌 Tiny | imrishabh18 | Adds functionality to support vertical flipping in the water simulation, allowing for more accurate representation of gravity effects on the LED display. |
 
 </details>
 
 ## Changes by Contributor
 
-### [MustafaMulla29](https://github.com/MustafaMulla29)
+### [Abse2001](https://github.com/Abse2001)
 
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#281](https://github.com/tscircuit/cli/pull/281) | 🐳 Major | ⭐⭐⭐ | Introduces image-based visual diffing to enhance the reliability of snapshot verification in the CLI tool. |
+| [#334](https://github.com/tscircuit/schematic-symbols/pull/334) | 🐙 Minor | ⭐⭐ | Refactors the symbol generation script and updates text anchor positioning logic for schematic symbols. |
 
 <details>
 <summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#709](https://github.com/tscircuit/tscircuit/pull/709) | 🐌 Tiny | Updates the CLI dependency version from 0.1.175 to 0.1.176 in package.json. |
+| [#282](https://github.com/tscircuit/cli/pull/282) | 🐌 Tiny | Fixes the static import of the looks-same library to ensure it is correctly imported and utilized in the snapshot comparison functionality. |
+| [#94](https://github.com/tscircuit/schematic-corpus/pull/94) | 🐌 Tiny | Updates the tscircuit dependency version from 0.0.532 to 0.0.546 in package.json. |
+
+</details>
+
+### [MustafaMulla29](https://github.com/MustafaMulla29)
+
+
+<details>
+<summary>🐌 Tiny Contributions (5)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#708](https://github.com/tscircuit/tscircuit/pull/708) | 🐌 Tiny | Updates the version of the tscircuiteval package from 0.0.260 to 0.0.261 in package.json. |
 | [#1076](https://github.com/tscircuit/core/pull/1076) | 🐌 Tiny | Updates the footprinter dependency to version 0.0.203 to support the _textbottom flag for 0603 components. |
-| [#707](https://github.com/tscircuit/eval/pull/707) | 🐌 Tiny | Updates the tscircuitcore dependency from version 0.0.564 to 0.0.571 in package.json. |
+| [#709](https://github.com/tscircuit/eval/pull/709) | 🐌 Tiny | Updates the version of the tscircuitfootprinter dependency from 0.0.193 to 0.0.203 in package.json. |
+| [#707](https://github.com/tscircuit/eval/pull/707) | 🐌 Tiny | Updates the tscircuitcore dependency to version 0.0.571 in package.json. |
 | [#74](https://github.com/tscircuit/sparkfun-boards/pull/74) | 🐌 Tiny | Updates the tscircuit dependency version from 0.0.541 to 0.0.543 in package.json. |
 
 </details>
@@ -160,10 +336,11 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
+| [#1077](https://github.com/tscircuit/core/pull/1077) | 🐙 Minor | ⭐⭐ | Fixes pin aliases for transistors to use standard labels (collector, emitter, base) in connections, ensuring correct schematic representation. |
 | [#336](https://github.com/tscircuit/schematic-symbols/pull/336) | 🐙 Minor | ⭐⭐ | Adds alternative pin labels (Base, Emitter, Collector) to NPN and PNP bipolar transistor symbols for better clarity and usability. |
 | [#335](https://github.com/tscircuit/schematic-symbols/pull/335) | 🐙 Minor | ⭐⭐ | Fixes pin numbering for PNP and NPN bipolar transistors to follow a clockwise convention, ensuring consistency in schematic representations. |
 
-### [ArnavK-09](https://github.com/ArnavK-09)
+### [ShiboSoftwareDev](https://github.com/ShiboSoftwareDev)
 
 
 <details>
@@ -171,7 +348,57 @@ pie
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#1476](https://github.com/tscircuit/tscircuit.com/pull/1476) | 🐌 Tiny | Adds a session token check to ensure users are logged in before importing components from jlcpcb. |
+| [#202](https://github.com/tscircuit/contribution-tracker/pull/202) | 🐌 Tiny | Adds functionality to fetch and parse the CODEOWNERS file from the root or .github directory, improving code ownership management. |
+
+</details>
+
+### [ArnavK-09](https://github.com/ArnavK-09)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#1481](https://github.com/tscircuit/tscircuit.com/pull/1481) | 🐙 Minor | ⭐⭐ | Prevents the entire page from loading when rendering the 3D preview by implementing a Suspense fallback for the CadViewer component. |
+| [#1475](https://github.com/tscircuit/tscircuit.com/pull/1475) | 🐙 Minor | ⭐⭐ | Replaces plain text loading indicator with animated placeholders in ShikiCodeViewer for improved user experience during loading states. |
+
+<details>
+<summary>🐌 Tiny Contributions (4)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#1484](https://github.com/tscircuit/tscircuit.com/pull/1484) | 🐌 Tiny | Removes a line that causes an error during the JLCPCB import process in the CodeEditorHeader component. |
+| [#1479](https://github.com/tscircuit/tscircuit.com/pull/1479) | 🐌 Tiny | Fixes the jlcpcb import functionality by correcting the fetch request headers and method handling in the CodeEditorHeader component. |
+| [#1476](https://github.com/tscircuit/tscircuit.com/pull/1476) | 🐌 Tiny | Adds session token validation for importing components from jlcpcb, ensuring users are logged in before proceeding with the import. |
+| [#887](https://github.com/tscircuit/runframe/pull/887) | 🐌 Tiny | Adjusted the width of the dialog content for better responsiveness. Improved text sizes and spacing for dialog titles, descriptions, and buttons. Enhanced the layout of search results and component details for better usability. Updated styles for various elements to ensure consistency across different screen sizes. Fixed minor layout issues in the component details dialog for improved visual clarity. fix black background issue |
+
+</details>
+
+### [seveibar](https://github.com/seveibar)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#885](https://github.com/tscircuit/runframe/pull/885) | 🐳 Major | ⭐⭐⭐ | Add availableTabs and defaultTab props to RunFrame, forward props to CircuitJsonPreview, support availableTabsdefaultTab in preview and standalone preview, document the new props in README. |
+
+<details>
+<summary>🐌 Tiny Contributions (5)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#101](https://github.com/tscircuit/docs/pull/101) | 🐌 Tiny | Adds documentation for the compile.tscircuit.com API, detailing usage, endpoints, and examples for compiling tscircuit user code into Circuit JSON. |
+| [#66](https://github.com/tscircuit/bpc-graph/pull/66) | 🐌 Tiny | Removes tscircuitschematic-corpus as a peer dependency from the package.json file. |
+| [#5](https://github.com/tscircuit/api/pull/5) | 🐌 Tiny | Adds a new API client method for compiling user code into Circuit JSON format via client.compile.compileCode, along with documentation and tests for this functionality. |
+| [#3](https://github.com/tscircuit/iframe/pull/3) | 🐌 Tiny | Documents the props of the TscircuitIframe component in the README file, providing clear descriptions and types for each prop. |
+| [#2](https://github.com/tscircuit/iframe/pull/2) | 🐌 Tiny | Adds error handling events and additional properties to the TscircuitIframe component, enhancing its functionality for better user interaction and debugging. |
+
+</details>
+
+### [imrishabh18](https://github.com/imrishabh18)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#6](https://github.com/tscircuit/led-water-accelerometer/pull/6) | 🐌 Tiny | Adds functionality to support vertical flipping in the water simulation, allowing for more accurate representation of gravity effects on the LED display. |
 
 </details>
 
@@ -179,17 +406,17 @@ pie
 
 | Repository | Codeowners |
 |------------|------------|
+| [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) | [Abse2001](https://github.com/Abse2001) |
 | [sparkfun-boards](https://github.com/tscircuit/sparkfun-boards/blob/main/.github/CODEOWNERS) | [MustafaMulla29](https://github.com/MustafaMulla29) |
 | [schematic-symbols](https://github.com/tscircuit/schematic-symbols/blob/main/.github/CODEOWNERS) | [techmannih](https://github.com/techmannih) |
-| [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) | [Abse2001](https://github.com/Abse2001) |
 
 ## Repos by Owner
 
 | User | Repo |
 |------|------|
+| [Abse2001](https://github.com/Abse2001) | [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) |
 | [MustafaMulla29](https://github.com/MustafaMulla29) | [sparkfun-boards](https://github.com/tscircuit/sparkfun-boards/blob/main/.github/CODEOWNERS) |
 | [techmannih](https://github.com/techmannih) | [schematic-symbols](https://github.com/tscircuit/schematic-symbols/blob/main/.github/CODEOWNERS) |
-| [Abse2001](https://github.com/Abse2001) | [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) |
 
 
 
