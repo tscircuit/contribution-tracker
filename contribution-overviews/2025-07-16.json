@@ -1,11 +1,11 @@
 {
   "Abse2001": {
-    "reviewsReceived": 9,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
     "approvalsReceived": 7,
     "approvalsGiven": 10,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
+    "prsOpened": 10,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -24,20 +24,20 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 10,
-    "score": 21,
+    "score": 23,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 2,
+    "major": 2,
+    "minor": 1,
     "tiny": 4
   },
   "ArnavK-09": {
-    "reviewsReceived": 11,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
+    "approvalsReceived": 9,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 7,
+    "prsOpened": 15,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -46,9 +46,17 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 10,
-    "stars": "⭐",
-    "major": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/cli",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 14,
+    "stars": "⭐⭐",
+    "major": 1,
     "minor": 3,
     "tiny": 4
   },
@@ -76,19 +84,19 @@
         ]
       }
     ],
-    "score": 15,
+    "score": 18,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 2,
     "minor": 0,
-    "tiny": 14
+    "tiny": 13
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 2,
     "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 3,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -166,7 +174,7 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
@@ -192,25 +200,25 @@
         ]
       }
     ],
-    "score": 7,
+    "score": 5,
     "stars": "⭐",
-    "major": 1,
-    "minor": 0,
+    "major": 0,
+    "minor": 1,
     "tiny": 2
   },
   "seveibar": {
     "reviewsReceived": 7,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 21,
+    "approvalsGiven": 23,
     "rejectionsGiven": 0,
     "prsOpened": 18,
     "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
-    "distinctPrsReviewedAsCodeOwner": 13,
+    "distinctPrsReviewedNonCodeOwner": 9,
+    "distinctPrsReviewedAsCodeOwner": 14,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit.com",
@@ -219,11 +227,11 @@
         ]
       }
     ],
-    "score": 35.5,
+    "score": 33.5,
     "stars": "⭐⭐⭐",
     "major": 2,
-    "minor": 1,
-    "tiny": 11
+    "minor": 0,
+    "tiny": 12
   },
   "techmannih": {
     "reviewsReceived": 9,
