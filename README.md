@@ -28,15 +28,16 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/schematic-corpus" : 12
-    "tscircuit/tscircuit" : 3
-    "tscircuit/core" : 3
-    "tscircuit/circuit-to-svg" : 1
-    "tscircuit/eval" : 2
     "tscircuit/cli" : 3
+    "tscircuit/core" : 5
+    "tscircuit/circuit-to-svg" : 3
+    "tscircuit/schematic-symbols" : 4
+    "tscircuit/schematic-corpus" : 12
+    "tscircuit/tscircuit" : 4
+    "tscircuit/footprinter" : 1
+    "tscircuit/eval" : 3
     "tscircuit/sparkfun-boards" : 1
-    "tscircuit/schematic-symbols" : 3
-    "tscircuit/runframe" : 2
+    "tscircuit/runframe" : 4
     "tscircuit/simple-3d-svg" : 3
     "tscircuit/props" : 1
     "tscircuit/math-utils" : 1
@@ -47,7 +48,7 @@ pie
     "tscircuit/api" : 1
     "tscircuit/iframe" : 2
     "tscircuit/contribution-tracker" : 1
-    "tscircuit/tscircuit.com" : 8
+    "tscircuit/tscircuit.com" : 10
     "tscircuit/led-water-accelerometer" : 2
 ```
 
@@ -55,13 +56,15 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 2 | 0 | 12 | ⭐⭐⭐ | 0 | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 2 | 1 | 4 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 2 | 0 | 13 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 1 | 3 | 4 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 0 | 3 | 3 | ⭐ | 0 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 1 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 1 | 1 | 12 | ⭐⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 1 | 4 | 7 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 2 | 4 | 5 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 1 | 0 | 14 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 0 | 4 | 3 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 2 | ⭐ | 0 | 0🔹 0🔶 0💎 |
 | [imrishabh18](#imrishabh18) | 0 | 1 | 2 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [andrii-balitskyi](#andrii-balitskyi) | 1 | 0 | 0 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
 
@@ -81,70 +84,47 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|
+| [Abse2001](#Abse2001) | 16 | 12 | 0 | 10 | 0 | 14 | 12 | 0 | 0 | 0 |
 | [MustafaMulla29](#MustafaMulla29) | 15 | 14 | 0 | 0 | 0 | 18 | 15 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 7 | 0 | 0 | 23 | 0 | 18 | 14 | 0 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 2 | 0 | 5 | 0 | 3 | 1 | 0 | 0 | 0 |
-| [Abse2001](#Abse2001) | 10 | 7 | 0 | 10 | 0 | 10 | 7 | 0 | 0 | 0 |
-| [andrii-balitskyi](#andrii-balitskyi) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 |
-| [techmannih](#techmannih) | 9 | 6 | 0 | 0 | 0 | 6 | 6 | 0 | 0 | 0 |
+| [seveibar](#seveibar) | 7 | 0 | 0 | 31 | 0 | 18 | 14 | 0 | 0 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 3 | 3 | 0 | 7 | 0 | 3 | 2 | 0 | 0 | 0 |
+| [andrii-balitskyi](#andrii-balitskyi) | 2 | 2 | 0 | 0 | 0 | 3 | 1 | 0 | 0 | 0 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 1 | 1 | 0 | 1 | 0 | 3 | 3 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 12 | 9 | 0 | 0 | 0 | 15 | 8 | 0 | 0 | 0 |
-| [cursor[bot]](#cursor[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| [techmannih](#techmannih) | 11 | 7 | 0 | 1 | 0 | 7 | 7 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 1 | 1 | 0 | 2 | 0 | 3 | 3 | 0 | 0 | 0 |
 | [abimaelmartell](#abimaelmartell) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 16 | 12 | 0 | 0 | 0 | 17 | 11 | 0 | 0 | 0 |
+| [cursor[bot]](#cursor[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 8 | 1 | 0 | 0 | 0 |
 
 ## Top 7 Repositories by Contribution Points
 
 ```mermaid
 pie
-    "tscircuit/schematic-corpus" : 19
-    "tscircuit/tscircuit.com" : 14
+    "tscircuit/tscircuit.com" : 17
+    "tscircuit/schematic-corpus" : 16
+    "tscircuit/runframe" : 10
     "tscircuit/schematic-symbols" : 8
+    "tscircuit/core" : 7
+    "tscircuit/circuit-to-svg" : 7
     "tscircuit/cli" : 6
-    "tscircuit/simple-3d-svg" : 6
-    "tscircuit/runframe" : 5
-    "tscircuit/core" : 4
 ```
 
 ## Changes by Repository
 
-### [tscircuit/schematic-corpus](https://github.com/tscircuit/schematic-corpus)
+### [tscircuit/cli](https://github.com/tscircuit/cli)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#98](https://github.com/tscircuit/schematic-corpus/pull/98) | 🐳 Major | ⭐⭐⭐ | MustafaMulla29 | Adds a new circuit design (design63) that enhances the autorouting algorithm by providing a new schematic representation and component layout. |
-| [#96](https://github.com/tscircuit/schematic-corpus/pull/96) | 🐳 Major | ⭐⭐⭐ | MustafaMulla29 | Adds a new design (design61) to the schematic corpus, which is intended to enhance the autorouting algorithm. |
-| [#95](https://github.com/tscircuit/schematic-corpus/pull/95) | 🐙 Minor | ⭐⭐ | Abse2001 | Introduces a GitHub star button and a mobile-friendly burger menu for navigation, enhancing user interaction and accessibility on both site and mobile views. |
+| [#281](https://github.com/tscircuit/cli/pull/281) | 🐳 Major | ⭐⭐⭐ | Abse2001 | Introduce image-based visual diffing for more reliable snapshot verification in the snapshot generation process, allowing for better detection of visual changes in circuit designs. |
 
 <details>
-<summary>🐌 Tiny Contributions (9)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#105](https://github.com/tscircuit/schematic-corpus/pull/105) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design67) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
-| [#100](https://github.com/tscircuit/schematic-corpus/pull/100) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design065) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
-| [#99](https://github.com/tscircuit/schematic-corpus/pull/99) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design064) to the schematic corpus, which is intended to enhance the autorouting algorithm. |
-| [#97](https://github.com/tscircuit/schematic-corpus/pull/97) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design62) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
-| [#89](https://github.com/tscircuit/schematic-corpus/pull/89) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design60) to enhance the autorouting algorithms performance and capabilities. |
-| [#94](https://github.com/tscircuit/schematic-corpus/pull/94) | 🐌 Tiny | Abse2001 | Updates the tscircuit dependency version from 0.0.532 to 0.0.546 in package.json. |
-| [#104](https://github.com/tscircuit/schematic-corpus/pull/104) | 🐌 Tiny | techmannih | Renames design61 and design62 files to design061 and design062 respectively for consistency in naming conventions. |
-| [#101](https://github.com/tscircuit/schematic-corpus/pull/101) | 🐌 Tiny | techmannih | Adds a new design (design059) to the schematic corpus, which includes a new circuit layout for improved autolayout functionality. |
-| [#102](https://github.com/tscircuit/schematic-corpus/pull/102) | 🐌 Tiny | techmannih | Adds a new design (design066) to the schematic corpus, which includes a new circuit layout for improved autolayout functionality. |
-
-</details>
-
-### [tscircuit/tscircuit](https://github.com/tscircuit/tscircuit)
-
-
-<details>
-<summary>🐌 Tiny Contributions (3)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#710](https://github.com/tscircuit/tscircuit/pull/710) | 🐌 Tiny | MustafaMulla29 | Updates the circuit-to-svg dependency from version 0.0.166 to 0.0.170 in package.json |
-| [#708](https://github.com/tscircuit/tscircuit/pull/708) | 🐌 Tiny | MustafaMulla29 | Updates the version of the tscircuiteval package from 0.0.260 to 0.0.261 in package.json. |
-| [#709](https://github.com/tscircuit/tscircuit/pull/709) | 🐌 Tiny | Abse2001 | Updates the CLI dependency version from 0.1.175 to 0.1.176 in package.json |
+| [#282](https://github.com/tscircuit/cli/pull/282) | 🐌 Tiny | Abse2001 | Fixes the static import of the looks-same library to ensure it is correctly imported and utilized in the snapshot comparison functionality. |
+| [#284](https://github.com/tscircuit/cli/pull/284) | 🐌 Tiny | MustafaMulla29 | Updates the tscircuit dependency version from 0.0.540 to 0.0.546 in package.json to incorporate the latest changes and improvements from the tscircuit library. |
 
 </details>
 
@@ -152,20 +132,26 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#1081](https://github.com/tscircuit/core/pull/1081) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes bug where top and bottom schPinArrangement dont function correctly when left or right arrangements are not defined. |
 | [#1077](https://github.com/tscircuit/core/pull/1077) | 🐙 Minor | ⭐⭐ | techmannih | Fixes pin aliases for transistors to use standard labels (collector, emitter, base) in connections, ensuring correct schematic representation. |
 
 <details>
-<summary>🐌 Tiny Contributions (2)</summary>
+<summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#1082](https://github.com/tscircuit/core/pull/1082) | 🐌 Tiny | Abse2001 | Updates the version of the tscircuitfootprinter dependency from 0.0.203 to 0.0.204 in package.json. |
+| [#1079](https://github.com/tscircuit/core/pull/1079) | 🐌 Tiny | Abse2001 | Adds a test case that reproduces the bug related to externally connected pins in the circuit rendering. |
 | [#1076](https://github.com/tscircuit/core/pull/1076) | 🐌 Tiny | MustafaMulla29 | Updates the footprinter dependency to version 0.0.203 to support the _textbottom flag for 0603 components. |
-| [#1079](https://github.com/tscircuit/core/pull/1079) | 🐌 Tiny | Abse2001 | Reproduces a bug related to externally connected pins in circuit design, providing a test case for further investigation and resolution. |
 
 </details>
 
 ### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
 
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#288](https://github.com/tscircuit/circuit-to-svg/pull/288) | 🐳 Major | ⭐⭐⭐ | andrii-balitskyi | Adds support for rendering polygon SMT pads in SVG, including bounds calculation and testing. |
+| [#289](https://github.com/tscircuit/circuit-to-svg/pull/289) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes inconsistent stroke width rendering for resizable SVG schematic boxes based on zoom level. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
@@ -176,32 +162,78 @@ pie
 
 </details>
 
+### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#334](https://github.com/tscircuit/schematic-symbols/pull/334) | 🐙 Minor | ⭐⭐ | Abse2001 | Refactors the symbol generation script and updates text anchor positioning logic to allow for more precise placement of text elements in schematic symbols. |
+| [#337](https://github.com/tscircuit/schematic-symbols/pull/337) | 🐙 Minor | ⭐⭐ | techmannih | Adds alternative pin labels (Base, Emitter, Collector) to the PNP bipolar transistor symbol for better clarity in schematic representations. |
+| [#336](https://github.com/tscircuit/schematic-symbols/pull/336) | 🐙 Minor | ⭐⭐ | techmannih | Adds alternative pin labels (Base, Emitter, Collector) to NPN and PNP bipolar transistor symbols for better clarity and usability. |
+| [#335](https://github.com/tscircuit/schematic-symbols/pull/335) | 🐙 Minor | ⭐⭐ | techmannih | Fixes pin numbering for PNP and NPN bipolar transistors to follow a clockwise convention, ensuring consistency in schematic representations. |
+
+### [tscircuit/schematic-corpus](https://github.com/tscircuit/schematic-corpus)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#98](https://github.com/tscircuit/schematic-corpus/pull/98) | 🐳 Major | ⭐⭐⭐ | MustafaMulla29 | Adds a new circuit design (design63) that enhances the autorouting algorithm by providing a new schematic and footprint for a specific circuit configuration. |
+| [#95](https://github.com/tscircuit/schematic-corpus/pull/95) | 🐙 Minor | ⭐⭐ | Abse2001 | Introduces a GitHub star button and a mobile-friendly burger menu for navigation, enhancing user interaction and accessibility on both site and mobile views. |
+
+<details>
+<summary>🐌 Tiny Contributions (10)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#94](https://github.com/tscircuit/schematic-corpus/pull/94) | 🐌 Tiny | Abse2001 | Updates the tscircuit dependency version from 0.0.532 to 0.0.546 in package.json. |
+| [#105](https://github.com/tscircuit/schematic-corpus/pull/105) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design67) to the schematic corpus, which includes a new circuit board layout for improved autorouting functionality. |
+| [#100](https://github.com/tscircuit/schematic-corpus/pull/100) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design065) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
+| [#99](https://github.com/tscircuit/schematic-corpus/pull/99) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design064) to the schematic corpus, which is intended to enhance the autorouting algorithm. |
+| [#97](https://github.com/tscircuit/schematic-corpus/pull/97) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design62) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
+| [#96](https://github.com/tscircuit/schematic-corpus/pull/96) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design61) to the schematic corpus, which is intended to enhance the autorouting algorithm. |
+| [#89](https://github.com/tscircuit/schematic-corpus/pull/89) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design60) to enhance the autorouting algorithms performance and capabilities. |
+| [#104](https://github.com/tscircuit/schematic-corpus/pull/104) | 🐌 Tiny | techmannih | Renames design61 and design62 files to design061 and design062 respectively for consistency in naming conventions. |
+| [#101](https://github.com/tscircuit/schematic-corpus/pull/101) | 🐌 Tiny | techmannih | Adds a new design (design059) to the schematic corpus, which includes a new circuit layout for improved autolayout functionality. |
+| [#102](https://github.com/tscircuit/schematic-corpus/pull/102) | 🐌 Tiny | techmannih | Adds a new design (design066) to the schematic corpus, which includes a new circuit layout for improved autolayout functionality. |
+
+</details>
+
+### [tscircuit/tscircuit](https://github.com/tscircuit/tscircuit)
+
+
+<details>
+<summary>🐌 Tiny Contributions (4)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#711](https://github.com/tscircuit/tscircuit/pull/711) | 🐌 Tiny | Abse2001 | Updates the version of the tscircuitcore dependency from 0.0.573 to 0.0.574 in package.json. |
+| [#709](https://github.com/tscircuit/tscircuit/pull/709) | 🐌 Tiny | Abse2001 | Updates the CLI dependency version from 0.1.175 to 0.1.176 in package.json |
+| [#710](https://github.com/tscircuit/tscircuit/pull/710) | 🐌 Tiny | MustafaMulla29 | Updates the circuit-to-svg dependency from version 0.0.166 to 0.0.170 in package.json |
+| [#708](https://github.com/tscircuit/tscircuit/pull/708) | 🐌 Tiny | MustafaMulla29 | Updates the version of the tscircuiteval package from 0.0.260 to 0.0.261 in package.json. |
+
+</details>
+
+### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#332](https://github.com/tscircuit/footprinter/pull/332) | 🐌 Tiny | Abse2001 | Adds support for placing silkscreen reference text on the bottom layer of the PCB. |
+
+</details>
+
 ### [tscircuit/eval](https://github.com/tscircuit/eval)
 
 
 <details>
-<summary>🐌 Tiny Contributions (2)</summary>
+<summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#709](https://github.com/tscircuit/eval/pull/709) | 🐌 Tiny | MustafaMulla29 | Updates the version of the tscircuitfootprinter dependency from 0.0.193 to 0.0.203 in package.json. |
 | [#707](https://github.com/tscircuit/eval/pull/707) | 🐌 Tiny | MustafaMulla29 | Updates the tscircuitcore dependency version from 0.0.564 to 0.0.571 in package.json. |
-
-</details>
-
-### [tscircuit/cli](https://github.com/tscircuit/cli)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#281](https://github.com/tscircuit/cli/pull/281) | 🐳 Major | ⭐⭐⭐ | Abse2001 | Introduce image-based visual diffing for more reliable snapshot verification |
-
-<details>
-<summary>🐌 Tiny Contributions (2)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#284](https://github.com/tscircuit/cli/pull/284) | 🐌 Tiny | MustafaMulla29 | Updates the tscircuit dependency version from 0.0.540 to 0.0.546 in package.json to incorporate the latest changes and improvements from the tscircuit library. |
-| [#282](https://github.com/tscircuit/cli/pull/282) | 🐌 Tiny | Abse2001 | Fixes the static import of the looks-same library to ensure proper functionality in image comparison. |
+| [#716](https://github.com/tscircuit/eval/pull/716) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore dependency from version 0.0.571 to 0.0.574, along with several other related dependencies. |
 
 </details>
 
@@ -217,25 +249,19 @@ pie
 
 </details>
 
-### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#334](https://github.com/tscircuit/schematic-symbols/pull/334) | 🐳 Major | ⭐⭐⭐ | Abse2001 | Refactors the symbol generation script and updates text anchor positioning logic for schematic symbols. |
-| [#336](https://github.com/tscircuit/schematic-symbols/pull/336) | 🐙 Minor | ⭐⭐ | techmannih | Adds alternative pin labels (Base, Emitter, Collector) to NPN and PNP bipolar transistor symbols for better clarity and usability. |
-| [#335](https://github.com/tscircuit/schematic-symbols/pull/335) | 🐙 Minor | ⭐⭐ | techmannih | Fixes pin numbering for PNP and NPN bipolar transistors to follow a clockwise convention, ensuring consistency in schematic representations. |
-
 ### [tscircuit/runframe](https://github.com/tscircuit/runframe)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#885](https://github.com/tscircuit/runframe/pull/885) | 🐳 Major | ⭐⭐⭐ | seveibar | This PR adds availableTabs and defaultTab props to the RunFrame component, allowing users to specify which tabs are available and which tab should be selected by default in the CircuitJsonPreview. |
+| [#895](https://github.com/tscircuit/runframe/pull/895) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | related https:github.comtscircuittscircuit.comissues1443 |
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#892](https://github.com/tscircuit/runframe/pull/892) | 🐌 Tiny | ArnavK-09 | Adds support for customizable main component rendering in RunFrameWithApi by introducing mainComponentPath from the window object. |
 | [#887](https://github.com/tscircuit/runframe/pull/887) | 🐌 Tiny | ArnavK-09 | Adjusted the width of the dialog content for better responsiveness. Improved text sizes and spacing for dialog titles, descriptions, and buttons. Enhanced the layout of search results and component details for better usability. Updated styles for various elements to ensure consistency across different screen sizes. Fixed minor layout issues in the component details dialog for improved visual clarity. fix black background issue |
 
 </details>
@@ -244,7 +270,7 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#45](https://github.com/tscircuit/simple-3d-svg/pull/45) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds optional parameters showAxes, showOrigin, and showGrid to the renderScene function, enabling the rendering of a small XYZ axis guide and origin lines in the SVG output. |
+| [#45](https://github.com/tscircuit/simple-3d-svg/pull/45) | 🐙 Minor | ⭐⭐ | seveibar | Adds optional parameters showAxes, showOrigin, and showGrid to the renderScene function, enabling the rendering of a small XYZ axis guide and origin lines in the SVG output. |
 
 <details>
 <summary>🐌 Tiny Contributions (2)</summary>
@@ -300,7 +326,7 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#5](https://github.com/tscircuit/circuit-json-to-spice/pull/5) | 🐌 Tiny | seveibar | Adds integration tests for the EEcircuit-engine, including a new bunfig.toml configuration and updates to dependencies. |
+| [#5](https://github.com/tscircuit/circuit-json-to-spice/pull/5) | 🐌 Tiny | seveibar | Adds integration tests for the EEcircuit-engine to ensure proper functionality and reliability of circuit simulations. |
 
 </details>
 
@@ -370,19 +396,21 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#1487](https://github.com/tscircuit/tscircuit.com/pull/1487) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Fixes file selection logic to correctly handle hidden files in the CodeEditorHeader and useFileManagement hook. |
+| [#1487](https://github.com/tscircuit/tscircuit.com/pull/1487) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Fixes file selection logic to correctly handle hidden files in the CodeEditorHeader and useFileManagement hook, ensuring users can select visible files only. |
 | [#1489](https://github.com/tscircuit/tscircuit.com/pull/1489) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds new UI components and improves the layout of the DatasheetPage for better user experience. |
 | [#1481](https://github.com/tscircuit/tscircuit.com/pull/1481) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Prevents the entire page from loading when rendering the 3D preview by implementing a Suspense fallback for the CadViewer component. |
 | [#1475](https://github.com/tscircuit/tscircuit.com/pull/1475) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Replaces plain text loading indicator with animated placeholders in ShikiCodeViewer for improved user experience during loading states. |
+| [#1476](https://github.com/tscircuit/tscircuit.com/pull/1476) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds session token validation for importing components from jlcpcb, ensuring users are logged in before proceeding with the import. |
 
 <details>
-<summary>🐌 Tiny Contributions (4)</summary>
+<summary>🐌 Tiny Contributions (5)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#1484](https://github.com/tscircuit/tscircuit.com/pull/1484) | 🐌 Tiny | ArnavK-09 | Removes a line that causes an error during the JLCPCB import process in the CodeEditorHeader component. |
-| [#1479](https://github.com/tscircuit/tscircuit.com/pull/1479) | 🐌 Tiny | ArnavK-09 | Fixes the jlcpcb import functionality by correcting the fetch request headers and method handling in the CodeEditorHeader component. |
-| [#1476](https://github.com/tscircuit/tscircuit.com/pull/1476) | 🐌 Tiny | ArnavK-09 | Adds session token validation for importing components from jlcpcb, ensuring users are logged in before proceeding with the import. |
+| [#1493](https://github.com/tscircuit/tscircuit.com/pull/1493) | 🐌 Tiny | ShiboSoftwareDev | Adds the capability to download a SPICE netlist for a given circuit using the circuit-json-to-spice package. |
+| [#1492](https://github.com/tscircuit/tscircuit.com/pull/1492) | 🐌 Tiny | ArnavK-09 | Fixes layout issues and styling inconsistencies across multiple pages in the application. |
+| [#1484](https://github.com/tscircuit/tscircuit.com/pull/1484) | 🐌 Tiny | ArnavK-09 | Removes a line that causes an error during the JLCPCB import process, preventing the error from occurring. |
+| [#1479](https://github.com/tscircuit/tscircuit.com/pull/1479) | 🐌 Tiny | ArnavK-09 | Fixes the jlcpcb import functionality by correcting the fetch request headers and ensuring proper authorization is applied. |
 | [#1491](https://github.com/tscircuit/tscircuit.com/pull/1491) | 🐌 Tiny | imrishabh18 | Hides the file delete option in the FileSidebar component for users who do not own the package, ensuring that only the owner can delete files. |
 
 </details>
@@ -391,7 +419,7 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#7](https://github.com/tscircuit/led-water-accelerometer/pull/7) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds firmware for controlling a NeoPixel LED matrix to display animated text and patterns, including scrolling text and letter animations. |
+| [#7](https://github.com/tscircuit/led-water-accelerometer/pull/7) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds firmware to control a NeoPixel LED matrix for displaying animated text and patterns, specifically for the tscircuit logo. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
@@ -404,15 +432,39 @@ pie
 
 ## Changes by Contributor
 
+### [Abse2001](https://github.com/Abse2001)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#281](https://github.com/tscircuit/cli/pull/281) | 🐳 Major | ⭐⭐⭐ | Introduce image-based visual diffing for more reliable snapshot verification in the snapshot generation process, allowing for better detection of visual changes in circuit designs. |
+| [#1081](https://github.com/tscircuit/core/pull/1081) | 🐙 Minor | ⭐⭐ | Fixes bug where top and bottom schPinArrangement dont function correctly when left or right arrangements are not defined. |
+| [#289](https://github.com/tscircuit/circuit-to-svg/pull/289) | 🐙 Minor | ⭐⭐ | Fixes inconsistent stroke width rendering for resizable SVG schematic boxes based on zoom level. |
+| [#334](https://github.com/tscircuit/schematic-symbols/pull/334) | 🐙 Minor | ⭐⭐ | Refactors the symbol generation script and updates text anchor positioning logic to allow for more precise placement of text elements in schematic symbols. |
+| [#95](https://github.com/tscircuit/schematic-corpus/pull/95) | 🐙 Minor | ⭐⭐ | Introduces a GitHub star button and a mobile-friendly burger menu for navigation, enhancing user interaction and accessibility on both site and mobile views. |
+
+<details>
+<summary>🐌 Tiny Contributions (7)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#711](https://github.com/tscircuit/tscircuit/pull/711) | 🐌 Tiny | Updates the version of the tscircuitcore dependency from 0.0.573 to 0.0.574 in package.json. |
+| [#709](https://github.com/tscircuit/tscircuit/pull/709) | 🐌 Tiny | Updates the CLI dependency version from 0.1.175 to 0.1.176 in package.json |
+| [#332](https://github.com/tscircuit/footprinter/pull/332) | 🐌 Tiny | Adds support for placing silkscreen reference text on the bottom layer of the PCB. |
+| [#1082](https://github.com/tscircuit/core/pull/1082) | 🐌 Tiny | Updates the version of the tscircuitfootprinter dependency from 0.0.203 to 0.0.204 in package.json. |
+| [#1079](https://github.com/tscircuit/core/pull/1079) | 🐌 Tiny | Adds a test case that reproduces the bug related to externally connected pins in the circuit rendering. |
+| [#282](https://github.com/tscircuit/cli/pull/282) | 🐌 Tiny | Fixes the static import of the looks-same library to ensure it is correctly imported and utilized in the snapshot comparison functionality. |
+| [#94](https://github.com/tscircuit/schematic-corpus/pull/94) | 🐌 Tiny | Updates the tscircuit dependency version from 0.0.532 to 0.0.546 in package.json. |
+
+</details>
+
 ### [MustafaMulla29](https://github.com/MustafaMulla29)
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#98](https://github.com/tscircuit/schematic-corpus/pull/98) | 🐳 Major | ⭐⭐⭐ | Adds a new circuit design (design63) that enhances the autorouting algorithm by providing a new schematic representation and component layout. |
-| [#96](https://github.com/tscircuit/schematic-corpus/pull/96) | 🐳 Major | ⭐⭐⭐ | Adds a new design (design61) to the schematic corpus, which is intended to enhance the autorouting algorithm. |
+| [#98](https://github.com/tscircuit/schematic-corpus/pull/98) | 🐳 Major | ⭐⭐⭐ | Adds a new circuit design (design63) that enhances the autorouting algorithm by providing a new schematic and footprint for a specific circuit configuration. |
 
 <details>
-<summary>🐌 Tiny Contributions (13)</summary>
+<summary>🐌 Tiny Contributions (14)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -424,31 +476,12 @@ pie
 | [#707](https://github.com/tscircuit/eval/pull/707) | 🐌 Tiny | Updates the tscircuitcore dependency version from 0.0.564 to 0.0.571 in package.json. |
 | [#284](https://github.com/tscircuit/cli/pull/284) | 🐌 Tiny | Updates the tscircuit dependency version from 0.0.540 to 0.0.546 in package.json to incorporate the latest changes and improvements from the tscircuit library. |
 | [#74](https://github.com/tscircuit/sparkfun-boards/pull/74) | 🐌 Tiny | Updates the tscircuit dependency version from 0.0.541 to 0.0.543 in package.json. |
-| [#105](https://github.com/tscircuit/schematic-corpus/pull/105) | 🐌 Tiny | Adds a new design (design67) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
+| [#105](https://github.com/tscircuit/schematic-corpus/pull/105) | 🐌 Tiny | Adds a new design (design67) to the schematic corpus, which includes a new circuit board layout for improved autorouting functionality. |
 | [#100](https://github.com/tscircuit/schematic-corpus/pull/100) | 🐌 Tiny | Adds a new circuit design (design065) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
 | [#99](https://github.com/tscircuit/schematic-corpus/pull/99) | 🐌 Tiny | Adds a new design (design064) to the schematic corpus, which is intended to enhance the autorouting algorithm. |
-| [#97](https://github.com/tscircuit/schematic-corpus/pull/97) | 🐌 Tiny | Adds a new circuit design (design62) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
+| [#97](https://github.com/tscircuit/schematic-corpus/pull/97) | 🐌 Tiny | Adds a new design (design62) to the schematic corpus, which is intended to enhance the autorouting algorithms performance. |
+| [#96](https://github.com/tscircuit/schematic-corpus/pull/96) | 🐌 Tiny | Adds a new design (design61) to the schematic corpus, which is intended to enhance the autorouting algorithm. |
 | [#89](https://github.com/tscircuit/schematic-corpus/pull/89) | 🐌 Tiny | Adds a new circuit design (design60) to enhance the autorouting algorithms performance and capabilities. |
-
-</details>
-
-### [Abse2001](https://github.com/Abse2001)
-
-| PRs # | Impact | Rating | Description |
-|------|--------|--------|-------------|
-| [#334](https://github.com/tscircuit/schematic-symbols/pull/334) | 🐳 Major | ⭐⭐⭐ | Refactors the symbol generation script and updates text anchor positioning logic for schematic symbols. |
-| [#281](https://github.com/tscircuit/cli/pull/281) | 🐳 Major | ⭐⭐⭐ | Introduce image-based visual diffing for more reliable snapshot verification |
-| [#95](https://github.com/tscircuit/schematic-corpus/pull/95) | 🐙 Minor | ⭐⭐ | Introduces a GitHub star button and a mobile-friendly burger menu for navigation, enhancing user interaction and accessibility on both site and mobile views. |
-
-<details>
-<summary>🐌 Tiny Contributions (4)</summary>
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#709](https://github.com/tscircuit/tscircuit/pull/709) | 🐌 Tiny | Updates the CLI dependency version from 0.1.175 to 0.1.176 in package.json |
-| [#1079](https://github.com/tscircuit/core/pull/1079) | 🐌 Tiny | Reproduces a bug related to externally connected pins in circuit design, providing a test case for further investigation and resolution. |
-| [#282](https://github.com/tscircuit/cli/pull/282) | 🐌 Tiny | Fixes the static import of the looks-same library to ensure proper functionality in image comparison. |
-| [#94](https://github.com/tscircuit/schematic-corpus/pull/94) | 🐌 Tiny | Updates the tscircuit dependency version from 0.0.532 to 0.0.546 in package.json. |
 
 </details>
 
@@ -457,7 +490,7 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#885](https://github.com/tscircuit/runframe/pull/885) | 🐳 Major | ⭐⭐⭐ | This PR adds availableTabs and defaultTab props to the RunFrame component, allowing users to specify which tabs are available and which tab should be selected by default in the CircuitJsonPreview. |
-| [#45](https://github.com/tscircuit/simple-3d-svg/pull/45) | 🐳 Major | ⭐⭐⭐ | Adds optional parameters showAxes, showOrigin, and showGrid to the renderScene function, enabling the rendering of a small XYZ axis guide and origin lines in the SVG output. |
+| [#45](https://github.com/tscircuit/simple-3d-svg/pull/45) | 🐙 Minor | ⭐⭐ | Adds optional parameters showAxes, showOrigin, and showGrid to the renderScene function, enabling the rendering of a small XYZ axis guide and origin lines in the SVG output. |
 
 <details>
 <summary>🐌 Tiny Contributions (12)</summary>
@@ -467,7 +500,7 @@ pie
 | [#330](https://github.com/tscircuit/props/pull/330) | 🐌 Tiny | Summary drop dcSimulationVoltage from PinAttributeMap regenerate docs and format markdown files  Testing bun test testschip3-type-tests.test.tsx bun run format |
 | [#14](https://github.com/tscircuit/math-utils/pull/14) | 🐌 Tiny | Adds an API table summarizing all exported methods in the README. |
 | [#70](https://github.com/tscircuit/graphics-debug/pull/70) | 🐌 Tiny | Adds documentation for the usage of the InteractiveGraphics component from the graphics-debugreact package. |
-| [#5](https://github.com/tscircuit/circuit-json-to-spice/pull/5) | 🐌 Tiny | Adds integration tests for the EEcircuit-engine, including a new bunfig.toml configuration and updates to dependencies. |
+| [#5](https://github.com/tscircuit/circuit-json-to-spice/pull/5) | 🐌 Tiny | Adds integration tests for the EEcircuit-engine to ensure proper functionality and reliability of circuit simulations. |
 | [#101](https://github.com/tscircuit/docs/pull/101) | 🐌 Tiny | Adds documentation for the compile.tscircuit.com API, detailing usage, endpoints, and examples for compiling tscircuit user code into Circuit JSON. |
 | [#47](https://github.com/tscircuit/simple-3d-svg/pull/47) | 🐌 Tiny | Transforms STL model coordinates from Z-up to Y-up by applying a rotation, ensuring compatibility with Y-up systems. |
 | [#46](https://github.com/tscircuit/simple-3d-svg/pull/46) | 🐌 Tiny | Adds gradient fading to axis lines in the SVG rendering of the origin, enhancing visual clarity. |
@@ -484,6 +517,7 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#1077](https://github.com/tscircuit/core/pull/1077) | 🐙 Minor | ⭐⭐ | Fixes pin aliases for transistors to use standard labels (collector, emitter, base) in connections, ensuring correct schematic representation. |
+| [#337](https://github.com/tscircuit/schematic-symbols/pull/337) | 🐙 Minor | ⭐⭐ | Adds alternative pin labels (Base, Emitter, Collector) to the PNP bipolar transistor symbol for better clarity in schematic representations. |
 | [#336](https://github.com/tscircuit/schematic-symbols/pull/336) | 🐙 Minor | ⭐⭐ | Adds alternative pin labels (Base, Emitter, Collector) to NPN and PNP bipolar transistor symbols for better clarity and usability. |
 | [#335](https://github.com/tscircuit/schematic-symbols/pull/335) | 🐙 Minor | ⭐⭐ | Fixes pin numbering for PNP and NPN bipolar transistors to follow a clockwise convention, ensuring consistency in schematic representations. |
 
@@ -502,31 +536,41 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#202](https://github.com/tscircuit/contribution-tracker/pull/202) | 🐌 Tiny | Adds functionality to fetch and parse the CODEOWNERS file from the root or .github directory, improving code ownership management. |
+| [#1493](https://github.com/tscircuit/tscircuit.com/pull/1493) | 🐌 Tiny | Adds the capability to download a SPICE netlist for a given circuit using the circuit-json-to-spice package. |
 
 </details>
+
+### [andrii-balitskyi](https://github.com/andrii-balitskyi)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#288](https://github.com/tscircuit/circuit-to-svg/pull/288) | 🐳 Major | ⭐⭐⭐ | Adds support for rendering polygon SMT pads in SVG, including bounds calculation and testing. |
 
 ### [ArnavK-09](https://github.com/ArnavK-09)
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#1487](https://github.com/tscircuit/tscircuit.com/pull/1487) | 🐳 Major | ⭐⭐⭐ | Fixes file selection logic to correctly handle hidden files in the CodeEditorHeader and useFileManagement hook. |
+| [#1487](https://github.com/tscircuit/tscircuit.com/pull/1487) | 🐳 Major | ⭐⭐⭐ | Fixes file selection logic to correctly handle hidden files in the CodeEditorHeader and useFileManagement hook, ensuring users can select visible files only. |
+| [#895](https://github.com/tscircuit/runframe/pull/895) | 🐳 Major | ⭐⭐⭐ | related https:github.comtscircuittscircuit.comissues1443 |
 | [#1489](https://github.com/tscircuit/tscircuit.com/pull/1489) | 🐙 Minor | ⭐⭐ | Adds new UI components and improves the layout of the DatasheetPage for better user experience. |
 | [#1481](https://github.com/tscircuit/tscircuit.com/pull/1481) | 🐙 Minor | ⭐⭐ | Prevents the entire page from loading when rendering the 3D preview by implementing a Suspense fallback for the CadViewer component. |
 | [#1475](https://github.com/tscircuit/tscircuit.com/pull/1475) | 🐙 Minor | ⭐⭐ | Replaces plain text loading indicator with animated placeholders in ShikiCodeViewer for improved user experience during loading states. |
+| [#1476](https://github.com/tscircuit/tscircuit.com/pull/1476) | 🐙 Minor | ⭐⭐ | Adds session token validation for importing components from jlcpcb, ensuring users are logged in before proceeding with the import. |
 
 <details>
-<summary>🐌 Tiny Contributions (4)</summary>
+<summary>🐌 Tiny Contributions (5)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#1484](https://github.com/tscircuit/tscircuit.com/pull/1484) | 🐌 Tiny | Removes a line that causes an error during the JLCPCB import process in the CodeEditorHeader component. |
-| [#1479](https://github.com/tscircuit/tscircuit.com/pull/1479) | 🐌 Tiny | Fixes the jlcpcb import functionality by correcting the fetch request headers and method handling in the CodeEditorHeader component. |
-| [#1476](https://github.com/tscircuit/tscircuit.com/pull/1476) | 🐌 Tiny | Adds session token validation for importing components from jlcpcb, ensuring users are logged in before proceeding with the import. |
+| [#1492](https://github.com/tscircuit/tscircuit.com/pull/1492) | 🐌 Tiny | Fixes layout issues and styling inconsistencies across multiple pages in the application. |
+| [#1484](https://github.com/tscircuit/tscircuit.com/pull/1484) | 🐌 Tiny | Removes a line that causes an error during the JLCPCB import process, preventing the error from occurring. |
+| [#1479](https://github.com/tscircuit/tscircuit.com/pull/1479) | 🐌 Tiny | Fixes the jlcpcb import functionality by correcting the fetch request headers and ensuring proper authorization is applied. |
+| [#892](https://github.com/tscircuit/runframe/pull/892) | 🐌 Tiny | Adds support for customizable main component rendering in RunFrameWithApi by introducing mainComponentPath from the window object. |
 | [#887](https://github.com/tscircuit/runframe/pull/887) | 🐌 Tiny | Adjusted the width of the dialog content for better responsiveness. Improved text sizes and spacing for dialog titles, descriptions, and buttons. Enhanced the layout of search results and component details for better usability. Updated styles for various elements to ensure consistency across different screen sizes. Fixed minor layout issues in the component details dialog for improved visual clarity. fix black background issue |
 
 </details>
@@ -535,7 +579,7 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#7](https://github.com/tscircuit/led-water-accelerometer/pull/7) | 🐙 Minor | ⭐⭐ | Adds firmware for controlling a NeoPixel LED matrix to display animated text and patterns, including scrolling text and letter animations. |
+| [#7](https://github.com/tscircuit/led-water-accelerometer/pull/7) | 🐙 Minor | ⭐⭐ | Adds firmware to control a NeoPixel LED matrix for displaying animated text and patterns, specifically for the tscircuit logo. |
 
 <details>
 <summary>🐌 Tiny Contributions (2)</summary>
@@ -547,13 +591,25 @@ pie
 
 </details>
 
+### [tscircuitbot](https://github.com/tscircuitbot)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#716](https://github.com/tscircuit/eval/pull/716) | 🐌 Tiny | Updates the tscircuitcore dependency from version 0.0.571 to 0.0.574, along with several other related dependencies. |
+
+</details>
+
 ## Repository Owners
 
 | Repository | Codeowners |
 |------------|------------|
-| [sparkfun-boards](https://github.com/tscircuit/sparkfun-boards/blob/main/.github/CODEOWNERS) | [MustafaMulla29](https://github.com/MustafaMulla29) |
-| [tscircuit.com](https://github.com/tscircuit/tscircuit.com/blob/main/.github/CODEOWNERS) | [seveibar](https://github.com/seveibar), [imrishabh18](https://github.com/imrishabh18) |
+| [sparkfun-boards](https://github.com/tscircuit/sparkfun-boards/blob/main/.github/CODEOWNERS) | [Abse2001](https://github.com/Abse2001), [MustafaMulla29](https://github.com/MustafaMulla29) |
 | [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) | [Abse2001](https://github.com/Abse2001) |
+| [tscircuit.com](https://github.com/tscircuit/tscircuit.com/blob/main/.github/CODEOWNERS) | [seveibar](https://github.com/seveibar), [imrishabh18](https://github.com/imrishabh18) |
 | [schematic-symbols](https://github.com/tscircuit/schematic-symbols/blob/main/.github/CODEOWNERS) | [techmannih](https://github.com/techmannih) |
 | [cli](https://github.com/tscircuit/cli/blob/main/.github/CODEOWNERS) | [ArnavK-09](https://github.com/ArnavK-09) |
 
@@ -561,9 +617,10 @@ pie
 
 | User | Repo |
 |------|------|
+| [Abse2001](https://github.com/Abse2001) | [sparkfun-boards](https://github.com/tscircuit/sparkfun-boards/blob/main/.github/CODEOWNERS) |
+|  | [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) |
 | [MustafaMulla29](https://github.com/MustafaMulla29) | [sparkfun-boards](https://github.com/tscircuit/sparkfun-boards/blob/main/.github/CODEOWNERS) |
 | [seveibar](https://github.com/seveibar) | [tscircuit.com](https://github.com/tscircuit/tscircuit.com/blob/main/.github/CODEOWNERS) |
-| [Abse2001](https://github.com/Abse2001) | [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) |
 | [techmannih](https://github.com/techmannih) | [schematic-symbols](https://github.com/tscircuit/schematic-symbols/blob/main/.github/CODEOWNERS) |
 | [imrishabh18](https://github.com/imrishabh18) | [tscircuit.com](https://github.com/tscircuit/tscircuit.com/blob/main/.github/CODEOWNERS) |
 | [ArnavK-09](https://github.com/ArnavK-09) | [cli](https://github.com/tscircuit/cli/blob/main/.github/CODEOWNERS) |
