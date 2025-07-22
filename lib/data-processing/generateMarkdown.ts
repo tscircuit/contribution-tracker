@@ -214,6 +214,7 @@ export async function generateMarkdown(
     Rejections: "rejectionsGiven",
     "PRs Opened": "prsOpened",
     "PRs Merged": "prsMerged",
+    Score: "score",
     "Issues Created": "issuesCreated",
     "Bountied Issues": "bountiedIssuesCount",
     "Bountied Issue $": "bountiedIssuesTotal",
@@ -234,14 +235,14 @@ export async function generateMarkdown(
   markdown += "\n"
 
   Object.entries(contributorIdToStatsMap).forEach(
-    ([contributor, stats]: any[]) => {
+    ([contributor, stats]: [string, ContributorStats]) => {
       markdown += "|"
       columnTitles.forEach((columnTitle) => {
         if (columnTitle.toLowerCase().trim() === "contributor") {
           markdown += ` [${contributor}](#${contributor.replace(/\s/g, "-")}) |`
           return
         }
-        markdown += ` ${stats[columnTitleToPropName[columnTitle]]} |`
+        markdown += ` ${stats[columnTitleToPropName[columnTitle] as keyof ContributorStats]} |`
       })
       markdown += "\n"
     },

@@ -1,0 +1,107 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateMarkdown should generate markdown with expected sections and contributor data: markdown 1`] = `
+"# Contribution Overview 2024-07-01
+
+## PRs by Repository
+
+\`\`\`mermaid
+pie
+    "org/repo" : 2
+    "org/another-repo" : 1
+\`\`\`
+
+## Contributor Overview
+
+| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
+|-------------|---------|---------|---------|-----|----------------|--------------------------|
+| [alice](#alice) | 1 | 0 | 1 | ⭐ | 1 | 2🔹 1🔶 0💎 |
+| [bob](#bob) | 0 | 1 | 0 |  | 0 | 0🔹 0🔶 1💎 |
+
+### Discussion Contribution Legend
+
+- 🔹 Normal Comments: Basic participation with minimal effort
+- 🔶 Great Informative Comments: Thoughtful participation that adds value
+- 💎 Incredible Comments: Exceptional participation with high-quality content
+
+## Review Table
+
+[reviews-received-hover]: ## "Number of reviews received for PRs for this contributor"
+[approvals-received-hover]: ## "Number of approvals received for PRs this contributor authored"
+[rejections-received-hover]: ## "Number of rejections received for PRs this contributor authored"
+[prs-opened-hover]: ## "Number of PRs opened by this contributor"
+[issues-created-hover]: ## "Number of issues created by this contributor"
+[bountied-issues-hover]: ## "Number of issues this contributor created with a bounty"
+[bountied-issue-$-hover]: ## "Total bounty amount placed on issues authored by this contributor"
+
+| Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Score | Issues Created | Bountied Issues | Bountied Issue $ |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| [alice](#alice) | 1 | 1 | 0 | 2 | 0 | 2 | 1 | 5 | 1 | 0 | 0 |
+| [bob](#bob) | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 2 | 0 | 0 | 0 |
+
+## Top 7 Repositories by Contribution Points
+
+\`\`\`mermaid
+pie
+    "org/repo" : 6
+    "org/another-repo" : 1
+\`\`\`
+
+## Changes by Repository
+
+### [org/repo](https://github.com/org/repo)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#1](https://github.com/org/repo/pull/1) | 🐳 Major | ⭐⭐⭐ | alice | Add feature X |
+| [#2](https://github.com/org/repo/pull/2) | 🐙 Minor | ⭐⭐ | bob | Fix bug Y |
+
+### [org/another-repo](https://github.com/org/another-repo)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#3](https://github.com/org/another-repo/pull/3) | 🐌 Tiny | alice | Update docs |
+
+</details>
+
+## Changes by Contributor
+
+### [alice](https://github.com/alice)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#1](https://github.com/org/repo/pull/1) | 🐳 Major | ⭐⭐⭐ | Add feature X |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#3](https://github.com/org/another-repo/pull/3) | 🐌 Tiny | Update docs |
+
+</details>
+
+### [bob](https://github.com/bob)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#2](https://github.com/org/repo/pull/2) | 🐙 Minor | ⭐⭐ | Fix bug Y |
+
+## Repository Owners
+
+| Repository | Codeowners |
+|------------|------------|
+| [org/repo](https://github.com/org/repo/blob/main/.github/CODEOWNERS) | [alice](https://github.com/alice) |
+
+## Repos by Owner
+
+| User | Repo |
+|------|------|
+| [alice](https://github.com/alice) | [org/repo](https://github.com/org/repo/blob/main/.github/CODEOWNERS) |
+
+"
+`;
