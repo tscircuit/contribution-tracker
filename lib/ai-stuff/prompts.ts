@@ -86,6 +86,7 @@ Strictly assess the PR across the following dimensions:
    - "Solves discord bug where user can't see boards with many traces inside RunFrame preview"
    - "Add Mosfet symbol"
    - "Fixes KiCad symbol export when jumper is misaligned"
+   - Do not include any hyperlinks, or image links, just use plain text
 </description>
 
 ${Object.entries(PR_ATTRIBUTES)
