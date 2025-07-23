@@ -78,6 +78,7 @@ Strictly assess the PR across the following dimensions:
 
 <description>
    Provide a concise 1-line summary clearly stating what this PR changes for users
+   Do not include any hyperlinks, or image links, just use plain text
 
    Give precise details, DO NOT SAY "improves XXX" or "enhances XXX",
    if the PR fixes a precise bug, be precise e.g.
@@ -86,7 +87,6 @@ Strictly assess the PR across the following dimensions:
    - "Solves discord bug where user can't see boards with many traces inside RunFrame preview"
    - "Add Mosfet symbol"
    - "Fixes KiCad symbol export when jumper is misaligned"
-   - Do not include any hyperlinks, or image links, just use plain text
 </description>
 
 ${Object.entries(PR_ATTRIBUTES)
