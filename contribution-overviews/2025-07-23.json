@@ -1,12 +1,12 @@
 {
   "Abse2001": {
-    "reviewsReceived": 7,
+    "reviewsReceived": 8,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "approvalsGiven": 9,
+    "approvalsReceived": 7,
+    "approvalsGiven": 11,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 6,
+    "prsOpened": 11,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -21,23 +21,29 @@
         "paths": [
           "/boards/SparkFun-Transceiver-Breakout-MAX3232/"
         ]
+      },
+      {
+        "repo": "tscircuit/schematic-corpus",
+        "paths": [
+          "/designs/**"
+        ]
       }
     ],
-    "distinctPrsReviewedAsCodeOwner": 9,
-    "score": 15.5,
+    "distinctPrsReviewedAsCodeOwner": 11,
+    "score": 23,
     "stars": "⭐⭐",
-    "major": 0,
+    "major": 1,
     "minor": 1,
-    "tiny": 5
+    "tiny": 8
   },
   "ArnavK-09": {
-    "reviewsReceived": 20,
+    "reviewsReceived": 21,
     "rejectionsReceived": 0,
-    "approvalsReceived": 17,
+    "approvalsReceived": 18,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 18,
+    "prsOpened": 19,
+    "prsMerged": 19,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -54,20 +60,20 @@
         ]
       }
     ],
-    "score": 36.5,
+    "score": 41.5,
     "stars": "⭐⭐⭐",
-    "major": 7,
-    "minor": 0,
-    "tiny": 10
+    "major": 8,
+    "minor": 1,
+    "tiny": 9
   },
   "MustafaMulla29": {
-    "reviewsReceived": 10,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 10,
+    "approvalsReceived": 12,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
-    "prsMerged": 9,
+    "prsOpened": 11,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -76,19 +82,19 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 9,
+    "score": 10,
     "stars": "⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 9
+    "tiny": 11
   },
   "ShiboSoftwareDev": {
     "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
-    "approvalsGiven": 3,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 3,
     "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -98,21 +104,21 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 5.5,
+    "distinctPrsReviewedAsCodeOwner": 2,
+    "score": 6.5,
     "stars": "⭐",
     "major": 0,
     "minor": 1,
     "tiny": 1
   },
   "abimaelmartell": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 3,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 2,
+    "prsOpened": 6,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -121,11 +127,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 6,
+    "score": 5,
     "stars": "⭐",
-    "major": 1,
-    "minor": 1,
-    "tiny": 0
+    "major": 0,
+    "minor": 2,
+    "tiny": 1
   },
   "andrii-balitskyi": {
     "reviewsReceived": 3,
@@ -148,6 +154,22 @@
     "major": 0,
     "minor": 0,
     "tiny": 1
+  },
+  "copilot-pull-request-reviewer[bot]": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 0,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 0,
+    "stars": ""
   },
   "cursor[bot]": {
     "reviewsReceived": 0,
@@ -182,13 +204,13 @@
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 15,
     "rejectionsReceived": 1,
-    "approvalsReceived": 6,
+    "approvalsReceived": 8,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 17,
-    "prsMerged": 14,
+    "prsOpened": 20,
+    "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -205,26 +227,32 @@
         ]
       }
     ],
-    "score": 14.5,
+    "score": 17,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 0,
-    "tiny": 13
+    "tiny": 16
   },
   "seveibar": {
-    "reviewsReceived": 13,
+    "reviewsReceived": 18,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 33,
+    "approvalsGiven": 37,
     "rejectionsGiven": 1,
-    "prsOpened": 37,
-    "prsMerged": 33,
+    "prsOpened": 53,
+    "prsMerged": 47,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 19,
-    "distinctPrsReviewedAsCodeOwner": 17,
+    "distinctPrsReviewedNonCodeOwner": 20,
+    "distinctPrsReviewedAsCodeOwner": 20,
     "reposOwned": [
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/cli",
         "paths": [
@@ -232,11 +260,11 @@
         ]
       }
     ],
-    "score": 63,
+    "score": 68,
     "stars": "👑",
-    "major": 8,
+    "major": 9,
     "minor": 2,
-    "tiny": 23
+    "tiny": 36
   },
   "techmannih": {
     "reviewsReceived": 4,
@@ -275,8 +303,8 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 22,
-    "prsMerged": 0,
+    "prsOpened": 26,
+    "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -285,7 +313,10 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 2,
+    "stars": "",
+    "major": 0,
+    "minor": 0,
+    "tiny": 2
   }
 }
