@@ -29,31 +29,32 @@ The current week is shown below. There are 3 major sections:
 ```mermaid
 pie
     "tscircuit/tscircuit.com" : 12
-    "tscircuit/runframe" : 5
+    "tscircuit/runframe" : 6
     "tscircuit/cli" : 9
     "tscircuit/pcb-viewer" : 1
     "tscircuit/contribution-tracker" : 1
     "tscircuit/assembly-viewer" : 1
     "tscircuit/circuit-json-to-simple-3d" : 2
     "tscircuit/circuit-json-flex" : 3
-    "tscircuit/tscircuit" : 9
-    "tscircuit/props" : 6
-    "tscircuit/core" : 13
+    "tscircuit/tscircuit" : 10
+    "tscircuit/circuit-json-util" : 8
+    "tscircuit/props" : 7
+    "tscircuit/core" : 16
     "tscircuit/circuit-json-to-gerber" : 3
-    "tscircuit/circuit-json-util" : 5
-    "tscircuit/jlcsearch" : 3
+    "tscircuit/jlcsearch" : 6
     "tscircuit/calculate-elbow" : 1
-    "tscircuit/calculate-packing" : 4
-    "tscircuit/circuit-json" : 2
+    "tscircuit/calculate-packing" : 6
+    "tscircuit/circuit-json" : 3
+    "tscircuit/kicad-viewer" : 1
     "tscircuit/jscad-fiber" : 1
     "tscircuit/eval" : 5
     "tscircuit/docs" : 1
     "tscircuit/tscircuit-autorouter" : 3
+    "tscircuit/schematic-corpus" : 21
     "tscircuit/iframe" : 2
-    "tscircuit/sparkfun-boards" : 2
+    "tscircuit/sparkfun-boards" : 4
     "tscircuit/footprinter" : 2
-    "tscircuit/schematic-corpus" : 14
-    "tscircuit/circuit-json-to-spice" : 1
+    "tscircuit/circuit-json-to-spice" : 2
     "tscircuit/easyeda-converter" : 1
 ```
 
@@ -61,15 +62,15 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 9 | 2 | 36 | 👑 | 0 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 8 | 1 | 9 | ⭐⭐⭐ | 0 | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 1 | 1 | 8 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 1 | 0 | 16 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 11 | ⭐ | 0 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 1 | 1 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 10 | 7 | 44 | 👑👑 | 0 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 6 | 1 | 11 | ⭐⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 2 | 1 | 13 | ⭐⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 1 | 1 | 18 | ⭐⭐ | 0 | 0🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 12 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 1 | 2 | ⭐ | 0 | 0🔹 0🔶 0💎 |
 | [abimaelmartell](#abimaelmartell) | 0 | 2 | 1 | ⭐ | 0 | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 0 | 0 | 2 |  | 0 | 0🔹 0🔶 0💎 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 2 |  | 0 | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
 | [andrii-balitskyi](#andrii-balitskyi) | 0 | 0 | 1 |  | 0 | 0🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
@@ -90,31 +91,31 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Score | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| [ArnavK-09](#ArnavK-09) | 21 | 18 | 0 | 0 | 0 | 19 | 19 | 41.5 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 18 | 0 | 0 | 37 | 1 | 53 | 47 | 68 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 15 | 8 | 1 | 0 | 0 | 20 | 17 | 17 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 21 | 18 | 0 | 0 | 0 | 19 | 19 | 35.5 | 0 | 0 | 0 |
+| [seveibar](#seveibar) | 23 | 0 | 0 | 40 | 1 | 68 | 61 | 82 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 16 | 9 | 1 | 0 | 0 | 24 | 20 | 19.5 | 0 | 0 | 0 |
 | [cursor[bot]](#cursor[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [Abse2001](#Abse2001) | 8 | 7 | 0 | 11 | 0 | 11 | 10 | 23 | 0 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 3 | 1 | 0 | 4 | 0 | 3 | 2 | 6.5 | 0 | 0 | 0 |
+| [Abse2001](#Abse2001) | 10 | 9 | 0 | 13 | 0 | 16 | 16 | 31.5 | 0 | 0 | 0 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [techmannih](#techmannih) | 4 | 2 | 0 | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 6 | 3 | 0 | 6 | 0 | 4 | 3 | 9.5 | 0 | 0 | 0 |
+| [techmannih](#techmannih) | 5 | 3 | 0 | 0 | 0 | 3 | 2 | 2 | 0 | 0 | 0 |
 | [andrii-balitskyi](#andrii-balitskyi) | 3 | 1 | 0 | 0 | 0 | 2 | 1 | 1 | 0 | 0 | 0 |
 | [abimaelmartell](#abimaelmartell) | 4 | 3 | 0 | 0 | 0 | 6 | 3 | 5 | 0 | 0 | 0 |
 | [copilot-pull-request-reviewer[bot]](#copilot-pull-request-reviewer[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 26 | 2 | 2 | 0 | 0 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 12 | 12 | 0 | 0 | 0 | 11 | 11 | 10 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 32 | 2 | 2 | 0 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 13 | 13 | 0 | 0 | 0 | 12 | 12 | 10 | 0 | 0 | 0 |
 
 ## Top 7 Repositories by Contribution Points
 
 ```mermaid
 pie
-    "tscircuit/tscircuit.com" : 28
-    "tscircuit/core" : 20
+    "tscircuit/core" : 25
+    "tscircuit/tscircuit.com" : 22
+    "tscircuit/schematic-corpus" : 21
     "tscircuit/cli" : 18
-    "tscircuit/schematic-corpus" : 14
-    "tscircuit/runframe" : 11
-    "tscircuit/calculate-packing" : 10
-    "tscircuit/tscircuit" : 9
+    "tscircuit/calculate-packing" : 16
+    "tscircuit/runframe" : 13
+    "tscircuit/jlcsearch" : 12
 ```
 
 ## Changes by Repository
@@ -123,23 +124,23 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#1508](https://github.com/tscircuit/tscircuit.com/pull/1508) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Add validation to ensure circuit JSON exists before allowing AI review request, preventing errors when required data is missing. |
-| [#1506](https://github.com/tscircuit/tscircuit.com/pull/1506) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Automatically generates a package name based on the users account and existing packages if no name is provided. |
 | [#1505](https://github.com/tscircuit/tscircuit.com/pull/1505) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Fixes real-time updates for package details when files change during detail updates. |
 | [#1504](https://github.com/tscircuit/tscircuit.com/pull/1504) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds a click handler for the license file in the sidebar, enabling automatic viewing of the license file when clicked. |
 | [#1501](https://github.com/tscircuit/tscircuit.com/pull/1501) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds file renaming functionality to the file management system, allowing users to rename files within the application. |
-| [#1509](https://github.com/tscircuit/tscircuit.com/pull/1509) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes incorrect component fetching in CodeEditorHeader by using the actual component name from props instead of a hardcoded value. |
+| [#1509](https://github.com/tscircuit/tscircuit.com/pull/1509) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes incorrect component fetching by using the actual component name from props instead of a hardcoded value. |
 
 <details>
-<summary>🐌 Tiny Contributions (6)</summary>
+<summary>🐌 Tiny Contributions (8)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#1508](https://github.com/tscircuit/tscircuit.com/pull/1508) | 🐌 Tiny | ArnavK-09 | Add validation to ensure circuit JSON exists before allowing AI review request, preventing errors when required data is missing. |
+| [#1506](https://github.com/tscircuit/tscircuit.com/pull/1506) | 🐌 Tiny | ArnavK-09 | Automatically generates a package name based on the users account and existing packages if no name is provided. |
 | [#1507](https://github.com/tscircuit/tscircuit.com/pull/1507) | 🐌 Tiny | ArnavK-09 | Adjusts loading state height in CodeAndPreview component, modifies dropdown menu item padding in main-content-header, and redesigns error boundary with improved visuals and reload option. |
-| [#1512](https://github.com/tscircuit/tscircuit.com/pull/1512) | 🐌 Tiny | imrishabh18 | Sets the eval version to 0.0.264 temporarily to avoid issues with the latest eval version until it is stable |
+| [#1512](https://github.com/tscircuit/tscircuit.com/pull/1512) | 🐌 Tiny | imrishabh18 | Sets the eval version to 0.0.264 temporarily to avoid issues with the latest eval version until it is stable. |
 | [#1503](https://github.com/tscircuit/tscircuit.com/pull/1503) | 🐌 Tiny | imrishabh18 | Add the packages marked and react-error-boundary (required by runframe) |
 | [#1513](https://github.com/tscircuit/tscircuit.com/pull/1513) | 🐌 Tiny | seveibar | Updates the eval version to the latest by enabling the forceLatestEvalVersion flag in the CodeAndPreview component. |
-| [#1502](https://github.com/tscircuit/tscircuit.com/pull/1502) | 🐌 Tiny | Abse2001 | Moves dotenv configuration from the entrypoint to vite.config for better environment variable management. |
+| [#1502](https://github.com/tscircuit/tscircuit.com/pull/1502) | 🐌 Tiny | Abse2001 | Moves dotenv configuration from the entry point to vite.config for better environment variable management. |
 | [#1510](https://github.com/tscircuit/tscircuit.com/pull/1510) | 🐌 Tiny | abimaelmartell | Fixes the import functionality to use JLCPCB Part Number instead of just the component name. |
 
 </details>
@@ -148,15 +149,16 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#914](https://github.com/tscircuit/runframe/pull/914) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds utilities for converting Uint8Array to base64 and for encoding file maps, enabling the sharing of multiple files in error reports. |
+| [#914](https://github.com/tscircuit/runframe/pull/914) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds utilities for converting Uint8Array to base64 and compressing file maps, enabling sharing of multiple files in error reports. |
 | [#898](https://github.com/tscircuit/runframe/pull/898) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | img width1847 height988 altimage srchttps:github.comuser-attachmentsassetse09727d3-52dc-413d-a701-0d41b629438a  https:github.comuser-attachmentsassets7139446f-7066-4594-8b9c-f40db8ac0acd |
+| [#928](https://github.com/tscircuit/runframe/pull/928) | 🐙 Minor | ⭐⭐ | imrishabh18 | Makes the Report Issue button visible on the errors tab even when there are no errors, allowing users to report issues more easily. |
 
 <details>
 <summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#908](https://github.com/tscircuit/runframe/pull/908) | 🐌 Tiny | ArnavK-09 | Changes placeholder text in FileSelectorCombobox and refactors state variable names for clarity in file selection logic. |
+| [#908](https://github.com/tscircuit/runframe/pull/908) | 🐌 Tiny | ArnavK-09 | Fixes placeholder text in FileSelectorCombobox and refactors state variable names for clarity in file selection logic. |
 | [#925](https://github.com/tscircuit/runframe/pull/925) | 🐌 Tiny | imrishabh18 | Resolves eval version to the numeric latest version instead of the literal string latest. |
 | [#915](https://github.com/tscircuit/runframe/pull/915) | 🐌 Tiny | imrishabh18 | Adds utilities for encoding file maps and enhances issue reporting links in the RunFrame preview components. |
 
@@ -168,7 +170,7 @@ pie
 |------|--------|--------|-------------|-------------|
 | [#294](https://github.com/tscircuit/cli/pull/294) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Add recursive search for entrypoints in child directories with depth limit, improve validation for project directory and file paths, add constants for allowed entrypoint names and search limits, better error handling and validation messages, remove unused saveProjectConfig import, support listing all files in root dir where cmd ran |
 | [#299](https://github.com/tscircuit/cli/pull/299) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds an interactive command to the CLI for importing components from JLCPCB or the tscircuit registry. |
-| [#298](https://github.com/tscircuit/cli/pull/298) | 🐳 Major | ⭐⭐⭐ | seveibar | Extends the tsci search command to query the JLC search API and display star counts for registry results, while removing the interactive selection part of the search command. |
+| [#298](https://github.com/tscircuit/cli/pull/298) | 🐳 Major | ⭐⭐⭐ | seveibar | Extends the tsci search command to query the JLC search API and display star counts for registry results while removing the interactive selection part of the search command. |
 
 <details>
 <summary>🐌 Tiny Contributions (6)</summary>
@@ -180,7 +182,7 @@ pie
 | [#291](https://github.com/tscircuit/cli/pull/291) | 🐌 Tiny | ArnavK-09 | Updates the version of the runframe and simple-3d-svg dependencies in the project, ensuring compatibility and access to the latest features. |
 | [#297](https://github.com/tscircuit/cli/pull/297) | 🐌 Tiny | seveibar | Fixes the production outage by importing tscircuit dependencies from userland during the build process, ensuring that the correct version is utilized and preventing build failures. |
 | [#296](https://github.com/tscircuit/cli/pull/296) | 🐌 Tiny | seveibar | Adds an explicit script for bun build to reduce bundling issues and prevents bundling of typescript. |
-| [#295](https://github.com/tscircuit/cli/pull/295) | 🐌 Tiny | Abse2001 | Makes the tscircuit dependency optional to resolve version mismatch issues in the project. |
+| [#295](https://github.com/tscircuit/cli/pull/295) | 🐌 Tiny | Abse2001 | Fixes dependency version mismatch by making tscircuit an optional peer dependency in package.json |
 
 </details>
 
@@ -216,7 +218,7 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#6](https://github.com/tscircuit/assembly-viewer/pull/6) | 🐌 Tiny | ArnavK-09 | Changes the background color of the AssemblyViewer component from F5F1ED to FFFFFF. |
+| [#6](https://github.com/tscircuit/assembly-viewer/pull/6) | 🐌 Tiny | ArnavK-09 | Changes the background color of the AssemblyViewer component from a light beige to white. |
 
 </details>
 
@@ -224,7 +226,7 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#7](https://github.com/tscircuit/circuit-json-to-simple-3d/pull/7) | 🐳 Major | ⭐⭐⭐ | seveibar | Integrates 3D model support into the rendering process for circuit designs, allowing for STL and OBJ models to be displayed alongside PCB components. |
+| [#7](https://github.com/tscircuit/circuit-json-to-simple-3d/pull/7) | 🐙 Minor | ⭐⭐ | seveibar | Integrates 3D model support into the rendering process for circuit designs, allowing for STL and OBJ models to be displayed alongside circuit components in the 3D view. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
@@ -246,8 +248,8 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#4](https://github.com/tscircuit/circuit-json-flex/pull/4) | 🐌 Tiny | imrishabh18 | Adds a build script to package.json for compiling TypeScript files into a distributable format using tsup-node. |
-| [#3](https://github.com/tscircuit/circuit-json-flex/pull/3) | 🐌 Tiny | imrishabh18 | Adds support for subcircuit groups in the layout of circuit JSON, allowing for better organization and rendering of PCB components within groups. |
+| [#4](https://github.com/tscircuit/circuit-json-flex/pull/4) | 🐌 Tiny | imrishabh18 | Adds a build script in npm for releasing the project using tsup-node. |
+| [#3](https://github.com/tscircuit/circuit-json-flex/pull/3) | 🐌 Tiny | imrishabh18 | Adds support for subcircuit groups in the layout circuit JSON functionality, allowing for better organization and rendering of PCB components within groups. |
 
 </details>
 
@@ -255,19 +257,41 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (9)</summary>
+<summary>🐌 Tiny Contributions (10)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#723](https://github.com/tscircuit/tscircuit/pull/723) | 🐌 Tiny | imrishabh18 | Updates the version of the tscircuitcircuit-json-util package from 0.0.54 to 0.0.57 in package.json |
-| [#718](https://github.com/tscircuit/tscircuit/pull/718) | 🐌 Tiny | imrishabh18 | Updates the versions of tscircuitcore and tscircuitprops in package.json to the latest releases. |
+| [#724](https://github.com/tscircuit/tscircuit/pull/724) | 🐌 Tiny | imrishabh18 | Updates the circuit-json-util dependency to version 0.0.58 in package.json |
+| [#723](https://github.com/tscircuit/tscircuit/pull/723) | 🐌 Tiny | imrishabh18 | Updates the circuit-json-util dependency to version 0.0.57 in package.json |
+| [#718](https://github.com/tscircuit/tscircuit/pull/718) | 🐌 Tiny | imrishabh18 | Updates the versions of tscircuitcore and tscircuitprops in package.json |
 | [#714](https://github.com/tscircuit/tscircuit/pull/714) | 🐌 Tiny | imrishabh18 | Updates the tscircuitcore dependency version from 0.0.574 to 0.0.576 in package.json |
 | [#722](https://github.com/tscircuit/tscircuit/pull/722) | 🐌 Tiny | seveibar | Adds new dependencies for packing and flex support, and updates existing dependencies in the project. |
-| [#721](https://github.com/tscircuit/tscircuit/pull/721) | 🐌 Tiny | seveibar | Updates the CLI dependency to fix an outage caused by a userland import issue. |
+| [#721](https://github.com/tscircuit/tscircuit/pull/721) | 🐌 Tiny | seveibar | Updates the CLI dependency to version 0.1.187 to resolve an outage caused by a userland import issue. |
 | [#720](https://github.com/tscircuit/tscircuit/pull/720) | 🐌 Tiny | seveibar | Fixes libonly package generation and adds jscad-fiber and jscad-planner dependencies to the project. |
 | [#719](https://github.com/tscircuit/tscircuit/pull/719) | 🐌 Tiny | seveibar | Adds a new workflow to publish a libonly version of the package, creating a separate package.json for it. |
-| [#717](https://github.com/tscircuit/tscircuit/pull/717) | 🐌 Tiny | seveibar | Updates the CLI and packages to lock to a single version of react-reconciler, ensuring consistent behavior across the application. |
-| [#715](https://github.com/tscircuit/tscircuit/pull/715) | 🐌 Tiny | Abse2001 | Updates the tscircuitcli dependency version from 0.1.179 to 0.1.185 in package.json and adds yalc. and .yalc to .gitignore. |
+| [#717](https://github.com/tscircuit/tscircuit/pull/717) | 🐌 Tiny | seveibar | Locks the project to a single version of react-reconciler to ensure consistent behavior across environments. |
+| [#715](https://github.com/tscircuit/tscircuit/pull/715) | 🐌 Tiny | Abse2001 | Updates the tscircuitcli dependency version from 0.1.179 to 0.1.185 and adds yalc. and .yalc to .gitignore. |
+
+</details>
+
+### [tscircuit/circuit-json-util](https://github.com/tscircuit/circuit-json-util)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#42](https://github.com/tscircuit/circuit-json-util/pull/42) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds the getCircuitJsonTree function for building a tree structure of circuit elements and fixes the buildSubtree function to ignore parent_source_group_id. |
+
+<details>
+<summary>🐌 Tiny Contributions (7)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#47](https://github.com/tscircuit/circuit-json-util/pull/47) | 🐌 Tiny | imrishabh18 | Ensures that root-level source groups are included in the circuit JSON tree even when there are no nested groups. |
+| [#49](https://github.com/tscircuit/circuit-json-util/pull/49) | 🐌 Tiny | seveibar | Maps silkscreenpath to pcb_silkscreen_path and adds tests for the transformation functionality. |
+| [#48](https://github.com/tscircuit/circuit-json-util/pull/48) | 🐌 Tiny | seveibar | Flips the width and height of PCB components when they are rotated by 90 or 270 degrees. |
+| [#45](https://github.com/tscircuit/circuit-json-util/pull/45) | 🐌 Tiny | seveibar | Improves handling of groupless cases by allowing empty groups to return a tree without sourceGroup, while also including pcb_component as a subelement of sourceComponent. |
+| [#44](https://github.com/tscircuit/circuit-json-util/pull/44) | 🐌 Tiny | seveibar | Changes the source_group_id property in the options parameter from a required string to an optional string. |
+| [#43](https://github.com/tscircuit/circuit-json-util/pull/43) | 🐌 Tiny | seveibar | Fixes issues in the getCircuitJsonTree function by ensuring child nodes are properly initialized and improves the tree structure generation. |
+| [#40](https://github.com/tscircuit/circuit-json-util/pull/40) | 🐌 Tiny | seveibar | Add a utility function to reposition PCB components and their children in the circuit JSON structure. |
 
 </details>
 
@@ -275,11 +299,12 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (6)</summary>
+<summary>🐌 Tiny Contributions (7)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#333](https://github.com/tscircuit/props/pull/333) | 🐌 Tiny | imrishabh18 | Adds new justifyContent values (space-between, space-around, space-evenly) to the layout configuration for improved layout options. |
+| [#338](https://github.com/tscircuit/props/pull/338) | 🐌 Tiny | seveibar | Adds new pack order strategies: first_to_last and highest_to_lowest_pin_count, updates documentation, and tests new enum values. |
 | [#337](https://github.com/tscircuit/props/pull/337) | 🐌 Tiny | seveibar | Adds a layers option in BoardProps with 2 or 4 as allowed values, updates documentation, and upgrades the expect-type dev dependency. |
 | [#336](https://github.com/tscircuit/props/pull/336) | 🐌 Tiny | seveibar | Adds support for a relative layout mode in group layout configuration, including documentation and tests for parsing the new layout mode. |
 | [#335](https://github.com/tscircuit/props/pull/335) | 🐌 Tiny | seveibar | Adds a step to format the README file using Prettier after it is generated by the script. |
@@ -292,23 +317,26 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#1087](https://github.com/tscircuit/core/pull/1087) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds PCB packing functionality by implementing calculate-packing and updating properties for layout preparation. |
-| [#1101](https://github.com/tscircuit/core/pull/1101) | 🐙 Minor | ⭐⭐ | seveibar | Adds support for board layers in autorouting by exposing subcircuit layer count and utilizing the board layers property for routing decisions. |
+| [#1087](https://github.com/tscircuit/core/pull/1087) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds PCB packing functionality by implementing calculate-packing and updating properties for layout implementation. |
+| [#1104](https://github.com/tscircuit/core/pull/1104) | 🐙 Minor | ⭐⭐ | seveibar | Fixes unnamed components by providing unique names and applies group transforms to ensure proper layout of components within groups. |
+| [#1105](https://github.com/tscircuit/core/pull/1105) | 🐙 Minor | ⭐⭐ | seveibar | Fixes PCB and schematic grid layouts to correctly read the gridGap property and adds tests for overlapping plated holes by verifying minimum distances between them. |
+| [#1101](https://github.com/tscircuit/core/pull/1101) | 🐙 Minor | ⭐⭐ | seveibar | Adds support for board layers in autorouting by exposing subcircuit layer count and utilizing the board layers property for routing calculations. |
 | [#1099](https://github.com/tscircuit/core/pull/1099) | 🐙 Minor | ⭐⭐ | seveibar | Populates parent_source_group_id when rendering nested groups and updates circuit-json to the latest version. |
-| [#1098](https://github.com/tscircuit/core/pull/1098) | 🐙 Minor | ⭐⭐ | abimaelmartell | Fixes incorrect schematic SVG generation due to miscalculated elbow segments in the calculate-elbow logic for schematic traces. |
-| [#1092](https://github.com/tscircuit/core/pull/1092) | 🐙 Minor | ⭐⭐ | abimaelmartell | Fixes incorrect junction placement on schematic traces due to floating-point precision issues, ensuring junctions only appear at actual intersections. |
+| [#1098](https://github.com/tscircuit/core/pull/1098) | 🐙 Minor | ⭐⭐ | abimaelmartell | Fixes bug in calculate-elbow logic for schematic traces by mapping facingDirection values to expected string values, resolving incorrect SVG generation for schematic traces. |
+| [#1092](https://github.com/tscircuit/core/pull/1092) | 🐙 Minor | ⭐⭐ | abimaelmartell | Fixes incorrect junction placement on schematic traces due to floating-point precision issues, ensuring junctions only appear at actual intersections between traces. |
 
 <details>
-<summary>🐌 Tiny Contributions (8)</summary>
+<summary>🐌 Tiny Contributions (9)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#1091](https://github.com/tscircuit/core/pull/1091) | 🐌 Tiny | imrishabh18 | Adds support for flex layout within the board component, allowing for dynamic arrangement of child components based on specified justify content properties. |
+| [#1091](https://github.com/tscircuit/core/pull/1091) | 🐌 Tiny | imrishabh18 | Adds support for flex layout within the board component, allowing for dynamic arrangement of child components based on specified justifyContent properties. |
 | [#1088](https://github.com/tscircuit/core/pull/1088) | 🐌 Tiny | imrishabh18 | Adds support for a new PCB layout mode called flex in the Group component, allowing for flexible layout configurations. |
 | [#1085](https://github.com/tscircuit/core/pull/1085) | 🐌 Tiny | imrishabh18 | Allows the width and height of the pcb_group to be specified as props, enabling more flexible layout configurations. |
-| [#1100](https://github.com/tscircuit/core/pull/1100) | 🐌 Tiny | seveibar | Adds support for nested packing in PCB layout calculations, allowing for packing without requiring connections between components. |
+| [#1103](https://github.com/tscircuit/core/pull/1103) | 🐌 Tiny | seveibar | Adds reproduction for overlapping plated holes when using grid layout with mm string gap and parses string grid gaps in PCB and schematic layout helpers. |
+| [#1100](https://github.com/tscircuit/core/pull/1100) | 🐌 Tiny | seveibar | Adds support for nested packing in PCB layout without requiring connections between components. |
 | [#1095](https://github.com/tscircuit/core/pull/1095) | 🐌 Tiny | seveibar | Adds support for rotating packed components in PCB layout. |
-| [#1096](https://github.com/tscircuit/core/pull/1096) | 🐌 Tiny | seveibar | Sets the default schematic layout to match-adapt when no layout is specified and no manual placements are present, while skipping auto layout if manual placements exist. |
+| [#1096](https://github.com/tscircuit/core/pull/1096) | 🐌 Tiny | seveibar | Sets the default schematic layout to match-adapt when no layout is chosen and children do not position themselves, while skipping auto layout if manual placements are present. |
 | [#1093](https://github.com/tscircuit/core/pull/1093) | 🐌 Tiny | seveibar | Add a test for a flex board containing pack-layout groups and update calculate-packing to the latest version. |
 | [#1094](https://github.com/tscircuit/core/pull/1094) | 🐌 Tiny | seveibar | Enhances the error message for unsupported components by providing a link to documentation and hints for users. |
 
@@ -323,26 +351,8 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#50](https://github.com/tscircuit/circuit-json-to-gerber/pull/50) | 🐌 Tiny | imrishabh18 | Moves circuit-json from dependencies to devDependencies in package.json |
-| [#47](https://github.com/tscircuit/circuit-json-to-gerber/pull/47) | 🐌 Tiny | imrishabh18 | Adds a Renovate configuration file to automate dependency updates and manage package rules. |
+| [#47](https://github.com/tscircuit/circuit-json-to-gerber/pull/47) | 🐌 Tiny | imrishabh18 | Adds a Renovate configuration file to manage dependency updates automatically. |
 | [#46](https://github.com/tscircuit/circuit-json-to-gerber/pull/46) | 🐌 Tiny | imrishabh18 | Updates the version of the circuit-json dependency from a wildcard to a specific version (0.0.220) in package.json |
-
-</details>
-
-### [tscircuit/circuit-json-util](https://github.com/tscircuit/circuit-json-util)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#42](https://github.com/tscircuit/circuit-json-util/pull/42) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds the getCircuitJsonTree function for building a tree structure of circuit elements and fixes the buildSubtree function to ignore parent_source_group_id. |
-
-<details>
-<summary>🐌 Tiny Contributions (4)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#45](https://github.com/tscircuit/circuit-json-util/pull/45) | 🐌 Tiny | seveibar | Improves handling of groupless cases by allowing empty groups to return a tree without sourceGroup, while including pcb_component as a subelement of sourceComponent. |
-| [#44](https://github.com/tscircuit/circuit-json-util/pull/44) | 🐌 Tiny | seveibar | Changes the source_group_id property in the options parameter from a required string to an optional string. |
-| [#43](https://github.com/tscircuit/circuit-json-util/pull/43) | 🐌 Tiny | seveibar | Fixes issues in the getCircuitJsonTree function by ensuring child nodes are properly initialized and improves the tree structure generation. |
-| [#40](https://github.com/tscircuit/circuit-json-util/pull/40) | 🐌 Tiny | seveibar | Adds a utility function to reposition PCB components and their children within the circuit JSON structure. |
 
 </details>
 
@@ -350,14 +360,17 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#70](https://github.com/tscircuit/jlcsearch/pull/70) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds a derived table for PCIe M.2 connectors, updates the setup script to build the new table, creates a list page and JSON endpoint, documents PCIe M.2 connectors, and adds a basic test for the new route. |
 | [#66](https://github.com/tscircuit/jlcsearch/pull/66) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds relay support by introducing a new relay component and related database schema, along with a new route for listing relays. |
 
 <details>
-<summary>🐌 Tiny Contributions (2)</summary>
+<summary>🐌 Tiny Contributions (4)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#68](https://github.com/tscircuit/jlcsearch/pull/68) | 🐌 Tiny | seveibar | Adds a new derived table for USB-C connectors, sets up the table in the derived table script, creates a new route and documentation for USB-C connectors, links them from the index page, updates database types, updates the Kysely library to the latest version, and adds tests for the new route. |
+| [#72](https://github.com/tscircuit/jlcsearch/pull/72) | 🐌 Tiny | seveibar | Allows empty gender query on headerslist and tests that empty gender query doesnt error |
+| [#69](https://github.com/tscircuit/jlcsearch/pull/69) | 🐌 Tiny | seveibar | Fixes tests to handle optional color field in LED data and relaxes API search tests for empty results. |
+| [#68](https://github.com/tscircuit/jlcsearch/pull/68) | 🐌 Tiny | seveibar | Adds a new derived table for USB-C connectors, sets up the table in the derived table script, creates a new route and documentation for USB-C connectors, links USB-C connectors from the index page, updates database types, updates the Kysely library to the latest version, and adds tests for the new route. |
 | [#67](https://github.com/tscircuit/jlcsearch/pull/67) | 🐌 Tiny | seveibar | Adds a new page for analog switches, including a route for filtering and displaying data, along with tests for the new functionality. |
 
 </details>
@@ -366,14 +379,16 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#4](https://github.com/tscircuit/calculate-elbow/pull/4) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes elbow calculation for x- to y cases when the start point is right and above the destination by implementing an overshooting strategy and adds a test for this scenario. |
+| [#4](https://github.com/tscircuit/calculate-elbow/pull/4) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes elbow calculation for x- to y cases when the start point is right and above the destination by implementing an overshooting strategy and adding a test for this scenario. |
 
 ### [tscircuit/calculate-packing](https://github.com/tscircuit/calculate-packing)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#5](https://github.com/tscircuit/calculate-packing/pull/5) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds disconnected pack direction functionality, refactors existing code, and provides an example for disconnected direction implementation. |
+| [#6](https://github.com/tscircuit/calculate-packing/pull/6) | 🐳 Major | ⭐⭐⭐ | seveibar | Introduces a new method for converting nested circuit JSON structures into pack output, enhancing the handling of nested groups in circuit designs. |
+| [#5](https://github.com/tscircuit/calculate-packing/pull/5) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds support for disconnected packing direction in the packing algorithm, allowing components to be placed based on their nearest to center or specified direction. |
 | [#3](https://github.com/tscircuit/calculate-packing/pull/3) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes the issue where candidate components are not being invalidated based on the minGap distance during rotation calculations. |
+| [#7](https://github.com/tscircuit/calculate-packing/pull/7) | 🐙 Minor | ⭐⭐ | seveibar | Fixes incorrect warning messages for unsupported smtpad shapes in the packing layout. |
 
 <details>
 <summary>🐌 Tiny Contributions (2)</summary>
@@ -389,6 +404,7 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#245](https://github.com/tscircuit/circuit-json/pull/245) | 🐙 Minor | ⭐⭐ | seveibar | Introduces new types for rotated pill holes and SMT pads, enhancing the PCB design capabilities. |
 | [#244](https://github.com/tscircuit/circuit-json/pull/244) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Defines a voltage source for simulation purposes, applying a voltage difference between two source ports. |
 
 <details>
@@ -396,7 +412,19 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#243](https://github.com/tscircuit/circuit-json/pull/243) | 🐌 Tiny | seveibar | Adds an optional parent_source_group_id field to the source group schema and interface. |
+| [#243](https://github.com/tscircuit/circuit-json/pull/243) | 🐌 Tiny | seveibar | Adds an optional parent_source_group_id field to the source group definition in the data model. |
+
+</details>
+
+### [tscircuit/kicad-viewer](https://github.com/tscircuit/kicad-viewer)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#9](https://github.com/tscircuit/kicad-viewer/pull/9) | 🐌 Tiny | seveibar | Adds a prebuild script that generates Circuit JSON files for all KiCad footprints and documents the prebuild step in the README. |
 
 </details>
 
@@ -408,7 +436,7 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#111](https://github.com/tscircuit/jscad-fiber/pull/111) | 🐌 Tiny | seveibar | Adds optional peer dependencies for three libraries, allowing for more flexible usage in projects without requiring all three to be installed. |
+| [#111](https://github.com/tscircuit/jscad-fiber/pull/111) | 🐌 Tiny | seveibar | Adds optional peer dependencies for react-threefiber, jscadmodeling, and three in package.json, allowing for more flexible installations. |
 
 </details>
 
@@ -420,11 +448,11 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#746](https://github.com/tscircuit/eval/pull/746) | 🐌 Tiny | seveibar | Fixes the issue where the eval function fails to load due to the zod library not being bundled, and adds a version method to the worker for health checks. |
+| [#746](https://github.com/tscircuit/eval/pull/746) | 🐌 Tiny | seveibar | Fixes the issue where the eval function fails to load due to the zod library not being bundled, and adds a version method to the CircuitRunner class to check the health of the worker. |
 | [#745](https://github.com/tscircuit/eval/pull/745) | 🐌 Tiny | seveibar | Locks the zod library version to 3 in package.json to ensure compatibility and prevent breaking changes from future updates. |
 | [#726](https://github.com/tscircuit/eval/pull/726) | 🐌 Tiny | seveibar | Updates the jscad-fiber dependency to version 0.0.82, adding more optional dependencies for enhanced functionality. |
 | [#743](https://github.com/tscircuit/eval/pull/743) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore dependency to version 0.0.587 without introducing new functionality. |
-| [#741](https://github.com/tscircuit/eval/pull/741) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore package to version 0.0.586, along with other related dependency updates in package.json. |
+| [#741](https://github.com/tscircuit/eval/pull/741) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore package to version 0.0.586, along with minor updates to other dependencies in package.json. |
 
 </details>
 
@@ -454,6 +482,38 @@ pie
 
 </details>
 
+### [tscircuit/schematic-corpus](https://github.com/tscircuit/schematic-corpus)
+
+
+<details>
+<summary>🐌 Tiny Contributions (21)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#120](https://github.com/tscircuit/schematic-corpus/pull/120) | 🐌 Tiny | seveibar | Adds a test to verify that schematic components do not overlap in the design files. |
+| [#126](https://github.com/tscircuit/schematic-corpus/pull/126) | 🐌 Tiny | Abse2001 | Adds a new circuit design (design086) that includes a chip, resistor, and capacitor with specific placements and connections for improved functionality in the matchAdapt algorithm. |
+| [#125](https://github.com/tscircuit/schematic-corpus/pull/125) | 🐌 Tiny | Abse2001 | Creates a new schematic design in the tscircuitschematic-corpus repository |
+| [#124](https://github.com/tscircuit/schematic-corpus/pull/124) | 🐌 Tiny | Abse2001 | Adds a new design (design084) to enhance the matchAdapt algorithm functionality. |
+| [#123](https://github.com/tscircuit/schematic-corpus/pull/123) | 🐌 Tiny | Abse2001 | Adds a new circuit design (design083) that enhances the matchAdapt algorithm with specific manual placements for components. |
+| [#117](https://github.com/tscircuit/schematic-corpus/pull/117) | 🐌 Tiny | Abse2001 | Adds a new circuit design (design78) to enhance the matchAdapt algorithm functionality. |
+| [#116](https://github.com/tscircuit/schematic-corpus/pull/116) | 🐌 Tiny | Abse2001 | Adds a new circuit design (design77) to enhance the matchAdapt algorithm functionality. |
+| [#115](https://github.com/tscircuit/schematic-corpus/pull/115) | 🐌 Tiny | Abse2001 | Updates the tscircuit dependency to the latest version, which includes the latest autorouter patch. |
+| [#121](https://github.com/tscircuit/schematic-corpus/pull/121) | 🐌 Tiny | techmannih | Adds a new circuit design (design081) to enhance the matchAdapt algorithm and renames an existing design (design080) for clarity. |
+| [#122](https://github.com/tscircuit/schematic-corpus/pull/122) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design82) to enhance the matchAdapt algorithm functionality. |
+| [#119](https://github.com/tscircuit/schematic-corpus/pull/119) | 🐌 Tiny | MustafaMulla29 | Adds a new design component (design80) to enhance the matchAdapt algorithm functionality. |
+| [#118](https://github.com/tscircuit/schematic-corpus/pull/118) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design79) to enhance the matchAdapt algorithm functionality. |
+| [#114](https://github.com/tscircuit/schematic-corpus/pull/114) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design76) to enhance the matchAdapt algorithm functionality. |
+| [#113](https://github.com/tscircuit/schematic-corpus/pull/113) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design075) to the schematic corpus, which includes a new circuit board layout and connections for a capacitor and chip. |
+| [#112](https://github.com/tscircuit/schematic-corpus/pull/112) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design74) to enhance the matchAdapt algorithm functionality. |
+| [#111](https://github.com/tscircuit/schematic-corpus/pull/111) | 🐌 Tiny | MustafaMulla29 | Adds a new design component (design73) to enhance the matchAdapt algorithm functionality. |
+| [#110](https://github.com/tscircuit/schematic-corpus/pull/110) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design072) to the schematic corpus, which includes a new circuit board layout and connections for components. |
+| [#109](https://github.com/tscircuit/schematic-corpus/pull/109) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design071) to the schematic corpus, which includes a new circuit board layout and components for the matchAdapt algorithm. |
+| [#107](https://github.com/tscircuit/schematic-corpus/pull/107) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design69) to enhance the matchAdapt algorithm functionality. |
+| [#106](https://github.com/tscircuit/schematic-corpus/pull/106) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design68) to the schematic corpus, which includes various components like capacitors, resistors, and diodes for the matchAdapt algorithm. |
+| [#108](https://github.com/tscircuit/schematic-corpus/pull/108) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design70) to enhance the matchAdapt algorithm functionality. |
+
+</details>
+
 ### [tscircuit/iframe](https://github.com/tscircuit/iframe)
 
 
@@ -471,8 +531,18 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#88](https://github.com/tscircuit/sparkfun-boards/pull/88) | 🐳 Major | ⭐⭐⭐ | Abse2001 | Introduces a new circuit board design for the SparkFun Line Sensor Breakout QRE1113, including schematic and footprint definitions. |
 | [#86](https://github.com/tscircuit/sparkfun-boards/pull/86) | 🐳 Major | ⭐⭐⭐ | Abse2001 | Introduces a new circuit board for the SparkFun Line Sensor Breakout QRE1113 Analog, including its schematic and footprint. |
 | [#85](https://github.com/tscircuit/sparkfun-boards/pull/85) | 🐙 Minor | ⭐⭐ | Abse2001 | No description provided |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#92](https://github.com/tscircuit/sparkfun-boards/pull/92) | 🐌 Tiny | Abse2001 | Updates the CODEOWNERS file to assign new owners to several SparkFun boards. |
+
+</details>
 
 ### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
 
@@ -483,32 +553,7 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#333](https://github.com/tscircuit/footprinter/pull/333) | 🐌 Tiny | Abse2001 | Renames the backsidelabel parameter to bottomsidepinlabel in the pinrow definition and related tests. |
-| [#322](https://github.com/tscircuit/footprinter/pull/322) | 🐌 Tiny | techmannih | Introduces a new footprint variant for the JST-SH connector, allowing for better integration of this component in PCB designs. |
-
-</details>
-
-### [tscircuit/schematic-corpus](https://github.com/tscircuit/schematic-corpus)
-
-
-<details>
-<summary>🐌 Tiny Contributions (14)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#117](https://github.com/tscircuit/schematic-corpus/pull/117) | 🐌 Tiny | Abse2001 | Adds a new circuit design (design78) to enhance the matchAdapt algorithm functionality. |
-| [#116](https://github.com/tscircuit/schematic-corpus/pull/116) | 🐌 Tiny | Abse2001 | Adds a new circuit design (design77) to enhance the matchAdapt algorithm functionality. |
-| [#115](https://github.com/tscircuit/schematic-corpus/pull/115) | 🐌 Tiny | Abse2001 | Updates the tscircuit dependency to the latest version, which includes the latest autorouter patch. |
-| [#119](https://github.com/tscircuit/schematic-corpus/pull/119) | 🐌 Tiny | MustafaMulla29 | Adds a new design component (design80) to enhance the matchAdapt algorithm functionality. |
-| [#118](https://github.com/tscircuit/schematic-corpus/pull/118) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design79) to enhance the matchAdapt algorithm functionality. |
-| [#114](https://github.com/tscircuit/schematic-corpus/pull/114) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design76) to enhance the matchAdapt algorithm functionality. |
-| [#113](https://github.com/tscircuit/schematic-corpus/pull/113) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design075) to the schematic corpus, which includes a new circuit board layout and connections for a capacitor and chip. |
-| [#112](https://github.com/tscircuit/schematic-corpus/pull/112) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design74) to enhance the matchAdapt algorithm functionality. |
-| [#111](https://github.com/tscircuit/schematic-corpus/pull/111) | 🐌 Tiny | MustafaMulla29 | Adds a new design component (design73) to enhance the matchAdapt algorithm functionality. |
-| [#110](https://github.com/tscircuit/schematic-corpus/pull/110) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design072) to the schematic corpus, which includes a new circuit board layout and connections for components. |
-| [#109](https://github.com/tscircuit/schematic-corpus/pull/109) | 🐌 Tiny | MustafaMulla29 | Adds a new design (design071) to the schematic corpus, which includes a new circuit board layout and components for the matchAdapt algorithm. |
-| [#107](https://github.com/tscircuit/schematic-corpus/pull/107) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design69) to enhance the matchAdapt algorithm functionality. |
-| [#106](https://github.com/tscircuit/schematic-corpus/pull/106) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design68) to enhance the matchAdapt algorithm functionality. |
-| [#108](https://github.com/tscircuit/schematic-corpus/pull/108) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design70) to enhance the matchAdapt algorithm functionality. |
+| [#322](https://github.com/tscircuit/footprinter/pull/322) | 🐌 Tiny | techmannih | Introduces a new footprint variant for the JST-SH connector, allowing for better integration of this component in circuit designs. |
 
 </details>
 
@@ -516,10 +561,11 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#7](https://github.com/tscircuit/circuit-json-to-spice/pull/7) | 🐌 Tiny | ShiboSoftwareDev | Adds support for simulation voltage sources in the circuit JSON to SPICE conversion process. |
 | [#6](https://github.com/tscircuit/circuit-json-to-spice/pull/6) | 🐌 Tiny | ShiboSoftwareDev | This PR updates package dependencies and formats the codebase for consistency. |
 
 </details>
@@ -532,7 +578,7 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#289](https://github.com/tscircuit/easyeda-converter/pull/289) | 🐌 Tiny | andrii-balitskyi | Adds support for POLYGON pad shapes in the EasyEDA to TSCircuit conversion process, allowing for more complex pad geometries. |
+| [#289](https://github.com/tscircuit/easyeda-converter/pull/289) | 🐌 Tiny | andrii-balitskyi | Adds support for POLYGON pad shapes in the EasyEDA to TSCircuit conversion process, allowing for more complex pad designs. |
 
 </details>
 
@@ -542,29 +588,29 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#1508](https://github.com/tscircuit/tscircuit.com/pull/1508) | 🐳 Major | ⭐⭐⭐ | Add validation to ensure circuit JSON exists before allowing AI review request, preventing errors when required data is missing. |
-| [#1506](https://github.com/tscircuit/tscircuit.com/pull/1506) | 🐳 Major | ⭐⭐⭐ | Automatically generates a package name based on the users account and existing packages if no name is provided. |
 | [#1505](https://github.com/tscircuit/tscircuit.com/pull/1505) | 🐳 Major | ⭐⭐⭐ | Fixes real-time updates for package details when files change during detail updates. |
 | [#1504](https://github.com/tscircuit/tscircuit.com/pull/1504) | 🐳 Major | ⭐⭐⭐ | Adds a click handler for the license file in the sidebar, enabling automatic viewing of the license file when clicked. |
 | [#1501](https://github.com/tscircuit/tscircuit.com/pull/1501) | 🐳 Major | ⭐⭐⭐ | Adds file renaming functionality to the file management system, allowing users to rename files within the application. |
-| [#914](https://github.com/tscircuit/runframe/pull/914) | 🐳 Major | ⭐⭐⭐ | Adds utilities for converting Uint8Array to base64 and for encoding file maps, enabling the sharing of multiple files in error reports. |
+| [#914](https://github.com/tscircuit/runframe/pull/914) | 🐳 Major | ⭐⭐⭐ | Adds utilities for converting Uint8Array to base64 and compressing file maps, enabling sharing of multiple files in error reports. |
 | [#898](https://github.com/tscircuit/runframe/pull/898) | 🐳 Major | ⭐⭐⭐ | img width1847 height988 altimage srchttps:github.comuser-attachmentsassetse09727d3-52dc-413d-a701-0d41b629438a  https:github.comuser-attachmentsassets7139446f-7066-4594-8b9c-f40db8ac0acd |
 | [#294](https://github.com/tscircuit/cli/pull/294) | 🐳 Major | ⭐⭐⭐ | Add recursive search for entrypoints in child directories with depth limit, improve validation for project directory and file paths, add constants for allowed entrypoint names and search limits, better error handling and validation messages, remove unused saveProjectConfig import, support listing all files in root dir where cmd ran |
-| [#1509](https://github.com/tscircuit/tscircuit.com/pull/1509) | 🐙 Minor | ⭐⭐ | Fixes incorrect component fetching in CodeEditorHeader by using the actual component name from props instead of a hardcoded value. |
+| [#1509](https://github.com/tscircuit/tscircuit.com/pull/1509) | 🐙 Minor | ⭐⭐ | Fixes incorrect component fetching by using the actual component name from props instead of a hardcoded value. |
 
 <details>
-<summary>🐌 Tiny Contributions (9)</summary>
+<summary>🐌 Tiny Contributions (11)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#348](https://github.com/tscircuit/pcb-viewer/pull/348) | 🐌 Tiny | Adds react, react-dom, react-reconciler, and react-reconciler-18 as external dependencies in the build configuration. |
 | [#205](https://github.com/tscircuit/contribution-tracker/pull/205) | 🐌 Tiny | Clarify that PR assessment descriptions should use plain text only without any hyperlinks or image links to maintain consistency in output format. |
+| [#1508](https://github.com/tscircuit/tscircuit.com/pull/1508) | 🐌 Tiny | Add validation to ensure circuit JSON exists before allowing AI review request, preventing errors when required data is missing. |
+| [#1506](https://github.com/tscircuit/tscircuit.com/pull/1506) | 🐌 Tiny | Automatically generates a package name based on the users account and existing packages if no name is provided. |
 | [#1507](https://github.com/tscircuit/tscircuit.com/pull/1507) | 🐌 Tiny | Adjusts loading state height in CodeAndPreview component, modifies dropdown menu item padding in main-content-header, and redesigns error boundary with improved visuals and reload option. |
-| [#908](https://github.com/tscircuit/runframe/pull/908) | 🐌 Tiny | Changes placeholder text in FileSelectorCombobox and refactors state variable names for clarity in file selection logic. |
+| [#908](https://github.com/tscircuit/runframe/pull/908) | 🐌 Tiny | Fixes placeholder text in FileSelectorCombobox and refactors state variable names for clarity in file selection logic. |
 | [#293](https://github.com/tscircuit/cli/pull/293) | 🐌 Tiny | Updates the tscircuitrunframe dependency to version 0.0.722 to resolve development command issues. |
 | [#292](https://github.com/tscircuit/cli/pull/292) | 🐌 Tiny | Replaces hardcoded entrypoint path with dynamic retrieval using getEntrypoint function in development command. |
 | [#291](https://github.com/tscircuit/cli/pull/291) | 🐌 Tiny | Updates the version of the runframe and simple-3d-svg dependencies in the project, ensuring compatibility and access to the latest features. |
-| [#6](https://github.com/tscircuit/assembly-viewer/pull/6) | 🐌 Tiny | Changes the background color of the AssemblyViewer component from F5F1ED to FFFFFF. |
+| [#6](https://github.com/tscircuit/assembly-viewer/pull/6) | 🐌 Tiny | Changes the background color of the AssemblyViewer component from a light beige to white. |
 | [#8](https://github.com/tscircuit/circuit-json-to-simple-3d/pull/8) | 🐌 Tiny | Fixes the lock file to ensure that npm publish can be resumed without issues. |
 
 </details>
@@ -574,28 +620,31 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#2](https://github.com/tscircuit/circuit-json-flex/pull/2) | 🐳 Major | ⭐⭐⭐ | Adds a new function to layout PCB components using a flex-box algorithm, allowing for dynamic positioning of components within a specified container size. |
+| [#928](https://github.com/tscircuit/runframe/pull/928) | 🐙 Minor | ⭐⭐ | Makes the Report Issue button visible on the errors tab even when there are no errors, allowing users to report issues more easily. |
 
 <details>
-<summary>🐌 Tiny Contributions (16)</summary>
+<summary>🐌 Tiny Contributions (18)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#723](https://github.com/tscircuit/tscircuit/pull/723) | 🐌 Tiny | Updates the version of the tscircuitcircuit-json-util package from 0.0.54 to 0.0.57 in package.json |
-| [#718](https://github.com/tscircuit/tscircuit/pull/718) | 🐌 Tiny | Updates the versions of tscircuitcore and tscircuitprops in package.json to the latest releases. |
+| [#724](https://github.com/tscircuit/tscircuit/pull/724) | 🐌 Tiny | Updates the circuit-json-util dependency to version 0.0.58 in package.json |
+| [#723](https://github.com/tscircuit/tscircuit/pull/723) | 🐌 Tiny | Updates the circuit-json-util dependency to version 0.0.57 in package.json |
+| [#718](https://github.com/tscircuit/tscircuit/pull/718) | 🐌 Tiny | Updates the versions of tscircuitcore and tscircuitprops in package.json |
 | [#714](https://github.com/tscircuit/tscircuit/pull/714) | 🐌 Tiny | Updates the tscircuitcore dependency version from 0.0.574 to 0.0.576 in package.json |
+| [#47](https://github.com/tscircuit/circuit-json-util/pull/47) | 🐌 Tiny | Ensures that root-level source groups are included in the circuit JSON tree even when there are no nested groups. |
 | [#333](https://github.com/tscircuit/props/pull/333) | 🐌 Tiny | Adds new justifyContent values (space-between, space-around, space-evenly) to the layout configuration for improved layout options. |
-| [#1091](https://github.com/tscircuit/core/pull/1091) | 🐌 Tiny | Adds support for flex layout within the board component, allowing for dynamic arrangement of child components based on specified justify content properties. |
+| [#1091](https://github.com/tscircuit/core/pull/1091) | 🐌 Tiny | Adds support for flex layout within the board component, allowing for dynamic arrangement of child components based on specified justifyContent properties. |
 | [#1088](https://github.com/tscircuit/core/pull/1088) | 🐌 Tiny | Adds support for a new PCB layout mode called flex in the Group component, allowing for flexible layout configurations. |
 | [#1085](https://github.com/tscircuit/core/pull/1085) | 🐌 Tiny | Allows the width and height of the pcb_group to be specified as props, enabling more flexible layout configurations. |
 | [#50](https://github.com/tscircuit/circuit-json-to-gerber/pull/50) | 🐌 Tiny | Moves circuit-json from dependencies to devDependencies in package.json |
-| [#47](https://github.com/tscircuit/circuit-json-to-gerber/pull/47) | 🐌 Tiny | Adds a Renovate configuration file to automate dependency updates and manage package rules. |
+| [#47](https://github.com/tscircuit/circuit-json-to-gerber/pull/47) | 🐌 Tiny | Adds a Renovate configuration file to manage dependency updates automatically. |
 | [#46](https://github.com/tscircuit/circuit-json-to-gerber/pull/46) | 🐌 Tiny | Updates the version of the circuit-json dependency from a wildcard to a specific version (0.0.220) in package.json |
-| [#1512](https://github.com/tscircuit/tscircuit.com/pull/1512) | 🐌 Tiny | Sets the eval version to 0.0.264 temporarily to avoid issues with the latest eval version until it is stable |
+| [#1512](https://github.com/tscircuit/tscircuit.com/pull/1512) | 🐌 Tiny | Sets the eval version to 0.0.264 temporarily to avoid issues with the latest eval version until it is stable. |
 | [#1503](https://github.com/tscircuit/tscircuit.com/pull/1503) | 🐌 Tiny | Add the packages marked and react-error-boundary (required by runframe) |
 | [#925](https://github.com/tscircuit/runframe/pull/925) | 🐌 Tiny | Resolves eval version to the numeric latest version instead of the literal string latest. |
 | [#915](https://github.com/tscircuit/runframe/pull/915) | 🐌 Tiny | Adds utilities for encoding file maps and enhances issue reporting links in the RunFrame preview components. |
-| [#4](https://github.com/tscircuit/circuit-json-flex/pull/4) | 🐌 Tiny | Adds a build script to package.json for compiling TypeScript files into a distributable format using tsup-node. |
-| [#3](https://github.com/tscircuit/circuit-json-flex/pull/3) | 🐌 Tiny | Adds support for subcircuit groups in the layout of circuit JSON, allowing for better organization and rendering of PCB components within groups. |
+| [#4](https://github.com/tscircuit/circuit-json-flex/pull/4) | 🐌 Tiny | Adds a build script in npm for releasing the project using tsup-node. |
+| [#3](https://github.com/tscircuit/circuit-json-flex/pull/3) | 🐌 Tiny | Adds support for subcircuit groups in the layout circuit JSON functionality, allowing for better organization and rendering of PCB components within groups. |
 
 </details>
 
@@ -604,47 +653,60 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#42](https://github.com/tscircuit/circuit-json-util/pull/42) | 🐳 Major | ⭐⭐⭐ | Adds the getCircuitJsonTree function for building a tree structure of circuit elements and fixes the buildSubtree function to ignore parent_source_group_id. |
-| [#1087](https://github.com/tscircuit/core/pull/1087) | 🐳 Major | ⭐⭐⭐ | Adds PCB packing functionality by implementing calculate-packing and updating properties for layout preparation. |
+| [#1087](https://github.com/tscircuit/core/pull/1087) | 🐳 Major | ⭐⭐⭐ | Adds PCB packing functionality by implementing calculate-packing and updating properties for layout implementation. |
+| [#70](https://github.com/tscircuit/jlcsearch/pull/70) | 🐳 Major | ⭐⭐⭐ | Adds a derived table for PCIe M.2 connectors, updates the setup script to build the new table, creates a list page and JSON endpoint, documents PCIe M.2 connectors, and adds a basic test for the new route. |
 | [#66](https://github.com/tscircuit/jlcsearch/pull/66) | 🐳 Major | ⭐⭐⭐ | Adds relay support by introducing a new relay component and related database schema, along with a new route for listing relays. |
 | [#299](https://github.com/tscircuit/cli/pull/299) | 🐳 Major | ⭐⭐⭐ | Adds an interactive command to the CLI for importing components from JLCPCB or the tscircuit registry. |
-| [#298](https://github.com/tscircuit/cli/pull/298) | 🐳 Major | ⭐⭐⭐ | Extends the tsci search command to query the JLC search API and display star counts for registry results, while removing the interactive selection part of the search command. |
-| [#7](https://github.com/tscircuit/circuit-json-to-simple-3d/pull/7) | 🐳 Major | ⭐⭐⭐ | Integrates 3D model support into the rendering process for circuit designs, allowing for STL and OBJ models to be displayed alongside PCB components. |
-| [#4](https://github.com/tscircuit/calculate-elbow/pull/4) | 🐳 Major | ⭐⭐⭐ | Fixes elbow calculation for x- to y cases when the start point is right and above the destination by implementing an overshooting strategy and adds a test for this scenario. |
-| [#5](https://github.com/tscircuit/calculate-packing/pull/5) | 🐳 Major | ⭐⭐⭐ | Adds disconnected pack direction functionality, refactors existing code, and provides an example for disconnected direction implementation. |
+| [#298](https://github.com/tscircuit/cli/pull/298) | 🐳 Major | ⭐⭐⭐ | Extends the tsci search command to query the JLC search API and display star counts for registry results while removing the interactive selection part of the search command. |
+| [#4](https://github.com/tscircuit/calculate-elbow/pull/4) | 🐳 Major | ⭐⭐⭐ | Fixes elbow calculation for x- to y cases when the start point is right and above the destination by implementing an overshooting strategy and adding a test for this scenario. |
+| [#6](https://github.com/tscircuit/calculate-packing/pull/6) | 🐳 Major | ⭐⭐⭐ | Introduces a new method for converting nested circuit JSON structures into pack output, enhancing the handling of nested groups in circuit designs. |
+| [#5](https://github.com/tscircuit/calculate-packing/pull/5) | 🐳 Major | ⭐⭐⭐ | Adds support for disconnected packing direction in the packing algorithm, allowing components to be placed based on their nearest to center or specified direction. |
 | [#3](https://github.com/tscircuit/calculate-packing/pull/3) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where candidate components are not being invalidated based on the minGap distance during rotation calculations. |
-| [#1101](https://github.com/tscircuit/core/pull/1101) | 🐙 Minor | ⭐⭐ | Adds support for board layers in autorouting by exposing subcircuit layer count and utilizing the board layers property for routing decisions. |
+| [#245](https://github.com/tscircuit/circuit-json/pull/245) | 🐙 Minor | ⭐⭐ | Introduces new types for rotated pill holes and SMT pads, enhancing the PCB design capabilities. |
+| [#1104](https://github.com/tscircuit/core/pull/1104) | 🐙 Minor | ⭐⭐ | Fixes unnamed components by providing unique names and applies group transforms to ensure proper layout of components within groups. |
+| [#1105](https://github.com/tscircuit/core/pull/1105) | 🐙 Minor | ⭐⭐ | Fixes PCB and schematic grid layouts to correctly read the gridGap property and adds tests for overlapping plated holes by verifying minimum distances between them. |
+| [#1101](https://github.com/tscircuit/core/pull/1101) | 🐙 Minor | ⭐⭐ | Adds support for board layers in autorouting by exposing subcircuit layer count and utilizing the board layers property for routing calculations. |
 | [#1099](https://github.com/tscircuit/core/pull/1099) | 🐙 Minor | ⭐⭐ | Populates parent_source_group_id when rendering nested groups and updates circuit-json to the latest version. |
+| [#7](https://github.com/tscircuit/circuit-json-to-simple-3d/pull/7) | 🐙 Minor | ⭐⭐ | Integrates 3D model support into the rendering process for circuit designs, allowing for STL and OBJ models to be displayed alongside circuit components in the 3D view. |
+| [#7](https://github.com/tscircuit/calculate-packing/pull/7) | 🐙 Minor | ⭐⭐ | Fixes incorrect warning messages for unsupported smtpad shapes in the packing layout. |
 
 <details>
-<summary>🐌 Tiny Contributions (36)</summary>
+<summary>🐌 Tiny Contributions (44)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#722](https://github.com/tscircuit/tscircuit/pull/722) | 🐌 Tiny | Adds new dependencies for packing and flex support, and updates existing dependencies in the project. |
-| [#721](https://github.com/tscircuit/tscircuit/pull/721) | 🐌 Tiny | Updates the CLI dependency to fix an outage caused by a userland import issue. |
+| [#721](https://github.com/tscircuit/tscircuit/pull/721) | 🐌 Tiny | Updates the CLI dependency to version 0.1.187 to resolve an outage caused by a userland import issue. |
 | [#720](https://github.com/tscircuit/tscircuit/pull/720) | 🐌 Tiny | Fixes libonly package generation and adds jscad-fiber and jscad-planner dependencies to the project. |
 | [#719](https://github.com/tscircuit/tscircuit/pull/719) | 🐌 Tiny | Adds a new workflow to publish a libonly version of the package, creating a separate package.json for it. |
-| [#717](https://github.com/tscircuit/tscircuit/pull/717) | 🐌 Tiny | Updates the CLI and packages to lock to a single version of react-reconciler, ensuring consistent behavior across the application. |
-| [#243](https://github.com/tscircuit/circuit-json/pull/243) | 🐌 Tiny | Adds an optional parent_source_group_id field to the source group schema and interface. |
-| [#45](https://github.com/tscircuit/circuit-json-util/pull/45) | 🐌 Tiny | Improves handling of groupless cases by allowing empty groups to return a tree without sourceGroup, while including pcb_component as a subelement of sourceComponent. |
+| [#717](https://github.com/tscircuit/tscircuit/pull/717) | 🐌 Tiny | Locks the project to a single version of react-reconciler to ensure consistent behavior across environments. |
+| [#243](https://github.com/tscircuit/circuit-json/pull/243) | 🐌 Tiny | Adds an optional parent_source_group_id field to the source group definition in the data model. |
+| [#49](https://github.com/tscircuit/circuit-json-util/pull/49) | 🐌 Tiny | Maps silkscreenpath to pcb_silkscreen_path and adds tests for the transformation functionality. |
+| [#48](https://github.com/tscircuit/circuit-json-util/pull/48) | 🐌 Tiny | Flips the width and height of PCB components when they are rotated by 90 or 270 degrees. |
+| [#45](https://github.com/tscircuit/circuit-json-util/pull/45) | 🐌 Tiny | Improves handling of groupless cases by allowing empty groups to return a tree without sourceGroup, while also including pcb_component as a subelement of sourceComponent. |
 | [#44](https://github.com/tscircuit/circuit-json-util/pull/44) | 🐌 Tiny | Changes the source_group_id property in the options parameter from a required string to an optional string. |
 | [#43](https://github.com/tscircuit/circuit-json-util/pull/43) | 🐌 Tiny | Fixes issues in the getCircuitJsonTree function by ensuring child nodes are properly initialized and improves the tree structure generation. |
-| [#40](https://github.com/tscircuit/circuit-json-util/pull/40) | 🐌 Tiny | Adds a utility function to reposition PCB components and their children within the circuit JSON structure. |
+| [#40](https://github.com/tscircuit/circuit-json-util/pull/40) | 🐌 Tiny | Add a utility function to reposition PCB components and their children in the circuit JSON structure. |
+| [#338](https://github.com/tscircuit/props/pull/338) | 🐌 Tiny | Adds new pack order strategies: first_to_last and highest_to_lowest_pin_count, updates documentation, and tests new enum values. |
 | [#337](https://github.com/tscircuit/props/pull/337) | 🐌 Tiny | Adds a layers option in BoardProps with 2 or 4 as allowed values, updates documentation, and upgrades the expect-type dev dependency. |
 | [#336](https://github.com/tscircuit/props/pull/336) | 🐌 Tiny | Adds support for a relative layout mode in group layout configuration, including documentation and tests for parsing the new layout mode. |
 | [#335](https://github.com/tscircuit/props/pull/335) | 🐌 Tiny | Adds a step to format the README file using Prettier after it is generated by the script. |
 | [#332](https://github.com/tscircuit/props/pull/332) | 🐌 Tiny | Adds new layout properties for packing strategy in layout configuration. |
 | [#331](https://github.com/tscircuit/props/pull/331) | 🐌 Tiny | Summary add area options and square sizing to subcircuitGroupProps move board dimension properties into subcircuitGroupProps simplify BoardProps and update generated docs  Testing bun test testsboard.test.ts bun test testsstampboard.test.ts bun test tests |
-| [#1100](https://github.com/tscircuit/core/pull/1100) | 🐌 Tiny | Adds support for nested packing in PCB layout calculations, allowing for packing without requiring connections between components. |
+| [#9](https://github.com/tscircuit/kicad-viewer/pull/9) | 🐌 Tiny | Adds a prebuild script that generates Circuit JSON files for all KiCad footprints and documents the prebuild step in the README. |
+| [#1103](https://github.com/tscircuit/core/pull/1103) | 🐌 Tiny | Adds reproduction for overlapping plated holes when using grid layout with mm string gap and parses string grid gaps in PCB and schematic layout helpers. |
+| [#1100](https://github.com/tscircuit/core/pull/1100) | 🐌 Tiny | Adds support for nested packing in PCB layout without requiring connections between components. |
 | [#1095](https://github.com/tscircuit/core/pull/1095) | 🐌 Tiny | Adds support for rotating packed components in PCB layout. |
-| [#1096](https://github.com/tscircuit/core/pull/1096) | 🐌 Tiny | Sets the default schematic layout to match-adapt when no layout is specified and no manual placements are present, while skipping auto layout if manual placements exist. |
+| [#1096](https://github.com/tscircuit/core/pull/1096) | 🐌 Tiny | Sets the default schematic layout to match-adapt when no layout is chosen and children do not position themselves, while skipping auto layout if manual placements are present. |
 | [#1093](https://github.com/tscircuit/core/pull/1093) | 🐌 Tiny | Add a test for a flex board containing pack-layout groups and update calculate-packing to the latest version. |
 | [#1094](https://github.com/tscircuit/core/pull/1094) | 🐌 Tiny | Enhances the error message for unsupported components by providing a link to documentation and hints for users. |
-| [#111](https://github.com/tscircuit/jscad-fiber/pull/111) | 🐌 Tiny | Adds optional peer dependencies for three libraries, allowing for more flexible usage in projects without requiring all three to be installed. |
+| [#111](https://github.com/tscircuit/jscad-fiber/pull/111) | 🐌 Tiny | Adds optional peer dependencies for react-threefiber, jscadmodeling, and three in package.json, allowing for more flexible installations. |
 | [#1513](https://github.com/tscircuit/tscircuit.com/pull/1513) | 🐌 Tiny | Updates the eval version to the latest by enabling the forceLatestEvalVersion flag in the CodeAndPreview component. |
-| [#68](https://github.com/tscircuit/jlcsearch/pull/68) | 🐌 Tiny | Adds a new derived table for USB-C connectors, sets up the table in the derived table script, creates a new route and documentation for USB-C connectors, links them from the index page, updates database types, updates the Kysely library to the latest version, and adds tests for the new route. |
+| [#72](https://github.com/tscircuit/jlcsearch/pull/72) | 🐌 Tiny | Allows empty gender query on headerslist and tests that empty gender query doesnt error |
+| [#69](https://github.com/tscircuit/jlcsearch/pull/69) | 🐌 Tiny | Fixes tests to handle optional color field in LED data and relaxes API search tests for empty results. |
+| [#68](https://github.com/tscircuit/jlcsearch/pull/68) | 🐌 Tiny | Adds a new derived table for USB-C connectors, sets up the table in the derived table script, creates a new route and documentation for USB-C connectors, links USB-C connectors from the index page, updates database types, updates the Kysely library to the latest version, and adds tests for the new route. |
 | [#67](https://github.com/tscircuit/jlcsearch/pull/67) | 🐌 Tiny | Adds a new page for analog switches, including a route for filtering and displaying data, along with tests for the new functionality. |
-| [#746](https://github.com/tscircuit/eval/pull/746) | 🐌 Tiny | Fixes the issue where the eval function fails to load due to the zod library not being bundled, and adds a version method to the worker for health checks. |
+| [#746](https://github.com/tscircuit/eval/pull/746) | 🐌 Tiny | Fixes the issue where the eval function fails to load due to the zod library not being bundled, and adds a version method to the CircuitRunner class to check the health of the worker. |
 | [#745](https://github.com/tscircuit/eval/pull/745) | 🐌 Tiny | Locks the zod library version to 3 in package.json to ensure compatibility and prevent breaking changes from future updates. |
 | [#726](https://github.com/tscircuit/eval/pull/726) | 🐌 Tiny | Updates the jscad-fiber dependency to version 0.0.82, adding more optional dependencies for enhanced functionality. |
 | [#297](https://github.com/tscircuit/cli/pull/297) | 🐌 Tiny | Fixes the production outage by importing tscircuit dependencies from userland during the build process, ensuring that the correct version is utilized and preventing build failures. |
@@ -652,6 +714,7 @@ pie
 | [#104](https://github.com/tscircuit/docs/pull/104) | 🐌 Tiny | Documents the jlcsearch.tscircuit.com API in the Web APIs section. |
 | [#218](https://github.com/tscircuit/tscircuit-autorouter/pull/218) | 🐌 Tiny | Adds a new example for a 4-layer autorouting configuration using the AutoroutingPipelineDebugger component. |
 | [#217](https://github.com/tscircuit/tscircuit-autorouter/pull/217) | 🐌 Tiny | Moves the convertSrjToGraphicsObject function into lib utilities, exports it from the package index, and updates imports in solver and tests. |
+| [#120](https://github.com/tscircuit/schematic-corpus/pull/120) | 🐌 Tiny | Adds a test to verify that schematic components do not overlap in the design files. |
 | [#5](https://github.com/tscircuit/iframe/pull/5) | 🐌 Tiny | Adds documentation for evalVersion and forceLatestEvalVersion props in README and introduces a new format:check script for Biome without write flag. |
 | [#4](https://github.com/tscircuit/iframe/pull/4) | 🐌 Tiny | Adds evalVersion and forceLatestEvalVersion properties to TscircuitIframeProps for enhanced iframe configuration. |
 | [#4](https://github.com/tscircuit/calculate-packing/pull/4) | 🐌 Tiny | Adds support for specifying available rotation degrees for components, allowing for more flexible placement during packing. |
@@ -663,19 +726,25 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
+| [#88](https://github.com/tscircuit/sparkfun-boards/pull/88) | 🐳 Major | ⭐⭐⭐ | Introduces a new circuit board design for the SparkFun Line Sensor Breakout QRE1113, including schematic and footprint definitions. |
 | [#86](https://github.com/tscircuit/sparkfun-boards/pull/86) | 🐳 Major | ⭐⭐⭐ | Introduces a new circuit board for the SparkFun Line Sensor Breakout QRE1113 Analog, including its schematic and footprint. |
 | [#85](https://github.com/tscircuit/sparkfun-boards/pull/85) | 🐙 Minor | ⭐⭐ | No description provided |
 
 <details>
-<summary>🐌 Tiny Contributions (8)</summary>
+<summary>🐌 Tiny Contributions (13)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#715](https://github.com/tscircuit/tscircuit/pull/715) | 🐌 Tiny | Updates the tscircuitcli dependency version from 0.1.179 to 0.1.185 in package.json and adds yalc. and .yalc to .gitignore. |
+| [#715](https://github.com/tscircuit/tscircuit/pull/715) | 🐌 Tiny | Updates the tscircuitcli dependency version from 0.1.179 to 0.1.185 and adds yalc. and .yalc to .gitignore. |
 | [#333](https://github.com/tscircuit/footprinter/pull/333) | 🐌 Tiny | Renames the backsidelabel parameter to bottomsidepinlabel in the pinrow definition and related tests. |
-| [#1502](https://github.com/tscircuit/tscircuit.com/pull/1502) | 🐌 Tiny | Moves dotenv configuration from the entrypoint to vite.config for better environment variable management. |
-| [#295](https://github.com/tscircuit/cli/pull/295) | 🐌 Tiny | Makes the tscircuit dependency optional to resolve version mismatch issues in the project. |
+| [#1502](https://github.com/tscircuit/tscircuit.com/pull/1502) | 🐌 Tiny | Moves dotenv configuration from the entry point to vite.config for better environment variable management. |
+| [#295](https://github.com/tscircuit/cli/pull/295) | 🐌 Tiny | Fixes dependency version mismatch by making tscircuit an optional peer dependency in package.json |
 | [#219](https://github.com/tscircuit/tscircuit-autorouter/pull/219) | 🐌 Tiny | Adds a JSON fixture and a React component to reproduce a bug in the highdensity85 autorouter. |
+| [#92](https://github.com/tscircuit/sparkfun-boards/pull/92) | 🐌 Tiny | Updates the CODEOWNERS file to assign new owners to several SparkFun boards. |
+| [#126](https://github.com/tscircuit/schematic-corpus/pull/126) | 🐌 Tiny | Adds a new circuit design (design086) that includes a chip, resistor, and capacitor with specific placements and connections for improved functionality in the matchAdapt algorithm. |
+| [#125](https://github.com/tscircuit/schematic-corpus/pull/125) | 🐌 Tiny | Creates a new schematic design in the tscircuitschematic-corpus repository |
+| [#124](https://github.com/tscircuit/schematic-corpus/pull/124) | 🐌 Tiny | Adds a new design (design084) to enhance the matchAdapt algorithm functionality. |
+| [#123](https://github.com/tscircuit/schematic-corpus/pull/123) | 🐌 Tiny | Adds a new circuit design (design083) that enhances the matchAdapt algorithm with specific manual placements for components. |
 | [#117](https://github.com/tscircuit/schematic-corpus/pull/117) | 🐌 Tiny | Adds a new circuit design (design78) to enhance the matchAdapt algorithm functionality. |
 | [#116](https://github.com/tscircuit/schematic-corpus/pull/116) | 🐌 Tiny | Adds a new circuit design (design77) to enhance the matchAdapt algorithm functionality. |
 | [#115](https://github.com/tscircuit/schematic-corpus/pull/115) | 🐌 Tiny | Updates the tscircuit dependency to the latest version, which includes the latest autorouter patch. |
@@ -689,10 +758,11 @@ pie
 | [#244](https://github.com/tscircuit/circuit-json/pull/244) | 🐙 Minor | ⭐⭐ | Defines a voltage source for simulation purposes, applying a voltage difference between two source ports. |
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#7](https://github.com/tscircuit/circuit-json-to-spice/pull/7) | 🐌 Tiny | Adds support for simulation voltage sources in the circuit JSON to SPICE conversion process. |
 | [#6](https://github.com/tscircuit/circuit-json-to-spice/pull/6) | 🐌 Tiny | This PR updates package dependencies and formats the codebase for consistency. |
 
 </details>
@@ -701,11 +771,12 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#322](https://github.com/tscircuit/footprinter/pull/322) | 🐌 Tiny | Introduces a new footprint variant for the JST-SH connector, allowing for better integration of this component in PCB designs. |
+| [#322](https://github.com/tscircuit/footprinter/pull/322) | 🐌 Tiny | Introduces a new footprint variant for the JST-SH connector, allowing for better integration of this component in circuit designs. |
+| [#121](https://github.com/tscircuit/schematic-corpus/pull/121) | 🐌 Tiny | Adds a new circuit design (design081) to enhance the matchAdapt algorithm and renames an existing design (design080) for clarity. |
 
 </details>
 
@@ -717,7 +788,7 @@ pie
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#289](https://github.com/tscircuit/easyeda-converter/pull/289) | 🐌 Tiny | Adds support for POLYGON pad shapes in the EasyEDA to TSCircuit conversion process, allowing for more complex pad geometries. |
+| [#289](https://github.com/tscircuit/easyeda-converter/pull/289) | 🐌 Tiny | Adds support for POLYGON pad shapes in the EasyEDA to TSCircuit conversion process, allowing for more complex pad designs. |
 
 </details>
 
@@ -725,8 +796,8 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#1098](https://github.com/tscircuit/core/pull/1098) | 🐙 Minor | ⭐⭐ | Fixes incorrect schematic SVG generation due to miscalculated elbow segments in the calculate-elbow logic for schematic traces. |
-| [#1092](https://github.com/tscircuit/core/pull/1092) | 🐙 Minor | ⭐⭐ | Fixes incorrect junction placement on schematic traces due to floating-point precision issues, ensuring junctions only appear at actual intersections. |
+| [#1098](https://github.com/tscircuit/core/pull/1098) | 🐙 Minor | ⭐⭐ | Fixes bug in calculate-elbow logic for schematic traces by mapping facingDirection values to expected string values, resolving incorrect SVG generation for schematic traces. |
+| [#1092](https://github.com/tscircuit/core/pull/1092) | 🐙 Minor | ⭐⭐ | Fixes incorrect junction placement on schematic traces due to floating-point precision issues, ensuring junctions only appear at actual intersections between traces. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
@@ -746,7 +817,7 @@ pie
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#743](https://github.com/tscircuit/eval/pull/743) | 🐌 Tiny | Updates the tscircuitcore dependency to version 0.0.587 without introducing new functionality. |
-| [#741](https://github.com/tscircuit/eval/pull/741) | 🐌 Tiny | Updates the tscircuitcore package to version 0.0.586, along with other related dependency updates in package.json. |
+| [#741](https://github.com/tscircuit/eval/pull/741) | 🐌 Tiny | Updates the tscircuitcore package to version 0.0.586, along with minor updates to other dependencies in package.json. |
 
 </details>
 
@@ -754,10 +825,11 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (11)</summary>
+<summary>🐌 Tiny Contributions (12)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#122](https://github.com/tscircuit/schematic-corpus/pull/122) | 🐌 Tiny | Adds a new circuit design (design82) to enhance the matchAdapt algorithm functionality. |
 | [#119](https://github.com/tscircuit/schematic-corpus/pull/119) | 🐌 Tiny | Adds a new design component (design80) to enhance the matchAdapt algorithm functionality. |
 | [#118](https://github.com/tscircuit/schematic-corpus/pull/118) | 🐌 Tiny | Adds a new circuit design (design79) to enhance the matchAdapt algorithm functionality. |
 | [#114](https://github.com/tscircuit/schematic-corpus/pull/114) | 🐌 Tiny | Adds a new circuit design (design76) to enhance the matchAdapt algorithm functionality. |
@@ -767,8 +839,8 @@ pie
 | [#110](https://github.com/tscircuit/schematic-corpus/pull/110) | 🐌 Tiny | Adds a new design (design072) to the schematic corpus, which includes a new circuit board layout and connections for components. |
 | [#109](https://github.com/tscircuit/schematic-corpus/pull/109) | 🐌 Tiny | Adds a new design (design071) to the schematic corpus, which includes a new circuit board layout and components for the matchAdapt algorithm. |
 | [#107](https://github.com/tscircuit/schematic-corpus/pull/107) | 🐌 Tiny | Adds a new circuit design (design69) to enhance the matchAdapt algorithm functionality. |
-| [#106](https://github.com/tscircuit/schematic-corpus/pull/106) | 🐌 Tiny | Adds a new circuit design (design68) to enhance the matchAdapt algorithm functionality. |
-| [#108](https://github.com/tscircuit/schematic-corpus/pull/108) | 🐌 Tiny | Adds a new circuit design (design70) to enhance the matchAdapt algorithm functionality. |
+| [#106](https://github.com/tscircuit/schematic-corpus/pull/106) | 🐌 Tiny | Adds a new circuit design (design68) to the schematic corpus, which includes various components like capacitors, resistors, and diodes for the matchAdapt algorithm. |
+| [#108](https://github.com/tscircuit/schematic-corpus/pull/108) | 🐌 Tiny | Adds a new design (design70) to enhance the matchAdapt algorithm functionality. |
 
 </details>
 
