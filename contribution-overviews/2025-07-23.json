@@ -5,8 +5,8 @@
     "approvalsReceived": 9,
     "approvalsGiven": 15,
     "rejectionsGiven": 0,
-    "prsOpened": 16,
-    "prsMerged": 16,
+    "prsOpened": 18,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -30,11 +30,11 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 15,
-    "score": 31,
+    "score": 36,
     "stars": "⭐⭐⭐",
-    "major": 2,
+    "major": 3,
     "minor": 1,
-    "tiny": 13
+    "tiny": 14
   },
   "ArnavK-09": {
     "reviewsReceived": 21,
@@ -52,14 +52,6 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "reposOwned": [
-      {
-        "repo": "tscircuit/cli",
-        "paths": [
-          "*"
-        ]
-      }
-    ],
     "score": 41.5,
     "stars": "⭐⭐⭐",
     "major": 8,
@@ -113,33 +105,34 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 6,
-    "score": 13.5,
+    "score": 15.5,
     "stars": "⭐⭐",
-    "major": 0,
-    "minor": 2,
+    "major": 1,
+    "minor": 1,
     "tiny": 2
   },
   "abimaelmartell": {
-    "reviewsReceived": 4,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
+    "approvalsReceived": 5,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 3,
+    "prsOpened": 9,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 5,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 7,
     "stars": "⭐",
     "major": 0,
     "minor": 2,
-    "tiny": 1
+    "tiny": 2
   },
   "andrii-balitskyi": {
     "reviewsReceived": 3,
@@ -174,7 +167,7 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
@@ -190,7 +183,7 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
@@ -206,23 +199,23 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 19,
+    "reviewsReceived": 24,
     "rejectionsReceived": 1,
-    "approvalsReceived": 11,
+    "approvalsReceived": 15,
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 28,
-    "prsMerged": 22,
+    "prsOpened": 34,
+    "prsMerged": 28,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -233,35 +226,38 @@
         "paths": [
           "*"
         ]
-      },
-      {
-        "repo": "tscircuit/cli",
-        "paths": [
-          "*"
-        ]
       }
     ],
-    "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 24.5,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 29,
     "stars": "⭐⭐",
-    "major": 2,
+    "major": 3,
     "minor": 1,
-    "tiny": 19
+    "tiny": 24
   },
   "seveibar": {
-    "reviewsReceived": 32,
+    "reviewsReceived": 33,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 43,
+    "approvalsGiven": 49,
     "rejectionsGiven": 1,
-    "prsOpened": 88,
-    "prsMerged": 76,
+    "prsOpened": 103,
+    "prsMerged": 83,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 25,
-    "distinctPrsReviewedAsCodeOwner": 22,
+    "distinctPrsReviewedNonCodeOwner": 36,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "reposOwned": [
+      {
+        "repo": "tscircuit/pcb-viewer",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/footprinter",
         "paths": [
@@ -279,19 +275,14 @@
         "paths": [
           "*"
         ]
-      },
-      {
-        "repo": "tscircuit/cli",
-        "paths": [
-          "*"
-        ]
       }
     ],
-    "score": 84,
+    "distinctPrsReviewedAsCodeOwner": 17,
+    "score": 86,
     "stars": "👑👑",
     "major": 12,
-    "minor": 8,
-    "tiny": 56
+    "minor": 9,
+    "tiny": 61
   },
   "techmannih": {
     "reviewsReceived": 7,
@@ -330,8 +321,8 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 42,
-    "prsMerged": 4,
+    "prsOpened": 48,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -340,10 +331,10 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 4,
+    "score": 5,
     "stars": "⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 4
+    "tiny": 5
   }
 }
