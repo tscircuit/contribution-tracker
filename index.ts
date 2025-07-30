@@ -26,10 +26,12 @@ export async function generateOverview(startDate: string) {
     string,
     Set<{ number: number; isReviewerRepoOwner: boolean }>
   > = {}
+  const repoOwnersMap: Record<string, string[]> = {}
 
   for (const repo of repos) {
     console.log(`\nAnalyzing ${repo}`)
     const repoOwners = await fetchCodeownersFile(repo)
+    repoOwnersMap[repo] = repoOwners.map((content) => content.owners).flat()
     console.log(`Found ${repoOwners.length} repo owners`)
     const prsWithReviews = await getAllPRs(repo, startDate)
     console.log(`Found ${prsWithReviews.length} total PRs`)
@@ -299,6 +301,7 @@ export async function generateOverview(startDate: string) {
     mergedPrsWithAnalysis,
     contributorData,
     startDateString,
+    repoOwnersMap,
   )
 }
 
@@ -306,6 +309,7 @@ async function generateAndWriteFiles(
   mergedPrsWithAnalysis: AnalyzedPR[],
   contributorData: Record<string, ContributorStats>,
   startDateString: string,
+  repoOwnersMap: Record<string, string[]>,
 ) {
   console.log("Generating markdown")
   // Group PRs by contributor
@@ -334,6 +338,7 @@ async function generateAndWriteFiles(
     sortedPRs,
     contributorData,
     startDateString,
+    repoOwnersMap,
   )
   console.log("Generated markdown", markdown)
 

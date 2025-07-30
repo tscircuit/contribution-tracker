@@ -95,13 +95,11 @@ pie
 
 | Repository | Codeowners |
 |------------|------------|
-| [org/repo](https://github.com/org/repo/blob/main/.github/CODEOWNERS) | [alice](https://github.com/alice) |
 
-## Repos by Owner
+## Repositories by Owner
 
 | User | Repo |
 |------|------|
-| [alice](https://github.com/alice) | [org/repo](https://github.com/org/repo/blob/main/.github/CODEOWNERS) |
 
 "
 `;
