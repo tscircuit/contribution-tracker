@@ -138,7 +138,7 @@ describe("generateMarkdown", () => {
     expect(markdown).toContain("Update docs")
     expect(markdown).toContain("Discussion Contribution Legend")
     expect(markdown).toContain("Repository Owners")
-    expect(markdown).toContain("Repos by Owner")
+    expect(markdown).toContain("Repositories by Owner")
     expect(markdown).toMatchSnapshot("markdown")
   })
 })
