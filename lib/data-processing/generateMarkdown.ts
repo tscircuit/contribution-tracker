@@ -28,6 +28,7 @@ export async function generateMarkdown(
   prs: AnalyzedPR[],
   contributorIdToStatsMap: Record<string, ContributorStats>,
   weekStart: string,
+  repoOwnersMap: Record<string, string[]> = {},
 ): Promise<string> {
   let markdown = `# Contribution Overview ${weekStart}\n\n`
 
@@ -363,31 +364,7 @@ export async function generateMarkdown(
   markdown += "| Repository | Codeowners |\n"
   markdown += "|------------|------------|\n"
 
-  const repoOwnersWithPaths = Object.entries(contributorIdToStatsMap)
-    .filter(([_, stats]) => stats.reposOwned && stats.reposOwned.length > 0)
-    .reduce(
-      (ownersMap, [ownerName, contributorStats]) => {
-        contributorStats.reposOwned?.forEach(({ repo: repoName, paths }) => {
-          if (!ownersMap[repoName]) {
-            ownersMap[repoName] = { owners: [], paths: [] }
-          }
-          if (!ownersMap[repoName].owners.includes(ownerName)) {
-            ownersMap[repoName].owners.push(ownerName)
-          }
-          if (paths && paths.length > 0) {
-            paths.forEach((path) => {
-              if (!ownersMap[repoName].paths.includes(path)) {
-                ownersMap[repoName].paths.push(path)
-              }
-            })
-          }
-        })
-        return ownersMap
-      },
-      {} as Record<string, { owners: string[]; paths: string[] }>,
-    )
-
-  Object.entries(repoOwnersWithPaths).forEach(([repo, { owners }]) => {
+  Object.entries(repoOwnersMap).forEach(([repo, owners]) => {
     const ownersLinks = owners
       .map((owner) => `[${owner}](https://github.com/${owner})`)
       .join(", ")
@@ -397,36 +374,28 @@ export async function generateMarkdown(
   markdown += "\n"
 
   // Generate Repos by Owner Table
-  markdown += "## Repos by Owner\n\n"
+  markdown += "## Repositories by Owner\n\n"
   markdown += "| User | Repo |\n"
   markdown += "|------|------|\n"
 
-  const ownerRepos = Object.entries(contributorIdToStatsMap)
-    .filter(([_, stats]) => stats.reposOwned && stats.reposOwned.length > 0)
-    .reduce(
-      (ownersMap, [ownerName, contributorStats]) => {
-        if (!ownersMap[ownerName]) {
-          ownersMap[ownerName] = []
-        }
-        contributorStats.reposOwned?.forEach(({ repo: repoName, paths }) => {
-          if (!ownersMap[ownerName].some((repo) => repo.repo === repoName)) {
-            ownersMap[ownerName].push({
-              repo: repoName,
-              paths: paths || [],
-            })
-          }
-        })
-        return ownersMap
-      },
-      {} as Record<string, Array<{ repo: string; paths: string[] }>>,
-    )
+  // Group repos by owner
+  const ownerToReposMap: Record<string, string[]> = {}
+  Object.entries(repoOwnersMap).forEach(([repo, owners]) => {
+    owners.forEach((owner) => {
+      if (!ownerToReposMap[owner]) {
+        ownerToReposMap[owner] = []
+      }
+      ownerToReposMap[owner].push(repo)
+    })
+  })
 
-  Object.entries(ownerRepos).forEach(([owner, repos]) => {
-    repos.forEach((repoData, index) => {
+  // Generate table with grouped repos
+  Object.entries(ownerToReposMap).forEach(([owner, repos]) => {
+    repos.forEach((repo, index) => {
       const userCell =
         index === 0 ? `[${owner}](https://github.com/${owner})` : ""
-      const repoDisplayName = repoData.repo.replace(/^tscircuit\//, "")
-      markdown += `| ${userCell} | [${repoDisplayName}](https://github.com/${repoData.repo}/blob/main/.github/CODEOWNERS) |\n`
+      const repoDisplayName = repo.replace(/^tscircuit\//, "")
+      markdown += `| ${userCell} | [${repoDisplayName}](https://github.com/${repo}/blob/main/.github/CODEOWNERS) |\n`
     })
   })
   markdown += "\n"
