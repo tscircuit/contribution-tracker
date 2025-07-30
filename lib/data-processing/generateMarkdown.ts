@@ -347,11 +347,12 @@ export async function generateMarkdown(
   markdown += "|------------|------------|\n"
 
   Object.entries(repoOwnersMap).forEach(([repo, owners]) => {
-    const ownersLinks = owners
-      .map((owner) => `[${owner}](https://github.com/${owner})`)
-      .join(", ")
+    const ownersLinks = owners.map(
+      (owner) => `[${owner}](https://github.com/${owner})`,
+    )
+
     const repoDisplayName = repo.replace(/^tscircuit\//, "")
-    markdown += `| [${repoDisplayName}](https://github.com/${repo}/blob/main/.github/CODEOWNERS) | ${ownersLinks} |\n`
+    markdown += `| [${repoDisplayName}](https://github.com/${repo}/blob/main/.github/CODEOWNERS) | ${[...new Set(ownersLinks)].join(", ")} |\n`
   })
   markdown += "\n"
 
@@ -367,7 +368,9 @@ export async function generateMarkdown(
       if (!ownerToReposMap[owner]) {
         ownerToReposMap[owner] = []
       }
-      ownerToReposMap[owner].push(repo)
+      if (!ownerToReposMap[owner].includes(repo)) {
+        ownerToReposMap[owner].push(repo)
+      }
     })
   })
 
