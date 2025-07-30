@@ -27,12 +27,12 @@ const DROPDOWN_MENU_ITEMS = [
 ]
 
 const SCORE_LABELS = {
-  4: "⭐",
-  11: "⭐⭐",
-  31: "⭐⭐⭐",
-  51: "👑",
-  76: "👑👑",
-  101: "👑👑👑",
+  3: "⭐",
+  10: "⭐⭐",
+  30: "⭐⭐⭐",
+  50: "👑",
+  75: "👑👑",
+  100: "👑👑👑",
 }
 
 export default function ContributorGraph({ username }: { username: string }) {
