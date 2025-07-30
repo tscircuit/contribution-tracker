@@ -2,6 +2,7 @@ import { generateObject } from "ai"
 import { openai } from "@ai-sdk/openai"
 import FileSystemCache from "file-system-cache"
 import ms from "ms"
+import kleur from "kleur"
 
 const cache = FileSystemCache({ basePath: ".cache-ai" })
 const DEFAULT_CACHE_EXPIRY = ms("7d")
@@ -71,10 +72,13 @@ export async function generateAiObjectCached(
     prompt: truncatedPrompt,
     model: options.model || openai("gpt-4o-mini"),
   }
-
   const cached = await getAiCacheItem(optionsWithDefault)
-  if (cached) return cached
+  if (cached) {
+    console.log(kleur.green("cache hit"), " - returning cached response...")
+    return cached
+  }
 
+  console.log(kleur.red("cache miss"), " - generating new AI response...")
   const response = await generateObject(optionsWithDefault as any)
   await setCached(optionsWithDefault, response)
   return response

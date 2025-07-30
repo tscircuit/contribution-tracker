@@ -102,7 +102,7 @@ export async function getAllDiscussionComments(
         new Date(formattedDate).getTime(),
     )
   } catch (error) {
-    console.error(`Error fetching discussion comments}:`, error)
+    console.error(`Error fetching discussion comments: ${error}`)
     return []
   }
 }
