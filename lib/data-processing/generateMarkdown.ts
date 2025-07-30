@@ -50,7 +50,7 @@ export async function generateMarkdown(
   markdown += "## Contributor Overview\n\n"
 
   markdown +=
-    "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Issues Created | Discussion Contributions |\n"
+    "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Score | Discussion Contributions |\n"
   markdown +=
     "|-------------|---------|---------|---------|-----|----------------|--------------------------|\n"
 
@@ -107,24 +107,6 @@ export async function generateMarkdown(
       ),
   )
 
-  for (const contributor of contributorsHavingOnlyDiscussions) {
-    // Add score for GitHub Discussions contributions
-    // 1 point for each Participating comment (minor contribution)
-    // 2 points for each Great Informative comment (major contribution)
-    // 4 points for each Incredible comment (two major contributions)
-    const discussionNormalComments =
-      contributorIdToStatsMap[contributor].discussionNormalComments || 0
-    const discussionGreatInformativeComments =
-      contributorIdToStatsMap[contributor].discussionGreatInformativeComments ||
-      0
-    const discussionIncredibleComments =
-      contributorIdToStatsMap[contributor].discussionIncredibleComments || 0
-
-    if (!contributorIdToStatsMap[contributor].score) {
-      contributorIdToStatsMap[contributor].score = 0
-    }
-  }
-
   // Generate table rows
   for (const [contributor, effort] of sortedContributors) {
     // Calculate discussion contributions summary
@@ -141,7 +123,7 @@ export async function generateMarkdown(
       effort.major
     } | ${effort.minor} | ${effort.tiny} | ${scoreToStarString(
       effort.score,
-    )} | ${effort.issuesCreated} | ${discussionSummary} |\n`
+    )} | ${effort.score} | ${discussionSummary} |\n`
   }
 
   for (const contributor of contributorsHavingOnlyDiscussions) {
