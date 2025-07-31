@@ -129,7 +129,7 @@ describe("generateMarkdown", () => {
     const markdown = await generateMarkdown(mockPRs, mockStats, "2024-07-01", {
       "tscircuit/gyromug": ["alice", "bob"],
       "tscircuit/schematic-corpus": ["Abse2001", "alice"],
-      "tscircuit/lol": []
+      "tscircuit/lol": [],
     })
     expect(markdown).toContain("# Contribution Overview 2024-07-01")
     expect(markdown).toContain("## Contributor Overview")
