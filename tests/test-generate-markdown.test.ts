@@ -126,7 +126,11 @@ const mockStats: Record<string, ContributorStats> = {
 
 describe("generateMarkdown", () => {
   it("should generate markdown with expected sections and contributor data", async () => {
-    const markdown = await generateMarkdown(mockPRs, mockStats, "2024-07-01")
+    const markdown = await generateMarkdown(mockPRs, mockStats, "2024-07-01", {
+      "tscircuit/gyromug": ["alice", "bob"],
+      "tscircuit/schematic-corpus": ["Abse2001", "alice"],
+      "tscircuit/lol": []
+    })
     expect(markdown).toContain("# Contribution Overview 2024-07-01")
     expect(markdown).toContain("## Contributor Overview")
     expect(markdown).toContain("alice")

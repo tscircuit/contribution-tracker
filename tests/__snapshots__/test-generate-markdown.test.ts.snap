@@ -95,11 +95,17 @@ pie
 
 | Repository | Codeowners |
 |------------|------------|
+| [gyromug](https://github.com/tscircuit/gyromug/blob/main/.github/CODEOWNERS) | [alice](https://github.com/alice), [bob](https://github.com/bob)
+| [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) | [Abse2001](https://github.com/Abse2001), [alice](https://github.com/alice)
 
 ## Repositories by Owner
 
 | User | Repo |
 |------|------|
+| [alice](https://github.com/alice) | [gyromug](https://github.com/tscircuit/gyromug/blob/main/.github/CODEOWNERS) |
+|  | [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) |
+| [bob](https://github.com/bob) | [gyromug](https://github.com/tscircuit/gyromug/blob/main/.github/CODEOWNERS) |
+| [Abse2001](https://github.com/Abse2001) | [schematic-corpus](https://github.com/tscircuit/schematic-corpus/blob/main/.github/CODEOWNERS) |
 
 "
 `;

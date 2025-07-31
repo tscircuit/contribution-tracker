@@ -352,7 +352,11 @@ export async function generateMarkdown(
     )
 
     const repoDisplayName = repo.replace(/^tscircuit\//, "")
-    markdown += `| [${repoDisplayName}](https://github.com/${repo}/blob/main/.github/CODEOWNERS) | ${[...new Set(ownersLinks)].join(", ")} |\n`
+    if (owners.length > 0) {
+      markdown += `| [${repoDisplayName}](https://github.com/${repo}/blob/main/.github/CODEOWNERS) | ${[
+        ...new Set(ownersLinks),
+      ].join(", ")}\n`
+    }
   })
   markdown += "\n"
 
