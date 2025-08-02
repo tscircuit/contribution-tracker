@@ -28,38 +28,47 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/tscircuit" : 3
+    "tscircuit/tscircuit" : 4
+    "tscircuit/circuit-json" : 2
+    "tscircuit/core" : 8
+    "tscircuit/cli" : 5
+    "tscircuit/sparkfun-boards" : 4
+    "tscircuit/docs" : 3
     "tscircuit/circuit-to-svg" : 1
-    "tscircuit/schematic-corpus" : 1
-    "tscircuit/cli" : 2
-    "tscircuit/props" : 3
+    "tscircuit/tscircuit-autorouter" : 2
+    "tscircuit/schematic-corpus" : 3
+    "tscircuit/props" : 5
+    "tscircuit/runframe" : 4
     "tscircuit/circuit-json-flex" : 1
-    "tscircuit/core" : 5
-    "tscircuit/docs" : 1
     "tscircuit/minicssgrid" : 5
     "tscircuit/circuit-json-util" : 1
     "tscircuit/tscircuit.com" : 8
     "tscircuit/jlcsearch" : 1
+    "tscircuit/eval" : 4
     "tscircuit/miniflex" : 1
+    "tscircuit/calculate-packing" : 1
+    "tscircuit/schematic-symbols" : 1
+    "tscircuit/footprinter" : 2
+    "tscircuit/kicad-component-converter" : 1
     "tscircuit/easyeda-converter" : 1
     "tscircuit/3d-viewer" : 1
     "tscircuit/contribution-tracker" : 6
-    "tscircuit/runframe" : 2
-    "tscircuit/eval" : 2
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Score | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 4 | 1 | 11 | ⭐⭐⭐ | 42 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 4 | 1 | 10 | ⭐⭐ | 28 | 0🔹 0🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 0 | 0 | 4 | ⭐ | 6 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 5 | 0 | 21 | ⭐⭐⭐ | 45 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 4 | 2 | 10 | ⭐⭐⭐ | 33 | 0🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 1 | 1 | 6 | ⭐⭐ | 11.5 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 1 | 0 | 2 | ⭐ | 10 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 8 | ⭐ | 9.5 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 0 | 0 | 6 | ⭐ | 8.5 | 0🔹 0🔶 0💎 |
 | [andrii-balitskyi](#andrii-balitskyi) | 1 | 1 | 0 | ⭐ | 6 | 0🔹 0🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 0 | 0 | 3 |  | 2.5 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 2 |  | 2.5 | 0🔹 0🔶 0💎 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 3 |  | 3 | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 0 | 1 | 1 |  | 2.5 | 0🔹 0🔶 0💎 |
 | [abimaelmartell](#abimaelmartell) | 0 | 1 | 0 |  | 2 | 0🔹 0🔶 0💎 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 2 |  | 2 | 0🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
 
@@ -79,17 +88,20 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Score | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 4 | 4 | 0 | 1 | 0 | 4 | 2 | 2.5 | 0 | 0 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 3 | 3 | 0 | 0 | 0 | 4 | 3 | 2.5 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 4 | 0 | 0 | 22 | 1 | 18 | 16 | 42 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 2 | 1 | 0 | 2 | 1 | 12 | 5 | 6 | 0 | 0 | 0 |
-| [andrii-balitskyi](#andrii-balitskyi) | 3 | 2 | 0 | 0 | 0 | 4 | 2 | 6 | 0 | 0 | 0 |
+| [google-labs-jules[bot]](#google-labs-jules[bot]) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| [seveibar](#seveibar) | 8 | 1 | 0 | 37 | 1 | 31 | 26 | 45 | 0 | 0 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 11 | 11 | 0 | 4 | 0 | 9 | 8 | 9.5 | 0 | 0 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 9 | 8 | 0 | 0 | 0 | 8 | 8 | 11.5 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 7 | 5 | 1 | 3 | 1 | 14 | 7 | 8.5 | 0 | 0 | 0 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [Abse2001](#Abse2001) | 2 | 0 | 1 | 2 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| [andrii-balitskyi](#andrii-balitskyi) | 6 | 2 | 1 | 0 | 0 | 4 | 2 | 6 | 0 | 0 | 0 |
+| [techmannih](#techmannih) | 2 | 1 | 0 | 0 | 0 | 2 | 2 | 2.5 | 0 | 0 | 0 |
+| [Abse2001](#Abse2001) | 4 | 3 | 0 | 4 | 0 | 4 | 3 | 10 | 0 | 0 | 0 |
+| [babyo77](#babyo77) | 1 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | [abimaelmartell](#abimaelmartell) | 3 | 1 | 0 | 0 | 0 | 1 | 1 | 2 | 0 | 0 | 0 |
 | [copilot-pull-request-reviewer[bot]](#copilot-pull-request-reviewer[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 17 | 16 | 0 | 0 | 0 | 15 | 15 | 28 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 11 | 2 | 2 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 20 | 18 | 0 | 2 | 1 | 17 | 16 | 33 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 17 | 3 | 3 | 0 | 0 | 0 |
 | [LakshitAgarwal](#LakshitAgarwal) | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 
 ## Top 7 Repositories by Contribution Points
@@ -97,12 +109,12 @@ pie
 ```mermaid
 pie
     "tscircuit/tscircuit.com" : 21
-    "tscircuit/minicssgrid" : 12
-    "tscircuit/core" : 9
+    "tscircuit/core" : 12
+    "tscircuit/minicssgrid" : 11
+    "tscircuit/sparkfun-boards" : 7
+    "tscircuit/runframe" : 7
+    "tscircuit/schematic-corpus" : 6
     "tscircuit/contribution-tracker" : 6
-    "tscircuit/runframe" : 5
-    "tscircuit/docs" : 4
-    "tscircuit/tscircuit" : 3
 ```
 
 ## Changes by Repository
@@ -111,13 +123,97 @@ pie
 
 
 <details>
+<summary>🐌 Tiny Contributions (4)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#731](https://github.com/tscircuit/tscircuit/pull/731) | 🐌 Tiny | ShiboSoftwareDev | Updates the version of the circuit-json-to-simple-3d dependency from 0.0.2 to 0.0.6 in package.json |
+| [#729](https://github.com/tscircuit/tscircuit/pull/729) | 🐌 Tiny | ShiboSoftwareDev | Adds the tscircuitminiflex package and updates several dependencies in package.json |
+| [#730](https://github.com/tscircuit/tscircuit/pull/730) | 🐌 Tiny | MustafaMulla29 | Updates the circuit-to-svg package to version 0.0.175 in package.json |
+| [#728](https://github.com/tscircuit/tscircuit/pull/728) | 🐌 Tiny | imrishabh18 | Updates the CLI dependency version from 0.1.190 to 0.1.191 in package.json |
+
+</details>
+
+### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
+
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#248](https://github.com/tscircuit/circuit-json/pull/248) | 🐌 Tiny | ShiboSoftwareDev | Adds positive_source_net_id and negative_source_net_id fields to the simulation_voltage_source interface for enhanced simulation capabilities. |
+| [#247](https://github.com/tscircuit/circuit-json/pull/247) | 🐌 Tiny | seveibar | Adds an optional layout_mode field to the pcb_group interface, allowing users to specify layout preferences, along with documentation and tests for this new feature. |
+
+</details>
+
+### [tscircuit/core](https://github.com/tscircuit/core)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#1124](https://github.com/tscircuit/core/pull/1124) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds support for inline flex layout in PCB groups, allowing for more flexible component arrangement. |
+| [#1090](https://github.com/tscircuit/core/pull/1090) | 🐙 Minor | ⭐⭐ | andrii-balitskyi | Fixes crash when externallyConnectedPins references pins not visible in schPinArrangement |
+
+<details>
+<summary>🐌 Tiny Contributions (6)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#1129](https://github.com/tscircuit/core/pull/1129) | 🐌 Tiny | ShiboSoftwareDev | Updates the tscircuitsimple-3d-svg dependency to version 0.0.38 in package.json |
+| [#1127](https://github.com/tscircuit/core/pull/1127) | 🐌 Tiny | ShiboSoftwareDev | Updates the dependency version of circuit-json-to-simple-3d from 0.0.2 to 0.0.6 and modifies the SVG conversion function to await the result. |
+| [#1126](https://github.com/tscircuit/core/pull/1126) | 🐌 Tiny | seveibar | Adds support for the pcbGap property in PCB layout packing, allowing for more flexible component spacing. |
+| [#1123](https://github.com/tscircuit/core/pull/1123) | 🐌 Tiny | seveibar | Adds support for pcbFlexGap property and moves PcbComponentSizeCalculation to occur before layout processing. |
+| [#1121](https://github.com/tscircuit/core/pull/1121) | 🐌 Tiny | seveibar | Adds support for new layout properties including pcbPack, pcbGridRowGap, and pcbGridColumnGap in the Group component, while updating dependencies and removing obsolete tests. |
+| [#1120](https://github.com/tscircuit/core/pull/1120) | 🐌 Tiny | seveibar | Fixes board auto-sizing to ignore components from other subcircuits, ensuring accurate dimensions for the board. |
+
+</details>
+
+### [tscircuit/cli](https://github.com/tscircuit/cli)
+
+
+<details>
+<summary>🐌 Tiny Contributions (5)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#306](https://github.com/tscircuit/cli/pull/306) | 🐌 Tiny | ShiboSoftwareDev | Updates the dependency from circuit-json-to-simple-3d to a newer version in package.json |
+| [#305](https://github.com/tscircuit/cli/pull/305) | 🐌 Tiny | ShiboSoftwareDev | Fixes issue where PCB and schematic differences are saved as PNG files instead of SVG, ensuring correct file formats are used for visual diffs. |
+| [#308](https://github.com/tscircuit/cli/pull/308) | 🐌 Tiny | imrishabh18 | Updates the tscircuitrunframe dependency to version 0.0.770 in package.json |
+| [#303](https://github.com/tscircuit/cli/pull/303) | 🐌 Tiny | imrishabh18 | Updates the tscircuitrunframe dependency version from 0.0.722 to 0.0.752 in package.json |
+| [#307](https://github.com/tscircuit/cli/pull/307) | 🐌 Tiny | seveibar | Enables the tsci snapshot command to accept a directory path, allowing users to generate snapshots for multiple board and circuit files within that directory. |
+
+</details>
+
+### [tscircuit/sparkfun-boards](https://github.com/tscircuit/sparkfun-boards)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#73](https://github.com/tscircuit/sparkfun-boards/pull/73) | 🐳 Major | ⭐⭐⭐ | MustafaMulla29 | Introduces a new circuit board for the SparkFun Voltage-Level Translator Breakout - TXB0104, including its schematic and PCB layout. |
+
+<details>
 <summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#730](https://github.com/tscircuit/tscircuit/pull/730) | 🐌 Tiny | MustafaMulla29 | Updates the circuit-to-svg package to version 0.0.175 in package.json |
-| [#729](https://github.com/tscircuit/tscircuit/pull/729) | 🐌 Tiny | ShiboSoftwareDev | Adds the tscircuitminiflex package and updates several dependencies in package.json |
-| [#728](https://github.com/tscircuit/tscircuit/pull/728) | 🐌 Tiny | imrishabh18 | Updates the CLI dependency version from 0.1.190 to 0.1.191 in package.json |
+| [#98](https://github.com/tscircuit/sparkfun-boards/pull/98) | 🐌 Tiny | ShiboSoftwareDev | Adds 3D snapshot generation for all circuit boards in the repository, enhancing visualization capabilities. |
+| [#96](https://github.com/tscircuit/sparkfun-boards/pull/96) | 🐌 Tiny | MustafaMulla29 | No description provided |
+| [#97](https://github.com/tscircuit/sparkfun-boards/pull/97) | 🐌 Tiny | Abse2001 | Fixes the footprint label for bottom side pins in the circuit design files for multiple boards. |
+
+</details>
+
+### [tscircuit/docs](https://github.com/tscircuit/docs)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#107](https://github.com/tscircuit/docs/pull/107) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Adds documentation for the inductor built-in component, detailing its specifications, usage, and examples. |
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#106](https://github.com/tscircuit/docs/pull/106) | 🐌 Tiny | seveibar | Simplifies the display of code examples and improves the layout of the CircuitPreview component in documentation files. |
+| [#105](https://github.com/tscircuit/docs/pull/105) | 🐌 Tiny | seveibar | Adds documentation for the new PCB automatic layout features including methods for layout such as pcbFlex, pcbGrid, and pcbPack. |
 
 </details>
 
@@ -133,28 +229,34 @@ pie
 
 </details>
 
-### [tscircuit/schematic-corpus](https://github.com/tscircuit/schematic-corpus)
+### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
 
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#225](https://github.com/tscircuit/tscircuit-autorouter/pull/225) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes the issue where the Flatbush index would attempt to create an index with zero items, leading to potential errors when the obstacle list is empty. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#133](https://github.com/tscircuit/schematic-corpus/pull/133) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design89) to enhance the matchAdapt algorithm functionality. |
+| [#226](https://github.com/tscircuit/tscircuit-autorouter/pull/226) | 🐌 Tiny | MustafaMulla29 | Adds a bug report JSON and corresponding fixture for testing the autorouting bug report identified by ID bc436135-963b-4878-9af3-1c3e41b15dd9 |
 
 </details>
 
-### [tscircuit/cli](https://github.com/tscircuit/cli)
+### [tscircuit/schematic-corpus](https://github.com/tscircuit/schematic-corpus)
 
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#134](https://github.com/tscircuit/schematic-corpus/pull/134) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds generated designs for 3-pin circuits with initial packing and layout calculations. |
 
 <details>
 <summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#305](https://github.com/tscircuit/cli/pull/305) | 🐌 Tiny | ShiboSoftwareDev | Fixes issue where PCB and schematic differences are saved as PNG files instead of SVG, ensuring correct file formats are used for visual diffs. |
-| [#303](https://github.com/tscircuit/cli/pull/303) | 🐌 Tiny | imrishabh18 | Updates the tscircuitrunframe dependency to version 0.0.752 in package.json |
+| [#135](https://github.com/tscircuit/schematic-corpus/pull/135) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design090) to enhance the matchAdapt algorithm functionality. |
+| [#133](https://github.com/tscircuit/schematic-corpus/pull/133) | 🐌 Tiny | MustafaMulla29 | Adds a new circuit design (design89) to enhance the matchAdapt algorithm functionality. |
 
 </details>
 
@@ -162,13 +264,32 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (3)</summary>
+<summary>🐌 Tiny Contributions (5)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#346](https://github.com/tscircuit/props/pull/346) | 🐌 Tiny | imrishabh18 | Adds a connections prop to the crystal  component, allowing users to specify connections and updates documentation accordingly. |
+| [#350](https://github.com/tscircuit/props/pull/350) | 🐌 Tiny | seveibar | Adds schematic layout properties for schFlex, schPack, and schGrid to the group, enabling enhanced layout configurations in schematic designs. |
+| [#349](https://github.com/tscircuit/props/pull/349) | 🐌 Tiny | seveibar | Adds new properties for pcbPadding and its directional variants to group components, along with documentation updates and unit tests. |
 | [#345](https://github.com/tscircuit/props/pull/345) | 🐌 Tiny | seveibar | Adds a new property pcbFlexGap to the BaseGroupProps interface, allowing for flexible gap settings in PCB layouts. |
-| [#342](https://github.com/tscircuit/props/pull/342) | 🐌 Tiny | seveibar | Add gridRowGap and gridColumnGap to layout config, expose new PCB grid gap fields on group props, update generated docs, bump dev dependency zod, document and test the new props |
+| [#342](https://github.com/tscircuit/props/pull/342) | 🐌 Tiny | seveibar | Adds gridRowGap and gridColumnGap to layout configuration, exposes new PCB grid gap fields on group props, updates generated documentation, bumps dev dependency zod, and documents and tests the new props. |
+
+</details>
+
+### [tscircuit/runframe](https://github.com/tscircuit/runframe)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#882](https://github.com/tscircuit/runframe/pull/882) | 🐳 Major | ⭐⭐⭐ | andrii-balitskyi | Adds a version selector for the tscircuiteval package, allowing users to choose from multiple versions instead of being limited to the latest version. |
+
+<details>
+<summary>🐌 Tiny Contributions (3)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#959](https://github.com/tscircuit/runframe/pull/959) | 🐌 Tiny | imrishabh18 | Removes unnecessary hook calls that were causing memory call stack issues in the ErrorTabContent component. |
+| [#957](https://github.com/tscircuit/runframe/pull/957) | 🐌 Tiny | ArnavK-09 | Changes the URL in the encodeFsMapToUrlHash function to point to a specific domain instead of the current origin. |
+| [#951](https://github.com/tscircuit/runframe/pull/951) | 🐌 Tiny | ArnavK-09 |  |
 
 </details>
 
@@ -180,49 +301,25 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#9](https://github.com/tscircuit/circuit-json-flex/pull/9) | 🐌 Tiny | imrishabh18 | Adds a test for rendering a board without specified dimensions, ensuring proper layout behavior for components without column and row gaps. |
+| [#9](https://github.com/tscircuit/circuit-json-flex/pull/9) | 🐌 Tiny | imrishabh18 | Adds a test for rendering a board without specified dimensions, ensuring proper layout of components without column or row gaps. |
 
 </details>
 
-### [tscircuit/core](https://github.com/tscircuit/core)
+### [tscircuit/minicssgrid](https://github.com/tscircuit/minicssgrid)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#1124](https://github.com/tscircuit/core/pull/1124) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds support for inline flex layout in PCB groups, allowing for more flexible arrangement of components within the circuit design. |
-| [#1090](https://github.com/tscircuit/core/pull/1090) | 🐙 Minor | ⭐⭐ | andrii-balitskyi | Fixes crash when externallyConnectedPins references pins not visible in schPinArrangement |
+| [#7](https://github.com/tscircuit/minicssgrid/pull/7) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds inline grid support by implementing auto-sizing and track counting for CSS grid layouts. |
+| [#5](https://github.com/tscircuit/minicssgrid/pull/5) | 🐳 Major | ⭐⭐⭐ | seveibar | html supports contentWidthcontentHeight add content width and height to examples |
 
 <details>
 <summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#1123](https://github.com/tscircuit/core/pull/1123) | 🐌 Tiny | seveibar | Adds support for pcbFlexGap and moves PcbComponentSizeCalculation prior to layout, enhancing layout flexibility. |
-| [#1121](https://github.com/tscircuit/core/pull/1121) | 🐌 Tiny | seveibar | Adds support for new layout properties including pcbPack, pcbGridRowGap, and pcbGridColumnGap in the Group component, while updating dependencies and removing obsolete tests. |
-| [#1120](https://github.com/tscircuit/core/pull/1120) | 🐌 Tiny | seveibar | Fixes board auto-sizing to ignore components from other subcircuits, ensuring accurate dimensions for the board. |
-
-</details>
-
-### [tscircuit/docs](https://github.com/tscircuit/docs)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#105](https://github.com/tscircuit/docs/pull/105) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds documentation for the new PCB automatic layout features, including methods for grid, flex, and pack layouts. |
-
-### [tscircuit/minicssgrid](https://github.com/tscircuit/minicssgrid)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#7](https://github.com/tscircuit/minicssgrid/pull/7) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds inline grid support by implementing auto-sizing and track counting for CSS grid layouts, enhancing layout flexibility without requiring explicit container dimensions. |
-| [#5](https://github.com/tscircuit/minicssgrid/pull/5) | 🐳 Major | ⭐⭐⭐ | seveibar | html supports contentWidthcontentHeight add content width and height to examples |
-| [#4](https://github.com/tscircuit/minicssgrid/pull/4) | 🐙 Minor | ⭐⭐ | seveibar | make sure widthheight is predictable - wip simplify level7 - regenerate browser results |
-
-<details>
-<summary>🐌 Tiny Contributions (2)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
 | [#9](https://github.com/tscircuit/minicssgrid/pull/9) | 🐌 Tiny | seveibar | Removes borders from HTML elements to simplify the calculation of their bounds in the browser results. |
 | [#6](https://github.com/tscircuit/minicssgrid/pull/6) | 🐌 Tiny | seveibar | Adds support for gaps and auto tracks, ensures predictable widthheight, simplifies level7, regenerates browser results, updates snapshots, and enhances README with usage details. |
+| [#4](https://github.com/tscircuit/minicssgrid/pull/4) | 🐌 Tiny | seveibar | This PR modifies the CSS grid rendering to ensure width and height are predictable, simplifies level 7 examples, and regenerates browser results. |
 
 </details>
 
@@ -246,7 +343,7 @@ pie
 | [#1530](https://github.com/tscircuit/tscircuit.com/pull/1530) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds TypeScript navigation features including Go to Definition functionality and TypeScript environment setup for improved code editing experience. |
 | [#1531](https://github.com/tscircuit/tscircuit.com/pull/1531) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Add account search functionality to the command menu and implement a new API endpoint for account search. |
 | [#1522](https://github.com/tscircuit/tscircuit.com/pull/1522) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Add a star icon and count display next to package tags to show popularity metrics. |
-| [#1520](https://github.com/tscircuit/tscircuit.com/pull/1520) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds a mobile menu toggle with MenuX icons, restructures navigation for better mobile experience, and updates background styling for different screen sizes. |
+| [#1520](https://github.com/tscircuit/tscircuit.com/pull/1520) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Add mobile menu toggle with MenuX icons, restructure navigation for better mobile experience, and update background styling for different screen sizes |
 
 <details>
 <summary>🐌 Tiny Contributions (3)</summary>
@@ -254,7 +351,7 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#1523](https://github.com/tscircuit/tscircuit.com/pull/1523) | 🐌 Tiny | seveibar | Updates the demo link on the landing page to point to the correct example. |
-| [#1532](https://github.com/tscircuit/tscircuit.com/pull/1532) | 🐌 Tiny | ArnavK-09 | Fixes rendering issue where dimensions for RunFrame are uneven, causing layout problems in the preview. |
+| [#1532](https://github.com/tscircuit/tscircuit.com/pull/1532) | 🐌 Tiny | ArnavK-09 | Fixes rendering issue where dimensions for the RunFrame component were uneven, causing layout problems in the preview. |
 | [#1521](https://github.com/tscircuit/tscircuit.com/pull/1521) | 🐌 Tiny | ArnavK-09 | Add conditional rendering of rebuild button to only show when the current user matches the package author, preventing unauthorized users from triggering rebuilds. |
 
 </details>
@@ -271,6 +368,21 @@ pie
 
 </details>
 
+### [tscircuit/eval](https://github.com/tscircuit/eval)
+
+
+<details>
+<summary>🐌 Tiny Contributions (4)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#727](https://github.com/tscircuit/eval/pull/727) | 🐌 Tiny | seveibar | Removes the legacy documentation file for example circuit transpilation and execution implementation. |
+| [#795](https://github.com/tscircuit/eval/pull/795) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore package from version 0.0.607 to 0.0.611 along with other related package updates in package.json. |
+| [#787](https://github.com/tscircuit/eval/pull/787) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore package from version 0.0.603 to 0.0.607 and updates related dependencies accordingly. |
+| [#779](https://github.com/tscircuit/eval/pull/779) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore package from version 0.0.598 to 0.0.603 and updates several other dependencies in package.json. |
+
+</details>
+
 ### [tscircuit/miniflex](https://github.com/tscircuit/miniflex)
 
 
@@ -279,17 +391,11 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#2](https://github.com/tscircuit/miniflex/pull/2) | 🐌 Tiny | seveibar | Adds a metadata attribute to flex items and resolves type issues in the flexbox implementation. |
+| [#2](https://github.com/tscircuit/miniflex/pull/2) | 🐌 Tiny | seveibar | Adds a metadata attribute to flex items and resolves type issues in the codebase. |
 
 </details>
 
-### [tscircuit/easyeda-converter](https://github.com/tscircuit/easyeda-converter)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#303](https://github.com/tscircuit/easyeda-converter/pull/303) | 🐙 Minor | ⭐⭐ | abimaelmartell | Introduces a new method for handling rectangular plated holes in PCB designs by utilizing pill holes with specified rectangle padding and rotation properties. |
-
-### [tscircuit/3d-viewer](https://github.com/tscircuit/3d-viewer)
+### [tscircuit/calculate-packing](https://github.com/tscircuit/calculate-packing)
 
 
 <details>
@@ -297,9 +403,54 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#395](https://github.com/tscircuit/3d-viewer/pull/395) | 🐌 Tiny | ArnavK-09 | Add version number from package.json to the viewer controls panel to help users identify which version theyre using. |
+| [#8](https://github.com/tscircuit/calculate-packing/pull/8) | 🐌 Tiny | seveibar | Adds support for a packFirst parameter that allows users to specify components that should be prioritized in the packing order during layout calculations. |
 
 </details>
+
+### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#338](https://github.com/tscircuit/schematic-symbols/pull/338) | 🐙 Minor | ⭐⭐ | techmannih | Fixes alignment and size issues of the triangle shape in the filled diode symbol representation. |
+
+### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#338](https://github.com/tscircuit/footprinter/pull/338) | 🐳 Major | ⭐⭐⭐ | Abse2001 | Adds a function to compare footprint accuracy between Footprinter and KiCad, calculating average relative differences and generating combined footprint elements for visualization. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#339](https://github.com/tscircuit/footprinter/pull/339) | 🐌 Tiny | techmannih | Updates the circuit-to-svg dependency to version 0.0.175 in package.json |
+
+</details>
+
+### [tscircuit/kicad-component-converter](https://github.com/tscircuit/kicad-component-converter)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#123](https://github.com/tscircuit/kicad-component-converter/pull/123) | 🐌 Tiny | Abse2001 | Fixes pad parsing to only include pads on the F.Cu layer and adds a test to ensure exactly 2 SMT pads are present in the footprint. |
+
+</details>
+
+### [tscircuit/easyeda-converter](https://github.com/tscircuit/easyeda-converter)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#303](https://github.com/tscircuit/easyeda-converter/pull/303) | 🐙 Minor | ⭐⭐ | abimaelmartell | Introduces support for rectangular plated holes with specific properties for hole shape and rotation in the PCB design process. |
+
+### [tscircuit/3d-viewer](https://github.com/tscircuit/3d-viewer)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#395](https://github.com/tscircuit/3d-viewer/pull/395) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Add version number from package.json to the viewer controls panel to help users identify which version theyre using. |
 
 ### [tscircuit/contribution-tracker](https://github.com/tscircuit/contribution-tracker)
 
@@ -309,8 +460,8 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#212](https://github.com/tscircuit/contribution-tracker/pull/212) | 🐌 Tiny | ArnavK-09 | Skip adding empty owners in the generated markdown for repositories, preventing blank entries in the codeowners section. |
-| [#211](https://github.com/tscircuit/contribution-tracker/pull/211) | 🐌 Tiny | ArnavK-09 | Deduplicates owner links and repository entries in the generated markdown for CODEOWNERS. |
+| [#212](https://github.com/tscircuit/contribution-tracker/pull/212) | 🐌 Tiny | ArnavK-09 | Skip empty owners in markdown generation for repositories, preventing blank entries in the generated markdown table. |
+| [#211](https://github.com/tscircuit/contribution-tracker/pull/211) | 🐌 Tiny | ArnavK-09 | Deduplicates owner links and repository entries in the generated markdown output for better clarity and organization. |
 | [#207](https://github.com/tscircuit/contribution-tracker/pull/207) | 🐌 Tiny | ArnavK-09 | Adjusts score thresholds for the contributor graph to ensure accurate representation of contributor scores. |
 | [#208](https://github.com/tscircuit/contribution-tracker/pull/208) | 🐌 Tiny | ArnavK-09 | Removes redundant discussion scoring logic and updates the column name to better reflect the data being displayed. The score column now shows the total contribution score directly. |
 | [#209](https://github.com/tscircuit/contribution-tracker/pull/209) | 🐌 Tiny | ArnavK-09 | Adds debug logging for cache hits and misses in the AI object generation process to aid in production debugging. |
@@ -318,60 +469,45 @@ pie
 
 </details>
 
-### [tscircuit/runframe](https://github.com/tscircuit/runframe)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#882](https://github.com/tscircuit/runframe/pull/882) | 🐳 Major | ⭐⭐⭐ | andrii-balitskyi | Adds a version selector for the tscircuiteval package, allowing users to choose from multiple versions instead of being limited to the latest version. |
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#951](https://github.com/tscircuit/runframe/pull/951) | 🐌 Tiny | ArnavK-09 | Part 1 !image(https:github.comuser-attachmentsassets11300df3-9584-4968-adc9-690a640cd883) |
-
-</details>
-
-### [tscircuit/eval](https://github.com/tscircuit/eval)
-
-
-<details>
-<summary>🐌 Tiny Contributions (2)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#787](https://github.com/tscircuit/eval/pull/787) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore package from version 0.0.603 to 0.0.607 and updates related dependencies in package.json. |
-| [#779](https://github.com/tscircuit/eval/pull/779) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcore package from version 0.0.598 to 0.0.603 and updates several other dependencies in package.json. |
-
-</details>
-
 ## Changes by Contributor
-
-### [MustafaMulla29](https://github.com/MustafaMulla29)
-
-
-<details>
-<summary>🐌 Tiny Contributions (3)</summary>
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#730](https://github.com/tscircuit/tscircuit/pull/730) | 🐌 Tiny | Updates the circuit-to-svg package to version 0.0.175 in package.json |
-| [#292](https://github.com/tscircuit/circuit-to-svg/pull/292) | 🐌 Tiny | Replaces all dependencies related to tscircuit with a single dependency on the tscircuit package. |
-| [#133](https://github.com/tscircuit/schematic-corpus/pull/133) | 🐌 Tiny | Adds a new circuit design (design89) to enhance the matchAdapt algorithm functionality. |
-
-</details>
 
 ### [ShiboSoftwareDev](https://github.com/ShiboSoftwareDev)
 
 
 <details>
-<summary>🐌 Tiny Contributions (2)</summary>
+<summary>🐌 Tiny Contributions (8)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#731](https://github.com/tscircuit/tscircuit/pull/731) | 🐌 Tiny | Updates the version of the circuit-json-to-simple-3d dependency from 0.0.2 to 0.0.6 in package.json |
 | [#729](https://github.com/tscircuit/tscircuit/pull/729) | 🐌 Tiny | Adds the tscircuitminiflex package and updates several dependencies in package.json |
+| [#248](https://github.com/tscircuit/circuit-json/pull/248) | 🐌 Tiny | Adds positive_source_net_id and negative_source_net_id fields to the simulation_voltage_source interface for enhanced simulation capabilities. |
+| [#1129](https://github.com/tscircuit/core/pull/1129) | 🐌 Tiny | Updates the tscircuitsimple-3d-svg dependency to version 0.0.38 in package.json |
+| [#1127](https://github.com/tscircuit/core/pull/1127) | 🐌 Tiny | Updates the dependency version of circuit-json-to-simple-3d from 0.0.2 to 0.0.6 and modifies the SVG conversion function to await the result. |
+| [#306](https://github.com/tscircuit/cli/pull/306) | 🐌 Tiny | Updates the dependency from circuit-json-to-simple-3d to a newer version in package.json |
 | [#305](https://github.com/tscircuit/cli/pull/305) | 🐌 Tiny | Fixes issue where PCB and schematic differences are saved as PNG files instead of SVG, ensuring correct file formats are used for visual diffs. |
+| [#98](https://github.com/tscircuit/sparkfun-boards/pull/98) | 🐌 Tiny | Adds 3D snapshot generation for all circuit boards in the repository, enhancing visualization capabilities. |
+
+</details>
+
+### [MustafaMulla29](https://github.com/MustafaMulla29)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#73](https://github.com/tscircuit/sparkfun-boards/pull/73) | 🐳 Major | ⭐⭐⭐ | Introduces a new circuit board for the SparkFun Voltage-Level Translator Breakout - TXB0104, including its schematic and PCB layout. |
+| [#107](https://github.com/tscircuit/docs/pull/107) | 🐙 Minor | ⭐⭐ | Adds documentation for the inductor built-in component, detailing its specifications, usage, and examples. |
+
+<details>
+<summary>🐌 Tiny Contributions (6)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#730](https://github.com/tscircuit/tscircuit/pull/730) | 🐌 Tiny | Updates the circuit-to-svg package to version 0.0.175 in package.json |
+| [#292](https://github.com/tscircuit/circuit-to-svg/pull/292) | 🐌 Tiny | Replaces all dependencies related to tscircuit with a single dependency on the tscircuit package. |
+| [#226](https://github.com/tscircuit/tscircuit-autorouter/pull/226) | 🐌 Tiny | Adds a bug report JSON and corresponding fixture for testing the autorouting bug report identified by ID bc436135-963b-4878-9af3-1c3e41b15dd9 |
+| [#96](https://github.com/tscircuit/sparkfun-boards/pull/96) | 🐌 Tiny | No description provided |
+| [#135](https://github.com/tscircuit/schematic-corpus/pull/135) | 🐌 Tiny | Adds a new circuit design (design090) to enhance the matchAdapt algorithm functionality. |
+| [#133](https://github.com/tscircuit/schematic-corpus/pull/133) | 🐌 Tiny | Adds a new circuit design (design89) to enhance the matchAdapt algorithm functionality. |
 
 </details>
 
@@ -379,14 +515,16 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (4)</summary>
+<summary>🐌 Tiny Contributions (6)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#728](https://github.com/tscircuit/tscircuit/pull/728) | 🐌 Tiny | Updates the CLI dependency version from 0.1.190 to 0.1.191 in package.json |
 | [#346](https://github.com/tscircuit/props/pull/346) | 🐌 Tiny | Adds a connections prop to the crystal  component, allowing users to specify connections and updates documentation accordingly. |
-| [#303](https://github.com/tscircuit/cli/pull/303) | 🐌 Tiny | Updates the tscircuitrunframe dependency to version 0.0.752 in package.json |
-| [#9](https://github.com/tscircuit/circuit-json-flex/pull/9) | 🐌 Tiny | Adds a test for rendering a board without specified dimensions, ensuring proper layout behavior for components without column and row gaps. |
+| [#959](https://github.com/tscircuit/runframe/pull/959) | 🐌 Tiny | Removes unnecessary hook calls that were causing memory call stack issues in the ErrorTabContent component. |
+| [#308](https://github.com/tscircuit/cli/pull/308) | 🐌 Tiny | Updates the tscircuitrunframe dependency to version 0.0.770 in package.json |
+| [#303](https://github.com/tscircuit/cli/pull/303) | 🐌 Tiny | Updates the tscircuitrunframe dependency version from 0.0.722 to 0.0.752 in package.json |
+| [#9](https://github.com/tscircuit/circuit-json-flex/pull/9) | 🐌 Tiny | Adds a test for rendering a board without specified dimensions, ensuring proper layout of components without column or row gaps. |
 
 </details>
 
@@ -394,28 +532,69 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#1124](https://github.com/tscircuit/core/pull/1124) | 🐳 Major | ⭐⭐⭐ | Adds support for inline flex layout in PCB groups, allowing for more flexible arrangement of components within the circuit design. |
-| [#105](https://github.com/tscircuit/docs/pull/105) | 🐳 Major | ⭐⭐⭐ | Adds documentation for the new PCB automatic layout features, including methods for grid, flex, and pack layouts. |
-| [#7](https://github.com/tscircuit/minicssgrid/pull/7) | 🐳 Major | ⭐⭐⭐ | Adds inline grid support by implementing auto-sizing and track counting for CSS grid layouts, enhancing layout flexibility without requiring explicit container dimensions. |
+| [#1124](https://github.com/tscircuit/core/pull/1124) | 🐳 Major | ⭐⭐⭐ | Adds support for inline flex layout in PCB groups, allowing for more flexible component arrangement. |
+| [#225](https://github.com/tscircuit/tscircuit-autorouter/pull/225) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where the Flatbush index would attempt to create an index with zero items, leading to potential errors when the obstacle list is empty. |
+| [#134](https://github.com/tscircuit/schematic-corpus/pull/134) | 🐳 Major | ⭐⭐⭐ | Adds generated designs for 3-pin circuits with initial packing and layout calculations. |
+| [#7](https://github.com/tscircuit/minicssgrid/pull/7) | 🐳 Major | ⭐⭐⭐ | Adds inline grid support by implementing auto-sizing and track counting for CSS grid layouts. |
 | [#5](https://github.com/tscircuit/minicssgrid/pull/5) | 🐳 Major | ⭐⭐⭐ | html supports contentWidthcontentHeight add content width and height to examples |
-| [#4](https://github.com/tscircuit/minicssgrid/pull/4) | 🐙 Minor | ⭐⭐ | make sure widthheight is predictable - wip simplify level7 - regenerate browser results |
 
 <details>
-<summary>🐌 Tiny Contributions (11)</summary>
+<summary>🐌 Tiny Contributions (21)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#247](https://github.com/tscircuit/circuit-json/pull/247) | 🐌 Tiny | Adds an optional layout_mode field to the pcb_group interface, allowing users to specify layout preferences, along with documentation and tests for this new feature. |
 | [#56](https://github.com/tscircuit/circuit-json-util/pull/56) | 🐌 Tiny | Adds functionality to reposition a group of PCB elements within a circuit JSON structure based on a new center point. |
+| [#350](https://github.com/tscircuit/props/pull/350) | 🐌 Tiny | Adds schematic layout properties for schFlex, schPack, and schGrid to the group, enabling enhanced layout configurations in schematic designs. |
+| [#349](https://github.com/tscircuit/props/pull/349) | 🐌 Tiny | Adds new properties for pcbPadding and its directional variants to group components, along with documentation updates and unit tests. |
 | [#345](https://github.com/tscircuit/props/pull/345) | 🐌 Tiny | Adds a new property pcbFlexGap to the BaseGroupProps interface, allowing for flexible gap settings in PCB layouts. |
-| [#342](https://github.com/tscircuit/props/pull/342) | 🐌 Tiny | Add gridRowGap and gridColumnGap to layout config, expose new PCB grid gap fields on group props, update generated docs, bump dev dependency zod, document and test the new props |
-| [#1123](https://github.com/tscircuit/core/pull/1123) | 🐌 Tiny | Adds support for pcbFlexGap and moves PcbComponentSizeCalculation prior to layout, enhancing layout flexibility. |
+| [#342](https://github.com/tscircuit/props/pull/342) | 🐌 Tiny | Adds gridRowGap and gridColumnGap to layout configuration, exposes new PCB grid gap fields on group props, updates generated documentation, bumps dev dependency zod, and documents and tests the new props. |
+| [#1126](https://github.com/tscircuit/core/pull/1126) | 🐌 Tiny | Adds support for the pcbGap property in PCB layout packing, allowing for more flexible component spacing. |
+| [#1123](https://github.com/tscircuit/core/pull/1123) | 🐌 Tiny | Adds support for pcbFlexGap property and moves PcbComponentSizeCalculation to occur before layout processing. |
 | [#1121](https://github.com/tscircuit/core/pull/1121) | 🐌 Tiny | Adds support for new layout properties including pcbPack, pcbGridRowGap, and pcbGridColumnGap in the Group component, while updating dependencies and removing obsolete tests. |
 | [#1120](https://github.com/tscircuit/core/pull/1120) | 🐌 Tiny | Fixes board auto-sizing to ignore components from other subcircuits, ensuring accurate dimensions for the board. |
 | [#1523](https://github.com/tscircuit/tscircuit.com/pull/1523) | 🐌 Tiny | Updates the demo link on the landing page to point to the correct example. |
 | [#75](https://github.com/tscircuit/jlcsearch/pull/75) | 🐌 Tiny | Adds documentation for PCIe M.2 connectors with orientation examples and links to the homepage. |
-| [#2](https://github.com/tscircuit/miniflex/pull/2) | 🐌 Tiny | Adds a metadata attribute to flex items and resolves type issues in the flexbox implementation. |
+| [#727](https://github.com/tscircuit/eval/pull/727) | 🐌 Tiny | Removes the legacy documentation file for example circuit transpilation and execution implementation. |
+| [#307](https://github.com/tscircuit/cli/pull/307) | 🐌 Tiny | Enables the tsci snapshot command to accept a directory path, allowing users to generate snapshots for multiple board and circuit files within that directory. |
+| [#106](https://github.com/tscircuit/docs/pull/106) | 🐌 Tiny | Simplifies the display of code examples and improves the layout of the CircuitPreview component in documentation files. |
+| [#105](https://github.com/tscircuit/docs/pull/105) | 🐌 Tiny | Adds documentation for the new PCB automatic layout features including methods for layout such as pcbFlex, pcbGrid, and pcbPack. |
+| [#2](https://github.com/tscircuit/miniflex/pull/2) | 🐌 Tiny | Adds a metadata attribute to flex items and resolves type issues in the codebase. |
+| [#8](https://github.com/tscircuit/calculate-packing/pull/8) | 🐌 Tiny | Adds support for a packFirst parameter that allows users to specify components that should be prioritized in the packing order during layout calculations. |
 | [#9](https://github.com/tscircuit/minicssgrid/pull/9) | 🐌 Tiny | Removes borders from HTML elements to simplify the calculation of their bounds in the browser results. |
 | [#6](https://github.com/tscircuit/minicssgrid/pull/6) | 🐌 Tiny | Adds support for gaps and auto tracks, ensures predictable widthheight, simplifies level7, regenerates browser results, updates snapshots, and enhances README with usage details. |
+| [#4](https://github.com/tscircuit/minicssgrid/pull/4) | 🐌 Tiny | This PR modifies the CSS grid rendering to ensure width and height are predictable, simplifies level 7 examples, and regenerates browser results. |
+
+</details>
+
+### [techmannih](https://github.com/techmannih)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#338](https://github.com/tscircuit/schematic-symbols/pull/338) | 🐙 Minor | ⭐⭐ | Fixes alignment and size issues of the triangle shape in the filled diode symbol representation. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#339](https://github.com/tscircuit/footprinter/pull/339) | 🐌 Tiny | Updates the circuit-to-svg dependency to version 0.0.175 in package.json |
+
+</details>
+
+### [Abse2001](https://github.com/Abse2001)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#338](https://github.com/tscircuit/footprinter/pull/338) | 🐳 Major | ⭐⭐⭐ | Adds a function to compare footprint accuracy between Footprinter and KiCad, calculating average relative differences and generating combined footprint elements for visualization. |
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#123](https://github.com/tscircuit/kicad-component-converter/pull/123) | 🐌 Tiny | Fixes pad parsing to only include pads on the F.Cu layer and adds a test to ensure exactly 2 SMT pads are present in the footprint. |
+| [#97](https://github.com/tscircuit/sparkfun-boards/pull/97) | 🐌 Tiny | Fixes the footprint label for bottom side pins in the circuit design files for multiple boards. |
 
 </details>
 
@@ -423,7 +602,7 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#303](https://github.com/tscircuit/easyeda-converter/pull/303) | 🐙 Minor | ⭐⭐ | Introduces a new method for handling rectangular plated holes in PCB designs by utilizing pill holes with specified rectangle padding and rotation properties. |
+| [#303](https://github.com/tscircuit/easyeda-converter/pull/303) | 🐙 Minor | ⭐⭐ | Introduces support for rectangular plated holes with specific properties for hole shape and rotation in the PCB design process. |
 
 ### [ArnavK-09](https://github.com/ArnavK-09)
 
@@ -433,23 +612,24 @@ pie
 | [#1530](https://github.com/tscircuit/tscircuit.com/pull/1530) | 🐳 Major | ⭐⭐⭐ | Adds TypeScript navigation features including Go to Definition functionality and TypeScript environment setup for improved code editing experience. |
 | [#1531](https://github.com/tscircuit/tscircuit.com/pull/1531) | 🐳 Major | ⭐⭐⭐ | Add account search functionality to the command menu and implement a new API endpoint for account search. |
 | [#1522](https://github.com/tscircuit/tscircuit.com/pull/1522) | 🐳 Major | ⭐⭐⭐ | Add a star icon and count display next to package tags to show popularity metrics. |
-| [#1520](https://github.com/tscircuit/tscircuit.com/pull/1520) | 🐙 Minor | ⭐⭐ | Adds a mobile menu toggle with MenuX icons, restructures navigation for better mobile experience, and updates background styling for different screen sizes. |
+| [#395](https://github.com/tscircuit/3d-viewer/pull/395) | 🐙 Minor | ⭐⭐ | Add version number from package.json to the viewer controls panel to help users identify which version theyre using. |
+| [#1520](https://github.com/tscircuit/tscircuit.com/pull/1520) | 🐙 Minor | ⭐⭐ | Add mobile menu toggle with MenuX icons, restructure navigation for better mobile experience, and update background styling for different screen sizes |
 
 <details>
 <summary>🐌 Tiny Contributions (10)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#395](https://github.com/tscircuit/3d-viewer/pull/395) | 🐌 Tiny | Add version number from package.json to the viewer controls panel to help users identify which version theyre using. |
-| [#212](https://github.com/tscircuit/contribution-tracker/pull/212) | 🐌 Tiny | Skip adding empty owners in the generated markdown for repositories, preventing blank entries in the codeowners section. |
-| [#211](https://github.com/tscircuit/contribution-tracker/pull/211) | 🐌 Tiny | Deduplicates owner links and repository entries in the generated markdown for CODEOWNERS. |
+| [#212](https://github.com/tscircuit/contribution-tracker/pull/212) | 🐌 Tiny | Skip empty owners in markdown generation for repositories, preventing blank entries in the generated markdown table. |
+| [#211](https://github.com/tscircuit/contribution-tracker/pull/211) | 🐌 Tiny | Deduplicates owner links and repository entries in the generated markdown output for better clarity and organization. |
 | [#207](https://github.com/tscircuit/contribution-tracker/pull/207) | 🐌 Tiny | Adjusts score thresholds for the contributor graph to ensure accurate representation of contributor scores. |
 | [#208](https://github.com/tscircuit/contribution-tracker/pull/208) | 🐌 Tiny | Removes redundant discussion scoring logic and updates the column name to better reflect the data being displayed. The score column now shows the total contribution score directly. |
 | [#209](https://github.com/tscircuit/contribution-tracker/pull/209) | 🐌 Tiny | Adds debug logging for cache hits and misses in the AI object generation process to aid in production debugging. |
 | [#210](https://github.com/tscircuit/contribution-tracker/pull/210) | 🐌 Tiny | Fixes the issue where code owners for repositories were not displayed correctly, ensuring all code owners are shown gracefully in the contribution overview. |
-| [#1532](https://github.com/tscircuit/tscircuit.com/pull/1532) | 🐌 Tiny | Fixes rendering issue where dimensions for RunFrame are uneven, causing layout problems in the preview. |
+| [#1532](https://github.com/tscircuit/tscircuit.com/pull/1532) | 🐌 Tiny | Fixes rendering issue where dimensions for the RunFrame component were uneven, causing layout problems in the preview. |
 | [#1521](https://github.com/tscircuit/tscircuit.com/pull/1521) | 🐌 Tiny | Add conditional rendering of rebuild button to only show when the current user matches the package author, preventing unauthorized users from triggering rebuilds. |
-| [#951](https://github.com/tscircuit/runframe/pull/951) | 🐌 Tiny | Part 1 !image(https:github.comuser-attachmentsassets11300df3-9584-4968-adc9-690a640cd883) |
+| [#957](https://github.com/tscircuit/runframe/pull/957) | 🐌 Tiny | Changes the URL in the encodeFsMapToUrlHash function to point to a specific domain instead of the current origin. |
+| [#951](https://github.com/tscircuit/runframe/pull/951) | 🐌 Tiny |  |
 
 </details>
 
@@ -464,11 +644,12 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (2)</summary>
+<summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#787](https://github.com/tscircuit/eval/pull/787) | 🐌 Tiny | Updates the tscircuitcore package from version 0.0.603 to 0.0.607 and updates related dependencies in package.json. |
+| [#795](https://github.com/tscircuit/eval/pull/795) | 🐌 Tiny | Updates the tscircuitcore package from version 0.0.607 to 0.0.611 along with other related package updates in package.json. |
+| [#787](https://github.com/tscircuit/eval/pull/787) | 🐌 Tiny | Updates the tscircuitcore package from version 0.0.603 to 0.0.607 and updates related dependencies accordingly. |
 | [#779](https://github.com/tscircuit/eval/pull/779) | 🐌 Tiny | Updates the tscircuitcore package from version 0.0.598 to 0.0.603 and updates several other dependencies in package.json. |
 
 </details>
