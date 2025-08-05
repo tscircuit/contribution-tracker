@@ -1,12 +1,12 @@
 {
   "Abse2001": {
-    "reviewsReceived": 13,
+    "reviewsReceived": 17,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
+    "approvalsReceived": 12,
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 10,
+    "prsOpened": 14,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -24,14 +24,14 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 4,
-    "score": 22.5,
-    "stars": "⭐⭐",
-    "major": 3,
+    "score": 32.5,
+    "stars": "⭐⭐⭐",
+    "major": 5,
     "minor": 0,
-    "tiny": 7
+    "tiny": 9
   },
   "ArnavK-09": {
-    "reviewsReceived": 23,
+    "reviewsReceived": 24,
     "rejectionsReceived": 0,
     "approvalsReceived": 20,
     "approvalsGiven": 2,
@@ -106,19 +106,19 @@
     "reviewsReceived": 19,
     "rejectionsReceived": 0,
     "approvalsReceived": 13,
-    "approvalsGiven": 10,
+    "approvalsGiven": 13,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 10,
+    "prsOpened": 14,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 6,
+    "distinctPrsReviewedAsCodeOwner": 8,
     "reposOwned": [
       {
         "repo": "tscircuit/sparkfun-boards",
@@ -127,9 +127,9 @@
         ]
       }
     ],
-    "score": 20.5,
-    "stars": "⭐⭐",
-    "major": 1,
+    "score": 31.5,
+    "stars": "⭐⭐⭐",
+    "major": 3,
     "minor": 0,
     "tiny": 9
   },
@@ -150,11 +150,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 2,
+    "score": 1,
     "stars": "",
     "major": 0,
-    "minor": 1,
-    "tiny": 0
+    "minor": 0,
+    "tiny": 1
   },
   "andrii-balitskyi": {
     "reviewsReceived": 6,
@@ -338,10 +338,10 @@
         ]
       }
     ],
-    "score": 61,
+    "score": 65,
     "stars": "👑",
-    "major": 7,
-    "minor": 4,
+    "major": 9,
+    "minor": 2,
     "tiny": 21
   },
   "techmannih": {
@@ -375,7 +375,7 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 4.5,
+    "score": 5,
     "stars": "⭐",
     "major": 0,
     "minor": 1,
