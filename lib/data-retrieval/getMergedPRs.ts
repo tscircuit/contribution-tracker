@@ -28,12 +28,21 @@ export async function getMergedPRs(
   // Fetch diff content for each PR
   const prsWithDiff = await Promise.all(
     filteredPRs.map(async (pr) => {
-      const { data: diffData } = await octokit.pulls.get({
-        owner,
-        repo: repo_name,
-        pull_number: pr.number,
-        mediaType: { format: "diff" },
-      })
+      const { data: diffData } = await octokit.pulls
+        .get({
+          owner,
+          repo: repo_name,
+          pull_number: pr.number,
+          mediaType: { format: "diff" },
+        })
+        .catch((e) => {
+          console.log(`Failed to fetch diff for PR ${pr.number}`, e)
+          return { data: "" }
+        })
+
+      if (!diffData) {
+        return null
+      }
 
       const filteredDiff = filterDiff(String(diffData))
 
@@ -79,5 +88,5 @@ export async function getMergedPRs(
 
   // Process complete
 
-  return prsWithDiff as MergedPullRequest[]
+  return prsWithDiff.filter((pr) => pr !== null) as MergedPullRequest[]
 }

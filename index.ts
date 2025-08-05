@@ -30,7 +30,10 @@ export async function generateOverview(startDate: string) {
 
   for (const repo of repos) {
     console.log(`\nAnalyzing ${repo}`)
-    const repoOwners = await fetchCodeownersFile(repo)
+    const repoOwners = await fetchCodeownersFile(repo).catch(() => {
+      console.log(`Failed to fetch codeowners file for ${repo}`)
+      return []
+    })
     repoOwnersMap[repo] = repoOwners.map((content) => content.owners).flat()
     console.log(`Found ${repoOwners.length} repo owners`)
     const prsWithReviews = await getAllPRs(repo, startDate)
