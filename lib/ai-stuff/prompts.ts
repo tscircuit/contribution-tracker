@@ -75,7 +75,7 @@ Strictly assess the PR across the following dimensions:
    If no description provided, try to generate a description yourself from the diff and title
    Do not include any hyperlinks, or image links, just use plain text
 
-   Give precise details, DO NOT SAY "improves XXX" or "enhances XXX",
+   Give precise details, DO NOT SAY "improves XXX" or "enhances XXX" or "this pull request introduces",
    if the PR fixes a precise bug, be precise e.g.
 
    - "Fixes autorouting failure when pinheaders are connected to same nets within a subcircuit"
