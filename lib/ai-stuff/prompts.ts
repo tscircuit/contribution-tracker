@@ -72,7 +72,7 @@ Strictly assess the PR across the following dimensions:
 
 <description>
    Provide a concise 1-line summary clearly stating what this PR changes for users
-   If "No description provided", try to generate a description yourself from the diff
+   If no description provided, try to generate a description yourself from the diff and title
    Do not include any hyperlinks, or image links, just use plain text
 
    Give precise details, DO NOT SAY "improves XXX" or "enhances XXX",
