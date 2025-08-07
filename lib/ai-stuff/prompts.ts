@@ -51,12 +51,6 @@ export function generateAnalyzePRPrompt(
   },
   repo: string,
 ): string {
-  const currentMilestones = CURRENT_MILESTONES.filter((milestone) => {
-    if (!milestone.isActive) return false
-    if (milestone.repos && !milestone.repos.includes(repo)) return false
-    return true
-  })
-
   return `
 <task>Conduct a strict and thorough analysis of the following pull request in the context of its impact, change type, and alignment with the current development milestone.</task>
 
@@ -66,7 +60,7 @@ export function generateAnalyzePRPrompt(
 - Author: ${pr.user.login}
 - Repository: ${repo}
 - URL: ${pr.html_url}
-- Description: ${pr.body || "No description provided"}
+${pr.body ? `- Description: ${pr.body}` : ""}
 </pr-info>
 
 <diff>
@@ -78,9 +72,10 @@ Strictly assess the PR across the following dimensions:
 
 <description>
    Provide a concise 1-line summary clearly stating what this PR changes for users
+   If no description provided, try to generate a description yourself from the diff and title
    Do not include any hyperlinks, or image links, just use plain text
 
-   Give precise details, DO NOT SAY "improves XXX" or "enhances XXX",
+   Give precise details, DO NOT SAY "improves XXX" or "enhances XXX" or "this pull request introduces",
    if the PR fixes a precise bug, be precise e.g.
 
    - "Fixes autorouting failure when pinheaders are connected to same nets within a subcircuit"
