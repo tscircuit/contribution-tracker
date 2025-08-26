@@ -31,22 +31,27 @@ pie
     "tscircuit/calculate-elbow" : 2
     "tscircuit/calculate-packing" : 6
     "tscircuit/matchpack" : 2
-    "tscircuit/schematic-trace-solver" : 2
+    "tscircuit/schematic-trace-solver" : 7
+    "tscircuit/eval" : 4
     "tscircuit/pcb-viewer" : 1
     "tscircuit/core" : 8
     "tscircuit/tscircuit.com" : 21
-    "tscircuit/eval" : 3
+    "tscircuit/graphics-debug" : 1
+    "tscircuit/tscircuit-autorouter" : 1
     "tscircuit/runframe" : 4
     "tscircuit/tscircuit" : 2
     "tscircuit/circuit-to-svg" : 1
+    "tscircuit/cli" : 2
+    "tscircuit/svg.tscircuit.com" : 2
     "tscircuit/circuit-json-to-simple-3d" : 1
     "tscircuit/jlcsearch" : 1
+    "tscircuit/docs" : 2
     "tscircuit/circuit-json" : 1
-    "tscircuit/cli" : 1
-    "tscircuit/docs" : 1
-    "tscircuit/chat.tscircuit.com" : 6
+    "tscircuit/chat.tscircuit.com" : 10
+    "tscircuit/repo-access-manager" : 1
+    "tscircuit/circuit-preview" : 1
     "tscircuit/footprinter" : 1
-    "tscircuit/schematic-symbols" : 3
+    "tscircuit/schematic-symbols" : 4
     "tscircuit/easyeda-converter" : 1
     "tscircuit/3d-viewer" : 1
     "tscircuit/jscad-electronics" : 2
@@ -57,13 +62,13 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Score | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 9 | 0 | 10 | 👑 | 61 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 2 | 3 | 11 | ⭐⭐ | 26 | 0🔹 0🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 1 | 2 | 14 | ⭐⭐ | 20 | 0🔹 0🔶 0💎 |
-| [abimaelmartell](#abimaelmartell) | 0 | 3 | 9 | ⭐⭐ | 18 | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 0 | 2 | 3 | ⭐ | 10 | 0🔹 0🔶 0💎 |
-| [pxlpal](#pxlpal) | 0 | 1 | 1 | ⭐ | 4 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 1 |  | 1 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 12 | 1 | 14 | 👑 | 67 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 2 | 5 | 13 | ⭐⭐⭐ | 31 | 0🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 2 | 3 | 14 | ⭐⭐ | 27 | 0🔹 0🔶 0💎 |
+| [abimaelmartell](#abimaelmartell) | 1 | 2 | 12 | ⭐⭐ | 21 | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 0 | 3 | 3 | ⭐⭐ | 13 | 0🔹 0🔶 0💎 |
+| [pxlpal](#pxlpal) | 0 | 1 | 2 | ⭐ | 4 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 1 |  | 2 | 0🔹 0🔶 0💎 |
 
 ### Discussion Contribution Legend
 
@@ -83,28 +88,29 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Score | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| [seveibar](#seveibar) | 0 | 0 | 0 | 39 | 3 | 24 | 19 | 61 | 0 | 0 | 0 |
-| [abimaelmartell](#abimaelmartell) | 10 | 8 | 0 | 3 | 0 | 15 | 12 | 18 | 0 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 24 | 13 | 1 | 2 | 0 | 26 | 17 | 20 | 0 | 0 | 0 |
-| [pxlpal](#pxlpal) | 6 | 3 | 1 | 0 | 0 | 4 | 2 | 4 | 0 | 0 | 0 |
-| [techmannih](#techmannih) | 18 | 4 | 1 | 0 | 0 | 8 | 5 | 10 | 0 | 0 | 0 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 50 | 3 | 34 | 28 | 67 | 0 | 0 | 0 |
+| [abimaelmartell](#abimaelmartell) | 13 | 10 | 0 | 3 | 0 | 16 | 15 | 21 | 0 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 32 | 16 | 1 | 2 | 1 | 30 | 19 | 27 | 0 | 0 | 0 |
+| [pxlpal](#pxlpal) | 6 | 3 | 1 | 0 | 0 | 4 | 3 | 4 | 0 | 0 | 0 |
+| [techmannih](#techmannih) | 19 | 5 | 1 | 0 | 0 | 9 | 6 | 13 | 0 | 0 | 0 |
 | [graphite-app[bot]](#graphite-app[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 22 | 17 | 0 | 2 | 0 | 17 | 16 | 26 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 26 | 21 | 0 | 2 | 0 | 21 | 20 | 31 | 0 | 0 | 0 |
+| [thesloppyguy](#thesloppyguy) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 8 | 2 | 1 | 0 | 0 | 2 | 1 | 2 | 0 | 0 | 0 |
 | [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 16 | 0 | 0 | 0 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 | [copilot-pull-request-reviewer[bot]](#copilot-pull-request-reviewer[bot]) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Top 7 Repositories by Contribution Points
 
 ```mermaid
 pie
-    "tscircuit/tscircuit.com" : 32
+    "tscircuit/tscircuit.com" : 35
+    "tscircuit/schematic-trace-solver" : 22
     "tscircuit/calculate-packing" : 18
-    "tscircuit/core" : 10
+    "tscircuit/chat.tscircuit.com" : 11
+    "tscircuit/core" : 9
     "tscircuit/matchpack" : 8
-    "tscircuit/schematic-trace-solver" : 8
-    "tscircuit/chat.tscircuit.com" : 6
-    "tscircuit/calculate-elbow" : 5
+    "tscircuit/eval" : 6
 ```
 
 ## Changes by Repository
@@ -128,9 +134,9 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#28](https://github.com/tscircuit/calculate-packing/pull/28) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes overlap check for packed components by adding epsilon, ensuring proper alignment of voltage regulator caps. |
+| [#28](https://github.com/tscircuit/calculate-packing/pull/28) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds an epsilon value for overlap checks to fix capacitor alignment issues for voltage regulators in the core functionality of the packing algorithm. |
 | [#27](https://github.com/tscircuit/calculate-packing/pull/27) | 🐳 Major | ⭐⭐⭐ | seveibar | Pad to Pad vs Pad to Center Optimization !image(https:github.comuser-attachmentsassetsb3306b25-1e3b-49af-a415-0db9c248ba3d) |
-| [#26](https://github.com/tscircuit/calculate-packing/pull/26) | 🐳 Major | ⭐⭐⭐ | seveibar | This pull request addresses an issue with invalid outline generation in the constructOutline function. It introduces a new approach that enhances stability and correctness in generating outlines from packed components. The changes include the addition of new utility functions for bounding calculations and improved error handling during polygon operations. |
+| [#26](https://github.com/tscircuit/calculate-packing/pull/26) | 🐳 Major | ⭐⭐⭐ | seveibar | This pull request addresses issues with invalid outline generation in the outline construction process. It introduces a new approach to constructing outlines that is more stable and reliable. The changes include the addition of new utility functions for bounding box calculations and improvements to the outline construction logic to ensure valid outputs. |
 | [#23](https://github.com/tscircuit/calculate-packing/pull/23) | 🐳 Major | ⭐⭐⭐ | seveibar | pack placement strategy wip pack solver 2 single component pack solver init add packsolver2 test with error remove stroke widths that were making things less visible, add test identifying insideoutside of outline for componentToPlace using poitnInOutline always show pads of outline segment while being solved switch PackSolver2 as the default for PackDebugger improve pointInOutline to match segment style. Improve normal calculation fix normal segment placement placeholder for viable outline segment computation add largest rect insideoutside bounds solver add largest rect outside outline solver improve visual and fix last-minute offset when irls is solved |
 
 <details>
@@ -138,7 +144,7 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#25](https://github.com/tscircuit/calculate-packing/pull/25) | 🐌 Tiny | seveibar | Adds getConstructorParams method to PackSolver2 and modifies it in SingleComponentPackSolver to return an object instead of an array. |
+| [#25](https://github.com/tscircuit/calculate-packing/pull/25) | 🐌 Tiny | seveibar | Adds getConstructorParams method to PackSolver2 and modifies it in SingleComponentPackSolver to return parameters in a new format. |
 | [#24](https://github.com/tscircuit/calculate-packing/pull/24) | 🐌 Tiny | seveibar | Adds PackSolver2 to the exports in the index file, making it available for use in other modules. |
 
 </details>
@@ -147,15 +153,45 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#10](https://github.com/tscircuit/matchpack/pull/10) | 🐳 Major | ⭐⭐⭐ | seveibar | Add a PasteInput page for parsing InputProblem and fix rotation offsets not loading properly from PackSolver2. |
+| [#10](https://github.com/tscircuit/matchpack/pull/10) | 🐳 Major | ⭐⭐⭐ | seveibar | Add PasteInput page for parsing LayoutPipelineSolver InputProblem and fix rotation offsets not loading properly from PackSolver2 |
 | [#9](https://github.com/tscircuit/matchpack/pull/9) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes issues with the outline missing packed components and resolves problems in the PackSolver2 implementation. |
 
 ### [tscircuit/schematic-trace-solver](https://github.com/tscircuit/schematic-trace-solver)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#3](https://github.com/tscircuit/schematic-trace-solver/pull/3) | 🐳 Major | ⭐⭐⭐ | seveibar | Add a new example, improve pin direction calculation, and prevent the first or last segment of a trace from being moved during overlap resolution. |
+| [#10](https://github.com/tscircuit/schematic-trace-solver/pull/10) | 🐳 Major | ⭐⭐⭐ | seveibar | Implements a GenericSolverDebugger and fixes an issue where trace lines sometimes incorrectly pass through chips in the schematic. |
+| [#7](https://github.com/tscircuit/schematic-trace-solver/pull/7) | 🐳 Major | ⭐⭐⭐ | seveibar | Refactors the net label placement solver to improve the placement of single orientation labels (VCCGND) by breaking up functions and cleaning up the code, resulting in a more efficient algorithm for net label placement. |
+| [#4](https://github.com/tscircuit/schematic-trace-solver/pull/4) | 🐳 Major | ⭐⭐⭐ | seveibar | Sets a maximum distance for MSP pairs in net connections and places net labels at independent trace islands. |
+| [#3](https://github.com/tscircuit/schematic-trace-solver/pull/3) | 🐳 Major | ⭐⭐⭐ | seveibar | Add a new example, improve pin direction calculation, and prevent the first or last segment of a trace from being moved. |
 | [#2](https://github.com/tscircuit/schematic-trace-solver/pull/2) | 🐳 Major | ⭐⭐⭐ | seveibar | add visualize input problem more tailwind insertion, fix toolbar spacing, show input problem in msp solver improve visualization schematic trace lines start wip guidelines solver implement guidelines calculation |
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#6](https://github.com/tscircuit/schematic-trace-solver/pull/6) | 🐌 Tiny | seveibar | Expands chip dimensions to ensure all pins are within or on the chip boundary without shrinking the chip size. |
+| [#5](https://github.com/tscircuit/schematic-trace-solver/pull/5) | 🐌 Tiny | seveibar | Fixes issue where pins inside chips are incorrectly positioned, leading to net label problems. |
+
+</details>
+
+### [tscircuit/eval](https://github.com/tscircuit/eval)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#873](https://github.com/tscircuit/eval/pull/873) | 🐙 Minor | ⭐⭐ | seveibar | Adds a new method executeComponent to the CircuitRunner and CircuitWebWorker classes, allowing for the execution of React components within the circuit context. |
+| [#855](https://github.com/tscircuit/eval/pull/855) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes the prioritization of default exports over named exports in component rendering. |
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#866](https://github.com/tscircuit/eval/pull/866) | 🐌 Tiny | seveibar | Refactors test organization into directories, introduces a validation script for test matrix coverage, and updates the core library to version 0.0.640. |
+| [#853](https://github.com/tscircuit/eval/pull/853) | 🐌 Tiny | imrishabh18 | Adds a fetch proxy to the web worker, allowing fetch requests to be routed through the main thread, which is useful in restricted environments where worker fetch requests are blocked. |
+
+</details>
 
 ### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
 
@@ -173,18 +209,18 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#1168](https://github.com/tscircuit/core/pull/1168) | 🐙 Minor | ⭐⭐ | imrishabh18 | Calculates the size of a schematic group based on its components when explicit dimensions are not provided, ensuring proper layout in the absence of predefined sizes. |
-| [#1166](https://github.com/tscircuit/core/pull/1166) | 🐙 Minor | ⭐⭐ | imrishabh18 | Refactors the Group_doInitialPcbLayoutGrid method to support grouping in grid layouts and improve readability. |
+| [#1168](https://github.com/tscircuit/core/pull/1168) | 🐙 Minor | ⭐⭐ | imrishabh18 | Calculates the dimensions of a schematic group based on its components when explicit dimensions are not provided, ensuring proper layout in the flex system. |
 
 <details>
-<summary>🐌 Tiny Contributions (6)</summary>
+<summary>🐌 Tiny Contributions (7)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#1182](https://github.com/tscircuit/core/pull/1182) | 🐌 Tiny | seveibar | Removes support for React Reconciler 18, consolidating to React Reconciler 19 for rendering. |
-| [#1181](https://github.com/tscircuit/core/pull/1181) | 🐌 Tiny | seveibar | Adds a new configuration file to support compatibility with older bundlers by disabling import assertions and lowering the target to ES2020. |
+| [#1182](https://github.com/tscircuit/core/pull/1182) | 🐌 Tiny | seveibar | Removes support for React Reconciler 18, consolidating to React Reconciler for version 19 and above. |
+| [#1181](https://github.com/tscircuit/core/pull/1181) | 🐌 Tiny | seveibar | Adds a new tsup configuration file to ensure compatibility with older bundlers by disabling import assertions and lowering the target to ES2020. |
 | [#1180](https://github.com/tscircuit/core/pull/1180) | 🐌 Tiny | seveibar | Adds an exports field to package.json to define module entry points for different environments. |
 | [#1171](https://github.com/tscircuit/core/pull/1171) | 🐌 Tiny | seveibar | Updates the versions of the tscircuitmatchpack and calculate-packing dependencies in the project. |
+| [#1166](https://github.com/tscircuit/core/pull/1166) | 🐌 Tiny | imrishabh18 | Adds support for grouping in grid layout and refactors the layout method for better readability and maintainability. |
 | [#1170](https://github.com/tscircuit/core/pull/1170) | 🐌 Tiny | techmannih | Handles worker self.location.origin in getClientOrigin and adds tests verifying origin selection in browser and worker contexts |
 | [#1172](https://github.com/tscircuit/core/pull/1172) | 🐌 Tiny | pxlpal | Changes the display of capacitance in the schematic symbol to use the raw string value instead of formatting it, allowing for more accurate representation of user-defined capacitance values. |
 
@@ -194,47 +230,57 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#1593](https://github.com/tscircuit/tscircuit.com/pull/1593) | 🐳 Major | ⭐⭐⭐ | abimaelmartell | Eliminates duplicate API requests for package release data by standardizing the use of a shared hook across components, improving caching and performance. |
 | [#1612](https://github.com/tscircuit/tscircuit.com/pull/1612) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds user search functionality to the existing search page, allowing users to search for accounts alongside packages. |
-| [#1608](https://github.com/tscircuit/tscircuit.com/pull/1608) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Fixes image previews not loading by synchronizing the images route and enhancing the 3D SVG rendering functionality. |
+| [#1608](https://github.com/tscircuit/tscircuit.com/pull/1608) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Fixes image previews not loading by synchronizing the images route and updating the image rendering logic to support new formats. |
 | [#1601](https://github.com/tscircuit/tscircuit.com/pull/1601) | 🐙 Minor | ⭐⭐ | abimaelmartell | Fixes a race condition that occurs when loading files, ensuring that the loading state accurately reflects the status of file retrieval. |
-| [#1593](https://github.com/tscircuit/tscircuit.com/pull/1593) | 🐙 Minor | ⭐⭐ | abimaelmartell | Eliminates duplicate API requests for package release data by standardizing the fetching logic across components to use a shared hook, improving performance and cache consistency. |
+| [#1596](https://github.com/tscircuit/tscircuit.com/pull/1596) | 🐙 Minor | ⭐⭐ | imrishabh18 | Hides the fileMenu next to the Run button in the editor interface, streamlining the user experience. |
 | [#1603](https://github.com/tscircuit/tscircuit.com/pull/1603) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes the path resolution for the main component and selected component in the CodeEditor, ensuring correct file selection based on URL parameters. |
-| [#1606](https://github.com/tscircuit/tscircuit.com/pull/1606) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes the resolution of hidden files and corrects a bug in the folder selection process within the file sidebar component. |
-| [#1600](https://github.com/tscircuit/tscircuit.com/pull/1600) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes intermittent file loading issues in the file management system |
+| [#1606](https://github.com/tscircuit/tscircuit.com/pull/1606) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes the resolution of hidden files and addresses a bug in folder selection within the file sidebar component. |
+| [#1600](https://github.com/tscircuit/tscircuit.com/pull/1600) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes intermittent file loading issues in the file management system. |
 
 <details>
-<summary>🐌 Tiny Contributions (14)</summary>
+<summary>🐌 Tiny Contributions (13)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#1611](https://github.com/tscircuit/tscircuit.com/pull/1611) | 🐌 Tiny | seveibar | Removes the mention of drag-and-drop tools from the homepage subtitle and updates the generated index description accordingly. |
-| [#1610](https://github.com/tscircuit/tscircuit.com/pull/1610) | 🐌 Tiny | abimaelmartell | Removes redundant requests for package data by consolidating hooks in the editor and package editor components. |
+| [#1610](https://github.com/tscircuit/tscircuit.com/pull/1610) | 🐌 Tiny | abimaelmartell | Refactors the code to eliminate repeated requests for package data by consolidating the data fetching into a single hook. |
 | [#1609](https://github.com/tscircuit/tscircuit.com/pull/1609) | 🐌 Tiny | abimaelmartell | Updates API URL references from registry-api.tscircuit.com to api.tscircuit.com in various files. |
-| [#1595](https://github.com/tscircuit/tscircuit.com/pull/1595) | 🐌 Tiny | abimaelmartell | Switches the package_fileslist API to use GET with query parameters, updating client hooks and components accordingly. |
-| [#1594](https://github.com/tscircuit/tscircuit.com/pull/1594) | 🐌 Tiny | abimaelmartell | Avoids unnecessary calls to fetch the LICENSE file by checking for its existence in the release files first, thus optimizing the data fetching process. |
+| [#1595](https://github.com/tscircuit/tscircuit.com/pull/1595) | 🐌 Tiny | abimaelmartell | Switches the package_fileslist API to use GET with query parameters, updating client hooks and components accordingly, and adjusting registry utilities and tests to reflect this change. |
+| [#1594](https://github.com/tscircuit/tscircuit.com/pull/1594) | 🐌 Tiny | abimaelmartell | Avoid unnecessary package_filesget call by listing release files first and load LICENSE file content only when present in release. |
 | [#1592](https://github.com/tscircuit/tscircuit.com/pull/1592) | 🐌 Tiny | abimaelmartell | Changes the package_filesget endpoint to use GET with query parameters, updates client hooks and scripts accordingly, and aligns tests with the new GET behavior. |
 | [#1605](https://github.com/tscircuit/tscircuit.com/pull/1605) | 🐌 Tiny | imrishabh18 | Hides rename and delete actions in the file tree for packages not owned by the current user, and renames the file modification flag to canModifyFiles. |
-| [#1597](https://github.com/tscircuit/tscircuit.com/pull/1597) | 🐌 Tiny | imrishabh18 | Fixes alignment and styling issues in the GitHub repository selector dropdown to ensure it matches the trigger width and maintains consistent behavior. |
-| [#1596](https://github.com/tscircuit/tscircuit.com/pull/1596) | 🐌 Tiny | imrishabh18 | Hides the file menu next to the Run button in the editor interface, streamlining the user experience. |
+| [#1597](https://github.com/tscircuit/tscircuit.com/pull/1597) | 🐌 Tiny | imrishabh18 | Fixes the GitHub repository selector dropdown styling to ensure it matches the trigger width and stays aligned, while wrapping repository options in CommandList for consistent styling and behavior. |
 | [#1607](https://github.com/tscircuit/tscircuit.com/pull/1607) | 🐌 Tiny | ArnavK-09 | Add draggablefalse to various components to prevent unwanted dragging, apply select-none class to improve text selection behavior, replace custom spinner with Loader2 icon for consistency, update search input attributes for better accessibility, and fix package image URL path in search component. |
-| [#1602](https://github.com/tscircuit/tscircuit.com/pull/1602) | 🐌 Tiny | ArnavK-09 | Fixes loading issues in RunFrame by updating the runframe dependency to version 0.0.827 |
+| [#1602](https://github.com/tscircuit/tscircuit.com/pull/1602) | 🐌 Tiny | ArnavK-09 | Fixes loading issues in RunFrame by updating the runframe dependency to a newer version. |
 | [#1599](https://github.com/tscircuit/tscircuit.com/pull/1599) | 🐌 Tiny | ArnavK-09 | Fixes the base URL for the registry API and improves logging for package loading operations in the autoload dev packages functionality. |
 | [#1604](https://github.com/tscircuit/tscircuit.com/pull/1604) | 🐌 Tiny | ArnavK-09 | Updates loading indicators in Datasheet and Quickstart pages to use a new Loader component with adjusted styling. |
 | [#1598](https://github.com/tscircuit/tscircuit.com/pull/1598) | 🐌 Tiny | ArnavK-09 | Fixes layout issues in the CmdKMenu component by adjusting Tailwind CSS classes for better responsiveness and visual alignment. |
 
 </details>
 
-### [tscircuit/eval](https://github.com/tscircuit/eval)
+### [tscircuit/graphics-debug](https://github.com/tscircuit/graphics-debug)
 
 
 <details>
-<summary>🐌 Tiny Contributions (3)</summary>
+<summary>🐌 Tiny Contributions (1)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#866](https://github.com/tscircuit/eval/pull/866) | 🐌 Tiny | seveibar | Refactors test organization into directories, introduces a validation script for test matrix coverage, and updates the core library to version 0.0.640. |
-| [#853](https://github.com/tscircuit/eval/pull/853) | 🐌 Tiny | imrishabh18 | Adds a fetch proxy to the web worker, allowing fetch requests to be routed through the main thread, which is useful in restricted environments where worker fetch requests are blocked. |
-| [#855](https://github.com/tscircuit/eval/pull/855) | 🐌 Tiny | ArnavK-09 | Fixes the prioritization of default exports over named exports in component rendering. |
+| [#72](https://github.com/tscircuit/graphics-debug/pull/72) | 🐌 Tiny | seveibar | Removes the pretty library to reduce the bundle size of the application. |
+
+</details>
+
+### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#232](https://github.com/tscircuit/tscircuit-autorouter/pull/232) | 🐌 Tiny | seveibar | Adds minification to the build process using Terser for optimized output. |
 
 </details>
 
@@ -242,7 +288,7 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#1026](https://github.com/tscircuit/runframe/pull/1026) | 🐙 Minor | ⭐⭐ | abimaelmartell | Ensures that the DOM is fully loaded before rendering the RunFrame component in standalone mode, preventing potential rendering issues. |
+| [#1026](https://github.com/tscircuit/runframe/pull/1026) | 🐙 Minor | ⭐⭐ | abimaelmartell | Fixes a timing issue in standalone mode by ensuring that the DOM is fully loaded before executing further scripts. |
 
 <details>
 <summary>🐌 Tiny Contributions (3)</summary>
@@ -280,6 +326,32 @@ pie
 
 </details>
 
+### [tscircuit/cli](https://github.com/tscircuit/cli)
+
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#314](https://github.com/tscircuit/cli/pull/314) | 🐌 Tiny | abimaelmartell | Updates the tscircuitrunframe dependency to version 0.0.831 in package.json |
+| [#315](https://github.com/tscircuit/cli/pull/315) | 🐌 Tiny | imrishabh18 | Ensures setupTsciProject adds dev and start scripts that run tsci dev and verifies cloned packages include required scripts while extending invalid URL format test timeout. |
+
+</details>
+
+### [tscircuit/svg.tscircuit.com](https://github.com/tscircuit/svg.tscircuit.com)
+
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#289](https://github.com/tscircuit/svg.tscircuit.com/pull/289) | 🐌 Tiny | abimaelmartell | Allow passing base64-encoded circuit JSON via circuit_json query param, document new API option in README, and test PCB SVG generation using circuit_json. |
+| [#288](https://github.com/tscircuit/svg.tscircuit.com/pull/288) | 🐌 Tiny | abimaelmartell | Adds comprehensive API usage documentation for generating SVGs from TSCircuit code, including endpoints, parameters, and examples. |
+
+</details>
+
 ### [tscircuit/circuit-json-to-simple-3d](https://github.com/tscircuit/circuit-json-to-simple-3d)
 
 
@@ -298,56 +370,71 @@ pie
 |------|--------|--------|-------------|-------------|
 | [#80](https://github.com/tscircuit/jlcsearch/pull/80) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Add a new category for FPC connectors, including a derived table, a route for listing connectors with filtering options, and documentation for the new category. |
 
-### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
-
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#257](https://github.com/tscircuit/circuit-json/pull/257) | 🐌 Tiny | imrishabh18 | Adds a new warning type for ignored source properties in circuit components |
-
-</details>
-
-### [tscircuit/cli](https://github.com/tscircuit/cli)
-
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#315](https://github.com/tscircuit/cli/pull/315) | 🐌 Tiny | imrishabh18 | Adds dev and start scripts to the package.json of cloned packages to run tsci dev and extends the timeout for invalid URL format tests. |
-
-</details>
-
 ### [tscircuit/docs](https://github.com/tscircuit/docs)
 
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#113](https://github.com/tscircuit/docs/pull/113) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Changes the CDN URL for loading the tscircuit library from jsDelivr to Cloudflare, ensuring users access the latest version of the library. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#113](https://github.com/tscircuit/docs/pull/113) | 🐌 Tiny | imrishabh18 | Changes the CDN URL for loading the tscircuit library from jsDelivr to Cloudflares CDN. |
+| [#114](https://github.com/tscircuit/docs/pull/114) | 🐌 Tiny | pxlpal | Removes commented-out code related to future syntax for schPinStyle in the Chip documentation. |
 
 </details>
+
+### [tscircuit/circuit-json](https://github.com/tscircuit/circuit-json)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#257](https://github.com/tscircuit/circuit-json/pull/257) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds a new warning type for ignored source properties in circuit components |
 
 ### [tscircuit/chat.tscircuit.com](https://github.com/tscircuit/chat.tscircuit.com)
 
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#31](https://github.com/tscircuit/chat.tscircuit.com/pull/31) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes package import issues and improves styling for better user experience. |
 
 <details>
-<summary>🐌 Tiny Contributions (6)</summary>
+<summary>🐌 Tiny Contributions (9)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#28](https://github.com/tscircuit/chat.tscircuit.com/pull/28) | 🐌 Tiny | imrishabh18 | Fixes the 401 unauthorized error for the apivote and apidocument endpoints, allowing public read access to documents for shared chats. |
 | [#26](https://github.com/tscircuit/chat.tscircuit.com/pull/26) | 🐌 Tiny | imrishabh18 | Increases the maximum duration for processing requests from 60 seconds to 300 seconds to accommodate longer processing times for the GPT 5 model. |
-| [#25](https://github.com/tscircuit/chat.tscircuit.com/pull/25) | 🐌 Tiny | imrishabh18 | Changes the AI model used for title generation from gpt-5 to gpt-5-mini and adds gpt-5-mini as a new model option for general assistance. |
-| [#24](https://github.com/tscircuit/chat.tscircuit.com/pull/24) | 🐌 Tiny | imrishabh18 | Adds better error handling for chat requests and sets the temperature parameter to 1 for GPT-5 model usage. |
+| [#25](https://github.com/tscircuit/chat.tscircuit.com/pull/25) | 🐌 Tiny | imrishabh18 | Changes the AI model used for title generation from gpt-5 to gpt-5-mini while retaining gpt-5 for code generation. |
+| [#24](https://github.com/tscircuit/chat.tscircuit.com/pull/24) | 🐌 Tiny | imrishabh18 | Implements improved error handling in the chat API and sets the temperature parameter to a default value of 1 for GPT-5. |
 | [#23](https://github.com/tscircuit/chat.tscircuit.com/pull/23) | 🐌 Tiny | imrishabh18 | Changes the default chat model to gpt-5 and adds gpt-5 as a new model for general assistance. |
-| [#27](https://github.com/tscircuit/chat.tscircuit.com/pull/27) | 🐌 Tiny | ArnavK-09 | This pull request introduces a new GitHub Actions workflow for checking code formatting and applies formatting changes across the codebase. The workflow is triggered on pushes and pull requests to the main branch, ensuring that code adheres to the specified formatting rules before merging. |
+| [#32](https://github.com/tscircuit/chat.tscircuit.com/pull/32) | 🐌 Tiny | ArnavK-09 | Replaces the Python language support in the code editor with JavaScript and updates the markdown rendering to use Streamdown instead of ReactMarkdown. |
+| [#29](https://github.com/tscircuit/chat.tscircuit.com/pull/29) | 🐌 Tiny | ArnavK-09 | Exports the db client in queries.ts for better reusability, removes unused imports and files, and adds dynamic iframe height calculation in TscircuitIframe to avoid SSR issues. |
+| [#30](https://github.com/tscircuit/chat.tscircuit.com/pull/30) | 🐌 Tiny | ArnavK-09 | Updated dotenv to version 17.2.1 Updated jose to version 6.0.13 Updated lucide-react to version 0.542.0 Updated next to version 15.5.0 Updated next-themes to version 0.4.6 Updated react to version 19.1.0 Updated react-dom to version 19.1.0 Updated sharp to version 0.34.3 Updated swc helpers and other related packages Added new opengraph image and updated favicon Improved TypeScript configuration in next-env.d.ts Removed experimental PPR configuration from next.config.ts Enhanced chat header with new icons and improved accessibility |
+| [#27](https://github.com/tscircuit/chat.tscircuit.com/pull/27) | 🐌 Tiny | ArnavK-09 | This pull request introduces a new GitHub Actions workflow for checking code formatting and applies formatting changes across the codebase. The workflow is triggered on pushes and pull requests to the main branch, ensuring that the code adheres to the specified formatting rules before merging. |
+
+</details>
+
+### [tscircuit/repo-access-manager](https://github.com/tscircuit/repo-access-manager)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#1](https://github.com/tscircuit/repo-access-manager/pull/1) | 🐌 Tiny | imrishabh18 | Adds GitHub Actions workflows to manage repository access for teams using a PAT token, allowing for automated permission syncing based on YAML configurations. |
+
+</details>
+
+### [tscircuit/circuit-preview](https://github.com/tscircuit/circuit-preview)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#3](https://github.com/tscircuit/circuit-preview/pull/3) | 🐌 Tiny | imrishabh18 | Adds a GitHub Actions workflow for publishing to npm using pver on push to the main branch. |
 
 </details>
 
@@ -355,12 +442,13 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#364](https://github.com/tscircuit/footprinter/pull/364) | 🐙 Minor | ⭐⭐ | techmannih | Fixes string parser to ignore empty or invalid segments when parsing footprint strings and broadens isNotNull helper to exclude undefined values. |
+| [#364](https://github.com/tscircuit/footprinter/pull/364) | 🐙 Minor | ⭐⭐ | techmannih | Fixes string parser to ignore empty or invalid segments when parsing footprint strings, broadening the isNotNull helper to exclude undefined values and adding tests for parsing strings with stray underscores. |
 
 ### [tscircuit/schematic-symbols](https://github.com/tscircuit/schematic-symbols)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#353](https://github.com/tscircuit/schematic-symbols/pull/353) | 🐙 Minor | ⭐⭐ | techmannih | Fixes pin numbering for the Icled symbol to follow the counter-clockwise convention, correcting the labels for right ports from 4 and 3 to 3 and 4 respectively. |
 | [#349](https://github.com/tscircuit/schematic-symbols/pull/349) | 🐙 Minor | ⭐⭐ | techmannih | Fixes handling of zero width and height in resizeSymbol function, ensuring proper resizing behavior and adding tests for zero-dimension cases. |
 
 <details>
@@ -369,7 +457,7 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#348](https://github.com/tscircuit/schematic-symbols/pull/348) | 🐌 Tiny | techmannih | Scales the circle radius and text font size when resizing symbols, and adds tests to verify the scaling functionality. |
-| [#351](https://github.com/tscircuit/schematic-symbols/pull/351) | 🐌 Tiny | techmannih | Removes a stray console log statement from the getBoundsOfSvgJson function to clean up the code. |
+| [#351](https://github.com/tscircuit/schematic-symbols/pull/351) | 🐌 Tiny | techmannih | Removes a stray console log statement from the getBoundsOfSvgJson function to clean up the codebase. |
 
 </details>
 
@@ -400,7 +488,7 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#108](https://github.com/tscircuit/jscad-electronics/pull/108) | 🐌 Tiny | ArnavK-09 | Removes an unnecessary console log statement from the Footprinter3d component to clean up the code. |
-| [#107](https://github.com/tscircuit/jscad-electronics/pull/107) | 🐌 Tiny | ArnavK-09 | Updates dependencies in package.json and fixes type casting in BGA component. |
+| [#107](https://github.com/tscircuit/jscad-electronics/pull/107) | 🐌 Tiny | ArnavK-09 | Updates dependencies in package.json and fixes type casting in BGA component rendering. |
 
 </details>
 
@@ -423,30 +511,38 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#9](https://github.com/tscircuit/calculate-elbow/pull/9) | 🐳 Major | ⭐⭐⭐ | Fixes edge case handling in elbow calculations to ensure accurate routing paths for various configurations of start and end points. |
-| [#28](https://github.com/tscircuit/calculate-packing/pull/28) | 🐳 Major | ⭐⭐⭐ | Fixes overlap check for packed components by adding epsilon, ensuring proper alignment of voltage regulator caps. |
+| [#28](https://github.com/tscircuit/calculate-packing/pull/28) | 🐳 Major | ⭐⭐⭐ | Adds an epsilon value for overlap checks to fix capacitor alignment issues for voltage regulators in the core functionality of the packing algorithm. |
 | [#27](https://github.com/tscircuit/calculate-packing/pull/27) | 🐳 Major | ⭐⭐⭐ | Pad to Pad vs Pad to Center Optimization !image(https:github.comuser-attachmentsassetsb3306b25-1e3b-49af-a415-0db9c248ba3d) |
-| [#26](https://github.com/tscircuit/calculate-packing/pull/26) | 🐳 Major | ⭐⭐⭐ | This pull request addresses an issue with invalid outline generation in the constructOutline function. It introduces a new approach that enhances stability and correctness in generating outlines from packed components. The changes include the addition of new utility functions for bounding calculations and improved error handling during polygon operations. |
+| [#26](https://github.com/tscircuit/calculate-packing/pull/26) | 🐳 Major | ⭐⭐⭐ | This pull request addresses issues with invalid outline generation in the outline construction process. It introduces a new approach to constructing outlines that is more stable and reliable. The changes include the addition of new utility functions for bounding box calculations and improvements to the outline construction logic to ensure valid outputs. |
 | [#23](https://github.com/tscircuit/calculate-packing/pull/23) | 🐳 Major | ⭐⭐⭐ | pack placement strategy wip pack solver 2 single component pack solver init add packsolver2 test with error remove stroke widths that were making things less visible, add test identifying insideoutside of outline for componentToPlace using poitnInOutline always show pads of outline segment while being solved switch PackSolver2 as the default for PackDebugger improve pointInOutline to match segment style. Improve normal calculation fix normal segment placement placeholder for viable outline segment computation add largest rect insideoutside bounds solver add largest rect outside outline solver improve visual and fix last-minute offset when irls is solved |
-| [#10](https://github.com/tscircuit/matchpack/pull/10) | 🐳 Major | ⭐⭐⭐ | Add a PasteInput page for parsing InputProblem and fix rotation offsets not loading properly from PackSolver2. |
+| [#10](https://github.com/tscircuit/matchpack/pull/10) | 🐳 Major | ⭐⭐⭐ | Add PasteInput page for parsing LayoutPipelineSolver InputProblem and fix rotation offsets not loading properly from PackSolver2 |
 | [#9](https://github.com/tscircuit/matchpack/pull/9) | 🐳 Major | ⭐⭐⭐ | Fixes issues with the outline missing packed components and resolves problems in the PackSolver2 implementation. |
-| [#3](https://github.com/tscircuit/schematic-trace-solver/pull/3) | 🐳 Major | ⭐⭐⭐ | Add a new example, improve pin direction calculation, and prevent the first or last segment of a trace from being moved during overlap resolution. |
+| [#10](https://github.com/tscircuit/schematic-trace-solver/pull/10) | 🐳 Major | ⭐⭐⭐ | Implements a GenericSolverDebugger and fixes an issue where trace lines sometimes incorrectly pass through chips in the schematic. |
+| [#7](https://github.com/tscircuit/schematic-trace-solver/pull/7) | 🐳 Major | ⭐⭐⭐ | Refactors the net label placement solver to improve the placement of single orientation labels (VCCGND) by breaking up functions and cleaning up the code, resulting in a more efficient algorithm for net label placement. |
+| [#4](https://github.com/tscircuit/schematic-trace-solver/pull/4) | 🐳 Major | ⭐⭐⭐ | Sets a maximum distance for MSP pairs in net connections and places net labels at independent trace islands. |
+| [#3](https://github.com/tscircuit/schematic-trace-solver/pull/3) | 🐳 Major | ⭐⭐⭐ | Add a new example, improve pin direction calculation, and prevent the first or last segment of a trace from being moved. |
 | [#2](https://github.com/tscircuit/schematic-trace-solver/pull/2) | 🐳 Major | ⭐⭐⭐ | add visualize input problem more tailwind insertion, fix toolbar spacing, show input problem in msp solver improve visualization schematic trace lines start wip guidelines solver implement guidelines calculation |
+| [#873](https://github.com/tscircuit/eval/pull/873) | 🐙 Minor | ⭐⭐ | Adds a new method executeComponent to the CircuitRunner and CircuitWebWorker classes, allowing for the execution of React components within the circuit context. |
 
 <details>
-<summary>🐌 Tiny Contributions (10)</summary>
+<summary>🐌 Tiny Contributions (14)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#357](https://github.com/tscircuit/pcb-viewer/pull/357) | 🐌 Tiny | Modifies the build process to exclude tscircuitcore from the bundled output, allowing it to be treated as an external dependency. |
-| [#1182](https://github.com/tscircuit/core/pull/1182) | 🐌 Tiny | Removes support for React Reconciler 18, consolidating to React Reconciler 19 for rendering. |
-| [#1181](https://github.com/tscircuit/core/pull/1181) | 🐌 Tiny | Adds a new configuration file to support compatibility with older bundlers by disabling import assertions and lowering the target to ES2020. |
+| [#1182](https://github.com/tscircuit/core/pull/1182) | 🐌 Tiny | Removes support for React Reconciler 18, consolidating to React Reconciler for version 19 and above. |
+| [#1181](https://github.com/tscircuit/core/pull/1181) | 🐌 Tiny | Adds a new tsup configuration file to ensure compatibility with older bundlers by disabling import assertions and lowering the target to ES2020. |
 | [#1180](https://github.com/tscircuit/core/pull/1180) | 🐌 Tiny | Adds an exports field to package.json to define module entry points for different environments. |
 | [#1171](https://github.com/tscircuit/core/pull/1171) | 🐌 Tiny | Updates the versions of the tscircuitmatchpack and calculate-packing dependencies in the project. |
 | [#1611](https://github.com/tscircuit/tscircuit.com/pull/1611) | 🐌 Tiny | Removes the mention of drag-and-drop tools from the homepage subtitle and updates the generated index description accordingly. |
+| [#72](https://github.com/tscircuit/graphics-debug/pull/72) | 🐌 Tiny | Removes the pretty library to reduce the bundle size of the application. |
 | [#866](https://github.com/tscircuit/eval/pull/866) | 🐌 Tiny | Refactors test organization into directories, introduces a validation script for test matrix coverage, and updates the core library to version 0.0.640. |
+| [#232](https://github.com/tscircuit/tscircuit-autorouter/pull/232) | 🐌 Tiny | Adds minification to the build process using Terser for optimized output. |
 | [#10](https://github.com/tscircuit/calculate-elbow/pull/10) | 🐌 Tiny | Removes global debug assignments from the codebase to clean up the build output. |
-| [#25](https://github.com/tscircuit/calculate-packing/pull/25) | 🐌 Tiny | Adds getConstructorParams method to PackSolver2 and modifies it in SingleComponentPackSolver to return an object instead of an array. |
+| [#25](https://github.com/tscircuit/calculate-packing/pull/25) | 🐌 Tiny | Adds getConstructorParams method to PackSolver2 and modifies it in SingleComponentPackSolver to return parameters in a new format. |
 | [#24](https://github.com/tscircuit/calculate-packing/pull/24) | 🐌 Tiny | Adds PackSolver2 to the exports in the index file, making it available for use in other modules. |
+| [#6](https://github.com/tscircuit/schematic-trace-solver/pull/6) | 🐌 Tiny | Expands chip dimensions to ensure all pins are within or on the chip boundary without shrinking the chip size. |
+| [#5](https://github.com/tscircuit/schematic-trace-solver/pull/5) | 🐌 Tiny | Fixes issue where pins inside chips are incorrectly positioned, leading to net label problems. |
 
 </details>
 
@@ -454,23 +550,26 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
+| [#1593](https://github.com/tscircuit/tscircuit.com/pull/1593) | 🐳 Major | ⭐⭐⭐ | Eliminates duplicate API requests for package release data by standardizing the use of a shared hook across components, improving caching and performance. |
 | [#1601](https://github.com/tscircuit/tscircuit.com/pull/1601) | 🐙 Minor | ⭐⭐ | Fixes a race condition that occurs when loading files, ensuring that the loading state accurately reflects the status of file retrieval. |
-| [#1593](https://github.com/tscircuit/tscircuit.com/pull/1593) | 🐙 Minor | ⭐⭐ | Eliminates duplicate API requests for package release data by standardizing the fetching logic across components to use a shared hook, improving performance and cache consistency. |
-| [#1026](https://github.com/tscircuit/runframe/pull/1026) | 🐙 Minor | ⭐⭐ | Ensures that the DOM is fully loaded before rendering the RunFrame component in standalone mode, preventing potential rendering issues. |
+| [#1026](https://github.com/tscircuit/runframe/pull/1026) | 🐙 Minor | ⭐⭐ | Fixes a timing issue in standalone mode by ensuring that the DOM is fully loaded before executing further scripts. |
 
 <details>
-<summary>🐌 Tiny Contributions (9)</summary>
+<summary>🐌 Tiny Contributions (12)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#741](https://github.com/tscircuit/tscircuit/pull/741) | 🐌 Tiny | Removes the CDN fetch for webworker.min.js and replaces it with a local dependency from minicssgrid. |
 | [#740](https://github.com/tscircuit/tscircuit/pull/740) | 🐌 Tiny | Adds minicssgrid as a dependency to resolve a blocking issue with dependency updates in the core. |
 | [#296](https://github.com/tscircuit/circuit-to-svg/pull/296) | 🐌 Tiny | Fixes the output directory for Vercel deployment from cosmos-export to examplescosmos-export |
-| [#1610](https://github.com/tscircuit/tscircuit.com/pull/1610) | 🐌 Tiny | Removes redundant requests for package data by consolidating hooks in the editor and package editor components. |
+| [#1610](https://github.com/tscircuit/tscircuit.com/pull/1610) | 🐌 Tiny | Refactors the code to eliminate repeated requests for package data by consolidating the data fetching into a single hook. |
 | [#1609](https://github.com/tscircuit/tscircuit.com/pull/1609) | 🐌 Tiny | Updates API URL references from registry-api.tscircuit.com to api.tscircuit.com in various files. |
-| [#1595](https://github.com/tscircuit/tscircuit.com/pull/1595) | 🐌 Tiny | Switches the package_fileslist API to use GET with query parameters, updating client hooks and components accordingly. |
-| [#1594](https://github.com/tscircuit/tscircuit.com/pull/1594) | 🐌 Tiny | Avoids unnecessary calls to fetch the LICENSE file by checking for its existence in the release files first, thus optimizing the data fetching process. |
+| [#1595](https://github.com/tscircuit/tscircuit.com/pull/1595) | 🐌 Tiny | Switches the package_fileslist API to use GET with query parameters, updating client hooks and components accordingly, and adjusting registry utilities and tests to reflect this change. |
+| [#1594](https://github.com/tscircuit/tscircuit.com/pull/1594) | 🐌 Tiny | Avoid unnecessary package_filesget call by listing release files first and load LICENSE file content only when present in release. |
 | [#1592](https://github.com/tscircuit/tscircuit.com/pull/1592) | 🐌 Tiny | Changes the package_filesget endpoint to use GET with query parameters, updates client hooks and scripts accordingly, and aligns tests with the new GET behavior. |
+| [#314](https://github.com/tscircuit/cli/pull/314) | 🐌 Tiny | Updates the tscircuitrunframe dependency to version 0.0.831 in package.json |
+| [#289](https://github.com/tscircuit/svg.tscircuit.com/pull/289) | 🐌 Tiny | Allow passing base64-encoded circuit JSON via circuit_json query param, document new API option in README, and test PCB SVG generation using circuit_json. |
+| [#288](https://github.com/tscircuit/svg.tscircuit.com/pull/288) | 🐌 Tiny | Adds comprehensive API usage documentation for generating SVGs from TSCircuit code, including endpoints, parameters, and examples. |
 | [#12](https://github.com/tscircuit/circuit-json-to-simple-3d/pull/12) | 🐌 Tiny | Adds functionality to render PCB components without requiring a PCB board, allowing for standalone component visualization. |
 
 </details>
@@ -480,28 +579,30 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#80](https://github.com/tscircuit/jlcsearch/pull/80) | 🐳 Major | ⭐⭐⭐ | Add a new category for FPC connectors, including a derived table, a route for listing connectors with filtering options, and documentation for the new category. |
-| [#1168](https://github.com/tscircuit/core/pull/1168) | 🐙 Minor | ⭐⭐ | Calculates the size of a schematic group based on its components when explicit dimensions are not provided, ensuring proper layout in the absence of predefined sizes. |
-| [#1166](https://github.com/tscircuit/core/pull/1166) | 🐙 Minor | ⭐⭐ | Refactors the Group_doInitialPcbLayoutGrid method to support grouping in grid layouts and improve readability. |
+| [#113](https://github.com/tscircuit/docs/pull/113) | 🐳 Major | ⭐⭐⭐ | Changes the CDN URL for loading the tscircuit library from jsDelivr to Cloudflare, ensuring users access the latest version of the library. |
+| [#257](https://github.com/tscircuit/circuit-json/pull/257) | 🐙 Minor | ⭐⭐ | Adds a new warning type for ignored source properties in circuit components |
+| [#1168](https://github.com/tscircuit/core/pull/1168) | 🐙 Minor | ⭐⭐ | Calculates the dimensions of a schematic group based on its components when explicit dimensions are not provided, ensuring proper layout in the flex system. |
+| [#1596](https://github.com/tscircuit/tscircuit.com/pull/1596) | 🐙 Minor | ⭐⭐ | Hides the fileMenu next to the Run button in the editor interface, streamlining the user experience. |
 
 <details>
 <summary>🐌 Tiny Contributions (14)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#257](https://github.com/tscircuit/circuit-json/pull/257) | 🐌 Tiny | Adds a new warning type for ignored source properties in circuit components |
+| [#1166](https://github.com/tscircuit/core/pull/1166) | 🐌 Tiny | Adds support for grouping in grid layout and refactors the layout method for better readability and maintainability. |
 | [#1605](https://github.com/tscircuit/tscircuit.com/pull/1605) | 🐌 Tiny | Hides rename and delete actions in the file tree for packages not owned by the current user, and renames the file modification flag to canModifyFiles. |
-| [#1597](https://github.com/tscircuit/tscircuit.com/pull/1597) | 🐌 Tiny | Fixes alignment and styling issues in the GitHub repository selector dropdown to ensure it matches the trigger width and maintains consistent behavior. |
-| [#1596](https://github.com/tscircuit/tscircuit.com/pull/1596) | 🐌 Tiny | Hides the file menu next to the Run button in the editor interface, streamlining the user experience. |
+| [#1597](https://github.com/tscircuit/tscircuit.com/pull/1597) | 🐌 Tiny | Fixes the GitHub repository selector dropdown styling to ensure it matches the trigger width and stays aligned, while wrapping repository options in CommandList for consistent styling and behavior. |
 | [#853](https://github.com/tscircuit/eval/pull/853) | 🐌 Tiny | Adds a fetch proxy to the web worker, allowing fetch requests to be routed through the main thread, which is useful in restricted environments where worker fetch requests are blocked. |
 | [#1022](https://github.com/tscircuit/runframe/pull/1022) | 🐌 Tiny | Sets the enableFetchProxy property to true for standalone bundles in the RunFrame component, allowing for enhanced web worker functionality. |
 | [#1018](https://github.com/tscircuit/runframe/pull/1018) | 🐌 Tiny | Adds an option to control the visibility of the file menu in the RunFrame component based on the showFileMenu prop. |
-| [#315](https://github.com/tscircuit/cli/pull/315) | 🐌 Tiny | Adds dev and start scripts to the package.json of cloned packages to run tsci dev and extends the timeout for invalid URL format tests. |
-| [#113](https://github.com/tscircuit/docs/pull/113) | 🐌 Tiny | Changes the CDN URL for loading the tscircuit library from jsDelivr to Cloudflares CDN. |
+| [#315](https://github.com/tscircuit/cli/pull/315) | 🐌 Tiny | Ensures setupTsciProject adds dev and start scripts that run tsci dev and verifies cloned packages include required scripts while extending invalid URL format test timeout. |
 | [#28](https://github.com/tscircuit/chat.tscircuit.com/pull/28) | 🐌 Tiny | Fixes the 401 unauthorized error for the apivote and apidocument endpoints, allowing public read access to documents for shared chats. |
 | [#26](https://github.com/tscircuit/chat.tscircuit.com/pull/26) | 🐌 Tiny | Increases the maximum duration for processing requests from 60 seconds to 300 seconds to accommodate longer processing times for the GPT 5 model. |
-| [#25](https://github.com/tscircuit/chat.tscircuit.com/pull/25) | 🐌 Tiny | Changes the AI model used for title generation from gpt-5 to gpt-5-mini and adds gpt-5-mini as a new model option for general assistance. |
-| [#24](https://github.com/tscircuit/chat.tscircuit.com/pull/24) | 🐌 Tiny | Adds better error handling for chat requests and sets the temperature parameter to 1 for GPT-5 model usage. |
+| [#25](https://github.com/tscircuit/chat.tscircuit.com/pull/25) | 🐌 Tiny | Changes the AI model used for title generation from gpt-5 to gpt-5-mini while retaining gpt-5 for code generation. |
+| [#24](https://github.com/tscircuit/chat.tscircuit.com/pull/24) | 🐌 Tiny | Implements improved error handling in the chat API and sets the temperature parameter to a default value of 1 for GPT-5. |
 | [#23](https://github.com/tscircuit/chat.tscircuit.com/pull/23) | 🐌 Tiny | Changes the default chat model to gpt-5 and adds gpt-5 as a new model for general assistance. |
+| [#1](https://github.com/tscircuit/repo-access-manager/pull/1) | 🐌 Tiny | Adds GitHub Actions workflows to manage repository access for teams using a PAT token, allowing for automated permission syncing based on YAML configurations. |
+| [#3](https://github.com/tscircuit/circuit-preview/pull/3) | 🐌 Tiny | Adds a GitHub Actions workflow for publishing to npm using pver on push to the main branch. |
 
 </details>
 
@@ -509,7 +610,8 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#364](https://github.com/tscircuit/footprinter/pull/364) | 🐙 Minor | ⭐⭐ | Fixes string parser to ignore empty or invalid segments when parsing footprint strings and broadens isNotNull helper to exclude undefined values. |
+| [#364](https://github.com/tscircuit/footprinter/pull/364) | 🐙 Minor | ⭐⭐ | Fixes string parser to ignore empty or invalid segments when parsing footprint strings, broadening the isNotNull helper to exclude undefined values and adding tests for parsing strings with stray underscores. |
+| [#353](https://github.com/tscircuit/schematic-symbols/pull/353) | 🐙 Minor | ⭐⭐ | Fixes pin numbering for the Icled symbol to follow the counter-clockwise convention, correcting the labels for right ports from 4 and 3 to 3 and 4 respectively. |
 | [#349](https://github.com/tscircuit/schematic-symbols/pull/349) | 🐙 Minor | ⭐⭐ | Fixes handling of zero width and height in resizeSymbol function, ensuring proper resizing behavior and adding tests for zero-dimension cases. |
 
 <details>
@@ -519,7 +621,7 @@ pie
 |------|--------|-------------|
 | [#1170](https://github.com/tscircuit/core/pull/1170) | 🐌 Tiny | Handles worker self.location.origin in getClientOrigin and adds tests verifying origin selection in browser and worker contexts |
 | [#348](https://github.com/tscircuit/schematic-symbols/pull/348) | 🐌 Tiny | Scales the circle radius and text font size when resizing symbols, and adds tests to verify the scaling functionality. |
-| [#351](https://github.com/tscircuit/schematic-symbols/pull/351) | 🐌 Tiny | Removes a stray console log statement from the getBoundsOfSvgJson function to clean up the code. |
+| [#351](https://github.com/tscircuit/schematic-symbols/pull/351) | 🐌 Tiny | Removes a stray console log statement from the getBoundsOfSvgJson function to clean up the codebase. |
 
 </details>
 
@@ -530,11 +632,12 @@ pie
 | [#312](https://github.com/tscircuit/easyeda-converter/pull/312) | 🐙 Minor | ⭐⭐ | Fixes CAD rotation issues when converting EasyEDA models to circuit JSON format, ensuring correct orientation based on Z rotation values. |
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#1172](https://github.com/tscircuit/core/pull/1172) | 🐌 Tiny | Changes the display of capacitance in the schematic symbol to use the raw string value instead of formatting it, allowing for more accurate representation of user-defined capacitance values. |
+| [#114](https://github.com/tscircuit/docs/pull/114) | 🐌 Tiny | Removes commented-out code related to future syntax for schPinStyle in the Chip documentation. |
 
 </details>
 
@@ -543,27 +646,31 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#1612](https://github.com/tscircuit/tscircuit.com/pull/1612) | 🐳 Major | ⭐⭐⭐ | Adds user search functionality to the existing search page, allowing users to search for accounts alongside packages. |
-| [#1608](https://github.com/tscircuit/tscircuit.com/pull/1608) | 🐳 Major | ⭐⭐⭐ | Fixes image previews not loading by synchronizing the images route and enhancing the 3D SVG rendering functionality. |
+| [#1608](https://github.com/tscircuit/tscircuit.com/pull/1608) | 🐳 Major | ⭐⭐⭐ | Fixes image previews not loading by synchronizing the images route and updating the image rendering logic to support new formats. |
 | [#1603](https://github.com/tscircuit/tscircuit.com/pull/1603) | 🐙 Minor | ⭐⭐ | Fixes the path resolution for the main component and selected component in the CodeEditor, ensuring correct file selection based on URL parameters. |
-| [#1606](https://github.com/tscircuit/tscircuit.com/pull/1606) | 🐙 Minor | ⭐⭐ | Fixes the resolution of hidden files and corrects a bug in the folder selection process within the file sidebar component. |
-| [#1600](https://github.com/tscircuit/tscircuit.com/pull/1600) | 🐙 Minor | ⭐⭐ | Fixes intermittent file loading issues in the file management system |
+| [#1606](https://github.com/tscircuit/tscircuit.com/pull/1606) | 🐙 Minor | ⭐⭐ | Fixes the resolution of hidden files and addresses a bug in folder selection within the file sidebar component. |
+| [#1600](https://github.com/tscircuit/tscircuit.com/pull/1600) | 🐙 Minor | ⭐⭐ | Fixes intermittent file loading issues in the file management system. |
+| [#855](https://github.com/tscircuit/eval/pull/855) | 🐙 Minor | ⭐⭐ | Fixes the prioritization of default exports over named exports in component rendering. |
+| [#31](https://github.com/tscircuit/chat.tscircuit.com/pull/31) | 🐙 Minor | ⭐⭐ | Fixes package import issues and improves styling for better user experience. |
 
 <details>
-<summary>🐌 Tiny Contributions (11)</summary>
+<summary>🐌 Tiny Contributions (13)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#421](https://github.com/tscircuit/3d-viewer/pull/421) | 🐌 Tiny | Updates the circuit-json dependency to version 0.0.232 to resolve polyfill errors. |
 | [#108](https://github.com/tscircuit/jscad-electronics/pull/108) | 🐌 Tiny | Removes an unnecessary console log statement from the Footprinter3d component to clean up the code. |
-| [#107](https://github.com/tscircuit/jscad-electronics/pull/107) | 🐌 Tiny | Updates dependencies in package.json and fixes type casting in BGA component. |
+| [#107](https://github.com/tscircuit/jscad-electronics/pull/107) | 🐌 Tiny | Updates dependencies in package.json and fixes type casting in BGA component rendering. |
 | [#1607](https://github.com/tscircuit/tscircuit.com/pull/1607) | 🐌 Tiny | Add draggablefalse to various components to prevent unwanted dragging, apply select-none class to improve text selection behavior, replace custom spinner with Loader2 icon for consistency, update search input attributes for better accessibility, and fix package image URL path in search component. |
-| [#1602](https://github.com/tscircuit/tscircuit.com/pull/1602) | 🐌 Tiny | Fixes loading issues in RunFrame by updating the runframe dependency to version 0.0.827 |
+| [#1602](https://github.com/tscircuit/tscircuit.com/pull/1602) | 🐌 Tiny | Fixes loading issues in RunFrame by updating the runframe dependency to a newer version. |
 | [#1599](https://github.com/tscircuit/tscircuit.com/pull/1599) | 🐌 Tiny | Fixes the base URL for the registry API and improves logging for package loading operations in the autoload dev packages functionality. |
 | [#1604](https://github.com/tscircuit/tscircuit.com/pull/1604) | 🐌 Tiny | Updates loading indicators in Datasheet and Quickstart pages to use a new Loader component with adjusted styling. |
 | [#1598](https://github.com/tscircuit/tscircuit.com/pull/1598) | 🐌 Tiny | Fixes layout issues in the CmdKMenu component by adjusting Tailwind CSS classes for better responsiveness and visual alignment. |
-| [#855](https://github.com/tscircuit/eval/pull/855) | 🐌 Tiny | Fixes the prioritization of default exports over named exports in component rendering. |
 | [#1020](https://github.com/tscircuit/runframe/pull/1020) | 🐌 Tiny | https:runframe-git-a18-tscircuit.vercel.app?fixtureId7B22path223A22examples2Fexample23-files-loading-skeleton.fixture.tsx227D |
-| [#27](https://github.com/tscircuit/chat.tscircuit.com/pull/27) | 🐌 Tiny | This pull request introduces a new GitHub Actions workflow for checking code formatting and applies formatting changes across the codebase. The workflow is triggered on pushes and pull requests to the main branch, ensuring that code adheres to the specified formatting rules before merging. |
+| [#32](https://github.com/tscircuit/chat.tscircuit.com/pull/32) | 🐌 Tiny | Replaces the Python language support in the code editor with JavaScript and updates the markdown rendering to use Streamdown instead of ReactMarkdown. |
+| [#29](https://github.com/tscircuit/chat.tscircuit.com/pull/29) | 🐌 Tiny | Exports the db client in queries.ts for better reusability, removes unused imports and files, and adds dynamic iframe height calculation in TscircuitIframe to avoid SSR issues. |
+| [#30](https://github.com/tscircuit/chat.tscircuit.com/pull/30) | 🐌 Tiny | Updated dotenv to version 17.2.1 Updated jose to version 6.0.13 Updated lucide-react to version 0.542.0 Updated next to version 15.5.0 Updated next-themes to version 0.4.6 Updated react to version 19.1.0 Updated react-dom to version 19.1.0 Updated sharp to version 0.34.3 Updated swc helpers and other related packages Added new opengraph image and updated favicon Improved TypeScript configuration in next-env.d.ts Removed experimental PPR configuration from next.config.ts Enhanced chat header with new icons and improved accessibility |
+| [#27](https://github.com/tscircuit/chat.tscircuit.com/pull/27) | 🐌 Tiny | This pull request introduces a new GitHub Actions workflow for checking code formatting and applies formatting changes across the codebase. The workflow is triggered on pushes and pull requests to the main branch, ensuring that the code adheres to the specified formatting rules before merging. |
 
 </details>
 
