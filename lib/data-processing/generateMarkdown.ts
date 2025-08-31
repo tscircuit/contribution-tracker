@@ -32,6 +32,13 @@ export async function generateMarkdown(
 ): Promise<string> {
   let markdown = `# Contribution Overview ${weekStart}\n\n`
 
+  // Remove bot accounts from contributor data
+  Object.keys(contributorIdToStatsMap).forEach((contributor) => {
+    if (contributor.includes("[bot]")) {
+      delete contributorIdToStatsMap[contributor]
+    }
+  })
+
   // Generate Mermaid pie chart
   markdown += "## PRs by Repository\n\n"
   markdown += "```mermaid\npie\n"
