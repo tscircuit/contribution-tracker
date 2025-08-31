@@ -299,6 +299,13 @@ export async function generateOverview(startDate: string) {
   )
   await Promise.all(processDiscussionsPromises)
 
+  // Remove bot accounts from contributor data
+  Object.keys(contributorData).forEach((contributor) => {
+    if (contributor.includes("[bot]")) {
+      delete contributorData[contributor]
+    }
+  })
+
   // Data processing complete
   await generateAndWriteFiles(
     mergedPrsWithAnalysis,

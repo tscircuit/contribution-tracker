@@ -122,6 +122,22 @@ const mockStats: Record<string, ContributorStats> = {
     discussionIncredibleComments: 1,
     reposOwned: [],
   },
+  "cypher[bot]": {
+    reviewsReceived: 0,
+    rejectionsReceived: 0,
+    approvalsReceived: 0,
+    approvalsGiven: 1,
+    rejectionsGiven: 0,
+    prsOpened: 1,
+    prsMerged: 0,
+    issuesCreated: 0,
+    bountiedIssuesCount: 0,
+    bountiedIssuesTotal: 0,
+    discussionNormalComments: 0,
+    discussionGreatInformativeComments: 0,
+    discussionIncredibleComments: 1,
+    reposOwned: [],
+  },
 }
 
 describe("generateMarkdown", () => {
