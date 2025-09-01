@@ -65,7 +65,7 @@ export function getContributorScore(
     if (pr.starRating !== undefined) {
       result[`rating${pr.starRating}Count`]++
 
-      if (result[`rating${pr.starRating}Count`] <= 10) {
+      if (result[`rating${pr.starRating}Count`] <= 12) {
         result.score += 2 ** ((pr.starRating ?? 0) - 1)
       }
     }
