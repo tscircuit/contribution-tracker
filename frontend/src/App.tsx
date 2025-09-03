@@ -2,6 +2,7 @@ import { ContributorOverview } from "./components/ContributorOverview"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { Modal } from "./components/Modal"
+import { MaintainersList } from "./components/MaintainersList"
 import { useContributorsData } from "./hooks/useContributorsData"
 import ContributorGraph from "./components/ContributorGraph"
 import { PrsTable } from "./components/PrsTable"
@@ -100,6 +101,10 @@ function App() {
             setIsModalOpen(true)
           }}
         />
+
+        <div className=" max-w-7xl mx-auto px-4">
+          <MaintainersList />
+        </div>
 
         <div className="flex flex-wrap gap-4 mb-6">
           <a
