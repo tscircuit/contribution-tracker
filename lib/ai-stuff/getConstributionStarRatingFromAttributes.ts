@@ -13,7 +13,7 @@ export const getContributionStarRatingFromAttributes = (
 
   if (a.mostly_style) score *= 0.75
 
-  if (a.core_change) score *= 1.4
+  if (a.core_change) score *= 1.6
   if (a.fixes_subtle_important_bug) score *= 1.5
   if (a.only_reproduces_a_bug) score *= 0.75
   if (a.substantially_improves_svg_generation) score *= 1.6
@@ -30,7 +30,7 @@ export const getContributionStarRatingFromAttributes = (
   if (a.improves_parts_engine) score *= 1.5
   if (a.reproduces_and_fixes_a_bug) score *= 2
   if (a.new_page_or_component) score *= 1.25
-  if (a.major_improvement_to_core_data_modeling) score *= 1.5
+  if (a.major_improvement_to_core_data_modeling) score *= 1.6
 
   return Math.min(maxRating, Math.round(score)) as StarRating
 }
