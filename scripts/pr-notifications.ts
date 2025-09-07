@@ -42,12 +42,13 @@ async function main() {
     )
 
     for (const pullRequest of [...recentlyMergedPRs, ...activePullRequests]) {
-      // Skip PRs from excluded bots
+      const contributor = pullRequest.user?.login
       if (
-        pullRequest.user?.login &&
-        EXCLUDED_BOTS.includes(
-          pullRequest.user.login as (typeof EXCLUDED_BOTS)[number],
-        )
+        contributor &&
+        (EXCLUDED_BOTS.includes(
+          contributor as (typeof EXCLUDED_BOTS)[number],
+        ) ||
+          contributor.includes("[bot]"))
       ) {
         console.log(
           `[${getUTCDateTime()}] Skipping PR #${pullRequest.number} from ${pullRequest.user.login} in ${repository}`,
@@ -61,7 +62,6 @@ async function main() {
       const prAnalysis = await analyzePRWithAI(pullRequest, repository)
       analyzedPullRequests.push(prAnalysis)
 
-      const contributor = pullRequest.user?.login
       if (contributor && pullRequest.merged_at) {
         console.log(
           `[${getUTCDateTime()}] Checking if ${contributor} is a first-time contributor`,
