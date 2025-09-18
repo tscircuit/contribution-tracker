@@ -1,6 +1,6 @@
 import fs from "fs"
 import path from "path"
-import { Client, Role } from "discord.js"
+import { Client, Role, WebhookClient } from "discord.js"
 
 // ----- Role definitions ----- //
 
@@ -33,6 +33,38 @@ function getAllTimeRoleName(score: number): AllTimeRoleName | null {
   if (score >= 10) return "Contributor"
   if (score >= 3) return "New Contributor"
   return null
+}
+
+// ----- Crown notification function ----- //
+async function notifyCrownWinner(username: string, githubUsername: string) {
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL
+  if (!webhookUrl) {
+    console.warn(
+      "[Crown Notification] Discord webhook URL not configured - skipping crown notification",
+    )
+    return
+  }
+
+  const discordWebhook = new WebhookClient({ url: webhookUrl })
+
+  const message = `
+## 👑👑 **Weekly Crown Winner!** 👑👑
+
+🎉 Congratulations [${username}](<https://github.com/${githubUsername}>) for being crowned this week's top contributor!
+
+> Your outstanding contributions have earned you the highest weekly honor. Keep up the amazing work! 🚀
+`.trim()
+
+  try {
+    await discordWebhook.send(message)
+    console.log(
+      `[Crown Notification] Crown notification sent for ${username}! 👑`,
+    )
+  } catch (error) {
+    console.error(
+      `[Crown Notification] Failed to send crown notification: ${error}`,
+    )
+  }
 }
 
 // ----- Data loading functions ----- //
@@ -95,6 +127,9 @@ async function syncRoles(client: Client, guildId: string) {
   }
 
   console.log("\n")
+
+  // Track crown winners for notifications
+  const crownWinners: Array<{ username: string; githubUsername: string }> = []
 
   // Process each user in the contribution data
   for (const [githubUsername, userData] of Object.entries(contributionData)) {
@@ -211,7 +246,31 @@ async function syncRoles(client: Client, guildId: string) {
       console.log(
         `Added weekly roles [${weeklyRolesToAdd.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
       )
+
+      // Check if user got the crown (👑) role
+      const gotCrown = weeklyRolesToAdd.some((role) => role.name.includes("👑"))
+      if (gotCrown) {
+        console.log(
+          `[Crown Detection] ${githubUsername} earned the crown! 👑👑`,
+        )
+        crownWinners.push({
+          username: discordUser.displayName || discordUser.user.username,
+          githubUsername: githubUsername,
+        })
+      }
+
       await Bun.sleep(1000)
+    }
+  }
+
+  // Send crown notifications
+  if (crownWinners.length > 0) {
+    console.log(
+      `[Crown Notification] Sending notifications for ${crownWinners.length} crown winner(s)`,
+    )
+    for (const winner of crownWinners) {
+      await notifyCrownWinner(winner.username, winner.githubUsername)
+      await Bun.sleep(2000)
     }
   }
 }
