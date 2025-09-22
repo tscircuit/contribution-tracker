@@ -1,11 +1,11 @@
 {
   "0hmX": {
-    "reviewsReceived": 1,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 3,
+    "rejectionsReceived": 1,
     "approvalsReceived": 1,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 3,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -41,13 +41,13 @@
     "stars": ""
   },
   "Abse2001": {
-    "reviewsReceived": 8,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 7,
+    "reviewsReceived": 12,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 8,
     "approvalsGiven": 0,
     "rejectionsGiven": 1,
-    "prsOpened": 16,
-    "prsMerged": 10,
+    "prsOpened": 19,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -57,10 +57,18 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 17,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/sparkfun-boards",
+        "paths": [
+          "/boards/SparkFun-Altitude-Pressure-Sensor-Breakout-MPL3115A2/"
+        ]
+      }
+    ],
+    "score": 19,
     "stars": "⭐⭐",
     "major": 2,
-    "minor": 0,
+    "minor": 1,
     "tiny": 8
   },
   "AnasSarkiz": {
@@ -83,13 +91,13 @@
     "stars": ""
   },
   "ArnavK-09": {
-    "reviewsReceived": 20,
+    "reviewsReceived": 22,
     "rejectionsReceived": 0,
-    "approvalsReceived": 13,
+    "approvalsReceived": 15,
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 12,
+    "prsOpened": 15,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -107,19 +115,19 @@
         ]
       }
     ],
-    "score": 36,
+    "score": 41,
     "stars": "⭐⭐⭐",
-    "major": 6,
+    "major": 7,
     "minor": 3,
-    "tiny": 3
+    "tiny": 4
   },
   "Asymtode712": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -138,7 +146,7 @@
     "approvalsReceived": 2,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 3,
     "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -198,7 +206,7 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -215,7 +223,7 @@
     "tiny": 0
   },
   "Quanta-Naut": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 5,
     "rejectionsReceived": 1,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
@@ -225,31 +233,32 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 16,
+    "reviewsReceived": 17,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
+    "approvalsReceived": 10,
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
-    "prsMerged": 10,
+    "prsOpened": 13,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 41,
+    "score": 43,
     "stars": "⭐⭐⭐",
     "major": 8,
-    "minor": 2,
+    "minor": 3,
     "tiny": 0
   },
   "devroy10": {
@@ -294,17 +303,17 @@
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 17,
+    "reviewsReceived": 29,
     "rejectionsReceived": 0,
-    "approvalsReceived": 5,
+    "approvalsReceived": 9,
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 15,
+    "prsOpened": 24,
+    "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -324,10 +333,10 @@
         ]
       }
     ],
-    "score": 37.5,
+    "score": 40.5,
     "stars": "⭐⭐⭐",
-    "major": 5,
-    "minor": 5,
+    "major": 4,
+    "minor": 8,
     "tiny": 5
   },
   "lessuselesss": {
@@ -372,12 +381,12 @@
     "tiny": 0
   },
   "pxlpal": {
-    "reviewsReceived": 9,
+    "reviewsReceived": 11,
     "rejectionsReceived": 1,
-    "approvalsReceived": 1,
+    "approvalsReceived": 2,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -411,18 +420,22 @@
     "stars": ""
   },
   "seveibar": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 34,
-    "rejectionsGiven": 4,
-    "prsOpened": 21,
-    "prsMerged": 15,
+    "approvalsGiven": 43,
+    "rejectionsGiven": 6,
+    "prsOpened": 25,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 34,
-    "distinctPrsReviewedAsCodeOwner": 10,
+    "distinctPrsReviewedNonCodeOwner": 45,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 12,
     "reposOwned": [
       {
         "repo": "tscircuit/cli",
@@ -431,11 +444,11 @@
         ]
       }
     ],
-    "score": 40,
+    "score": 47,
     "stars": "⭐⭐⭐",
-    "major": 3,
-    "minor": 2,
-    "tiny": 9
+    "major": 4,
+    "minor": 3,
+    "tiny": 10
   },
   "shravanngoswamii": {
     "reviewsReceived": 1,
@@ -476,12 +489,12 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
