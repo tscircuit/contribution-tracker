@@ -816,6 +816,40 @@ pie
   SLACK_BOT_TOKEN=your_slack_token (optional, for Slack integration)
   ```
 
+### Ineligible Sponsorship Management
+
+The contribution tracker includes functionality to exclude specific users from receiving sponsorship while still allowing them to appear in all contribution overviews and statistics.
+
+#### Managing the Ineligible List
+
+Use the management script to add, remove, or list users who are ineligible for sponsorship:
+
+```bash
+# List all ineligible users
+bun run manage:ineligible list
+
+# Add a user to the ineligible list
+bun run manage:ineligible add "username" "Reason for ineligibility"
+
+# Remove a user from the ineligible list  
+bun run manage:ineligible remove "username"
+```
+
+#### How It Works
+
+- Users marked as ineligible will **not** appear in the generated `sponsorships/*.csv` files
+- They **will still** appear in all contribution overviews, statistics, and rankings
+- The sponsorship generation script will display excluded users in the console output
+- The ineligible list is stored in `ineligible-sponsorships.csv` at the project root
+- CSV format allows easy editing in spreadsheet applications (Excel, Google Sheets)
+- Simple two-column format: `github_username,reason`
+
+#### Common Use Cases
+
+- Users who claim bounties early without completing requirements
+- Contributors who violate contribution guidelines
+- Temporary exclusions for investigation or review
+
 ### Available Scripts
 
 #### Core Generation Scripts
@@ -838,6 +872,7 @@ pie
 #### Data Export
 
 - `bun run export:sponsorship` - Generate sponsorship data CSV
+- `bun run manage:ineligible` - Manage users ineligible for sponsorship
 
 #### Development
 
