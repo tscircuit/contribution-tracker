@@ -839,11 +839,55 @@ pie
 
 - `bun run export:sponsorship` - Generate sponsorship data CSV
 
+#### Sponsorship Management
+
+- `bun run manage:ineligible add <username> <reason> [added-by]` - Add user to ineligible list
+- `bun run manage:ineligible remove <username>` - Remove user from ineligible list  
+- `bun run manage:ineligible list` - List all ineligible users
+- `bun run manage:ineligible check <username>` - Check if user is ineligible
+
 #### Development
 
 - `bun run dev` - Start development server for web UI
 - `bun run build` - Build for production
 - `bun run format` - Format code with Biome
+
+## Ineligible for Sponsorship Management
+
+The project includes a system to manage users who are ineligible for sponsorship payments. This is useful for handling cases where contributors claim bounties early or violate contribution guidelines.
+
+### How It Works
+
+- Users on the ineligible list will still appear in all contribution overviews and reports
+- However, they will be automatically excluded from the generated `sponsorships.csv` file
+- The system maintains an audit trail with reasons and timestamps
+
+### Managing Ineligible Users
+
+The ineligible users list is stored in `ineligible-for-sponsorship.csv` with the following columns:
+- `github_username` - The GitHub username
+- `reason` - Reason for ineligibility  
+- `date_added` - Date when user was added (YYYY-MM-DD)
+- `added_by` - Who added the user to the list
+
+### Common Usage Examples
+
+```bash
+# Add a user who claimed bounties early
+bun run manage:ineligible add user123 "Claimed bounty before completing work" maintainer1
+
+# Check if a user is ineligible
+bun run manage:ineligible check user123
+
+# List all ineligible users
+bun run manage:ineligible list
+
+# Remove a user from the ineligible list
+bun run manage:ineligible remove user123
+
+# Generate sponsorship CSV (automatically excludes ineligible users)
+bun run export:sponsorship
+```
 
 ### Usage Examples
 

@@ -2,6 +2,7 @@ import fs from "node:fs"
 import path from "node:path"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { getSponsorshipAmount } from "../lib/scoring"
+import { getIneligibleUsernames, getIneligibleUser } from "../lib/scoring/ineligibleUsers"
 
 interface ContributorData {
   stars?: string
@@ -140,6 +141,9 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
     }
   > = new Map()
 
+  // Load ineligible users once for efficient lookup
+  const ineligibleUsernames = getIneligibleUsernames()
+
   // Collect data from all weeks
   weeksWithDates.forEach(
     ({ data: weekData, weekStartDate, weekEndDate }, weekIndex) => {
@@ -183,8 +187,7 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
     return `${(date.getUTCMonth() + 1).toString().padStart(2, "0")}/${date.getUTCDate().toString().padStart(2, "0")}`
   }
 
-  // Calculate sponsorship amounts
-  return Array.from(sponsorships.entries())
+  const allSponsorships = Array.from(sponsorships.entries())
     .map(([username, data]) => {
       const { weeklyStars, score, weekDates } = data
 
@@ -211,6 +214,31 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
       }
     })
     .filter((s) => s.amount > 0) // Only include users who should receive sponsorship
+
+  // Filter out ineligible users and log excluded ones
+  const eligibleSponsorships = allSponsorships.filter((sponsorship) => {
+    if (ineligibleUsernames.has(sponsorship.username)) {
+      const ineligibleUser = getIneligibleUser(sponsorship.username)
+      console.log(
+        `🚫 Excluded ${sponsorship.username} from sponsorship (would have received $${sponsorship.amount}): ${ineligibleUser?.reason || 'Unknown reason'}`
+      )
+      return false
+    }
+    return true
+  })
+
+  const excludedCount = allSponsorships.length - eligibleSponsorships.length
+  const excludedAmount = allSponsorships
+    .filter(s => ineligibleUsernames.has(s.username))
+    .reduce((sum, s) => sum + s.amount, 0)
+  
+  if (excludedCount > 0) {
+    console.log(`\n📊 Sponsorship Exclusion Summary:`)
+    console.log(`   Excluded users: ${excludedCount}`)
+    console.log(`   Excluded amount: $${excludedAmount}`)
+  }
+
+  return eligibleSponsorships
 }
 
 function generateCSV(
