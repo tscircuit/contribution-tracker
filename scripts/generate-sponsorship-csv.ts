@@ -2,7 +2,11 @@ import fs from "node:fs"
 import path from "node:path"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { getSponsorshipAmount } from "../lib/scoring"
-import { isUserIneligible, getIneligibilityReason, loadIneligibleList } from "../lib/ineligible-sponsorships"
+import {
+  isUserIneligible,
+  getIneligibilityReason,
+  loadIneligibleList,
+} from "../lib/ineligible-sponsorships"
 
 interface ContributorData {
   stars?: string
@@ -290,12 +294,12 @@ function main() {
   console.log(
     `Total amount: $${sponsorships.reduce((sum, s) => sum + s.amount, 0)}`,
   )
-  
+
   // Show ineligible users if any
   const ineligibleList = loadIneligibleList()
   if (ineligibleList.length > 0) {
     console.log(`\nUsers excluded from sponsorship (ineligible):`)
-    ineligibleList.forEach(entry => {
+    ineligibleList.forEach((entry) => {
       console.log(`  - ${entry.github_username}: ${entry.reason}`)
     })
   }

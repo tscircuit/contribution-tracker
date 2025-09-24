@@ -6,21 +6,26 @@ export interface IneligibleEntry {
   reason: string
 }
 
-const INELIGIBLE_FILE_PATH = path.join(process.cwd(), "ineligible-sponsorships", "ineligible-sponsorships.csv")
+const INELIGIBLE_FILE_PATH = path.join(
+  process.cwd(),
+  "ineligible-sponsorships",
+  "ineligible-sponsorships.csv",
+)
 
 /**
  * Generate CSV content from ineligible list
  */
 function generateCSVContent(ineligibleList: IneligibleEntry[]): string {
   const header = "github_username,reason"
-  const rows = ineligibleList.map(entry => {
+  const rows = ineligibleList.map((entry) => {
     // Escape reason if it contains commas or quotes
-    const escapedReason = entry.reason.includes(',') || entry.reason.includes('"') 
-      ? `"${entry.reason.replace(/"/g, '""')}"` 
-      : entry.reason
+    const escapedReason =
+      entry.reason.includes(",") || entry.reason.includes('"')
+        ? `"${entry.reason.replace(/"/g, '""')}"`
+        : entry.reason
     return `${entry.github_username},${escapedReason}`
   })
-  return [header, ...rows].join('\n')
+  return [header, ...rows].join("\n")
 }
 
 /**
@@ -32,18 +37,24 @@ export function loadIneligibleList(): IneligibleEntry[] {
       return []
     }
     const content = fs.readFileSync(INELIGIBLE_FILE_PATH, "utf-8")
-    const lines = content.trim().split('\n')
-    
+    const lines = content.trim().split("\n")
+
     // Skip header row
     if (lines.length <= 1) {
       return []
     }
-    
-    return lines.slice(1).map(line => {
-      const [github_username, ...reasonParts] = line.split(',')
-      const reason = reasonParts.join(',').replace(/^"|"$/g, '') // Handle quoted reasons
-      return { github_username: github_username.trim(), reason: reason.trim() }
-    }).filter(entry => entry.github_username && entry.reason)
+
+    return lines
+      .slice(1)
+      .map((line) => {
+        const [github_username, ...reasonParts] = line.split(",")
+        const reason = reasonParts.join(",").replace(/^"|"$/g, "") // Handle quoted reasons
+        return {
+          github_username: github_username.trim(),
+          reason: reason.trim(),
+        }
+      })
+      .filter((entry) => entry.github_username && entry.reason)
   } catch (error) {
     console.warn(`Warning: Could not load ineligible list: ${error}`)
     return []
@@ -55,7 +66,7 @@ export function loadIneligibleList(): IneligibleEntry[] {
  */
 export function isUserIneligible(username: string): boolean {
   const ineligibleList = loadIneligibleList()
-  return ineligibleList.some(entry => entry.github_username === username)
+  return ineligibleList.some((entry) => entry.github_username === username)
 }
 
 /**
@@ -63,7 +74,9 @@ export function isUserIneligible(username: string): boolean {
  */
 export function getIneligibilityReason(username: string): string | null {
   const ineligibleList = loadIneligibleList()
-  const entry = ineligibleList.find(entry => entry.github_username === username)
+  const entry = ineligibleList.find(
+    (entry) => entry.github_username === username,
+  )
   return entry?.reason || null
 }
 
@@ -72,10 +85,12 @@ export function getIneligibilityReason(username: string): string | null {
  */
 export function addIneligibleUser(username: string, reason: string): void {
   const ineligibleList = loadIneligibleList()
-  
+
   // Check if user is already in the list
-  const existingIndex = ineligibleList.findIndex(entry => entry.github_username === username)
-  
+  const existingIndex = ineligibleList.findIndex(
+    (entry) => entry.github_username === username,
+  )
+
   if (existingIndex >= 0) {
     // Update existing entry
     ineligibleList[existingIndex].reason = reason
@@ -83,7 +98,7 @@ export function addIneligibleUser(username: string, reason: string): void {
     // Add new entry
     ineligibleList.push({ github_username: username, reason })
   }
-  
+
   // Write CSV format
   const csvContent = generateCSVContent(ineligibleList)
   fs.writeFileSync(INELIGIBLE_FILE_PATH, csvContent)
@@ -95,15 +110,17 @@ export function addIneligibleUser(username: string, reason: string): void {
 export function removeIneligibleUser(username: string): boolean {
   const ineligibleList = loadIneligibleList()
   const initialLength = ineligibleList.length
-  
-  const filteredList = ineligibleList.filter(entry => entry.github_username !== username)
-  
+
+  const filteredList = ineligibleList.filter(
+    (entry) => entry.github_username !== username,
+  )
+
   if (filteredList.length !== initialLength) {
     const csvContent = generateCSVContent(filteredList)
     fs.writeFileSync(INELIGIBLE_FILE_PATH, csvContent)
     return true
   }
-  
+
   return false
 }
 
@@ -112,12 +129,12 @@ export function removeIneligibleUser(username: string): boolean {
  */
 export function getIneligibleUsersDisplay(): string {
   const ineligibleList = loadIneligibleList()
-  
+
   if (ineligibleList.length === 0) {
     return "No users currently ineligible for sponsorship."
   }
-  
+
   return ineligibleList
-    .map(entry => `• ${entry.github_username}: ${entry.reason}`)
-    .join('\n')
+    .map((entry) => `• ${entry.github_username}: ${entry.reason}`)
+    .join("\n")
 }

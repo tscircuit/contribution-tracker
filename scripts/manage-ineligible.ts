@@ -1,9 +1,9 @@
 #!/usr/bin/env bun
-import { 
-  loadIneligibleList, 
-  addIneligibleUser, 
-  removeIneligibleUser, 
-  getIneligibleUsersDisplay 
+import {
+  loadIneligibleList,
+  addIneligibleUser,
+  removeIneligibleUser,
+  getIneligibleUsersDisplay,
 } from "../lib/ineligible-sponsorships.js"
 
 function showHelp() {
@@ -28,8 +28,8 @@ Examples:
 
 function main() {
   const args = process.argv.slice(2)
-  
-  if (args.length === 0 || args[0] === 'help') {
+
+  if (args.length === 0 || args[0] === "help") {
     showHelp()
     return
   }
@@ -37,22 +37,24 @@ function main() {
   const command = args[0]
 
   switch (command) {
-    case 'list':
-      console.log('Ineligible Users for Sponsorship:')
-      console.log('=================================')
+    case "list":
+      console.log("Ineligible Users for Sponsorship:")
+      console.log("=================================")
       const display = getIneligibleUsersDisplay()
       console.log(display)
       break
 
-    case 'add':
+    case "add":
       if (args.length < 3) {
-        console.error('Error: Please provide both username and reason')
-        console.error('Usage: bun scripts/manage-ineligible.ts add <username> <reason>')
+        console.error("Error: Please provide both username and reason")
+        console.error(
+          "Usage: bun scripts/manage-ineligible.ts add <username> <reason>",
+        )
         process.exit(1)
       }
       const username = args[1]
-      const reason = args.slice(2).join(' ') // Join all remaining args as reason
-      
+      const reason = args.slice(2).join(" ") // Join all remaining args as reason
+
       try {
         addIneligibleUser(username, reason)
         console.log(`✅ Added ${username} to ineligible list: ${reason}`)
@@ -62,20 +64,24 @@ function main() {
       }
       break
 
-    case 'remove':
+    case "remove":
       if (args.length < 2) {
-        console.error('Error: Please provide username to remove')
-        console.error('Usage: bun scripts/manage-ineligible.ts remove <username>')
+        console.error("Error: Please provide username to remove")
+        console.error(
+          "Usage: bun scripts/manage-ineligible.ts remove <username>",
+        )
         process.exit(1)
       }
       const usernameToRemove = args[1]
-      
+
       try {
         const removed = removeIneligibleUser(usernameToRemove)
         if (removed) {
           console.log(`✅ Removed ${usernameToRemove} from ineligible list`)
         } else {
-          console.log(`ℹ️  User ${usernameToRemove} was not found in the ineligible list`)
+          console.log(
+            `ℹ️  User ${usernameToRemove} was not found in the ineligible list`,
+          )
         }
       } catch (error) {
         console.error(`❌ Error removing user: ${error}`)
