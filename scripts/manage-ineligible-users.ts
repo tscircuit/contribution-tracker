@@ -1,11 +1,11 @@
 #!/usr/bin/env bun
 
-import { 
-  addIneligibleUser, 
-  removeIneligibleUser, 
+import {
+  addIneligibleUser,
+  removeIneligibleUser,
   listIneligibleUsers,
   isUserIneligible,
-  getIneligibleUser
+  getIneligibleUser,
 } from "../lib/scoring/ineligibleUsers"
 
 function showHelp() {
@@ -36,16 +36,20 @@ function formatTable(users: ReturnType<typeof listIneligibleUsers>) {
   console.log("\nIneligible Users:")
   console.log("━".repeat(80))
   console.log(
-    `${"Username".padEnd(20)} ${"Reason".padEnd(30)} ${"Date Added".padEnd(12)} ${"Added By".padEnd(15)}`
+    `${"Username".padEnd(20)} ${"Reason".padEnd(30)} ${"Date Added".padEnd(12)} ${"Added By".padEnd(15)}`,
   )
   console.log("━".repeat(80))
-  
-  users.forEach(user => {
+
+  users.forEach((user) => {
     const username = user.github_username.padEnd(20)
-    const reason = (user.reason.length > 28 ? user.reason.substring(0, 25) + "..." : user.reason).padEnd(30)
+    const reason = (
+      user.reason.length > 28
+        ? user.reason.substring(0, 25) + "..."
+        : user.reason
+    ).padEnd(30)
     const dateAdded = user.date_added.padEnd(12)
     const addedBy = user.added_by.padEnd(15)
-    
+
     console.log(`${username} ${reason} ${dateAdded} ${addedBy}`)
   })
   console.log("━".repeat(80))
@@ -54,8 +58,13 @@ function formatTable(users: ReturnType<typeof listIneligibleUsers>) {
 
 function main() {
   const args = process.argv.slice(2)
-  
-  if (args.length === 0 || args[0] === "help" || args[0] === "--help" || args[0] === "-h") {
+
+  if (
+    args.length === 0 ||
+    args[0] === "help" ||
+    args[0] === "--help" ||
+    args[0] === "-h"
+  ) {
     showHelp()
     return
   }
@@ -67,7 +76,9 @@ function main() {
       case "add": {
         if (args.length < 3) {
           console.error("Error: 'add' command requires username and reason")
-          console.log("Usage: bun run manage-ineligible-users.ts add <username> <reason> [added-by]")
+          console.log(
+            "Usage: bun run manage-ineligible-users.ts add <username> <reason> [added-by]",
+          )
           process.exit(1)
         }
 
@@ -76,7 +87,11 @@ function main() {
         const addedBy = args[3] || "system"
 
         // Validate username format (basic GitHub username validation)
-        if (!/^[a-zA-Z0-9]([a-zA-Z0-9-])*[a-zA-Z0-9]$|^[a-zA-Z0-9]$/.test(username)) {
+        if (
+          !/^[a-zA-Z0-9]([a-zA-Z0-9-])*[a-zA-Z0-9]$|^[a-zA-Z0-9]$/.test(
+            username,
+          )
+        ) {
           console.error(`Error: '${username}' is not a valid GitHub username`)
           process.exit(1)
         }
@@ -85,7 +100,9 @@ function main() {
           const existingUser = getIneligibleUser(username)
           console.error(`Error: User '${username}' is already ineligible`)
           console.log(`Current reason: ${existingUser?.reason}`)
-          console.log(`Added on: ${existingUser?.date_added} by ${existingUser?.added_by}`)
+          console.log(
+            `Added on: ${existingUser?.date_added} by ${existingUser?.added_by}`,
+          )
           process.exit(1)
         }
 
@@ -97,15 +114,19 @@ function main() {
       case "remove": {
         if (args.length < 2) {
           console.error("Error: 'remove' command requires username")
-          console.log("Usage: bun run manage-ineligible-users.ts remove <username>")
+          console.log(
+            "Usage: bun run manage-ineligible-users.ts remove <username>",
+          )
           process.exit(1)
         }
 
         const username = args[1]
         const removed = removeIneligibleUser(username)
-        
+
         if (removed) {
-          console.log(`Successfully removed '${username}' from the ineligible list`)
+          console.log(
+            `Successfully removed '${username}' from the ineligible list`,
+          )
         } else {
           console.log(`User '${username}' was not found in the ineligible list`)
         }
@@ -121,13 +142,15 @@ function main() {
       case "check": {
         if (args.length < 2) {
           console.error("Error: 'check' command requires username")
-          console.log("Usage: bun run manage-ineligible-users.ts check <username>")
+          console.log(
+            "Usage: bun run manage-ineligible-users.ts check <username>",
+          )
           process.exit(1)
         }
 
         const username = args[1]
         const user = getIneligibleUser(username)
-        
+
         if (user) {
           console.log(`User '${username}' is INELIGIBLE for sponsorship`)
           console.log(`   Reason: ${user.reason}`)
@@ -144,7 +167,9 @@ function main() {
         process.exit(1)
     }
   } catch (error) {
-    console.error(`Error: ${error instanceof Error ? error.message : String(error)}`)
+    console.error(
+      `Error: ${error instanceof Error ? error.message : String(error)}`,
+    )
     process.exit(1)
   }
 }

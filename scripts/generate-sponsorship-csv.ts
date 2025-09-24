@@ -2,7 +2,10 @@ import fs from "node:fs"
 import path from "node:path"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { getSponsorshipAmount } from "../lib/scoring"
-import { getIneligibleUsernames, getIneligibleUser } from "../lib/scoring/ineligibleUsers"
+import {
+  getIneligibleUsernames,
+  getIneligibleUser,
+} from "../lib/scoring/ineligibleUsers"
 
 interface ContributorData {
   stars?: string
@@ -220,7 +223,7 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
     if (ineligibleUsernames.has(sponsorship.username)) {
       const ineligibleUser = getIneligibleUser(sponsorship.username)
       console.log(
-        `🚫 Excluded ${sponsorship.username} from sponsorship (would have received $${sponsorship.amount}): ${ineligibleUser?.reason || 'Unknown reason'}`
+        `🚫 Excluded ${sponsorship.username} from sponsorship (would have received $${sponsorship.amount}): ${ineligibleUser?.reason || "Unknown reason"}`,
       )
       return false
     }
@@ -229,9 +232,9 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
 
   const excludedCount = allSponsorships.length - eligibleSponsorships.length
   const excludedAmount = allSponsorships
-    .filter(s => ineligibleUsernames.has(s.username))
+    .filter((s) => ineligibleUsernames.has(s.username))
     .reduce((sum, s) => sum + s.amount, 0)
-  
+
   if (excludedCount > 0) {
     console.log(`\n📊 Sponsorship Exclusion Summary:`)
     console.log(`   Excluded users: ${excludedCount}`)
