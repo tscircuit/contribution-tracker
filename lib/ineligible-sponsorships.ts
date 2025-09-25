@@ -47,11 +47,33 @@ export function loadIneligibleList(): IneligibleEntry[] {
     return lines
       .slice(1)
       .map((line) => {
-        const [github_username, ...reasonParts] = line.split(",")
-        const reason = reasonParts.join(",").replace(/^"|"$/g, "") // Handle quoted reasons
+        // More robust CSV parsing that respects quotes
+        const fields = []
+        let currentField = ''
+        let inQuotes = false
+        
+        for (let i = 0; i < line.length; i++) {
+          const char = line[i]
+          
+          if (char === '"') {
+            inQuotes = !inQuotes
+          } else if (char === ',' && !inQuotes) {
+            fields.push(currentField)
+            currentField = ''
+          } else {
+            currentField += char
+          }
+        }
+        
+        // Don't forget to add the last field
+        fields.push(currentField)
+        
+        const github_username = fields[0].trim()
+        const reason = fields.slice(1).join(',').trim().replace(/^"|"$/g, '')
+        
         return {
-          github_username: github_username.trim(),
-          reason: reason.trim(),
+          github_username,
+          reason,
         }
       })
       .filter((entry) => entry.github_username && entry.reason)
