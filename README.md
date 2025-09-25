@@ -840,7 +840,7 @@ bun run manage:ineligible remove "username"
 - Users marked as ineligible will **not** appear in the generated `sponsorships/*.csv` files
 - They **will still** appear in all contribution overviews, statistics, and rankings
 - The sponsorship generation script will display excluded users in the console output
-- The ineligible list is stored in `ineligible-sponsorships.csv` at the project root
+- The ineligible list is stored in `ineligible-sponsorships/ineligible-sponsorships.csv` at the project root
 - CSV format allows easy editing in spreadsheet applications (Excel, Google Sheets)
 - Simple two-column format: `github_username,reason`
 
