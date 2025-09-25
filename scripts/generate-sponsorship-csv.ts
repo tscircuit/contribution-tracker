@@ -2,6 +2,10 @@ import fs from "node:fs"
 import path from "node:path"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { getSponsorshipAmount } from "../lib/scoring"
+import {
+  isUserIneligible,
+  INELIGIBLE_FOR_SPONSORSHIP,
+} from "../lib/ineligible-sponsorships"
 
 interface ContributorData {
   stars?: string
@@ -147,6 +151,9 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
         // Skip full-timers
         if (STAFF_USERNAMES.includes(username)) return
 
+        // Skip users ineligible for sponsorship
+        if (isUserIneligible(username)) return
+
         if (!sponsorships.has(username)) {
           // Initialize with correct weekly date ranges
           const weekDates = weeksWithDates.map(
@@ -286,6 +293,14 @@ function main() {
   console.log(
     `Total amount: $${sponsorships.reduce((sum, s) => sum + s.amount, 0)}`,
   )
+
+  // Show ineligible users if any
+  if (INELIGIBLE_FOR_SPONSORSHIP.length > 0) {
+    console.log(`\nUsers excluded from sponsorship (ineligible):`)
+    INELIGIBLE_FOR_SPONSORSHIP.forEach((entry) => {
+      console.log(`  - ${entry.github_username}: ${entry.reason}`)
+    })
+  }
 }
 
 main()
