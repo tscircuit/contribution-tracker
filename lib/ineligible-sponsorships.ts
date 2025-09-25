@@ -99,6 +99,12 @@ export function addIneligibleUser(username: string, reason: string): void {
     ineligibleList.push({ github_username: username, reason })
   }
 
+  // Ensure directory exists
+  const dir = path.dirname(INELIGIBLE_FILE_PATH)
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
+
   // Write CSV format
   const csvContent = generateCSVContent(ineligibleList)
   fs.writeFileSync(INELIGIBLE_FILE_PATH, csvContent)
