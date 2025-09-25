@@ -4,8 +4,7 @@ import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { getSponsorshipAmount } from "../lib/scoring"
 import {
   isUserIneligible,
-  getIneligibilityReason,
-  loadIneligibleList,
+  INELIGIBLE_FOR_SPONSORSHIP,
 } from "../lib/ineligible-sponsorships"
 
 interface ContributorData {
@@ -296,10 +295,9 @@ function main() {
   )
 
   // Show ineligible users if any
-  const ineligibleList = loadIneligibleList()
-  if (ineligibleList.length > 0) {
+  if (INELIGIBLE_FOR_SPONSORSHIP.length > 0) {
     console.log(`\nUsers excluded from sponsorship (ineligible):`)
-    ineligibleList.forEach((entry) => {
+    INELIGIBLE_FOR_SPONSORSHIP.forEach((entry) => {
       console.log(`  - ${entry.github_username}: ${entry.reason}`)
     })
   }
