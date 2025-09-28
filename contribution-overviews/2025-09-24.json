@@ -1,12 +1,12 @@
 {
   "0hmX": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 3,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 0,
+    "prsOpened": 4,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -15,11 +15,14 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 5,
+    "stars": "⭐",
+    "major": 0,
+    "minor": 2,
+    "tiny": 1
   },
   "1914Jegx": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
@@ -38,13 +41,13 @@
     "stars": ""
   },
   "Abse2001": {
-    "reviewsReceived": 13,
+    "reviewsReceived": 15,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 3,
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 1,
+    "prsOpened": 7,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -54,11 +57,19 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 3,
-    "stars": "",
+    "reposOwned": [
+      {
+        "repo": "tscircuit/sparkfun-boards",
+        "paths": [
+          "/boards/SparkFun-Altitude-Pressure-Sensor-Breakout-MPL3115A2/"
+        ]
+      }
+    ],
+    "score": 6,
+    "stars": "⭐",
     "major": 0,
-    "minor": 1,
-    "tiny": 0
+    "minor": 2,
+    "tiny": 1
   },
   "ArnavK-09": {
     "reviewsReceived": 22,
@@ -66,7 +77,7 @@
     "approvalsReceived": 14,
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
+    "prsOpened": 19,
     "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -77,11 +88,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 23,
+    "score": 27,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 3,
-    "tiny": 10
+    "major": 2,
+    "minor": 4,
+    "tiny": 8
   },
   "Asymtode712": {
     "reviewsReceived": 3,
@@ -106,7 +117,7 @@
     "tiny": 2
   },
   "Harsh9485": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 2,
     "rejectionsReceived": 1,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
@@ -125,12 +136,12 @@
     "stars": ""
   },
   "HarshitPal25": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 5,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -144,13 +155,13 @@
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 18,
+    "reviewsReceived": 16,
     "rejectionsReceived": 0,
-    "approvalsReceived": 13,
+    "approvalsReceived": 14,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 16,
-    "prsMerged": 9,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -167,10 +178,10 @@
         ]
       }
     ],
-    "score": 10,
-    "stars": "⭐",
+    "score": 12,
+    "stars": "⭐⭐",
     "major": 0,
-    "minor": 2,
+    "minor": 3,
     "tiny": 6
   },
   "Newspicel": {
@@ -215,7 +226,7 @@
     "stars": ""
   },
   "Sahelisaha04": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
@@ -250,7 +261,7 @@
     "stars": ""
   },
   "aybanda": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 3,
     "rejectionsReceived": 1,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
@@ -269,25 +280,26 @@
     "stars": ""
   },
   "baeoc": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 3,
     "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 1,
+    "rejectionsGiven": 1,
+    "prsOpened": 4,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 6,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 2,
-    "stars": "",
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 11,
+    "stars": "⭐⭐",
     "major": 0,
-    "minor": 1,
+    "minor": 3,
     "tiny": 0
   },
   "bitsbyritik": {
@@ -353,8 +365,8 @@
     "approvalsReceived": 2,
     "approvalsGiven": 6,
     "rejectionsGiven": 1,
-    "prsOpened": 36,
-    "prsMerged": 35,
+    "prsOpened": 37,
+    "prsMerged": 37,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -378,11 +390,30 @@
         ]
       }
     ],
-    "score": 29.5,
-    "stars": "⭐⭐",
-    "major": 1,
-    "minor": 2,
+    "score": 35.5,
+    "stars": "⭐⭐⭐",
+    "major": 2,
+    "minor": 3,
     "tiny": 32
+  },
+  "jayantpranjal0": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "melmathari": {
     "reviewsReceived": 1,
@@ -433,12 +464,13 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 4,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 5,
     "stars": "⭐",
     "major": 1,
     "minor": 0,
@@ -461,10 +493,10 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 12,
-    "stars": "⭐⭐",
-    "major": 3,
-    "minor": 0,
+    "score": 10,
+    "stars": "⭐",
+    "major": 2,
+    "minor": 1,
     "tiny": 0
   },
   "saish9901": {
@@ -488,22 +520,22 @@
     "stars": ""
   },
   "seveibar": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 9,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
-    "approvalsGiven": 31,
+    "approvalsGiven": 38,
     "rejectionsGiven": 9,
-    "prsOpened": 23,
-    "prsMerged": 16,
+    "prsOpened": 30,
+    "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 25,
+    "distinctPrsReviewedNonCodeOwner": 29,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 16,
+    "distinctPrsReviewedAsCodeOwner": 18,
     "reposOwned": [
       {
         "repo": "tscircuit/winterspec",
@@ -524,11 +556,11 @@
         ]
       }
     ],
-    "score": 41,
+    "score": 43,
     "stars": "⭐⭐⭐",
-    "major": 3,
-    "minor": 3,
-    "tiny": 8
+    "major": 2,
+    "minor": 4,
+    "tiny": 12
   },
   "tscircuitbot": {
     "reviewsReceived": 1,
@@ -536,8 +568,8 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 57,
-    "prsMerged": 30,
+    "prsOpened": 155,
+    "prsMerged": 96,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -546,19 +578,19 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 13,
+    "score": 14,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 30
+    "tiny": 96
   },
   "zhyd1997": {
-    "reviewsReceived": 1,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 3,
+    "rejectionsReceived": 2,
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
