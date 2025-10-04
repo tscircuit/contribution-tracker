@@ -164,6 +164,16 @@ export class CachedOctokit {
       )
       return response
     },
+
+    createComment: async (
+      params: Endpoints["POST /repos/{owner}/{repo}/issues/{issue_number}/comments"]["parameters"],
+    ): Promise<{
+      data: Endpoints["POST /repos/{owner}/{repo}/issues/{issue_number}/comments"]["response"]["data"]
+    }> => {
+      // Don't cache comment creation - always make the API call
+      const response = await this.octokit.issues.createComment(params)
+      return response
+    },
   }
 
   public repos = {

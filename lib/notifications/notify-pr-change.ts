@@ -135,6 +135,48 @@ Check out your contribution here: [PR Link](${pr.url})
   )
 }
 
+export async function commentOnPR(pr: AnalyzedPR) {
+  console.info(`[PR Comment] Creating comment on PR: ${pr.repo} #${pr.number}`)
+  try {
+    const starRating =
+      pr.starRating ?? getContributionStarRatingFromAttributes(pr, pr.repo)
+    const stars = "⭐".repeat(starRating)
+
+    // Create a meaningful contribution level description
+    const contributionLevel = starRating === 5 ? "exceptional" :
+                             starRating === 4 ? "major" :
+                             starRating === 3 ? "significant" :
+                             starRating === 2 ? "moderate" :
+                             starRating === 1 ? "minor" :
+                             "tiny"
+
+    const comment = `
+Thank you for your contribution! 🎉
+
+**Contribution Level:** ${stars} (${contributionLevel})
+**Impact:** ${pr.impact}
+
+Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](https://contributions.tscircuit.com)
+
+---
+
+*Comment posted by tscircuitbot*
+`.trim()
+
+    const [owner, repo] = pr.repo.split("/")
+    await octokit.issues.createComment({
+      owner,
+      repo,
+      issue_number: pr.number,
+      body: comment,
+    })
+
+    console.info(`[PR Comment] Successfully commented on PR: ${pr.repo} #${pr.number}`)
+  } catch (error) {
+    console.error(`[PR Comment] Failed to comment on PR: ${pr.repo} #${pr.number}:`, error)
+  }
+}
+
 export async function notifyPRChange(pr: AnalyzedPR) {
   console.info(`[Notification] Processing PR change: ${pr.repo} #${pr.number}`)
   const starRating =
