@@ -26,14 +26,14 @@ export async function getContributorLevel(username: string): Promise<string> {
     // Read the latest contribution overview file
     const latestFile = files[0]
     const filePath = path.join(contributionOverviewsDir, latestFile)
-    const data = JSON.parse(
-      fs.readFileSync(filePath, "utf-8"),
-    ) as Record<string, ContributorStats>
+    const data = JSON.parse(fs.readFileSync(filePath, "utf-8")) as Record<
+      string,
+      ContributorStats
+    >
 
     // Get the user's contribution level
     const contributorData = data[username]
     return contributorData?.stars || ""
-
   } catch (error) {
     console.error(`Error getting contribution level for ${username}:`, error)
     return ""

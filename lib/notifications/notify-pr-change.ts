@@ -177,9 +177,14 @@ Track your contributions and see the leaderboard at: [tscircuit Contribution Tra
       body: comment,
     })
 
-    console.info(`[PR Comment] Successfully commented on PR: ${pr.repo} #${pr.number}`)
+    console.info(
+      `[PR Comment] Successfully commented on PR: ${pr.repo} #${pr.number}`,
+    )
   } catch (error) {
-    console.error(`[PR Comment] Failed to comment on PR: ${pr.repo} #${pr.number}:`, error)
+    console.error(
+      `[PR Comment] Failed to comment on PR: ${pr.repo} #${pr.number}:`,
+      error,
+    )
   }
 }
 
