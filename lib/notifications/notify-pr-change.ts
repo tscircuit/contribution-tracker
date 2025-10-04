@@ -143,12 +143,18 @@ export async function commentOnPR(pr: AnalyzedPR) {
     const stars = "⭐".repeat(starRating)
 
     // Create a meaningful contribution level description
-    const contributionLevel = starRating === 5 ? "exceptional" :
-                             starRating === 4 ? "major" :
-                             starRating === 3 ? "significant" :
-                             starRating === 2 ? "moderate" :
-                             starRating === 1 ? "minor" :
-                             "tiny"
+    const contributionLevel =
+      starRating === 5
+        ? "exceptional"
+        : starRating === 4
+          ? "major"
+          : starRating === 3
+            ? "significant"
+            : starRating === 2
+              ? "moderate"
+              : starRating === 1
+                ? "minor"
+                : "tiny"
 
     const comment = `
 Thank you for your contribution! 🎉
