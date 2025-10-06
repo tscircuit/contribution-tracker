@@ -9,11 +9,13 @@
 import { testCommentOnPR } from "lib/notifications/notify-pr-change"
 
 // Get command line arguments
-const [,, repo, prNumberStr] = process.argv
+const [, , repo, prNumberStr] = process.argv
 
 if (!repo || !prNumberStr) {
   console.error("Usage: bun run scripts/test-pr-comment.ts <repo> <pr-number>")
-  console.error("Example: bun run scripts/test-pr-comment.ts tscircuit/contribution-tracker 123")
+  console.error(
+    "Example: bun run scripts/test-pr-comment.ts tscircuit/contribution-tracker 123",
+  )
   process.exit(1)
 }
 

@@ -139,7 +139,10 @@ export async function commentOnPR(pr: AnalyzedPR) {
   console.info(`[PR Comment] Creating comment on PR: ${pr.repo} #${pr.number}`)
   try {
     // Get PR contribution level from analysis
-    const prContributionRating = await getContributionStarRatingFromAttributes(pr, pr.repo)
+    const prContributionRating = await getContributionStarRatingFromAttributes(
+      pr,
+      pr.repo,
+    )
     const prStars = "⭐".repeat(prContributionRating)
     const prContributionLevel =
       prContributionRating === 5
@@ -210,24 +213,30 @@ export async function testCommentOnPR(repo: string, prNumber: number) {
 
   try {
     // Fetch PR details
-    const { data: pr } = await octokit.pulls.get({
+    const prResponse = await octokit.pulls.get({
       owner,
       repo: repoName,
       pull_number: prNumber,
     })
+    const pr = prResponse.data
 
     // Get diff content
-    const { data: diffData } = await octokit.pulls.get({
+    const diffResponse = await octokit.pulls.get({
       owner,
       repo: repoName,
       pull_number: prNumber,
       mediaType: { format: "diff" },
     })
+    const diffData = diffResponse.data as string
 
     // Create minimal AnalyzedPR structure for testing with all required properties
     const analyzedPR = {
       number: pr.number,
-      state: pr.merged_at ? "merged" as const : pr.state === "open" ? "opened" as const : "closed" as const,
+      state: pr.merged_at
+        ? ("merged" as const)
+        : pr.state === "open"
+          ? ("opened" as const)
+          : ("closed" as const),
       title: pr.title,
       body: pr.body || "",
       user: pr.user,
@@ -270,10 +279,15 @@ export async function testCommentOnPR(repo: string, prNumber: number) {
     // Call the function to test it
     await commentOnPR(analyzedPR)
 
-    console.info(`[Test] Successfully completed PR comment test for ${repo} #${prNumber}`)
+    console.info(
+      `[Test] Successfully completed PR comment test for ${repo} #${prNumber}`,
+    )
 
   } catch (error) {
-    console.error(`[Test] Failed to test PR comment for ${repo} #${prNumber}:`, error)
+    console.error(
+      `[Test] Failed to test PR comment for ${repo} #${prNumber}:`,
+      error,
+    )
     throw error
   }
 }
