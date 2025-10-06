@@ -138,28 +138,43 @@ Check out your contribution here: [PR Link](${pr.url})
 export async function commentOnPR(pr: AnalyzedPR) {
   console.info(`[PR Comment] Creating comment on PR: ${pr.repo} #${pr.number}`)
   try {
-    const starRating =
-      pr.starRating ?? getContributionStarRatingFromAttributes(pr, pr.repo)
-    const stars = "⭐".repeat(starRating)
-
-    // Create a meaningful contribution level description
-    const contributionLevel =
-      starRating === 5
+    // Get PR contribution level from analysis
+    const prContributionRating = await getContributionStarRatingFromAttributes(pr, pr.repo)
+    const prStars = "⭐".repeat(prContributionRating)
+    const prContributionLevel =
+      prContributionRating === 5
         ? "exceptional"
-        : starRating === 4
+        : prContributionRating === 4
           ? "major"
-          : starRating === 3
+          : prContributionRating === 3
             ? "significant"
-            : starRating === 2
+            : prContributionRating === 2
               ? "moderate"
-              : starRating === 1
+              : prContributionRating === 1
                 ? "minor"
-                : "tiny"
+                : 0
+
+    // Show PR rating (from manual tagging or analysis)
+    const prRating = pr.starRating ?? prContributionRating
+    const prRatingStars = "⭐".repeat(prRating)
+    const prRatingLevel =
+      prRating === 5
+        ? "exceptional"
+        : prRating === 4
+          ? "major"
+          : prRating === 3
+            ? "significant"
+            : prRating === 2
+              ? "moderate"
+              : prRating === 1
+                ? "minor"
+                : 0
 
     const comment = `
 Thank you for your contribution! 🎉
 
-**Contribution Level:** ${stars} (${contributionLevel})
+**PR Rating:** ${prRatingStars} (${prRatingLevel})
+**Contribution Level:** ${prStars} (${prContributionLevel})
 **Impact:** ${pr.impact}
 
 Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](https://contributions.tscircuit.com)
@@ -185,6 +200,81 @@ Track your contributions and see the leaderboard at: [tscircuit Contribution Tra
       `[PR Comment] Failed to comment on PR: ${pr.repo} #${pr.number}:`,
       error,
     )
+  }
+}
+
+export async function testCommentOnPR(repo: string, prNumber: number) {
+  console.info(`[Test] Testing PR comment for ${repo} #${prNumber}`)
+
+  const [owner, repoName] = repo.split("/")
+
+  try {
+    // Fetch PR details
+    const { data: pr } = await octokit.pulls.get({
+      owner,
+      repo: repoName,
+      pull_number: prNumber,
+    })
+
+    // Get diff content
+    const { data: diffData } = await octokit.pulls.get({
+      owner,
+      repo: repoName,
+      pull_number: prNumber,
+      mediaType: { format: "diff" },
+    })
+
+    // Create minimal AnalyzedPR structure for testing with all required properties
+    const analyzedPR = {
+      number: pr.number,
+      state: pr.merged_at ? "merged" as const : pr.state === "open" ? "opened" as const : "closed" as const,
+      title: pr.title,
+      body: pr.body || "",
+      user: pr.user,
+      html_url: pr.html_url,
+      created_at: pr.created_at,
+      merged_at: pr.merged_at || null,
+      description: pr.body || "",
+      impact: "Minor" as const, // Default for testing
+      contributor: pr.user?.login || "unknown",
+      repo,
+      url: pr.html_url,
+      isAlignedWithMilestone: false,
+      starRating: 3 as const, // Default for testing
+      // All PR attributes defaulting to false for testing
+      mostly_style: false,
+      new_page_or_component: false,
+      introduces_or_fixes_a_footprint: false,
+      core_change: false,
+      only_dependency_update: false,
+      bad_title: false,
+      introduces_new_circuit_board: false,
+      fixes_circuit_board: false,
+      fixes_subtle_important_bug: false,
+      minor_fix: true, // Default assumption for test
+      major_autorouter_bug_fix: false,
+      only_adds_autorouter_fixtures: false,
+      only_reproduces_a_bug: false,
+      reproduces_and_fixes_a_bug: false,
+      minor_developer_experience_improvement: false,
+      major_experience_improvement: false,
+      introduces_new_schematic_symbol: false,
+      fixes_schematic_representation: false,
+      improves_parts_engine: false,
+      add_design_to_schematic_corpus: false,
+      major_improvement_to_core_data_modeling: false,
+      major_library_algorithm_contribution: false,
+      substantially_improves_svg_generation: false,
+    }
+
+    // Call the function to test it
+    await commentOnPR(analyzedPR)
+
+    console.info(`[Test] Successfully completed PR comment test for ${repo} #${prNumber}`)
+
+  } catch (error) {
+    console.error(`[Test] Failed to test PR comment for ${repo} #${prNumber}:`, error)
+    throw error
   }
 }
 
