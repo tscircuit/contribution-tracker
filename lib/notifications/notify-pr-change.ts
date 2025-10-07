@@ -220,6 +220,10 @@ export async function testCommentOnPR(repo: string, prNumber: number) {
     })
     const pr = prResponse.data
 
+    if (typeof pr === "string") {
+      throw new Error("PR data is a string, expected an object")
+    }
+
     // Get diff content
     const diffResponse = await octokit.pulls.get({
       owner,
@@ -282,7 +286,6 @@ export async function testCommentOnPR(repo: string, prNumber: number) {
     console.info(
       `[Test] Successfully completed PR comment test for ${repo} #${prNumber}`,
     )
-
   } catch (error) {
     console.error(
       `[Test] Failed to test PR comment for ${repo} #${prNumber}:`,
