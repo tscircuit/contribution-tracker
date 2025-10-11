@@ -74,6 +74,10 @@ async function main() {
             `[${getUTCDateTime()}] 🎉 ${contributor} is a first-time contributor! Sending celebration`,
           )
           await notifyFirstTimeContributor(prAnalysis)
+        } else {
+          console.log(
+            `[${getUTCDateTime()}] ${contributor} has contributed before`,
+          )
         }
       }
 
