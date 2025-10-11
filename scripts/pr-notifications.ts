@@ -63,38 +63,25 @@ async function main() {
       const prAnalysis = await analyzePRWithAI(pullRequest, repository)
       analyzedPullRequests.push(prAnalysis)
 
-      if (pullRequest.merged_at) {
+      if (contributor && pullRequest.merged_at) {
         console.log(
-          `[${getUTCDateTime()}] Processing merged PR #${pullRequest.number}: Commenting and Notifying`,
+          `[${getUTCDateTime()}] Checking if ${contributor} is a first-time contributor`,
         )
-        if (contributor) {
+        const isFirstTime = await isFirstTimeContributor(contributor)
+
+        if (isFirstTime) {
           console.log(
-            `[${getUTCDateTime()}] Checking if ${contributor} is a first-time contributor`,
+            `[${getUTCDateTime()}] 🎉 ${contributor} is a first-time contributor! Sending celebration`,
           )
-          const isFirstTime = await isFirstTimeContributor(contributor)
-
-          if (isFirstTime) {
-            console.log(
-              `[${getUTCDateTime()}] 🎉 ${contributor} is a first-time contributor! Sending celebration`,
-            )
-            await notifyFirstTimeContributor(prAnalysis)
-          } else {
-            console.log(
-              `[${getUTCDateTime()}] ${contributor} has contributed before`,
-            )
-          }
+          await notifyFirstTimeContributor(prAnalysis)
         }
-
-        await commentOnPR(prAnalysis)
-        await notifyPRChange(prAnalysis)
-        console.log(
-          `[${getUTCDateTime()}] Completed analysis and notification for PR #${pullRequest.number}`,
-        )
-      } else {
-        console.log(
-          `[${getUTCDateTime()}] Skipping comment and notification for open PR #${pullRequest.number}`,
-        )
       }
+
+      await commentOnPR(prAnalysis)
+      await notifyPRChange(prAnalysis)
+      console.log(
+        `[${getUTCDateTime()}] Completed analysis and notification for PR #${pullRequest.number}`,
+      )
     }
   }
 

@@ -3,6 +3,10 @@ import { WebClient } from "@slack/web-api"
 import type { AnalyzedPR } from "lib/types"
 import { octokit } from "lib/sdks"
 import { getContributionStarRatingFromAttributes } from "lib/ai-stuff/getConstributionStarRatingFromAttributes"
+import { Octokit } from "@octokit/rest"
+
+// Use a dedicated, non-cached Octokit instance to ensure we always get fresh data
+const freshOctokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
 // Initialize Discord webhook client if the environment variable is set
 let discordWebhook: WebhookClient | null = null
@@ -91,7 +95,7 @@ export async function isFirstTimeContributor(
     return false
   } catch (error) {
     console.error(
-      `[First-time check] Error checking contributor history for ${contributor}:`,
+      `[First-time check] Error checking contributor history for ${contributor}`,
       error,
     )
     return false
@@ -136,6 +140,23 @@ Check out your contribution here: [PR Link](${pr.url})
 }
 
 export async function commentOnPR(pr: AnalyzedPR) {
+  const [owner, repo] = pr.repo.split("/")
+
+  // Re-fetch PR to get fresh data
+  const { data: freshPR } = await freshOctokit.pulls.get({
+    owner,
+    repo,
+    pull_number: pr.number,
+  })
+
+  // Abort if not merged
+  if (!freshPR.merged_at) {
+    console.info(
+      `[PR Comment] Skipping comment on open PR: ${pr.repo} #${pr.number}`,
+    )
+    return
+  }
+
   console.info(`[PR Comment] Creating comment on PR: ${pr.repo} #${pr.number}`)
   try {
     // Get PR contribution level from analysis
@@ -185,9 +206,8 @@ Track your contributions and see the leaderboard at: [tscircuit Contribution Tra
 ---
 
 *Comment posted by tscircuitbot*
-`.trim()
+`
 
-    const [owner, repo] = pr.repo.split("/")
     await octokit.issues.createComment({
       owner,
       repo,
@@ -200,108 +220,36 @@ Track your contributions and see the leaderboard at: [tscircuit Contribution Tra
     )
   } catch (error) {
     console.error(
-      `[PR Comment] Failed to comment on PR: ${pr.repo} #${pr.number}:`,
+      `[PR Comment] Failed to comment on PR: ${pr.repo} #${pr.number}`,
       error,
     )
-  }
-}
-
-export async function testCommentOnPR(repo: string, prNumber: number) {
-  console.info(`[Test] Testing PR comment for ${repo} #${prNumber}`)
-
-  const [owner, repoName] = repo.split("/")
-
-  try {
-    // Fetch PR details
-    const prResponse = await octokit.pulls.get({
-      owner,
-      repo: repoName,
-      pull_number: prNumber,
-    })
-    const pr = prResponse.data
-
-    if (typeof pr === "string") {
-      throw new Error("PR data is a string, expected an object")
-    }
-
-    // Get diff content
-    const diffResponse = await octokit.pulls.get({
-      owner,
-      repo: repoName,
-      pull_number: prNumber,
-      mediaType: { format: "diff" },
-    })
-    const diffData = diffResponse.data as string
-
-    // Create minimal AnalyzedPR structure for testing with all required properties
-    const analyzedPR = {
-      number: pr.number,
-      state: pr.merged_at
-        ? ("merged" as const)
-        : pr.state === "open"
-          ? ("opened" as const)
-          : ("closed" as const),
-      title: pr.title,
-      body: pr.body || "",
-      user: pr.user,
-      html_url: pr.html_url,
-      created_at: pr.created_at,
-      merged_at: pr.merged_at || null,
-      description: pr.body || "",
-      impact: "Minor" as const, // Default for testing
-      contributor: pr.user?.login || "unknown",
-      repo,
-      url: pr.html_url,
-      isAlignedWithMilestone: false,
-      starRating: 3 as const, // Default for testing
-      // All PR attributes defaulting to false for testing
-      mostly_style: false,
-      new_page_or_component: false,
-      introduces_or_fixes_a_footprint: false,
-      core_change: false,
-      only_dependency_update: false,
-      bad_title: false,
-      introduces_new_circuit_board: false,
-      fixes_circuit_board: false,
-      fixes_subtle_important_bug: false,
-      minor_fix: true, // Default assumption for test
-      major_autorouter_bug_fix: false,
-      only_adds_autorouter_fixtures: false,
-      only_reproduces_a_bug: false,
-      reproduces_and_fixes_a_bug: false,
-      minor_developer_experience_improvement: false,
-      major_experience_improvement: false,
-      introduces_new_schematic_symbol: false,
-      fixes_schematic_representation: false,
-      improves_parts_engine: false,
-      add_design_to_schematic_corpus: false,
-      major_improvement_to_core_data_modeling: false,
-      major_library_algorithm_contribution: false,
-      substantially_improves_svg_generation: false,
-    }
-
-    // Call the function to test it
-    await commentOnPR(analyzedPR)
-
-    console.info(
-      `[Test] Successfully completed PR comment test for ${repo} #${prNumber}`,
-    )
-  } catch (error) {
-    console.error(
-      `[Test] Failed to test PR comment for ${repo} #${prNumber}:`,
-      error,
-    )
-    throw error
   }
 }
 
 export async function notifyPRChange(pr: AnalyzedPR) {
+  const [owner, repo] = pr.repo.split("/")
+
+  // Re-fetch PR to get fresh data
+  const { data: freshPR } = await freshOctokit.pulls.get({
+    owner,
+    repo,
+    pull_number: pr.number,
+  })
+
+  // Abort if not merged
+  if (!freshPR.merged_at) {
+    console.info(
+      `[Notification] Skipping notification for open PR: ${pr.repo} #${pr.number}`,
+    )
+    return
+  }
+
   console.info(`[Notification] Processing PR change: ${pr.repo} #${pr.number}`)
   const starRating =
     pr.starRating ?? getContributionStarRatingFromAttributes(pr, pr.repo)
   const stars = "⭐".repeat(starRating)
   const message = `
-[${pr.state === "merged" ? "merged" : "opened"}] ${pr.contributor} ${stars} PR in ${pr.repo}: ${pr.url}
+[merged] ${pr.contributor} ${stars} PR in ${pr.repo}: ${pr.url}
 ${pr.description.slice(0, 300).replace(/\n/g, " ")}`.trim()
 
   await postToDiscord(message)
