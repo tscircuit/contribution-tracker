@@ -3,6 +3,10 @@ import { WebClient } from "@slack/web-api"
 import type { AnalyzedPR } from "lib/types"
 import { octokit } from "lib/sdks"
 import { getContributionStarRatingFromAttributes } from "lib/ai-stuff/getConstributionStarRatingFromAttributes"
+import { Octokit } from "@octokit/rest"
+
+// Use a dedicated, non-cached Octokit instance to ensure we always get fresh data
+const freshOctokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
 // Initialize Discord webhook client if the environment variable is set
 let discordWebhook: WebhookClient | null = null
@@ -91,7 +95,7 @@ export async function isFirstTimeContributor(
     return false
   } catch (error) {
     console.error(
-      `[First-time check] Error checking contributor history for ${contributor}:`,
+      `[First-time check] Error checking contributor history for ${contributor}`,
       error,
     )
     return false
@@ -135,13 +139,117 @@ Check out your contribution here: [PR Link](${pr.url})
   )
 }
 
+export async function commentOnPR(pr: AnalyzedPR) {
+  const [owner, repo] = pr.repo.split("/")
+
+  // Re-fetch PR to get fresh data
+  const { data: freshPR } = await freshOctokit.pulls.get({
+    owner,
+    repo,
+    pull_number: pr.number,
+  })
+
+  // Abort if not merged
+  if (!freshPR.merged_at) {
+    console.info(
+      `[PR Comment] Skipping comment on open PR: ${pr.repo} #${pr.number}`,
+    )
+    return
+  }
+
+  console.info(`[PR Comment] Creating comment on PR: ${pr.repo} #${pr.number}`)
+  try {
+    // Get PR contribution level from analysis
+    const prContributionRating = await getContributionStarRatingFromAttributes(
+      pr,
+      pr.repo,
+    )
+    const prStars = "⭐".repeat(prContributionRating)
+    const prContributionLevel =
+      prContributionRating === 5
+        ? "exceptional"
+        : prContributionRating === 4
+          ? "major"
+          : prContributionRating === 3
+            ? "significant"
+            : prContributionRating === 2
+              ? "moderate"
+              : prContributionRating === 1
+                ? "minor"
+                : 0
+
+    // Show PR rating (from manual tagging or analysis)
+    const prRating = pr.starRating ?? prContributionRating
+    const prRatingStars = "⭐".repeat(prRating)
+    const prRatingLevel =
+      prRating === 5
+        ? "exceptional"
+        : prRating === 4
+          ? "major"
+          : prRating === 3
+            ? "significant"
+            : prRating === 2
+              ? "moderate"
+              : prRating === 1
+                ? "minor"
+                : 0
+
+    const comment = `
+Thank you for your contribution! 🎉
+
+**PR Rating:** ${prRatingStars} (${prRatingLevel})
+**Contribution Level:** ${prStars} (${prContributionLevel})
+**Impact:** ${pr.impact}
+
+Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](https://contributions.tscircuit.com)
+
+---
+
+*Comment posted by tscircuitbot*
+`
+
+    await octokit.issues.createComment({
+      owner,
+      repo,
+      issue_number: pr.number,
+      body: comment,
+    })
+
+    console.info(
+      `[PR Comment] Successfully commented on PR: ${pr.repo} #${pr.number}`,
+    )
+  } catch (error) {
+    console.error(
+      `[PR Comment] Failed to comment on PR: ${pr.repo} #${pr.number}`,
+      error,
+    )
+  }
+}
+
 export async function notifyPRChange(pr: AnalyzedPR) {
+  const [owner, repo] = pr.repo.split("/")
+
+  // Re-fetch PR to get fresh data
+  const { data: freshPR } = await freshOctokit.pulls.get({
+    owner,
+    repo,
+    pull_number: pr.number,
+  })
+
+  // Abort if not merged
+  if (!freshPR.merged_at) {
+    console.info(
+      `[Notification] Skipping notification for open PR: ${pr.repo} #${pr.number}`,
+    )
+    return
+  }
+
   console.info(`[Notification] Processing PR change: ${pr.repo} #${pr.number}`)
   const starRating =
     pr.starRating ?? getContributionStarRatingFromAttributes(pr, pr.repo)
   const stars = "⭐".repeat(starRating)
   const message = `
-[${pr.state === "merged" ? "merged" : "opened"}] ${pr.contributor} ${stars} PR in ${pr.repo}: ${pr.url}
+[merged] ${pr.contributor} ${stars} PR in ${pr.repo}: ${pr.url}
 ${pr.description.slice(0, 300).replace(/\n/g, " ")}`.trim()
 
   await postToDiscord(message)
