@@ -88,21 +88,8 @@ async function runTest(repo: string, prNumber: number) {
 }
 
 // --- Main execution ---
-const [, , repo, prNumberStr] = process.argv
-
-if (!repo || !prNumberStr) {
-  console.error("Usage: bun run scripts/test-pr-comment.ts <repo> <pr-number>")
-  console.error(
-    "Example: bun run scripts/test-pr-comment.ts tscircuit/contribution-tracker 123",
-  )
-  process.exit(1)
-}
-
-const prNumber = parseInt(prNumberStr, 10)
-if (isNaN(prNumber)) {
-  console.error("PR number must be a valid number")
-  process.exit(1)
-}
+const repo = "tscircuit/contribution-tracker"
+const prNumber = 229
 
 console.log(`🚀 Testing PR comment for ${repo} #${prNumber}`)
 
