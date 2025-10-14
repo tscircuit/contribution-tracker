@@ -169,23 +169,11 @@ export async function postMergeComment(pr: AnalyzedPR) {
     // Show PR rating (from manual tagging or analysis)
     const prRating = pr.starRating ?? prContributionRating
     const prRatingStars = "⭐".repeat(prRating)
-    const prRatingLevel =
-      prRating === 5
-        ? "exceptional"
-        : prRating === 4
-          ? "major"
-          : prRating === 3
-            ? "significant"
-            : prRating === 2
-              ? "moderate"
-              : prRating === 1
-                ? "minor"
-                : 0
 
     const comment = `
 Thank you for your contribution! 🎉
 
-**PR Rating:** ${prRatingStars} (${prRatingLevel})
+**PR Rating:** ${prRatingStars}
 **Impact:** ${pr.impact}
 
 Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](${getContributionTrackerUrl()})
