@@ -1,3 +1,4 @@
+import { getContributionTrackerUrl } from "lib/utils/contribution-level-utils"
 import { WebhookClient } from "discord.js"
 import { WebClient } from "@slack/web-api"
 import type { AnalyzedPR } from "lib/types"
@@ -139,7 +140,7 @@ Check out your contribution here: [PR Link](${pr.url})
   )
 }
 
-export async function commentOnPR(pr: AnalyzedPR) {
+export async function postMergeComment(pr: AnalyzedPR) {
   const [owner, repo] = pr.repo.split("/")
 
   // Re-fetch PR to get fresh data
@@ -164,19 +165,6 @@ export async function commentOnPR(pr: AnalyzedPR) {
       pr,
       pr.repo,
     )
-    const prStars = "⭐".repeat(prContributionRating)
-    const prContributionLevel =
-      prContributionRating === 5
-        ? "exceptional"
-        : prContributionRating === 4
-          ? "major"
-          : prContributionRating === 3
-            ? "significant"
-            : prContributionRating === 2
-              ? "moderate"
-              : prContributionRating === 1
-                ? "minor"
-                : 0
 
     // Show PR rating (from manual tagging or analysis)
     const prRating = pr.starRating ?? prContributionRating
@@ -198,10 +186,9 @@ export async function commentOnPR(pr: AnalyzedPR) {
 Thank you for your contribution! 🎉
 
 **PR Rating:** ${prRatingStars} (${prRatingLevel})
-**Contribution Level:** ${prStars} (${prContributionLevel})
 **Impact:** ${pr.impact}
 
-Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](https://contributions.tscircuit.com)
+Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](${getContributionTrackerUrl()})
 
 ---
 
@@ -227,29 +214,12 @@ Track your contributions and see the leaderboard at: [tscircuit Contribution Tra
 }
 
 export async function notifyPRChange(pr: AnalyzedPR) {
-  const [owner, repo] = pr.repo.split("/")
-
-  // Re-fetch PR to get fresh data
-  const { data: freshPR } = await freshOctokit.pulls.get({
-    owner,
-    repo,
-    pull_number: pr.number,
-  })
-
-  // Abort if not merged
-  if (!freshPR.merged_at) {
-    console.info(
-      `[Notification] Skipping notification for open PR: ${pr.repo} #${pr.number}`,
-    )
-    return
-  }
-
   console.info(`[Notification] Processing PR change: ${pr.repo} #${pr.number}`)
   const starRating =
     pr.starRating ?? getContributionStarRatingFromAttributes(pr, pr.repo)
   const stars = "⭐".repeat(starRating)
   const message = `
-[merged] ${pr.contributor} ${stars} PR in ${pr.repo}: ${pr.url}
+[${pr.state === "merged" ? "merged" : "opened"}] ${pr.contributor} ${stars} PR in ${pr.repo}: ${pr.url}
 ${pr.description.slice(0, 300).replace(/\n/g, " ")}`.trim()
 
   await postToDiscord(message)

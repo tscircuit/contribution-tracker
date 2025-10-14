@@ -6,7 +6,7 @@
  * Example: bun run scripts/test-pr-comment.ts tscircuit/contribution-tracker 123
  */
 
-import { commentOnPR } from "lib/notifications/notify-pr-change"
+import { postMergeComment } from "lib/notifications/notify-pr-change"
 import { Octokit } from "@octokit/rest"
 import type { AnalyzedPR } from "lib/types"
 
@@ -80,7 +80,7 @@ async function runTest(repo: string, prNumber: number) {
   }
 
   // Call the function to test it
-  await commentOnPR(analyzedPR)
+  await postMergeComment(analyzedPR)
 
   console.info(
     `[Test] Successfully completed PR comment test for ${repo} #${prNumber}`,

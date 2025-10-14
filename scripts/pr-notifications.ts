@@ -6,7 +6,7 @@ import {
   notifyPRChange,
   notifyFirstTimeContributor,
   isFirstTimeContributor,
-  commentOnPR,
+  postMergeComment,
 } from "lib/notifications/notify-pr-change"
 import { EXCLUDED_BOTS } from "lib/constants"
 import type { AnalyzedPR } from "lib/types"
@@ -81,7 +81,7 @@ async function main() {
         }
       }
 
-      await commentOnPR(prAnalysis)
+      await postMergeComment(prAnalysis)
       await notifyPRChange(prAnalysis)
       console.log(
         `[${getUTCDateTime()}] Completed analysis and notification for PR #${pullRequest.number}`,
