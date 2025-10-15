@@ -66,7 +66,7 @@ export interface PullRequest {
   }
   html_url: string
   created_at: string
-  merged_at: string
+  merged_at: string | null
 }
 
 export interface MergedPullRequest extends PullRequest {

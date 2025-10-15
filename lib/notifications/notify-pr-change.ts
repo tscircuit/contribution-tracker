@@ -1,8 +1,13 @@
+import { getContributionTrackerUrl } from "lib/utils/contribution-level-utils"
 import { WebhookClient } from "discord.js"
 import { WebClient } from "@slack/web-api"
 import type { AnalyzedPR } from "lib/types"
 import { octokit } from "lib/sdks"
 import { getContributionStarRatingFromAttributes } from "lib/ai-stuff/getConstributionStarRatingFromAttributes"
+import { Octokit } from "@octokit/rest"
+
+// Use a dedicated, non-cached Octokit instance to ensure we always get fresh data
+const freshOctokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
 // Initialize Discord webhook client if the environment variable is set
 let discordWebhook: WebhookClient | null = null
@@ -91,7 +96,7 @@ export async function isFirstTimeContributor(
     return false
   } catch (error) {
     console.error(
-      `[First-time check] Error checking contributor history for ${contributor}:`,
+      `[First-time check] Error checking contributor history for ${contributor}`,
       error,
     )
     return false
@@ -133,6 +138,67 @@ Check out your contribution here: [PR Link](${pr.url})
   console.info(
     `[Celebration] Completed sending celebration for ${pr.contributor}`,
   )
+}
+
+export async function postMergeComment(pr: AnalyzedPR) {
+  const [owner, repo] = pr.repo.split("/")
+
+  // Re-fetch PR to get fresh data
+  const { data: freshPR } = await freshOctokit.pulls.get({
+    owner,
+    repo,
+    pull_number: pr.number,
+  })
+
+  // Abort if not merged
+  if (!freshPR.merged_at) {
+    console.info(
+      `[PR Comment] Skipping comment on open PR: ${pr.repo} #${pr.number}`,
+    )
+    return
+  }
+
+  console.info(`[PR Comment] Creating comment on PR: ${pr.repo} #${pr.number}`)
+  try {
+    // Get PR contribution level from analysis
+    const prContributionRating = await getContributionStarRatingFromAttributes(
+      pr,
+      pr.repo,
+    )
+
+    // Show PR rating (from manual tagging or analysis)
+    const prRating = pr.starRating ?? prContributionRating
+    const prRatingStars = "⭐".repeat(prRating)
+
+    const comment = `
+Thank you for your contribution! 🎉
+
+**PR Rating:** ${prRatingStars}
+**Impact:** ${pr.impact}
+
+Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](${getContributionTrackerUrl()})
+
+---
+
+*Comment posted by tscircuitbot*
+`
+
+    await octokit.issues.createComment({
+      owner,
+      repo,
+      issue_number: pr.number,
+      body: comment,
+    })
+
+    console.info(
+      `[PR Comment] Successfully commented on PR: ${pr.repo} #${pr.number}`,
+    )
+  } catch (error) {
+    console.error(
+      `[PR Comment] Failed to comment on PR: ${pr.repo} #${pr.number}`,
+      error,
+    )
+  }
 }
 
 export async function notifyPRChange(pr: AnalyzedPR) {
