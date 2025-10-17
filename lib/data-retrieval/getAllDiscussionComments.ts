@@ -12,7 +12,8 @@ export async function getAllDiscussionComments(
     const [owner, repoName] = repo.split("/")
 
     // Use TSCIRCUIT_BOT_TOKEN if available for org-wide access, fallback to GITHUB_TOKEN
-    const githubToken = process.env.TSCIRCUIT_BOT_TOKEN || process.env.GITHUB_TOKEN
+    const githubToken =
+      process.env.TSCIRCUIT_BOT_TOKEN || process.env.GITHUB_TOKEN
     // Create a GraphQL client with authentication
     const graphqlWithAuth = graphql.defaults({
       headers: {
