@@ -29,7 +29,8 @@ async function fetchPRData(
   repo: string,
   number: number,
 ): Promise<MergedPullRequest> {
-  const octokit = new CachedOctokit({ auth: process.env.GITHUB_TOKEN })
+  const githubToken = process.env.TSCIRCUIT_BOT_TOKEN || process.env.GITHUB_TOKEN
+  const octokit = new CachedOctokit({ auth: githubToken })
 
   // Fetch basic PR data
   const { data: pr } = (await octokit.pulls.get({

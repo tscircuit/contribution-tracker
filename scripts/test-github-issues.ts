@@ -3,7 +3,8 @@ import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 
 async function testFetchBountiedIssues() {
   // You'll need to set a GitHub token
-  const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
+  const githubToken = process.env.TSCIRCUIT_BOT_TOKEN || process.env.GITHUB_TOKEN
+  const octokit = new Octokit({ auth: githubToken })
 
   // Choose a specific repository and contributor to test
   const repo = "tscircuit/contribution-tracker"
