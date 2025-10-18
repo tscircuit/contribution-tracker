@@ -1,7 +1,10 @@
 import { CachedAnthropic } from "lib/ai/cachedAnthropic"
 import { CachedOctokit } from "lib/data-retrieval/cachedOctokit"
 
-export const octokit = new CachedOctokit({ auth: process.env.GITHUB_TOKEN })
+// Use TSCIRCUIT_BOT_TOKEN if available for org-wide access, fallback to GITHUB_TOKEN
+const githubToken = process.env.TSCIRCUIT_BOT_TOKEN || process.env.GITHUB_TOKEN
+
+export const octokit = new CachedOctokit({ auth: githubToken })
 
 /**
  * @deprecated

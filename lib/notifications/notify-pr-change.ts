@@ -6,8 +6,10 @@ import { octokit } from "lib/sdks"
 import { getContributionStarRatingFromAttributes } from "lib/ai-stuff/getConstributionStarRatingFromAttributes"
 import { Octokit } from "@octokit/rest"
 
+// Use TSCIRCUIT_BOT_TOKEN if available for org-wide access, fallback to GITHUB_TOKEN
 // Use a dedicated, non-cached Octokit instance to ensure we always get fresh data
-const freshOctokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
+const githubToken = process.env.TSCIRCUIT_BOT_TOKEN || process.env.GITHUB_TOKEN
+const freshOctokit = new Octokit({ auth: githubToken })
 
 // Initialize Discord webhook client if the environment variable is set
 let discordWebhook: WebhookClient | null = null
