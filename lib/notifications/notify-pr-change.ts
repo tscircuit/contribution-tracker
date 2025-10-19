@@ -7,9 +7,7 @@ import { getContributionStarRatingFromAttributes } from "lib/ai-stuff/getConstri
 import { Octokit } from "@octokit/rest"
 
 // Use a dedicated, non-cached Octokit instance to ensure we always get fresh data
-const githubBotOctokit = new Octokit({
-  auth: process.env.GITHUB_BOT_TOKEN || process.env.GITHUB_TOKEN,
-})
+const freshOctokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
 
 // Initialize Discord webhook client if the environment variable is set
 let discordWebhook: WebhookClient | null = null
@@ -146,7 +144,7 @@ export async function postMergeComment(pr: AnalyzedPR) {
   const [owner, repo] = pr.repo.split("/")
 
   // Re-fetch PR to get fresh data
-  const { data: freshPR } = await githubBotOctokit.pulls.get({
+  const { data: freshPR } = await freshOctokit.pulls.get({
     owner,
     repo,
     pull_number: pr.number,
