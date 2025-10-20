@@ -36,7 +36,7 @@ jobs:
 
     - name: Post Recent PRs to Discord
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
         GITHUB_BOT_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
         OPENAI_API_KEY: ${{ secrets.TSCIRCUIT_BOT_OPENAI_KEY }}
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
