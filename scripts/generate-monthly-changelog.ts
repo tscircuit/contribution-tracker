@@ -69,14 +69,17 @@ async function main() {
 
   // Post-process to add proper PR links
   // Convert all #123 references to markdown links [#123](url)
-  formatted = formatted.replace(/#(\d+)/g, (match: string, prNumber: string) => {
-    const num = Number.parseInt(prNumber, 10)
-    const prInfo = prMap.get(num)
-    if (prInfo) {
-      return `[#${prNumber}](${prInfo.url})`
-    }
-    return match // Keep original if not found
-  })
+  formatted = formatted.replace(
+    /#(\d+)/g,
+    (match: string, prNumber: string) => {
+      const num = Number.parseInt(prNumber, 10)
+      const prInfo = prMap.get(num)
+      if (prInfo) {
+        return `[#${prNumber}](${prInfo.url})`
+      }
+      return match // Keep original if not found
+    },
+  )
 
   fs.writeFileSync(
     filePath,

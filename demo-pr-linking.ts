@@ -83,8 +83,12 @@ console.log("📊 Step 4: Analyzing the transformation...")
 const beforeMatches = aiGeneratedChangelog.match(/#\d+/g) || []
 const afterMatches = fixed.match(/\[#\d+\]\(https:\/\/[^)]+\)/g) || []
 
-console.log(`   - Found ${beforeMatches.length} plain PR references (e.g., #1427)`)
-console.log(`   - Converted to ${afterMatches.length} clickable links (e.g., [#1427](url))`)
+console.log(
+  `   - Found ${beforeMatches.length} plain PR references (e.g., #1427)`,
+)
+console.log(
+  `   - Converted to ${afterMatches.length} clickable links (e.g., [#1427](url))`,
+)
 console.log()
 
 // Show a few examples
@@ -107,7 +111,9 @@ console.log("✅ SUCCESS! All PR references are now clickable markdown links!")
 console.log("=".repeat(80))
 console.log()
 console.log("How it works:")
-console.log("  1. Build a map of PR numbers → URLs from pr-analysis/*.json files")
+console.log(
+  "  1. Build a map of PR numbers → URLs from pr-analysis/*.json files",
+)
 console.log("  2. AI generates concise changelog with plain #123 references")
 console.log("  3. Post-process with regex to convert all #123 → [#123](url)")
 console.log()
@@ -116,7 +122,8 @@ console.log("  ✅ No dependency on AI to format links correctly")
 console.log("  ✅ Guarantees all PR references become clickable")
 console.log("  ✅ Works with real GitHub URLs from actual PR data")
 console.log()
-console.log("💡 TIP: When this runs in production via 'bun run generate:changelog',")
+console.log(
+  "💡 TIP: When this runs in production via 'bun run generate:changelog',",
+)
 console.log("   it will automatically link ALL PRs in the monthly changelog.")
 console.log("=".repeat(80))
-
