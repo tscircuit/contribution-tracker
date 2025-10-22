@@ -1,7 +1,7 @@
 /**
  * Demo script to show how PR linking works without needing OpenAI API key
  * Run with: bun demo-pr-linking.ts
- * 
+ *
  * This demonstrates the fix for issue #236:
  * "Fix changelog to properly link to related PRs"
  */
@@ -27,23 +27,34 @@ const files = fs
   })
 
 // Build the PR map (just like the fixed script does)
-const prMap = new Map<number, { repo: string; url: string }>()
+const prMap = new Map<number, Array<{ repo: string; url: string }>>()
 let totalPRs = 0
+let collisions = 0
 
 for (const file of files) {
   const prs = JSON.parse(fs.readFileSync(path.join(prDir, file), "utf8"))
   for (const pr of prs) {
-    prMap.set(pr.number, { repo: pr.repo, url: pr.url })
+    if (!prMap.has(pr.number)) {
+      prMap.set(pr.number, [])
+    } else {
+      collisions++
+    }
+    prMap.get(pr.number).push({ repo: pr.repo, url: pr.url })
     totalPRs++
   }
 }
 
 console.log(`✅ Loaded ${totalPRs} PRs into the lookup map`)
-console.log(`   Map size: ${prMap.size} unique PR numbers`)
+console.log(`   Unique PR numbers: ${prMap.size}`)
+console.log(
+  `   Collisions detected: ${collisions} (same PR# in different repos)`,
+)
 console.log()
 
 // Step 2: Simulate AI-generated changelog (without links)
-console.log("🤖 Step 2: Simulating AI-generated changelog (WITHOUT proper links)...")
+console.log(
+  "🤖 Step 2: Simulating AI-generated changelog (WITHOUT proper links)...",
+)
 console.log()
 
 const aiGeneratedChangelog = `- SPICE everywhere – core integrates Spicey (#1427 #1441), adds voltage-probe & switch support (#1496 #1446), automatic .tran command (#13) and passes new RC/boost tests (#1444 #1445).
@@ -59,18 +70,31 @@ console.log()
 
 // Step 3: Apply the fix (THE ACTUAL CODE FROM generate-monthly-changelog.ts)
 console.log("🔧 Step 3: Applying the PR linking fix...")
-console.log("   (Using the same logic from scripts/generate-monthly-changelog.ts)")
+console.log(
+  "   (Using the same logic from scripts/generate-monthly-changelog.ts)",
+)
 console.log()
 
 // THIS IS THE EXACT FIX APPLIED IN THE SCRIPT
-const fixed = aiGeneratedChangelog.replace(/#(\d+)/g, (match: string, prNumber: string) => {
-  const num = Number.parseInt(prNumber, 10)
-  const prInfo = prMap.get(num)
-  if (prInfo) {
-    return `[#${prNumber}](${prInfo.url})`
-  }
-  return match // Keep original if not found
-})
+const fixed = aiGeneratedChangelog.replace(
+  /#(\d+)/g,
+  (match: string, prNumber: string) => {
+    const num = Number.parseInt(prNumber, 10)
+    const prInfos = prMap.get(num)
+    if (!prInfos || prInfos.length === 0) {
+      return match // Keep original if not found
+    }
+    // If there's only one PR with this number, use it
+    if (prInfos.length === 1) {
+      return `[#${prNumber}](${prInfos[0].url})`
+    }
+    // Multiple PRs with same number across repos - use the first one
+    console.warn(
+      `Warning: PR #${prNumber} exists in multiple repos: ${prInfos.map((p) => p.repo).join(", ")}`,
+    )
+    return `[#${prNumber}](${prInfos[0].url})`
+  },
+)
 
 console.log("AFTER (With Clickable Markdown Links):")
 console.log("-".repeat(80))

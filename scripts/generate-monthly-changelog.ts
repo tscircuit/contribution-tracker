@@ -35,14 +35,17 @@ async function main() {
   }
 
   const summaries: string[] = []
-  const prMap = new Map<number, { repo: string; url: string }>()
+  const prMap = new Map<number, Array<{ repo: string; url: string }>>()
 
   for (const file of files) {
     const prs = JSON.parse(fs.readFileSync(path.join(prDir, file), "utf8"))
     for (const pr of prs) {
       summaries.push(`- ${pr.repo} #${pr.number}: ${pr.title}`)
-      // Store PR number to repo/url mapping
-      prMap.set(pr.number, { repo: pr.repo, url: pr.url })
+      // Store PR number to repo/url mapping (handle collisions across repos)
+      if (!prMap.has(pr.number)) {
+        prMap.set(pr.number, [])
+      }
+      prMap.get(pr.number).push({ repo: pr.repo, url: pr.url })
     }
   }
 
@@ -73,11 +76,20 @@ async function main() {
     /#(\d+)/g,
     (match: string, prNumber: string) => {
       const num = Number.parseInt(prNumber, 10)
-      const prInfo = prMap.get(num)
-      if (prInfo) {
-        return `[#${prNumber}](${prInfo.url})`
+      const prInfos = prMap.get(num)
+      if (!prInfos || prInfos.length === 0) {
+        return match // Keep original if not found
       }
-      return match // Keep original if not found
+      // If there's only one PR with this number, use it
+      if (prInfos.length === 1) {
+        return `[#${prNumber}](${prInfos[0].url})`
+      }
+      // Multiple PRs with same number across repos - try to detect context
+      // For now, use the first one but log a warning
+      console.warn(
+        `Warning: PR #${prNumber} exists in multiple repos: ${prInfos.map((p) => p.repo).join(", ")}`,
+      )
+      return `[#${prNumber}](${prInfos[0].url})`
     },
   )
 
