@@ -35,10 +35,14 @@ async function main() {
   }
 
   const summaries: string[] = []
+  const prMap = new Map<number, { repo: string; url: string }>()
+
   for (const file of files) {
     const prs = JSON.parse(fs.readFileSync(path.join(prDir, file), "utf8"))
     for (const pr of prs) {
       summaries.push(`- ${pr.repo} #${pr.number}: ${pr.title}`)
+      // Store PR number to repo/url mapping
+      prMap.set(pr.number, { repo: pr.repo, url: pr.url })
     }
   }
 
@@ -58,10 +62,22 @@ async function main() {
     outDir,
     `${year}-${month.toString().padStart(2, "0")}.md`,
   )
-  const formatted = object.changelog
+  let formatted = object.changelog
     .replace(/^•\s+/gm, "- ")
     .replace(/^\*\s+/gm, "- ")
     .trim()
+
+  // Post-process to add proper PR links
+  // Convert all #123 references to markdown links [#123](url)
+  formatted = formatted.replace(/#(\d+)/g, (match: string, prNumber: string) => {
+    const num = Number.parseInt(prNumber, 10)
+    const prInfo = prMap.get(num)
+    if (prInfo) {
+      return `[#${prNumber}](${prInfo.url})`
+    }
+    return match // Keep original if not found
+  })
+
   fs.writeFileSync(
     filePath,
     `# Changelog ${year}-${month.toString().padStart(2, "0")}\n\n${formatted}\n`,
