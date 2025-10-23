@@ -10,7 +10,10 @@ const GUIDELINES = [
   "PRs that state clearly an end-user behavior change should be included",
   "PRs that don't mention specific, identifiable changes should be ignored",
   'Anything with a vague notion of "enhancement" should be ignored',
-  "Link to PRs in markdown, e.g. [#123](https://github.com/tscircuit/pcb-viewer/pull/123)",
+  "CRITICAL: Every PR reference MUST be a clickable markdown link in this exact format: [repo#123](https://github.com/tscircuit/repo/pull/123)",
+  "NEVER use plain text like (#123) or (repo #123) - always use the full markdown link format",
+  "Multiple PRs should be comma-separated markdown links: [core#123](url), [viewer#456](url)",
+  "Follow the exact format from previous changelogs - see September 2025 as reference",
   `Output regular markdown, use "-" for bullet points`,
 ]
 
@@ -38,11 +41,18 @@ async function main() {
   for (const file of files) {
     const prs = JSON.parse(fs.readFileSync(path.join(prDir, file), "utf8"))
     for (const pr of prs) {
-      summaries.push(`- ${pr.repo} #${pr.number}: ${pr.title}`)
+      const repoName = pr.repo.split('/')[1] // Extract repo name from "tscircuit/core" -> "core"
+      summaries.push(`- ${pr.repo} #${pr.number}: ${pr.title} | Link: [${repoName}#${pr.number}](${pr.url})`)
     }
   }
 
-  const prompt = `Create a concise bullet point changelog highlighting the key pull requests from ${year}-${month.toString().padStart(2, "0")}.\n${summaries.join("\n")}\n\n##Guidelines: ${GUIDELINES.map((g) => `- ${g}`).join("\n")}`
+  const prompt = `Create a concise bullet point changelog highlighting the key pull requests from ${year}-${month.toString().padStart(2, "0")}.
+
+IMPORTANT: Follow the September 2025 changelog format exactly - every PR must be a clickable markdown link like [core#123](https://github.com/tscircuit/core/pull/123).
+
+${summaries.join("\n")}
+
+##Guidelines: ${GUIDELINES.map((g) => `- ${g}`).join("\n")}`
 
   const schema = z.object({ changelog: z.string() })
   const { object } = await generateAiObjectCached({
