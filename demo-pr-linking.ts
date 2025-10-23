@@ -39,7 +39,10 @@ for (const file of files) {
     } else {
       collisions++
     }
-    prMap.get(pr.number).push({ repo: pr.repo, url: pr.url })
+    const prArray = prMap.get(pr.number)
+    if (prArray) {
+      prArray.push({ repo: pr.repo, url: pr.url })
+    }
     totalPRs++
   }
 }

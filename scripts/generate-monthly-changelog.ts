@@ -45,7 +45,10 @@ async function main() {
       if (!prMap.has(pr.number)) {
         prMap.set(pr.number, [])
       }
-      prMap.get(pr.number).push({ repo: pr.repo, url: pr.url })
+      const prArray = prMap.get(pr.number)
+      if (prArray) {
+        prArray.push({ repo: pr.repo, url: pr.url })
+      }
     }
   }
 
