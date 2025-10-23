@@ -106,7 +106,7 @@ function App() {
           <MaintainersList />
         </div>
 
-        <div className="flex flex-wrap gap-4 mb-6">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
           <a
             href="#prs-by-repository"
             className="inline-block px-4 py-2 rounded bg-blue-100 text-blue-700 font-medium hover:bg-blue-200 transition"
