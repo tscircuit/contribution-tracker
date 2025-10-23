@@ -41,8 +41,10 @@ async function main() {
   for (const file of files) {
     const prs = JSON.parse(fs.readFileSync(path.join(prDir, file), "utf8"))
     for (const pr of prs) {
-      const repoName = pr.repo.split('/')[1] // Extract repo name from "tscircuit/core" -> "core"
-      summaries.push(`- ${pr.repo} #${pr.number}: ${pr.title} | Link: [${repoName}#${pr.number}](${pr.url})`)
+      const repoName = pr.repo.split("/")[1] // Extract repo name from "tscircuit/core" -> "core"
+      summaries.push(
+        `- ${pr.repo} #${pr.number}: ${pr.title} | Link: [${repoName}#${pr.number}](${pr.url})`,
+      )
     }
   }
 
