@@ -5,12 +5,12 @@ import { Shield, Crown, Star } from "lucide-react"
 const MAINTAINER_ROLES = {
   maintainer1: {
     title: "maintainer1",
-    icon: Crown,
+    icon: Star,
     bgColor: "bg-white",
     borderColor: "border-gray-200",
     iconColor: "text-yellow-600",
     titleColor: "text-gray-600",
-    priority: 1,
+    priority: 3,
   },
   maintainer2: {
     title: "maintainer2",
@@ -23,12 +23,12 @@ const MAINTAINER_ROLES = {
   },
   maintainer3: {
     title: "maintainer3",
-    icon: Star,
+    icon: Crown,
     bgColor: "bg-white",
     borderColor: "border-gray-200",
     iconColor: "text-green-600",
     titleColor: "text-gray-600",
-    priority: 3,
+    priority: 1,
   },
 } as const
 
@@ -77,7 +77,7 @@ function MaintainerCard({ username, role }: MaintainerCardProps) {
 }
 
 export function MaintainersList() {
-  // Sort maintainers by priority (lead first, then core, then regular)
+  // Sort maintainers by priority
   const sortedMaintainers = Object.entries(MAINTAINERS).sort(
     ([, roleA], [, roleB]) => {
       return (
