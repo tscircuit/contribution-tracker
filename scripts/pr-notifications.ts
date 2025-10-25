@@ -94,7 +94,6 @@ async function main() {
   )
 }
 
-
 if (!process.env.GITHUB_BOT_TOKEN) {
   console.warn("GITHUB_BOT_TOKEN not provided")
 } else {
