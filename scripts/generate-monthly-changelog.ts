@@ -35,14 +35,14 @@ async function main() {
   }
 
   const summaries: string[] = []
-  const prMap = new Map<number, { repo: string; url: string }>()
+  const prMap = new Map<string, { repo: string; url: string }>()
 
   for (const file of files) {
     const prs = JSON.parse(fs.readFileSync(path.join(prDir, file), "utf8"))
     for (const pr of prs) {
       summaries.push(`- ${pr.repo} #${pr.number}: ${pr.title}`)
-      // Store PR number to repo/url mapping
-      prMap.set(pr.number, { repo: pr.repo, url: pr.url })
+      // Store PR number to repo/url mapping with repo+number as key
+      prMap.set(`${pr.repo}#${pr.number}`, { repo: pr.repo, url: pr.url })
     }
   }
 
@@ -68,16 +68,16 @@ async function main() {
     .trim()
 
   // Post-process to add proper PR links
-  // Convert all #123 references to markdown links [#123](url)
+  // Convert all repo #123 references to markdown links [#123](url)
   formatted = formatted.replace(
-    /#(\d+)/g,
-    (match: string, prNumber: string) => {
-      const num = Number.parseInt(prNumber, 10)
-      const prInfo = prMap.get(num)
+    /(\w+\/\w+)\s+#(\d+)/g,
+    (match: string, repo: string, prNumber: string) => {
+      const key = `${repo}#${prNumber}`
+      const prInfo = prMap.get(key)
       if (!prInfo) {
         return match // Keep original if not found
       }
-      return `[#${prNumber}](${prInfo.url})`
+      return `${repo} [#${prNumber}](${prInfo.url})`
     },
   )
 
