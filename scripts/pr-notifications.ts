@@ -18,6 +18,10 @@ function getUTCDateTime(): string {
 async function main() {
   const oneHourAgo = new Date(Date.now() - 3600000)
 
+  if(!process.env.GITHUB_BOT_TOKEN) {
+    console.warn("GITHUB_BOT_TOKEN not provided")
+  }
+
   console.log(`[${getUTCDateTime()}] Starting PR notification process`)
   const repositories = await getRepos()
   console.log(
