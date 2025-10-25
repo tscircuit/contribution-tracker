@@ -70,7 +70,7 @@ async function main() {
   // Post-process to add proper PR links
   // Convert all repo #123 references to markdown links [#123](url)
   formatted = formatted.replace(
-    /(\w+\/\w+)\s+#(\d+)/g,
+    /([\w-]+\/[\w-]+)\s+#(\d+)/g,
     (match: string, repo: string, prNumber: string) => {
       const key = `${repo}#${prNumber}`
       const prInfo = prMap.get(key)
