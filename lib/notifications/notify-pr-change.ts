@@ -185,7 +185,7 @@ Track your contributions and see the leaderboard at: [tscircuit Contribution Tra
 *Comment posted by tscircuitbot*
 `
 
-    await octokit.issues.createComment({
+    await githubBotOctokit.issues.createComment({
       owner,
       repo,
       issue_number: pr.number,
