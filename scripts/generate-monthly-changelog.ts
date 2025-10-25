@@ -48,35 +48,12 @@ async function main() {
 
   const prompt = `Create a concise bullet point changelog highlighting the key pull requests from ${year}-${month.toString().padStart(2, "0")}.\n${summaries.join("\n")}\n\n##Guidelines: ${GUIDELINES.map((g) => `- ${g}`).join("\n")}`
 
-  // OpenRouter for testing (DO NOT PUSH THIS)
-  const client = new OpenAI({
-    baseURL: "https://openrouter.ai/api/v1",
-    apiKey: "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",
+  const schema = z.object({ changelog: z.string() })
+  const { object } = await generateAiObjectCached({
+    schema,
+    prompt,
+    model: openai("o3"),
   })
-
-  const completion = await client.chat.completions.create({
-    extra_headers: {
-      "HTTP-Referer": "https://github.com/tscircuit/contribution-tracker",
-      "X-Title": "tscircuit-contribution-tracker",
-    },
-    model: "meta-llama/llama-3.3-8b-instruct:free",
-    messages: [
-      {
-        role: "user",
-        content: prompt,
-      },
-    ],
-  })
-
-  const object = { changelog: completion.choices[0].message.content }
-
-  // Original code (for when pushing):
-  // const schema = z.object({ changelog: z.string() })
-  // const { object } = await generateAiObjectCached({
-  //   schema,
-  //   prompt,
-  //   model: openai("o3"),
-  // })
 
   const outDir = path.join(process.cwd(), "changelogs")
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
