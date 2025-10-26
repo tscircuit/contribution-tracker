@@ -19,7 +19,11 @@ it("should count distinct PRs reviewed", () => {
     distinctPrsReviewedNonCodeOwner: 2, // Two distinct PRs reviewed
   }
 
-  const result = getContributorScore(mockPRs, stats, "test-user")
+  const result = getContributorScore({
+    contributorPRs: mockPRs,
+    contributorStats: stats,
+    contributor: "test-user",
+  })
   expect(result.score).toBe(2) // Should get 2 points for reviewing 2 distinct PRs
 })
 
@@ -39,7 +43,11 @@ it("should cap review points at 10", () => {
     distinctPrsReviewedNonCodeOwner: 15, // More than 10 distinct PRs
   }
 
-  const result = getContributorScore(mockPRs, stats, "test-user")
+  const result = getContributorScore({
+    contributorPRs: mockPRs,
+    contributorStats: stats,
+    contributor: "test-user",
+  })
   expect(result.score).toBe(5) // Should be capped at 5 points
 })
 
@@ -59,7 +67,11 @@ it("should handle edge cases", () => {
     distinctPrsReviewedNonCodeOwner: 0, // No PRs reviewed
   }
 
-  const result = getContributorScore(mockPRs, stats, "test-user")
+  const result = getContributorScore({
+    contributorPRs: mockPRs,
+    contributorStats: stats,
+    contributor: "test-user",
+  })
   expect(result.score).toBe(0) // Should return 0 for no reviews
 })
 
@@ -79,7 +91,11 @@ it("should correctly calculate score from distinct PRs reviewed", () => {
     distinctPrsReviewedNonCodeOwner: 5, // Five distinct PRs reviewed
   }
 
-  const result = getContributorScore(mockPRs, stats, "test-user")
+  const result = getContributorScore({
+    contributorPRs: mockPRs,
+    contributorStats: stats,
+    contributor: "test-user",
+  })
   expect(result.score).toBe(5) // Should get 5 points for reviewing 5 distinct PRs
 })
 
@@ -101,7 +117,11 @@ describe("distinct PRs reviewed functionality", () => {
       distinctPrsReviewedNonCodeOwner: 1, // Should only count as one PR
     }
 
-    const result = getContributorScore(mockPRs, contributorStats, "test-user")
+    const result = getContributorScore({
+      contributorPRs: mockPRs,
+      contributorStats,
+      contributor: "test-user",
+    })
     expect(result.score).toBe(1) // Should get 1 point for one distinct PR reviewed
   })
 
@@ -121,7 +141,11 @@ describe("distinct PRs reviewed functionality", () => {
       distinctPrsReviewedNonCodeOwner: 30, // More than the cap
     }
 
-    const result = getContributorScore(mockPRs, contributorStats, "test-user")
+    const result = getContributorScore({
+      contributorPRs: mockPRs,
+      contributorStats,
+      contributor: "test-user",
+    })
     expect(result.score).toBe(5) // Should be capped at 5 points
   })
 
@@ -141,7 +165,11 @@ describe("distinct PRs reviewed functionality", () => {
       distinctPrsReviewedNonCodeOwner: 0,
     }
 
-    const result = getContributorScore(mockPRs, contributorStats, "test-user")
+    const result = getContributorScore({
+      contributorPRs: mockPRs,
+      contributorStats,
+      contributor: "test-user",
+    })
     expect(result.score).toBe(0) // Should return 0 for no reviews
   })
 
@@ -161,7 +189,11 @@ describe("distinct PRs reviewed functionality", () => {
       distinctPrsReviewedNonCodeOwner: 5, // 5 different PRs reviewed
     }
 
-    const result = getContributorScore(mockPRs, contributorStats, "test-user")
+    const result = getContributorScore({
+      contributorPRs: mockPRs,
+      contributorStats,
+      contributor: "test-user",
+    })
     expect(result.score).toBe(5) // Should get 5 points for 5 distinct PRs reviewed
   })
 
@@ -181,11 +213,11 @@ describe("distinct PRs reviewed functionality", () => {
       distinctPrsReviewedAsCodeOwner: 29,
     }
 
-    const scoreAsCodeOwner = getContributorScore(
-      mockPRs,
-      statsAsCodeOwner,
-      "test-user",
-    )
+    const scoreAsCodeOwner = getContributorScore({
+      contributorPRs: mockPRs,
+      contributorStats: statsAsCodeOwner,
+      contributor: "test-user",
+    })
     expect(scoreAsCodeOwner.score).toBe(10)
 
     const statsNonCodeOwner: ContributorStats = {
@@ -202,11 +234,11 @@ describe("distinct PRs reviewed functionality", () => {
       distinctPrsReviewedNonCodeOwner: 29,
     }
 
-    const scoreNonCodeOwner = getContributorScore(
-      mockPRs,
-      statsNonCodeOwner,
-      "test-user",
-    )
+    const scoreNonCodeOwner = getContributorScore({
+      contributorPRs: mockPRs,
+      contributorStats: statsNonCodeOwner,
+      contributor: "test-user",
+    })
     expect(scoreNonCodeOwner.score).toBe(5)
 
     const statsMixed: ContributorStats = {
@@ -224,14 +256,18 @@ describe("distinct PRs reviewed functionality", () => {
       distinctPrsReviewedAsCodeOwner: 15,
     }
 
-    const scoreMixed = getContributorScore(mockPRs, statsMixed, "test-user")
+    const scoreMixed = getContributorScore({
+      contributorPRs: mockPRs,
+      contributorStats: statsMixed,
+      contributor: "test-user",
+    })
     expect(scoreMixed.score).toBe(15)
   })
 })
 
 describe("maintainer scoring", () => {
   it.if(Object.keys(MAINTAINERS).length > 0)(
-    "should not cap review points for maintainers",
+    "should apply higher review point caps for maintainers",
     () => {
       const mockPRs: AnalyzedPR[] = []
       const stats: ContributorStats = {
@@ -245,21 +281,26 @@ describe("maintainer scoring", () => {
         issuesCreated: 0,
         bountiedIssuesCount: 0,
         bountiedIssuesTotal: 0,
-        distinctPrsReviewedNonCodeOwner: 6,
+        distinctPrsReviewedNonCodeOwner: 16,
         distinctPrsReviewedAsCodeOwner: 2,
       }
 
-      const maintainerUsername = Object.keys(MAINTAINERS)[0] // A known maintainer
-      const result = getContributorScore(mockPRs, stats, maintainerUsername)
-      expect(result.score).toBe(8) // 6 + 2, no cap
+      const maintainerUsername = Object.keys(MAINTAINERS)[0]
+      const result = getContributorScore({
+        contributorPRs: mockPRs,
+        contributorStats: stats,
+        contributor: maintainerUsername,
+      })
+      expect(result.score).toBe(17)
 
       const nonMaintainerUsername = "test-user"
-      const nonMaintainerResult = getContributorScore(
-        mockPRs,
-        stats,
-        nonMaintainerUsername,
-      )
-      expect(nonMaintainerResult.score).toBe(7) // 5 + 2, capped
+      const nonMaintainerResult = getContributorScore({
+        contributorPRs: mockPRs,
+        contributorStats: stats,
+        contributor: nonMaintainerUsername,
+      })
+      // Capped at 5 for non-code-owner, and 10 for code-owner
+      expect(nonMaintainerResult.score).toBe(7)
     },
   )
 })

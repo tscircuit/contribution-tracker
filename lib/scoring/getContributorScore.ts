@@ -28,11 +28,15 @@ export interface ContributorScore {
 /**
  * Calculate score for a contributor based on PRs, issues, reviews, and discussions
  */
-export function getContributorScore(
-  contributorPRs: AnalyzedPR[],
-  contributorStats: ContributorStats | undefined,
-  contributor?: string,
-): ContributorScore {
+export function getContributorScore({
+  contributorPRs,
+  contributorStats,
+  contributor,
+}: {
+  contributorPRs: AnalyzedPR[]
+  contributorStats: ContributorStats | undefined
+  contributor?: string
+}): ContributorScore {
   const result: ContributorScore = {
     major: 0,
     minor: 0,
@@ -89,15 +93,17 @@ export function getContributorScore(
 
   const distinctPrsReviewedNonCodeOwner =
     contributorStats.distinctPrsReviewedNonCodeOwner || 0
-  result.score += isMaintainer
-    ? distinctPrsReviewedNonCodeOwner
-    : Math.min(distinctPrsReviewedNonCodeOwner, 5)
+  result.score += Math.min(
+    distinctPrsReviewedNonCodeOwner,
+    isMaintainer ? 15 : 5,
+  )
 
   const distinctPrsReviewedAsCodeOwner =
     contributorStats.distinctPrsReviewedAsCodeOwner || 0
-  result.score += isMaintainer
-    ? distinctPrsReviewedAsCodeOwner
-    : Math.min(distinctPrsReviewedAsCodeOwner, 10)
+  result.score += Math.min(
+    distinctPrsReviewedAsCodeOwner,
+    isMaintainer ? 30 : 10,
+  )
 
   return result
 }
