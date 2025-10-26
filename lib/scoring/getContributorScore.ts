@@ -1,3 +1,4 @@
+import { MAINTAINERS } from "./maintainers"
 import type { AnalyzedPR, ContributorStats } from "../types"
 
 export interface ContributorScore {
@@ -30,6 +31,7 @@ export interface ContributorScore {
 export function getContributorScore(
   contributorPRs: AnalyzedPR[],
   contributorStats: ContributorStats | undefined,
+  contributor?: string,
 ): ContributorScore {
   const result: ContributorScore = {
     major: 0,
@@ -82,12 +84,20 @@ export function getContributorScore(
     return result
   }
 
+  const isMaintainer =
+    contributor && (MAINTAINERS as Record<string, string>)[contributor]
+
   const distinctPrsReviewedNonCodeOwner =
     contributorStats.distinctPrsReviewedNonCodeOwner || 0
-  result.score += Math.min(distinctPrsReviewedNonCodeOwner, 5)
+  result.score += isMaintainer
+    ? distinctPrsReviewedNonCodeOwner
+    : Math.min(distinctPrsReviewedNonCodeOwner, 5)
+
   const distinctPrsReviewedAsCodeOwner =
     contributorStats.distinctPrsReviewedAsCodeOwner || 0
-  result.score += Math.min(distinctPrsReviewedAsCodeOwner, 10)
+  result.score += isMaintainer
+    ? distinctPrsReviewedAsCodeOwner
+    : Math.min(distinctPrsReviewedAsCodeOwner, 10)
 
   return result
 }

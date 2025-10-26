@@ -82,7 +82,7 @@ export async function generateMarkdown(
     const stats = contributorIdToStatsMap[contributor]
 
     // Calculate score
-    const scoreResult = getContributorScore(contributorPRs, stats)
+    const scoreResult = getContributorScore(contributorPRs, stats, contributor)
 
     // Store the result
     contributorScores[contributor] = {
