@@ -1,6 +1,6 @@
 import { MAINTAINERS } from "../../../lib/scoring/maintainers"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
-import { Shield, Crown, Star } from "lucide-react"
+import { Shield, Award, Star, Gem, Swords } from "lucide-react"
 
 const MAINTAINER_ROLES = {
   maintainer1: {
@@ -14,7 +14,7 @@ const MAINTAINER_ROLES = {
   },
   maintainer2: {
     title: "maintainer2",
-    icon: Shield,
+    icon: Award,
     bgColor: "bg-white",
     borderColor: "border-gray-200",
     iconColor: "text-blue-600",
@@ -23,12 +23,21 @@ const MAINTAINER_ROLES = {
   },
   maintainer3: {
     title: "maintainer3",
-    icon: Crown,
+    icon: Swords,
     bgColor: "bg-white",
     borderColor: "border-gray-200",
     iconColor: "text-green-600",
     titleColor: "text-gray-600",
     priority: 1,
+  },
+  maintainer4: {
+    title: "maintainer4",
+    icon: Gem,
+    bgColor: "bg-white",
+    borderColor: "border-gray-200",
+    iconColor: "text-teal-600",
+    titleColor: "text-gray-600",
+    priority: 0,
   },
 } as const
 
