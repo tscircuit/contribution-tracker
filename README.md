@@ -12,11 +12,12 @@ You can find AI-generated monthly changelogs in the [changelogs directory](./cha
 
 > Want to run locally? See the [Development Section](#development)
 
-The current week is shown below. There are 3 major sections:
+The current week is shown below. There are 4 major sections:
 
 - [Contributor Overview](#contributor-overview)
 - [PRs by Repository](#prs-by-repository)
 - [PRs by Contributor](#changes-by-contributor)
+- [Scoring & Sponsorship System](#scoring--sponsorship-system)
 
 ## Current Week
 
@@ -81,6 +82,8 @@ pie
 | [nailoo](#nailoo) | 0 | 0 | 1 |  | 1 | 0🔹 0🔶 0💎 |
 | [theajmalrazaq](#theajmalrazaq) | 0 | 0 | 1 |  | 1 | 0🔹 0🔶 0💎 |
 
+> Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.
+
 ### Discussion Contribution Legend
 
 - 🔹 Normal Comments: Basic participation with minimal effort
@@ -142,7 +145,7 @@ pie
 
 ### Overview
 
-PRs are analyzed by AI and assigned a **star rating (0-5 stars)**. Weekly scores use `2^(starRating - 1)` per PR (capped at 12 PRs per rating), plus review/discussion points.
+PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR (capped at 12 PRs per rating), plus review/discussion points.
 
 ### Weekly Score → Star String
 
