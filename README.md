@@ -10,9 +10,6 @@ You can find AI-generated monthly changelogs in the [changelogs directory](./cha
 - The LLM classifies each Diff/PR as into a set of attributes for scoring
 - All the PRs, summaries, and classifications are organized into charts and tables for [the website](https://contributions.tscircuit.com)
 
-## Sponsorship System
-
-The contribution tracker includes a sponsorship program that provides financial support to active contributors based on their weekly contribution scores.
 
 ### Weekly Star Ratings
 
