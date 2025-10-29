@@ -138,6 +138,66 @@ pie
     "tscircuit/svg.tscircuit.com" : 45
 ```
 
+## Scoring & Sponsorship System
+
+### Overview
+
+PRs are analyzed by AI and assigned a **star rating (0-5 stars)**. Weekly scores use `2^(starRating - 1)` per PR (capped at 12 PRs per rating), plus review/discussion points.
+
+### Weekly Score → Star String
+
+| Score Range | Star String | Count Value |
+|------------|-------------|-------------|
+| 0-3 | (empty) | 0 stars |
+| 4-10 | ⭐ | 1 star |
+| 11-30 | ⭐⭐ | 2 stars |
+| 31-50 | ⭐⭐⭐ | 3 stars |
+| 51-75 | 👑 | 3 stars |
+| 76-100 | 👑👑 | 3 stars |
+| 101+ | 👑👑👑 | 3 stars |
+
+> Crowns count as 3 stars for sponsorship.
+
+### Monthly Sponsorship Calculation
+
+The sponsorship system calculates monthly payments based on your **weekly star counts** over the complete weeks in that month (typically 4-5 weeks, Wednesday-Tuesday format).
+
+**Step 1: Collect Weekly Stars**
+- All complete weeks in the month are analyzed
+- Each week's star string is converted to a numeric count (1 ⭐ = 1 star, 👑 = 3 stars)
+- Example: `[2, 2, 2, 1, 0]` means 2 stars in week 1, 2 stars in week 2, etc.
+
+**Step 2: Calculate Metrics**
+- **Median stars**: The median value of all weekly star counts
+- **Min stars**: The minimum weekly star count
+- **Max stars**: The maximum weekly star count
+- **High score**: The maximum weekly numeric score (from step 1 above) from any week in the month
+
+**Step 3: Determine Base Amount**
+The sponsorship amount is calculated based on these metrics (checked in order):
+
+| Condition | Base Amount |
+|-----------|-------------|
+| `minStarCount >= 3` | **$500** |
+| `medianStars >= 3` | **$450** |
+| `medianStars >= 2.5` | **$300** |
+| `medianStars >= 2` | **$200** |
+| `medianStars >= 1.5` | **$100** |
+| `medianStars >= 1` | **$75** |
+| `maxStarCount >= 2` | **$25** |
+| `maxStarCount >= 1` | **$15** |
+| `highScore >= 3` (and all stars = 0) | **$5** |
+
+
+| Maintainer Level | Monthly Bonus |
+|------------------|---------------|
+| Level 1 | **$200** |
+| Level 2 | **$350** |
+| Level 3 | **$500** |
+
+**Final Amount** = Base Amount + Maintainer Bonus
+
+
 ## Changes by Repository
 
 ### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
