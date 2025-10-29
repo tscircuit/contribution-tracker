@@ -10,6 +10,46 @@ You can find AI-generated monthly changelogs in the [changelogs directory](./cha
 - The LLM classifies each Diff/PR as into a set of attributes for scoring
 - All the PRs, summaries, and classifications are organized into charts and tables for [the website](https://contributions.tscircuit.com)
 
+## Sponsorship System
+
+The contribution tracker includes a sponsorship program that provides financial support to active contributors based on their weekly contribution scores.
+
+### Weekly Star Ratings
+
+Contributors earn "stars" based on their weekly contribution score:
+- **Empty**: score ≤ 3
+- **⭐ (score)**: score 4-10
+- **⭐⭐ (score)**: score 11-30
+- **⭐⭐⭐ (score)**: score 31-50
+- **👑 (score)**: score 51-75
+- **👑👑 (score)**: score 76-100
+- **👑👑👑 (score)**: score > 100
+
+### Sponsorship Amount Calculation
+
+Sponsorship amounts are calculated based on the **median** of the last 4 weeks' star counts:
+
+| Median Stars | Base Amount |
+|-------------|-------------|
+| ≥ 3 stars | $500 |
+| ≥ 2.5 stars | $450 |
+| ≥ 2 stars | $300 |
+| ≥ 1.5 stars | $200 |
+| ≥ 1 star | $100 |
+| Max ≥ 2 stars | $75 |
+| Max ≥ 1 star | $15 |
+| High score ≥ 3 | $5 |
+
+### Maintainer Bonuses
+
+Additional amounts are added based on maintainer level:
+- **maintainer1**: +$200
+- **maintainer2**: +$350
+- **maintainer3**: +$500
+- **maintainer4**: +$2000
+
+
+
 > Want to run locally? See the [Development Section](#development)
 
 The current week is shown below. There are 3 major sections:
@@ -63,20 +103,20 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Score | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
-| [seveibar](#seveibar) | 7 | 28 | 18 | 👑👑 | 79 | 1🔹 0🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 7 | 9 | 9 | 👑 | 63 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 7 | 7 | 12 | 👑 | 59 | 1🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 8 | 5 | ⭐⭐⭐ | 39 | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 7 | 2 | 0 | ⭐⭐⭐ | 34 | 0🔹 0🔶 0💎 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 281 | ⭐⭐ | 18 | 0🔹 0🔶 0💎 |
-| [Ayushjhawar8](#Ayushjhawar8) | 1 | 2 | 6 | ⭐⭐ | 14 | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 0 | 0 | 3 | ⭐⭐ | 14 | 0🔹 0🔶 0💎 |
-| [Asymtode712](#Asymtode712) | 2 | 1 | 0 | ⭐ | 10 | 0🔹 0🔶 0💎 |
-| [nailoo](#nailoo) | 0 | 0 | 4 | ⭐ | 9 | 0🔹 0🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 | ⭐ | 7 | 0🔹 0🔶 0💎 |
-| [pxlpal](#pxlpal) | 0 | 1 | 3 | ⭐ | 5 | 0🔹 0🔶 0💎 |
-| [divanshu-go](#divanshu-go) | 1 | 0 | 0 | ⭐ | 4 | 0🔹 0🔶 0💎 |
-| [0hmX](#0hmX) | 1 | 0 | 0 | ⭐ | 4 | 0🔹 0🔶 0💎 |
+| [seveibar](#seveibar) | 7 | 28 | 18 | 👑👑 (79) | 79 | 1🔹 0🔶 0💎 |
+| [imrishabh18](#imrishabh18) | 7 | 9 | 9 | 👑 (63) | 63 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 7 | 7 | 12 | 👑 (59) | 59 | 1🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 8 | 5 | ⭐⭐⭐ (39) | 39 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 7 | 2 | 0 | ⭐⭐⭐ (34) | 34 | 0🔹 0🔶 0💎 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 281 | ⭐⭐ (18) | 18 | 0🔹 0🔶 0💎 |
+| [Ayushjhawar8](#Ayushjhawar8) | 1 | 2 | 6 | ⭐⭐ (14) | 14 | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 0 | 0 | 3 | ⭐⭐ (14) | 14 | 0🔹 0🔶 0💎 |
+| [Asymtode712](#Asymtode712) | 2 | 1 | 0 | ⭐ (10) | 10 | 0🔹 0🔶 0💎 |
+| [nailoo](#nailoo) | 0 | 0 | 4 | ⭐ (9) | 9 | 0🔹 0🔶 0💎 |
+| [MustafaMulla29](#MustafaMulla29) | 0 | 1 | 0 | ⭐ (7) | 7 | 0🔹 0🔶 0💎 |
+| [pxlpal](#pxlpal) | 0 | 1 | 3 | ⭐ (5) | 5 | 0🔹 0🔶 0💎 |
+| [divanshu-go](#divanshu-go) | 1 | 0 | 0 | ⭐ (4) | 4 | 0🔹 0🔶 0💎 |
+| [0hmX](#0hmX) | 1 | 0 | 0 | ⭐ (4) | 4 | 0🔹 0🔶 0💎 |
 | [RaghavArora14](#RaghavArora14) | 0 | 1 | 1 |  | 3 | 0🔹 0🔶 0💎 |
 | [rushabhcodes](#rushabhcodes) | 0 | 0 | 2 |  | 3 | 0🔹 0🔶 0💎 |
 | [joncherry](#joncherry) | 0 | 0 | 1 |  | 2 | 0🔹 0🔶 0💎 |

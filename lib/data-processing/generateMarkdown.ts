@@ -16,12 +16,12 @@ export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
 
 export const scoreToStarString = (score: number) => {
   if (score <= 3) return ""
-  if (score <= 10) return "⭐"
-  if (score <= 30) return "⭐⭐"
-  if (score <= 50) return "⭐⭐⭐"
-  if (score <= 75) return "👑"
-  if (score <= 100) return "👑👑"
-  return "👑👑👑"
+  if (score <= 10) return `⭐ (${score})`
+  if (score <= 30) return `⭐⭐ (${score})`
+  if (score <= 50) return `⭐⭐⭐ (${score})`
+  if (score <= 75) return `👑 (${score})`
+  if (score <= 100) return `👑👑 (${score})`
+  return `👑👑👑 (${score})`
 }
 
 export async function generateMarkdown(
