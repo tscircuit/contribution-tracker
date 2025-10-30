@@ -127,7 +127,7 @@ The sponsorship system calculates monthly payments based on your **weekly star c
 
 **Step 1: Collect Weekly Stars**
 - All complete weeks in the month are analyzed
-- Each week's star string is converted to a numeric count (1 ⭐ = 1 star, 👑 = 3 stars)
+- Each week's star string is converted to a numeric count (1 ⭐ = 1 star, ⭐⭐⭐ = 3 stars)
 - Example: `[2, 2, 2, 1, 0]` means 2 stars in week 1, 2 stars in week 2, etc.
 
 **Step 2: Calculate Metrics**
