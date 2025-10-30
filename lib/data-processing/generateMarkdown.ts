@@ -31,6 +31,11 @@ export async function generateMarkdown(
   repoOwnersMap: Record<string, string[]> = {},
 ): Promise<string> {
   let markdown = `# Contribution Overview ${weekStart}\n\n`
+  markdown += "The current week is shown below. There are 4 major sections:\n\n"
+  markdown += "- [Contributor Overview](#contributor-overview)\n"
+  markdown += "- [PRs by Repository](#prs-by-repository)\n"
+  markdown += "- [PRs by Contributor](#changes-by-contributor)\n"
+  markdown += "- [Scoring & Sponsorship System](#scoring--sponsorship-system)\n\n"
 
   // Remove bot accounts from contributor data
   Object.keys(contributorIdToStatsMap).forEach((contributor) => {
@@ -156,6 +161,10 @@ export async function generateMarkdown(
   }
   markdown += "\n"
 
+  // Add note about AI star ratings
+  markdown +=
+    "> Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.\n\n"
+
   // Add explanation for discussion contribution symbols
   markdown += "### Discussion Contribution Legend\n\n"
   markdown += "- 🔹 Normal Comments: Basic participation with minimal effort\n"
@@ -263,6 +272,66 @@ export async function generateMarkdown(
     markdown += `    "${repo}" : ${points}\n`
   })
   markdown += "```\n\n"
+
+  // Generate Scoring & Sponsorship System section
+  markdown += "## Scoring & Sponsorship System\n\n"
+  markdown += "### Overview\n\n"
+  markdown +=
+    "PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR (capped at 12 PRs per rating), plus review/discussion points.\n\n"
+
+  markdown += "### Weekly Score → Star String\n\n"
+  markdown += "| Score Range | Star String | Count Value |\n"
+  markdown += "|------------|-------------|-------------|\n"
+  markdown += "| 0-3 | (empty) | 0 stars |\n"
+  markdown += "| 4-10 | ⭐ | 1 star |\n"
+  markdown += "| 11-30 | ⭐⭐ | 2 stars |\n"
+  markdown += "| 31-50 | ⭐⭐⭐ | 3 stars |\n"
+  markdown += "| 51-75 | 👑 | 1 crown |\n"
+  markdown += "| 76-100 | 👑👑 | 2 crowns |\n"
+  markdown += "| 101+ | 👑👑👑 | 3 crowns |\n\n"
+  markdown += "> Crowns count as 3 stars for sponsorship.\n\n"
+
+  markdown += "### Monthly Sponsorship Calculation\n\n"
+  markdown +=
+    "The sponsorship system calculates monthly payments based on your **weekly star counts** over the complete weeks in that month (typically 4-5 weeks, Wednesday-Tuesday format).\n\n"
+
+  markdown += "**Step 1: Collect Weekly Stars**\n"
+  markdown += "- All complete weeks in the month are analyzed\n"
+  markdown +=
+    "- Each week's star string is converted to a numeric count (1 ⭐ = 1 star, 👑 = 3 stars)\n"
+  markdown +=
+    "- Example: `[2, 2, 2, 1, 0]` means 2 stars in week 1, 2 stars in week 2, etc.\n\n"
+
+  markdown += "**Step 2: Calculate Metrics**\n"
+  markdown += "- **Median stars**: The median value of all weekly star counts\n"
+  markdown += "- **Min stars**: The minimum weekly star count\n"
+  markdown += "- **Max stars**: The maximum weekly star count\n"
+  markdown +=
+    "- **High score**: The maximum raw weekly score (0-100+ range from the scoring table) from any week in the month\n\n"
+
+  markdown += "**Step 3: Determine Base Amount**\n"
+  markdown +=
+    "The sponsorship amount is calculated based on these metrics (checked in order):\n\n"
+
+  markdown += "| Condition | Base Amount |\n"
+  markdown += "|-----------|-------------|\n"
+  markdown += "| `minStarCount >= 3` | **$500** |\n"
+  markdown += "| `medianStars >= 3` | **$450** |\n"
+  markdown += "| `medianStars >= 2.5` | **$300** |\n"
+  markdown += "| `medianStars >= 2` | **$200** |\n"
+  markdown += "| `medianStars >= 1.5` | **$100** |\n"
+  markdown += "| `medianStars >= 1` | **$75** |\n"
+  markdown += "| `maxStarCount >= 2` | **$25** |\n"
+  markdown += "| `maxStarCount >= 1` | **$15** |\n"
+  markdown += "| `highScore >= 3` (and all stars = 0) | **$5** |\n\n"
+
+  markdown += "| Maintainer Level | Monthly Bonus |\n"
+  markdown += "|------------------|---------------|\n"
+  markdown += "| Level 1 | **$200** |\n"
+  markdown += "| Level 2 | **$350** |\n"
+  markdown += "| Level 3 | **$500** |\n\n"
+
+  markdown += "**Final Amount** = Base Amount + Maintainer Bonus\n\n"
 
   // Generate changes by repository
   markdown += "## Changes by Repository\n\n"
