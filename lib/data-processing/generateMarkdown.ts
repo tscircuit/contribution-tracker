@@ -35,7 +35,8 @@ export async function generateMarkdown(
   markdown += "- [Contributor Overview](#contributor-overview)\n"
   markdown += "- [PRs by Repository](#prs-by-repository)\n"
   markdown += "- [PRs by Contributor](#changes-by-contributor)\n"
-  markdown += "- [Scoring & Sponsorship System](#scoring--sponsorship-system)\n\n"
+  markdown +=
+    "- [Scoring & Sponsorship System](#scoring--sponsorship-system)\n\n"
 
   // Remove bot accounts from contributor data
   Object.keys(contributorIdToStatsMap).forEach((contributor) => {
