@@ -12,11 +12,12 @@ You can find AI-generated monthly changelogs in the [changelogs directory](./cha
 
 > Want to run locally? See the [Development Section](#development)
 
-The current week is shown below. There are 3 major sections:
+The current week is shown below. There are 4 major sections:
 
 - [Contributor Overview](#contributor-overview)
 - [PRs by Repository](#prs-by-repository)
 - [PRs by Contributor](#changes-by-contributor)
+- [Scoring & Sponsorship System](#scoring--sponsorship-system)
 
 ## Current Week
 
@@ -55,6 +56,8 @@ pie
 | [imrishabh18](#imrishabh18) | 2 | 1 | 1 | ⭐⭐ | 11 | 0🔹 0🔶 0💎 |
 | [baeoc](#baeoc) | 1 | 2 | 2 | ⭐ | 10 | 0🔹 0🔶 0💎 |
 | [RaghavArora14](#RaghavArora14) | 0 | 0 | 1 |  | 1 | 0🔹 0🔶 0💎 |
+
+> Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.
 
 ### Discussion Contribution Legend
 
@@ -97,6 +100,66 @@ pie
     "tscircuit/eval" : 7
     "tscircuit/kicad-to-circuit-json" : 7
 ```
+
+## Scoring & Sponsorship System
+
+### Overview
+
+PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR (capped at 12 PRs per rating), plus review/discussion points.
+
+### Weekly Score → Star String
+
+| Score Range | Star String | Count Value |
+|------------|-------------|-------------|
+| 0-3 | (empty) | 0 stars |
+| 4-10 | ⭐ | 1 star |
+| 11-30 | ⭐⭐ | 2 stars |
+| 31-50 | ⭐⭐⭐ | 3 stars |
+| 51-75 | 👑 | 1 crown |
+| 76-100 | 👑👑 | 2 crowns |
+| 101+ | 👑👑👑 | 3 crowns |
+
+> Crowns count as 3 stars for sponsorship.
+
+### Monthly Sponsorship Calculation
+
+The sponsorship system calculates monthly payments based on your **weekly star counts** over the complete weeks in that month (typically 4-5 weeks, Wednesday-Tuesday format).
+
+**Step 1: Collect Weekly Stars**
+- All complete weeks in the month are analyzed
+- Each week's star string is converted to a numeric count (1 ⭐ = 1 star, 👑 = 3 stars)
+- Example: `[2, 2, 2, 1, 0]` means 2 stars in week 1, 2 stars in week 2, etc.
+
+**Step 2: Calculate Metrics**
+- **Median stars**: The median value of all weekly star counts
+- **Min stars**: The minimum weekly star count
+- **Max stars**: The maximum weekly star count
+- **High score**: The maximum raw weekly score (0-100+ range from the scoring table) from any week in the month
+
+**Step 3: Determine Base Amount**
+The sponsorship amount is calculated based on these metrics (checked in order):
+
+| Condition | Base Amount |
+|-----------|-------------|
+| `minStarCount >= 3` | **$500** |
+| `medianStars >= 3` | **$450** |
+| `medianStars >= 2.5` | **$300** |
+| `medianStars >= 2` | **$200** |
+| `medianStars >= 1.5` | **$100** |
+| `medianStars >= 1` | **$75** |
+| `maxStarCount >= 2` | **$25** |
+| `maxStarCount >= 1` | **$15** |
+| `highScore >= 3` (and all stars = 0) | **$5** |
+
+
+| Maintainer Level | Monthly Bonus |
+|------------------|---------------|
+| Level 1 | **$200** |
+| Level 2 | **$350** |
+| Level 3 | **$500** |
+
+**Final Amount** = Base Amount + Maintainer Bonus
+
 
 ## Changes by Repository
 
