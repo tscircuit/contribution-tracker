@@ -174,7 +174,7 @@ The sponsorship system calculates monthly payments based on your **weekly star c
 - **Median stars**: The median value of all weekly star counts
 - **Min stars**: The minimum weekly star count
 - **Max stars**: The maximum weekly star count
-- **High score**: The maximum weekly numeric score (from step 1 above) from any week in the month
+- **High score**: The maximum raw weekly score (0-100+ range from the scoring table) from any week in the month
 
 **Step 3: Determine Base Amount**
 The sponsorship amount is calculated based on these metrics (checked in order):
