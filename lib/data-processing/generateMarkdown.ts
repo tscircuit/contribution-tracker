@@ -303,7 +303,7 @@ export async function generateMarkdown(
   markdown += "**Step 1: Collect Weekly Stars**\n"
   markdown += "- All complete weeks in the month are analyzed\n"
   markdown +=
-    "- Each week's star string is converted to a numeric count (1 ⭐ = 1 star, 👑 = 3 stars)\n"
+    "- Each week's star string is converted to a numeric count (⭐ = 1 star, ⭐⭐⭐ = 3 stars)\n"
   markdown +=
     "- Example: `[2, 2, 2, 1, 0]` means 2 stars in week 1, 2 stars in week 2, etc.\n\n"
 
