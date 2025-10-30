@@ -155,7 +155,7 @@ PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star 
 | 4-10 | ⭐ | 1 star |
 | 11-30 | ⭐⭐ | 2 stars |
 | 31-50 | ⭐⭐⭐ | 3 stars |
-| 51-75 | 👑 | 1 crowns |
+| 51-75 | 👑 | 1 crown |
 | 76-100 | 👑👑 | 2 crowns |
 | 101+ | 👑👑👑 | 3 crowns |
 
