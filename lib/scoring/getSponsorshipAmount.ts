@@ -41,23 +41,23 @@ export function getSponsorshipAmount({
   // Determine base amount based on median stars
   let baseAmount = 0
   if (minStarCount >= 3) {
-    baseAmount = 500
+    baseAmount = 700
   } else if (medianStars >= 3) {
-    baseAmount = 450
+    baseAmount = 550
   } else if (medianStars >= 2.5) {
-    baseAmount = 300
+    baseAmount = 400
   } else if (medianStars >= 2) {
     baseAmount = 200
   } else if (medianStars >= 1.5) {
-    baseAmount = 100
+    baseAmount = 120
   } else if (medianStars >= 1) {
-    baseAmount = 75
+    baseAmount = 60
   } else if (maxStarCount >= 2) {
-    baseAmount = 25
+    baseAmount = 45
   } else if (maxStarCount >= 1) {
-    baseAmount = 15
+    baseAmount = 30
   } else if (highScore >= 3) {
-    baseAmount = 5
+    baseAmount = 10
   }
 
   return baseAmount + maintainerBase
