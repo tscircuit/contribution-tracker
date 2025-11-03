@@ -47,11 +47,11 @@ export function getSponsorshipAmount({
   } else if (medianStars >= 2.5) {
     baseAmount = 400
   } else if (medianStars >= 2) {
-    baseAmount = 200
+    baseAmount = 250
   } else if (medianStars >= 1.5) {
     baseAmount = 120
   } else if (medianStars >= 1) {
-    baseAmount = 60
+    baseAmount = 75
   } else if (maxStarCount >= 2) {
     baseAmount = 45
   } else if (maxStarCount >= 1) {
