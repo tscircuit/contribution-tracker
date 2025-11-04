@@ -7,9 +7,8 @@ import { MaintainersList } from "./components/MaintainersList"
 import { useContributorsData } from "./hooks/useContributorsData"
 import ContributorGraph from "./components/ContributorGraph"
 import { PrsTable } from "./components/PrsTable"
-import { AlertCircleIcon, ChevronDown, ChevronUp } from "lucide-react"
+import { AlertCircleIcon } from "lucide-react"
 import { type PrAnalysisResult } from "./types/contributor"
-import { getProfileUrl } from "./constants/github"
 
 const PrSection = ({
   title,
@@ -67,43 +66,15 @@ const PrSection = ({
 
         if (enableContributorToggle) {
           return (
-            <div key={key} className="mb-12">
-              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div className="border-t border-gray-200">
-                  <button
-                    onClick={() => toggleContributor(key)}
-                    className="w-full px-4 py-3 text-left text-sm font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 flex items-center justify-between"
-                  >
-                    <span className="flex items-center gap-2">
-                      <a
-                        href={getProfileUrl(key)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 font-semibold"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {key}
-                      </a>
-                      <span className="text-gray-500 font-normal">
-                        ({prs.length}{" "}
-                        {prs.length === 1 ? "contribution" : "contributions"})
-                      </span>
-                    </span>
-                    {isExpanded ? (
-                      <ChevronUp className="w-4 h-4" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4" />
-                    )}
-                  </button>
-
-                  {isExpanded && (
-                    <div className="border-t border-gray-100">
-                      <PrsTable prs={prs} name={key} inModal={false} />
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
+            <PrsTable
+              key={key}
+              prs={prs}
+              name={key}
+              inModal={false}
+              collapsible={true}
+              isExpanded={isExpanded}
+              onToggle={() => toggleContributor(key)}
+            />
           )
         }
 
