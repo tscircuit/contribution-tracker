@@ -173,6 +173,8 @@ export async function postMergeComment(pr: AnalyzedPR) {
     const prRatingStars = "⭐".repeat(prRating)
 
     const comment = `
+---
+
 Thank you for your contribution! 🎉
 
 **PR Rating:** ${prRatingStars}
@@ -181,8 +183,6 @@ Thank you for your contribution! 🎉
 Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](${getContributionTrackerUrl()})
 
 ---
-
-*Comment posted by tscircuitbot*
 `
 
     await githubBotOctokit.issues.createComment({
