@@ -23,17 +23,18 @@ const PrSection = ({
     new Set(),
   )
 
-  // Initialize all contributors as expanded by default
   useEffect(() => {
     if (enableContributorToggle && prsData) {
       const allContributors = Object.keys(prsData).filter(
         (key) => prsData[key] && prsData[key].length > 0,
       )
-      if (allContributors.length > 0 && expandedContributors.size === 0) {
-        setExpandedContributors(new Set(allContributors))
-      }
+      setExpandedContributors((prev) => {
+        const next = new Set(prev)
+        allContributors.forEach((contributor) => next.add(contributor))
+        return next
+      })
     }
-  }, [enableContributorToggle, prsData, expandedContributors.size])
+  }, [enableContributorToggle, prsData])
 
   const toggleContributor = (contributor: string) => {
     setExpandedContributors((prev: Set<string>) => {
