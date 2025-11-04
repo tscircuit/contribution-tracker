@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import { ContributorOverview } from "./components/ContributorOverview"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
@@ -6,16 +7,47 @@ import { MaintainersList } from "./components/MaintainersList"
 import { useContributorsData } from "./hooks/useContributorsData"
 import ContributorGraph from "./components/ContributorGraph"
 import { PrsTable } from "./components/PrsTable"
-import { AlertCircleIcon } from "lucide-react"
+import { AlertCircleIcon, ChevronDown, ChevronUp } from "lucide-react"
 import { type PrAnalysisResult } from "./types/contributor"
+import { getProfileUrl } from "./constants/github"
 
 const PrSection = ({
   title,
   prsData,
+  enableContributorToggle = false,
 }: {
   title: string
   prsData?: Record<string, PrAnalysisResult[]>
+  enableContributorToggle?: boolean
 }) => {
+  const [expandedContributors, setExpandedContributors] = useState<Set<string>>(
+    new Set(),
+  )
+
+  // Initialize all contributors as expanded by default
+  useEffect(() => {
+    if (enableContributorToggle && prsData) {
+      const allContributors = Object.keys(prsData).filter(
+        (key) => prsData[key] && prsData[key].length > 0,
+      )
+      if (allContributors.length > 0 && expandedContributors.size === 0) {
+        setExpandedContributors(new Set(allContributors))
+      }
+    }
+  }, [enableContributorToggle, prsData, expandedContributors.size])
+
+  const toggleContributor = (contributor: string) => {
+    setExpandedContributors((prev: Set<string>) => {
+      const next = new Set(prev)
+      if (next.has(contributor)) {
+        next.delete(contributor)
+      } else {
+        next.add(contributor)
+      }
+      return next
+    })
+  }
+
   if (!prsData || Object.keys(prsData).length === 0) {
     return null
   }
@@ -26,10 +58,56 @@ const PrSection = ({
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
       </div>
       {Object.entries(prsData).map(([key, prs]) => {
-        if (prs && prs.length > 0) {
-          return <PrsTable key={key} prs={prs} name={key} />
+        if (!prs || prs.length === 0) {
+          return null
         }
-        return null
+
+        const isExpanded =
+          !enableContributorToggle || expandedContributors.has(key)
+
+        if (enableContributorToggle) {
+          return (
+            <div key={key} className="mb-12">
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="border-t border-gray-200">
+                  <button
+                    onClick={() => toggleContributor(key)}
+                    className="w-full px-4 py-3 text-left text-sm font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 flex items-center justify-between"
+                  >
+                    <span className="flex items-center gap-2">
+                      <a
+                        href={getProfileUrl(key)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 font-semibold"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {key}
+                      </a>
+                      <span className="text-gray-500 font-normal">
+                        ({prs.length}{" "}
+                        {prs.length === 1 ? "contribution" : "contributions"})
+                      </span>
+                    </span>
+                    {isExpanded ? (
+                      <ChevronUp className="w-4 h-4" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4" />
+                    )}
+                  </button>
+
+                  {isExpanded && (
+                    <div className="border-t border-gray-100">
+                      <PrsTable prs={prs} name={key} inModal={false} />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )
+        }
+
+        return <PrsTable key={key} prs={prs} name={key} />
       })}
     </>
   )
@@ -141,6 +219,7 @@ function App() {
         <PrSection
           title="PRs by Contributors"
           prsData={prsResultant?.prsByContributors}
+          enableContributorToggle={true}
         />
 
         <Modal
