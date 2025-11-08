@@ -41,7 +41,7 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
 
   const renderMobileCard = (pr: PrAnalysisResult) => (
     <div
-      key={pr.number}
+      key={`${pr.repo}-${pr.number}`}
       className="bg-white border border-gray-200 rounded-lg p-4 mb-3"
     >
       <div className="flex items-start justify-between mb-2">
@@ -114,7 +114,7 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {prsToRender.map((pr) => (
-              <tr key={pr.number} className="hover:bg-gray-50">
+              <tr key={`${pr.repo}-${pr.number}`} className="hover:bg-gray-50">
                 <td className="px-3 py-2 whitespace-nowrap text-sm">
                   <a
                     href={pr.url}

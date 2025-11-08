@@ -29,7 +29,6 @@ function stringToHSL(str: string): string {
 
 export function PrAttributeBadges({ pr }: PrAttributeBadgesProps) {
   const [isExpanded, setIsExpanded] = useState(false)
-  console.log(pr)
 
   // Get active attributes
   const activeAttributes = Object.entries(pr)
