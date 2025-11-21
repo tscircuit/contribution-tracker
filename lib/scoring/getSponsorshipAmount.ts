@@ -4,7 +4,9 @@ const MAINTAINER_BASE = {
   maintainer1: 200,
   maintainer2: 350,
   maintainer3: 500,
-  maintainer4: 2000,
+  maintainer4: 850,
+  maintainer5: 1300,
+  maintainer6: 2000
 }
 /**
  * Calculates sponsorship amount based on weekly stars over the past 4 weeks
