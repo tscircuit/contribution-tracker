@@ -23,9 +23,19 @@ interface PRsByRepositoryProps {
   prs: PrAnalysisResult[]
   inModal?: boolean
   name: string
+  collapsible?: boolean
+  isExpanded?: boolean
+  onToggle?: () => void
 }
 
-export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
+export function PrsTable({
+  prs,
+  inModal = false,
+  name,
+  collapsible = false,
+  isExpanded = true,
+  onToggle,
+}: PRsByRepositoryProps) {
   const [showTinyContributions, setShowTinyContributions] = useState(false)
 
   const getImpactColor = (impact: string) => {
@@ -160,45 +170,77 @@ export function PrsTable({ prs, inModal = false, name }: PRsByRepositoryProps) {
     <div className={inModal ? "" : "mb-12"}>
       <div className="space-y-4">
         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <div className="px-4 py-3 border-b border-gray-200">
-            <h3 className="text-lg font-semibold text-gray-900">
-              <a
-                href={`https://github.com/${name}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
-              >
-                {name}
-              </a>
-            </h3>
-          </div>
-
-          {/* Major and Minor PRs */}
-          {majorMinorPRs.length > 0 && renderPRTable(majorMinorPRs)}
-
-          {/* Tiny contributions collapsible section */}
-          {tinyPRs.length > 0 && (
-            <div className="border-t border-gray-200">
+          <div
+            className={`px-4 py-3 border-b border-gray-200 ${collapsible ? "cursor-pointer hover:bg-gray-50" : ""}`}
+          >
+            {collapsible && onToggle ? (
               <button
-                onClick={() => setShowTinyContributions(!showTinyContributions)}
-                className="w-full px-4 py-3 text-left text-sm font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 flex items-center justify-between"
+                onClick={onToggle}
+                className="w-full flex items-center justify-between text-left"
               >
-                <span className="flex items-center gap-2">
-                  🐌 Tiny Contributions ({tinyPRs.length})
-                </span>
-                {showTinyContributions ? (
-                  <ChevronUp className="w-4 h-4" />
+                <h3 className="text-lg font-semibold text-gray-900">
+                  <a
+                    href={`https://github.com/${name}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {name}
+                  </a>
+                </h3>
+                {isExpanded ? (
+                  <ChevronUp className="w-4 h-4 text-gray-600" />
                 ) : (
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-4 h-4 text-gray-600" />
                 )}
               </button>
+            ) : (
+              <h3 className="text-lg font-semibold text-gray-900">
+                <a
+                  href={`https://github.com/${name}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  {name}
+                </a>
+              </h3>
+            )}
+          </div>
 
-              {showTinyContributions && (
-                <div className="border-t border-gray-100">
-                  {renderPRTable(tinyPRs)}
+          {isExpanded && (
+            <>
+              {/* Major and Minor PRs */}
+              {majorMinorPRs.length > 0 && renderPRTable(majorMinorPRs)}
+
+              {/* Tiny contributions collapsible section */}
+              {tinyPRs.length > 0 && (
+                <div className="border-t border-gray-200">
+                  <button
+                    onClick={() =>
+                      setShowTinyContributions(!showTinyContributions)
+                    }
+                    className="w-full px-4 py-3 text-left text-sm font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 flex items-center justify-between"
+                  >
+                    <span className="flex items-center gap-2">
+                      🐌 Tiny Contributions ({tinyPRs.length})
+                    </span>
+                    {showTinyContributions ? (
+                      <ChevronUp className="w-4 h-4" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4" />
+                    )}
+                  </button>
+
+                  {showTinyContributions && (
+                    <div className="border-t border-gray-100">
+                      {renderPRTable(tinyPRs)}
+                    </div>
+                  )}
                 </div>
               )}
-            </div>
+            </>
           )}
         </div>
       </div>
