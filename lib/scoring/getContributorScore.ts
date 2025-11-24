@@ -91,19 +91,16 @@ export function getContributorScore({
   const isMaintainer =
     contributor && (MAINTAINERS as Record<string, string>)[contributor]
 
-  const distinctPrsReviewedNonCodeOwner =
-    contributorStats.distinctPrsReviewedNonCodeOwner || 0
-  result.score += Math.min(
-    distinctPrsReviewedNonCodeOwner,
-    isMaintainer ? 15 : 5,
-  )
+  const totalDistinctPrsReviewed =
+    (contributorStats.distinctPrsReviewedNonCodeOwner || 0) +
+    (contributorStats.distinctPrsReviewedAsCodeOwner || 0)
+  let reviewPoints = Math.min(totalDistinctPrsReviewed, isMaintainer ? 15 : 5)
 
-  const distinctPrsReviewedAsCodeOwner =
-    contributorStats.distinctPrsReviewedAsCodeOwner || 0
-  result.score += Math.min(
-    distinctPrsReviewedAsCodeOwner,
-    isMaintainer ? 30 : 10,
-  )
+  if (!isMaintainer) {
+    reviewPoints = Math.min(reviewPoints, impactWorth.Tiny)
+  }
+
+  result.score += reviewPoints
 
   return result
 }
