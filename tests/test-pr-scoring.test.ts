@@ -24,7 +24,7 @@ it("should count distinct PRs reviewed", () => {
     contributorStats: stats,
     contributor: "test-user",
   })
-  expect(result.score).toBe(2) // Should get 2 points for reviewing 2 distinct PRs
+  expect(result.score).toBe(1) // Should be capped at 1 point for non-maintainers
 })
 
 it("should cap review points at 10", () => {
@@ -48,7 +48,7 @@ it("should cap review points at 10", () => {
     contributorStats: stats,
     contributor: "test-user",
   })
-  expect(result.score).toBe(5) // Should be capped at 5 points
+  expect(result.score).toBe(1) // Should be capped at 1 point for non-maintainers
 })
 
 it("should handle edge cases", () => {
@@ -96,7 +96,7 @@ it("should correctly calculate score from distinct PRs reviewed", () => {
     contributorStats: stats,
     contributor: "test-user",
   })
-  expect(result.score).toBe(5) // Should get 5 points for reviewing 5 distinct PRs
+  expect(result.score).toBe(1) // Should be capped at 1 point for non-maintainers
 })
 
 // Additional tests to verify the distinct PRs reviewed functionality
@@ -146,7 +146,7 @@ describe("distinct PRs reviewed functionality", () => {
       contributorStats,
       contributor: "test-user",
     })
-    expect(result.score).toBe(5) // Should be capped at 5 points
+    expect(result.score).toBe(1) // Should be capped at 1 point for non-maintainers
   })
 
   it("should handle edge case of no reviews", () => {
@@ -194,74 +194,7 @@ describe("distinct PRs reviewed functionality", () => {
       contributorStats,
       contributor: "test-user",
     })
-    expect(result.score).toBe(5) // Should get 5 points for 5 distinct PRs reviewed
-  })
-
-  it("should count distinct PRs reviewed as code owner", () => {
-    const mockPRs: AnalyzedPR[] = []
-    const statsAsCodeOwner: ContributorStats = {
-      reviewsReceived: 0,
-      rejectionsReceived: 0,
-      approvalsReceived: 0,
-      approvalsGiven: 0,
-      rejectionsGiven: 0,
-      prsOpened: 0,
-      prsMerged: 0,
-      issuesCreated: 0,
-      bountiedIssuesCount: 0,
-      bountiedIssuesTotal: 0,
-      distinctPrsReviewedAsCodeOwner: 29,
-    }
-
-    const scoreAsCodeOwner = getContributorScore({
-      contributorPRs: mockPRs,
-      contributorStats: statsAsCodeOwner,
-      contributor: "test-user",
-    })
-    expect(scoreAsCodeOwner.score).toBe(10)
-
-    const statsNonCodeOwner: ContributorStats = {
-      reviewsReceived: 0,
-      rejectionsReceived: 0,
-      approvalsReceived: 0,
-      approvalsGiven: 0,
-      rejectionsGiven: 0,
-      prsOpened: 0,
-      prsMerged: 0,
-      issuesCreated: 0,
-      bountiedIssuesCount: 0,
-      bountiedIssuesTotal: 0,
-      distinctPrsReviewedNonCodeOwner: 29,
-    }
-
-    const scoreNonCodeOwner = getContributorScore({
-      contributorPRs: mockPRs,
-      contributorStats: statsNonCodeOwner,
-      contributor: "test-user",
-    })
-    expect(scoreNonCodeOwner.score).toBe(5)
-
-    const statsMixed: ContributorStats = {
-      reviewsReceived: 0,
-      rejectionsReceived: 0,
-      approvalsReceived: 0,
-      approvalsGiven: 0,
-      rejectionsGiven: 0,
-      prsOpened: 0,
-      prsMerged: 0,
-      issuesCreated: 0,
-      bountiedIssuesCount: 0,
-      bountiedIssuesTotal: 0,
-      distinctPrsReviewedNonCodeOwner: 15,
-      distinctPrsReviewedAsCodeOwner: 15,
-    }
-
-    const scoreMixed = getContributorScore({
-      contributorPRs: mockPRs,
-      contributorStats: statsMixed,
-      contributor: "test-user",
-    })
-    expect(scoreMixed.score).toBe(15)
+    expect(result.score).toBe(1) // Should be capped at 1 point for non-maintainers
   })
 })
 
@@ -291,7 +224,7 @@ describe("maintainer scoring", () => {
         contributorStats: stats,
         contributor: maintainerUsername,
       })
-      expect(result.score).toBe(17)
+      expect(result.score).toBe(15)
 
       const nonMaintainerUsername = "test-user"
       const nonMaintainerResult = getContributorScore({
@@ -299,8 +232,8 @@ describe("maintainer scoring", () => {
         contributorStats: stats,
         contributor: nonMaintainerUsername,
       })
-      // Capped at 5 for non-code-owner, and 10 for code-owner
-      expect(nonMaintainerResult.score).toBe(7)
+      // Non-maintainers can only earn up to one tiny contribution worth of review points
+      expect(nonMaintainerResult.score).toBe(1)
     },
   )
 })
