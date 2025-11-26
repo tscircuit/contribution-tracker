@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import { ContributorOverview } from "./components/ContributorOverview"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
@@ -12,10 +13,41 @@ import { type PrAnalysisResult } from "./types/contributor"
 const PrSection = ({
   title,
   prsData,
+  enableContributorToggle = false,
 }: {
   title: string
   prsData?: Record<string, PrAnalysisResult[]>
+  enableContributorToggle?: boolean
 }) => {
+  const [expandedContributors, setExpandedContributors] = useState<Set<string>>(
+    new Set(),
+  )
+
+  useEffect(() => {
+    if (enableContributorToggle && prsData) {
+      const allContributors = Object.keys(prsData).filter(
+        (key) => prsData[key] && prsData[key].length > 0,
+      )
+      setExpandedContributors((prev) => {
+        const next = new Set(prev)
+        allContributors.forEach((contributor) => next.add(contributor))
+        return next
+      })
+    }
+  }, [enableContributorToggle, prsData])
+
+  const toggleContributor = (contributor: string) => {
+    setExpandedContributors((prev: Set<string>) => {
+      const next = new Set(prev)
+      if (next.has(contributor)) {
+        next.delete(contributor)
+      } else {
+        next.add(contributor)
+      }
+      return next
+    })
+  }
+
   if (!prsData || Object.keys(prsData).length === 0) {
     return null
   }
@@ -26,10 +58,28 @@ const PrSection = ({
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
       </div>
       {Object.entries(prsData).map(([key, prs]) => {
-        if (prs && prs.length > 0) {
-          return <PrsTable key={key} prs={prs} name={key} />
+        if (!prs || prs.length === 0) {
+          return null
         }
-        return null
+
+        const isExpanded =
+          !enableContributorToggle || expandedContributors.has(key)
+
+        if (enableContributorToggle) {
+          return (
+            <PrsTable
+              key={key}
+              prs={prs}
+              name={key}
+              inModal={false}
+              collapsible={true}
+              isExpanded={isExpanded}
+              onToggle={() => toggleContributor(key)}
+            />
+          )
+        }
+
+        return <PrsTable key={key} prs={prs} name={key} />
       })}
     </>
   )
@@ -141,6 +191,7 @@ function App() {
         <PrSection
           title="PRs by Contributors"
           prsData={prsResultant?.prsByContributors}
+          enableContributorToggle={true}
         />
 
         <Modal
