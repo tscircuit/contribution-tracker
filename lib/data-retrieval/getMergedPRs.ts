@@ -18,14 +18,13 @@ export async function getMergedPRs(
     per_page: 100,
   })
 
-  const filteredPRs = data
-    .filter(
-      (pr) =>
-        pr.merged_at &&
-        new Date(pr.merged_at).getTime() >= new Date(since).getTime() &&
-        !pr.title?.toLowerCase().includes("revert") &&
-        (pr.body ? !pr.body?.toLowerCase().includes("revert") : true),
-    )
+  const filteredPRs = data.filter(
+    (pr) =>
+      pr.merged_at &&
+      new Date(pr.merged_at).getTime() >= new Date(since).getTime() &&
+      !pr.title?.toLowerCase().includes("revert") &&
+      (pr.body ? !pr.body?.toLowerCase().includes("revert") : true),
+  )
 
   // Fetch diff content for each PR
   const prsWithDiff = await Promise.all(
