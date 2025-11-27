@@ -72,6 +72,7 @@ export interface PullRequest {
 export interface MergedPullRequest extends PullRequest {
   diff: string
   manualStarRating?: StarRating
+  botAnalysis?: AnalyzedPR
   /** @deprecated */
   hasMajorTag?: boolean
 }

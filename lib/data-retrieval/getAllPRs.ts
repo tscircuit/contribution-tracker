@@ -9,6 +9,7 @@ export async function getAllPRs(
   repo: string,
   since: string,
 ): Promise<PullRequestWithReviews[]> {
+  console.log(`[getAllPRs] Getting all PRs for ${repo} since ${since}`)
   const [owner, repo_name] = repo.split("/")
   const fetchPRs = async (page = 1): Promise<any[]> => {
     const { data } = await octokit.pulls.list({
