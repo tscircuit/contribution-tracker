@@ -18,13 +18,15 @@ export async function getMergedPRs(
     per_page: 100,
   })
 
-  const filteredPRs = data.filter(
-    (pr) =>
-      pr.merged_at &&
-      new Date(pr.merged_at).getTime() >= new Date(since).getTime() &&
-      !pr.title?.toLowerCase().includes("revert") &&
-      (pr.body ? !pr.body?.toLowerCase().includes("revert") : true),
-  )
+  const filteredPRs = data
+    .filter(
+      (pr) =>
+        pr.merged_at &&
+        new Date(pr.merged_at).getTime() >= new Date(since).getTime() &&
+        !pr.title?.toLowerCase().includes("revert") &&
+        (pr.body ? !pr.body?.toLowerCase().includes("revert") : true),
+    )
+    .slice(1, 2)
 
   // Fetch diff content for each PR
   const prsWithDiff = await Promise.all(
@@ -57,6 +59,11 @@ export async function getMergedPRs(
         .catch(() => ({ data: [] }))
 
       const botAnalysis = extractBotAnalysis(comments)
+      console.log(
+        botAnalysis
+          ? `Bot analysis found for PR:- ${pr.url} | ${botAnalysis.starRating}`
+          : `Bot analysis not found for PR:- ${pr.url}`,
+      )
 
       const hasMajorTag = pr.labels.some((label) => label.name === "major")
       const manualStarRating = pr.labels
