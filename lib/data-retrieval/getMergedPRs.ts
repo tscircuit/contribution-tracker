@@ -26,7 +26,6 @@ export async function getMergedPRs(
         !pr.title?.toLowerCase().includes("revert") &&
         (pr.body ? !pr.body?.toLowerCase().includes("revert") : true),
     )
-    .slice(1, 2)
 
   // Fetch diff content for each PR
   const prsWithDiff = await Promise.all(
