@@ -4,4 +4,7 @@ export const STAFF_USERNAMES = [
   "tscircuitbot",
   "andrii-balitskyi",
   "abimaelmartell",
+  "MustafaMulla29",
+  "Ayushjhawar8",
+  "0hmX",
 ]
