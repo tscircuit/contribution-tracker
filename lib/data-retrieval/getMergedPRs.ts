@@ -1,12 +1,13 @@
 import { octokit } from "lib/sdks"
 import type { MergedPullRequest } from "lib/types"
-import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { filterDiff } from "lib/data-processing/filter-diff"
+import { extractBotAnalysis } from "lib/data-processing/bot-comments-utils"
 
 export async function getMergedPRs(
   repo: string,
   since: string,
 ): Promise<MergedPullRequest[]> {
+  console.log(`[getMergedPRs] Getting merged PRs for ${repo} since ${since}`)
   const [owner, repo_name] = repo.split("/")
   const { data } = await octokit.pulls.list({
     owner,
@@ -46,23 +47,22 @@ export async function getMergedPRs(
 
       const filteredDiff = filterDiff(String(diffData))
 
-      // // Fetch comments for the PR
-      // const { data: comments } = await octokit.issues
-      //   .listComments({
-      //     owner,
-      //     repo: repo_name,
-      //     issue_number: pr.number,
-      //     per_page: 100,
-      //   })
-      //   .catch(() => ({ data: [] }))
+      const { data: comments } = await octokit.octokit.issues
+        .listComments({
+          owner,
+          repo: repo_name,
+          issue_number: pr.number,
+          per_page: 100,
+        })
+        .catch(() => ({ data: [] }))
 
-      // // Check if any maintainer has added a /major tag in their comments
-      // const hasMajorTagFromMaintainer = comments.some(
-      //   (comment) =>
-      //     STAFF_USERNAMES.includes(comment.user?.login ?? "") &&
-      //     comment.body &&
-      //     comment.body.includes("/major"),
-      // )
+      const botAnalysis = extractBotAnalysis(comments)
+      console.log(
+        botAnalysis
+          ? `Bot analysis found for PR:- ${pr.url} | ${botAnalysis.starRating}`
+          : `Bot analysis not found for PR:- ${pr.url}`,
+      )
+
       const hasMajorTag = pr.labels.some((label) => label.name === "major")
       const manualStarRating = pr.labels
         .map(
@@ -82,11 +82,10 @@ export async function getMergedPRs(
         diff: filteredDiff,
         hasMajorTag: hasMajorTag,
         manualStarRating: manualStarRating ?? undefined,
+        botAnalysis,
       }
     }),
   )
-
-  // Process complete
 
   return prsWithDiff.filter((pr) => pr !== null) as MergedPullRequest[]
 }
