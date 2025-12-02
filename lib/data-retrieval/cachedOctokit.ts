@@ -11,7 +11,7 @@ const DEFAULT_CACHE_EXPIRY = ms("6h")
 type OctokitInstance = InstanceType<typeof Octokit>
 
 export class CachedOctokit {
-  public octokit: OctokitInstance
+  private octokit: OctokitInstance
   private methodExpirations: Record<string, number> = {
     "pulls.list": ms("6h"),
     "pulls.get": DEFAULT_CACHE_EXPIRY,

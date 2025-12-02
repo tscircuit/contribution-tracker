@@ -163,16 +163,13 @@ export async function generateOverview(startDate: string) {
         ) {
           return null
         }
-
-        const analysis =
-          pr.botAnalysis ||
-          (await analyzePRWithAI(pr, repo).catch((e) => {
-            console.error(
-              `Error analyzing PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
-              e,
-            )
-            return null
-          }))
+        const analysis = await analyzePRWithAI(pr, repo).catch((e) => {
+          console.error(
+            `Error analyzing PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
+            e,
+          )
+          return null
+        })
         if (!analysis) {
           return null
         }

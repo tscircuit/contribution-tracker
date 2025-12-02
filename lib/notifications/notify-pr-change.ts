@@ -183,7 +183,7 @@ Thank you for your contribution! 🎉
 Track your contributions and see the leaderboard at: [tscircuit Contribution Tracker](${getContributionTrackerUrl()})
 
 ---
-<!-- ANALYSIS_DATA:${JSON.stringify(pr)} -->`
+`
 
     await githubBotOctokit.issues.createComment({
       owner,
