@@ -10,7 +10,7 @@ export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
     case "Tiny":
       return "🐌 Tiny"
     default:
-      return "🟣"
+      return "🟡"
   }
 }
 
