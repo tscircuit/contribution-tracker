@@ -109,7 +109,9 @@ function ScoreBreakdown({
                 onClick={() => onSelectContributor(c.username)}
                 className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
               >
-                <div className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full ${c.color} flex-shrink-0`} />
+                <div
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full ${c.color} flex-shrink-0`}
+                />
                 <div className="min-w-0 flex-1">
                   <div className="text-xs sm:text-sm font-medium text-gray-900 truncate">
                     {c.username}
@@ -124,7 +126,9 @@ function ScoreBreakdown({
 
           <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-100 flex justify-between items-center text-xs sm:text-sm">
             <span className="font-medium text-gray-700">Total</span>
-            <span className="font-bold text-gray-900">{scoreData.total} points</span>
+            <span className="font-bold text-gray-900">
+              {scoreData.total} points
+            </span>
           </div>
         </div>
       </div>
