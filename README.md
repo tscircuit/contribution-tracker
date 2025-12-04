@@ -157,21 +157,24 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 
 | Condition | Base Amount |
 |-----------|-------------|
-| `minStarCount >= 3` | **$500** |
-| `medianStars >= 3` | **$450** |
-| `medianStars >= 2.5` | **$300** |
-| `medianStars >= 2` | **$200** |
-| `medianStars >= 1.5` | **$100** |
+| `minStarCount >= 3` | **$700** |
+| `medianStars >= 3` | **$550** |
+| `medianStars >= 2.5` | **$400** |
+| `medianStars >= 2` | **$250** |
+| `medianStars >= 1.5` | **$120** |
 | `medianStars >= 1` | **$75** |
-| `maxStarCount >= 2` | **$25** |
-| `maxStarCount >= 1` | **$15** |
-| `highScore >= 3` (and all stars = 0) | **$5** |
+| `maxStarCount >= 2` | **$45** |
+| `maxStarCount >= 1` | **$30** |
+| `highScore >= 3` (and all stars = 0) | **$10** |
 
 | Maintainer Level | Monthly Bonus |
 |------------------|---------------|
 | Level 1 | **$200** |
 | Level 2 | **$350** |
 | Level 3 | **$500** |
+| Level 4 | **$850** |
+| Level 5 | **$1300** |
+| Level 6 | **$2000** |
 
 **Final Amount** = Base Amount + Maintainer Bonus
 
