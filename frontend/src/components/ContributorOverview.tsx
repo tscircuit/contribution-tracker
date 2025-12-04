@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import {
   type ContributorStats,
@@ -12,6 +12,125 @@ import { CONTRIBUTION_TOOLTIPS, STATS_TOOLTIPS } from "../constants/tooltips"
 import { STAFF_USERNAMES } from "../constants/contributors"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
+
+const SCORE_BAR_COLORS = [
+  "bg-amber-500",
+  "bg-sky-500",
+  "bg-emerald-500",
+  "bg-violet-500",
+  "bg-rose-500",
+  "bg-orange-500",
+  "bg-teal-500",
+  "bg-indigo-500",
+  "bg-pink-500",
+  "bg-cyan-500",
+]
+
+function ScoreBreakdown({
+  contributors,
+  onSelectContributor,
+}: {
+  contributors: [string, ContributorStats][]
+  onSelectContributor: (username: string) => void
+}) {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  const scoreData = useMemo(() => {
+    const withScores = contributors
+      .filter(([, stats]) => (stats.score ?? 0) > 0)
+      .map(([username, stats]) => ({
+        username,
+        score: stats.score ?? 0,
+        stars: stats.stars ?? "",
+      }))
+      .sort((a, b) => b.score - a.score)
+
+    const total = withScores.reduce((sum, c) => sum + c.score, 0)
+
+    return {
+      contributors: withScores.map((c, i) => ({
+        ...c,
+        percentage: total > 0 ? (c.score / total) * 100 : 0,
+        color: SCORE_BAR_COLORS[i % SCORE_BAR_COLORS.length],
+      })),
+      total,
+    }
+  }, [contributors])
+
+  if (scoreData.contributors.length === 0) return null
+
+  return (
+    <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-8">
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full p-4 sm:p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+      >
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="text-lg sm:text-xl">📊</span>
+          <h3 className="text-base sm:text-xl font-bold text-gray-900">
+            Score Breakdown
+          </h3>
+          <span className="text-xs sm:text-sm text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
+            {scoreData.total} pts
+          </span>
+        </div>
+        {isExpanded ? (
+          <ChevronUp className="w-5 h-5 text-gray-500" />
+        ) : (
+          <ChevronDown className="w-5 h-5 text-gray-500" />
+        )}
+      </button>
+
+      <div
+        className={`transition-all duration-300 ease-in-out ${
+          isExpanded ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+        } overflow-hidden`}
+      >
+        <div className="px-4 pb-4 sm:px-6 sm:pb-6">
+          <div className="h-6 sm:h-8 rounded-full overflow-hidden flex mb-4 sm:mb-6 bg-gray-100">
+            {scoreData.contributors.map((c) => (
+              <Tippy
+                key={c.username}
+                content={`${c.username}: ${c.score} pts (${c.percentage.toFixed(1)}%)`}
+              >
+                <div
+                  className={`${c.color} cursor-pointer hover:opacity-80 transition-opacity`}
+                  style={{ width: `${c.percentage}%` }}
+                  onClick={() => onSelectContributor(c.username)}
+                />
+              </Tippy>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3">
+            {scoreData.contributors.map((c) => (
+              <div
+                key={c.username}
+                onClick={() => onSelectContributor(c.username)}
+                className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
+              >
+                <div className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full ${c.color} flex-shrink-0`} />
+                <div className="min-w-0 flex-1">
+                  <div className="text-xs sm:text-sm font-medium text-gray-900 truncate">
+                    {c.username}
+                  </div>
+                  <div className="text-[10px] sm:text-xs text-gray-500">
+                    {c.score} pts ({c.percentage.toFixed(1)}%)
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-100 flex justify-between items-center text-xs sm:text-sm">
+            <span className="font-medium text-gray-700">Total</span>
+            <span className="font-bold text-gray-900">{scoreData.total} points</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export function ContributorOverview({
   contributors,
@@ -270,6 +389,11 @@ export function ContributorOverview({
           </div>
         </div>
       </div>
+
+      <ScoreBreakdown
+        contributors={contributors}
+        onSelectContributor={onSelectContributor}
+      />
 
       {/* Show All Contributors Button */}
       {remainingContributors.length > 0 && (
