@@ -170,6 +170,26 @@ export async function generateMarkdown(
   markdown +=
     "> Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.\n\n"
 
+  const contributorsWithScore = sortedContributors.filter(
+    ([, effort]) => effort.score > 0,
+  )
+  const totalScore = contributorsWithScore.reduce(
+    (sum, [, effort]) => sum + effort.score,
+    0,
+  )
+
+  if (totalScore > 0 && contributorsWithScore.length > 0) {
+    markdown += "### Contribution Score Breakdown\n\n"
+    markdown += "| Contributor | Score | Percentage |\n"
+    markdown += "|-------------|-------|------------|\n"
+    for (const [contributor, effort] of contributorsWithScore) {
+      const percentage = ((effort.score / totalScore) * 100).toFixed(1)
+      markdown += `| ${contributor} | ${effort.score} | ${percentage}% |\n`
+    }
+    markdown += `| **Total** | **${totalScore}** | **100%** |\n`
+    markdown += "\n"
+  }
+
   // Add explanation for discussion contribution symbols
   markdown += "### Discussion Contribution Legend\n\n"
   markdown += "- 🔹 Normal Comments: Basic participation with minimal effort\n"
