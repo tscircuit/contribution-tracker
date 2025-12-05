@@ -87,7 +87,7 @@ function ScoreBreakdown({
         } overflow-hidden`}
       >
         <div className="px-4 pb-4 sm:px-6 sm:pb-6">
-          <div className="h-6 sm:h-8 rounded-full overflow-hidden flex mb-4 sm:mb-6 bg-gray-100">
+          <div className="h-6 sm:h-8 rounded-lg overflow-hidden flex mb-4 sm:mb-6 bg-gray-100">
             {scoreData.contributors.map((c) => (
               <Tippy
                 key={c.username}
