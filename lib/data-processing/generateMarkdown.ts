@@ -1,5 +1,6 @@
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { getContributorScore } from "../scoring"
+import { MAINTAINER_BASE, SPONSORSHIP_TIERS } from "../scoring/getSponsorshipAmount"
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {
@@ -320,24 +321,21 @@ export async function generateMarkdown(
 
   markdown += "| Condition | Base Amount |\n"
   markdown += "|-----------|-------------|\n"
-  markdown += "| `minStarCount >= 3` | **$700** |\n"
-  markdown += "| `medianStars >= 3` | **$550** |\n"
-  markdown += "| `medianStars >= 2.5` | **$400** |\n"
-  markdown += "| `medianStars >= 2` | **$250** |\n"
-  markdown += "| `medianStars >= 1.5` | **$120** |\n"
-  markdown += "| `medianStars >= 1` | **$75** |\n"
-  markdown += "| `maxStarCount >= 2` | **$45** |\n"
-  markdown += "| `maxStarCount >= 1` | **$30** |\n"
-  markdown += "| `highScore >= 3` (and all stars = 0) | **$10** |\n\n"
+  SPONSORSHIP_TIERS.forEach((tier) => {
+    const condition = tier.condition.includes("(")
+      ? `\`${tier.condition.split("(")[0].trim()}\` ${tier.condition.substring(tier.condition.indexOf("("))}`
+      : `\`${tier.condition}\``
+    markdown += `| ${condition} | **$${tier.amount}** |\n`
+  })
+  markdown += "\n"
 
   markdown += "| Maintainer Level | Monthly Bonus |\n"
   markdown += "|------------------|---------------|\n"
-  markdown += "| Level 1 | **$200** |\n"
-  markdown += "| Level 2 | **$350** |\n"
-  markdown += "| Level 3 | **$500** |\n"
-  markdown += "| Level 4 | **$850** |\n"
-  markdown += "| Level 5 | **$1300** |\n"
-  markdown += "| Level 6 | **$2000** |\n\n"
+  Object.entries(MAINTAINER_BASE).forEach(([key, value], index) => {
+    const level = index + 1
+    markdown += `| Level ${level} | **$${value}** |\n`
+  })
+  markdown += "\n"
 
   markdown += "**Final Amount** = Base Amount + Maintainer Bonus\n\n"
 
