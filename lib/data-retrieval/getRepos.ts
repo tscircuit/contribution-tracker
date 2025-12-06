@@ -1,7 +1,6 @@
 import { octokit } from "lib/sdks"
 
 export async function getRepos(): Promise<string[]> {
-  return ["tscircuit/contribution-tracker"]
   if (process.env.SHORT_REPO_LIST) {
     if (process.env.SHORT_REPO_LIST.includes("tscircuit/")) {
       return process.env.SHORT_REPO_LIST.split(",")
