@@ -12,7 +12,11 @@ import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
 import { getLastWednesday } from "lib/ai/date-utils"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
-import { storePrAnalysis } from "lib/data-processing/storePrAnalysis"
+import {
+  storePrAnalysis,
+  loadPrAnalysis,
+  getExistingPrAnalysis,
+} from "lib/data-processing/storePrAnalysis"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
 export async function generateOverview(startDate: string) {
@@ -21,12 +25,16 @@ export async function generateOverview(startDate: string) {
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
   const contributorData: Record<string, ContributorStats> = {}
-  // Map to collect unique PR numbers for each reviewer
   const reviewerToReviewedPrs: Record<
     string,
     Set<{ number: number; isReviewerRepoOwner: boolean }>
   > = {}
   const repoOwnersMap: Record<string, string[]> = {}
+
+  const existingAnalysis = loadPrAnalysis(startDateString)
+  console.log(
+    `Loaded ${existingAnalysis.length} existing PR analyses for ${startDateString}`,
+  )
 
   for (const repo of repos) {
     console.log(`\nAnalyzing ${repo}`)
@@ -163,6 +171,17 @@ export async function generateOverview(startDate: string) {
         ) {
           return null
         }
+
+        const existingPr = getExistingPrAnalysis(
+          existingAnalysis,
+          repo,
+          pr.number,
+        )
+        if (existingPr) {
+          console.log(`Using stored analysis for PR #${pr.number} in ${repo}`)
+          return existingPr as AnalyzedPR
+        }
+
         const analysis = await analyzePRWithAI(pr, repo).catch((e) => {
           console.error(
             `Error analyzing PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
@@ -350,7 +369,7 @@ async function generateAndWriteFiles(
     startDateString,
     repoOwnersMap,
   )
-  console.log("Generated markdown", markdown)
+  // console.log("Generated markdown", markdown)
 
   // Sort contributor data alphabetically by contributor name
   const alphabeticalContributorData = Object.keys(contributorData)

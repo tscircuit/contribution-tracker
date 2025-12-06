@@ -21,6 +21,7 @@ export async function analyzeDiscussionWithAI(
   const result = await generateAiObjectCached({
     schema: discussionSchema,
     prompt: generateAnalyzeDiscussionPrompt(comment),
+    debug: `Discussion comment by ${comment.discussionAuthor} with title ${comment.discussionTitle}`,
   })
 
   return {
