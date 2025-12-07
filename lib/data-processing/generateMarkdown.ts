@@ -1,5 +1,12 @@
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { getContributorScore } from "../scoring"
+import {
+  MAINTAINER_BASE,
+  MIN_STAR_TIERS,
+  MEDIAN_STAR_TIERS,
+  MAX_STAR_TIERS,
+  HIGH_SCORE_TIERS,
+} from "../scoring/getSponsorshipAmount"
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {
@@ -320,21 +327,27 @@ export async function generateMarkdown(
 
   markdown += "| Condition | Base Amount |\n"
   markdown += "|-----------|-------------|\n"
-  markdown += "| `minStarCount >= 3` | **$500** |\n"
-  markdown += "| `medianStars >= 3` | **$450** |\n"
-  markdown += "| `medianStars >= 2.5` | **$300** |\n"
-  markdown += "| `medianStars >= 2` | **$200** |\n"
-  markdown += "| `medianStars >= 1.5` | **$100** |\n"
-  markdown += "| `medianStars >= 1` | **$75** |\n"
-  markdown += "| `maxStarCount >= 2` | **$25** |\n"
-  markdown += "| `maxStarCount >= 1` | **$15** |\n"
-  markdown += "| `highScore >= 3` (and all stars = 0) | **$5** |\n\n"
+  MIN_STAR_TIERS.forEach((tier) => {
+    markdown += `| \`minStarCount >= ${tier.threshold}\` | **$${tier.amount}** |\n`
+  })
+  MEDIAN_STAR_TIERS.forEach((tier) => {
+    markdown += `| \`medianStars >= ${tier.threshold}\` | **$${tier.amount}** |\n`
+  })
+  MAX_STAR_TIERS.forEach((tier) => {
+    markdown += `| \`maxStarCount >= ${tier.threshold}\` | **$${tier.amount}** |\n`
+  })
+  HIGH_SCORE_TIERS.forEach((tier) => {
+    markdown += `| \`highScore >= ${tier.threshold}\` (and all stars = 0) | **$${tier.amount}** |\n`
+  })
+  markdown += "\n"
 
   markdown += "| Maintainer Level | Monthly Bonus |\n"
   markdown += "|------------------|---------------|\n"
-  markdown += "| Level 1 | **$200** |\n"
-  markdown += "| Level 2 | **$350** |\n"
-  markdown += "| Level 3 | **$500** |\n\n"
+  Object.entries(MAINTAINER_BASE).forEach(([key, value], index) => {
+    const level = index + 1
+    markdown += `| Level ${level} | **$${value}** |\n`
+  })
+  markdown += "\n"
 
   markdown += "**Final Amount** = Base Amount + Maintainer Bonus\n\n"
 
