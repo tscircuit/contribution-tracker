@@ -9,17 +9,23 @@ export const MAINTAINER_BASE = {
   maintainer6: 2000,
 }
 
-export const SPONSORSHIP_TIERS = [
-  { condition: "minStarCount >= 3", amount: 700 },
-  { condition: "medianStars >= 3", amount: 550 },
-  { condition: "medianStars >= 2.5", amount: 400 },
-  { condition: "medianStars >= 2", amount: 250 },
-  { condition: "medianStars >= 1.5", amount: 120 },
-  { condition: "medianStars >= 1", amount: 75 },
-  { condition: "maxStarCount >= 2", amount: 45 },
-  { condition: "maxStarCount >= 1", amount: 30 },
-  { condition: "highScore >= 3 (and all stars = 0)", amount: 10 },
+// Tiers checked in order - first match wins
+export const MIN_STAR_TIERS = [{ threshold: 3, amount: 700 }]
+
+export const MEDIAN_STAR_TIERS = [
+  { threshold: 3, amount: 550 },
+  { threshold: 2.5, amount: 400 },
+  { threshold: 2, amount: 250 },
+  { threshold: 1.5, amount: 120 },
+  { threshold: 1, amount: 75 },
 ]
+
+export const MAX_STAR_TIERS = [
+  { threshold: 2, amount: 45 },
+  { threshold: 1, amount: 30 },
+]
+
+export const HIGH_SCORE_TIERS = [{ threshold: 3, amount: 10 }]
 /**
  * Calculates sponsorship amount based on weekly stars over the past 4 weeks
  * @param weeklyStars Array of star counts for the past 4 weeks
@@ -52,26 +58,45 @@ export function getSponsorshipAmount({
       ]) ||
     0
 
-  // Determine base amount based on median stars
+  // Determine base amount - check tiers in order
   let baseAmount = 0
-  if (minStarCount >= 3) {
-    baseAmount = SPONSORSHIP_TIERS[0].amount
-  } else if (medianStars >= 3) {
-    baseAmount = SPONSORSHIP_TIERS[1].amount
-  } else if (medianStars >= 2.5) {
-    baseAmount = SPONSORSHIP_TIERS[2].amount
-  } else if (medianStars >= 2) {
-    baseAmount = SPONSORSHIP_TIERS[3].amount
-  } else if (medianStars >= 1.5) {
-    baseAmount = SPONSORSHIP_TIERS[4].amount
-  } else if (medianStars >= 1) {
-    baseAmount = SPONSORSHIP_TIERS[5].amount
-  } else if (maxStarCount >= 2) {
-    baseAmount = SPONSORSHIP_TIERS[6].amount
-  } else if (maxStarCount >= 1) {
-    baseAmount = SPONSORSHIP_TIERS[7].amount
-  } else if (highScore >= 3) {
-    baseAmount = SPONSORSHIP_TIERS[8].amount
+
+  // Check min star tiers first
+  for (const tier of MIN_STAR_TIERS) {
+    if (minStarCount >= tier.threshold) {
+      baseAmount = tier.amount
+      break
+    }
+  }
+
+  // Check median star tiers
+  if (baseAmount === 0) {
+    for (const tier of MEDIAN_STAR_TIERS) {
+      if (medianStars >= tier.threshold) {
+        baseAmount = tier.amount
+        break
+      }
+    }
+  }
+
+  // Check max star tiers
+  if (baseAmount === 0) {
+    for (const tier of MAX_STAR_TIERS) {
+      if (maxStarCount >= tier.threshold) {
+        baseAmount = tier.amount
+        break
+      }
+    }
+  }
+
+  // Check high score tiers (only if all stars = 0)
+  if (baseAmount === 0) {
+    for (const tier of HIGH_SCORE_TIERS) {
+      if (highScore >= tier.threshold) {
+        baseAmount = tier.amount
+        break
+      }
+    }
   }
 
   return baseAmount + maintainerBase

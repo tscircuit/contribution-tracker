@@ -2,7 +2,10 @@ import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { getContributorScore } from "../scoring"
 import {
   MAINTAINER_BASE,
-  SPONSORSHIP_TIERS,
+  MIN_STAR_TIERS,
+  MEDIAN_STAR_TIERS,
+  MAX_STAR_TIERS,
+  HIGH_SCORE_TIERS,
 } from "../scoring/getSponsorshipAmount"
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
@@ -324,11 +327,17 @@ export async function generateMarkdown(
 
   markdown += "| Condition | Base Amount |\n"
   markdown += "|-----------|-------------|\n"
-  SPONSORSHIP_TIERS.forEach((tier) => {
-    const condition = tier.condition.includes("(")
-      ? `\`${tier.condition.split("(")[0].trim()}\` ${tier.condition.substring(tier.condition.indexOf("("))}`
-      : `\`${tier.condition}\``
-    markdown += `| ${condition} | **$${tier.amount}** |\n`
+  MIN_STAR_TIERS.forEach((tier) => {
+    markdown += `| \`minStarCount >= ${tier.threshold}\` | **$${tier.amount}** |\n`
+  })
+  MEDIAN_STAR_TIERS.forEach((tier) => {
+    markdown += `| \`medianStars >= ${tier.threshold}\` | **$${tier.amount}** |\n`
+  })
+  MAX_STAR_TIERS.forEach((tier) => {
+    markdown += `| \`maxStarCount >= ${tier.threshold}\` | **$${tier.amount}** |\n`
+  })
+  HIGH_SCORE_TIERS.forEach((tier) => {
+    markdown += `| \`highScore >= ${tier.threshold}\` (and all stars = 0) | **$${tier.amount}** |\n`
   })
   markdown += "\n"
 
