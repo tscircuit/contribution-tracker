@@ -44,7 +44,7 @@ pie
     "tscircuit/core" : 13
     "tscircuit/circuitjson.com" : 1
     "tscircuit/tscircuit" : 25
-    "tscircuit/tscircuit.com" : 46
+    "tscircuit/tscircuit.com" : 48
     "tscircuit/eval" : 31
     "tscircuit/runframe" : 79
     "tscircuit/cli" : 29
@@ -78,15 +78,15 @@ pie
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Score | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
 | [seveibar](#seveibar) | 18 | 10 | 19 | 👑👑 | 81 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 6 | 8 | 4 | ⭐⭐⭐ | 45 | 0🔹 0🔶 0💎 |
 | [imrishabh18](#imrishabh18) | 5 | 7 | 9 | ⭐⭐⭐ | 44 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 5 | 8 | 4 | ⭐⭐⭐ | 41 | 0🔹 0🔶 0💎 |
 | [techmannih](#techmannih) | 1 | 9 | 4 | ⭐⭐⭐ | 39 | 0🔹 0🔶 0💎 |
 | [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 5 | 5 | ⭐⭐⭐ | 38 | 0🔹 0🔶 0💎 |
 | [Abse2001](#Abse2001) | 2 | 11 | 2 | ⭐⭐⭐ | 32 | 0🔹 0🔶 0💎 |
 | [0hmX](#0hmX) | 6 | 1 | 4 | ⭐⭐ | 30 | 0🔹 0🔶 0💎 |
 | [rushabhcodes](#rushabhcodes) | 3 | 1 | 4 | ⭐⭐ | 27 | 0🔹 0🔶 0💎 |
 | [MustafaMulla29](#MustafaMulla29) | 1 | 7 | 5 | ⭐⭐ | 25 | 0🔹 0🔶 0💎 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 179 | ⭐⭐ | 14 | 0🔹 0🔶 0💎 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 180 | ⭐⭐ | 14 | 0🔹 0🔶 0💎 |
 | [Ayushjhawar8](#Ayushjhawar8) | 2 | 1 | 4 | ⭐⭐ | 14 | 0🔹 0🔶 0💎 |
 | [AnasSarkiz](#AnasSarkiz) | 1 | 1 | 1 | ⭐⭐ | 11 | 0🔹 0🔶 0💎 |
 | [nailoo](#nailoo) | 0 | 1 | 4 | ⭐ | 7 | 0🔹 0🔶 0💎 |
@@ -122,7 +122,7 @@ pie
 | [techmannih](#techmannih) | 14 | 11 | 2 | 5 | 1 | 18 | 14 | 39 | 0 | 0 | 0 |
 | [Abse2001](#Abse2001) | 22 | 16 | 1 | 0 | 0 | 17 | 15 | 32 | 0 | 0 | 0 |
 | [seveibar](#seveibar) | 4 | 0 | 0 | 80 | 22 | 66 | 48 | 81 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 227 | 179 | 14 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 228 | 180 | 14 | 0 | 0 | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 14 | 6 | 4 | 0 | 0 | 10 | 7 | 14 | 0 | 0 | 0 |
 | [Devesh36](#Devesh36) | 16 | 3 | 2 | 0 | 0 | 10 | 1 | 2 | 0 | 0 | 0 |
 | [Lulzx](#Lulzx) | 2 | 0 | 2 | 0 | 0 | 6 | 0 | 0 | 0 | 0 | 0 |
@@ -134,7 +134,7 @@ pie
 | [Prachi-kushwaha](#Prachi-kushwaha) | 3 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | [imrishabh18](#imrishabh18) | 10 | 1 | 0 | 5 | 4 | 22 | 21 | 44 | 0 | 0 | 0 |
 | [Aqil-Ahmad](#Aqil-Ahmad) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 12 | 6 | 0 | 1 | 0 | 18 | 17 | 41 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 13 | 6 | 0 | 1 | 0 | 19 | 18 | 45 | 0 | 0 | 0 |
 | [RaghavArora14](#RaghavArora14) | 61 | 6 | 2 | 1 | 0 | 7 | 3 | 7 | 0 | 0 | 0 |
 | [pxlpal](#pxlpal) | 1 | 1 | 0 | 0 | 0 | 2 | 2 | 3 | 0 | 0 | 0 |
 | [shehaban](#shehaban) | 8 | 2 | 0 | 0 | 0 | 2 | 1 | 1 | 0 | 0 | 0 |
@@ -145,7 +145,7 @@ pie
 ```mermaid
 pie
     "tscircuit/runframe" : 88
-    "tscircuit/tscircuit.com" : 73
+    "tscircuit/tscircuit.com" : 78
     "tscircuit/3d-viewer" : 43
     "tscircuit/tscircuit-autorouter" : 42
     "tscircuit/cli" : 37
@@ -375,26 +375,28 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 | [#2130](https://github.com/tscircuit/tscircuit.com/pull/2130) | 🐳 Major | ⭐⭐⭐ | seveibar | Add avatar_url support to organization schemas and mapping in the fake API, implement POST orgsupload_avatar for the fake server storing image data and returning updated orgs, expose an organization settings dialog and hook to upload avatars from the UI. |
 | [#2124](https://github.com/tscircuit/tscircuit.com/pull/2124) | 🐳 Major | ⭐⭐⭐ | seveibar | Add a GitHub connection card on the organization settings page to allow owners to initiate the installation flow directly from the organization view, handle installation completion with a confirmation toast and data refresh, and expose a refetch helper for reuse after connecting. |
 | [#2122](https://github.com/tscircuit/tscircuit.com/pull/2122) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds an Orgs submenu to the header account dropdown, listing organizations the user belongs to and linking to each org page. |
+| [#2169](https://github.com/tscircuit/tscircuit.com/pull/2169) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds the org_owner_tscircuit_handle field to the package schema and updates references in the package header and editor navigation components. |
 | [#2163](https://github.com/tscircuit/tscircuit.com/pull/2163) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Displays the avatar of the users personal organization in the header and user profile pages. |
 | [#2135](https://github.com/tscircuit/tscircuit.com/pull/2135) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Refactors the avatar upload functionality to unify organization and personal avatar handling, streamlining the user experience for updating avatars. |
 | [#2157](https://github.com/tscircuit/tscircuit.com/pull/2157) | 🐙 Minor | ⭐⭐ | seveibar | Removes the JLCPCB generation routes and the EasyEDA package dependency from the project. |
 | [#2123](https://github.com/tscircuit/tscircuit.com/pull/2123) | 🐙 Minor | ⭐⭐ | seveibar | Displays full package names in the dashboard quick-edit list, including organization or owner scope, and shows package owner scope on dashboard package cards for clearer context. |
 | [#2120](https://github.com/tscircuit/tscircuit.com/pull/2120) | 🐙 Minor | ⭐⭐ | seveibar | Load circuit-json-to-gerber dynamically from jsdelivr when generating fabrication downloads and remove the bundled circuit-json-to-gerber dependency from the project |
+| [#2161](https://github.com/tscircuit/tscircuit.com/pull/2161) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds org_owner_tscircuit_handle to the package response in the GET apipackagesget endpoint. |
+| [#2164](https://github.com/tscircuit/tscircuit.com/pull/2164) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds filtering capability for packages based on the owner_tscircuit_handle in the packageslist API endpoint. |
 | [#2168](https://github.com/tscircuit/tscircuit.com/pull/2168) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Refactors OrganizationCard and UserProfilePage components to replace github_username with tscircuit_handle for user identification. |
 | [#2166](https://github.com/tscircuit/tscircuit.com/pull/2166) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Updates currentUser retrieval to fetch the entire session object instead of just the github_username. |
-| [#2164](https://github.com/tscircuit/tscircuit.com/pull/2164) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds filtering capability for packages based on the owner_tscircuit_handle in the packageslist API endpoint. |
 | [#2159](https://github.com/tscircuit/tscircuit.com/pull/2159) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Refactors the save dialog to use tscircuit_handle instead of github_username for package naming. |
-| [#2161](https://github.com/tscircuit/tscircuit.com/pull/2161) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds org_owner_tscircuit_handle to the package response in the GET apipackagesget endpoint. |
 | [#2142](https://github.com/tscircuit/tscircuit.com/pull/2142) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes a crash on the organization page by updating the member avatar rendering to use a fallback mechanism for GitHub avatars. |
 | [#2143](https://github.com/tscircuit/tscircuit.com/pull/2143) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Changes email visibility in the list_members API based on the users membership status, ensuring that only members can see their own email addresses. |
 | [#2106](https://github.com/tscircuit/tscircuit.com/pull/2106) | 🐙 Minor | ⭐⭐ | RaghavArora14 | Fixes z-index issues in dialog components to prevent overlay problems with the orientation cube. |
 | [#2117](https://github.com/tscircuit/tscircuit.com/pull/2117) | 🐙 Minor | ⭐⭐ | pxlpal | Adds account_id to the redirect URL for creating a new GitHub installation, improving the installation process by associating it with the users account. |
 
 <details>
-<summary>🐌 Tiny Contributions (29)</summary>
+<summary>🐌 Tiny Contributions (30)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#2170](https://github.com/tscircuit/tscircuit.com/pull/2170) | 🐌 Tiny | tscircuitbot | Automated package update to version 0.0.159 |
 | [#2167](https://github.com/tscircuit/tscircuit.com/pull/2167) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#2162](https://github.com/tscircuit/tscircuit.com/pull/2162) | 🐌 Tiny | tscircuitbot | Automated package update to version 0.0.156 |
 | [#2160](https://github.com/tscircuit/tscircuit.com/pull/2160) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -990,7 +992,7 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 
 
 <details>
-<summary>🐌 Tiny Contributions (179)</summary>
+<summary>🐌 Tiny Contributions (180)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -1025,6 +1027,7 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 | [#1569](https://github.com/tscircuit/tscircuit/pull/1569) | 🐌 Tiny | Updates the tscircuitcli package to version 0.1.601 in the package.json file |
 | [#1568](https://github.com/tscircuit/tscircuit/pull/1568) | 🐌 Tiny | Automated package update |
 | [#1567](https://github.com/tscircuit/tscircuit/pull/1567) | 🐌 Tiny | Automated package update |
+| [#2170](https://github.com/tscircuit/tscircuit.com/pull/2170) | 🐌 Tiny | Automated package update to version 0.0.159 |
 | [#2167](https://github.com/tscircuit/tscircuit.com/pull/2167) | 🐌 Tiny | Automated package update |
 | [#2162](https://github.com/tscircuit/tscircuit.com/pull/2162) | 🐌 Tiny | Automated package update to version 0.0.156 |
 | [#2160](https://github.com/tscircuit/tscircuit.com/pull/2160) | 🐌 Tiny | Automated package update |
@@ -1395,14 +1398,15 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 |------|--------|--------|-------------|
 | [#277](https://github.com/tscircuit/contribution-tracker/pull/277) | 🐳 Major | ⭐⭐⭐ | Introduces loading and retrieving existing PR analyses to avoid redundant processing, adds debug logging for discussions and PR analyses to improve traceability, updates the storePrAnalysis function to handle existing analyses more efficiently, and modifies getRepos to return a specific repository for testing purposes. |
 | [#275](https://github.com/tscircuit/contribution-tracker/pull/275) | 🐳 Major | ⭐⭐⭐ | Adds a score breakdown view for contributors, displaying their scores and contributions in a visual format. |
+| [#2169](https://github.com/tscircuit/tscircuit.com/pull/2169) | 🐳 Major | ⭐⭐⭐ | Adds the org_owner_tscircuit_handle field to the package schema and updates references in the package header and editor navigation components. |
 | [#2163](https://github.com/tscircuit/tscircuit.com/pull/2163) | 🐳 Major | ⭐⭐⭐ | Displays the avatar of the users personal organization in the header and user profile pages. |
 | [#2135](https://github.com/tscircuit/tscircuit.com/pull/2135) | 🐳 Major | ⭐⭐⭐ | Refactors the avatar upload functionality to unify organization and personal avatar handling, streamlining the user experience for updating avatars. |
 | [#1992](https://github.com/tscircuit/runframe/pull/1992) | 🐳 Major | ⭐⭐⭐ | img width1496 height881 altimage srchttps:github.comuser-attachmentsassets7a538869-ad30-46e3-a5c0-d02352492a73  img width993 height776 altimage srchttps:github.comuser-attachmentsassetsdfebc0cb-f0eb-4e71-9d63-b34a58efb755 |
+| [#2161](https://github.com/tscircuit/tscircuit.com/pull/2161) | 🐙 Minor | ⭐⭐ | Adds org_owner_tscircuit_handle to the package response in the GET apipackagesget endpoint. |
+| [#2164](https://github.com/tscircuit/tscircuit.com/pull/2164) | 🐙 Minor | ⭐⭐ | Adds filtering capability for packages based on the owner_tscircuit_handle in the packageslist API endpoint. |
 | [#2168](https://github.com/tscircuit/tscircuit.com/pull/2168) | 🐙 Minor | ⭐⭐ | Refactors OrganizationCard and UserProfilePage components to replace github_username with tscircuit_handle for user identification. |
 | [#2166](https://github.com/tscircuit/tscircuit.com/pull/2166) | 🐙 Minor | ⭐⭐ | Updates currentUser retrieval to fetch the entire session object instead of just the github_username. |
-| [#2164](https://github.com/tscircuit/tscircuit.com/pull/2164) | 🐙 Minor | ⭐⭐ | Adds filtering capability for packages based on the owner_tscircuit_handle in the packageslist API endpoint. |
 | [#2159](https://github.com/tscircuit/tscircuit.com/pull/2159) | 🐙 Minor | ⭐⭐ | Refactors the save dialog to use tscircuit_handle instead of github_username for package naming. |
-| [#2161](https://github.com/tscircuit/tscircuit.com/pull/2161) | 🐙 Minor | ⭐⭐ | Adds org_owner_tscircuit_handle to the package response in the GET apipackagesget endpoint. |
 | [#2142](https://github.com/tscircuit/tscircuit.com/pull/2142) | 🐙 Minor | ⭐⭐ | Fixes a crash on the organization page by updating the member avatar rendering to use a fallback mechanism for GitHub avatars. |
 | [#2143](https://github.com/tscircuit/tscircuit.com/pull/2143) | 🐙 Minor | ⭐⭐ | Changes email visibility in the list_members API based on the users membership status, ensuring that only members can see their own email addresses. |
 | [#1990](https://github.com/tscircuit/runframe/pull/1990) | 🐙 Minor | ⭐⭐ | Disables the schematic tab in the UI when there are no schematic groups present in the circuit JSON. |

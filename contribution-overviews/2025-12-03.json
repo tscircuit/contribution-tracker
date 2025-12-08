@@ -86,13 +86,13 @@
     "stars": ""
   },
   "ArnavK-09": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 13,
     "rejectionsReceived": 0,
     "approvalsReceived": 6,
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 17,
+    "prsOpened": 19,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -102,9 +102,9 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 41,
+    "score": 45,
     "stars": "⭐⭐⭐",
-    "major": 5,
+    "major": 6,
     "minor": 8,
     "tiny": 4
   },
@@ -503,8 +503,8 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 227,
-    "prsMerged": 179,
+    "prsOpened": 228,
+    "prsMerged": 180,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -517,6 +517,6 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 179
+    "tiny": 180
   }
 }
