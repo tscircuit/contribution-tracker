@@ -63,6 +63,7 @@ export async function generateAiObjectCached(
   options: Partial<Parameters<typeof generateObject>[0]> & {
     prompt: string
     schema?: any
+    debug?: string
   },
 ) {
   const truncatedPrompt = truncatePrompt(options.prompt)
@@ -74,11 +75,19 @@ export async function generateAiObjectCached(
   }
   const cached = await getAiCacheItem(optionsWithDefault)
   if (cached) {
-    console.log(kleur.green("cache hit"), " - returning cached response...")
+    console.log(
+      kleur.green("cache hit"),
+      " - returning cached response...",
+      options.debug ? options.debug : "",
+    )
     return cached
   }
 
-  console.log(kleur.red("cache miss"), " - generating new AI response...")
+  console.log(
+    kleur.red("cache miss"),
+    " - generating new AI response...",
+    options.debug ? options.debug : "",
+  )
   const response = await generateObject(optionsWithDefault as any)
   await setCached(optionsWithDefault, response)
   return response
