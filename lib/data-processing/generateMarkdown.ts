@@ -178,6 +178,33 @@ export async function generateMarkdown(
   markdown +=
     "- 💎 Incredible Comments: Exceptional participation with high-quality content\n\n"
 
+  // Generate Point Source Breakdown
+  markdown += "## Point Source Breakdown\n\n"
+  markdown +=
+    "This table shows where each contributor's weekly score comes from:\n\n"
+  markdown +=
+    "| Contributor | PR Points | Review Points | Discussion Points | Total Score | PR % | Review % | Discussion % |\n"
+  markdown +=
+    "|-------------|-----------|---------------|-------------------|-------------|------|----------|-------------|\n"
+
+  // Sort by total score
+  const sortedForBreakdown = Object.entries(contributorScores).sort(
+    (a, b) => b[1].score - a[1].score,
+  )
+
+  for (const [contributor, effort] of sortedForBreakdown) {
+    const total = effort.score || 0
+    const prPct =
+      total > 0 ? ((effort.prPoints / total) * 100).toFixed(1) : "0.0"
+    const reviewPct =
+      total > 0 ? ((effort.reviewPoints / total) * 100).toFixed(1) : "0.0"
+    const discussionPct =
+      total > 0 ? ((effort.discussionPoints / total) * 100).toFixed(1) : "0.0"
+
+    markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${effort.prPoints} | ${effort.reviewPoints} | ${effort.discussionPoints} | ${total} | ${prPct}% | ${reviewPct}% | ${discussionPct}% |\n`
+  }
+  markdown += "\n"
+
   // Generate Review Table
   markdown += "## Review Table\n\n"
 
