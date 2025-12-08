@@ -405,12 +405,12 @@
     "tiny": 1
   },
   "rushabhcodes": {
-    "reviewsReceived": 48,
+    "reviewsReceived": 49,
     "rejectionsReceived": 2,
     "approvalsReceived": 15,
     "approvalsGiven": 3,
     "rejectionsGiven": 1,
-    "prsOpened": 18,
+    "prsOpened": 19,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
