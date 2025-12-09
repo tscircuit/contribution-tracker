@@ -6,6 +6,11 @@ import {
   isUserIneligible,
   INELIGIBLE_FOR_SPONSORSHIP,
 } from "../lib/ineligible-sponsorships"
+import {
+  applyHardwareReimbursements,
+  filterHardwareReimbursementsForMonth,
+  readHardwareReimbursements,
+} from "../lib/hardware-reimbursements"
 
 interface ContributorData {
   stars?: string
@@ -268,7 +273,16 @@ function main() {
 
   // Calculate sponsorships
   const sponsorships = calculateSponsorship(weeksWithData)
-  const csvContent = generateCSV(sponsorships)
+  const hardwareReimbursements = filterHardwareReimbursementsForMonth(
+    readHardwareReimbursements(),
+    year,
+    month,
+  )
+  const sponsorshipsWithReimbursements = applyHardwareReimbursements(
+    sponsorships,
+    hardwareReimbursements,
+  )
+  const csvContent = generateCSV(sponsorshipsWithReimbursements)
 
   // Ensure sponsorships directory exists
   const sponsorshipsDir = path.join(process.cwd(), "sponsorships")
@@ -289,10 +303,21 @@ function main() {
     const endDate = `${week.weekEndDate.getUTCMonth() + 1}/${week.weekEndDate.getUTCDate()}`
     console.log(`  ${startDate} - ${endDate}: ${path.basename(week.filePath)}`)
   })
-  console.log(`Total sponsorships: ${sponsorships.length}`)
+  console.log(`Total sponsorships: ${sponsorshipsWithReimbursements.length}`)
   console.log(
-    `Total amount: $${sponsorships.reduce((sum, s) => sum + s.amount, 0)}`,
+    `Total amount: $${sponsorshipsWithReimbursements
+      .reduce((sum, s) => sum + s.amount, 0)
+      .toFixed(2)}`,
   )
+
+  if (hardwareReimbursements.length > 0) {
+    console.log("\nHardware reimbursements applied:")
+    hardwareReimbursements.forEach((reimbursement) => {
+      console.log(
+        `  - ${reimbursement.username}: $${reimbursement.amount.toFixed(2)} on ${reimbursement.date.toISOString().slice(0, 10)}${reimbursement.description ? ` (${reimbursement.description})` : ""}`,
+      )
+    })
+  }
 
   // Show ineligible users if any
   if (INELIGIBLE_FOR_SPONSORSHIP.length > 0) {
