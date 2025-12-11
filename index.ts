@@ -18,6 +18,7 @@ import {
   getExistingPrAnalysis,
 } from "lib/data-processing/storePrAnalysis"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
+import { postMergeComment } from "lib/notifications/notify-pr-change"
 
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
@@ -192,6 +193,7 @@ export async function generateOverview(startDate: string) {
         if (!analysis) {
           return null
         }
+        await postMergeComment(analysis)
         if (pr.hasMajorTag) {
           analysis.impact = "Major"
         }
@@ -369,7 +371,7 @@ async function generateAndWriteFiles(
     startDateString,
     repoOwnersMap,
   )
-  // console.log("Generated markdown", markdown)
+  console.log("Generated markdown", markdown)
 
   // Sort contributor data alphabetically by contributor name
   const alphabeticalContributorData = Object.keys(contributorData)

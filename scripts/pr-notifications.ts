@@ -81,7 +81,7 @@ async function main() {
         }
       }
 
-      await postMergeComment(prAnalysis)
+      // await postMergeComment(prAnalysis)
       await notifyPRChange(prAnalysis)
       console.log(
         `[${getUTCDateTime()}] Completed analysis and notification for PR #${pullRequest.number}`,
