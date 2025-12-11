@@ -1,5 +1,5 @@
 export const MAINTAINERS = {
-  ShiboSoftwareDev: "maintainer3",
+  ShiboSoftwareDev: "maintainer4",
   "ArnavK-09": "maintainer2",
-  Abse2001: "maintainer1",
+  Abse2001: "maintainer2",
 }
