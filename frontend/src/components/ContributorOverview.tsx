@@ -279,7 +279,7 @@ export function ContributorOverview({
         {fullTimerContributors.length > 0 && (
           <div className="md:w-[25%]">
             <h3 className="text-lg font-semibold mb-3">Staff</h3>
-            <div className="space-y-2 max-h-[50vh] md:overflow-y-auto md:pr-2 no-scrollbar">
+            <div className="space-y-2 max-h-[50vh] overflow-y-auto md:pr-2 no-scrollbar">
               {fullTimerContributors.map(([username, stats]) => (
                 <div
                   key={username}
