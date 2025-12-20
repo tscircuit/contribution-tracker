@@ -201,6 +201,8 @@ export async function generateMarkdown(
       "Number of issues this contributor created with a bounty",
     "Bountied Issue $":
       "Total bounty amount placed on issues authored by this contributor",
+    "Avg Time to First Review":
+      "Average time in hours from PR creation to first review for PRs authored by this contributor",
   }
 
   markdown += Object.entries(columnTitleToDescription)
@@ -229,6 +231,7 @@ export async function generateMarkdown(
     "Issues Created": "issuesCreated",
     "Bountied Issues": "bountiedIssuesCount",
     "Bountied Issue $": "bountiedIssuesTotal",
+    "Avg Time to First Review": "avgTimeToFirstReviewHours",
   }
 
   const columnTitles = Object.keys(columnTitleToPropName)
@@ -253,7 +256,15 @@ export async function generateMarkdown(
           markdown += ` [${contributor}](#${contributor.replace(/\s/g, "-")}) |`
           return
         }
-        markdown += ` ${stats[columnTitleToPropName[columnTitle] as keyof ContributorStats]} |`
+        const propName = columnTitleToPropName[columnTitle]
+        let value = stats[propName as keyof ContributorStats]
+        
+        // Format time to first review as hours with 2 decimal places
+        if (columnTitle === "Avg Time to First Review" && typeof value === "number") {
+          value = value.toFixed(2)
+        }
+        
+        markdown += ` ${value || 0} |`
       })
       markdown += "\n"
     },

@@ -81,6 +81,14 @@ export async function getAllPRs(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
 
+      // Calculate time to first review
+      let timeToFirstReviewMs: number | undefined
+      if (reviews.length > 0) {
+        const prCreatedAt = new Date(pr.created_at).getTime()
+        const firstReviewAt = new Date(reviews[0].submitted_at).getTime()
+        timeToFirstReviewMs = firstReviewAt - prCreatedAt
+      }
+
       const reviewsByUser = processedReviews.reduce<
         Record<string, ReviewerStats>
       >((acc, review) => {
@@ -119,6 +127,7 @@ export async function getAllPRs(
         approvalsReceived,
         rejectionsReceived,
         reviewsByUser,
+        timeToFirstReviewMs,
         isClosed: pr.state === "closed",
         state:
           pr.state === "closed" && !pr.merged_at
@@ -133,9 +142,20 @@ export async function getAllPRs(
   // Map of reviewer usernames to their set of reviewed PR numbers
   const reviewerUserNameToReviewedPrsSet: Record<string, Set<number>> = {}
   const contributorStats: Record<string, ContributorStats> = {}
+  // Track time to first review for each contributor's PRs
+  const contributorTimeToFirstReview: Record<string, number[]> = {}
 
-  // First pass: collect all PR numbers for each reviewer
+  // First pass: collect all PR numbers for each reviewer and track time to first review
   prsWithDetails.forEach((pr) => {
+    // Track time to first review for the PR author
+    const prAuthor = pr.user.login
+    if (pr.timeToFirstReviewMs !== undefined) {
+      if (!contributorTimeToFirstReview[prAuthor]) {
+        contributorTimeToFirstReview[prAuthor] = []
+      }
+      contributorTimeToFirstReview[prAuthor].push(pr.timeToFirstReviewMs)
+    }
+
     if (!pr.reviewsByUser) return
 
     Object.entries(pr.reviewsByUser).forEach(([reviewer, stats]) => {
@@ -170,12 +190,35 @@ export async function getAllPRs(
     })
   })
 
-  // Second pass: set distinctPrsReviewedNonCodeOwner from aggregated PR numbers
+  // Second pass: set distinctPrsReviewedNonCodeOwner from aggregated PR numbers and calculate avg time to first review
   Object.entries(reviewerUserNameToReviewedPrsSet).forEach(
     ([reviewer, prNumbers]) => {
       if (contributorStats[reviewer]) {
         contributorStats[reviewer].distinctPrsReviewedNonCodeOwner =
           prNumbers.size
+      }
+    },
+  )
+
+  // Calculate average time to first review for each contributor
+  Object.entries(contributorTimeToFirstReview).forEach(
+    ([contributor, times]) => {
+      if (times.length > 0) {
+        const avgTimeMs = times.reduce((a, b) => a + b, 0) / times.length
+        if (!contributorStats[contributor]) {
+          contributorStats[contributor] = {
+            reviewsReceived: 0,
+            rejectionsReceived: 0,
+            approvalsReceived: 0,
+            prsOpened: 0,
+            prsMerged: 0,
+            issuesCreated: 0,
+            approvalsGiven: 0,
+            rejectionsGiven: 0,
+          }
+        }
+        contributorStats[contributor].avgTimeToFirstReviewMs = avgTimeMs
+        contributorStats[contributor].avgTimeToFirstReviewHours = avgTimeMs / (1000 * 60 * 60)
       }
     },
   )

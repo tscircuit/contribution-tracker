@@ -97,6 +97,16 @@ export async function generateOverview(startDate: string) {
       contributorData[contributor].approvalsReceived += pr.approvalsReceived
       contributorData[contributor].prsOpened += 1
 
+      // Track time to first review for average calculation
+      if (pr.timeToFirstReviewMs !== undefined && pr.timeToFirstReviewMs > 0) {
+        if (!contributorData[contributor].timeToFirstReviewMsArray) {
+          (contributorData[contributor] as any).timeToFirstReviewMsArray = []
+        }
+        (contributorData[contributor] as any).timeToFirstReviewMsArray.push(
+          pr.timeToFirstReviewMs,
+        )
+      }
+
       if (pr.reviewsByUser) {
         Object.entries(pr.reviewsByUser).forEach(
           ([reviewer, reviewerStats]) => {
@@ -325,6 +335,18 @@ export async function generateOverview(startDate: string) {
     if (contributor.includes("[bot]")) {
       delete contributorData[contributor]
     }
+  })
+
+  // Calculate average time to first review for each contributor
+  Object.entries(contributorData).forEach(([, stats]) => {
+    const timeArray = (stats as any).timeToFirstReviewMsArray as number[] | undefined
+    if (timeArray && timeArray.length > 0) {
+      const avgMs = timeArray.reduce((a, b) => a + b, 0) / timeArray.length
+      stats.avgTimeToFirstReviewMs = avgMs
+      stats.avgTimeToFirstReviewHours = avgMs / (1000 * 60 * 60)
+    }
+    // Clean up temporary array
+    delete (stats as any).timeToFirstReviewMsArray
   })
 
   // Data processing complete
