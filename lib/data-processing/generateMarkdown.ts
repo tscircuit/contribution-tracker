@@ -261,7 +261,7 @@ export async function generateMarkdown(
         
         // Format time to first review as hours with 2 decimal places
         if (columnTitle === "Avg Time to First Review" && typeof value === "number") {
-          value = value.toFixed(2)
+          value = Math.round(value * 100) / 100 // Round to 2 decimal places
         }
         
         markdown += ` ${value || 0} |`

@@ -42,11 +42,12 @@ pie
 [issues-created-hover]: ## "Number of issues created by this contributor"
 [bountied-issues-hover]: ## "Number of issues this contributor created with a bounty"
 [bountied-issue-$-hover]: ## "Total bounty amount placed on issues authored by this contributor"
+[avg-time-to-first-review-hover]: ## "Average time in hours from PR creation to first review for PRs authored by this contributor"
 
-| Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Score | Issues Created | Bountied Issues | Bountied Issue $ |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| [alice](#alice) | 1 | 1 | 0 | 2 | 0 | 2 | 1 | 5 | 1 | 0 | 0 |
-| [bob](#bob) | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 2 | 0 | 0 | 0 |
+| Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Score | Issues Created | Bountied Issues | Bountied Issue $ | Avg Time to First Review |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| [alice](#alice) | 1 | 1 | 0 | 2 | 0 | 2 | 1 | 5 | 1 | 0 | 0 | 0 |
+| [bob](#bob) | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 2 | 0 | 0 | 0 | 0 |
 
 ## Top 7 Repositories by Contribution Points
 
