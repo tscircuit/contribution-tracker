@@ -258,12 +258,15 @@ export async function generateMarkdown(
         }
         const propName = columnTitleToPropName[columnTitle]
         let value = stats[propName as keyof ContributorStats]
-        
+
         // Format time to first review as hours with 2 decimal places
-        if (columnTitle === "Avg Time to First Review" && typeof value === "number") {
+        if (
+          columnTitle === "Avg Time to First Review" &&
+          typeof value === "number"
+        ) {
           value = Math.round(value * 100) / 100 // Round to 2 decimal places
         }
-        
+
         markdown += ` ${value || 0} |`
       })
       markdown += "\n"

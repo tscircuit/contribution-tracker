@@ -218,7 +218,8 @@ export async function getAllPRs(
           }
         }
         contributorStats[contributor].avgTimeToFirstReviewMs = avgTimeMs
-        contributorStats[contributor].avgTimeToFirstReviewHours = avgTimeMs / (1000 * 60 * 60)
+        contributorStats[contributor].avgTimeToFirstReviewHours =
+          avgTimeMs / (1000 * 60 * 60)
       }
     },
   )

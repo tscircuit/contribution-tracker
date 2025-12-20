@@ -100,9 +100,9 @@ export async function generateOverview(startDate: string) {
       // Track time to first review for average calculation
       if (pr.timeToFirstReviewMs !== undefined && pr.timeToFirstReviewMs > 0) {
         if (!contributorData[contributor].timeToFirstReviewMsArray) {
-          (contributorData[contributor] as any).timeToFirstReviewMsArray = []
+          ;(contributorData[contributor] as any).timeToFirstReviewMsArray = []
         }
-        (contributorData[contributor] as any).timeToFirstReviewMsArray.push(
+        ;(contributorData[contributor] as any).timeToFirstReviewMsArray.push(
           pr.timeToFirstReviewMs,
         )
       }
@@ -339,7 +339,9 @@ export async function generateOverview(startDate: string) {
 
   // Calculate average time to first review for each contributor
   Object.entries(contributorData).forEach(([, stats]) => {
-    const timeArray = (stats as any).timeToFirstReviewMsArray as number[] | undefined
+    const timeArray = (stats as any).timeToFirstReviewMsArray as
+      | number[]
+      | undefined
     if (timeArray && timeArray.length > 0) {
       const avgMs = timeArray.reduce((a, b) => a + b, 0) / timeArray.length
       stats.avgTimeToFirstReviewMs = avgMs
