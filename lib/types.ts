@@ -54,6 +54,8 @@ export interface ContributorStats {
     repo: string
     paths: string[]
   }>
+  avgTimeToFirstReviewMs?: number // Average time in milliseconds from PR creation to first review
+  avgTimeToFirstReviewHours?: number // Average time in hours from PR creation to first review (for display)
 }
 
 export interface PullRequest {
@@ -82,6 +84,7 @@ export interface PullRequestWithReviews extends PullRequest {
   approvalsReceived: number
   isClosed: boolean
   reviewsByUser?: Record<string, ReviewerStats>
+  timeToFirstReviewMs?: number // Time in milliseconds from PR creation to first review
 }
 
 export type StarRating = 0 | 1 | 2 | 3 | 4 | 5
