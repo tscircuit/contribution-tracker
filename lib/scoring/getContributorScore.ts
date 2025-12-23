@@ -23,6 +23,11 @@ export interface ContributorScore {
   rating5Count: number
 
   score: number
+
+  // Point source breakdown
+  prPoints: number
+  reviewPoints: number
+  discussionPoints: number
 }
 
 /**
@@ -48,6 +53,9 @@ export function getContributorScore({
     rating3Count: 0,
     rating4Count: 0,
     rating5Count: 0,
+    prPoints: 0,
+    reviewPoints: 0,
+    discussionPoints: 0,
   }
 
   // Impact values for scoring
@@ -72,7 +80,9 @@ export function getContributorScore({
       result[`rating${pr.starRating}Count`]++
 
       if (result[`rating${pr.starRating}Count`] <= 12) {
-        result.score += 2 ** ((pr.starRating ?? 0) - 1)
+        const prScore = 2 ** ((pr.starRating ?? 0) - 1)
+        result.score += prScore
+        result.prPoints += prScore
       }
     }
 
@@ -101,6 +111,10 @@ export function getContributorScore({
   }
 
   result.score += reviewPoints
+  result.reviewPoints = reviewPoints
+
+  // Discussion points are currently 0 (not implemented yet)
+  result.discussionPoints = 0
 
   return result
 }
