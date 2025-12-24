@@ -1,4 +1,4 @@
-# contribution-tracker
+# contribution tracker
 
 [contributions.tscircuit.com](https://contributions.tscircuit.com) ・ [tscircuit.com](https://tscircuit.com) ・ [Contribution Overviews](./contribution-overviews/) ・ [Changelogs](./changelogs/)
 
