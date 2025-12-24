@@ -2,7 +2,7 @@ name: Update Sponsorships CSV
 
 on:
   schedule:
-    - cron: "0 20 30 * * *" # 8:30am PST (1 hour after contribution overview)
+    - cron: "0 19 * * *" # 7am PST (1 hour after contribution overview)
   workflow_dispatch: # Allow manual triggering
 
 jobs:

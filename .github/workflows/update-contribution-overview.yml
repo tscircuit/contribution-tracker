@@ -2,7 +2,7 @@ name: Update Contribution Overview
 
 on:
   schedule:
-    - cron: "30 19 * * *" # 7:30am PST
+    - cron: "0 18 * * *" # 6am PST
   workflow_dispatch: # Allow manual triggering
 
 jobs:
