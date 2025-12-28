@@ -38,7 +38,7 @@ The current week is shown below. There are 4 major sections:
 pie
     "tscircuit/pcb-viewer" : 8
     "tscircuit/circuit-json" : 12
-    "tscircuit/tscircuit.com" : 23
+    "tscircuit/tscircuit.com" : 26
     "tscircuit/eval" : 12
     "tscircuit/runframe" : 19
     "tscircuit/cli" : 26
@@ -53,9 +53,10 @@ pie
     "tscircuit/bun-test-plan" : 2
     "tscircuit/contribution-tracker" : 1
     "tscircuit/tscircuit-autorouter" : 11
-    "tscircuit/props" : 2
+    "tscircuit/props" : 3
     "tscircuit/core" : 8
-    "tscircuit/dimension-placement-solver" : 1
+    "tscircuit/circuit-json-to-spice" : 2
+    "tscircuit/dimension-placement-solver" : 2
     "tscircuit/docs" : 1
     "tscircuit/3d-viewer" : 2
     "tscircuit/dsn-to-circuit-json" : 4
@@ -67,13 +68,13 @@ pie
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Score | Discussion Contributions |
 |-------------|---------|---------|---------|-----|----------------|--------------------------|
 | [seveibar](#seveibar) | 9 | 2 | 4 | ⭐⭐⭐ | 45 | 0🔹 0🔶 0💎 |
-| [ArnavK-09](#ArnavK-09) | 3 | 5 | 6 | ⭐⭐ | 28 | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 2 | 8 | 0 | ⭐⭐ | 27 | 0🔹 0🔶 0💎 |
+| [ArnavK-09](#ArnavK-09) | 4 | 5 | 7 | ⭐⭐⭐ | 33 | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 2 | 8 | 0 | ⭐⭐ | 28 | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 9 | 1 | ⭐⭐ | 28 | 0🔹 0🔶 0💎 |
 | [imrishabh18](#imrishabh18) | 6 | 1 | 0 | ⭐⭐ | 27 | 0🔹 0🔶 0💎 |
 | [0hmX](#0hmX) | 4 | 3 | 3 | ⭐⭐ | 26 | 0🔹 0🔶 0💎 |
 | [techmannih](#techmannih) | 3 | 4 | 0 | ⭐⭐ | 25 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 5 | 1 | ⭐⭐ | 19 | 0🔹 0🔶 0💎 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 93 | ⭐⭐ | 14 | 0🔹 0🔶 0💎 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 94 | ⭐⭐ | 14 | 0🔹 0🔶 0💎 |
 | [AnasSarkiz](#AnasSarkiz) | 2 | 1 | 2 | ⭐⭐ | 12 | 0🔹 0🔶 0💎 |
 | [rushabhcodes](#rushabhcodes) | 1 | 2 | 0 | ⭐⭐ | 11 | 0🔹 0🔶 0💎 |
 | [Ayushjhawar8](#Ayushjhawar8) | 1 | 0 | 3 | ⭐ | 7 | 0🔹 0🔶 0💎 |
@@ -101,19 +102,20 @@ pie
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Score | Issues Created | Bountied Issues | Bountied Issue $ |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | [LiamConner10](#LiamConner10) | 1 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 |
-| [Abse2001](#Abse2001) | 10 | 10 | 0 | 3 | 0 | 11 | 10 | 27 | 0 | 0 | 0 |
-| [seveibar](#seveibar) | 3 | 1 | 0 | 45 | 10 | 19 | 15 | 45 | 0 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 114 | 93 | 14 | 0 | 0 | 0 |
+| [Abse2001](#Abse2001) | 13 | 10 | 3 | 3 | 1 | 12 | 10 | 28 | 0 | 0 | 0 |
+| [seveibar](#seveibar) | 3 | 1 | 0 | 50 | 12 | 19 | 15 | 45 | 0 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 115 | 94 | 14 | 0 | 0 | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 6 | 3 | 1 | 0 | 0 | 7 | 4 | 7 | 0 | 0 | 0 |
 | [imrishabh18](#imrishabh18) | 2 | 2 | 0 | 10 | 3 | 8 | 7 | 27 | 0 | 0 | 0 |
-| [ArnavK-09](#ArnavK-09) | 6 | 5 | 0 | 1 | 0 | 16 | 15 | 28 | 0 | 0 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 11 | 7 | 3 | 4 | 0 | 9 | 7 | 19 | 0 | 0 | 0 |
+| [ArnavK-09](#ArnavK-09) | 6 | 5 | 0 | 1 | 0 | 18 | 17 | 33 | 0 | 0 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 13 | 11 | 1 | 4 | 0 | 13 | 11 | 28 | 0 | 0 | 0 |
 | [MuhamadJuwandi](#MuhamadJuwandi) | 4 | 0 | 1 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 |
 | [techmannih](#techmannih) | 10 | 7 | 0 | 2 | 0 | 9 | 7 | 25 | 0 | 0 | 0 |
 | [nailoo](#nailoo) | 8 | 4 | 3 | 0 | 0 | 6 | 2 | 3 | 0 | 0 | 0 |
-| [rushabhcodes](#rushabhcodes) | 20 | 7 | 2 | 0 | 3 | 6 | 3 | 11 | 0 | 0 | 0 |
+| [rushabhcodes](#rushabhcodes) | 21 | 7 | 2 | 0 | 3 | 7 | 3 | 11 | 0 | 0 | 0 |
 | [MustafaMulla29](#MustafaMulla29) | 10 | 2 | 4 | 0 | 0 | 5 | 2 | 3 | 0 | 0 | 0 |
-| [0hmX](#0hmX) | 22 | 8 | 1 | 1 | 1 | 17 | 10 | 26 | 0 | 0 | 0 |
+| [0hmX](#0hmX) | 24 | 9 | 2 | 1 | 1 | 17 | 10 | 26 | 0 | 0 | 0 |
+| [shehaban](#shehaban) | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | [SBALAVIGNESH123](#SBALAVIGNESH123) | 2 | 0 | 2 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
 | [AnasSarkiz](#AnasSarkiz) | 11 | 10 | 0 | 0 | 0 | 7 | 5 | 12 | 0 | 0 | 0 |
 
@@ -121,7 +123,7 @@ pie
 
 ```mermaid
 pie
-    "tscircuit/tscircuit.com" : 42
+    "tscircuit/tscircuit.com" : 48
     "tscircuit/cli" : 31
     "tscircuit/rectdiff" : 28
     "tscircuit/tscircuit-autorouter" : 27
@@ -243,24 +245,26 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#2361](https://github.com/tscircuit/tscircuit.com/pull/2361) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds a user interface for account deletion, including confirmation dialog and associated state management. |
 | [#2355](https://github.com/tscircuit/tscircuit.com/pull/2355) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds a new login route for organization login, modifies the login redirection logic, and introduces a logout hook for improved session management. |
 | [#2342](https://github.com/tscircuit/tscircuit.com/pull/2342) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds SEO meta tags for the organization invitation route and improves the handling of invitation states in the accept organization invitation page. |
 | [#2352](https://github.com/tscircuit/tscircuit.com/pull/2352) | 🐳 Major | ⭐⭐⭐ | rushabhcodes | Updates the authentication flow by renaming and generalizing the organization login to a standard sign-in experience, improving clarity in provider descriptions and updating navigation and import paths accordingly. |
 | [#2322](https://github.com/tscircuit/tscircuit.com/pull/2322) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Adds the build duration display for package builds and modifies the layout of the release page to resemble Vercels design. |
 | [#2335](https://github.com/tscircuit/tscircuit.com/pull/2335) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Adds a ready_to_build boolean field to the package release schema and sets it to true upon creation of a package release. |
-| [#2358](https://github.com/tscircuit/tscircuit.com/pull/2358) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Implements account deletion functionality, including the removal of associated personal organizations and packages. |
 | [#2356](https://github.com/tscircuit/tscircuit.com/pull/2356) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds logout functionality that redirects to the home page after successful logout. |
+| [#2358](https://github.com/tscircuit/tscircuit.com/pull/2358) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Implements account deletion functionality, including the removal of associated personal organizations and packages. |
 | [#2346](https://github.com/tscircuit/tscircuit.com/pull/2346) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Enables case insensitivity for tscircuit_handle filtering in database queries. |
 | [#2337](https://github.com/tscircuit/tscircuit.com/pull/2337) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds a hook to update the package release status to ready for build after a package file upload. |
 
 <details>
-<summary>🐌 Tiny Contributions (14)</summary>
+<summary>🐌 Tiny Contributions (16)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#2360](https://github.com/tscircuit/tscircuit.com/pull/2360) | 🐌 Tiny | tscircuitbot | Automated package update to version 0.0.173 |
+| [#2362](https://github.com/tscircuit/tscircuit.com/pull/2362) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#2359](https://github.com/tscircuit/tscircuit.com/pull/2359) | 🐌 Tiny | tscircuitbot | Automated package update to version 0.0.172 |
 | [#2354](https://github.com/tscircuit/tscircuit.com/pull/2354) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#2360](https://github.com/tscircuit/tscircuit.com/pull/2360) | 🐌 Tiny | tscircuitbot | Automated package update to version 0.0.173 |
 | [#2350](https://github.com/tscircuit/tscircuit.com/pull/2350) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#2348](https://github.com/tscircuit/tscircuit.com/pull/2348) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#2347](https://github.com/tscircuit/tscircuit.com/pull/2347) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -268,6 +272,7 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 | [#2333](https://github.com/tscircuit/tscircuit.com/pull/2333) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#2328](https://github.com/tscircuit/tscircuit.com/pull/2328) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#2330](https://github.com/tscircuit/tscircuit.com/pull/2330) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#2363](https://github.com/tscircuit/tscircuit.com/pull/2363) | 🐌 Tiny | ArnavK-09 | Adds a settings button to the user profile page for current users and modifies the layout of the GitHub profile button. |
 | [#2357](https://github.com/tscircuit/tscircuit.com/pull/2357) | 🐌 Tiny | ArnavK-09 | Changes the handling of tscircuit_handle to be case-insensitive by modifying the filtering logic and updating the validation regex to enforce lowercase only. |
 | [#2341](https://github.com/tscircuit/tscircuit.com/pull/2341) | 🐌 Tiny | ArnavK-09 | Fixes unresponsive design issues in the BuildsList component, ensuring proper layout and spacing across different screen sizes. |
 | [#2345](https://github.com/tscircuit/tscircuit.com/pull/2345) | 🐌 Tiny | ArnavK-09 | Changes the dashboard and quickstart pages to use anchor tags instead of Link components for navigation to the editor page. |
@@ -503,8 +508,8 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#1](https://github.com/tscircuit/bun-test-plan/pull/1) | 🐌 Tiny | Ayushjhawar8 | Adds detailed usage instructions and configuration options for the bun-test-plan tool in the README file. |
 | [#2](https://github.com/tscircuit/bun-test-plan/pull/2) | 🐌 Tiny | Ayushjhawar8 | Adds initial project files including configuration files, a basic index file, and a package.json for the Bun project setup. |
+| [#1](https://github.com/tscircuit/bun-test-plan/pull/1) | 🐌 Tiny | Ayushjhawar8 | Adds detailed usage instructions and configuration options for the bun-test-plan tool in the README file. |
 
 </details>
 
@@ -548,6 +553,7 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#547](https://github.com/tscircuit/props/pull/547) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Adds a new op-amp component with defined pin labels and connection properties for schematic design. |
 | [#546](https://github.com/tscircuit/props/pull/546) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Adds a new CurrentSource component with properties for current, frequency, peak-to-peak current, wave shape, phase, duty cycle, and connections. |
 | [#545](https://github.com/tscircuit/props/pull/545) | 🐙 Minor | ⭐⭐ | seveibar | Adds a new autorouter preset named tscircuit_beta to the autorouter configuration, allowing it to be selected via props and validated by the schema, while keeping documentation and type artifacts in sync with runtime validations. |
 
@@ -572,8 +578,18 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 
 </details>
 
+### [tscircuit/circuit-json-to-spice](https://github.com/tscircuit/circuit-json-to-spice)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#32](https://github.com/tscircuit/circuit-json-to-spice/pull/32) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Refactors the monolithic circuitJsonToSpice function into modular processors for improved maintainability and modularity. |
+| [#31](https://github.com/tscircuit/circuit-json-to-spice/pull/31) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | This adds support for converting simulation_current_source elements from Circuit JSON to SPICE current sources. |
+
 ### [tscircuit/dimension-placement-solver](https://github.com/tscircuit/dimension-placement-solver)
 
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#2](https://github.com/tscircuit/dimension-placement-solver/pull/2) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Redesigns the solver output API to return an array of CreatedDimension objects instead of a map of solved anchor dimensions. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
@@ -634,7 +650,7 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 
 
 <details>
-<summary>🐌 Tiny Contributions (93)</summary>
+<summary>🐌 Tiny Contributions (94)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -648,9 +664,10 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 | [#396](https://github.com/tscircuit/circuit-json/pull/396) | 🐌 Tiny | Automated package update |
 | [#391](https://github.com/tscircuit/circuit-json/pull/391) | 🐌 Tiny | Automated package update |
 | [#393](https://github.com/tscircuit/circuit-json/pull/393) | 🐌 Tiny | Automated package update |
-| [#2360](https://github.com/tscircuit/tscircuit.com/pull/2360) | 🐌 Tiny | Automated package update to version 0.0.173 |
+| [#2362](https://github.com/tscircuit/tscircuit.com/pull/2362) | 🐌 Tiny | Automated package update |
 | [#2359](https://github.com/tscircuit/tscircuit.com/pull/2359) | 🐌 Tiny | Automated package update to version 0.0.172 |
 | [#2354](https://github.com/tscircuit/tscircuit.com/pull/2354) | 🐌 Tiny | Automated package update |
+| [#2360](https://github.com/tscircuit/tscircuit.com/pull/2360) | 🐌 Tiny | Automated package update to version 0.0.173 |
 | [#2350](https://github.com/tscircuit/tscircuit.com/pull/2350) | 🐌 Tiny | Automated package update |
 | [#2348](https://github.com/tscircuit/tscircuit.com/pull/2348) | 🐌 Tiny | Automated package update |
 | [#2347](https://github.com/tscircuit/tscircuit.com/pull/2347) | 🐌 Tiny | Automated package update |
@@ -761,8 +778,8 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#1490](https://github.com/tscircuit/cli/pull/1490) | 🐌 Tiny | Updates the bun-test workflow to exclude version bump branches from triggering tests. |
-| [#1](https://github.com/tscircuit/bun-test-plan/pull/1) | 🐌 Tiny | Adds detailed usage instructions and configuration options for the bun-test-plan tool in the README file. |
 | [#2](https://github.com/tscircuit/bun-test-plan/pull/2) | 🐌 Tiny | Adds initial project files including configuration files, a basic index file, and a package.json for the Bun project setup. |
+| [#1](https://github.com/tscircuit/bun-test-plan/pull/1) | 🐌 Tiny | Adds detailed usage instructions and configuration options for the bun-test-plan tool in the README file. |
 
 </details>
 
@@ -770,21 +787,23 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
+| [#2361](https://github.com/tscircuit/tscircuit.com/pull/2361) | 🐳 Major | ⭐⭐⭐ | Adds a user interface for account deletion, including confirmation dialog and associated state management. |
 | [#2355](https://github.com/tscircuit/tscircuit.com/pull/2355) | 🐳 Major | ⭐⭐⭐ | Adds a new login route for organization login, modifies the login redirection logic, and introduces a logout hook for improved session management. |
 | [#2342](https://github.com/tscircuit/tscircuit.com/pull/2342) | 🐳 Major | ⭐⭐⭐ | Adds SEO meta tags for the organization invitation route and improves the handling of invitation states in the accept organization invitation page. |
 | [#1512](https://github.com/tscircuit/cli/pull/1512) | 🐳 Major | ⭐⭐⭐ | Adds detailed build completion messages including success and failure counts, enabled options, and output directory information to improve user feedback during the build process. |
 | [#565](https://github.com/tscircuit/pcb-viewer/pull/565) | 🐙 Minor | ⭐⭐ | Adds support for displaying offsets between group anchors when a group is positioned relative to another group using the relative_to_pcb_group position mode. |
-| [#2358](https://github.com/tscircuit/tscircuit.com/pull/2358) | 🐙 Minor | ⭐⭐ | Implements account deletion functionality, including the removal of associated personal organizations and packages. |
 | [#2356](https://github.com/tscircuit/tscircuit.com/pull/2356) | 🐙 Minor | ⭐⭐ | Adds logout functionality that redirects to the home page after successful logout. |
+| [#2358](https://github.com/tscircuit/tscircuit.com/pull/2358) | 🐙 Minor | ⭐⭐ | Implements account deletion functionality, including the removal of associated personal organizations and packages. |
 | [#2346](https://github.com/tscircuit/tscircuit.com/pull/2346) | 🐙 Minor | ⭐⭐ | Enables case insensitivity for tscircuit_handle filtering in database queries. |
 | [#1504](https://github.com/tscircuit/cli/pull/1504) | 🐙 Minor | ⭐⭐ | Changes the method of retrieving the authors name during package initialization to use the accounts tscircuit handle instead of the GitHub username. |
 
 <details>
-<summary>🐌 Tiny Contributions (6)</summary>
+<summary>🐌 Tiny Contributions (7)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#287](https://github.com/tscircuit/contribution-tracker/pull/287) | 🐌 Tiny | Changes the title of the repository from contribution-tracker to contribution tracker. |
+| [#2363](https://github.com/tscircuit/tscircuit.com/pull/2363) | 🐌 Tiny | Adds a settings button to the user profile page for current users and modifies the layout of the GitHub profile button. |
 | [#2357](https://github.com/tscircuit/tscircuit.com/pull/2357) | 🐌 Tiny | Changes the handling of tscircuit_handle to be case-insensitive by modifying the filtering logic and updating the validation regex to enforce lowercase only. |
 | [#2341](https://github.com/tscircuit/tscircuit.com/pull/2341) | 🐌 Tiny | Fixes unresponsive design issues in the BuildsList component, ensuring proper layout and spacing across different screen sizes. |
 | [#2345](https://github.com/tscircuit/tscircuit.com/pull/2345) | 🐌 Tiny | Changes the dashboard and quickstart pages to use anchor tags instead of Link components for navigation to the editor page. |
@@ -799,10 +818,14 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 |------|--------|--------|-------------|
 | [#444](https://github.com/tscircuit/tscircuit-autorouter/pull/444) | 🐳 Major | ⭐⭐⭐ | Introduces a new solver to handle single intra-node routes requiring a layer transition, fixing failures and optimizing solutions in the autorouting pipeline. |
 | [#399](https://github.com/tscircuit/circuit-json/pull/399) | 🐙 Minor | ⭐⭐ | Adds operational amplifier elements for simulation, including definitions and parsing for op-amp components. |
+| [#547](https://github.com/tscircuit/props/pull/547) | 🐙 Minor | ⭐⭐ | Adds a new op-amp component with defined pin labels and connection properties for schematic design. |
 | [#546](https://github.com/tscircuit/props/pull/546) | 🐙 Minor | ⭐⭐ | Adds a new CurrentSource component with properties for current, frequency, peak-to-peak current, wave shape, phase, duty cycle, and connections. |
 | [#1801](https://github.com/tscircuit/core/pull/1801) | 🐙 Minor | ⭐⭐ | Adds the _moveCircuitJsonElements method to various PCB primitive components, allowing for the movement of circuit elements in the PCB layout. |
 | [#1795](https://github.com/tscircuit/core/pull/1795) | 🐙 Minor | ⭐⭐ | Add currentsource  component for modeling DC and AC current sources in circuit simulations |
 | [#1783](https://github.com/tscircuit/core/pull/1783) | 🐙 Minor | ⭐⭐ | This change allows fabricationnote...  components to be correctly positioned when their parent board  is arranged on a panel . |
+| [#32](https://github.com/tscircuit/circuit-json-to-spice/pull/32) | 🐙 Minor | ⭐⭐ | Refactors the monolithic circuitJsonToSpice function into modular processors for improved maintainability and modularity. |
+| [#31](https://github.com/tscircuit/circuit-json-to-spice/pull/31) | 🐙 Minor | ⭐⭐ | This adds support for converting simulation_current_source elements from Circuit JSON to SPICE current sources. |
+| [#2](https://github.com/tscircuit/dimension-placement-solver/pull/2) | 🐙 Minor | ⭐⭐ | Redesigns the solver output API to return an array of CreatedDimension objects instead of a map of solved anchor dimensions. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
