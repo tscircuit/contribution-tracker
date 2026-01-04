@@ -68,20 +68,27 @@
     "tiny": 1
   },
   "ArnavK-09": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
+    "approvalsReceived": 9,
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 0,
-    "prsMerged": 0,
+    "prsOpened": 9,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 0,
-    "stars": ""
+    "score": 18.5,
+    "stars": "⭐⭐",
+    "major": 2,
+    "minor": 3,
+    "tiny": 4
   },
   "Ayushjhawar8": {
     "reviewsReceived": 13,
@@ -186,17 +193,17 @@
     "tiny": 4
   },
   "imrishabh18": {
-    "reviewsReceived": 2,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 3,
+    "rejectionsReceived": 2,
     "approvalsReceived": 1,
-    "approvalsGiven": 6,
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
+    "prsOpened": 8,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 4,
     "reposOwned": [
       {
@@ -270,15 +277,15 @@
     "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
-    "approvalsGiven": 40,
-    "rejectionsGiven": 7,
-    "prsOpened": 28,
-    "prsMerged": 16,
+    "approvalsGiven": 48,
+    "rejectionsGiven": 8,
+    "prsOpened": 31,
+    "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 38,
-    "distinctPrsReviewedAsCodeOwner": 9,
+    "distinctPrsReviewedNonCodeOwner": 40,
+    "distinctPrsReviewedAsCodeOwner": 16,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -293,9 +300,9 @@
         ]
       }
     ],
-    "score": 49,
-    "stars": "⭐⭐⭐",
-    "major": 10,
+    "score": 53,
+    "stars": "👑",
+    "major": 11,
     "minor": 2,
     "tiny": 4
   },
@@ -359,8 +366,8 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 110,
-    "prsMerged": 79,
+    "prsOpened": 114,
+    "prsMerged": 82,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -373,6 +380,6 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 79
+    "tiny": 82
   }
 }
