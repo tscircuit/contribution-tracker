@@ -47,11 +47,11 @@ pie
     "tscircuit/runframe" : 17
     "tscircuit/cli" : 18
     "tscircuit/circuit-json-to-lbrn" : 6
-    "tscircuit/core" : 6
+    "tscircuit/core" : 7
     "tscircuit/tscircuit-autorouter" : 17
     "tscircuit/solver-utils" : 3
     "tscircuit/contribution-tracker" : 2
-    "tscircuit/footprinter" : 9
+    "tscircuit/footprinter" : 10
     "tscircuit/docs" : 2
     "tscircuit/links.tscircuit.com" : 1
     "tscircuit/circuit-to-svg" : 5
@@ -60,10 +60,10 @@ pie
     "tscircuit/dimension-placement-solver" : 2
     "tscircuit/circuit-json-to-spice" : 1
     "tscircuit/bun-match-svg" : 1
-    "tscircuit/svg.tscircuit.com" : 1
+    "tscircuit/svg.tscircuit.com" : 2
     "tscircuit/jscad-electronics" : 3
-    "tscircuit/pcbburn.com" : 11
     "tscircuit/bun-test-plan" : 4
+    "tscircuit/pcbburn.com" : 11
     "tscircuit/led-water-accelerometer" : 1
 ```
 
@@ -72,10 +72,10 @@ pie
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Discussion Contributions |
 |-------------|---------|---------|---------|-----|--------------------------|
 | [seveibar](#seveibar) | 11 | 2 | 6 | 👑 | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 2 | 5 | ⭐⭐⭐ | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 3 | 6 | ⭐⭐⭐ | 0🔹 0🔶 0💎 |
 | [AnasSarkiz](#AnasSarkiz) | 5 | 4 | 4 | ⭐⭐⭐ | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 0 | 11 | 4 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 1 | 5 | 12 | ⭐⭐ | 0🔹 0🔶 0💎 |
+| [Abse2001](#Abse2001) | 0 | 11 | 4 | ⭐⭐⭐ | 0🔹 0🔶 0💎 |
+| [techmannih](#techmannih) | 1 | 6 | 12 | ⭐⭐⭐ | 0🔹 0🔶 0💎 |
 | [0hmX](#0hmX) | 4 | 0 | 5 | ⭐⭐ | 0🔹 0🔶 0💎 |
 | [ArnavK-09](#ArnavK-09) | 2 | 3 | 5 | ⭐⭐ | 0🔹 0🔶 0💎 |
 | [imrishabh18](#imrishabh18) | 1 | 4 | 2 | ⭐⭐ | 0🔹 0🔶 0💎 |
@@ -104,19 +104,19 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [Abse2001](#Abse2001) | 18 | 15 | 1 | 4 | 0 | 17 | 15 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 11 | 9 | 1 | 14 | 0 | 12 | 9 | 0 |
+| [Abse2001](#Abse2001) | 18 | 15 | 1 | 5 | 0 | 17 | 15 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 13 | 11 | 1 | 14 | 0 | 12 | 11 | 0 |
 | [tscircuitbot](#tscircuitbot) | 1 | 0 | 0 | 0 | 0 | 120 | 87 | 0 |
-| [seveibar](#seveibar) | 4 | 1 | 0 | 55 | 7 | 33 | 19 | 0 |
-| [techmannih](#techmannih) | 17 | 14 | 1 | 2 | 1 | 20 | 18 | 0 |
+| [seveibar](#seveibar) | 4 | 1 | 0 | 56 | 8 | 33 | 19 | 0 |
+| [techmannih](#techmannih) | 19 | 15 | 1 | 2 | 1 | 21 | 19 | 0 |
 | [Sahil-Gupta584](#Sahil-Gupta584) | 4 | 2 | 1 | 0 | 0 | 3 | 1 | 0 |
 | [shehaban](#shehaban) | 8 | 4 | 1 | 0 | 0 | 2 | 2 | 0 |
 | [nailoo](#nailoo) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | [rushabhcodes](#rushabhcodes) | 9 | 4 | 0 | 0 | 1 | 4 | 4 | 0 |
-| [pxlpal](#pxlpal) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [pxlpal](#pxlpal) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
 | [MustafaMulla29](#MustafaMulla29) | 6 | 4 | 1 | 0 | 0 | 4 | 4 | 0 |
 | [Ayushjhawar8](#Ayushjhawar8) | 14 | 6 | 1 | 0 | 0 | 9 | 8 | 0 |
-| [imrishabh18](#imrishabh18) | 3 | 1 | 2 | 9 | 0 | 8 | 7 | 0 |
+| [imrishabh18](#imrishabh18) | 3 | 1 | 2 | 10 | 0 | 8 | 7 | 0 |
 | [RaghavArora14](#RaghavArora14) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [ArnavK-09](#ArnavK-09) | 13 | 10 | 0 | 2 | 0 | 10 | 10 | 0 |
 | [0hmX](#0hmX) | 15 | 3 | 0 | 1 | 0 | 13 | 9 | 0 |
@@ -261,9 +261,9 @@ pie
 | [#2404](https://github.com/tscircuit/tscircuit.com/pull/2404) | 🐳 Major | ⭐⭐⭐ | ArnavK-09 | Adds a badge for pull request previews in the package view, displaying the pull request number and title when a package release is a preview of a pull request. |
 | [#2379](https://github.com/tscircuit/tscircuit.com/pull/2379) | 🐙 Minor | ⭐⭐ | seveibar | Add a fake packagestransfer endpoint to mirror the real backend behavior for localdev usage and tests, and expose a UI flow in the package settings Danger Zone to allow transferring ownership to an organization the user is a member of. |
 | [#2388](https://github.com/tscircuit/tscircuit.com/pull/2388) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Fixes a race condition that allows the Run button to be enabled before all necessary files are fully loaded, preventing import failures on the first run. |
+| [#2391](https://github.com/tscircuit/tscircuit.com/pull/2391) | 🐙 Minor | ⭐⭐ | Ayushjhawar8 | Adds support for previewComponentPath in tscircuit.config.json to allow packages to specify a different component for preview rendering than the main entrypoint. |
 | [#2408](https://github.com/tscircuit/tscircuit.com/pull/2408) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Adds the Git commit SHA to the builds page for better traceability of package releases. |
 | [#2400](https://github.com/tscircuit/tscircuit.com/pull/2400) | 🐙 Minor | ⭐⭐ | ArnavK-09 | Fixes handling of null package releases in db-client.ts by returning undefined instead of null, ensuring proper filtering of packages. |
-| [#2391](https://github.com/tscircuit/tscircuit.com/pull/2391) | 🐙 Minor | ⭐⭐ | Ayushjhawar8 | Adds support for previewComponentPath in tscircuit.config.json to allow packages to specify a different component for preview rendering than the main entrypoint. |
 
 <details>
 <summary>🐌 Tiny Contributions (18)</summary>
@@ -402,6 +402,7 @@ pie
 |------|--------|--------|-------------|-------------|
 | [#1809](https://github.com/tscircuit/core/pull/1809) | 🐳 Major | ⭐⭐⭐ | seveibar | Updates the autorouter to include improvements in the multi-section port point solver, enhancing routing capabilities for complex designs. |
 | [#1811](https://github.com/tscircuit/core/pull/1811) | 🐙 Minor | ⭐⭐ | techmannih | Adds a test to verify that silkscreen text size adjusts correctly based on global settings and overrides when specified. |
+| [#1816](https://github.com/tscircuit/core/pull/1816) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Adds a comprehensive test for a nine key keyboard circuit design, including components and their footprints. |
 | [#1813](https://github.com/tscircuit/core/pull/1813) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Updates the circuit-json-to-spice dependency to 0.0.33, which adds support for simulating current sources with the ngspice engine and adds a new test case to verify that currentsource components work correctly in ngspice simulations. |
 
 <details>
@@ -409,8 +410,8 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#1815](https://github.com/tscircuit/core/pull/1815) | 🐌 Tiny | techmannih | Updates the tscircuitfootprinter dependency to version 0.0.288, resulting in a change in the expected number of overlap errors in design rule checks from 8 to 12. |
 | [#1814](https://github.com/tscircuit/core/pull/1814) | 🐌 Tiny | techmannih | Adds a test for the rendering of the keepout component in the circuit board. |
+| [#1815](https://github.com/tscircuit/core/pull/1815) | 🐌 Tiny | techmannih | Updates the tscircuitfootprinter dependency to version 0.0.288, resulting in a change in the expected number of overlap errors in design rule checks from 8 to 12. |
 | [#1810](https://github.com/tscircuit/core/pull/1810) | 🐌 Tiny | ShiboSoftwareDev | Updates the circuit-to-svg and schematic-symbols dependencies to their latest versions in package.json |
 
 </details>
@@ -472,6 +473,7 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#463](https://github.com/tscircuit/footprinter/pull/463) | 🐙 Minor | ⭐⭐ | techmannih | Fixes the parameter order in the sot886 function to prevent overwriting the fn property in the parsed parameters. |
 | [#442](https://github.com/tscircuit/footprinter/pull/442) | 🐙 Minor | ⭐⭐ | shehaban | Adds support for radial footprints using the same 2D geometry as axial footprints, while providing explicit, machine-readable 3D model hinting for correct 3D rendering. |
 
 <details>
@@ -480,13 +482,13 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#456](https://github.com/tscircuit/footprinter/pull/456) | 🐌 Tiny | seveibar | Adds support for shorthand resistor array names like 0402_x2 and 0402_x4, enabling correct rendering of array footprints in tests and includes SVG snapshot coverage to detect regressions. |
-| [#455](https://github.com/tscircuit/footprinter/pull/455) | 🐌 Tiny | techmannih | Refactors the sot363 component to a dedicated implementation with improved parameter handling and alignment with KiCad specifications. |
-| [#462](https://github.com/tscircuit/footprinter/pull/462) | 🐌 Tiny | techmannih | Adds support for custom pad dimensions (pad height, pad width, and pad pitch) for various array footprints in the footprinter library. |
-| [#461](https://github.com/tscircuit/footprinter/pull/461) | 🐌 Tiny | techmannih | Adds a new 1206_x4 resistor array footprint to align with KiCad specifications. |
-| [#460](https://github.com/tscircuit/footprinter/pull/460) | 🐌 Tiny | techmannih | Adds support for the 0606_x2 resistor array by implementing the necessary functions and tests for its integration into the circuit design. |
-| [#459](https://github.com/tscircuit/footprinter/pull/459) | 🐌 Tiny | techmannih | Adds a new 0603_x4 resistor array with associated tests to the circuit design library. |
-| [#458](https://github.com/tscircuit/footprinter/pull/458) | 🐌 Tiny | techmannih | Adds support for the 0603_x2 resistor array, enabling its use in circuit designs. |
 | [#457](https://github.com/tscircuit/footprinter/pull/457) | 🐌 Tiny | techmannih | Fixes the 0402_x2 array by adding a pin1 marker, correcting pad dimensions, and implementing a KiCad parity test for validation. |
+| [#458](https://github.com/tscircuit/footprinter/pull/458) | 🐌 Tiny | techmannih | Adds support for the 0603_x2 resistor array, enabling its use in circuit designs. |
+| [#459](https://github.com/tscircuit/footprinter/pull/459) | 🐌 Tiny | techmannih | Adds a new 0603_x4 resistor array with associated tests to the circuit design library. |
+| [#460](https://github.com/tscircuit/footprinter/pull/460) | 🐌 Tiny | techmannih | Adds support for the 0606_x2 resistor array by implementing the necessary functions and tests for its integration into the circuit design. |
+| [#461](https://github.com/tscircuit/footprinter/pull/461) | 🐌 Tiny | techmannih | Adds a new 1206_x4 resistor array footprint to align with KiCad specifications. |
+| [#462](https://github.com/tscircuit/footprinter/pull/462) | 🐌 Tiny | techmannih | Adds support for custom pad dimensions (pad height, pad width, and pad pitch) for various array footprints in the footprinter library. |
+| [#455](https://github.com/tscircuit/footprinter/pull/455) | 🐌 Tiny | techmannih | Refactors the sot363 component to a dedicated implementation with improved parameter handling and alignment with KiCad specifications. |
 
 </details>
 
@@ -582,10 +584,11 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#792](https://github.com/tscircuit/svg.tscircuit.com/pull/792) | 🐌 Tiny | ShiboSoftwareDev | Updates the tscircuit dependency version from 0.0.1020 to 0.0.1107 and modifies the timePerStep parameter in the analog simulation test. |
 | [#791](https://github.com/tscircuit/svg.tscircuit.com/pull/791) | 🐌 Tiny | ShiboSoftwareDev | Downgrades the circuit-json-to-gltf package from version 0.0.53 to 0.0.48 to resolve an error preventing the repository from auto-updating its dependencies. |
 
 </details>
@@ -601,6 +604,21 @@ pie
 | [#250](https://github.com/tscircuit/jscad-electronics/pull/250) | 🐌 Tiny | rushabhcodes | Adds support for rendering axial capacitors in the 3D footprint library with a new AxialCapacitor component and snapshot test for 14mm pitch. |
 | [#248](https://github.com/tscircuit/jscad-electronics/pull/248) | 🐌 Tiny | rushabhcodes | Refactors the codebase to replace the axial capacitor component with a radial capacitor component and updates related dependencies and references. |
 | [#249](https://github.com/tscircuit/jscad-electronics/pull/249) | 🐌 Tiny | rushabhcodes | Adds support for rendering SMD right-angle pin rows in the 3D footprint viewer, including new props and updated rendering logic. |
+
+</details>
+
+### [tscircuit/bun-test-plan](https://github.com/tscircuit/bun-test-plan)
+
+
+<details>
+<summary>🐌 Tiny Contributions (4)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#5](https://github.com/tscircuit/bun-test-plan/pull/5) | 🐌 Tiny | Ayushjhawar8 | Adds a GitHub Actions workflow for automatically publishing the package to npm upon pushing to the main branch. |
+| [#6](https://github.com/tscircuit/bun-test-plan/pull/6) | 🐌 Tiny | Ayushjhawar8 | Increases the test timeout from 30 seconds to 300 seconds to improve test stability and reduce the likelihood of timeouts during test execution. |
+| [#4](https://github.com/tscircuit/bun-test-plan/pull/4) | 🐌 Tiny | Ayushjhawar8 | Add CLI and configuration logic for generating test plans, including user interaction, config loading, and test plan generation logic. |
+| [#3](https://github.com/tscircuit/bun-test-plan/pull/3) | 🐌 Tiny | Ayushjhawar8 | Updates the .gitignore file to include bun.lock and generated test plans while removing the index.ts file from the repository. |
 
 </details>
 
@@ -625,21 +643,6 @@ pie
 | [#13](https://github.com/tscircuit/pcbburn.com/pull/13) | 🐌 Tiny | AnasSarkiz | Fixes button sizing issues by preventing buttons from changing size on click, removing focus ring offsets for stable appearance, and setting fixed widths for toggle buttons. |
 | [#12](https://github.com/tscircuit/pcbburn.com/pull/12) | 🐌 Tiny | AnasSarkiz | Removes incrementdecrement buttons and step parameters from numeric input fields to streamline the interface |
 | [#8](https://github.com/tscircuit/pcbburn.com/pull/8) | 🐌 Tiny | AnasSarkiz | Updates the circuit-json-to-lbrn dependency to version 0.0.38 to support enhanced PCB ablation features. |
-
-</details>
-
-### [tscircuit/bun-test-plan](https://github.com/tscircuit/bun-test-plan)
-
-
-<details>
-<summary>🐌 Tiny Contributions (4)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#5](https://github.com/tscircuit/bun-test-plan/pull/5) | 🐌 Tiny | Ayushjhawar8 | Adds a GitHub Actions workflow for automatically publishing the package to npm upon pushing to the main branch. |
-| [#6](https://github.com/tscircuit/bun-test-plan/pull/6) | 🐌 Tiny | Ayushjhawar8 | Increases the test timeout from 30 seconds to 300 seconds to improve test stability and reduce the likelihood of timeouts during test execution. |
-| [#4](https://github.com/tscircuit/bun-test-plan/pull/4) | 🐌 Tiny | Ayushjhawar8 | Add CLI and configuration logic for generating test plans, including user interaction, config loading, and test plan generation logic. |
-| [#3](https://github.com/tscircuit/bun-test-plan/pull/3) | 🐌 Tiny | Ayushjhawar8 | Updates the .gitignore file to include bun.lock and generated test plans while removing the index.ts file from the repository. |
 
 </details>
 
@@ -814,6 +817,7 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#473](https://github.com/tscircuit/circuit-to-svg/pull/473) | 🐳 Major | ⭐⭐⭐ | Adds support for rendering PCB courtyard polygons in SVG format, enhancing the PCB design capabilities. |
+| [#463](https://github.com/tscircuit/footprinter/pull/463) | 🐙 Minor | ⭐⭐ | Fixes the parameter order in the sot886 function to prevent overwriting the fn property in the parsed parameters. |
 | [#1811](https://github.com/tscircuit/core/pull/1811) | 🐙 Minor | ⭐⭐ | Adds a test to verify that silkscreen text size adjusts correctly based on global settings and overrides when specified. |
 | [#100](https://github.com/tscircuit/circuit-to-canvas/pull/100) | 🐙 Minor | ⭐⭐ | Adds support for PCB keepout zones, allowing for the rendering of keepout areas in circuit designs. |
 | [#93](https://github.com/tscircuit/circuit-to-canvas/pull/93) | 🐙 Minor | ⭐⭐ | Adds support for rendering soldermask coverage on SMT pads in the PCB drawing functionality. |
@@ -825,15 +829,15 @@ pie
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#455](https://github.com/tscircuit/footprinter/pull/455) | 🐌 Tiny | Refactors the sot363 component to a dedicated implementation with improved parameter handling and alignment with KiCad specifications. |
-| [#462](https://github.com/tscircuit/footprinter/pull/462) | 🐌 Tiny | Adds support for custom pad dimensions (pad height, pad width, and pad pitch) for various array footprints in the footprinter library. |
-| [#461](https://github.com/tscircuit/footprinter/pull/461) | 🐌 Tiny | Adds a new 1206_x4 resistor array footprint to align with KiCad specifications. |
-| [#460](https://github.com/tscircuit/footprinter/pull/460) | 🐌 Tiny | Adds support for the 0606_x2 resistor array by implementing the necessary functions and tests for its integration into the circuit design. |
-| [#459](https://github.com/tscircuit/footprinter/pull/459) | 🐌 Tiny | Adds a new 0603_x4 resistor array with associated tests to the circuit design library. |
-| [#458](https://github.com/tscircuit/footprinter/pull/458) | 🐌 Tiny | Adds support for the 0603_x2 resistor array, enabling its use in circuit designs. |
 | [#457](https://github.com/tscircuit/footprinter/pull/457) | 🐌 Tiny | Fixes the 0402_x2 array by adding a pin1 marker, correcting pad dimensions, and implementing a KiCad parity test for validation. |
-| [#1815](https://github.com/tscircuit/core/pull/1815) | 🐌 Tiny | Updates the tscircuitfootprinter dependency to version 0.0.288, resulting in a change in the expected number of overlap errors in design rule checks from 8 to 12. |
+| [#458](https://github.com/tscircuit/footprinter/pull/458) | 🐌 Tiny | Adds support for the 0603_x2 resistor array, enabling its use in circuit designs. |
+| [#459](https://github.com/tscircuit/footprinter/pull/459) | 🐌 Tiny | Adds a new 0603_x4 resistor array with associated tests to the circuit design library. |
+| [#460](https://github.com/tscircuit/footprinter/pull/460) | 🐌 Tiny | Adds support for the 0606_x2 resistor array by implementing the necessary functions and tests for its integration into the circuit design. |
+| [#461](https://github.com/tscircuit/footprinter/pull/461) | 🐌 Tiny | Adds a new 1206_x4 resistor array footprint to align with KiCad specifications. |
+| [#462](https://github.com/tscircuit/footprinter/pull/462) | 🐌 Tiny | Adds support for custom pad dimensions (pad height, pad width, and pad pitch) for various array footprints in the footprinter library. |
+| [#455](https://github.com/tscircuit/footprinter/pull/455) | 🐌 Tiny | Refactors the sot363 component to a dedicated implementation with improved parameter handling and alignment with KiCad specifications. |
 | [#1814](https://github.com/tscircuit/core/pull/1814) | 🐌 Tiny | Adds a test for the rendering of the keepout component in the circuit board. |
+| [#1815](https://github.com/tscircuit/core/pull/1815) | 🐌 Tiny | Updates the tscircuitfootprinter dependency to version 0.0.288, resulting in a change in the expected number of overlap errors in design rule checks from 8 to 12. |
 | [#474](https://github.com/tscircuit/circuit-to-svg/pull/474) | 🐌 Tiny | Fixes type definitions for circuit elements in color overrides to ensure proper type checking and validation. |
 | [#475](https://github.com/tscircuit/circuit-to-svg/pull/475) | 🐌 Tiny | Changes type definitions from any to AnyCircuitElement for circuitJson in test files to improve type safety. |
 | [#403](https://github.com/tscircuit/docs/pull/403) | 🐌 Tiny | Adds documentation for setting a global font size for silkscreen text elements in PCB designs, allowing for consistent text sizing across the board. |
@@ -870,17 +874,19 @@ pie
 |------|--------|--------|-------------|
 | [#471](https://github.com/tscircuit/circuit-to-svg/pull/471) | 🐳 Major | ⭐⭐⭐ | Includes note dimensions in SVG bounds for PCB elements, allowing for accurate representation of dimensions in the generated SVG. |
 | [#4](https://github.com/tscircuit/dimension-placement-solver/pull/4) | 🐳 Major | ⭐⭐⭐ | Implements the anchor offset normalization solver pipeline to process circuit elements and extract positional relationships for dimension line placement. |
+| [#1816](https://github.com/tscircuit/core/pull/1816) | 🐙 Minor | ⭐⭐ | Adds a comprehensive test for a nine key keyboard circuit design, including components and their footprints. |
 | [#1813](https://github.com/tscircuit/core/pull/1813) | 🐙 Minor | ⭐⭐ | Updates the circuit-json-to-spice dependency to 0.0.33, which adds support for simulating current sources with the ngspice engine and adds a new test case to verify that currentsource components work correctly in ngspice simulations. |
 | [#34](https://github.com/tscircuit/circuit-json-to-spice/pull/34) | 🐙 Minor | ⭐⭐ | Adds support for simulation_op_amp elements, enabling conversion of circuits with operational amplifiers into SPICE netlists. |
 
 <details>
-<summary>🐌 Tiny Contributions (5)</summary>
+<summary>🐌 Tiny Contributions (6)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#1810](https://github.com/tscircuit/core/pull/1810) | 🐌 Tiny | Updates the circuit-to-svg and schematic-symbols dependencies to their latest versions in package.json |
 | [#470](https://github.com/tscircuit/circuit-to-svg/pull/470) | 🐌 Tiny | Refactors the PCB bounds calculation logic into a separate utility function to improve code organization and maintainability. |
 | [#13](https://github.com/tscircuit/bun-match-svg/pull/13) | 🐌 Tiny | Enhances the init command to be more robust when a bunfig.toml file already exists and adds a test to ensure its behavior is correct. |
+| [#792](https://github.com/tscircuit/svg.tscircuit.com/pull/792) | 🐌 Tiny | Updates the tscircuit dependency version from 0.0.1020 to 0.0.1107 and modifies the timePerStep parameter in the analog simulation test. |
 | [#791](https://github.com/tscircuit/svg.tscircuit.com/pull/791) | 🐌 Tiny | Downgrades the circuit-json-to-gltf package from version 0.0.53 to 0.0.48 to resolve an error preventing the repository from auto-updating its dependencies. |
 | [#3](https://github.com/tscircuit/dimension-placement-solver/pull/3) | 🐌 Tiny | Integrates an SVG snapshot testing framework to automatically verify the visual output of the solver, ensuring project quality. |
 
@@ -898,6 +904,27 @@ pie
 | [#248](https://github.com/tscircuit/jscad-electronics/pull/248) | 🐌 Tiny | Refactors the codebase to replace the axial capacitor component with a radial capacitor component and updates related dependencies and references. |
 | [#249](https://github.com/tscircuit/jscad-electronics/pull/249) | 🐌 Tiny | Adds support for rendering SMD right-angle pin rows in the 3D footprint viewer, including new props and updated rendering logic. |
 | [#2353](https://github.com/tscircuit/tscircuit.com/pull/2353) | 🐌 Tiny | Updates the visual design and layout of the PackageCard component and its skeleton, enhancing spacing, typography, color usage, and information hierarchy for better readability and aesthetics. |
+
+</details>
+
+### [Ayushjhawar8](https://github.com/Ayushjhawar8)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#2236](https://github.com/tscircuit/runframe/pull/2236) | 🐳 Major | ⭐⭐⭐ | Adds handling for circuit.json files, allowing users to fetch and parse circuit data for use in the RunFrame component. |
+| [#2391](https://github.com/tscircuit/tscircuit.com/pull/2391) | 🐙 Minor | ⭐⭐ | Adds support for previewComponentPath in tscircuit.config.json to allow packages to specify a different component for preview rendering than the main entrypoint. |
+
+<details>
+<summary>🐌 Tiny Contributions (6)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#2250](https://github.com/tscircuit/runframe/pull/2250) | 🐌 Tiny | img width723 height442 altimage srchttps:github.comuser-attachmentsassets240c1639-05ef-4757-9b19-fa4e1179c314  img width719 height515 altimage srchttps:github.comuser-attachmentsassets495fa1f3-9124-4a38-a4e6-855d8670f958  https:runframe-git-file-selector-tscircuit.vercel.app?fixtureId7B22path223A22examples2Fexample30-enhanced-file-selector-search.fixture.tsx227D |
+| [#496](https://github.com/tscircuit/tscircuit-autorouter/pull/496) | 🐌 Tiny | Adds a parallel test execution workflow to improve testing efficiency and updates .gitignore to exclude generated test plans. |
+| [#5](https://github.com/tscircuit/bun-test-plan/pull/5) | 🐌 Tiny | Adds a GitHub Actions workflow for automatically publishing the package to npm upon pushing to the main branch. |
+| [#6](https://github.com/tscircuit/bun-test-plan/pull/6) | 🐌 Tiny | Increases the test timeout from 30 seconds to 300 seconds to improve test stability and reduce the likelihood of timeouts during test execution. |
+| [#4](https://github.com/tscircuit/bun-test-plan/pull/4) | 🐌 Tiny | Add CLI and configuration logic for generating test plans, including user interaction, config loading, and test plan generation logic. |
+| [#3](https://github.com/tscircuit/bun-test-plan/pull/3) | 🐌 Tiny | Updates the .gitignore file to include bun.lock and generated test plans while removing the index.ts file from the repository. |
 
 </details>
 
@@ -921,27 +948,6 @@ pie
 | [#2399](https://github.com/tscircuit/tscircuit.com/pull/2399) | 🐌 Tiny | Fixes the user interface of the PackageCard component by adding a compact mode and adjusting styles for better visual presentation. |
 | [#2406](https://github.com/tscircuit/tscircuit.com/pull/2406) | 🐌 Tiny | Fixes the display of the releases table by correcting the PR info and handling overflow issues in the UI components. |
 | [#11](https://github.com/tscircuit/pcbburn.com/pull/11) | 🐌 Tiny | Adds a new demo page to the application that loads a demo circuit for user interaction. |
-
-</details>
-
-### [Ayushjhawar8](https://github.com/Ayushjhawar8)
-
-| PRs # | Impact | Rating | Description |
-|------|--------|--------|-------------|
-| [#2236](https://github.com/tscircuit/runframe/pull/2236) | 🐳 Major | ⭐⭐⭐ | Adds handling for circuit.json files, allowing users to fetch and parse circuit data for use in the RunFrame component. |
-| [#2391](https://github.com/tscircuit/tscircuit.com/pull/2391) | 🐙 Minor | ⭐⭐ | Adds support for previewComponentPath in tscircuit.config.json to allow packages to specify a different component for preview rendering than the main entrypoint. |
-
-<details>
-<summary>🐌 Tiny Contributions (6)</summary>
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#2250](https://github.com/tscircuit/runframe/pull/2250) | 🐌 Tiny | img width723 height442 altimage srchttps:github.comuser-attachmentsassets240c1639-05ef-4757-9b19-fa4e1179c314  img width719 height515 altimage srchttps:github.comuser-attachmentsassets495fa1f3-9124-4a38-a4e6-855d8670f958  https:runframe-git-file-selector-tscircuit.vercel.app?fixtureId7B22path223A22examples2Fexample30-enhanced-file-selector-search.fixture.tsx227D |
-| [#496](https://github.com/tscircuit/tscircuit-autorouter/pull/496) | 🐌 Tiny | Adds a parallel test execution workflow to improve testing efficiency and updates .gitignore to exclude generated test plans. |
-| [#5](https://github.com/tscircuit/bun-test-plan/pull/5) | 🐌 Tiny | Adds a GitHub Actions workflow for automatically publishing the package to npm upon pushing to the main branch. |
-| [#6](https://github.com/tscircuit/bun-test-plan/pull/6) | 🐌 Tiny | Increases the test timeout from 30 seconds to 300 seconds to improve test stability and reduce the likelihood of timeouts during test execution. |
-| [#4](https://github.com/tscircuit/bun-test-plan/pull/4) | 🐌 Tiny | Add CLI and configuration logic for generating test plans, including user interaction, config loading, and test plan generation logic. |
-| [#3](https://github.com/tscircuit/bun-test-plan/pull/3) | 🐌 Tiny | Updates the .gitignore file to include bun.lock and generated test plans while removing the index.ts file from the repository. |
 
 </details>
 
