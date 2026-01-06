@@ -128,13 +128,13 @@
     "tiny": 6
   },
   "MustafaMulla29": {
-    "reviewsReceived": 13,
-    "rejectionsReceived": 3,
+    "reviewsReceived": 14,
+    "rejectionsReceived": 4,
     "approvalsReceived": 6,
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 6,
+    "prsOpened": 11,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -144,11 +144,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 11,
+    "score": 12,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 4,
-    "tiny": 2
+    "tiny": 3
   },
   "RaghavArora14": {
     "reviewsReceived": 1,
@@ -216,14 +216,24 @@
     "approvalsReceived": 1,
     "approvalsGiven": 10,
     "rejectionsGiven": 2,
-    "prsOpened": 8,
-    "prsMerged": 7,
+    "prsOpened": 12,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 8,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 4,
     "reposOwned": [
+      {
+        "repo": "tscircuit/circuit-to-svg",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/tscircuit.com",
         "paths": [
@@ -231,11 +241,11 @@
         ]
       }
     ],
-    "score": 15,
+    "score": 21,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 2,
     "minor": 4,
-    "tiny": 2
+    "tiny": 4
   },
   "nailoo": {
     "reviewsReceived": 0,
@@ -296,13 +306,13 @@
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "approvalsGiven": 65,
-    "rejectionsGiven": 8,
+    "rejectionsGiven": 9,
     "prsOpened": 38,
     "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 48,
+    "distinctPrsReviewedNonCodeOwner": 49,
     "distinctPrsReviewedAsCodeOwner": 24,
     "reposOwned": [
       {
@@ -359,8 +369,8 @@
     "approvalsReceived": 15,
     "approvalsGiven": 2,
     "rejectionsGiven": 1,
-    "prsOpened": 21,
-    "prsMerged": 19,
+    "prsOpened": 23,
+    "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -378,11 +388,11 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 3,
-    "score": 31,
+    "score": 33,
     "stars": "⭐⭐⭐",
     "major": 1,
-    "minor": 6,
-    "tiny": 12
+    "minor": 7,
+    "tiny": 13
   },
   "tscircuitbot": {
     "reviewsReceived": 1,
@@ -390,8 +400,8 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 154,
-    "prsMerged": 119,
+    "prsOpened": 157,
+    "prsMerged": 122,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -404,6 +414,6 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 119
+    "tiny": 122
   }
 }
