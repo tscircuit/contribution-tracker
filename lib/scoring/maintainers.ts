@@ -4,4 +4,5 @@ export const MAINTAINERS = {
   Abse2001: "maintainer2",
   techmannih: "maintainer1",
   rushabhcodes: "maintainer1",
+  AnasSarkiz: "maintainer1",
 }
