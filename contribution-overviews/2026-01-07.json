@@ -79,13 +79,13 @@
     "tiny": 7
   },
   "ArnavK-09": {
-    "reviewsReceived": 10,
+    "reviewsReceived": 9,
     "rejectionsReceived": 1,
-    "approvalsReceived": 7,
+    "approvalsReceived": 6,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 12,
-    "prsMerged": 11,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -95,33 +95,33 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 33,
+    "score": 34,
     "stars": "⭐⭐⭐",
     "major": 7,
     "minor": 1,
-    "tiny": 3
+    "tiny": 4
   },
   "Ayushjhawar8": {
-    "reviewsReceived": 15,
+    "reviewsReceived": 16,
     "rejectionsReceived": 1,
-    "approvalsReceived": 3,
+    "approvalsReceived": 4,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 6,
-    "prsMerged": 3,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 5,
+    "score": 7,
     "stars": "⭐",
     "major": 0,
-    "minor": 1,
+    "minor": 2,
     "tiny": 2
   },
   "Excellencedev": {
@@ -258,7 +258,10 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
-    "distinctPrsReviewedAsCodeOwner": 8,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -273,6 +276,7 @@
         ]
       }
     ],
+    "distinctPrsReviewedAsCodeOwner": 8,
     "score": 34,
     "stars": "⭐⭐⭐",
     "major": 1,
