@@ -3,3 +3,9 @@ username = "Heinrich-XIAO"
 amount = 10.16
 description = "ATTINY PROGRAMMER"
 date = "2024-03-08"
+
+[[reimbursements]]
+username = "Heinrich-XIAO"
+amount = 34.00
+description = "USB-B Cable and Import Duties"
+date = "2026-01-13"
