@@ -63,13 +63,13 @@
     "tiny": 1
   },
   "ArnavK-09": {
-    "reviewsReceived": 3,
+    "reviewsReceived": 7,
     "rejectionsReceived": 1,
-    "approvalsReceived": 1,
+    "approvalsReceived": 4,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 1,
+    "prsOpened": 6,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -78,11 +78,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 4,
+    "score": 9.5,
     "stars": "⭐",
     "major": 1,
-    "minor": 0,
-    "tiny": 0
+    "minor": 2,
+    "tiny": 2
   },
   "Ayushjhawar8": {
     "reviewsReceived": 12,
@@ -314,15 +314,15 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 3,
     "prsOpened": 6,
-    "prsMerged": 2,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 7,
-    "stars": "⭐",
-    "major": 1,
+    "score": 11,
+    "stars": "⭐⭐",
+    "major": 2,
     "minor": 0,
     "tiny": 1
   },
@@ -330,15 +330,15 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
-    "approvalsGiven": 24,
+    "approvalsGiven": 27,
     "rejectionsGiven": 9,
     "prsOpened": 11,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 24,
-    "distinctPrsReviewedAsCodeOwner": 9,
+    "distinctPrsReviewedNonCodeOwner": 26,
+    "distinctPrsReviewedAsCodeOwner": 10,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit.com",
@@ -390,8 +390,8 @@
     "approvalsReceived": 0,
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 101,
-    "prsMerged": 75,
+    "prsOpened": 108,
+    "prsMerged": 81,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -404,6 +404,6 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 75
+    "tiny": 81
   }
 }
