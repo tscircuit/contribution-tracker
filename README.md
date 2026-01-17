@@ -36,9 +36,10 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/circuit-to-svg" : 1
+    "tscircuit/circuit-to-svg" : 2
     "tscircuit/core" : 5
     "tscircuit/schematic-viewer" : 1
+    "tscircuit/pcb-viewer" : 4
     "tscircuit/tscircuit" : 23
     "tscircuit/circuit-json" : 4
     "tscircuit/tscircuit.com" : 11
@@ -46,33 +47,36 @@ pie
     "tscircuit/runframe" : 14
     "tscircuit/cli" : 18
     "tscircuit/svg.tscircuit.com" : 11
+    "tscircuit/circuit-json-to-step" : 2
+    "tscircuit/circuit-to-canvas" : 2
     "tscircuit/circuit-json-to-lbrn" : 6
     "tscircuit/curvy-trace-solver" : 2
+    "tscircuit/graphics-debug" : 1
+    "tscircuit/tscircuit-autorouter" : 7
+    "tscircuit/props" : 1
     "tscircuit/footprinter" : 5
     "tscircuit/3d-viewer" : 6
-    "tscircuit/tscircuit-autorouter" : 7
     "tscircuit/docs" : 2
     "tscircuit/contribution-tracker" : 1
-    "tscircuit/pcbburn.com" : 3
-    "tscircuit/graphics-debug" : 1
+    "tscircuit/pcbburn.com" : 5
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Discussion Contributions |
 |-------------|---------|---------|---------|-----|--------------------------|
+| [techmannih](#techmannih) | 3 | 4 | 2 | ⭐⭐ | 0🔹 0🔶 0💎 |
 | [seveibar](#seveibar) | 5 | 2 | 1 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 2 | 2 | 1 | ⭐⭐ | 0🔹 0🔶 0💎 |
 | [0hmX](#0hmX) | 4 | 0 | 0 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 81 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 5 | 1 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [AnasSarkiz](#AnasSarkiz) | 2 | 2 | 1 | ⭐⭐ | 0🔹 0🔶 0💎 |
+| [AnasSarkiz](#AnasSarkiz) | 2 | 3 | 2 | ⭐⭐ | 0🔹 0🔶 0💎 |
 | [rushabhcodes](#rushabhcodes) | 2 | 0 | 1 | ⭐⭐ | 0🔹 0🔶 0💎 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 85 | ⭐⭐ | 0🔹 0🔶 0💎 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 5 | 1 | ⭐⭐ | 0🔹 0🔶 0💎 |
 | [imrishabh18](#imrishabh18) | 1 | 2 | 2 | ⭐⭐ | 0🔹 0🔶 0💎 |
+| [Ayushjhawar8](#Ayushjhawar8) | 1 | 1 | 3 | ⭐ | 0🔹 0🔶 0💎 |
 | [ArnavK-09](#ArnavK-09) | 1 | 2 | 2 | ⭐ | 0🔹 0🔶 0💎 |
 | [MustafaMulla29](#MustafaMulla29) | 1 | 1 | 1 | ⭐ | 0🔹 0🔶 0💎 |
 | [Abse2001](#Abse2001) | 0 | 1 | 0 | ⭐ | 0🔹 0🔶 0💎 |
-| [Ayushjhawar8](#Ayushjhawar8) | 1 | 0 | 2 | ⭐ | 0🔹 0🔶 0💎 |
 | [Heinrich-XIAO](#Heinrich-XIAO) | 0 | 0 | 1 |  | 0🔹 0🔶 0💎 |
 | [Sahil-Gupta584](#Sahil-Gupta584) | 0 | 0 | 1 |  | 0🔹 0🔶 0💎 |
 
@@ -95,23 +99,26 @@ pie
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
 | [MustafaMulla29](#MustafaMulla29) | 2 | 2 | 0 | 0 | 0 | 3 | 3 | 0 |
-| [bimakw](#bimakw) | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
-| [rushabhcodes](#rushabhcodes) | 21 | 4 | 4 | 0 | 3 | 6 | 3 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 108 | 81 | 0 |
-| [techmannih](#techmannih) | 9 | 5 | 2 | 2 | 0 | 7 | 5 | 0 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 27 | 9 | 11 | 8 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 9 | 7 | 0 | 2 | 0 | 7 | 7 | 0 |
+| [bimakw](#bimakw) | 2 | 1 | 1 | 0 | 0 | 3 | 0 | 0 |
+| [rushabhcodes](#rushabhcodes) | 21 | 4 | 4 | 1 | 5 | 6 | 3 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 114 | 85 | 0 |
+| [Ayushjhawar8](#Ayushjhawar8) | 16 | 4 | 3 | 0 | 0 | 10 | 5 | 0 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 33 | 9 | 11 | 8 | 0 |
+| [techmannih](#techmannih) | 14 | 9 | 2 | 2 | 0 | 11 | 9 | 0 |
+| [SolariSystems](#SolariSystems) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 10 | 7 | 0 | 2 | 0 | 8 | 7 | 0 |
+| [gokseniin](#gokseniin) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Abse2001](#Abse2001) | 1 | 1 | 0 | 5 | 0 | 1 | 1 | 0 |
 | [Kesavaraja67](#Kesavaraja67) | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 6 | 3 | 1 | 2 | 4 | 8 | 5 | 0 |
-| [Heinrich-XIAO](#Heinrich-XIAO) | 4 | 2 | 1 | 0 | 0 | 3 | 1 | 0 |
+| [imrishabh18](#imrishabh18) | 6 | 3 | 1 | 2 | 4 | 9 | 5 | 0 |
+| [Heinrich-XIAO](#Heinrich-XIAO) | 4 | 2 | 1 | 0 | 0 | 4 | 1 | 0 |
 | [ArnavK-09](#ArnavK-09) | 7 | 4 | 1 | 0 | 0 | 6 | 5 | 0 |
-| [Ayushjhawar8](#Ayushjhawar8) | 12 | 2 | 3 | 0 | 0 | 7 | 3 | 0 |
 | [Sahil-Gupta584](#Sahil-Gupta584) | 3 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
 | [0hmX](#0hmX) | 6 | 4 | 0 | 0 | 0 | 7 | 4 | 0 |
 | [GhostDragonAlpha](#GhostDragonAlpha) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [giajoe24](#giajoe24) | 2 | 0 | 2 | 0 | 0 | 2 | 0 | 0 |
 | [krapcys1-maker](#krapcys1-maker) | 2 | 0 | 2 | 0 | 0 | 2 | 0 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 3 | 3 | 0 | 0 | 0 | 6 | 5 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 3 | 3 | 0 | 0 | 0 | 8 | 7 | 0 |
 
 ## Changes by Repository
 
@@ -120,13 +127,14 @@ pie
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#479](https://github.com/tscircuit/circuit-to-svg/pull/479) | 🐳 Major | ⭐⭐⭐ | MustafaMulla29 | Adds support for rendering schematic paths in SVG format by implementing a new function to create SVG objects from schematic path data. |
+| [#481](https://github.com/tscircuit/circuit-to-svg/pull/481) | 🐳 Major | ⭐⭐⭐ | techmannih | Implemented soldermask_margin_left, soldermask_margin_top, soldermask_margin_right, and soldermask_margin_bottom for rect and rotated_rect SMT pads, allowing for positive and negative margin values to control soldermask coverage. |
 
 ### [tscircuit/core](https://github.com/tscircuit/core)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#1834](https://github.com/tscircuit/core/pull/1834) | 🐳 Major | ⭐⭐⭐ | seveibar | Updates the autorouting algorithm to relax the port point rip threshold, potentially improving routing efficiency in complex circuits. |
 | [#1833](https://github.com/tscircuit/core/pull/1833) | 🐳 Major | ⭐⭐⭐ | seveibar | Updates the autorouter to accept an effort level parameter and adjusts the size of 1206x4 jumpers to match the 3612 metric. |
+| [#1834](https://github.com/tscircuit/core/pull/1834) | 🐳 Major | ⭐⭐⭐ | seveibar | Updates the autorouting algorithm to relax the port point rip threshold, potentially improving routing efficiency in complex circuits. |
 | [#1835](https://github.com/tscircuit/core/pull/1835) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Adds support for the schematicpath  element in the schematic rendering system, allowing for the definition of paths with specified points and fill properties. |
 | [#1836](https://github.com/tscircuit/core/pull/1836) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Fixes positioning issues of child and grandchild groups in PCB designs during panel auto-layout operations by updating their coordinates when the parent board moves. |
 
@@ -148,6 +156,23 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#158](https://github.com/tscircuit/schematic-viewer/pull/158) | 🐌 Tiny | MustafaMulla29 | Updates the tscircuit dependency to version 0.0.1149 to enable schematic_path rendering functionality. |
+
+</details>
+
+### [tscircuit/pcb-viewer](https://github.com/tscircuit/pcb-viewer)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#609](https://github.com/tscircuit/pcb-viewer/pull/609) | 🐙 Minor | ⭐⭐ | Ayushjhawar8 | Fixes the issue where the d key hotkey triggers while typing in input fields, preventing unintended actions. |
+
+<details>
+<summary>🐌 Tiny Contributions (3)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#610](https://github.com/tscircuit/pcb-viewer/pull/610) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#608](https://github.com/tscircuit/pcb-viewer/pull/608) | 🐌 Tiny | tscircuitbot | Automated package update to version 1.11.315 |
+| [#607](https://github.com/tscircuit/pcb-viewer/pull/607) | 🐌 Tiny | techmannih | Adds a new fixture for asymmetric soldermask margins for rectangular and rotated rectangular SMT pads in the PCB viewer. |
 
 </details>
 
@@ -287,8 +312,8 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#1638](https://github.com/tscircuit/cli/pull/1638) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#1637](https://github.com/tscircuit/cli/pull/1637) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#1638](https://github.com/tscircuit/cli/pull/1638) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#1635](https://github.com/tscircuit/cli/pull/1635) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.1482 to 0.0.1483 |
 | [#1636](https://github.com/tscircuit/cli/pull/1636) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#1633](https://github.com/tscircuit/cli/pull/1633) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -299,9 +324,9 @@ pie
 | [#1626](https://github.com/tscircuit/cli/pull/1626) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#1624](https://github.com/tscircuit/cli/pull/1624) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#1620](https://github.com/tscircuit/cli/pull/1620) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.1476 to 0.0.1480 |
+| [#1609](https://github.com/tscircuit/cli/pull/1609) | 🐌 Tiny | Ayushjhawar8 | Adds tests to verify the execution of buildCommand and prebuildCommand when using the --ci flag in the tscircuit CLI. |
 | [#1614](https://github.com/tscircuit/cli/pull/1614) | 🐌 Tiny | imrishabh18 | Removes stringification of error messages and utilizes native error formatting for better debugging information. |
 | [#1617](https://github.com/tscircuit/cli/pull/1617) | 🐌 Tiny | imrishabh18 | Adds a configuration option to skip local installation of the tscircuit package, allowing the use of the latest version available in the cloud. |
-| [#1609](https://github.com/tscircuit/cli/pull/1609) | 🐌 Tiny | Ayushjhawar8 | Adds tests to verify the execution of buildCommand and prebuildCommand when using the --ci flag in the tscircuit CLI. |
 
 </details>
 
@@ -324,6 +349,34 @@ pie
 | [#831](https://github.com/tscircuit/svg.tscircuit.com/pull/831) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package from version 0.0.1146 to 0.0.1147 in package.json |
 | [#825](https://github.com/tscircuit/svg.tscircuit.com/pull/825) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.1139 to 0.0.1140 in package.json |
 | [#826](https://github.com/tscircuit/svg.tscircuit.com/pull/826) | 🐌 Tiny | tscircuitbot | Automated package update |
+
+</details>
+
+### [tscircuit/circuit-json-to-step](https://github.com/tscircuit/circuit-json-to-step)
+
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#44](https://github.com/tscircuit/circuit-json-to-step/pull/44) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#43](https://github.com/tscircuit/circuit-json-to-step/pull/43) | 🐌 Tiny | Ayushjhawar8 | Moves tscircuitcircuit-json-util from dependencies to peerDependencies in package.json |
+
+</details>
+
+### [tscircuit/circuit-to-canvas](https://github.com/tscircuit/circuit-to-canvas)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#117](https://github.com/tscircuit/circuit-to-canvas/pull/117) | 🐙 Minor | ⭐⭐ | techmannih | Adds support for asymmetric soldermask margins for rectangular and rotated rectangular SMT pads in PCB designs. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#118](https://github.com/tscircuit/circuit-to-canvas/pull/118) | 🐌 Tiny | tscircuitbot | Updates the package version from 0.0.49 to 0.0.50 in package.json |
 
 </details>
 
@@ -361,6 +414,38 @@ pie
 
 </details>
 
+### [tscircuit/graphics-debug](https://github.com/tscircuit/graphics-debug)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#92](https://github.com/tscircuit/graphics-debug/pull/92) | 🐳 Major | ⭐⭐⭐ | Ayushjhawar8 | Adds a diagonal measurement label to the dimension tool, displaying the distance of diagonal measurements in the graphics interface. |
+
+### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#540](https://github.com/tscircuit/tscircuit-autorouter/pull/540) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds minimum and maximum ripping power factor thresholds and tracks rip count in statistics for autorouting. |
+| [#534](https://github.com/tscircuit/tscircuit-autorouter/pull/534) | 🐳 Major | ⭐⭐⭐ | seveibar | Updates jumper configurations and calculations for node failure probability in the autorouter, including adjustments to jumper sizes and counts. |
+| [#542](https://github.com/tscircuit/tscircuit-autorouter/pull/542) | 🐳 Major | ⭐⭐⭐ | 0hmX | Exposes the old router functionality through the existing autorouting pipeline, allowing for improved routing capabilities without off-board routing cases. |
+| [#543](https://github.com/tscircuit/tscircuit-autorouter/pull/543) | 🐳 Major | ⭐⭐⭐ | 0hmX | Optimizes port distribution logic by implementing a more efficient data structure for lookups and enhancing visualization features. |
+| [#531](https://github.com/tscircuit/tscircuit-autorouter/pull/531) | 🐳 Major | ⭐⭐⭐ | 0hmX | Redistributes port points uniformly along the sides of nodes to optimize routing density and prevent congestion. |
+| [#536](https://github.com/tscircuit/tscircuit-autorouter/pull/536) | 🐳 Major | ⭐⭐⭐ | 0hmX | Fixes autorouting behavior to prevent illegal cross-layer path interactions in the autorouter. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#539](https://github.com/tscircuit/tscircuit-autorouter/pull/539) | 🐌 Tiny | Ayushjhawar8 | Updates the graphics-debug dependency to version 0.0.77 in the package.json file. |
+
+</details>
+
+### [tscircuit/props](https://github.com/tscircuit/props)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#554](https://github.com/tscircuit/props/pull/554) | 🐙 Minor | ⭐⭐ | techmannih | Adds individual solder mask margin properties for rectangular and rotated rectangular surface mount pads, allowing for more precise control over solder mask dimensions. |
+
 ### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -389,26 +474,6 @@ pie
 | [#654](https://github.com/tscircuit/3d-viewer/pull/654) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Adds support for pill-shaped plated holes with rectangular pads, including validation logic and comprehensive test coverage. |
 | [#651](https://github.com/tscircuit/3d-viewer/pull/651) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Adds support for oval hole elements in PCB design, allowing for oval-shaped holes to be created and rendered in the 3D viewer. |
 | [#655](https://github.com/tscircuit/3d-viewer/pull/655) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes soldermask clearance issues for polygon-shaped pads by rendering their full outlines, ensuring accurate fabrication and visual fidelity. |
-
-### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#540](https://github.com/tscircuit/tscircuit-autorouter/pull/540) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds minimum and maximum ripping power factor thresholds and tracks rip count in statistics for autorouting. |
-| [#534](https://github.com/tscircuit/tscircuit-autorouter/pull/534) | 🐳 Major | ⭐⭐⭐ | seveibar | Updates jumper configurations and calculations for node failure probability in the autorouter, including adjustments to jumper sizes and counts. |
-| [#542](https://github.com/tscircuit/tscircuit-autorouter/pull/542) | 🐳 Major | ⭐⭐⭐ | 0hmX | Exposes the old router functionality through the existing autorouting pipeline, allowing for improved routing capabilities without off-board routing cases. |
-| [#543](https://github.com/tscircuit/tscircuit-autorouter/pull/543) | 🐳 Major | ⭐⭐⭐ | 0hmX | Optimizes port distribution logic by implementing a more efficient data structure for lookups and enhancing visualization features. |
-| [#531](https://github.com/tscircuit/tscircuit-autorouter/pull/531) | 🐳 Major | ⭐⭐⭐ | 0hmX | Redistributes port points uniformly along the sides of nodes to optimize routing density and prevent congestion. |
-| [#536](https://github.com/tscircuit/tscircuit-autorouter/pull/536) | 🐳 Major | ⭐⭐⭐ | 0hmX | Fixes autorouting behavior to prevent illegal cross-layer path interactions in the autorouter. |
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#539](https://github.com/tscircuit/tscircuit-autorouter/pull/539) | 🐌 Tiny | Ayushjhawar8 | Updates the graphics-debug dependency to version 0.0.77 in the package.json file. |
-
-</details>
 
 ### [tscircuit/docs](https://github.com/tscircuit/docs)
 
@@ -440,22 +505,18 @@ pie
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#28](https://github.com/tscircuit/pcbburn.com/pull/28) | 🐳 Major | ⭐⭐⭐ | AnasSarkiz | Adds support for the solderMaskMarginPercent option, enabling percentage-based soldermask margin adjustments in PCB design settings. |
+| [#30](https://github.com/tscircuit/pcbburn.com/pull/30) | 🐙 Minor | ⭐⭐ | AnasSarkiz | Fixes disruptive viewport resets in the SVG preview when interacting with the PCB burn settings panel, preserving user zoom and pan states during configuration changes. |
 
 <details>
-<summary>🐌 Tiny Contributions (2)</summary>
+<summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#29](https://github.com/tscircuit/pcbburn.com/pull/29) | 🐌 Tiny | ArnavK-09 | Refactors UI components to improve mobile responsiveness and adjusts styling for better layout on mobile devices. |
+| [#31](https://github.com/tscircuit/pcbburn.com/pull/31) | 🐌 Tiny | AnasSarkiz | Adds userSelect: none styles to SVG container divs, overlay info badges, and empty state elements in the PreviewCanvas component to prevent accidental text selection during pan and zoom interactions. |
 | [#27](https://github.com/tscircuit/pcbburn.com/pull/27) | 🐌 Tiny | AnasSarkiz | Updates the version of the circuit-json-to-lbrn dependency from 0.0.39 to 0.0.40 in package.json |
 
 </details>
-
-### [tscircuit/graphics-debug](https://github.com/tscircuit/graphics-debug)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#92](https://github.com/tscircuit/graphics-debug/pull/92) | 🐳 Major | ⭐⭐⭐ | Ayushjhawar8 | Adds a diagonal measurement label to the dimension tool, displaying the distance of diagonal measurements in the graphics interface. |
 
 ## Changes by Contributor
 
@@ -479,10 +540,12 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (81)</summary>
+<summary>🐌 Tiny Contributions (85)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#610](https://github.com/tscircuit/pcb-viewer/pull/610) | 🐌 Tiny | Automated package update |
+| [#608](https://github.com/tscircuit/pcb-viewer/pull/608) | 🐌 Tiny | Automated package update to version 1.11.315 |
 | [#1867](https://github.com/tscircuit/tscircuit/pull/1867) | 🐌 Tiny | Updates the package version from 0.0.1150 to 0.0.1151 in package.json |
 | [#1866](https://github.com/tscircuit/tscircuit/pull/1866) | 🐌 Tiny | Automated package update |
 | [#1864](https://github.com/tscircuit/tscircuit/pull/1864) | 🐌 Tiny | Automated package update |
@@ -537,8 +600,8 @@ pie
 | [#2322](https://github.com/tscircuit/runframe/pull/2322) | 🐌 Tiny | Automated package update |
 | [#2316](https://github.com/tscircuit/runframe/pull/2316) | 🐌 Tiny | Updates the tscircuiteval package to version 0.0.585 in package.json |
 | [#2317](https://github.com/tscircuit/runframe/pull/2317) | 🐌 Tiny | Automated package update |
-| [#1638](https://github.com/tscircuit/cli/pull/1638) | 🐌 Tiny | Automated package update |
 | [#1637](https://github.com/tscircuit/cli/pull/1637) | 🐌 Tiny | Automated package update |
+| [#1638](https://github.com/tscircuit/cli/pull/1638) | 🐌 Tiny | Automated package update |
 | [#1635](https://github.com/tscircuit/cli/pull/1635) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.1482 to 0.0.1483 |
 | [#1636](https://github.com/tscircuit/cli/pull/1636) | 🐌 Tiny | Automated package update |
 | [#1633](https://github.com/tscircuit/cli/pull/1633) | 🐌 Tiny | Automated package update |
@@ -560,10 +623,30 @@ pie
 | [#831](https://github.com/tscircuit/svg.tscircuit.com/pull/831) | 🐌 Tiny | Updates the tscircuit package from version 0.0.1146 to 0.0.1147 in package.json |
 | [#825](https://github.com/tscircuit/svg.tscircuit.com/pull/825) | 🐌 Tiny | Updates the tscircuit package version from 0.0.1139 to 0.0.1140 in package.json |
 | [#826](https://github.com/tscircuit/svg.tscircuit.com/pull/826) | 🐌 Tiny | Automated package update |
+| [#44](https://github.com/tscircuit/circuit-json-to-step/pull/44) | 🐌 Tiny | Automated package update |
+| [#118](https://github.com/tscircuit/circuit-to-canvas/pull/118) | 🐌 Tiny | Updates the package version from 0.0.49 to 0.0.50 in package.json |
 | [#91](https://github.com/tscircuit/circuit-json-to-lbrn/pull/91) | 🐌 Tiny | Automated package update |
 | [#89](https://github.com/tscircuit/circuit-json-to-lbrn/pull/89) | 🐌 Tiny | Automated package update |
 | [#87](https://github.com/tscircuit/circuit-json-to-lbrn/pull/87) | 🐌 Tiny | Automated package update |
 | [#12](https://github.com/tscircuit/curvy-trace-solver/pull/12) | 🐌 Tiny | Automated package update |
+
+</details>
+
+### [Ayushjhawar8](https://github.com/Ayushjhawar8)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#92](https://github.com/tscircuit/graphics-debug/pull/92) | 🐳 Major | ⭐⭐⭐ | Adds a diagonal measurement label to the dimension tool, displaying the distance of diagonal measurements in the graphics interface. |
+| [#609](https://github.com/tscircuit/pcb-viewer/pull/609) | 🐙 Minor | ⭐⭐ | Fixes the issue where the d key hotkey triggers while typing in input fields, preventing unintended actions. |
+
+<details>
+<summary>🐌 Tiny Contributions (3)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#1609](https://github.com/tscircuit/cli/pull/1609) | 🐌 Tiny | Adds tests to verify the execution of buildCommand and prebuildCommand when using the --ci flag in the tscircuit CLI. |
+| [#539](https://github.com/tscircuit/tscircuit-autorouter/pull/539) | 🐌 Tiny | Updates the graphics-debug dependency to version 0.0.77 in the package.json file. |
+| [#43](https://github.com/tscircuit/circuit-json-to-step/pull/43) | 🐌 Tiny | Moves tscircuitcircuit-json-util from dependencies to peerDependencies in package.json |
 
 </details>
 
@@ -573,14 +656,18 @@ pie
 |------|--------|--------|-------------|
 | [#413](https://github.com/tscircuit/circuit-json/pull/413) | 🐳 Major | ⭐⭐⭐ | Refactors soldermask properties in the pcb_smtpad to use individual margin properties instead of a single margin and dimensions. |
 | [#410](https://github.com/tscircuit/circuit-json/pull/410) | 🐳 Major | ⭐⭐⭐ | Adds soldermask_center_offset, soldermask_width, and soldermask_height properties to rectangular pads in the PCB design schema. |
+| [#481](https://github.com/tscircuit/circuit-to-svg/pull/481) | 🐳 Major | ⭐⭐⭐ | Implemented soldermask_margin_left, soldermask_margin_top, soldermask_margin_right, and soldermask_margin_bottom for rect and rotated_rect SMT pads, allowing for positive and negative margin values to control soldermask coverage. |
+| [#554](https://github.com/tscircuit/props/pull/554) | 🐙 Minor | ⭐⭐ | Adds individual solder mask margin properties for rectangular and rotated rectangular surface mount pads, allowing for more precise control over solder mask dimensions. |
 | [#480](https://github.com/tscircuit/footprinter/pull/480) | 🐙 Minor | ⭐⭐ | Adds support for resistor array naming conventions that use x instead of underscores, allowing for formats like 1206x4. |
 | [#652](https://github.com/tscircuit/3d-viewer/pull/652) | 🐙 Minor | ⭐⭐ | Refactors the Manifold and JSCAD implementations to ensure shapes are rotated at the origin prior to being translated to their final positions, improving the accuracy of shape placements. |
+| [#117](https://github.com/tscircuit/circuit-to-canvas/pull/117) | 🐙 Minor | ⭐⭐ | Adds support for asymmetric soldermask margins for rectangular and rotated rectangular SMT pads in PCB designs. |
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#607](https://github.com/tscircuit/pcb-viewer/pull/607) | 🐌 Tiny | Adds a new fixture for asymmetric soldermask margins for rectangular and rotated rectangular SMT pads in the PCB viewer. |
 | [#479](https://github.com/tscircuit/footprinter/pull/479) | 🐌 Tiny | Changes resistor array definitions to use numeric pad parameters for dimensions instead of strings. |
 
 </details>
@@ -630,8 +717,8 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#1834](https://github.com/tscircuit/core/pull/1834) | 🐳 Major | ⭐⭐⭐ | Updates the autorouting algorithm to relax the port point rip threshold, potentially improving routing efficiency in complex circuits. |
 | [#1833](https://github.com/tscircuit/core/pull/1833) | 🐳 Major | ⭐⭐⭐ | Updates the autorouter to accept an effort level parameter and adjusts the size of 1206x4 jumpers to match the 3612 metric. |
+| [#1834](https://github.com/tscircuit/core/pull/1834) | 🐳 Major | ⭐⭐⭐ | Updates the autorouting algorithm to relax the port point rip threshold, potentially improving routing efficiency in complex circuits. |
 | [#540](https://github.com/tscircuit/tscircuit-autorouter/pull/540) | 🐳 Major | ⭐⭐⭐ | Adds minimum and maximum ripping power factor thresholds and tracks rip count in statistics for autorouting. |
 | [#534](https://github.com/tscircuit/tscircuit-autorouter/pull/534) | 🐳 Major | ⭐⭐⭐ | Updates jumper configurations and calculations for node failure probability in the autorouter, including adjustments to jumper sizes and counts. |
 | [#11](https://github.com/tscircuit/curvy-trace-solver/pull/11) | 🐳 Major | ⭐⭐⭐ | angled trace solver 1 angled trace solver test and benchmark shape penalties and better corning |
@@ -695,22 +782,6 @@ pie
 
 </details>
 
-### [Ayushjhawar8](https://github.com/Ayushjhawar8)
-
-| PRs # | Impact | Rating | Description |
-|------|--------|--------|-------------|
-| [#92](https://github.com/tscircuit/graphics-debug/pull/92) | 🐳 Major | ⭐⭐⭐ | Adds a diagonal measurement label to the dimension tool, displaying the distance of diagonal measurements in the graphics interface. |
-
-<details>
-<summary>🐌 Tiny Contributions (2)</summary>
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#1609](https://github.com/tscircuit/cli/pull/1609) | 🐌 Tiny | Adds tests to verify the execution of buildCommand and prebuildCommand when using the --ci flag in the tscircuit CLI. |
-| [#539](https://github.com/tscircuit/tscircuit-autorouter/pull/539) | 🐌 Tiny | Updates the graphics-debug dependency to version 0.0.77 in the package.json file. |
-
-</details>
-
 ### [Sahil-Gupta584](https://github.com/Sahil-Gupta584)
 
 
@@ -740,12 +811,14 @@ pie
 | [#28](https://github.com/tscircuit/pcbburn.com/pull/28) | 🐳 Major | ⭐⭐⭐ | Adds support for the solderMaskMarginPercent option, enabling percentage-based soldermask margin adjustments in PCB design settings. |
 | [#88](https://github.com/tscircuit/circuit-json-to-lbrn/pull/88) | 🐙 Minor | ⭐⭐ | Adds a solderMaskMarginPercent option for percentage-based solder mask margins that scale with PCB element dimensions, ensuring backward compatibility and clamping to prevent negative openings. |
 | [#86](https://github.com/tscircuit/circuit-json-to-lbrn/pull/86) | 🐙 Minor | ⭐⭐ | Summary Fixed critical bug where traces failed to merge with connected rectangular plated hole pads, causing separate shapes instead of continuous copper. Implemented by refactoring copper geometry handling to eliminate code duplication and ensure consistent net-connection behavior.  Changes New helper function: addCopperGeometryToNetOrProject() centralizes net-connected vs. unconnected copper geometry logic Refactored 10 handlers: All plated hole (4) and SMT pad (6) handlers now use standardized merging logic Bug resolution: Plated hole pads correctly merge with traces on same net instead of creating gapsoverlaps Test coverage: Added example04 test case demonstrating proper trace-pad continuity |
+| [#30](https://github.com/tscircuit/pcbburn.com/pull/30) | 🐙 Minor | ⭐⭐ | Fixes disruptive viewport resets in the SVG preview when interacting with the PCB burn settings panel, preserving user zoom and pan states during configuration changes. |
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#31](https://github.com/tscircuit/pcbburn.com/pull/31) | 🐌 Tiny | Adds userSelect: none styles to SVG container divs, overlay info badges, and empty state elements in the PreviewCanvas component to prevent accidental text selection during pan and zoom interactions. |
 | [#27](https://github.com/tscircuit/pcbburn.com/pull/27) | 🐌 Tiny | Updates the version of the circuit-json-to-lbrn dependency from 0.0.39 to 0.0.40 in package.json |
 
 </details>
