@@ -1,24 +1,24 @@
 import * as fs from "fs"
-import type { AnalyzedPR, ContributorStats } from "lib/types"
-import { getRepos } from "lib/data-retrieval/getRepos"
+import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
+import { getLastWednesday } from "lib/ai/date-utils"
 import {
   generateMarkdown,
   scoreToStarString,
 } from "lib/data-processing/generateMarkdown"
-import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
+import {
+  getExistingPrAnalysis,
+  loadPrAnalysis,
+  storePrAnalysis,
+} from "lib/data-processing/storePrAnalysis"
 import { getAllPRs } from "lib/data-retrieval/getAllPRs"
 import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
-import { getLastWednesday } from "lib/ai/date-utils"
-import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
+import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
+import { getRepos } from "lib/data-retrieval/getRepos"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
-import {
-  storePrAnalysis,
-  loadPrAnalysis,
-  getExistingPrAnalysis,
-} from "lib/data-processing/storePrAnalysis"
-import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 import { postMergeComment } from "lib/notifications/notify-pr-change"
+import type { AnalyzedPR, ContributorStats } from "lib/types"
+import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
 export async function generateOverview(startDate: string) {
   const startDateString = startDate
@@ -404,6 +404,9 @@ async function generateAndWriteFiles(
 
 export async function generateWeeklyOverview() {
   const weekStart = getLastWednesday(new Date())
-  const weekStartString = weekStart.toISOString().split("T")[0]
+  const weekStartOffset = new Date(
+    weekStart.getTime() - 5.5 * 60 * 60 * 1000, // 5.5 hours
+  )
+  const weekStartString = weekStartOffset.toISOString().split("T")[0] // 6:30 pm UTC Tuesday
   await generateOverview(weekStartString)
 }

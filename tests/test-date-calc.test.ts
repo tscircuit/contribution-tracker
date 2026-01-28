@@ -61,3 +61,10 @@ test("normalizes to midnight", () => {
   expect(result.getUTCSeconds()).toBe(0)
   expect(result.getUTCMilliseconds()).toBe(0)
 })
+
+test("returns previous Wednesday when early Wednesday in UTC", () => {
+  const earlyWednesday = new Date("2024-01-17T00:30:00.000Z")
+  expect(getLastWednesday(earlyWednesday).toISOString().split("T")[0]).toBe(
+    "2024-01-17",
+  )
+})
