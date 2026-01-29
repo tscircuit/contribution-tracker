@@ -12,13 +12,6 @@ You can find AI-generated monthly changelogs in the [changelogs directory](./cha
 
 > Want to run locally? See the [Development Section](#development)
 
-The current week is shown below. There are 4 major sections:
-
-- [Contributor Overview](#contributor-overview)
-- [PRs by Repository](#prs-by-repository)
-- [PRs by Contributor](#changes-by-contributor)
-- [Scoring & Sponsorship System](#scoring--sponsorship-system)
-
 ## Current Week
 
 <!-- START_CURRENT_WEEK -->
