@@ -1,8 +1,8 @@
 import { octokit } from "lib/sdks"
 import type {
+  ContributorStats,
   PullRequestWithReviews,
   ReviewerStats,
-  ContributorStats,
 } from "../types"
 
 export async function getAllPRs(
@@ -102,8 +102,6 @@ export async function getAllPRs(
             acc[reviewer].rejectionsGiven++
           }
         } else {
-          // For non-merged PRs, count all reviews
-          acc[reviewer].prNumbers?.add(pr.number)
           if (review.state === "APPROVED") {
             acc[reviewer].approvalsGiven++
           } else if (review.state === "CHANGES_REQUESTED") {
