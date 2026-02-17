@@ -8,6 +8,7 @@ import type {
 export async function getAllPRs(
   repo: string,
   since: string,
+  currentTime: Date = new Date(),
 ): Promise<PullRequestWithReviews[]> {
   const [owner, repo_name] = repo.split("/")
   const fetchPRs = async (page = 1): Promise<any[]> => {
@@ -28,15 +29,21 @@ export async function getAllPRs(
   }
 
   const prs = await fetchPRs()
+  const sinceDate = new Date(since)
+  const currentTimeMs = currentTime.getTime()
   const filteredPRs = prs.filter((pr) => {
     if (pr.user.login.includes("renovate")) return false
     const createdDate = pr.created_at ? new Date(pr.created_at) : null
     const mergedDate = pr.merged_at ? new Date(pr.merged_at) : null
-    const sinceDate = new Date(since)
-    return (
-      (createdDate && createdDate.getTime() >= sinceDate.getTime()) ||
-      (mergedDate && mergedDate.getTime() >= sinceDate.getTime())
-    )
+    const createdInRange =
+      createdDate &&
+      createdDate.getTime() >= sinceDate.getTime() &&
+      createdDate.getTime() <= currentTimeMs
+    const mergedInRange =
+      mergedDate &&
+      mergedDate.getTime() >= sinceDate.getTime() &&
+      mergedDate.getTime() <= currentTimeMs
+    return createdInRange || mergedInRange
   })
 
   const fetchReviews = async (prNumber: number, page = 1): Promise<any[]> => {

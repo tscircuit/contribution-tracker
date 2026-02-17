@@ -1,11 +1,12 @@
-import { octokit } from "lib/sdks"
-import type { MergedPullRequest } from "lib/types"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { filterDiff } from "lib/data-processing/filter-diff"
+import { octokit } from "lib/sdks"
+import type { MergedPullRequest } from "lib/types"
 
 export async function getMergedPRs(
   repo: string,
   since: string,
+  currentTime: Date = new Date(),
 ): Promise<MergedPullRequest[]> {
   const [owner, repo_name] = repo.split("/")
   const { data } = await octokit.pulls.list({
@@ -17,13 +18,18 @@ export async function getMergedPRs(
     per_page: 100,
   })
 
-  const filteredPRs = data.filter(
-    (pr) =>
-      pr.merged_at &&
-      new Date(pr.merged_at).getTime() >= new Date(since).getTime() &&
+  const sinceDate = new Date(since)
+  const currentTimeMs = currentTime.getTime()
+  const filteredPRs = data.filter((pr) => {
+    if (!pr.merged_at) return false
+    const mergedTime = new Date(pr.merged_at).getTime()
+    const inRange =
+      mergedTime >= sinceDate.getTime() && mergedTime <= currentTimeMs
+    const notRevert =
       !pr.title?.toLowerCase().includes("revert") &&
-      (pr.body ? !pr.body?.toLowerCase().includes("revert") : true),
-  )
+      (pr.body ? !pr.body?.toLowerCase().includes("revert") : true)
+    return inRange && notRevert
+  })
 
   // Fetch diff content for each PR
   const prsWithDiff = await Promise.all(

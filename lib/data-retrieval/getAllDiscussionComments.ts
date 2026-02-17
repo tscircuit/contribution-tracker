@@ -7,6 +7,7 @@ import type { DiscussionComment } from "lib/types"
 export async function getAllDiscussionComments(
   startDate: string,
   repo: string = "tscircuit/tscircuit",
+  currentTime: Date = new Date(),
 ): Promise<DiscussionComment[]> {
   try {
     const [owner, repoName] = repo.split("/")
@@ -20,6 +21,7 @@ export async function getAllDiscussionComments(
 
     // Format date for GraphQL query
     const formattedDate = new Date(startDate).toISOString()
+    const currentTimeMs = currentTime.getTime()
 
     // Fetch organization discussion comments
     const query = `
@@ -77,10 +79,11 @@ export async function getAllDiscussionComments(
             createdAt: discussion.createdAt,
           })
           for (const comment of discussion.comments.nodes) {
-            // Only include comments by the specified user and after the start date
+            // Only include comments by the specified user and within the date range
+            const commentTime = new Date(comment.createdAt).getTime()
             if (
-              new Date(comment.createdAt).getTime() >=
-              new Date(formattedDate).getTime()
+              commentTime >= new Date(formattedDate).getTime() &&
+              commentTime <= currentTimeMs
             ) {
               discussionComments.push({
                 discussionTitle: discussion.title,
@@ -96,11 +99,13 @@ export async function getAllDiscussionComments(
         }
       }
     }
-    return discussionComments.filter(
-      (comment) =>
-        new Date(comment.createdAt).getTime() >=
-        new Date(formattedDate).getTime(),
-    )
+    return discussionComments.filter((comment) => {
+      const commentTime = new Date(comment.createdAt).getTime()
+      return (
+        commentTime >= new Date(formattedDate).getTime() &&
+        commentTime <= currentTimeMs
+      )
+    })
   } catch (error) {
     console.error(`Error fetching discussion comments: ${error}`)
     return []
