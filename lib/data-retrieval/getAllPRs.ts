@@ -4,6 +4,7 @@ import type {
   PullRequestWithReviews,
   ReviewerStats,
 } from "../types"
+import { batchProcess } from "../utils/batch-process"
 
 export async function getAllPRs(
   repo: string,
@@ -61,8 +62,10 @@ export async function getAllPRs(
     return data
   }
 
-  const prsWithDetails = await Promise.all(
-    filteredPRs.map(async (pr) => {
+  // Process PRs in batches to avoid GitHub's secondary rate limits
+  const prsWithDetails = await batchProcess(
+    filteredPRs,
+    async (pr) => {
       const reviews = await fetchReviews(pr.number)
       const isMerged = !!pr.merged_at
 
@@ -132,7 +135,9 @@ export async function getAllPRs(
               ? "merged"
               : "opened",
       } as PullRequestWithReviews
-    }),
+    },
+    20, // Process 20 PRs at a time
+    100, // 100ms delay between batches
   )
 
   // Map of reviewer usernames to their set of reviewed PR numbers

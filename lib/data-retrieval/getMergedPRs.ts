@@ -2,6 +2,7 @@ import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import { filterDiff } from "lib/data-processing/filter-diff"
 import { octokit } from "lib/sdks"
 import type { MergedPullRequest } from "lib/types"
+import { batchProcess } from "../utils/batch-process"
 
 export async function getMergedPRs(
   repo: string,
@@ -31,9 +32,10 @@ export async function getMergedPRs(
     return inRange && notRevert
   })
 
-  // Fetch diff content for each PR
-  const prsWithDiff = await Promise.all(
-    filteredPRs.map(async (pr) => {
+  // Fetch diff content for each PR (batched to avoid rate limits)
+  const prsWithDiff = await batchProcess(
+    filteredPRs,
+    async (pr) => {
       const { data: diffData } = await octokit.pulls
         .get({
           owner,
@@ -89,7 +91,9 @@ export async function getMergedPRs(
         hasMajorTag: hasMajorTag,
         manualStarRating: manualStarRating ?? undefined,
       }
-    }),
+    },
+    20, // Process 20 PRs at a time
+    100, // 100ms delay between batches
   )
 
   // Process complete
