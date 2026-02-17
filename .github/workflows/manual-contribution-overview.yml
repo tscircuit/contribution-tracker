@@ -1,0 +1,59 @@
+name: Manual Contribution Overview
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date to simulate workflow run (YYYY-MM-DD format, will use 18:00 UTC)'
+        required: true
+        type: string
+
+jobs:
+  generate-overview:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
+
+    - name: Get current week
+      id: date
+      run: echo "week=$(date +'%G-W%V')" >> $GITHUB_OUTPUT
+
+    - name: Cache shared directories
+      uses: actions/cache@v4
+      with:
+        path: |
+          .cache
+          .cache-ai
+        key: shared-cache-${{ runner.os }}-${{ steps.date.outputs.week }}
+        restore-keys: |
+          shared-cache-${{ runner.os }}-
+
+    - name: Install dependencies
+      run: bun install
+
+    - name: Run script for specified date
+      run: bun scripts/generate-overview-for-date.ts ${{ github.event.inputs.date }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
+        OPENAI_API_KEY: ${{ secrets.TSCIRCUIT_BOT_OPENAI_KEY }}
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add contribution-overviews
+        git add README.md
+        git add pr-analysis
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update contribution overviews for ${{ github.event.inputs.date }}"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main

@@ -20,7 +20,10 @@ import { postMergeComment } from "lib/notifications/notify-pr-change"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
-export async function generateOverview(startDate: string) {
+export async function generateOverview(
+  startDate: string,
+  currentTime: Date = new Date(),
+) {
   const startDateString = startDate
 
   const repos = await getRepos()
@@ -45,7 +48,7 @@ export async function generateOverview(startDate: string) {
     })
     repoOwnersMap[repo] = repoOwners.map((content) => content.owners).flat()
     console.log(`Found ${repoOwners.length} repo owners`)
-    const prsWithReviews = await getAllPRs(repo, startDate)
+    const prsWithReviews = await getAllPRs(repo, startDate, currentTime)
     console.log(`Found ${prsWithReviews.length} total PRs`)
     for (const pr of prsWithReviews) {
       if (pr.user.login.includes("renovate")) {
@@ -162,7 +165,7 @@ export async function generateOverview(startDate: string) {
       },
     )
 
-    const mergedPrs = await getMergedPRs(repo, startDateString)
+    const mergedPrs = await getMergedPRs(repo, startDateString, currentTime)
     console.log(`Found ${mergedPrs.length} merged PRs`)
     const mergedPrsWithAnalysisResults = await Promise.all(
       mergedPrs.map(async (pr) => {
@@ -264,6 +267,7 @@ export async function generateOverview(startDate: string) {
   const allGithubDiscussions = await processDiscussionsForContributors(
     startDateString,
     contributorData,
+    currentTime,
   )
   const processDiscussionsPromises = Object.keys(allGithubDiscussions).map(
     async (contributor) => {
