@@ -24,7 +24,8 @@ export async function generateOverview(
   startDate: string,
   currentTime: Date = new Date(),
 ) {
-  const startDateString = startDate
+  // Extract date portion for file naming (handles both YYYY-MM-DD and full ISO timestamp)
+  const startDateString = startDate.split("T")[0]
 
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
@@ -165,7 +166,7 @@ export async function generateOverview(
       },
     )
 
-    const mergedPrs = await getMergedPRs(repo, startDateString, currentTime)
+    const mergedPrs = await getMergedPRs(repo, startDate, currentTime)
     console.log(`Found ${mergedPrs.length} merged PRs`)
     const mergedPrsWithAnalysisResults = await Promise.all(
       mergedPrs.map(async (pr) => {
@@ -213,7 +214,7 @@ export async function generateOverview(
       ...mergedPrsWithAnalysisResults.filter((a) => a !== null),
     )
 
-    storePrAnalysis(mergedPrsWithAnalysis, startDate)
+    storePrAnalysis(mergedPrsWithAnalysis, startDateString)
 
     /*
      * Fetching bountied issues and issues created for every contributor at this
@@ -265,7 +266,7 @@ export async function generateOverview(
   }
   // Process GitHub Discussions for all contributors
   const allGithubDiscussions = await processDiscussionsForContributors(
-    startDateString,
+    startDate,
     contributorData,
     currentTime,
   )
@@ -408,6 +409,6 @@ async function generateAndWriteFiles(
 
 export async function generateWeeklyOverview() {
   const weekStart = getLastTuesday1830(new Date())
-  const weekStartString = weekStart.toISOString().split("T")[0]
+  const weekStartString = weekStart.toISOString()
   await generateOverview(weekStartString)
 }
