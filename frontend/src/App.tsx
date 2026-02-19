@@ -88,6 +88,9 @@ const PrSection = ({
 function App() {
   const {
     dateUsed,
+    selectedWeek,
+    availableWeeks,
+    setSelectedWeek,
     prsResultant,
     selectedContributor,
     isModalOpen,
@@ -96,6 +99,7 @@ function App() {
     setIsModalOpen,
     loading,
     error,
+    lastWeeksData,
   } = useContributorsData()
 
   if (loading) {
@@ -142,7 +146,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 space-y-8">
-        <Header dateUsed={dateUsed} />
+        <Header
+          dateUsed={dateUsed}
+          selectedWeek={selectedWeek}
+          availableWeeks={availableWeeks}
+          onSelectWeek={setSelectedWeek}
+        />
 
         <ContributorOverview
           contributors={sortedContributors}
@@ -205,7 +214,10 @@ function App() {
           }
         >
           {selectedContributor && (
-            <ContributorGraph username={selectedContributor} />
+            <ContributorGraph
+              username={selectedContributor}
+              lastWeeksData={lastWeeksData}
+            />
           )}
           {selectedContributor &&
             prsResultant?.prsByContributors[selectedContributor] && (

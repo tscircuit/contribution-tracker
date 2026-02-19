@@ -12,7 +12,7 @@ const LOCAL_BASE_URL = "http://localhost:5173"
 export const getContributionOverviewsUrl = () =>
   isDev
     ? `${LOCAL_BASE_URL}/api/repos/tscircuit/contribution-tracker/contents/contribution-overviews`
-    : `${REPO_BASE_URL}/contents/${CONTRIBUTION_OVERVIEWS_PATH}`
+    : `${REPO_BASE_URL}/contents/${CONTRIBUTION_OVERVIEWS_PATH}?per_page=100`
 
 export const getContributionOverviewMarkdownUrl = (date: string) =>
   isDev
