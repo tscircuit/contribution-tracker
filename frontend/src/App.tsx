@@ -4,7 +4,7 @@ import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { Modal } from "./components/Modal"
 import { MaintainersList } from "./components/MaintainersList"
-import { useContributorsData } from "./hooks/useContributorsData"
+import { useContributorsStats } from "./hooks/useContributorsStats"
 import ContributorGraph from "./components/ContributorGraph"
 import { PrsTable } from "./components/PrsTable"
 import { AlertCircleIcon } from "lucide-react"
@@ -12,11 +12,11 @@ import { type PrAnalysisResult } from "./types/contributor"
 
 const PrSection = ({
   title,
-  prsData,
+  prsByGroup,
   enableContributorToggle = false,
 }: {
   title: string
-  prsData?: Record<string, PrAnalysisResult[]>
+  prsByGroup?: Record<string, PrAnalysisResult[]>
   enableContributorToggle?: boolean
 }) => {
   const [expandedContributors, setExpandedContributors] = useState<Set<string>>(
@@ -24,9 +24,9 @@ const PrSection = ({
   )
 
   useEffect(() => {
-    if (enableContributorToggle && prsData) {
-      const allContributors = Object.keys(prsData).filter(
-        (key) => prsData[key] && prsData[key].length > 0,
+    if (enableContributorToggle && prsByGroup) {
+      const allContributors = Object.keys(prsByGroup).filter(
+        (key) => prsByGroup[key] && prsByGroup[key].length > 0,
       )
       setExpandedContributors((prev) => {
         const next = new Set(prev)
@@ -34,7 +34,7 @@ const PrSection = ({
         return next
       })
     }
-  }, [enableContributorToggle, prsData])
+  }, [enableContributorToggle, prsByGroup])
 
   const toggleContributor = (contributor: string) => {
     setExpandedContributors((prev: Set<string>) => {
@@ -48,7 +48,7 @@ const PrSection = ({
     })
   }
 
-  if (!prsData || Object.keys(prsData).length === 0) {
+  if (!prsByGroup || Object.keys(prsByGroup).length === 0) {
     return null
   }
 
@@ -57,7 +57,7 @@ const PrSection = ({
       <div className="mb-4" id={title.toLowerCase().replace(/ /g, "-")}>
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
       </div>
-      {Object.entries(prsData).map(([key, prs]) => {
+      {Object.entries(prsByGroup).map(([key, prs]) => {
         if (!prs || prs.length === 0) {
           return null
         }
@@ -99,8 +99,8 @@ function App() {
     setIsModalOpen,
     loading,
     error,
-    lastWeeksData,
-  } = useContributorsData()
+    lastWeeksStats,
+  } = useContributorsStats()
 
   if (loading) {
     return (
@@ -121,10 +121,10 @@ function App() {
           <div className="flex flex-col items-center text-center">
             <AlertCircleIcon className="h-10 w-10 text-red-500 mb-4" />
             <h2 className="text-xl sm:text-2xl font-semibold text-red-700 mb-3">
-              Error Fetching Data
+              Error Fetching Stats
             </h2>
             <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              We encountered an issue retrieving the contribution data. Please
+              We encountered an issue retrieving contribution stats. Please
               try again later.
             </p>
             {error.message && (
@@ -194,12 +194,12 @@ function App() {
 
         <PrSection
           title="PRs by Repository"
-          prsData={prsResultant?.prsByRepos}
+          prsByGroup={prsResultant?.prsByRepos}
         />
 
         <PrSection
           title="PRs by Contributors"
-          prsData={prsResultant?.prsByContributors}
+          prsByGroup={prsResultant?.prsByContributors}
           enableContributorToggle={true}
         />
 
@@ -216,7 +216,7 @@ function App() {
           {selectedContributor && (
             <ContributorGraph
               username={selectedContributor}
-              lastWeeksData={lastWeeksData}
+              lastWeeksStats={lastWeeksStats}
             />
           )}
           {selectedContributor &&

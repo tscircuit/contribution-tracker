@@ -10,6 +10,7 @@ import {
   ReferenceLine,
   Label,
 } from "recharts"
+import { type ContributorStats } from "../types/contributor"
 
 const DROPDOWN_MENU_ITEMS = [
   { key: "prsMerged", label: "Pull Requests Merged" },
@@ -36,17 +37,16 @@ const SCORE_LABELS = {
 
 export default function ContributorGraph({
   username,
-  lastWeeksData,
+  lastWeeksStats,
 }: {
   username: string
-  lastWeeksData: (username: string) => any[]
+  lastWeeksStats: (username: string) => Array<ContributorStats & { date: string }>
 }) {
   const [selectedMetric, setSelectedMetric] = useState("prsMerged")
 
-  // Fetch graph data based on the username and includeSkeletonDataSet toggle.
-  const graphData = useMemo(
-    () => lastWeeksData(username),
-    [username, lastWeeksData],
+  const graphPoints = useMemo(
+    () => lastWeeksStats(username),
+    [username, lastWeeksStats],
   )
 
   return (
@@ -69,7 +69,7 @@ export default function ContributorGraph({
       </div>
       <div style={{ width: "100%", height: 400 }}>
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={graphData}>
+          <LineChart data={graphPoints}>
             {selectedMetric === "score" &&
               Object.entries(SCORE_LABELS).map(([score, label]) => (
                 <ReferenceLine
