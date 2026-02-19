@@ -40,7 +40,9 @@ export default function ContributorGraph({
   lastWeeksStats,
 }: {
   username: string
-  lastWeeksStats: (username: string) => Array<ContributorStats & { date: string }>
+  lastWeeksStats: (
+    username: string,
+  ) => Array<ContributorStats & { date: string }>
 }) {
   const [selectedMetric, setSelectedMetric] = useState("prsMerged")
 

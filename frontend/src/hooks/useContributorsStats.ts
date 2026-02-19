@@ -64,11 +64,16 @@ function parseOverviewWeeks(entries: OverviewFileEntry[]): {
     throw new Error("No JSON overview files found")
   }
 
-  const weeks = latestJsonEntries.map((entry) => entry.name.replace(".json", ""))
-  const weekLookup = latestJsonEntries.reduce<OverviewWeekLookup>((acc, entry) => {
-    acc[entry.name.replace(".json", "")] = entry.download_url
-    return acc
-  }, {})
+  const weeks = latestJsonEntries.map((entry) =>
+    entry.name.replace(".json", ""),
+  )
+  const weekLookup = latestJsonEntries.reduce<OverviewWeekLookup>(
+    (acc, entry) => {
+      acc[entry.name.replace(".json", "")] = entry.download_url
+      return acc
+    },
+    {},
+  )
 
   return { weeks, weekLookup }
 }
@@ -162,9 +167,8 @@ export function useContributorsStats(): UseContributorsStateReturn {
   const [error, setError] = useState<Error | null>(null)
   const [availableWeeks, setAvailableWeeks] = useState<string[]>([])
   const [selectedWeek, setSelectedWeek] = useState<string>("")
-  const [overviewWeekLookup, setOverviewWeekLookup] = useState<OverviewWeekLookup>(
-    {},
-  )
+  const [overviewWeekLookup, setOverviewWeekLookup] =
+    useState<OverviewWeekLookup>({})
 
   useEffect(() => {
     async function loadAvailableWeeks() {
@@ -244,11 +248,13 @@ export function useContributorsStats(): UseContributorsStateReturn {
     window.history.replaceState({}, "", url.toString())
   }, [selectedWeek])
 
-  const sortedContributors = Object.entries(contributors).sort((left, right) => {
-    const scoreDiff = (right[1].score ?? 0) - (left[1].score ?? 0)
-    if (scoreDiff !== 0) return scoreDiff
-    return (right[1].prsMerged ?? 0) - (left[1].prsMerged ?? 0)
-  })
+  const sortedContributors = Object.entries(contributors).sort(
+    (left, right) => {
+      const scoreDiff = (right[1].score ?? 0) - (left[1].score ?? 0)
+      if (scoreDiff !== 0) return scoreDiff
+      return (right[1].prsMerged ?? 0) - (left[1].prsMerged ?? 0)
+    },
+  )
 
   const lastWeeksStats = useCallback(
     (username: string): ContributorTrendPoint[] => {
@@ -281,7 +287,8 @@ export function useContributorsStats(): UseContributorsStateReturn {
       )
 
       const sorted = uniqueByWeek.sort(
-        (first, second) => first.weekStart.getTime() - second.weekStart.getTime(),
+        (first, second) =>
+          first.weekStart.getTime() - second.weekStart.getTime(),
       )
 
       return sorted.map(({ weekStart, ...stats }) => ({

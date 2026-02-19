@@ -124,8 +124,8 @@ function App() {
               Error Fetching Stats
             </h2>
             <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              We encountered an issue retrieving contribution stats. Please
-              try again later.
+              We encountered an issue retrieving contribution stats. Please try
+              again later.
             </p>
             {error.message && (
               <details className="w-full text-left bg-red-50 p-3 rounded-md border border-red-200">
