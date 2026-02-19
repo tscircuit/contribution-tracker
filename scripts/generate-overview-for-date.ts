@@ -30,10 +30,10 @@ currentTime.setUTCHours(18, 0, 0, 0)
 
 // Calculate the start date (last Tuesday at 18:30 UTC based on the current time)
 const weekStart = getLastTuesday1830(currentTime)
-const weekStartString = weekStart.toISOString().split("T")[0]
+const weekStartString = weekStart.toISOString()
 
 console.log(`Current time: ${currentTime.toISOString()}`)
-console.log(`Week start (last Tuesday): ${weekStartString}`)
+console.log(`Week start (last Tuesday): ${weekStart.toISOString()}`)
 console.log(
   `Generating overview from ${weekStartString} to ${currentTime.toISOString()}`,
 )
