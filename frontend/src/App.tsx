@@ -10,23 +10,27 @@ import { PrsTable } from "./components/PrsTable"
 import { AlertCircleIcon } from "lucide-react"
 import { type PrAnalysisResult } from "./types/contributor"
 
+type PrEntityName = string
+type PrByEntityMap = Record<PrEntityName, PrAnalysisResult[]>
+
 const PrSection = ({
   title,
-  prsByGroup,
+  prsByEntity,
   enableContributorToggle = false,
 }: {
   title: string
-  prsByGroup?: Record<string, PrAnalysisResult[]>
+  prsByEntity?: PrByEntityMap
   enableContributorToggle?: boolean
 }) => {
-  const [expandedContributors, setExpandedContributors] = useState<Set<string>>(
-    new Set(),
-  )
+  const [expandedContributors, setExpandedContributors] = useState<
+    Set<PrEntityName>
+  >(new Set())
 
   useEffect(() => {
-    if (enableContributorToggle && prsByGroup) {
-      const allContributors = Object.keys(prsByGroup).filter(
-        (key) => prsByGroup[key] && prsByGroup[key].length > 0,
+    if (enableContributorToggle && prsByEntity) {
+      const allContributors = Object.keys(prsByEntity).filter(
+        (entityName) =>
+          prsByEntity[entityName] && prsByEntity[entityName].length > 0,
       )
       setExpandedContributors((prev) => {
         const next = new Set(prev)
@@ -34,10 +38,10 @@ const PrSection = ({
         return next
       })
     }
-  }, [enableContributorToggle, prsByGroup])
+  }, [enableContributorToggle, prsByEntity])
 
-  const toggleContributor = (contributor: string) => {
-    setExpandedContributors((prev: Set<string>) => {
+  const toggleContributor = (contributor: PrEntityName) => {
+    setExpandedContributors((prev: Set<PrEntityName>) => {
       const next = new Set(prev)
       if (next.has(contributor)) {
         next.delete(contributor)
@@ -48,7 +52,7 @@ const PrSection = ({
     })
   }
 
-  if (!prsByGroup || Object.keys(prsByGroup).length === 0) {
+  if (!prsByEntity || Object.keys(prsByEntity).length === 0) {
     return null
   }
 
@@ -57,29 +61,29 @@ const PrSection = ({
       <div className="mb-4" id={title.toLowerCase().replace(/ /g, "-")}>
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
       </div>
-      {Object.entries(prsByGroup).map(([key, prs]) => {
+      {Object.entries(prsByEntity).map(([entityName, prs]) => {
         if (!prs || prs.length === 0) {
           return null
         }
 
         const isExpanded =
-          !enableContributorToggle || expandedContributors.has(key)
+          !enableContributorToggle || expandedContributors.has(entityName)
 
         if (enableContributorToggle) {
           return (
             <PrsTable
-              key={key}
+              key={entityName}
               prs={prs}
-              name={key}
+              name={entityName}
               inModal={false}
               collapsible={true}
               isExpanded={isExpanded}
-              onToggle={() => toggleContributor(key)}
+              onToggle={() => toggleContributor(entityName)}
             />
           )
         }
 
-        return <PrsTable key={key} prs={prs} name={key} />
+        return <PrsTable key={entityName} prs={prs} name={entityName} />
       })}
     </>
   )
@@ -194,12 +198,12 @@ function App() {
 
         <PrSection
           title="PRs by Repository"
-          prsByGroup={prsResultant?.prsByRepos}
+          prsByEntity={prsResultant?.prsByRepos}
         />
 
         <PrSection
           title="PRs by Contributors"
-          prsByGroup={prsResultant?.prsByContributors}
+          prsByEntity={prsResultant?.prsByContributors}
           enableContributorToggle={true}
         />
 
