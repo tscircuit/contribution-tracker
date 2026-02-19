@@ -115,20 +115,31 @@ export function useContributorsData(): UseContributorsDataReturn {
         setData(weekJsonData)
         setDateUsed(week)
 
-        const historicalDataPromises = Object.entries(overviewFileMap).map(
-          async ([fileWeek, url]) => {
-            const resp = await fetch(url)
-            if (!resp.ok) {
-              console.warn(
-                `Failed to fetch historical data for ${fileWeek}: ${resp.statusText}`,
-              )
-              return null
-            }
-            const jsonData = await resp.json()
-            const fileDate = new Date(fileWeek)
-            return { ...jsonData, date: fileDate }
-          },
-        )
+        const eightWeeksAgo = new Date()
+        eightWeeksAgo.setUTCDate(eightWeeksAgo.getUTCDate() - 8 * 7)
+
+        const historicalWeeks = availableWeeks.filter((weekName) => {
+          const parsed = new Date(weekName)
+          return !Number.isNaN(parsed.getTime()) && parsed >= eightWeeksAgo
+        })
+
+        const weeksToFetch = Array.from(
+          new Set([selectedWeek, ...historicalWeeks]),
+        ).filter((weekName) => overviewFileMap[weekName])
+
+        const historicalDataPromises = weeksToFetch.map(async (fileWeek) => {
+          const url = overviewFileMap[fileWeek]
+          const resp = await fetch(url)
+          if (!resp.ok) {
+            console.warn(
+              `Failed to fetch historical data for ${fileWeek}: ${resp.statusText}`,
+            )
+            return null
+          }
+          const jsonData = await resp.json()
+          const fileDate = new Date(fileWeek)
+          return { ...jsonData, date: fileDate }
+        })
 
         const historicalDataResults = await Promise.all(historicalDataPromises)
         const validHistoricalData = historicalDataResults.filter(
@@ -169,7 +180,7 @@ export function useContributorsData(): UseContributorsDataReturn {
     }
 
     fetchDataForWeek(selectedWeek)
-  }, [selectedWeek, overviewFileMap])
+  }, [selectedWeek, overviewFileMap, availableWeeks])
 
   useEffect(() => {
     if (!selectedWeek) return
@@ -207,6 +218,7 @@ export function useContributorsData(): UseContributorsDataReturn {
 
       return sortedRecords.map(({ date: _date, ...x }) => ({
         date: _date.toLocaleDateString("en-US", {
+          year: "numeric",
           month: "2-digit",
           day: "2-digit",
           timeZone: "UTC",
