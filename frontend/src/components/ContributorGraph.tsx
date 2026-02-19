@@ -37,18 +37,18 @@ const SCORE_LABELS = {
 
 export default function ContributorGraph({
   username,
-  lastWeeksStats,
+  getContributorTrend,
 }: {
   username: string
-  lastWeeksStats: (
+  getContributorTrend: (
     username: string,
   ) => Array<ContributorStats & { date: string }>
 }) {
   const [selectedMetric, setSelectedMetric] = useState("prsMerged")
 
   const graphPoints = useMemo(
-    () => lastWeeksStats(username),
-    [username, lastWeeksStats],
+    () => getContributorTrend(username),
+    [username, getContributorTrend],
   )
 
   return (

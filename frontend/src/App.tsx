@@ -99,7 +99,7 @@ function App() {
     setIsModalOpen,
     loading,
     error,
-    lastWeeksStats,
+    getContributorTrend,
   } = useContributorsStats()
 
   if (loading) {
@@ -216,7 +216,7 @@ function App() {
           {selectedContributor && (
             <ContributorGraph
               username={selectedContributor}
-              lastWeeksStats={lastWeeksStats}
+              getContributorTrend={getContributorTrend}
             />
           )}
           {selectedContributor &&

@@ -31,7 +31,7 @@ interface UseContributorsStateReturn {
   selectedWeek: string
   availableWeeks: string[]
   setSelectedWeek: (week: string) => void
-  lastWeeksStats: (username: string) => ContributorTrendPoint[]
+  getContributorTrend: (username: string) => ContributorTrendPoint[]
   isModalOpen: boolean
   sortedContributors: [string, ContributorStats][]
   setSelectedContributor: (username?: string) => void
@@ -256,7 +256,7 @@ export function useContributorsStats(): UseContributorsStateReturn {
     },
   )
 
-  const lastWeeksStats = useCallback(
+  const getContributorTrend = useCallback(
     (username: string): ContributorTrendPoint[] => {
       if (historicalSnapshots.length === 0) return []
 
@@ -307,7 +307,7 @@ export function useContributorsStats(): UseContributorsStateReturn {
     setSelectedWeek,
     prsResultant,
     selectedContributor,
-    lastWeeksStats,
+    getContributorTrend,
     isModalOpen,
     sortedContributors,
     setSelectedContributor,
