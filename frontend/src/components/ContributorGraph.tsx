@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react"
-import { useContributorsData } from "../hooks/useContributorsData"
 import {
   LineChart,
   Line,
@@ -11,6 +10,7 @@ import {
   ReferenceLine,
   Label,
 } from "recharts"
+import { type ContributorStats } from "../types/contributor"
 
 const DROPDOWN_MENU_ITEMS = [
   { key: "prsMerged", label: "Pull Requests Merged" },
@@ -35,16 +35,20 @@ const SCORE_LABELS = {
   100: "👑👑👑",
 }
 
-export default function ContributorGraph({ username }: { username: string }) {
-  const { last8WeeksData } = useContributorsData()
-
-  // State for the selected metric
+export default function ContributorGraph({
+  username,
+  getContributorTrend,
+}: {
+  username: string
+  getContributorTrend: (
+    username: string,
+  ) => Array<ContributorStats & { date: string }>
+}) {
   const [selectedMetric, setSelectedMetric] = useState("prsMerged")
 
-  // Fetch graph data based on the username and includeSkeletonDataSet toggle.
-  const graphData = useMemo(
-    () => last8WeeksData(username),
-    [username, last8WeeksData],
+  const graphPoints = useMemo(
+    () => getContributorTrend(username),
+    [username, getContributorTrend],
   )
 
   return (
@@ -67,7 +71,7 @@ export default function ContributorGraph({ username }: { username: string }) {
       </div>
       <div style={{ width: "100%", height: 400 }}>
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={graphData}>
+          <LineChart data={graphPoints}>
             {selectedMetric === "score" &&
               Object.entries(SCORE_LABELS).map(([score, label]) => (
                 <ReferenceLine

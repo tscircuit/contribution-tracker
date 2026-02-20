@@ -4,29 +4,33 @@ import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { Modal } from "./components/Modal"
 import { MaintainersList } from "./components/MaintainersList"
-import { useContributorsData } from "./hooks/useContributorsData"
+import { useContributorsStats } from "./hooks/useContributorsStats"
 import ContributorGraph from "./components/ContributorGraph"
 import { PrsTable } from "./components/PrsTable"
 import { AlertCircleIcon } from "lucide-react"
 import { type PrAnalysisResult } from "./types/contributor"
 
+type PrEntityName = string
+type PrByEntityMap = Record<PrEntityName, PrAnalysisResult[]>
+
 const PrSection = ({
   title,
-  prsData,
+  prsByEntity,
   enableContributorToggle = false,
 }: {
   title: string
-  prsData?: Record<string, PrAnalysisResult[]>
+  prsByEntity?: PrByEntityMap
   enableContributorToggle?: boolean
 }) => {
-  const [expandedContributors, setExpandedContributors] = useState<Set<string>>(
-    new Set(),
-  )
+  const [expandedContributors, setExpandedContributors] = useState<
+    Set<PrEntityName>
+  >(new Set())
 
   useEffect(() => {
-    if (enableContributorToggle && prsData) {
-      const allContributors = Object.keys(prsData).filter(
-        (key) => prsData[key] && prsData[key].length > 0,
+    if (enableContributorToggle && prsByEntity) {
+      const allContributors = Object.keys(prsByEntity).filter(
+        (entityName) =>
+          prsByEntity[entityName] && prsByEntity[entityName].length > 0,
       )
       setExpandedContributors((prev) => {
         const next = new Set(prev)
@@ -34,10 +38,10 @@ const PrSection = ({
         return next
       })
     }
-  }, [enableContributorToggle, prsData])
+  }, [enableContributorToggle, prsByEntity])
 
-  const toggleContributor = (contributor: string) => {
-    setExpandedContributors((prev: Set<string>) => {
+  const toggleContributor = (contributor: PrEntityName) => {
+    setExpandedContributors((prev: Set<PrEntityName>) => {
       const next = new Set(prev)
       if (next.has(contributor)) {
         next.delete(contributor)
@@ -48,7 +52,7 @@ const PrSection = ({
     })
   }
 
-  if (!prsData || Object.keys(prsData).length === 0) {
+  if (!prsByEntity || Object.keys(prsByEntity).length === 0) {
     return null
   }
 
@@ -57,29 +61,29 @@ const PrSection = ({
       <div className="mb-4" id={title.toLowerCase().replace(/ /g, "-")}>
         <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
       </div>
-      {Object.entries(prsData).map(([key, prs]) => {
+      {Object.entries(prsByEntity).map(([entityName, prs]) => {
         if (!prs || prs.length === 0) {
           return null
         }
 
         const isExpanded =
-          !enableContributorToggle || expandedContributors.has(key)
+          !enableContributorToggle || expandedContributors.has(entityName)
 
         if (enableContributorToggle) {
           return (
             <PrsTable
-              key={key}
+              key={entityName}
               prs={prs}
-              name={key}
+              name={entityName}
               inModal={false}
               collapsible={true}
               isExpanded={isExpanded}
-              onToggle={() => toggleContributor(key)}
+              onToggle={() => toggleContributor(entityName)}
             />
           )
         }
 
-        return <PrsTable key={key} prs={prs} name={key} />
+        return <PrsTable key={entityName} prs={prs} name={entityName} />
       })}
     </>
   )
@@ -88,6 +92,9 @@ const PrSection = ({
 function App() {
   const {
     dateUsed,
+    selectedWeek,
+    availableWeeks,
+    setSelectedWeek,
     prsResultant,
     selectedContributor,
     isModalOpen,
@@ -96,7 +103,8 @@ function App() {
     setIsModalOpen,
     loading,
     error,
-  } = useContributorsData()
+    getContributorTrend,
+  } = useContributorsStats()
 
   if (loading) {
     return (
@@ -117,11 +125,11 @@ function App() {
           <div className="flex flex-col items-center text-center">
             <AlertCircleIcon className="h-10 w-10 text-red-500 mb-4" />
             <h2 className="text-xl sm:text-2xl font-semibold text-red-700 mb-3">
-              Error Fetching Data
+              Error Fetching Stats
             </h2>
             <p className="text-gray-600 mb-6 text-sm sm:text-base">
-              We encountered an issue retrieving the contribution data. Please
-              try again later.
+              We encountered an issue retrieving contribution stats. Please try
+              again later.
             </p>
             {error.message && (
               <details className="w-full text-left bg-red-50 p-3 rounded-md border border-red-200">
@@ -142,7 +150,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 space-y-8">
-        <Header dateUsed={dateUsed} />
+        <Header
+          dateUsed={dateUsed}
+          selectedWeek={selectedWeek}
+          availableWeeks={availableWeeks}
+          onSelectWeek={setSelectedWeek}
+        />
 
         <ContributorOverview
           contributors={sortedContributors}
@@ -185,12 +198,12 @@ function App() {
 
         <PrSection
           title="PRs by Repository"
-          prsData={prsResultant?.prsByRepos}
+          prsByEntity={prsResultant?.prsByRepos}
         />
 
         <PrSection
           title="PRs by Contributors"
-          prsData={prsResultant?.prsByContributors}
+          prsByEntity={prsResultant?.prsByContributors}
           enableContributorToggle={true}
         />
 
@@ -205,7 +218,10 @@ function App() {
           }
         >
           {selectedContributor && (
-            <ContributorGraph username={selectedContributor} />
+            <ContributorGraph
+              username={selectedContributor}
+              getContributorTrend={getContributorTrend}
+            />
           )}
           {selectedContributor &&
             prsResultant?.prsByContributors[selectedContributor] && (
