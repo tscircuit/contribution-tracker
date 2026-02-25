@@ -8,7 +8,6 @@ import {
 
 interface UseContributorsReturn {
   contributorsByUsername: Record<string, ContributorStats>
-  dateUsed: string
   selectedWeek: string
   availableWeeks: string[]
   setSelectedWeek: (week: string) => void
@@ -27,9 +26,9 @@ export function useContributors(): UseContributorsReturn {
   const [contributorsByUsername, setContributorsByUsername] = useState<
     Record<string, ContributorStats>
   >({})
-  const [dateUsed, setDateUsed] = useState<string>("")
   const [selectedWeek, setSelectedWeek] = useState<string>("")
   const [availableWeeks, setAvailableWeeks] = useState<string[]>([])
+  const [initialized, setInitialized] = useState(false)
   const [prsResultant, setPrsResultant] = useState<PrsResultant>()
   const [selectedContributor, setSelectedContributor] = useState<string>()
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -63,8 +62,10 @@ export function useContributors(): UseContributorsReturn {
         setAvailableWeeks(allWeeks)
 
         const weekToLoad = selectedWeek || allWeeks[0]
-        setSelectedWeek(weekToLoad)
-        setDateUsed(weekToLoad)
+        if (!initialized) {
+          setSelectedWeek(weekToLoad)
+          setInitialized(true)
+        }
 
         const selectedFile = jsonFiles.find(
           (file: { name: string }) =>
@@ -187,7 +188,6 @@ export function useContributors(): UseContributorsReturn {
 
   return {
     contributorsByUsername,
-    dateUsed,
     selectedWeek,
     availableWeeks,
     setSelectedWeek,

@@ -1,7 +1,6 @@
 import { CircuitBoard, GithubIcon } from "lucide-react"
 
 interface HeaderProps {
-  dateUsed: string
   availableWeeks: string[]
   selectedWeek: string
   onWeekSelect: (week: string) => void
@@ -18,7 +17,6 @@ function formatWeekDate(dateStr: string): string {
 }
 
 export function Header({
-  dateUsed,
   availableWeeks,
   selectedWeek,
   onWeekSelect,
