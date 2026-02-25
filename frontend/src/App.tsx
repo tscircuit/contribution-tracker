@@ -92,6 +92,7 @@ function App() {
     setSelectedWeek,
     prsResultant,
     selectedContributor,
+    lastEightWeeksContributions,
     isModalOpen,
     sortedContributors,
     setSelectedContributor,
@@ -211,7 +212,10 @@ function App() {
           }
         >
           {selectedContributor && (
-            <ContributorGraph username={selectedContributor} />
+            <ContributorGraph
+              username={selectedContributor}
+              lastEightWeeksContributions={lastEightWeeksContributions}
+            />
           )}
           {selectedContributor &&
             prsResultant?.prsByContributors[selectedContributor] && (
