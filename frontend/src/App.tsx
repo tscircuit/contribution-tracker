@@ -4,7 +4,7 @@ import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { Modal } from "./components/Modal"
 import { MaintainersList } from "./components/MaintainersList"
-import { useContributorsData } from "./hooks/useContributorsData"
+import { useContributors } from "./hooks/useContributors"
 import ContributorGraph from "./components/ContributorGraph"
 import { PrsTable } from "./components/PrsTable"
 import { AlertCircleIcon } from "lucide-react"
@@ -96,7 +96,7 @@ function App() {
     setIsModalOpen,
     loading,
     error,
-  } = useContributorsData()
+  } = useContributors()
 
   if (loading) {
     return (

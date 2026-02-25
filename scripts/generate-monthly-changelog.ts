@@ -73,11 +73,11 @@ async function main() {
     /([\w-]+\/[\w-]+)\s+#(\d+)/g,
     (match: string, repo: string, prNumber: string) => {
       const key = `${repo}#${prNumber}`
-      const prInfo = prMap.get(key)
-      if (!prInfo) {
+      const pullRequestDetails = prMap.get(key)
+      if (!pullRequestDetails) {
         return match // Keep original if not found
       }
-      return `[${repo} #${prNumber}](${prInfo.url})`
+      return `[${repo} #${prNumber}](${pullRequestDetails.url})`
     },
   )
 

@@ -379,7 +379,7 @@ async function generateAndWriteFiles(
   console.log("Generated markdown", markdown)
 
   // Sort contributor data alphabetically by contributor name
-  const alphabeticalContributorData = Object.keys(contributorData)
+  const contributorUsernames = Object.keys(contributorData)
     .sort()
     .reduce(
       (acc, key) => {
@@ -394,7 +394,7 @@ async function generateAndWriteFiles(
   console.log(`Generated contribution-overviews/${startDateString}.md`)
   fs.writeFileSync(
     `contribution-overviews/${startDateString}.json`,
-    JSON.stringify(alphabeticalContributorData, null, 2),
+    JSON.stringify(contributorUsernames, null, 2),
   )
   console.log(`Generated contribution-overviews/${startDateString}.json`)
 
