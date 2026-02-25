@@ -27,15 +27,10 @@ export async function getBountiedIssues(
     })
 
     // Filter out pull requests by checking for the absence of `pull_request` property
-    const issueData = issues.filter((issue) => !issue.pull_request)
-
-    // Ensure we only return issues with the bounty label
-    const bountiedIssues = issueData.filter((issue) =>
-      issue.labels.some((label: any) => label.name === "💎 Bounty"),
-    )
+    const openedBountiedIssues = issues.filter((issue) => !issue.pull_request)
 
     const results = await Promise.all(
-      bountiedIssues.map(async (issue) => {
+      openedBountiedIssues.map(async (issue) => {
         // Fetch comments for the issue
         const { data: comments } = await octokit.issues.listComments({
           owner: repo.split("/")[0],

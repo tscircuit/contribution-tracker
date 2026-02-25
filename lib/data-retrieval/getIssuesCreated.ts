@@ -15,11 +15,10 @@ export async function getIssuesCreated(
     })
 
     // Filter out pull requests by checking for the absence of `pull_request` property
-    const issueData = issues.filter((issue) => !issue.pull_request)
-    const totalIssues = issueData.length
+    const openedIssues = issues.filter((issue) => !issue.pull_request)
+    const totalIssues = openedIssues.length
 
-    // Count major issues
-    const majorIssues = issueData.filter((issue) =>
+    const majorIssues = openedIssues.filter((issue) =>
       issue.labels.some(
         (label) =>
           typeof label === "object" && label.name?.toLowerCase() === "major",

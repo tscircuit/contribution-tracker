@@ -82,14 +82,14 @@ function loadContributionData(): Record<string, any> {
   const latestFile = files.sort().pop()
   console.log("Using data from", latestFile, "\n")
   const filePath = path.join(contributionsDir, latestFile!)
-  const data = fs.readFileSync(filePath, "utf-8")
-  return JSON.parse(data)
+  const fileContent = fs.readFileSync(filePath, "utf-8")
+  return JSON.parse(fileContent)
 }
 
 function loadUserMappings(): Record<string, string> {
   const filePath = path.join(process.cwd(), "users.json")
-  const data = fs.readFileSync(filePath, "utf-8")
-  return JSON.parse(data)
+  const fileContent = fs.readFileSync(filePath, "utf-8")
+  return JSON.parse(fileContent)
 }
 
 // ----- Main sync function ----- //
@@ -101,7 +101,7 @@ async function syncRoles(client: Client, guildId: string) {
     return
   }
 
-  const contributionData = loadContributionData()
+  const contributionsByUser = loadContributionData()
   const userMappings = loadUserMappings()
 
   // Fetch all-time roles from the guild
@@ -132,10 +132,12 @@ async function syncRoles(client: Client, guildId: string) {
   const crownWinners: Array<{ username: string; githubUsername: string }> = []
 
   // Process each user in the contribution data
-  for (const [githubUsername, userData] of Object.entries(contributionData)) {
+  for (const [githubUsername, contributorDetails] of Object.entries(
+    contributionsByUser,
+  )) {
     // Extract all-time and weekly contribution data:
     // Use 'score' for all-time roles and 'stars' for weekly roles.
-    const { score, stars } = userData
+    const { score, stars } = contributorDetails
 
     // Compute desired cumulative all-time roles (only add missing; do not remove any)
     const desiredAllTimeRoles: Role[] = []

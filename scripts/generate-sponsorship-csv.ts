@@ -259,20 +259,20 @@ function main() {
   const weeks = getFullWeeksForMonth(year, month)
 
   // Read weekly data for each week
-  const weeksWithData = weeks.map((week) => ({
+  const weeksWithContributions = weeks.map((week) => ({
     data: readWeeklyData(week.filePath),
     weekStartDate: week.weekStartDate,
     weekEndDate: week.weekEndDate,
   }))
 
   // Check if we have enough weeks
-  if (weeksWithData.length === 0) {
+  if (weeksWithContributions.length === 0) {
     console.error(`No weekly data found for ${year}-${month}`)
     process.exit(1)
   }
 
   // Calculate sponsorships
-  const sponsorships = calculateSponsorship(weeksWithData)
+  const sponsorships = calculateSponsorship(weeksWithContributions)
   const hardwareReimbursements = filterHardwareReimbursementsForMonth(
     readHardwareReimbursements(),
     year,

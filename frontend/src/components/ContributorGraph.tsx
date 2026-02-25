@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { useContributorsData } from "../hooks/useContributorsData"
+import { useContributors } from "../hooks/useContributors"
 import {
   LineChart,
   Line,
@@ -36,15 +36,15 @@ const SCORE_LABELS = {
 }
 
 export default function ContributorGraph({ username }: { username: string }) {
-  const { last8WeeksData } = useContributorsData()
+  const { lastEightWeeksContributions } = useContributors()
 
   // State for the selected metric
   const [selectedMetric, setSelectedMetric] = useState("prsMerged")
 
   // Fetch graph data based on the username and includeSkeletonDataSet toggle.
   const graphData = useMemo(
-    () => last8WeeksData(username),
-    [username, last8WeeksData],
+    () => lastEightWeeksContributions(username),
+    [username, lastEightWeeksContributions],
   )
 
   return (

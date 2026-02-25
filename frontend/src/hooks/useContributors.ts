@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
+import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 import {
   type ContributorStats,
   type PrAnalysisResult,
   type PrsResultant,
 } from "../types/contributor"
-import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 
-interface UseContributorsDataReturn {
-  data: Record<string, ContributorStats>
+interface UseContributorsReturn {
+  contributorsByUsername: Record<string, ContributorStats>
   dateUsed: string
   selectedContributor?: string
-  last8WeeksData: (username: string) => any[]
+  lastEightWeeksContributions: (username: string) => any[]
   isModalOpen: boolean
   sortedContributors: [string, ContributorStats][]
   setSelectedContributor: (username?: string) => void
@@ -20,8 +20,10 @@ interface UseContributorsDataReturn {
   error: Error | null
 }
 
-export function useContributorsData(): UseContributorsDataReturn {
-  const [data, setData] = useState<Record<string, ContributorStats>>({})
+export function useContributors(): UseContributorsReturn {
+  const [contributorsByUsername, setContributorsByUsername] = useState<
+    Record<string, ContributorStats>
+  >({})
   const [dateUsed, setDateUsed] = useState<string>("")
   const [prsResultant, setPrsResultant] = useState<PrsResultant>()
   const [selectedContributor, setSelectedContributor] = useState<string>()
@@ -31,7 +33,7 @@ export function useContributorsData(): UseContributorsDataReturn {
   const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
-    async function fetchData() {
+    async function loadContributors() {
       setLoading(true)
       setError(null)
       try {
@@ -59,8 +61,8 @@ export function useContributorsData(): UseContributorsDataReturn {
           throw new Error(
             `Failed to fetch latest data (${latestFile.name}): ${jsonResp.statusText} (${jsonResp.status})`,
           )
-        const latestJsonData = await jsonResp.json()
-        setData(latestJsonData)
+        const latestContributorsJson = await jsonResp.json()
+        setContributorsByUsername(latestContributorsJson)
 
         const eightWeeksAgo = new Date()
         eightWeeksAgo.setUTCDate(eightWeeksAgo.getUTCDate() - 8 * 7)
@@ -80,17 +82,17 @@ export function useContributorsData(): UseContributorsDataReturn {
               )
               return null
             }
-            const jsonData = await resp.json()
+            const historicalRecord = await resp.json()
             const fileDate = new Date(file.name.replace(".json", ""))
-            return { ...jsonData, date: fileDate }
+            return { ...historicalRecord, date: fileDate }
           },
         )
 
         const historicalDataResults = await Promise.all(historicalDataPromises)
-        const validHistoricalData = historicalDataResults.filter(
-          (data) => data !== null,
+        const validHistoricalRecords = historicalDataResults.filter(
+          (record) => record !== null,
         )
-        setJsonRecords(validHistoricalData)
+        setJsonRecords(validHistoricalRecords)
 
         const prAnalysisResp = await fetch(getPrAnalysisUrl(date))
         if (!prAnalysisResp.ok)
@@ -124,16 +126,18 @@ export function useContributorsData(): UseContributorsDataReturn {
       }
     }
 
-    fetchData()
+    loadContributors()
   }, [])
 
-  const sortedContributors = Object.entries(data).sort((a, b) => {
-    const scoreDiff = (b[1].score ?? 0) - (a[1].score ?? 0)
-    if (scoreDiff !== 0) return scoreDiff
-    return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
-  })
+  const sortedContributors = Object.entries(contributorsByUsername).sort(
+    (a, b) => {
+      const scoreDiff = (b[1].score ?? 0) - (a[1].score ?? 0)
+      if (scoreDiff !== 0) return scoreDiff
+      return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
+    },
+  )
 
-  const last8WeeksData = (username: string) => {
+  const lastEightWeeksContributions = (username: string) => {
     if (!jsonRecords || jsonRecords.length === 0) return []
 
     const userRecords = jsonRecords
@@ -164,11 +168,11 @@ export function useContributorsData(): UseContributorsDataReturn {
   }
 
   return {
-    data,
+    contributorsByUsername,
     dateUsed,
     prsResultant,
     selectedContributor,
-    last8WeeksData,
+    lastEightWeeksContributions,
     isModalOpen,
     sortedContributors,
     setSelectedContributor,

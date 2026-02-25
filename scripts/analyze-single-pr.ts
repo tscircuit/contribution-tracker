@@ -24,7 +24,7 @@ function parsePRUrl(url: string): {
   }
 }
 
-async function fetchPRData(
+async function fetchPullRequestDetails(
   owner: string,
   repo: string,
   number: number,
@@ -95,10 +95,17 @@ async function main() {
     console.log(`Analyzing PR #${number} from ${owner}/${repo}`)
 
     // Fetch PR data
-    const prData = await fetchPRData(owner, repo, number)
+    const pullRequestDetails = await fetchPullRequestDetails(
+      owner,
+      repo,
+      number,
+    )
 
     // Run AI analysis
-    const analysis = await analyzePRWithAI(prData, `${owner}/${repo}`)
+    const analysis = await analyzePRWithAI(
+      pullRequestDetails,
+      `${owner}/${repo}`,
+    )
 
     // Output results
     console.log("\n=== PR Analysis Results ===")
