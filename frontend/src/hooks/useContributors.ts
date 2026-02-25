@@ -22,6 +22,19 @@ interface UseContributorsReturn {
   error: Error | null
 }
 
+function getWeekFromUrl(): string | null {
+  const params = new URLSearchParams(window.location.search)
+  return params.get("week")
+}
+
+function getValidWeekFromUrl(availableWeeks: string[]): string | null {
+  const urlWeek = getWeekFromUrl()
+  if (urlWeek && availableWeeks.includes(urlWeek)) {
+    return urlWeek
+  }
+  return null
+}
+
 export function useContributors(): UseContributorsReturn {
   const [contributorsByUsername, setContributorsByUsername] = useState<
     Record<string, ContributorStats>
@@ -36,6 +49,27 @@ export function useContributors(): UseContributorsReturn {
   const [error, setError] = useState<Error | null>(null)
 
   const isInitialLoad = useRef(true)
+  const isUpdatingFromUrl = useRef(false)
+
+  const updateUrl = (week: string) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set("week", week)
+    window.history.pushState({}, "", url.toString())
+  }
+
+  useEffect(() => {
+    const handlePopState = () => {
+      isUpdatingFromUrl.current = true
+      const urlWeek = getWeekFromUrl()
+      if (urlWeek) {
+        setSelectedWeek(urlWeek)
+      }
+      isUpdatingFromUrl.current = false
+    }
+
+    window.addEventListener("popstate", handlePopState)
+    return () => window.removeEventListener("popstate", handlePopState)
+  }, [])
 
   useEffect(() => {
     async function loadContributors() {
@@ -64,8 +98,10 @@ export function useContributors(): UseContributorsReturn {
 
         let weekToLoad: string
         if (selectedWeek === null) {
-          weekToLoad = allWeeks[0]
+          const urlWeek = getValidWeekFromUrl(allWeeks)
+          weekToLoad = urlWeek ?? allWeeks[0]
           setSelectedWeek(weekToLoad)
+          updateUrl(weekToLoad)
           isInitialLoad.current = false
         } else {
           weekToLoad = selectedWeek
@@ -190,11 +226,18 @@ export function useContributors(): UseContributorsReturn {
     }))
   }
 
+  const handleSetSelectedWeek = (week: string) => {
+    if (!isUpdatingFromUrl.current) {
+      updateUrl(week)
+    }
+    setSelectedWeek(week)
+  }
+
   return {
     contributorsByUsername,
     selectedWeek,
     availableWeeks,
-    setSelectedWeek,
+    setSelectedWeek: handleSetSelectedWeek,
     prsResultant,
     selectedContributor,
     lastEightWeeksContributions,
