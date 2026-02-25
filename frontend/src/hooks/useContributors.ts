@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 import {
   type ContributorStats,
@@ -8,7 +8,9 @@ import {
 
 interface UseContributorsReturn {
   contributorsByUsername: Record<string, ContributorStats>
-  dateUsed: string
+  selectedWeek: string | null
+  availableWeeks: string[]
+  setSelectedWeek: (week: string) => void
   selectedContributor?: string
   lastEightWeeksContributions: (username: string) => any[]
   isModalOpen: boolean
@@ -24,13 +26,16 @@ export function useContributors(): UseContributorsReturn {
   const [contributorsByUsername, setContributorsByUsername] = useState<
     Record<string, ContributorStats>
   >({})
-  const [dateUsed, setDateUsed] = useState<string>("")
+  const [selectedWeek, setSelectedWeek] = useState<string | null>(null)
+  const [availableWeeks, setAvailableWeeks] = useState<string[]>([])
   const [prsResultant, setPrsResultant] = useState<PrsResultant>()
   const [selectedContributor, setSelectedContributor] = useState<string>()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [jsonRecords, setJsonRecords] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
+
+  const isInitialLoad = useRef(true)
 
   useEffect(() => {
     async function loadContributors() {
@@ -52,14 +57,32 @@ export function useContributors(): UseContributorsReturn {
         if (jsonFiles.length === 0)
           throw new Error("No JSON overview files found")
 
-        const latestFile = jsonFiles[0]
-        const date = latestFile.name.replace(".json", "")
-        setDateUsed(date)
+        const allWeeks = jsonFiles.map((file: { name: string }) =>
+          file.name.replace(".json", ""),
+        )
+        setAvailableWeeks(allWeeks)
 
-        const jsonResp = await fetch(latestFile.download_url)
+        let weekToLoad: string
+        if (selectedWeek === null) {
+          weekToLoad = allWeeks[0]
+          setSelectedWeek(weekToLoad)
+          isInitialLoad.current = false
+        } else {
+          weekToLoad = selectedWeek
+        }
+
+        const selectedFile = jsonFiles.find(
+          (file: { name: string }) =>
+            file.name.replace(".json", "") === weekToLoad,
+        )
+        if (!selectedFile) {
+          throw new Error(`Could not find file for week: ${weekToLoad}`)
+        }
+
+        const jsonResp = await fetch(selectedFile.download_url)
         if (!jsonResp.ok)
           throw new Error(
-            `Failed to fetch latest data (${latestFile.name}): ${jsonResp.statusText} (${jsonResp.status})`,
+            `Failed to fetch data (${selectedFile.name}): ${jsonResp.statusText} (${jsonResp.status})`,
           )
         const latestContributorsJson = await jsonResp.json()
         setContributorsByUsername(latestContributorsJson)
@@ -94,10 +117,10 @@ export function useContributors(): UseContributorsReturn {
         )
         setJsonRecords(validHistoricalRecords)
 
-        const prAnalysisResp = await fetch(getPrAnalysisUrl(date))
+        const prAnalysisResp = await fetch(getPrAnalysisUrl(weekToLoad))
         if (!prAnalysisResp.ok)
           throw new Error(
-            `Failed to fetch PR analysis (${date}.json): ${prAnalysisResp.statusText} (${prAnalysisResp.status})`,
+            `Failed to fetch PR analysis (${weekToLoad}.json): ${prAnalysisResp.statusText} (${prAnalysisResp.status})`,
           )
         const prAnalysis = (await prAnalysisResp.json()) as PrAnalysisResult[]
 
@@ -127,7 +150,7 @@ export function useContributors(): UseContributorsReturn {
     }
 
     loadContributors()
-  }, [])
+  }, [selectedWeek])
 
   const sortedContributors = Object.entries(contributorsByUsername).sort(
     (a, b) => {
@@ -169,7 +192,9 @@ export function useContributors(): UseContributorsReturn {
 
   return {
     contributorsByUsername,
-    dateUsed,
+    selectedWeek,
+    availableWeeks,
+    setSelectedWeek,
     prsResultant,
     selectedContributor,
     lastEightWeeksContributions,
