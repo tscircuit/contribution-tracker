@@ -8,3 +8,5 @@ export const STAFF_USERNAMES = [
   "Ayushjhawar8",
   "0hmX",
 ]
+
+export const STAFF_USERNAMES_SET = new Set(STAFF_USERNAMES)

@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react"
-import { useContributors } from "../hooks/useContributors"
 import {
   LineChart,
   Line,
@@ -26,22 +25,30 @@ const DROPDOWN_MENU_ITEMS = [
   { key: "bountiedIssuesTotal", label: "Bountied Issues (Total)" },
 ]
 
-const SCORE_LABELS = {
-  3: "⭐",
-  10: "⭐⭐",
-  30: "⭐⭐⭐",
-  50: "👑",
-  75: "👑👑",
-  100: "👑👑👑",
+const SCORE_LABEL_ENTRIES: [number, string][] = [
+  [3, "⭐"],
+  [10, "⭐⭐"],
+  [30, "⭐⭐⭐"],
+  [50, "👑"],
+  [75, "👑👑"],
+  [100, "👑👑👑"],
+]
+
+const DOT_CONFIG = { r: 3 }
+const CHART_CONTAINER_STYLE = { width: "100%", height: 400 }
+const LABEL_STYLE = { fill: "#FFD700", fontSize: "12px", opacity: 0.4 }
+
+interface ContributorGraphProps {
+  username: string
+  lastEightWeeksContributions: (username: string) => any[]
 }
 
-export default function ContributorGraph({ username }: { username: string }) {
-  const { lastEightWeeksContributions } = useContributors()
-
-  // State for the selected metric
+export default function ContributorGraph({
+  username,
+  lastEightWeeksContributions,
+}: ContributorGraphProps) {
   const [selectedMetric, setSelectedMetric] = useState("prsMerged")
 
-  // Fetch graph data based on the username and includeSkeletonDataSet toggle.
   const graphData = useMemo(
     () => lastEightWeeksContributions(username),
     [username, lastEightWeeksContributions],
@@ -65,31 +72,32 @@ export default function ContributorGraph({ username }: { username: string }) {
           </select>
         </div>
       </div>
-      <div style={{ width: "100%", height: 400 }}>
+      <div style={CHART_CONTAINER_STYLE}>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={graphData}>
-            {selectedMetric === "score" &&
-              Object.entries(SCORE_LABELS).map(([score, label]) => (
-                <ReferenceLine
-                  key={score}
-                  y={Number(score)}
-                  stroke="#FFEA00"
-                  strokeOpacity={0.8}
-                  strokeDasharray="9 12"
-                >
-                  <Label
-                    value={label}
-                    position="insideBottomLeft"
-                    style={{ fill: "#FFD700", fontSize: "12px", opacity: 0.4 }}
-                  />
-                </ReferenceLine>
-              ))}
+            {selectedMetric === "score"
+              ? SCORE_LABEL_ENTRIES.map(([score, label]) => (
+                  <ReferenceLine
+                    key={score}
+                    y={score}
+                    stroke="#FFEA00"
+                    strokeOpacity={0.8}
+                    strokeDasharray="9 12"
+                  >
+                    <Label
+                      value={label}
+                      position="insideBottomLeft"
+                      style={LABEL_STYLE}
+                    />
+                  </ReferenceLine>
+                ))
+              : null}
             <Line
               type="monotone"
               dataKey={selectedMetric}
               stroke="#007bff"
               strokeWidth={3}
-              dot={{ r: 3 }}
+              dot={DOT_CONFIG}
             />
             <Tooltip />
             <CartesianGrid stroke="#e0e0e0" />
