@@ -4,12 +4,13 @@ import {
   type ContributorStats,
   type ContributorOverviewProps,
   type PodiumEntryProps,
+  type Size,
 } from "../types/contributor"
 import { ContributorCard } from "./ContributorCard"
 import { getAvatarUrl, getProfileUrl } from "../constants/github"
 import { CONTRIBUTION_TYPES, STATS_CONFIG } from "../constants/metrics"
 import { CONTRIBUTION_TOOLTIPS, STATS_TOOLTIPS } from "../constants/tooltips"
-import { STAFF_USERNAMES } from "../constants/contributors"
+import { STAFF_USERNAMES_SET } from "../constants/contributors"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css"
 
@@ -26,6 +27,120 @@ const SCORE_BAR_COLORS = [
   "bg-cyan-500",
 ]
 
+const SIZE_CLASSES: Record<Size, string> = {
+  sm: "md:w-24 md:h-24",
+  md: "md:w-28 md:h-28",
+  lg: "md:w-36 md:h-36",
+}
+
+const BADGE_SIZE_CLASSES: Record<Size, string> = {
+  sm: "md:w-8 md:h-8 text-base",
+  md: "md:w-10 md:h-10 text-lg",
+  lg: "md:w-12 md:h-12 md:text-2xl text-lg",
+}
+
+const NAME_SIZE_CLASSES: Record<Size, string> = {
+  sm: "md:text-lg",
+  md: "md:text-xl",
+  lg: "md:text-2xl",
+}
+
+const PODIUM_STYLES = [
+  {
+    position: 1,
+    ringColor: "ring-yellow-400",
+    bgColor: "bg-yellow-400",
+    size: "lg" as const,
+  },
+  {
+    position: 2,
+    ringColor: "ring-gray-300",
+    bgColor: "bg-gray-300",
+    size: "md" as const,
+  },
+  {
+    position: 3,
+    ringColor: "ring-orange-300",
+    bgColor: "bg-orange-300",
+    size: "sm" as const,
+  },
+]
+
+function PodiumEntry({
+  position,
+  username,
+  stats,
+  ringColor,
+  bgColor,
+  size = "md",
+  onClick,
+}: PodiumEntryProps) {
+  return (
+    <div className="flex flex-col md:items-center w-full md:w-auto">
+      <div className="flex items-center md:flex-col gap-4 md:gap-2">
+        <div className="relative">
+          <img
+            src={getAvatarUrl(username)}
+            alt={`${username}'s avatar`}
+            className={`w-28 h-28 ${SIZE_CLASSES[size]} rounded-full mb-0 md:mb-4 cursor-pointer ring-4 ${ringColor} hover:ring-8 transition-all`}
+            onClick={onClick}
+          />
+          <div
+            className={`absolute -top-2 -right-2 w-10 h-10 ${BADGE_SIZE_CLASSES[size]} ${bgColor} rounded-full flex items-center justify-center text-white font-bold`}
+          >
+            {position}
+          </div>
+        </div>
+
+        <div className="flex flex-col md:items-center flex-1 md:flex-initial">
+          <div
+            className={`${NAME_SIZE_CLASSES[size]} font-medium text-gray-900 mb-2`}
+          >
+            <a
+              href={getProfileUrl(username)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black hover:text-blue-800"
+            >
+              {username}
+            </a>
+          </div>
+          <div className="flex gap-1 text-yellow-400 mb-3">{stats.stars}</div>
+
+          <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm md:text-base text-gray-600 mb-3">
+            {STATS_CONFIG.map((stat) => {
+              const Icon = stat.icon
+              return (
+                <div key={stat.key} className="flex items-center gap-1.5">
+                  <Tippy content={STATS_TOOLTIPS[stat.key]}>
+                    <span className="inline-flex">
+                      <Icon className="w-5 h-5" />
+                    </span>
+                  </Tippy>
+                  <span>{stat.getValue(stats)}</span>
+                </div>
+              )
+            })}
+          </div>
+
+          <div className="flex flex-wrap gap-x-4 gap-y-1.5 items-center">
+            {Object.values(CONTRIBUTION_TYPES).map((type) => (
+              <Tippy
+                key={type.value}
+                content={CONTRIBUTION_TOOLTIPS[type.value]}
+              >
+                <div className={`font-medium ${type.colorClass} md:text-lg`}>
+                  {type.emoji} {stats[type.value] || 0}
+                </div>
+              </Tippy>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function ScoreBreakdown({
   contributors,
   onSelectContributor,
@@ -36,16 +151,17 @@ function ScoreBreakdown({
   const [isExpanded, setIsExpanded] = useState(false)
 
   const scoreData = useMemo(() => {
-    const withScores = contributors
-      .filter(([, stats]) => (stats.score ?? 0) > 0)
-      .map(([username, stats]) => ({
-        username,
-        score: stats.score ?? 0,
-        stars: stats.stars ?? "",
-      }))
-      .sort((a, b) => b.score - a.score)
+    const withScores: { username: string; score: number; stars: string }[] = []
+    let total = 0
 
-    const total = withScores.reduce((sum, c) => sum + c.score, 0)
+    for (const [username, stats] of contributors) {
+      const score = stats.score ?? 0
+      if (score <= 0) continue
+      withScores.push({ username, score, stars: stats.stars ?? "" })
+      total += score
+    }
+
+    withScores.sort((a, b) => b.score - a.score)
 
     return {
       contributors: withScores.map((c, i) => ({
@@ -142,141 +258,30 @@ export function ContributorOverview({
 }: ContributorOverviewProps) {
   const [showAllContributors, setShowAllContributors] = useState(true)
 
-  // First, separate full-timers from other contributors
-  const [fullTimerContributors, otherContributors] = contributors.reduce(
-    ([full, other], contributor) => {
-      if (STAFF_USERNAMES.includes(contributor[0])) {
-        return [[...full, contributor], other]
+  const { fullTimerContributors, podiumContributors, remainingContributors } =
+    useMemo(() => {
+      const staff: [string, ContributorStats][] = []
+      const other: [string, ContributorStats][] = []
+
+      for (const contributor of contributors) {
+        if (STAFF_USERNAMES_SET.has(contributor[0])) {
+          staff.push(contributor)
+        } else {
+          other.push(contributor)
+        }
       }
-      return [full, [...other, contributor]]
-    },
-    [[] as [string, ContributorStats][], [] as [string, ContributorStats][]],
-  )
 
-  // Get top 3 contributors from non-full-timers
-  const podiumContributors = otherContributors.slice(0, 3)
-  const remainingContributors = otherContributors
-    .slice(3)
-    .filter(([username]) => !STAFF_USERNAMES.includes(username))
-
-  const PodiumEntry = ({
-    position,
-    username,
-    stats,
-    ringColor,
-    bgColor,
-    size = "md",
-    onClick,
-  }: PodiumEntryProps) => {
-    const sizes = {
-      sm: "md:w-24 md:h-24",
-      md: "md:w-28 md:h-28",
-      lg: "md:w-36 md:h-36",
-    }
-
-    const badgeSizes = {
-      sm: "md:w-8 md:h-8 text-base",
-      md: "md:w-10 md:h-10 text-lg",
-      lg: "md:w-12 md:h-12 md:text-2xl text-lg",
-    }
-
-    const nameSizes = {
-      sm: "md:text-lg",
-      md: "md:text-xl",
-      lg: "md:text-2xl",
-    }
-
-    return (
-      <div className="flex flex-col md:items-center w-full md:w-auto">
-        <div className="flex items-center md:flex-col gap-4 md:gap-2">
-          <div className="relative">
-            <img
-              src={getAvatarUrl(username)}
-              alt={`${username}'s avatar`}
-              className={`w-28 h-28 ${sizes[size]} rounded-full mb-0 md:mb-4 cursor-pointer ring-4 ${ringColor} hover:ring-8 transition-all`}
-              onClick={onClick}
-            />
-            <div
-              className={`absolute -top-2 -right-2 w-10 h-10 ${badgeSizes[size]} ${bgColor} rounded-full flex items-center justify-center text-white font-bold`}
-            >
-              {position}
-            </div>
-          </div>
-
-          <div className="flex flex-col md:items-center flex-1 md:flex-initial">
-            <div
-              className={`${nameSizes[size]} font-medium text-gray-900 mb-2`}
-            >
-              <a
-                href={getProfileUrl(username)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black hover:text-blue-800"
-              >
-                {username}
-              </a>
-            </div>
-            <div className="flex gap-1 text-yellow-400 mb-3">{stats.stars}</div>
-
-            <div className="flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-sm md:text-base text-gray-600 mb-3">
-              {STATS_CONFIG.map((stat) => {
-                const Icon = stat.icon
-                return (
-                  <div key={stat.key} className="flex items-center gap-1.5">
-                    <Tippy content={STATS_TOOLTIPS[stat.key]}>
-                      <span className="inline-flex">
-                        <Icon className="w-5 h-5" />
-                      </span>
-                    </Tippy>
-                    <span>{stat.getValue(stats)}</span>
-                  </div>
-                )
-              })}
-            </div>
-
-            <div className="flex flex-wrap gap-x-4 gap-y-1.5 items-center">
-              {Object.values(CONTRIBUTION_TYPES).map((type) => (
-                <Tippy
-                  key={type.value}
-                  content={CONTRIBUTION_TOOLTIPS[type.value]}
-                >
-                  <div className={`font-medium ${type.colorClass} md:text-lg`}>
-                    {type.emoji} {stats[type.value] || 0}
-                  </div>
-                </Tippy>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  const podiumStyles = [
-    {
-      position: 1,
-      ringColor: "ring-yellow-400",
-      bgColor: "bg-yellow-400",
-      size: "lg" as const,
-    },
-    {
-      position: 2,
-      ringColor: "ring-gray-300",
-      bgColor: "bg-gray-300",
-      size: "md" as const,
-    },
-    {
-      position: 3,
-      ringColor: "ring-orange-300",
-      bgColor: "bg-orange-300",
-      size: "sm" as const,
-    },
-  ]
+      return {
+        fullTimerContributors: staff,
+        podiumContributors: other.slice(0, 3),
+        remainingContributors: other.slice(3),
+      }
+    }, [contributors])
 
   return (
     <section className="mt-20 mb-16 max-w-7xl mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 mb-12">
-        {fullTimerContributors.length > 0 && (
+        {fullTimerContributors.length > 0 ? (
           <div className="md:w-[25%]">
             <h3 className="text-lg font-semibold mb-3">Staff</h3>
             <div className="space-y-2 max-h-[50vh] overflow-y-auto md:pr-2 no-scrollbar">
@@ -346,50 +351,46 @@ export function ContributorOverview({
               ))}
             </div>
           </div>
-        )}
+        ) : null}
 
         <div className="md:flex-grow">
           <h2 className="text-3xl font-bold text-center mb-10">
             🏆 Top 3 Contributors 🏆
           </h2>
 
-          {/* Podium */}
           <div className="flex flex-col md:flex-row justify-center items-stretch md:items-end gap-10 md:gap-12">
-            {/* Second Place */}
-            {podiumContributors[1] && (
+            {podiumContributors[1] ? (
               <div className="order-2 md:order-1">
                 <PodiumEntry
-                  {...podiumStyles[1]}
+                  {...PODIUM_STYLES[1]}
                   username={podiumContributors[1][0]}
                   stats={podiumContributors[1][1]}
                   onClick={() => onSelectContributor(podiumContributors[1][0])}
                 />
               </div>
-            )}
+            ) : null}
 
-            {/* First Place */}
-            {podiumContributors[0] && (
+            {podiumContributors[0] ? (
               <div className="order-1 md:order-2">
                 <PodiumEntry
-                  {...podiumStyles[0]}
+                  {...PODIUM_STYLES[0]}
                   username={podiumContributors[0][0]}
                   stats={podiumContributors[0][1]}
                   onClick={() => onSelectContributor(podiumContributors[0][0])}
                 />
               </div>
-            )}
+            ) : null}
 
-            {/* Third Place */}
-            {podiumContributors[2] && (
+            {podiumContributors[2] ? (
               <div className="order-3">
                 <PodiumEntry
-                  {...podiumStyles[2]}
+                  {...PODIUM_STYLES[2]}
                   username={podiumContributors[2][0]}
                   stats={podiumContributors[2][1]}
                   onClick={() => onSelectContributor(podiumContributors[2][0])}
                 />
               </div>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
@@ -399,11 +400,10 @@ export function ContributorOverview({
         onSelectContributor={onSelectContributor}
       />
 
-      {/* Show All Contributors Button */}
-      {remainingContributors.length > 0 && (
+      {remainingContributors.length > 0 ? (
         <div className="text-center mb-8">
           <button
-            onClick={() => setShowAllContributors(!showAllContributors)}
+            onClick={() => setShowAllContributors((prev) => !prev)}
             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
           >
             {showAllContributors ? (
@@ -419,10 +419,9 @@ export function ContributorOverview({
             )}
           </button>
         </div>
-      )}
+      ) : null}
 
-      {/* Remaining Contributors Grid */}
-      {showAllContributors && remainingContributors.length > 0 && (
+      {showAllContributors && remainingContributors.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {remainingContributors.map(([username, stats]) => (
             <div
@@ -434,7 +433,7 @@ export function ContributorOverview({
             </div>
           ))}
         </div>
-      )}
+      ) : null}
     </section>
   )
 }

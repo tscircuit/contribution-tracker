@@ -1,5 +1,5 @@
 import { AlertCircleIcon } from "lucide-react"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import ContributorGraph from "./components/ContributorGraph"
 import { ContributorOverview } from "./components/ContributorOverview"
 import { Footer } from "./components/Footer"
@@ -10,7 +10,7 @@ import { PrsTable } from "./components/PrsTable"
 import { useContributors } from "./hooks/useContributors"
 import { type PrAnalysisResult } from "./types/contributor"
 
-const PrSection = ({
+function PrSection({
   title,
   prsData,
   enableContributorToggle = false,
@@ -18,7 +18,7 @@ const PrSection = ({
   title: string
   prsData?: Record<string, PrAnalysisResult[]>
   enableContributorToggle?: boolean
-}) => {
+}) {
   const [expandedContributors, setExpandedContributors] = useState<Set<string>>(
     new Set(),
   )
@@ -30,14 +30,16 @@ const PrSection = ({
       )
       setExpandedContributors((prev) => {
         const next = new Set(prev)
-        allContributors.forEach((contributor) => next.add(contributor))
+        for (const contributor of allContributors) {
+          next.add(contributor)
+        }
         return next
       })
     }
   }, [enableContributorToggle, prsData])
 
-  const toggleContributor = (contributor: string) => {
-    setExpandedContributors((prev: Set<string>) => {
+  const toggleContributor = useCallback((contributor: string) => {
+    setExpandedContributors((prev) => {
       const next = new Set(prev)
       if (next.has(contributor)) {
         next.delete(contributor)
@@ -46,7 +48,7 @@ const PrSection = ({
       }
       return next
     })
-  }
+  }, [])
 
   if (!prsData || Object.keys(prsData).length === 0) {
     return null
@@ -101,6 +103,19 @@ function App() {
     error,
   } = useContributors()
 
+  const handleSelectContributor = useCallback(
+    (username: string) => {
+      setSelectedContributor(username)
+      setIsModalOpen(true)
+    },
+    [setSelectedContributor, setIsModalOpen],
+  )
+
+  const handleModalClose = useCallback(() => {
+    setIsModalOpen(false)
+    setSelectedContributor(undefined)
+  }, [setIsModalOpen, setSelectedContributor])
+
   if (loading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
@@ -126,7 +141,7 @@ function App() {
               We encountered an issue retrieving the contribution data. Please
               try again later.
             </p>
-            {error.message && (
+            {error.message ? (
               <details className="w-full text-left bg-red-50 p-3 rounded-md border border-red-200">
                 <summary className="text-sm font-medium text-red-800 cursor-pointer hover:text-red-900">
                   Show Error Details
@@ -135,12 +150,16 @@ function App() {
                   {error.message}
                 </pre>
               </details>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
     )
   }
+
+  const contributorPrs = selectedContributor
+    ? prsResultant?.prsByContributors[selectedContributor]
+    : undefined
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -153,13 +172,10 @@ function App() {
 
         <ContributorOverview
           contributors={sortedContributors}
-          onSelectContributor={(username) => {
-            setSelectedContributor(username)
-            setIsModalOpen(true)
-          }}
+          onSelectContributor={handleSelectContributor}
         />
 
-        <div className=" max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <MaintainersList />
         </div>
 
@@ -203,28 +219,24 @@ function App() {
 
         <Modal
           isOpen={isModalOpen}
-          onClose={() => {
-            setIsModalOpen(false)
-            setSelectedContributor(undefined)
-          }}
+          onClose={handleModalClose}
           title={
             selectedContributor ? `Contributions by ${selectedContributor}` : ""
           }
         >
-          {selectedContributor && (
+          {selectedContributor ? (
             <ContributorGraph
               username={selectedContributor}
               lastEightWeeksContributions={lastEightWeeksContributions}
             />
-          )}
-          {selectedContributor &&
-            prsResultant?.prsByContributors[selectedContributor] && (
-              <PrsTable
-                inModal
-                prs={prsResultant?.prsByContributors[selectedContributor]}
-                name={selectedContributor}
-              />
-            )}
+          ) : null}
+          {contributorPrs ? (
+            <PrsTable
+              inModal
+              prs={contributorPrs}
+              name={selectedContributor!}
+            />
+          ) : null}
         </Modal>
         <Footer />
       </div>

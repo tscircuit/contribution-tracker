@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 import {
   type ContributorStats,
@@ -172,12 +172,14 @@ export function useContributors(): UseContributorsReturn {
     }
   }, [selectedWeek])
 
-  const sortedContributors = Object.entries(contributorsByUsername).sort(
-    (a, b) => {
-      const scoreDiff = (b[1].score ?? 0) - (a[1].score ?? 0)
-      if (scoreDiff !== 0) return scoreDiff
-      return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
-    },
+  const sortedContributors = useMemo(
+    () =>
+      Object.entries(contributorsByUsername).sort((a, b) => {
+        const scoreDiff = (b[1].score ?? 0) - (a[1].score ?? 0)
+        if (scoreDiff !== 0) return scoreDiff
+        return (b[1].prsMerged ?? 0) - (a[1].prsMerged ?? 0)
+      }),
+    [contributorsByUsername],
   )
 
   const lastEightWeeksContributions = useCallback(
