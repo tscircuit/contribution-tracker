@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 import {
   type ContributorStats,
@@ -8,7 +8,7 @@ import {
 
 interface UseContributorsReturn {
   contributorsByUsername: Record<string, ContributorStats>
-  selectedWeek: string
+  selectedWeek: string | null
   availableWeeks: string[]
   setSelectedWeek: (week: string) => void
   selectedContributor?: string
@@ -26,15 +26,16 @@ export function useContributors(): UseContributorsReturn {
   const [contributorsByUsername, setContributorsByUsername] = useState<
     Record<string, ContributorStats>
   >({})
-  const [selectedWeek, setSelectedWeek] = useState<string>("")
+  const [selectedWeek, setSelectedWeek] = useState<string | null>(null)
   const [availableWeeks, setAvailableWeeks] = useState<string[]>([])
-  const [initialized, setInitialized] = useState(false)
   const [prsResultant, setPrsResultant] = useState<PrsResultant>()
   const [selectedContributor, setSelectedContributor] = useState<string>()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [jsonRecords, setJsonRecords] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
+
+  const isInitialLoad = useRef(true)
 
   useEffect(() => {
     async function loadContributors() {
@@ -61,10 +62,13 @@ export function useContributors(): UseContributorsReturn {
         )
         setAvailableWeeks(allWeeks)
 
-        const weekToLoad = selectedWeek || allWeeks[0]
-        if (!initialized) {
+        let weekToLoad: string
+        if (selectedWeek === null) {
+          weekToLoad = allWeeks[0]
           setSelectedWeek(weekToLoad)
-          setInitialized(true)
+          isInitialLoad.current = false
+        } else {
+          weekToLoad = selectedWeek
         }
 
         const selectedFile = jsonFiles.find(

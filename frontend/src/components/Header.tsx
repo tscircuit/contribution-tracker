@@ -2,7 +2,7 @@ import { CircuitBoard, GithubIcon } from "lucide-react"
 
 interface HeaderProps {
   availableWeeks: string[]
-  selectedWeek: string
+  selectedWeek: string | null
   onWeekSelect: (week: string) => void
 }
 
@@ -32,7 +32,7 @@ export function Header({
       <div className="flex items-center gap-2">
         <select
           className="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring focus:border-blue-300"
-          value={selectedWeek}
+          value={selectedWeek ?? ""}
           onChange={(e) => onWeekSelect(e.target.value)}
         >
           {availableWeeks.map((week) => (
