@@ -2,9 +2,27 @@ import { CircuitBoard, GithubIcon } from "lucide-react"
 
 interface HeaderProps {
   dateUsed: string
+  availableWeeks: string[]
+  selectedWeek: string
+  onWeekSelect: (week: string) => void
 }
 
-export function Header({ dateUsed }: HeaderProps) {
+function formatWeekDate(dateStr: string): string {
+  const date = new Date(dateStr)
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  })
+}
+
+export function Header({
+  dateUsed,
+  availableWeeks,
+  selectedWeek,
+  onWeekSelect,
+}: HeaderProps) {
   return (
     <div className="flex items-center justify-between mb-6 sm:mb-8">
       <div className="flex items-center gap-2">
@@ -14,6 +32,17 @@ export function Header({ dateUsed }: HeaderProps) {
         </h1>
       </div>
       <div className="flex items-center gap-2">
+        <select
+          className="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring focus:border-blue-300"
+          value={selectedWeek}
+          onChange={(e) => onWeekSelect(e.target.value)}
+        >
+          {availableWeeks.map((week) => (
+            <option key={week} value={week}>
+              {formatWeekDate(week)}
+            </option>
+          ))}
+        </select>
         <a
           href="https://github.com/tscircuit/contribution-tracker"
           target="_blank"
@@ -24,9 +53,6 @@ export function Header({ dateUsed }: HeaderProps) {
           <GithubIcon className="w-5 h-5" />
           <span className="hidden sm:inline">View on GitHub</span>
         </a>
-        <span className="hidden sm:inline text-sm text-gray-600">
-          Last updated: {dateUsed}
-        </span>
       </div>
     </div>
   )

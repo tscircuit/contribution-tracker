@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react"
-import { ContributorOverview } from "./components/ContributorOverview"
-import { Header } from "./components/Header"
-import { Footer } from "./components/Footer"
-import { Modal } from "./components/Modal"
-import { MaintainersList } from "./components/MaintainersList"
-import { useContributors } from "./hooks/useContributors"
-import ContributorGraph from "./components/ContributorGraph"
-import { PrsTable } from "./components/PrsTable"
 import { AlertCircleIcon } from "lucide-react"
+import { useEffect, useState } from "react"
+import ContributorGraph from "./components/ContributorGraph"
+import { ContributorOverview } from "./components/ContributorOverview"
+import { Footer } from "./components/Footer"
+import { Header } from "./components/Header"
+import { MaintainersList } from "./components/MaintainersList"
+import { Modal } from "./components/Modal"
+import { PrsTable } from "./components/PrsTable"
+import { useContributors } from "./hooks/useContributors"
 import { type PrAnalysisResult } from "./types/contributor"
 
 const PrSection = ({
@@ -88,6 +88,9 @@ const PrSection = ({
 function App() {
   const {
     dateUsed,
+    selectedWeek,
+    availableWeeks,
+    setSelectedWeek,
     prsResultant,
     selectedContributor,
     isModalOpen,
@@ -142,7 +145,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 space-y-8">
-        <Header dateUsed={dateUsed} />
+        <Header
+          dateUsed={dateUsed}
+          availableWeeks={availableWeeks}
+          selectedWeek={selectedWeek}
+          onWeekSelect={setSelectedWeek}
+        />
 
         <ContributorOverview
           contributors={sortedContributors}
