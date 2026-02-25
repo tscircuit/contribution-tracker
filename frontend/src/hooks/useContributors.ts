@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 import {
   type ContributorStats,
@@ -38,11 +38,14 @@ export function useContributors(): UseContributorsReturn {
   const isInitialLoad = useRef(true)
 
   useEffect(() => {
+    let cancelled = false
+
     async function loadContributors() {
       setLoading(true)
       setError(null)
       try {
         const filesResp = await fetch(getContributionOverviewsUrl())
+        if (cancelled) return
         if (!filesResp.ok)
           throw new Error(
             `Failed to fetch file list: ${filesResp.statusText} (${filesResp.status})`,
@@ -60,6 +63,8 @@ export function useContributors(): UseContributorsReturn {
         const allWeeks = jsonFiles.map((file: { name: string }) =>
           file.name.replace(".json", ""),
         )
+
+        if (cancelled) return
         setAvailableWeeks(allWeeks)
 
         let weekToLoad: string
@@ -79,50 +84,56 @@ export function useContributors(): UseContributorsReturn {
           throw new Error(`Could not find file for week: ${weekToLoad}`)
         }
 
-        const jsonResp = await fetch(selectedFile.download_url)
-        if (!jsonResp.ok)
-          throw new Error(
-            `Failed to fetch data (${selectedFile.name}): ${jsonResp.statusText} (${jsonResp.status})`,
-          )
-        const latestContributorsJson = await jsonResp.json()
-        setContributorsByUsername(latestContributorsJson)
-
-        const eightWeeksAgo = new Date()
+        const selectedWeekDate = new Date(weekToLoad)
+        const eightWeeksAgo = new Date(selectedWeekDate)
         eightWeeksAgo.setUTCDate(eightWeeksAgo.getUTCDate() - 8 * 7)
 
         const historicalFiles = jsonFiles.filter((file: { name: string }) => {
-          const fileName = file.name.replace(".json", "")
-          const fileDate = new Date(fileName)
-          return fileDate >= eightWeeksAgo
+          const fileDate = new Date(file.name.replace(".json", ""))
+          return fileDate >= eightWeeksAgo && fileDate <= selectedWeekDate
         })
 
-        const historicalDataPromises = historicalFiles.map(
-          async (file: any) => {
-            const resp = await fetch(file.download_url)
-            if (!resp.ok) {
-              console.warn(
-                `Failed to fetch historical data for ${file.name}: ${resp.statusText}`,
-              )
-              return null
-            }
-            const historicalRecord = await resp.json()
-            const fileDate = new Date(file.name.replace(".json", ""))
-            return { ...historicalRecord, date: fileDate }
-          },
-        )
+        const [weekJsonResp, historicalDataResults, prAnalysisResp] =
+          await Promise.all([
+            fetch(selectedFile.download_url),
+            Promise.all(
+              historicalFiles.map(async (file: any) => {
+                const resp = await fetch(file.download_url)
+                if (!resp.ok) {
+                  console.warn(
+                    `Failed to fetch historical data for ${file.name}: ${resp.statusText}`,
+                  )
+                  return null
+                }
+                const historicalRecord = await resp.json()
+                const fileDate = new Date(file.name.replace(".json", ""))
+                return { ...historicalRecord, date: fileDate }
+              }),
+            ),
+            fetch(getPrAnalysisUrl(weekToLoad)),
+          ])
 
-        const historicalDataResults = await Promise.all(historicalDataPromises)
-        const validHistoricalRecords = historicalDataResults.filter(
-          (record) => record !== null,
-        )
-        setJsonRecords(validHistoricalRecords)
+        if (cancelled) return
 
-        const prAnalysisResp = await fetch(getPrAnalysisUrl(weekToLoad))
+        if (!weekJsonResp.ok)
+          throw new Error(
+            `Failed to fetch data (${selectedFile.name}): ${weekJsonResp.statusText} (${weekJsonResp.status})`,
+          )
         if (!prAnalysisResp.ok)
           throw new Error(
             `Failed to fetch PR analysis (${weekToLoad}.json): ${prAnalysisResp.statusText} (${prAnalysisResp.status})`,
           )
-        const prAnalysis = (await prAnalysisResp.json()) as PrAnalysisResult[]
+
+        const [latestContributorsJson, prAnalysis] = await Promise.all([
+          weekJsonResp.json(),
+          prAnalysisResp.json() as Promise<PrAnalysisResult[]>,
+        ])
+
+        if (cancelled) return
+
+        const validHistoricalRecords = historicalDataResults.filter(
+          (record) => record !== null,
+        )
 
         const prsByContributor: Record<string, PrAnalysisResult[]> = {}
         const prsByRepo: Record<string, PrAnalysisResult[]> = {}
@@ -137,19 +148,28 @@ export function useContributors(): UseContributorsReturn {
           prsByContributor[pr.contributor].push(pr)
         }
 
+        setContributorsByUsername(latestContributorsJson)
+        setJsonRecords(validHistoricalRecords)
         setPrsResultant({
           prsByContributors: prsByContributor,
           prsByRepos: prsByRepo,
         })
       } catch (error) {
+        if (cancelled) return
         console.error("Error fetching contributor data:", error)
         setError(error instanceof Error ? error : new Error(String(error)))
       } finally {
-        setLoading(false)
+        if (!cancelled) {
+          setLoading(false)
+        }
       }
     }
 
     loadContributors()
+
+    return () => {
+      cancelled = true
+    }
   }, [selectedWeek])
 
   const sortedContributors = Object.entries(contributorsByUsername).sort(
@@ -160,35 +180,34 @@ export function useContributors(): UseContributorsReturn {
     },
   )
 
-  const lastEightWeeksContributions = (username: string) => {
-    if (!jsonRecords || jsonRecords.length === 0) return []
+  const lastEightWeeksContributions = useCallback(
+    (username: string) => {
+      if (jsonRecords.length === 0) return []
 
-    const userRecords = jsonRecords
-      .filter((record) => record[username])
-      .map((record) => ({
-        date: new Date(record.date),
-        ...(record[username] || {}),
+      const seen = new Set<number>()
+      const records: { date: Date; [key: string]: any }[] = []
+
+      for (const record of jsonRecords) {
+        if (!record[username]) continue
+        const timestamp = new Date(record.date).getTime()
+        if (seen.has(timestamp)) continue
+        seen.add(timestamp)
+        records.push({ date: new Date(record.date), ...record[username] })
+      }
+
+      records.sort((a, b) => a.date.getTime() - b.date.getTime())
+
+      return records.map(({ date, ...rest }) => ({
+        date: date.toLocaleDateString("en-US", {
+          month: "2-digit",
+          day: "2-digit",
+          timeZone: "UTC",
+        }),
+        ...rest,
       }))
-
-    const uniqueDateRecords = userRecords.filter(
-      (record, index, array) =>
-        index ===
-        array.findIndex((r) => r.date.getTime() === record.date.getTime()),
-    )
-
-    const sortedRecords = uniqueDateRecords.sort(
-      (a, b) => a.date.getTime() - b.date.getTime(),
-    )
-
-    return sortedRecords.map(({ date: _date, ...x }) => ({
-      date: _date.toLocaleDateString("en-US", {
-        month: "2-digit",
-        day: "2-digit",
-        timeZone: "UTC",
-      }),
-      ...x,
-    }))
-  }
+    },
+    [jsonRecords],
+  )
 
   return {
     contributorsByUsername,
