@@ -168,6 +168,7 @@ function App() {
           availableWeeks={availableWeeks}
           selectedWeek={selectedWeek}
           onWeekSelect={setSelectedWeek}
+          loading={loading}
         />
 
         <ContributorOverview
