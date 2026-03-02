@@ -16,7 +16,6 @@ export const getContributionStarRatingFromAttributes = (
   if (a.core_change) score *= 1.6
   if (a.fixes_subtle_important_bug) score *= 1.5
   if (a.only_reproduces_a_bug) score *= 0.75
-  if (a.substantially_improves_svg_generation) score *= 1.6
 
   if (a.only_adds_autorouter_fixtures) maxRating = 1
   if (a.minor_developer_experience_improvement) maxRating = 1
@@ -26,7 +25,7 @@ export const getContributionStarRatingFromAttributes = (
   if (a.major_library_algorithm_contribution) return 3
 
   if (a.major_experience_improvement) score *= 2
-  if (a.fixes_schematic_representation) score *= 1.5
+  if (a.fixes_schematic_representation) score *= 0.6
   if (a.improves_parts_engine) score *= 1.5
   if (a.reproduces_and_fixes_a_bug) score *= 2
   if (a.new_page_or_component) score *= 1.25
