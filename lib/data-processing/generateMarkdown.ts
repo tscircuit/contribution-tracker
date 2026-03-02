@@ -219,7 +219,7 @@ export async function generateMarkdown(
     "Approvals Received": "approvalsReceived",
     "Rejections Received": "rejectionsReceived",
     Approvals: "approvalsGiven",
-    Rejections: "rejectionsGiven",
+    "Rejections Given": "rejectionsGiven",
     "PRs Opened": "prsOpened",
     "PRs Merged": "prsMerged",
     "Issues Created": "issuesCreated",
