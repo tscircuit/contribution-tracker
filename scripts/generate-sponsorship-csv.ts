@@ -115,7 +115,7 @@ function readWeeklyData(filePath: string): WeeklyData {
 }
 
 function countStars(stars: string): number {
-  if (stars === "👑") return 3
+  if (stars.includes("👑")) return 3
   return (stars.match(/⭐/g) || []).length
 }
 

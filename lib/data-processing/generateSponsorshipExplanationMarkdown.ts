@@ -51,7 +51,7 @@ export const generateSponsorshipExplanationMarkdown = () => {
   markdown += "- **Min stars**: The minimum weekly star count\n"
   markdown += "- **Max stars**: The maximum weekly star count\n"
   markdown +=
-    "- **High score**: The maximum raw weekly score (0-100+ range from the scoring table) from any week in the month\n\n"
+    "- **High score**: The maximum raw weekly score (0-162+ range from the scoring table) from any week in the month\n\n"
 
   markdown += "**Step 3: Determine Base Amount**\n"
   markdown +=
