@@ -22,11 +22,11 @@ PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star 
 |------------|-------------|-------------|
 | 0-3 | (empty) | 0 stars |
 | 4-10 | ⭐ | 1 star |
-| 11-30 | ⭐⭐ | 2 stars |
-| 31-50 | ⭐⭐⭐ | 3 stars |
-| 51-75 | 👑 | 1 crown |
-| 76-100 | 👑👑 | 2 crowns |
-| 101+ | 👑👑👑 | 3 crowns |
+| 11-49 | ⭐⭐ | 2 stars |
+| 50-81 | ⭐⭐⭐ | 3 stars |
+| 82-121 | 👑 | 1 crown |
+| 122-161 | 👑👑 | 2 crowns |
+| 162+ | 👑👑👑 | 3 crowns |
 
 > Crowns count as 3 stars for sponsorship.
 
@@ -43,7 +43,7 @@ The sponsorship system calculates monthly payments based on your **weekly star c
 - **Median stars**: The median value of all weekly star counts
 - **Min stars**: The minimum weekly star count
 - **Max stars**: The maximum weekly star count
-- **High score**: The maximum raw weekly score (0-100+ range from the scoring table) from any week in the month
+- **High score**: The maximum raw weekly score (0-162+ range from the scoring table) from any week in the month
 
 **Step 3: Determine Base Amount**
 The sponsorship amount is calculated based on these metrics (checked in order):

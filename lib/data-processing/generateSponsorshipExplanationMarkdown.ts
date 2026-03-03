@@ -28,11 +28,11 @@ export const generateSponsorshipExplanationMarkdown = () => {
   markdown += "|------------|-------------|-------------|\n"
   markdown += "| 0-3 | (empty) | 0 stars |\n"
   markdown += "| 4-10 | ⭐ | 1 star |\n"
-  markdown += "| 11-30 | ⭐⭐ | 2 stars |\n"
-  markdown += "| 31-50 | ⭐⭐⭐ | 3 stars |\n"
-  markdown += "| 51-75 | 👑 | 1 crown |\n"
-  markdown += "| 76-100 | 👑👑 | 2 crowns |\n"
-  markdown += "| 101+ | 👑👑👑 | 3 crowns |\n\n"
+  markdown += "| 11-49 | ⭐⭐ | 2 stars |\n"
+  markdown += "| 50-81 | ⭐⭐⭐ | 3 stars |\n"
+  markdown += "| 82-121 | 👑 | 1 crown |\n"
+  markdown += "| 122-161 | 👑👑 | 2 crowns |\n"
+  markdown += "| 162+ | 👑👑👑 | 3 crowns |\n\n"
   markdown += "> Crowns count as 3 stars for sponsorship.\n\n"
 
   markdown += "### Monthly Sponsorship Calculation\n\n"
@@ -51,7 +51,7 @@ export const generateSponsorshipExplanationMarkdown = () => {
   markdown += "- **Min stars**: The minimum weekly star count\n"
   markdown += "- **Max stars**: The maximum weekly star count\n"
   markdown +=
-    "- **High score**: The maximum raw weekly score (0-100+ range from the scoring table) from any week in the month\n\n"
+    "- **High score**: The maximum raw weekly score (0-162+ range from the scoring table) from any week in the month\n\n"
 
   markdown += "**Step 3: Determine Base Amount**\n"
   markdown +=
