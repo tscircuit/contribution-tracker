@@ -1,6 +1,5 @@
 import {
   HIGH_SCORE_TIERS,
-  MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER,
   MAINTAINER_BASE,
   MAX_STAR_TIERS,
   MEDIAN_STAR_TIERS,
@@ -49,16 +48,9 @@ export const generateSponsorshipExplanationMarkdown = () => {
 
   markdown += "**Sponsorship-only score threshold multipliers**\n"
   markdown +=
-    "(These do not change weekly score displays or contribution overview tables.)\n\n"
-  markdown += "| Maintainer Level | Score Threshold Multiplier |\n"
-  markdown += "|------------------|----------------------------|\n"
-  Object.entries(MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER).forEach(
-    ([level, multiplier]) => {
-      const levelNumber = level.replace("maintainer", "")
-      markdown += `| Level ${levelNumber} | ${Math.round(multiplier * 100)}% |\n`
-    },
-  )
-  markdown += "\n"
+    "(These do not change weekly score displays or contribution overview tables.)\n"
+  markdown +=
+    "See the latest multiplier mapping in code: [`MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER`](https://github.com/tscircuit/contribution-tracker/blob/main/lib/scoring/getSponsorshipAmount.ts).\n\n"
 
   markdown += "**Step 2: Calculate Metrics**\n"
   markdown += "- **Median stars**: The median value of all weekly star counts\n"
