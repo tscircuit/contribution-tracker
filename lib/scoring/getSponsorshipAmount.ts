@@ -1,4 +1,5 @@
 import { MAINTAINERS } from "./maintainers"
+import { SPONSORSHIP_STAR_SCORE_THRESHOLDS } from "./scoreToStars"
 
 export const MAINTAINER_BASE = {
   maintainer1: 200,
@@ -7,6 +8,15 @@ export const MAINTAINER_BASE = {
   maintainer4: 850,
   maintainer5: 1300,
   maintainer6: 2000,
+}
+
+export const MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER = {
+  maintainer1: 1,
+  maintainer2: 0.8,
+  maintainer3: 0.6,
+  maintainer4: 0.4,
+  maintainer5: 0.2,
+  maintainer6: 0,
 }
 
 // Tiers checked in order - first match wins
@@ -26,6 +36,31 @@ export const MAX_STAR_TIERS = [
 ]
 
 export const HIGH_SCORE_TIERS = [{ threshold: 3, amount: 10 }]
+
+export function scoreToSponsorshipStarCount(
+  score: number,
+  username?: string,
+): number {
+  const maintainerLevel =
+    username && MAINTAINERS[username as keyof typeof MAINTAINERS]
+  const mappedMultiplier =
+    maintainerLevel === undefined
+      ? undefined
+      : MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER[
+          maintainerLevel as keyof typeof MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER
+        ]
+  const thresholdMultiplier = mappedMultiplier ?? 1
+
+  if (thresholdMultiplier === 0) return 3
+
+  for (const threshold of SPONSORSHIP_STAR_SCORE_THRESHOLDS) {
+    if (score >= threshold.minScore * thresholdMultiplier) {
+      return threshold.stars
+    }
+  }
+
+  return 0
+}
 /**
  * Calculates sponsorship amount based on weekly stars over the past 4 weeks
  * @param weeklyStars Array of star counts for the past 4 weeks

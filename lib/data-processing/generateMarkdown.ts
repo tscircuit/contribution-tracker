@@ -1,5 +1,7 @@
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { getContributorScore } from "../scoring"
+import { scoreToStarString } from "../scoring/scoreToStars"
+export { scoreToStarString }
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {
@@ -12,16 +14,6 @@ export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
     default:
       return "🟡"
   }
-}
-
-export const scoreToStarString = (score: number) => {
-  if (score <= 3) return ""
-  if (score <= 10) return "⭐"
-  if (score <= 49) return "⭐⭐"
-  if (score <= 81) return "⭐⭐⭐"
-  if (score <= 121) return "👑"
-  if (score <= 161) return "👑👑"
-  return "👑👑👑"
 }
 
 const buildContributorScores = (

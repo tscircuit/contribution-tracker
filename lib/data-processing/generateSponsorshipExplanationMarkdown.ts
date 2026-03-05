@@ -1,5 +1,6 @@
 import {
   HIGH_SCORE_TIERS,
+  MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER,
   MAINTAINER_BASE,
   MAX_STAR_TIERS,
   MEDIAN_STAR_TIERS,
@@ -42,9 +43,22 @@ export const generateSponsorshipExplanationMarkdown = () => {
   markdown += "**Step 1: Collect Weekly Stars**\n"
   markdown += "- All complete weeks in the month are analyzed\n"
   markdown +=
-    "- Each week's star string is converted to a numeric count (⭐ = 1 star, ⭐⭐⭐ = 3 stars)\n"
+    "- For sponsorship only, each week's raw score is converted to a numeric star count (⭐ = 1 star, ⭐⭐⭐ = 3 stars) using maintainer-level adjusted score thresholds\n"
   markdown +=
     "- Example: `[2, 2, 2, 1, 0]` means 2 stars in week 1, 2 stars in week 2, etc.\n\n"
+
+  markdown += "**Sponsorship-only score threshold multipliers**\n"
+  markdown +=
+    "(These do not change weekly score displays or contribution overview tables.)\n\n"
+  markdown += "| Maintainer Level | Score Threshold Multiplier |\n"
+  markdown += "|------------------|----------------------------|\n"
+  Object.entries(MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER).forEach(
+    ([level, multiplier]) => {
+      const levelNumber = level.replace("maintainer", "")
+      markdown += `| Level ${levelNumber} | ${Math.round(multiplier * 100)}% |\n`
+    },
+  )
+  markdown += "\n"
 
   markdown += "**Step 2: Calculate Metrics**\n"
   markdown += "- **Median stars**: The median value of all weekly star counts\n"
