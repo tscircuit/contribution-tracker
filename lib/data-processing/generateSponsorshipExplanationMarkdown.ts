@@ -42,9 +42,15 @@ export const generateSponsorshipExplanationMarkdown = () => {
   markdown += "**Step 1: Collect Weekly Stars**\n"
   markdown += "- All complete weeks in the month are analyzed\n"
   markdown +=
-    "- Each week's star string is converted to a numeric count (⭐ = 1 star, ⭐⭐⭐ = 3 stars)\n"
+    "- For sponsorship only, each week's raw score is converted to a numeric star count (⭐ = 1 star, ⭐⭐⭐ = 3 stars) using maintainer-level adjusted score thresholds; when score is unavailable, the saved star string is used\n"
   markdown +=
     "- Example: `[2, 2, 2, 1, 0]` means 2 stars in week 1, 2 stars in week 2, etc.\n\n"
+
+  markdown += "**Sponsorship-only score threshold multipliers**\n"
+  markdown +=
+    "(These do not change weekly score displays or contribution overview tables.)\n"
+  markdown +=
+    "See the latest multiplier mapping in code: [`MAINTAINER_SPONSORSHIP_SCORE_MULTIPLIER`](https://github.com/tscircuit/contribution-tracker/blob/main/lib/scoring/getSponsorshipAmount.ts).\n\n"
 
   markdown += "**Step 2: Calculate Metrics**\n"
   markdown += "- **Median stars**: The median value of all weekly star counts\n"

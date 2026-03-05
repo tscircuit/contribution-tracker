@@ -1,4 +1,4 @@
-// Bun Snapshot v1, https://goo.gl/fbAQLP
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
 
 exports[`generateMarkdown should generate markdown with expected sections and contributor data: markdown 1`] = `
 "# Contribution Overview 2024-07-01
@@ -20,10 +20,10 @@ pie
 
 ## Contributor Overview
 
-| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | ⭐ | Discussion Contributions |
-|-------------|---------|---------|---------|-----|--------------------------|
-| [alice](#alice) | 1 | 0 | 1 | ⭐ | 2🔹 1🔶 0💎 |
-| [bob](#bob) | 0 | 1 | 0 |  | 0🔹 0🔶 1💎 |
+| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ | Discussion Contributions |
+|-------------|---------|---------|---------|-------|-----|--------------------------|
+| [alice](#alice) | 1 | 0 | 1 | 5 | ⭐ | 2🔹 1🔶 0💎 |
+| [bob](#bob) | 0 | 1 | 0 | 2 |  | 0🔹 0🔶 1💎 |
 
 > Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.
 

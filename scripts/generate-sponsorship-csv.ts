@@ -1,7 +1,10 @@
 import fs from "node:fs"
 import path from "node:path"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
-import { getSponsorshipAmount } from "../lib/scoring"
+import {
+  getSponsorshipAmount,
+  scoreToSponsorshipStarCount,
+} from "../lib/scoring"
 import {
   isUserIneligible,
   INELIGIBLE_FOR_SPONSORSHIP,
@@ -178,11 +181,14 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
         }
 
         const userSponsorship = sponsorships.get(username)!
-        if (data.stars) {
-          userSponsorship.weeklyStars[weekIndex] = countStars(data.stars)
-        }
-        if (data.score) {
+        if (typeof data.score === "number") {
+          userSponsorship.weeklyStars[weekIndex] = scoreToSponsorshipStarCount(
+            data.score,
+            username,
+          )
           userSponsorship.score = Math.max(userSponsorship.score, data.score)
+        } else if (data.stars) {
+          userSponsorship.weeklyStars[weekIndex] = countStars(data.stars)
         }
 
         // We don't need to update the dates here as they're already initialized correctly
