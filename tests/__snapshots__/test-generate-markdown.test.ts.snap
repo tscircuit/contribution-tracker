@@ -33,6 +33,15 @@ pie
 - 🔶 Great Informative Comments: Thoughtful participation that adds value
 - 💎 Incredible Comments: Exceptional participation with high-quality content
 
+## Point Source Breakdown
+
+This table shows where each contributor's weekly score comes from:
+
+| Contributor | PR Points | Review Points | Discussion Points | Total Score | PR % | Review % | Discussion % |
+|-------------|-----------|---------------|-------------------|-------------|------|----------|-------------|
+| [alice](#alice) | 5 | 0 | 0 | 5 | 100.0% | 0.0% | 0.0% |
+| [bob](#bob) | 2 | 0 | 0 | 2 | 100.0% | 0.0% | 0.0% |
+
 ## Review Table
 
 [reviews-received-hover]: ## "Number of reviews received for PRs for this contributor"
