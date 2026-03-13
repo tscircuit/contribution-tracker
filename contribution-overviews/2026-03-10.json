@@ -3,6 +3,25 @@
     "reviewsReceived": 5,
     "rejectionsReceived": 0,
     "approvalsReceived": 3,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 654,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/654",
+        "title": "Add Pipeline3 HG failure analyzer and relax via-limit to reduce circuit100 failures",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4,
+        "url": "https://github.com/tscircuit/high-density-dataset-z04/pull/4",
+        "title": "hard problems list",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 13,
@@ -25,6 +44,39 @@
     "reviewsReceived": 5,
     "rejectionsReceived": 0,
     "approvalsReceived": 4,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 4,
+    "staffReviewedPrLinks": [
+      {
+        "number": 509,
+        "url": "https://github.com/tscircuit/circuit-json/pull/509",
+        "title": "Align cad_component Orientation Field with CAD Model Convention Definitions",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 505,
+        "url": "https://github.com/tscircuit/circuit-json/pull/505",
+        "title": "Add CAD Model Format Conventions for Board Normal Orientation",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 143,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/143",
+        "title": "Fix EasyEDA OBJ dissolve handling to prevent unintended translucency in GLTF materials",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 137,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/137",
+        "title": "Refactor CAD Model Placement Pipeline with Orientation, Origin Alignment, and Fit Controls",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 4,
@@ -44,6 +96,39 @@
     "reviewsReceived": 10,
     "rejectionsReceived": 0,
     "approvalsReceived": 7,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 4,
+    "staffReviewedPrLinks": [
+      {
+        "number": 524,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/524",
+        "title": "Add `showPcbNotes` render-time toggle (default `true`) to `convertCircuitJsonToPcbSvg`",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2390,
+        "url": "https://github.com/tscircuit/cli/pull/2390",
+        "title": "Enforce deterministic no-match failures for tsci snapshot <directory> and surface exact includeBoardFiles source",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 661,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/661",
+        "title": "Enable Hypergraph Auto‑Baked Tile Selection in FixedTopology Solver by Removing Hardcoded Via Tile and Via Diameter Overrides",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 138,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/138",
+        "title": "fix(gltf): ensure board textures render notes only when showPcbNotes is enabled",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 7,
@@ -63,6 +148,10 @@
     "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
@@ -85,6 +174,10 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 3,
@@ -104,6 +197,10 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 3,
@@ -123,6 +220,10 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 2,
@@ -142,6 +243,10 @@
     "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 2,
@@ -161,6 +266,67 @@
     "reviewsReceived": 23,
     "rejectionsReceived": 0,
     "approvalsReceived": 17,
+    "staffReviewedPrs": 8,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 8,
+    "staffReviewedPrLinks": [
+      {
+        "number": 517,
+        "url": "https://github.com/tscircuit/circuit-json/pull/517",
+        "title": "Add ccw_rotation to pcb_courtyard_rect",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 522,
+        "url": "https://github.com/tscircuit/footprinter/pull/522",
+        "title": "Update kicad-parity snapshots to include courtyards",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 193,
+        "url": "https://github.com/tscircuit/kicad-component-converter/pull/193",
+        "title": "Feat: Add courtyard conversion support from kicad_mod to circuit-json",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2051,
+        "url": "https://github.com/tscircuit/core/pull/2051",
+        "title": "Feat: integrate courtyards and tests for courtyard overlap",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2047,
+        "url": "https://github.com/tscircuit/core/pull/2047",
+        "title": "Export kicadFootprintStrings",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2052,
+        "url": "https://github.com/tscircuit/core/pull/2052",
+        "title": "Fix rotation for CourtyardRect",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 525,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/525",
+        "title": "Fix PCB courtyard rect rotation and add rotation tests",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 119,
+        "url": "https://github.com/tscircuit/checks/pull/119",
+        "title": "Add new check for courtyard overlaps",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 28,
@@ -184,6 +350,18 @@
     "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 694,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/694",
+        "title": "fix: persist selected layer across snippet reruns using localStorage",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 4,
@@ -203,6 +381,10 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
@@ -222,6 +404,137 @@
     "reviewsReceived": 27,
     "rejectionsReceived": 1,
     "approvalsReceived": 20,
+    "staffReviewedPrs": 18,
+    "staffRejectionsReceived": 4,
+    "staffApprovalsReceived": 19,
+    "staffReviewedPrLinks": [
+      {
+        "number": 507,
+        "url": "https://github.com/tscircuit/circuit-json/pull/507",
+        "title": "Add copper pour metadata fields to pcb_trace.route points",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 501,
+        "url": "https://github.com/tscircuit/circuit-json/pull/501",
+        "title": "Add source warning types for no-power, no-ground, and underspecified pins",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 503,
+        "url": "https://github.com/tscircuit/circuit-json/pull/503",
+        "title": "Add source_invalid_component_property_error to circuit-json",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 88,
+        "url": "https://github.com/tscircuit/circuit-json-util/pull/88",
+        "title": "new category pin_specification",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 615,
+        "url": "https://github.com/tscircuit/props/pull/615",
+        "title": "introduce pinSpecificationDrcChecksDisabled",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2044,
+        "url": "https://github.com/tscircuit/core/pull/2044",
+        "title": " Improve PCB calc coordinate error handling and edge-prop diagnostics",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2050,
+        "url": "https://github.com/tscircuit/core/pull/2050",
+        "title": "Mark Fully Covered Trace Segments With Copper Pour Metadata",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2041,
+        "url": "https://github.com/tscircuit/core/pull/2041",
+        "title": "Validate PCB coordinate calc refs before placement and preserve edge prop names in errors",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2038,
+        "url": "https://github.com/tscircuit/core/pull/2038",
+        "title": "Warn on component-relative calc refs in footprint primitives",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2039,
+        "url": "https://github.com/tscircuit/core/pull/2039",
+        "title": "Report invalid pcbX/pcbY calc inputs as source_invalid_component_property_error (including malformed wrappers)",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 2033,
+        "url": "https://github.com/tscircuit/core/pull/2033",
+        "title": "Add Pin Specification DRC to Board Check Pipeline",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2032,
+        "url": "https://github.com/tscircuit/core/pull/2032",
+        "title": "Support primitive component-relative calc() outside footprints and centralize named PCB calc vars",
+        "staffApprovals": 2,
+        "staffRejections": 2
+      },
+      {
+        "number": 2031,
+        "url": "https://github.com/tscircuit/core/pull/2031",
+        "title": "Enable PCB placement for current/voltage sources with footprint and validate calc positioning",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2027,
+        "url": "https://github.com/tscircuit/core/pull/2027",
+        "title": " Add calc(board.*) support for MountedBoard positioning",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 523,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/523",
+        "title": "hide traces that are inside copper pours",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 116,
+        "url": "https://github.com/tscircuit/checks/pull/116",
+        "title": "Introduce checkNoPowerPinDefinedForChip",
+        "staffApprovals": 2,
+        "staffRejections": 1
+      },
+      {
+        "number": 2393,
+        "url": "https://github.com/tscircuit/cli/pull/2393",
+        "title": "Introduce ignore DRC flags",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2353,
+        "url": "https://github.com/tscircuit/cli/pull/2353",
+        "title": "tsci check pin_specification",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 22,
@@ -245,6 +558,10 @@
     "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 2,
@@ -264,10 +581,29 @@
     "reviewsReceived": 5,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 2372,
+        "url": "https://github.com/tscircuit/cli/pull/2372",
+        "title": "Add periodic heartbeat logs for thread worker pool",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 134,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/134",
+        "title": "Add a `fast` mode for the holes/cutout drill quality which uses less polygon segments",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 6,
     "rejectionsGiven": 0,
     "prsOpened": 16,
-    "prsMerged": 13,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -287,6 +623,10 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
@@ -306,6 +646,10 @@
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
@@ -325,6 +669,39 @@
     "reviewsReceived": 16,
     "rejectionsReceived": 3,
     "approvalsReceived": 4,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 3,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 699,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/699",
+        "title": "Fix per-layer PCB trace rendering for via routes and add minimal plated-hole/via repro fixture",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 698,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/698",
+        "title": "Fix plated_holes showing wrong color on bottom layer in PCB viewer",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 695,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/695",
+        "title": "feat(pcb-viewer): add controlled viewState API, deprecate initialState, and ship full all-features controlled fixture",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 2880,
+        "url": "https://github.com/tscircuit/runframe/pull/2880",
+        "title": "Improve API status indicator accessibility — use shadcn tooltip and increase hit area",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
     "approvalsGiven": 1,
     "rejectionsGiven": 1,
     "prsOpened": 9,
@@ -345,13 +722,17 @@
     "tiny": 1
   },
   "seveibar": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 53,
     "rejectionsGiven": 8,
-    "prsOpened": 32,
-    "prsMerged": 24,
+    "prsOpened": 33,
+    "prsMerged": 25,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -374,13 +755,17 @@
     "score": 48,
     "stars": "⭐⭐",
     "major": 4,
-    "minor": 12,
+    "minor": 13,
     "tiny": 7
   },
   "songshanhua-eng": {
     "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
@@ -400,6 +785,53 @@
     "reviewsReceived": 15,
     "rejectionsReceived": 5,
     "approvalsReceived": 7,
+    "staffReviewedPrs": 6,
+    "staffRejectionsReceived": 4,
+    "staffApprovalsReceived": 3,
+    "staffReviewedPrLinks": [
+      {
+        "number": 692,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/692",
+        "title": "feat: disable position anchors by default in dev mode",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 195,
+        "url": "https://github.com/tscircuit/kicad-component-converter/pull/195",
+        "title": "feat: hide reference placeholders ($REFERENCE, ${REFERENCE}, %R) on fab layer",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 192,
+        "url": "https://github.com/tscircuit/kicad-component-converter/pull/192",
+        "title": "Convert KiCad courtyard layers to tscircuit PcbCourtyardOutline elements and fix vercel deployment",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2030,
+        "url": "https://github.com/tscircuit/core/pull/2030",
+        "title": "feat: add test for KiCad JST XH connector",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 2034,
+        "url": "https://github.com/tscircuit/core/pull/2034",
+        "title": "feat: replace external KiCad footprint requests with local mocks in tests",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2037,
+        "url": "https://github.com/tscircuit/core/pull/2037",
+        "title": " fix: strip kicad prefix from circuit-json and prevent footprinter crashes for library footprints",
+        "staffApprovals": 0,
+        "staffRejections": 2
+      }
+    ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 14,
@@ -423,9 +855,13 @@
     "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 353,
+    "prsOpened": 354,
     "prsMerged": 295,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,

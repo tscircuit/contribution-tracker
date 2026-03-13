@@ -83,6 +83,27 @@ export async function generateMarkdown(
   weekStart: string,
   repoOwnersMap: Record<string, string[]> = {},
 ): Promise<string> {
+  const tinyPrUrls = new Set(
+    prs.filter((pr) => pr.impact === "Tiny").map((pr) => pr.url),
+  )
+
+  Object.values(contributorIdToStatsMap).forEach((stats) => {
+    const filteredStaffReviewedPrLinks = (
+      stats.staffReviewedPrLinks ?? []
+    ).filter((pr) => !tinyPrUrls.has(pr.url))
+
+    stats.staffReviewedPrLinks = filteredStaffReviewedPrLinks
+    stats.staffReviewedPrs = filteredStaffReviewedPrLinks.length
+    stats.staffApprovalsReceived = filteredStaffReviewedPrLinks.reduce(
+      (sum, pr) => sum + pr.staffApprovals,
+      0,
+    )
+    stats.staffRejectionsReceived = filteredStaffReviewedPrLinks.reduce(
+      (sum, pr) => sum + pr.staffRejections,
+      0,
+    )
+  })
+
   const scoringDocPath = "/docs/sponsorship-calculation-explanation.md"
   let markdown = `# Contribution Overview ${weekStart}\n\n`
   markdown += "The current week is shown below. There are 3 major sections:\n\n"
@@ -167,6 +188,51 @@ export async function generateMarkdown(
     )} | ${discussionSummary} |\n`
   }
   markdown += "\n"
+
+  markdown += "## Staff Pass Ratio (SPR)\n\n"
+  markdown += "| Contributor | Reviewed PRs | Rejections | Approvals | SPR |\n"
+  markdown += "|-------------|--------------|------------|-----------|-----|\n"
+
+  Object.entries(contributorIdToStatsMap)
+    .filter(([, stats]) => (stats.staffReviewedPrs ?? 0) > 0)
+    .sort(
+      ([, statsA], [, statsB]) =>
+        (statsB.staffReviewedPrs ?? 0) - (statsA.staffReviewedPrs ?? 0),
+    )
+    .forEach(([contributor, stats]) => {
+      const reviewedPrs = stats.staffReviewedPrs ?? 0
+      const rejections = stats.staffRejectionsReceived ?? 0
+      const approvals = stats.staffApprovalsReceived ?? 0
+      const spr = reviewedPrs > 0 ? (1 - rejections / reviewedPrs) * 100 : 0
+
+      markdown += `| [${contributor}](#${contributor.replace(
+        /\s/g,
+        "-",
+      )}) | ${reviewedPrs} | ${rejections} | ${approvals} | ${spr.toFixed(
+        1,
+      )}% |\n`
+    })
+  markdown += "\n"
+
+  Object.entries(contributorIdToStatsMap)
+    .filter(([, stats]) => (stats.staffReviewedPrs ?? 0) > 0)
+    .sort(
+      ([, statsA], [, statsB]) =>
+        (statsB.staffReviewedPrs ?? 0) - (statsA.staffReviewedPrs ?? 0),
+    )
+    .forEach(([contributor, stats]) => {
+      const staffReviewedPrLinks = stats.staffReviewedPrLinks ?? []
+      if (staffReviewedPrLinks.length === 0) return
+
+      markdown += `<details>\n`
+      markdown += `<summary>${contributor} SPR PRs (${staffReviewedPrLinks.length})</summary>\n\n`
+
+      staffReviewedPrLinks.forEach((pr) => {
+        markdown += `- [#${pr.number}](${pr.url}) ${pr.title}\n`
+      })
+
+      markdown += "\n</details>\n\n"
+    })
 
   // Add note about AI star ratings
   markdown +=
