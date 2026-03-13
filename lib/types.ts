@@ -32,6 +32,14 @@ export interface ContributorStats {
   reviewsReceived: number
   rejectionsReceived: number
   approvalsReceived: number
+  staffReviewedPrs?: number
+  staffRejectionsReceived?: number
+  staffApprovalsReceived?: number
+  staffReviewedPrLinks?: Array<{
+    number: number
+    url: string
+    title: string
+  }>
   prsOpened: number
   prsMerged: number
   issuesCreated: number
@@ -82,6 +90,7 @@ export interface PullRequestWithReviews extends PullRequest {
   approvalsReceived: number
   isClosed: boolean
   reviewsByUser?: Record<string, ReviewerStats>
+  allReviewsByUser?: Record<string, ReviewerStats>
 }
 
 export type StarRating = 0 | 1 | 2 | 3 | 4 | 5

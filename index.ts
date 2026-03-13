@@ -17,6 +17,7 @@ import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { postMergeComment } from "lib/notifications/notify-pr-change"
+import { SENIOR_STAFF_USERNAMES } from "lib/constants"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
@@ -24,6 +25,7 @@ export async function generateOverview(
   startDate: string,
   currentTime: Date = new Date(),
 ) {
+  const seniorStaffUsernames = new Set<string>(SENIOR_STAFF_USERNAMES)
   // Extract date portion for file naming (handles both YYYY-MM-DD and full ISO timestamp)
   const startDateString = startDate.split("T")[0]
 
@@ -62,6 +64,10 @@ export async function generateOverview(
           reviewsReceived: 0,
           rejectionsReceived: 0,
           approvalsReceived: 0,
+          staffReviewedPrs: 0,
+          staffRejectionsReceived: 0,
+          staffApprovalsReceived: 0,
+          staffReviewedPrLinks: [],
           approvalsGiven: 0,
           rejectionsGiven: 0,
           prsOpened: 0,
@@ -101,6 +107,39 @@ export async function generateOverview(
       contributorData[contributor].approvalsReceived += pr.approvalsReceived
       contributorData[contributor].prsOpened += 1
 
+      const seniorStaffReviewStats = Object.entries(
+        pr.allReviewsByUser ?? {},
+      ).reduce(
+        (acc, [reviewer, reviewerStats]) => {
+          if (!seniorStaffUsernames.has(reviewer)) return acc
+          acc.approvals += reviewerStats.approvalsGiven
+          acc.rejections += reviewerStats.rejectionsGiven
+          return acc
+        },
+        { approvals: 0, rejections: 0 },
+      )
+
+      if (
+        seniorStaffReviewStats.approvals > 0 ||
+        seniorStaffReviewStats.rejections > 0
+      ) {
+        contributorData[contributor].staffReviewedPrs =
+          (contributorData[contributor].staffReviewedPrs ?? 0) + 1
+        contributorData[contributor].staffRejectionsReceived =
+          (contributorData[contributor].staffRejectionsReceived ?? 0) +
+          seniorStaffReviewStats.rejections
+        contributorData[contributor].staffApprovalsReceived =
+          (contributorData[contributor].staffApprovalsReceived ?? 0) +
+          seniorStaffReviewStats.approvals
+        contributorData[contributor].staffReviewedPrLinks = (
+          contributorData[contributor].staffReviewedPrLinks ?? []
+        ).concat({
+          number: pr.number,
+          url: pr.html_url,
+          title: pr.title,
+        })
+      }
+
       if (pr.reviewsByUser) {
         Object.entries(pr.reviewsByUser).forEach(
           ([reviewer, reviewerStats]) => {
@@ -112,6 +151,10 @@ export async function generateOverview(
                 reviewsReceived: 0,
                 rejectionsReceived: 0,
                 approvalsReceived: 0,
+                staffReviewedPrs: 0,
+                staffRejectionsReceived: 0,
+                staffApprovalsReceived: 0,
+                staffReviewedPrLinks: [],
                 approvalsGiven: 0,
                 rejectionsGiven: 0,
                 prsOpened: 0,
@@ -277,6 +320,10 @@ export async function generateOverview(
           reviewsReceived: 0,
           rejectionsReceived: 0,
           approvalsReceived: 0,
+          staffReviewedPrs: 0,
+          staffRejectionsReceived: 0,
+          staffApprovalsReceived: 0,
+          staffReviewedPrLinks: [],
           approvalsGiven: 0,
           rejectionsGiven: 0,
           prsOpened: 0,

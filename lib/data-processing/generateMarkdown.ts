@@ -168,6 +168,51 @@ export async function generateMarkdown(
   }
   markdown += "\n"
 
+  markdown += "## Staff Pass Ratio (SPR)\n\n"
+  markdown += "| Contributor | Reviewed PRs | Rejections | Approvals | SPR |\n"
+  markdown += "|-------------|--------------|------------|-----------|-----|\n"
+
+  Object.entries(contributorIdToStatsMap)
+    .filter(([, stats]) => (stats.staffReviewedPrs ?? 0) > 0)
+    .sort(
+      ([, statsA], [, statsB]) =>
+        (statsB.staffReviewedPrs ?? 0) - (statsA.staffReviewedPrs ?? 0),
+    )
+    .forEach(([contributor, stats]) => {
+      const reviewedPrs = stats.staffReviewedPrs ?? 0
+      const rejections = stats.staffRejectionsReceived ?? 0
+      const approvals = stats.staffApprovalsReceived ?? 0
+      const spr = reviewedPrs > 0 ? (1 - rejections / reviewedPrs) * 100 : 0
+
+      markdown += `| [${contributor}](#${contributor.replace(
+        /\s/g,
+        "-",
+      )}) | ${reviewedPrs} | ${rejections} | ${approvals} | ${spr.toFixed(
+        1,
+      )}% |\n`
+    })
+  markdown += "\n"
+
+  Object.entries(contributorIdToStatsMap)
+    .filter(([, stats]) => (stats.staffReviewedPrs ?? 0) > 0)
+    .sort(
+      ([, statsA], [, statsB]) =>
+        (statsB.staffReviewedPrs ?? 0) - (statsA.staffReviewedPrs ?? 0),
+    )
+    .forEach(([contributor, stats]) => {
+      const staffReviewedPrLinks = stats.staffReviewedPrLinks ?? []
+      if (staffReviewedPrLinks.length === 0) return
+
+      markdown += `<details>\n`
+      markdown += `<summary>${contributor} SPR PRs (${staffReviewedPrLinks.length})</summary>\n\n`
+
+      staffReviewedPrLinks.forEach((pr) => {
+        markdown += `- [#${pr.number}](${pr.url}) ${pr.title}\n`
+      })
+
+      markdown += "\n</details>\n\n"
+    })
+
   // Add note about AI star ratings
   markdown +=
     "> Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.\n\n"

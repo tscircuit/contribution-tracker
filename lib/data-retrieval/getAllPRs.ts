@@ -69,6 +69,30 @@ export async function getAllPRs(
       const reviews = await fetchReviews(pr.number)
       const isMerged = !!pr.merged_at
 
+      const allReviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
+        (acc, review) => {
+          const reviewer = review.user.login
+          if (!acc[reviewer]) {
+            acc[reviewer] = {
+              approvalsGiven: 0,
+              rejectionsGiven: 0,
+              prNumbers: new Set<number>(),
+            }
+          }
+
+          if (review.state === "APPROVED") {
+            acc[reviewer].approvalsGiven++
+            acc[reviewer].prNumbers?.add(pr.number)
+          } else if (review.state === "CHANGES_REQUESTED") {
+            acc[reviewer].rejectionsGiven++
+            acc[reviewer].prNumbers?.add(pr.number)
+          }
+
+          return acc
+        },
+        {},
+      )
+
       let processedReviews = reviews
 
       // For merged PRs, get the latest review per user
@@ -127,6 +151,7 @@ export async function getAllPRs(
         approvalsReceived,
         rejectionsReceived,
         reviewsByUser,
+        allReviewsByUser,
         isClosed: pr.state === "closed",
         state:
           pr.state === "closed" && !pr.merged_at

@@ -94,6 +94,21 @@ const mockStats: Record<string, ContributorStats> = {
     reviewsReceived: 1,
     rejectionsReceived: 0,
     approvalsReceived: 1,
+    staffReviewedPrs: 2,
+    staffRejectionsReceived: 1,
+    staffApprovalsReceived: 2,
+    staffReviewedPrLinks: [
+      {
+        number: 1,
+        url: "https://github.com/org/repo/pull/1",
+        title: "Add feature X",
+      },
+      {
+        number: 3,
+        url: "https://github.com/org/another-repo/pull/3",
+        title: "Update docs",
+      },
+    ],
     approvalsGiven: 2,
     rejectionsGiven: 0,
     prsOpened: 2,
@@ -110,6 +125,16 @@ const mockStats: Record<string, ContributorStats> = {
     reviewsReceived: 0,
     rejectionsReceived: 0,
     approvalsReceived: 0,
+    staffReviewedPrs: 1,
+    staffRejectionsReceived: 2,
+    staffApprovalsReceived: 1,
+    staffReviewedPrLinks: [
+      {
+        number: 2,
+        url: "https://github.com/org/repo/pull/2",
+        title: "Fix bug Y",
+      },
+    ],
     approvalsGiven: 1,
     rejectionsGiven: 0,
     prsOpened: 1,
@@ -126,6 +151,10 @@ const mockStats: Record<string, ContributorStats> = {
     reviewsReceived: 0,
     rejectionsReceived: 0,
     approvalsReceived: 0,
+    staffReviewedPrs: 0,
+    staffRejectionsReceived: 0,
+    staffApprovalsReceived: 0,
+    staffReviewedPrLinks: [],
     approvalsGiven: 1,
     rejectionsGiven: 0,
     prsOpened: 1,
@@ -157,6 +186,16 @@ describe("generateMarkdown", () => {
     expect(markdown).toContain("Fix bug Y")
     expect(markdown).toContain("Update docs")
     expect(markdown).toContain("Discussion Contribution Legend")
+    expect(markdown).toContain("## Staff Pass Ratio (SPR)")
+    expect(markdown).toContain("| [alice](#alice) | 2 | 1 | 2 | 50.0% |")
+    expect(markdown).toContain("| [bob](#bob) | 1 | 2 | 1 | -100.0% |")
+    expect(markdown).toContain("<summary>alice SPR PRs (2)</summary>")
+    expect(markdown).toContain(
+      "- [#1](https://github.com/org/repo/pull/1) Add feature X",
+    )
+    expect(markdown).toContain(
+      "- [#2](https://github.com/org/repo/pull/2) Fix bug Y",
+    )
     expect(markdown).toContain("Repository Owners")
     expect(markdown).toContain("Repositories by Owner")
     expect(markdown).toMatchSnapshot("markdown")
