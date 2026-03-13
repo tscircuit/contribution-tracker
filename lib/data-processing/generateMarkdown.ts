@@ -83,6 +83,27 @@ export async function generateMarkdown(
   weekStart: string,
   repoOwnersMap: Record<string, string[]> = {},
 ): Promise<string> {
+  const tinyPrUrls = new Set(
+    prs.filter((pr) => pr.impact === "Tiny").map((pr) => pr.url),
+  )
+
+  Object.values(contributorIdToStatsMap).forEach((stats) => {
+    const filteredStaffReviewedPrLinks = (
+      stats.staffReviewedPrLinks ?? []
+    ).filter((pr) => !tinyPrUrls.has(pr.url))
+
+    stats.staffReviewedPrLinks = filteredStaffReviewedPrLinks
+    stats.staffReviewedPrs = filteredStaffReviewedPrLinks.length
+    stats.staffApprovalsReceived = filteredStaffReviewedPrLinks.reduce(
+      (sum, pr) => sum + pr.staffApprovals,
+      0,
+    )
+    stats.staffRejectionsReceived = filteredStaffReviewedPrLinks.reduce(
+      (sum, pr) => sum + pr.staffRejections,
+      0,
+    )
+  })
+
   const scoringDocPath = "/docs/sponsorship-calculation-explanation.md"
   let markdown = `# Contribution Overview ${weekStart}\n\n`
   markdown += "The current week is shown below. There are 3 major sections:\n\n"

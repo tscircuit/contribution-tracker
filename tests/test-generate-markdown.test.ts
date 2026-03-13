@@ -102,11 +102,15 @@ const mockStats: Record<string, ContributorStats> = {
         number: 1,
         url: "https://github.com/org/repo/pull/1",
         title: "Add feature X",
+        staffApprovals: 2,
+        staffRejections: 1,
       },
       {
         number: 3,
         url: "https://github.com/org/another-repo/pull/3",
         title: "Update docs",
+        staffApprovals: 0,
+        staffRejections: 0,
       },
     ],
     approvalsGiven: 2,
@@ -133,6 +137,8 @@ const mockStats: Record<string, ContributorStats> = {
         number: 2,
         url: "https://github.com/org/repo/pull/2",
         title: "Fix bug Y",
+        staffApprovals: 1,
+        staffRejections: 2,
       },
     ],
     approvalsGiven: 1,
@@ -187,11 +193,14 @@ describe("generateMarkdown", () => {
     expect(markdown).toContain("Update docs")
     expect(markdown).toContain("Discussion Contribution Legend")
     expect(markdown).toContain("## Staff Pass Ratio (SPR)")
-    expect(markdown).toContain("| [alice](#alice) | 2 | 1 | 2 | 50.0% |")
+    expect(markdown).toContain("| [alice](#alice) | 1 | 1 | 2 | 0.0% |")
     expect(markdown).toContain("| [bob](#bob) | 1 | 2 | 1 | -100.0% |")
-    expect(markdown).toContain("<summary>alice SPR PRs (2)</summary>")
+    expect(markdown).toContain("<summary>alice SPR PRs (1)</summary>")
     expect(markdown).toContain(
       "- [#1](https://github.com/org/repo/pull/1) Add feature X",
+    )
+    expect(markdown).not.toContain(
+      "- [#3](https://github.com/org/another-repo/pull/3) Update docs",
     )
     expect(markdown).toContain(
       "- [#2](https://github.com/org/repo/pull/2) Fix bug Y",

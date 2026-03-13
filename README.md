@@ -80,19 +80,18 @@ pie
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 19 | 4 | 20 | 78.9% |
-| [MustafaMulla29](#MustafaMulla29) | 12 | 0 | 12 | 100.0% |
-| [techmannih](#techmannih) | 8 | 4 | 5 | 50.0% |
-| [AnasSarkiz](#AnasSarkiz) | 6 | 2 | 6 | 66.7% |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 18 | 4 | 19 | 77.8% |
+| [MustafaMulla29](#MustafaMulla29) | 8 | 0 | 8 | 100.0% |
+| [techmannih](#techmannih) | 6 | 4 | 3 | 33.3% |
 | [rushabhcodes](#rushabhcodes) | 4 | 3 | 1 | 25.0% |
 | [Abse2001](#Abse2001) | 4 | 0 | 4 | 100.0% |
-| [0hmX](#0hmX) | 3 | 0 | 3 | 100.0% |
+| [AnasSarkiz](#AnasSarkiz) | 4 | 0 | 4 | 100.0% |
 | [imrishabh18](#imrishabh18) | 2 | 0 | 2 | 100.0% |
+| [0hmX](#0hmX) | 2 | 0 | 2 | 100.0% |
 | [Nicolas-Rozas](#Nicolas-Rozas) | 1 | 0 | 1 | 100.0% |
-| [ArnavK-09](#ArnavK-09) | 1 | 0 | 1 | 100.0% |
 
 <details>
-<summary>ShiboSoftwareDev SPR PRs (19)</summary>
+<summary>ShiboSoftwareDev SPR PRs (18)</summary>
 
 - [#507](https://github.com/tscircuit/circuit-json/pull/507) Add copper pour metadata fields to pcb_trace.route points
 - [#501](https://github.com/tscircuit/circuit-json/pull/501) Add source warning types for no-power, no-ground, and underspecified pins
@@ -109,7 +108,6 @@ pie
 - [#2031](https://github.com/tscircuit/core/pull/2031) Enable PCB placement for current/voltage sources with footprint and validate calc positioning
 - [#2027](https://github.com/tscircuit/core/pull/2027)  Add calc(board.*) support for MountedBoard positioning
 - [#523](https://github.com/tscircuit/circuit-to-svg/pull/523) hide traces that are inside copper pours
-- [#118](https://github.com/tscircuit/checks/pull/118) Use type-only SourcePinAttributes import and local pin attribute keys
 - [#116](https://github.com/tscircuit/checks/pull/116) Introduce checkNoPowerPinDefinedForChip
 - [#2393](https://github.com/tscircuit/cli/pull/2393) Introduce ignore DRC flags
 - [#2353](https://github.com/tscircuit/cli/pull/2353) tsci check pin_specification
@@ -117,46 +115,28 @@ pie
 </details>
 
 <details>
-<summary>MustafaMulla29 SPR PRs (12)</summary>
+<summary>MustafaMulla29 SPR PRs (8)</summary>
 
 - [#517](https://github.com/tscircuit/circuit-json/pull/517) Add ccw_rotation to pcb_courtyard_rect
-- [#523](https://github.com/tscircuit/footprinter/pull/523) Feat: passive footprints courtyard generation
 - [#522](https://github.com/tscircuit/footprinter/pull/522) Update kicad-parity snapshots to include courtyards
 - [#193](https://github.com/tscircuit/kicad-component-converter/pull/193) Feat: Add courtyard conversion support from kicad_mod to circuit-json
 - [#2051](https://github.com/tscircuit/core/pull/2051) Feat: integrate courtyards and tests for courtyard overlap
 - [#2047](https://github.com/tscircuit/core/pull/2047) Export kicadFootprintStrings
 - [#2052](https://github.com/tscircuit/core/pull/2052) Fix rotation for CourtyardRect
-- [#2035](https://github.com/tscircuit/core/pull/2035) chore: update props
 - [#525](https://github.com/tscircuit/circuit-to-svg/pull/525) Fix PCB courtyard rect rotation and add rotation tests
 - [#119](https://github.com/tscircuit/checks/pull/119) Add new check for courtyard overlaps
-- [#2218](https://github.com/tscircuit/eval/pull/2218) Fix: test-loading-all-kicad-footprints script to follow new kicad-autocomplete.ts format
-- [#509](https://github.com/tscircuit/docs/pull/509) Document kicadFootprintStrings
 
 </details>
 
 <details>
-<summary>techmannih SPR PRs (8)</summary>
+<summary>techmannih SPR PRs (6)</summary>
 
 - [#692](https://github.com/tscircuit/pcb-viewer/pull/692) feat: disable position anchors by default in dev mode
 - [#195](https://github.com/tscircuit/kicad-component-converter/pull/195) feat: hide reference placeholders ($REFERENCE, ${REFERENCE}, %R) on fab layer
 - [#192](https://github.com/tscircuit/kicad-component-converter/pull/192) Convert KiCad courtyard layers to tscircuit PcbCourtyardOutline elements and fix vercel deployment
-- [#191](https://github.com/tscircuit/kicad-component-converter/pull/191) fix: circular np_thru_hole handling in KiCad conversion
-- [#17](https://github.com/tscircuit/kicad-mod-cache/pull/17) chore: update kicad-component-converter
 - [#2030](https://github.com/tscircuit/core/pull/2030) feat: add test for KiCad JST XH connector
 - [#2034](https://github.com/tscircuit/core/pull/2034) feat: replace external KiCad footprint requests with local mocks in tests
 - [#2037](https://github.com/tscircuit/core/pull/2037)  fix: strip kicad prefix from circuit-json and prevent footprinter crashes for library footprints
-
-</details>
-
-<details>
-<summary>AnasSarkiz SPR PRs (6)</summary>
-
-- [#524](https://github.com/tscircuit/circuit-to-svg/pull/524) Add `showPcbNotes` render-time toggle (default `true`) to `convertCircuitJsonToPcbSvg`
-- [#2378](https://github.com/tscircuit/cli/pull/2378) Improve `tsci build <directory>` no-match diagnostics by replacing generic exceptions with actionable includeBoardFiles errors
-- [#2390](https://github.com/tscircuit/cli/pull/2390) Enforce deterministic no-match failures for tsci snapshot <directory> and surface exact includeBoardFiles source
-- [#504](https://github.com/tscircuit/docs/pull/504) Document per-build output layout and clarify image generation flags for tsci build
-- [#661](https://github.com/tscircuit/tscircuit-autorouter/pull/661) Enable Hypergraph Auto‑Baked Tile Selection in FixedTopology Solver by Removing Hardcoded Via Tile and Via Diameter Overrides
-- [#138](https://github.com/tscircuit/circuit-json-to-gltf/pull/138) fix(gltf): ensure board textures render notes only when showPcbNotes is enabled
 
 </details>
 
@@ -181,11 +161,12 @@ pie
 </details>
 
 <details>
-<summary>0hmX SPR PRs (3)</summary>
+<summary>AnasSarkiz SPR PRs (4)</summary>
 
-- [#654](https://github.com/tscircuit/tscircuit-autorouter/pull/654) Add Pipeline3 HG failure analyzer and relax via-limit to reduce circuit100 failures
-- [#648](https://github.com/tscircuit/tscircuit-autorouter/pull/648) move bun-match-svg into devDependencies
-- [#4](https://github.com/tscircuit/high-density-dataset-z04/pull/4) hard problems list
+- [#524](https://github.com/tscircuit/circuit-to-svg/pull/524) Add `showPcbNotes` render-time toggle (default `true`) to `convertCircuitJsonToPcbSvg`
+- [#2390](https://github.com/tscircuit/cli/pull/2390) Enforce deterministic no-match failures for tsci snapshot <directory> and surface exact includeBoardFiles source
+- [#661](https://github.com/tscircuit/tscircuit-autorouter/pull/661) Enable Hypergraph Auto‑Baked Tile Selection in FixedTopology Solver by Removing Hardcoded Via Tile and Via Diameter Overrides
+- [#138](https://github.com/tscircuit/circuit-json-to-gltf/pull/138) fix(gltf): ensure board textures render notes only when showPcbNotes is enabled
 
 </details>
 
@@ -198,16 +179,17 @@ pie
 </details>
 
 <details>
-<summary>Nicolas-Rozas SPR PRs (1)</summary>
+<summary>0hmX SPR PRs (2)</summary>
 
-- [#694](https://github.com/tscircuit/pcb-viewer/pull/694) fix: persist selected layer across snippet reruns using localStorage
+- [#654](https://github.com/tscircuit/tscircuit-autorouter/pull/654) Add Pipeline3 HG failure analyzer and relax via-limit to reduce circuit100 failures
+- [#4](https://github.com/tscircuit/high-density-dataset-z04/pull/4) hard problems list
 
 </details>
 
 <details>
-<summary>ArnavK-09 SPR PRs (1)</summary>
+<summary>Nicolas-Rozas SPR PRs (1)</summary>
 
-- [#2855](https://github.com/tscircuit/runframe/pull/2855) Add API status indicator to header of RunframeApi TSC-410
+- [#694](https://github.com/tscircuit/pcb-viewer/pull/694) fix: persist selected layer across snippet reruns using localStorage
 
 </details>
 

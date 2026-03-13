@@ -29,14 +29,13 @@ pie
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
-| [alice](#alice) | 2 | 1 | 2 | 50.0% |
+| [alice](#alice) | 1 | 1 | 2 | 0.0% |
 | [bob](#bob) | 1 | 2 | 1 | -100.0% |
 
 <details>
-<summary>alice SPR PRs (2)</summary>
+<summary>alice SPR PRs (1)</summary>
 
 - [#1](https://github.com/org/repo/pull/1) Add feature X
-- [#3](https://github.com/org/another-repo/pull/3) Update docs
 
 </details>
 

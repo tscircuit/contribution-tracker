@@ -39,6 +39,8 @@ export interface ContributorStats {
     number: number
     url: string
     title: string
+    staffApprovals: number
+    staffRejections: number
   }>
   prsOpened: number
   prsMerged: number

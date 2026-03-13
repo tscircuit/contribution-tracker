@@ -137,6 +137,8 @@ export async function generateOverview(
           number: pr.number,
           url: pr.html_url,
           title: pr.title,
+          staffApprovals: seniorStaffReviewStats.approvals,
+          staffRejections: seniorStaffReviewStats.rejections,
         })
       }
 
