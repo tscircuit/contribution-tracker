@@ -1,8 +1,10 @@
 export const MAINTAINERS = {
-  ShiboSoftwareDev: "maintainer4",
-  "ArnavK-09": "maintainer3",
-  Abse2001: "maintainer3",
-  techmannih: "maintainer1",
-  rushabhcodes: "maintainer1",
-  AnasSarkiz: "maintainer2",
+  ShiboSoftwareDev: "maintainer5",
+  "ArnavK-09": "maintainer1",
+  Abse2001: "maintainer4",
+  AnasSarkiz: "maintainer3",
 }
+
+// Alum Maintainers
+//  techmannih
+//  rushabhcodes
