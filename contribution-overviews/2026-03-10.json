@@ -40,13 +40,44 @@
     "minor": 0,
     "tiny": 2
   },
+  "1028bc": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [
+      {
+        "number": 665,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/665",
+        "title": "test: increase bugreport23 timeout to 120s and update snapshots",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "Abse2001": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 9,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 509,
@@ -59,6 +90,27 @@
         "number": 505,
         "url": "https://github.com/tscircuit/circuit-json/pull/505",
         "title": "Add CAD Model Format Conventions for Board Normal Orientation",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 618,
+        "url": "https://github.com/tscircuit/props/pull/618",
+        "title": "Added modelOriginPosition to cadModel",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 355,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/355",
+        "title": "Derive EasyEDA CAD Z placement from OBJ bounds and SVGNODE offset + fix 270° rotation handling",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 145,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/145",
+        "title": "Fix model_origin_position Handling by Applying Loader Transform and Orientation",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -77,18 +129,26 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 6,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 4,
+    "prsOpened": 8,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
-    "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 12,
+    "distinctPrsReviewedAsCodeOwner": 3,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/3d-viewer",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 18,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 2,
     "minor": 3,
     "tiny": 0
   },
@@ -169,6 +229,29 @@
     "major": 0,
     "minor": 0,
     "tiny": 1
+  },
+  "CelebrityPunks": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "CharlesWong": {
     "reviewsReceived": 0,
@@ -401,9 +484,9 @@
     "stars": ""
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 27,
+    "reviewsReceived": 28,
     "rejectionsReceived": 1,
-    "approvalsReceived": 20,
+    "approvalsReceived": 21,
     "staffReviewedPrs": 18,
     "staffRejectionsReceived": 4,
     "staffApprovalsReceived": 19,
@@ -537,7 +620,7 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 22,
+    "prsOpened": 23,
     "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -548,11 +631,42 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/circuit-to-canvas",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
     "score": 44,
     "stars": "⭐⭐",
     "major": 4,
     "minor": 13,
     "tiny": 3
+  },
+  "TheAuroraAI": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "ZheYanyan": {
     "reviewsReceived": 1,
@@ -578,12 +692,12 @@
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 2372,
@@ -593,17 +707,31 @@
         "staffRejections": 0
       },
       {
+        "number": 144,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/144",
+        "title": "Use direct mesh generation for the pcb boards with holes and cutouts (Performance increase around ~4.75× faster)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 134,
         "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/134",
         "title": "Add a `fast` mode for the holes/cutout drill quality which uses less polygon segments",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2,
+        "url": "https://github.com/tscircuit/image-utils/pull/2",
+        "title": "feat: create the basic implementation of looks-same to compare png buffer",
         "staffApprovals": 1,
         "staffRejections": 0
       }
     ],
     "approvalsGiven": 6,
     "rejectionsGiven": 0,
-    "prsOpened": 16,
-    "prsMerged": 14,
+    "prsOpened": 20,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -613,10 +741,10 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 19.5,
+    "score": 31.5,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 3,
+    "major": 3,
+    "minor": 5,
     "tiny": 9
   },
   "mfiumara": {
@@ -666,9 +794,9 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 16,
+    "reviewsReceived": 22,
     "rejectionsReceived": 3,
-    "approvalsReceived": 4,
+    "approvalsReceived": 6,
     "staffReviewedPrs": 4,
     "staffRejectionsReceived": 3,
     "staffApprovalsReceived": 1,
@@ -704,8 +832,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 1,
-    "prsOpened": 9,
-    "prsMerged": 3,
+    "prsOpened": 13,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -715,11 +843,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 8,
-    "stars": "⭐",
+    "score": 11,
+    "stars": "⭐⭐",
     "major": 1,
-    "minor": 1,
-    "tiny": 1
+    "minor": 2,
+    "tiny": 2
   },
   "seveibar": {
     "reviewsReceived": 2,
@@ -729,14 +857,14 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 53,
-    "rejectionsGiven": 8,
-    "prsOpened": 33,
-    "prsMerged": 25,
+    "approvalsGiven": 58,
+    "rejectionsGiven": 10,
+    "prsOpened": 48,
+    "prsMerged": 35,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 47,
+    "distinctPrsReviewedNonCodeOwner": 49,
     "distinctPrsReviewedAsCodeOwner": 4,
     "reposOwned": [
       {
@@ -752,14 +880,14 @@
         ]
       }
     ],
-    "score": 48,
-    "stars": "⭐⭐",
-    "major": 4,
-    "minor": 13,
-    "tiny": 7
+    "score": 69,
+    "stars": "⭐⭐⭐",
+    "major": 8,
+    "minor": 14,
+    "tiny": 12
   },
   "songshanhua-eng": {
-    "reviewsReceived": 3,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -778,17 +906,25 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 15,
-    "rejectionsReceived": 5,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 6,
-    "staffRejectionsReceived": 4,
+    "reviewsReceived": 18,
+    "rejectionsReceived": 6,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 7,
+    "staffRejectionsReceived": 5,
     "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 704,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/704",
+        "title": "fix: prevent duplicate hover boxes for plated holes and multi-layer elements",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 692,
         "url": "https://github.com/tscircuit/pcb-viewer/pull/692",
@@ -811,6 +947,13 @@
         "staffRejections": 0
       },
       {
+        "number": 2037,
+        "url": "https://github.com/tscircuit/core/pull/2037",
+        "title": " fix: strip kicad prefix from circuit-json and prevent footprinter crashes for library footprints",
+        "staffApprovals": 0,
+        "staffRejections": 2
+      },
+      {
         "number": 2030,
         "url": "https://github.com/tscircuit/core/pull/2030",
         "title": "feat: add test for KiCad JST XH connector",
@@ -823,18 +966,11 @@
         "title": "feat: replace external KiCad footprint requests with local mocks in tests",
         "staffApprovals": 1,
         "staffRejections": 0
-      },
-      {
-        "number": 2037,
-        "url": "https://github.com/tscircuit/core/pull/2037",
-        "title": " fix: strip kicad prefix from circuit-json and prevent footprinter crashes for library footprints",
-        "staffApprovals": 0,
-        "staffRejections": 2
       }
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
+    "prsOpened": 15,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -861,8 +997,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 354,
-    "prsMerged": 295,
+    "prsOpened": 384,
+    "prsMerged": 322,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -875,6 +1011,29 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 295
+    "tiny": 322
+  },
+  "youcef3300": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   }
 }
