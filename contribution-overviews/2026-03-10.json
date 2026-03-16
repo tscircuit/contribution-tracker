@@ -1,6 +1,6 @@
 {
   "0hmX": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
     "approvalsReceived": 3,
     "staffReviewedPrs": 2,
@@ -24,8 +24,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 3,
+    "prsOpened": 21,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -34,11 +34,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 6,
-    "stars": "⭐",
-    "major": 1,
-    "minor": 0,
-    "tiny": 2
+    "score": 16,
+    "stars": "⭐⭐",
+    "major": 2,
+    "minor": 2,
+    "tiny": 4
   },
   "1028bc": {
     "reviewsReceived": 3,
@@ -137,7 +137,7 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 8,
+    "approvalsGiven": 9,
     "rejectionsGiven": 0,
     "prsOpened": 10,
     "prsMerged": 7,
@@ -145,7 +145,7 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
-    "distinctPrsReviewedAsCodeOwner": 6,
+    "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
         "repo": "tscircuit/3d-viewer",
@@ -154,20 +154,27 @@
         ]
       }
     ],
-    "score": 27,
+    "score": 28,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 4,
     "tiny": 0
   },
   "AnasSarkiz": {
-    "reviewsReceived": 11,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 5,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 5,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
+      {
+        "number": 736,
+        "url": "https://github.com/tscircuit/3d-viewer/pull/736",
+        "title": "Fix translucent CAD occlusion over PCB by enforcing deterministic render order",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 524,
         "url": "https://github.com/tscircuit/circuit-to-svg/pull/524",
@@ -206,18 +213,30 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 7,
+    "prsOpened": 10,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 19,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/pcbburn.com",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 22,
     "stars": "⭐⭐",
     "major": 3,
-    "minor": 2,
-    "tiny": 2
+    "minor": 3,
+    "tiny": 3
   },
   "ArnavK-09": {
     "reviewsReceived": 1,
@@ -314,6 +333,29 @@
     "score": 0,
     "stars": ""
   },
+  "CuboYe": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "Drgonzoh": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -361,17 +403,24 @@
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 24,
+    "reviewsReceived": 30,
     "rejectionsReceived": 0,
-    "approvalsReceived": 18,
-    "staffReviewedPrs": 9,
+    "approvalsReceived": 20,
+    "staffReviewedPrs": 11,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 9,
+    "staffApprovalsReceived": 11,
     "staffReviewedPrLinks": [
       {
         "number": 517,
         "url": "https://github.com/tscircuit/circuit-json/pull/517",
         "title": "Add ccw_rotation to pcb_courtyard_rect",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 527,
+        "url": "https://github.com/tscircuit/footprinter/pull/527",
+        "title": "Feat: courtyard for dip, quad, soic, sot footprint",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -418,6 +467,13 @@
         "staffRejections": 0
       },
       {
+        "number": 125,
+        "url": "https://github.com/tscircuit/checks/pull/125",
+        "title": "Fix: component outside board false positive for rotated components",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 123,
         "url": "https://github.com/tscircuit/checks/pull/123",
         "title": "Fix: courtyard overlap detection to account for rotation",
@@ -434,8 +490,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 29,
-    "prsMerged": 27,
+    "prsOpened": 37,
+    "prsMerged": 33,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -448,8 +504,8 @@
     "score": 41,
     "stars": "⭐⭐",
     "major": 1,
-    "minor": 13,
-    "tiny": 12
+    "minor": 15,
+    "tiny": 16
   },
   "Nicolas-Rozas": {
     "reviewsReceived": 2,
@@ -725,6 +781,29 @@
     "score": 0,
     "stars": ""
   },
+  "bossco7598": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "imrishabh18": {
     "reviewsReceived": 6,
     "rejectionsReceived": 0,
@@ -874,13 +953,20 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 24,
+    "reviewsReceived": 27,
     "rejectionsReceived": 3,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 3,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 708,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/708",
+        "title": "feat: add functionality to show/hide courtyards in the viewer",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 699,
         "url": "https://github.com/tscircuit/pcb-viewer/pull/699",
@@ -912,8 +998,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 1,
-    "prsOpened": 13,
-    "prsMerged": 6,
+    "prsOpened": 14,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -923,9 +1009,9 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 12,
+    "score": 16,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 2,
     "minor": 2,
     "tiny": 3
   },
@@ -937,15 +1023,15 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 60,
-    "rejectionsGiven": 10,
-    "prsOpened": 52,
+    "approvalsGiven": 64,
+    "rejectionsGiven": 11,
+    "prsOpened": 54,
     "prsMerged": 40,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 53,
-    "distinctPrsReviewedAsCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 55,
+    "distinctPrsReviewedAsCodeOwner": 5,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -991,11 +1077,11 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 18,
-    "rejectionsReceived": 6,
+    "reviewsReceived": 21,
+    "rejectionsReceived": 7,
     "approvalsReceived": 8,
-    "staffReviewedPrs": 7,
-    "staffRejectionsReceived": 5,
+    "staffReviewedPrs": 8,
+    "staffRejectionsReceived": 6,
     "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
@@ -1025,6 +1111,13 @@
         "title": "Convert KiCad courtyard layers to tscircuit PcbCourtyardOutline elements and fix vercel deployment",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 2058,
+        "url": "https://github.com/tscircuit/core/pull/2058",
+        "title": "feat: Resolve reference designator text  for {NAME}, {REF}, and {REFERENCE} in SchematicText",
+        "staffApprovals": 0,
+        "staffRejections": 1
       },
       {
         "number": 2030,
@@ -1061,11 +1154,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 17,
+    "score": 16,
     "stars": "⭐⭐",
     "major": 2,
     "minor": 2,
-    "tiny": 4
+    "tiny": 3
   },
   "tscircuitbot": {
     "reviewsReceived": 2,
@@ -1077,8 +1170,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 427,
-    "prsMerged": 364,
+    "prsOpened": 463,
+    "prsMerged": 399,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1091,7 +1184,30 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 361
+    "tiny": 380
+  },
+  "wdxia134": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "youcef3300": {
     "reviewsReceived": 0,
