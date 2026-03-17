@@ -1,6 +1,6 @@
 {
   "0hmX": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
     "approvalsReceived": 3,
     "staffReviewedPrs": 2,
@@ -24,8 +24,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 21,
-    "prsMerged": 8,
+    "prsOpened": 25,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -34,11 +34,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 16,
+    "score": 17,
     "stars": "⭐⭐",
     "major": 2,
     "minor": 2,
-    "tiny": 4
+    "tiny": 5
   },
   "1028bc": {
     "reviewsReceived": 3,
@@ -75,10 +75,10 @@
   "Abse2001": {
     "reviewsReceived": 11,
     "rejectionsReceived": 0,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 8,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 9,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 8,
+    "staffApprovalsReceived": 9,
     "staffReviewedPrLinks": [
       {
         "number": 509,
@@ -98,6 +98,13 @@
         "number": 618,
         "url": "https://github.com/tscircuit/props/pull/618",
         "title": "Added modelOriginPosition to cadModel",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 357,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/357",
+        "title": "Derive EasyEDA CAD Z placement from OBJ bounds and SVGNODE offset + fix 270° rotation handling",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -137,15 +144,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 9,
+    "approvalsGiven": 13,
     "rejectionsGiven": 0,
     "prsOpened": 10,
-    "prsMerged": 7,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
-    "distinctPrsReviewedAsCodeOwner": 7,
+    "distinctPrsReviewedAsCodeOwner": 11,
     "reposOwned": [
       {
         "repo": "tscircuit/3d-viewer",
@@ -154,16 +161,16 @@
         ]
       }
     ],
-    "score": 28,
+    "score": 36,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 4,
     "minor": 4,
     "tiny": 0
   },
   "AnasSarkiz": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 18,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
+    "approvalsReceived": 14,
     "staffReviewedPrs": 6,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 6,
@@ -213,8 +220,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 9,
+    "prsOpened": 17,
+    "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -232,11 +239,11 @@
         ]
       }
     ],
-    "score": 22,
+    "score": 31,
     "stars": "⭐⭐",
     "major": 3,
-    "minor": 3,
-    "tiny": 3
+    "minor": 5,
+    "tiny": 8
   },
   "ArnavK-09": {
     "reviewsReceived": 1,
@@ -403,9 +410,9 @@
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 30,
+    "reviewsReceived": 31,
     "rejectionsReceived": 0,
-    "approvalsReceived": 20,
+    "approvalsReceived": 23,
     "staffReviewedPrs": 11,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 11,
@@ -414,13 +421,6 @@
         "number": 517,
         "url": "https://github.com/tscircuit/circuit-json/pull/517",
         "title": "Add ccw_rotation to pcb_courtyard_rect",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 527,
-        "url": "https://github.com/tscircuit/footprinter/pull/527",
-        "title": "Feat: courtyard for dip, quad, soic, sot footprint",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -486,12 +486,19 @@
         "title": "Add new check for courtyard overlaps",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 148,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/148",
+        "title": "Fix OBJ mesh index buffer overflow by using UNSIGNED_INT for large models",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 37,
-    "prsMerged": 33,
+    "prsOpened": 40,
+    "prsMerged": 37,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -504,8 +511,8 @@
     "score": 41,
     "stars": "⭐⭐",
     "major": 1,
-    "minor": 15,
-    "tiny": 16
+    "minor": 16,
+    "tiny": 19
   },
   "Nicolas-Rozas": {
     "reviewsReceived": 2,
@@ -841,14 +848,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 7,
+    "approvalsGiven": 8,
     "rejectionsGiven": 0,
     "prsOpened": 22,
     "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -884,7 +891,7 @@
     "stars": ""
   },
   "kira-autonoma": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -903,6 +910,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
@@ -952,10 +960,56 @@
     "score": 0,
     "stars": ""
   },
+  "obsofficer-ctrl": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "promisingcoder": {
+    "reviewsReceived": 2,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "rushabhcodes": {
-    "reviewsReceived": 27,
+    "reviewsReceived": 31,
     "rejectionsReceived": 3,
-    "approvalsReceived": 9,
+    "approvalsReceived": 10,
     "staffReviewedPrs": 5,
     "staffRejectionsReceived": 3,
     "staffApprovalsReceived": 2,
@@ -997,9 +1051,9 @@
       }
     ],
     "approvalsGiven": 1,
-    "rejectionsGiven": 1,
-    "prsOpened": 14,
-    "prsMerged": 7,
+    "rejectionsGiven": 2,
+    "prsOpened": 16,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1009,11 +1063,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 16,
+    "score": 17,
     "stars": "⭐⭐",
     "major": 2,
     "minor": 2,
-    "tiny": 3
+    "tiny": 4
   },
   "seveibar": {
     "reviewsReceived": 3,
@@ -1023,15 +1077,15 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 64,
-    "rejectionsGiven": 11,
-    "prsOpened": 54,
-    "prsMerged": 40,
+    "approvalsGiven": 69,
+    "rejectionsGiven": 10,
+    "prsOpened": 60,
+    "prsMerged": 46,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 55,
-    "distinctPrsReviewedAsCodeOwner": 5,
+    "distinctPrsReviewedNonCodeOwner": 59,
+    "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -1049,8 +1103,8 @@
     "score": 73.5,
     "stars": "⭐⭐⭐",
     "major": 9,
-    "minor": 14,
-    "tiny": 16
+    "minor": 15,
+    "tiny": 20
   },
   "songshanhua-eng": {
     "reviewsReceived": 4,
@@ -1077,12 +1131,12 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 21,
-    "rejectionsReceived": 7,
-    "approvalsReceived": 8,
+    "reviewsReceived": 19,
+    "rejectionsReceived": 6,
+    "approvalsReceived": 9,
     "staffReviewedPrs": 8,
     "staffRejectionsReceived": 6,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 704,
@@ -1116,7 +1170,7 @@
         "number": 2058,
         "url": "https://github.com/tscircuit/core/pull/2058",
         "title": "feat: Resolve reference designator text  for {NAME}, {REF}, and {REFERENCE} in SchematicText",
-        "staffApprovals": 0,
+        "staffApprovals": 1,
         "staffRejections": 1
       },
       {
@@ -1141,10 +1195,10 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 16,
-    "prsMerged": 8,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1153,15 +1207,15 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 16,
+    "distinctPrsReviewedAsCodeOwner": 1,
+    "score": 18,
     "stars": "⭐⭐",
     "major": 2,
-    "minor": 2,
+    "minor": 3,
     "tiny": 3
   },
   "tscircuitbot": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -1170,8 +1224,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 463,
-    "prsMerged": 399,
+    "prsOpened": 516,
+    "prsMerged": 447,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1184,7 +1238,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 380
+    "tiny": 408
   },
   "wdxia134": {
     "reviewsReceived": 1,
