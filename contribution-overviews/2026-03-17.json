@@ -9,7 +9,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
+    "prsOpened": 6,
     "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -25,7 +25,7 @@
     "minor": 0,
     "tiny": 2
   },
-  "Abse2001": {
+  "1028bc": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
@@ -33,7 +33,7 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 1,
+    "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
     "prsMerged": 0,
@@ -41,6 +41,41 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "Abse2001": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 363,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/363",
+        "title": "Make websafe bundle avoid core dependency",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 1,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 1,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
@@ -50,13 +85,73 @@
         ]
       }
     ],
+    "score": 3,
+    "stars": "",
+    "major": 0,
+    "minor": 1,
+    "tiny": 0
+  },
+  "AnasSarkiz": {
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 688,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/688",
+        "title": "Eliminate false DRC via-collision errors by carrying true routed via diameters through SRJ→circuit-json conversion",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 1,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 4,
+    "stars": "⭐",
+    "major": 1,
+    "minor": 0,
+    "tiny": 0
+  },
+  "FraktalDeFiDAO": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "score": 0,
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 4,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 2,
@@ -76,37 +171,44 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 2,
+    "prsOpened": 6,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 7,
-    "stars": "⭐",
+    "score": 13,
+    "stars": "⭐⭐",
     "major": 1,
-    "minor": 1,
-    "tiny": 0
+    "minor": 3,
+    "tiny": 2
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 11,
     "rejectionsReceived": 0,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 126,
         "url": "https://github.com/tscircuit/checks/pull/126",
         "title": "Add minSpacing option to checkEachPcbTraceNonOverlapping",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 102,
+        "url": "https://github.com/tscircuit/graphics-debug/pull/102",
+        "title": "Render Points Above All Other Graphics Elements",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -127,8 +229,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 6,
+    "prsOpened": 8,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -137,14 +239,14 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 12,
+    "score": 14,
     "stars": "⭐⭐",
     "major": 1,
-    "minor": 3,
+    "minor": 4,
     "tiny": 2
   },
   "blessuselessk": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -153,7 +255,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 12,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -167,17 +269,25 @@
     "stars": ""
   },
   "dwiel": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 521,
+        "url": "https://github.com/tscircuit/circuit-json/pull/521",
+        "title": "fix: use LayerRef for via route point from_layer/to_layer",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 0,
+    "prsOpened": 2,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -186,21 +296,39 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 4,
+    "stars": "⭐",
+    "major": 1,
+    "minor": 0,
+    "tiny": 0
   },
   "imrishabh18": {
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
-    "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 3,
+    "reviewsReceived": 7,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 364,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/364",
+        "title": "Add support for the `stepUrl` for `cadModel`",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 2476,
+        "url": "https://github.com/tscircuit/cli/pull/2476",
+        "title": "Integrate `@tscircuit/image-utils` and remove sharp and looks-same from the dependency",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 1,
+    "rejectionsGiven": 1,
+    "prsOpened": 9,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -209,6 +337,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-to-svg",
@@ -217,20 +346,19 @@
         ]
       }
     ],
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 6,
+    "score": 8,
     "stars": "⭐",
     "major": 0,
     "minor": 3,
-    "tiny": 0
+    "tiny": 2
   },
   "rushabhcodes": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 14,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 712,
@@ -245,25 +373,40 @@
         "title": "feat: add support for exporting kicad_pro format in exportSnippet and tests",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 516,
+        "url": "https://github.com/tscircuit/docs/pull/516",
+        "title": "Updated the CLI documentation for `tsci` in the `docs/intro/installation.md`",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 487,
+        "url": "https://github.com/tscircuit/docs/pull/487",
+        "title": "feat: add and enhance documentation for various `tsci` command-line tools.",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 2,
+    "approvalsGiven": 3,
+    "rejectionsGiven": 3,
+    "prsOpened": 6,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 6,
-    "stars": "⭐",
-    "major": 1,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 16,
+    "stars": "⭐⭐",
+    "major": 3,
     "minor": 1,
-    "tiny": 0
+    "tiny": 1
   },
   "seveibar": {
     "reviewsReceived": 1,
@@ -273,27 +416,27 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 15,
-    "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 5,
+    "approvalsGiven": 26,
+    "rejectionsGiven": 3,
+    "prsOpened": 12,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 13,
-    "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 21,
+    "distinctPrsReviewedNonCodeOwner": 20,
+    "distinctPrsReviewedAsCodeOwner": 4,
+    "score": 30,
     "stars": "⭐⭐",
-    "major": 5,
+    "major": 7,
     "minor": 0,
-    "tiny": 0
+    "tiny": 1
   },
   "techmannih": {
-    "reviewsReceived": 7,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
+    "reviewsReceived": 12,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
       {
@@ -302,12 +445,19 @@
         "title": "feat: implement dynamic text resolution for SilkscreenText componentsin footprints and add a corresponding test",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 2471,
+        "url": "https://github.com/tscircuit/cli/pull/2471",
+        "title": "feat: add support --download flag to downloading and localizing 3D models from JLCPCB",
+        "staffApprovals": 0,
+        "staffRejections": 1
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 6,
+    "prsOpened": 11,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -316,11 +466,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 7,
+    "score": 8,
     "stars": "⭐",
     "major": 0,
     "minor": 1,
-    "tiny": 5
+    "tiny": 6
   },
   "tscircuitbot": {
     "reviewsReceived": 1,
@@ -332,8 +482,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 81,
-    "prsMerged": 72,
+    "prsOpened": 116,
+    "prsMerged": 105,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -346,6 +496,54 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 72
+    "tiny": 105
+  },
+  "victorjzq": {
+    "reviewsReceived": 19,
+    "rejectionsReceived": 4,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 548,
+        "url": "https://github.com/tscircuit/footprinter/pull/548",
+        "title": "fix: remove non-existent pcb_thtpad type from apply-origin filter",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 551,
+        "url": "https://github.com/tscircuit/footprinter/pull/551",
+        "title": "fix: add KiCad parity test for SOIC-8 with correct IPC-7351B dimensions",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 552,
+        "url": "https://github.com/tscircuit/footprinter/pull/552",
+        "title": "fix: correct SOD-523 pad dimensions to match KiCad IPC-7351B standard",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 34,
+    "prsMerged": 4,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 6,
+    "stars": "⭐",
+    "major": 0,
+    "minor": 2,
+    "tiny": 2
   }
 }
