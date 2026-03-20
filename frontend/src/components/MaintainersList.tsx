@@ -10,7 +10,7 @@ const MAINTAINER_ROLES = {
     borderColor: "border-gray-200",
     iconColor: "text-yellow-600",
     titleColor: "text-gray-600",
-    priority: 3,
+    priority: 4,
   },
   maintainer2: {
     title: "maintainer2",
@@ -19,7 +19,7 @@ const MAINTAINER_ROLES = {
     borderColor: "border-gray-200",
     iconColor: "text-blue-600",
     titleColor: "text-gray-600",
-    priority: 2,
+    priority: 3,
   },
   maintainer3: {
     title: "maintainer3",
@@ -28,7 +28,7 @@ const MAINTAINER_ROLES = {
     borderColor: "border-gray-200",
     iconColor: "text-green-600",
     titleColor: "text-gray-600",
-    priority: 1,
+    priority: 2,
   },
   maintainer4: {
     title: "maintainer4",
@@ -36,6 +36,15 @@ const MAINTAINER_ROLES = {
     bgColor: "bg-white",
     borderColor: "border-gray-200",
     iconColor: "text-teal-600",
+    titleColor: "text-gray-600",
+    priority: 1,
+  },
+  maintainer5: {
+    title: "maintainer5",
+    icon: Shield,
+    bgColor: "bg-white",
+    borderColor: "border-gray-200",
+    iconColor: "text-purple-600",
     titleColor: "text-gray-600",
     priority: 0,
   },
