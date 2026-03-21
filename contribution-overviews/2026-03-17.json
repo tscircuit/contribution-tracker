@@ -50,17 +50,31 @@
     "stars": ""
   },
   "Abse2001": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
+      {
+        "number": 723,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/723",
+        "title": "Refactor Copper Text Rendering to Use circuit-to-canvas Drawer",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 363,
         "url": "https://github.com/tscircuit/easyeda-converter/pull/363",
         "title": "Make websafe bundle avoid core dependency",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 744,
+        "url": "https://github.com/tscircuit/3d-viewer/pull/744",
+        "title": "Refactor CAD Model Rendering to Unified Transform Graph with Loader + Fit Support",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -70,12 +84,19 @@
         "title": "Precompute Glyph Outline Polygons Export for Fill and Knockout Rendering",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 217,
+        "url": "https://github.com/tscircuit/circuit-to-canvas/pull/217",
+        "title": "Refactor Text Rendering to Use Glyph Outlines for Accurate Knockout via Even-Odd Fill",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 2,
+    "prsOpened": 7,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -84,8 +105,19 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
+      {
+        "repo": "tscircuit/pcb-viewer",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/3d-viewer",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/circuit-to-canvas",
         "paths": [
@@ -93,20 +125,51 @@
         ]
       }
     ],
-    "score": 8,
-    "stars": "⭐",
-    "major": 1,
-    "minor": 1,
+    "distinctPrsReviewedAsCodeOwner": 2,
+    "score": 17,
+    "stars": "⭐⭐",
+    "major": 2,
+    "minor": 3,
     "tiny": 0
   },
-  "AnasSarkiz": {
-    "reviewsReceived": 4,
+  "Amsamms": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "AnasSarkiz": {
+    "reviewsReceived": 6,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 695,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/695",
+        "title": "Enable `--dataset` in PR Benchmark Commands and Ship `zdwiel-dataset` Routing-Skip ",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 694,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/694",
@@ -131,8 +194,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 3,
+    "prsOpened": 6,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -141,14 +204,14 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 12,
+    "score": 13,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 0,
-    "tiny": 0
+    "tiny": 1
   },
-  "FraktalDeFiDAO": {
-    "reviewsReceived": 1,
+  "Devesh36": {
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -167,6 +230,53 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "Emanuelgm1998": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "FraktalDeFiDAO": {
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
@@ -249,7 +359,7 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 8,
     "prsMerged": 7,
@@ -257,11 +367,8 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 14,
+    "distinctPrsReviewedAsCodeOwner": 1,
+    "score": 15,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 4,
@@ -342,8 +449,8 @@
     ],
     "approvalsGiven": 3,
     "rejectionsGiven": 1,
-    "prsOpened": 13,
-    "prsMerged": 9,
+    "prsOpened": 15,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -361,23 +468,31 @@
         ]
       }
     ],
-    "score": 15,
+    "score": 23,
     "stars": "⭐⭐",
-    "major": 0,
-    "minor": 5,
+    "major": 1,
+    "minor": 7,
     "tiny": 4
   },
-  "mendarb": {
-    "reviewsReceived": 3,
-    "rejectionsReceived": 0,
+  "iprevail-io": {
+    "reviewsReceived": 2,
+    "rejectionsReceived": 1,
     "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
-    "staffRejectionsReceived": 0,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffReviewedPrLinks": [
+      {
+        "number": 561,
+        "url": "https://github.com/tscircuit/footprinter/pull/561",
+        "title": "feat: add PDIP and SPDIP as separate footprint functions",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -390,13 +505,37 @@
     "score": 0,
     "stars": ""
   },
-  "rushabhcodes": {
-    "reviewsReceived": 23,
+  "mendarb": {
+    "reviewsReceived": 8,
     "rejectionsReceived": 0,
-    "approvalsReceived": 10,
-    "staffReviewedPrs": 5,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 5,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 19,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "rushabhcodes": {
+    "reviewsReceived": 24,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 11,
+    "staffReviewedPrs": 6,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
         "number": 712,
@@ -409,6 +548,13 @@
         "number": 2064,
         "url": "https://github.com/tscircuit/core/pull/2064",
         "title": "Fix packed-component CAD rotation in core so 3D models match post-pack footprint orientation",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3030,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/3030",
+        "title": "Prevent RunFrame keydown blur from breaking Circuit JSON search in the editor preview",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -434,14 +580,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
+    "approvalsGiven": 4,
     "rejectionsGiven": 3,
     "prsOpened": 9,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -461,29 +607,51 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 32,
-    "rejectionsGiven": 2,
-    "prsOpened": 14,
-    "prsMerged": 8,
+    "approvalsGiven": 39,
+    "rejectionsGiven": 4,
+    "prsOpened": 18,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 27,
-    "distinctPrsReviewedAsCodeOwner": 4,
-    "score": 30,
+    "distinctPrsReviewedNonCodeOwner": 29,
+    "distinctPrsReviewedAsCodeOwner": 6,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 36,
     "stars": "⭐⭐",
-    "major": 7,
-    "minor": 0,
+    "major": 8,
+    "minor": 1,
     "tiny": 1
   },
   "techmannih": {
-    "reviewsReceived": 18,
-    "rejectionsReceived": 2,
-    "approvalsReceived": 11,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 1,
+    "reviewsReceived": 27,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 12,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 3,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 704,
+        "url": "https://github.com/tscircuit/pcb-viewer/pull/704",
+        "title": "fix: prevent duplicate hover boxes for plated holes and multi-layer elements",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 366,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/366",
+        "title": "feat: Implement dynamic silkscreen reference designators using manufacturer part numbers as component names",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 2061,
         "url": "https://github.com/tscircuit/core/pull/2061",
@@ -501,8 +669,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 7,
+    "prsOpened": 14,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -520,11 +688,11 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 8,
-    "stars": "⭐",
+    "score": 11,
+    "stars": "⭐⭐",
     "major": 0,
-    "minor": 1,
-    "tiny": 6
+    "minor": 2,
+    "tiny": 7
   },
   "tscircuitbot": {
     "reviewsReceived": 1,
@@ -536,8 +704,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 142,
-    "prsMerged": 128,
+    "prsOpened": 178,
+    "prsMerged": 162,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -550,7 +718,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 128
+    "tiny": 162
   },
   "victorjzq": {
     "reviewsReceived": 19,
