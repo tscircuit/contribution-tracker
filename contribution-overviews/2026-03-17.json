@@ -9,8 +9,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
-    "prsMerged": 7,
+    "prsOpened": 17,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -20,11 +20,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 16,
+    "score": 31.5,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 6,
     "minor": 0,
-    "tiny": 4
+    "tiny": 8
   },
   "1028bc": {
     "reviewsReceived": 0,
@@ -102,7 +102,7 @@
     ],
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
+    "prsOpened": 9,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -194,7 +194,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
+    "prsOpened": 11,
     "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -311,10 +311,33 @@
     "score": 0,
     "stars": ""
   },
-  "MustafaMulla29": {
-    "reviewsReceived": 10,
+  "IrGlooM": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
-    "approvalsReceived": 5,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "MustafaMulla29": {
+    "reviewsReceived": 12,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 6,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 2,
@@ -336,8 +359,8 @@
     ],
     "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 8,
+    "prsOpened": 12,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -347,11 +370,34 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 16,
+    "score": 18,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 4,
-    "tiny": 3
+    "tiny": 5
+  },
+  "Nithinfgs": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "ShiboSoftwareDev": {
     "reviewsReceived": 11,
@@ -429,8 +475,8 @@
     "stars": ""
   },
   "blessuselessk": {
-    "reviewsReceived": 4,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 5,
+    "rejectionsReceived": 1,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
@@ -509,9 +555,9 @@
     "tiny": 0
   },
   "imrishabh18": {
-    "reviewsReceived": 3,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 1,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
@@ -524,14 +570,14 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 3,
-    "rejectionsGiven": 1,
-    "prsOpened": 16,
-    "prsMerged": 12,
+    "approvalsGiven": 4,
+    "rejectionsGiven": 2,
+    "prsOpened": 18,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -545,11 +591,11 @@
         ]
       }
     ],
-    "score": 23,
+    "score": 27,
     "stars": "⭐⭐",
     "major": 1,
-    "minor": 7,
-    "tiny": 4
+    "minor": 8,
+    "tiny": 6
   },
   "iprevail-io": {
     "reviewsReceived": 2,
@@ -607,12 +653,12 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 28,
+    "reviewsReceived": 30,
     "rejectionsReceived": 0,
-    "approvalsReceived": 12,
-    "staffReviewedPrs": 6,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 6,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 712,
@@ -655,12 +701,19 @@
         "title": "Updated the CLI documentation for `tsci` in the `docs/intro/installation.md`",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 274,
+        "url": "https://github.com/tscircuit/sparkfun-boards/pull/274",
+        "title": "Spark fun mini spectral uv sensor as7331 qwiic",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 3,
-    "prsOpened": 11,
-    "prsMerged": 9,
+    "prsOpened": 12,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -670,28 +723,28 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 23,
+    "score": 27,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 4,
     "minor": 4,
     "tiny": 2
   },
   "seveibar": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 41,
+    "approvalsGiven": 43,
     "rejectionsGiven": 5,
-    "prsOpened": 22,
-    "prsMerged": 15,
+    "prsOpened": 34,
+    "prsMerged": 22,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 32,
+    "distinctPrsReviewedNonCodeOwner": 34,
     "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
@@ -701,11 +754,11 @@
         ]
       }
     ],
-    "score": 54,
+    "score": 61,
     "stars": "⭐⭐⭐",
-    "major": 12,
-    "minor": 2,
-    "tiny": 1
+    "major": 15,
+    "minor": 5,
+    "tiny": 2
   },
   "techmannih": {
     "reviewsReceived": 28,
@@ -772,7 +825,7 @@
     "tiny": 7
   },
   "tscircuitbot": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -781,8 +834,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 188,
-    "prsMerged": 172,
+    "prsOpened": 241,
+    "prsMerged": 220,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -791,11 +844,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 13.5,
+    "score": 14.5,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 172
+    "tiny": 220
   },
   "victorjzq": {
     "reviewsReceived": 19,
@@ -844,5 +897,28 @@
     "major": 0,
     "minor": 2,
     "tiny": 2
+  },
+  "zamadye": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   }
 }
