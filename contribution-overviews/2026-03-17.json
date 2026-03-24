@@ -49,6 +49,29 @@
     "score": 0,
     "stars": ""
   },
+  "AXGZ21": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "Abse2001": {
     "reviewsReceived": 8,
     "rejectionsReceived": 0,
@@ -163,13 +186,20 @@
     "stars": ""
   },
   "AnasSarkiz": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
+      {
+        "number": 703,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/703",
+        "title": "Block Fixed-Topology Routing on Non-Top-Layer Inputs (z!=0)",
+        "staffApprovals": 2,
+        "staffRejections": 0
+      },
       {
         "number": 694,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/694",
@@ -194,8 +224,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
-    "prsMerged": 10,
+    "prsOpened": 13,
+    "prsMerged": 13,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -204,18 +234,26 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 25,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/pcbburn.com",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 32,
     "stars": "⭐⭐",
-    "major": 5,
-    "minor": 0,
-    "tiny": 5
+    "major": 6,
+    "minor": 1,
+    "tiny": 6
   },
   "Devesh36": {
-    "reviewsReceived": 8,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 12,
+    "rejectionsReceived": 3,
     "approvalsReceived": 0,
     "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 1,
+    "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [
       {
@@ -223,12 +261,35 @@
         "url": "https://github.com/tscircuit/jscad-electronics/pull/284",
         "title": "Implemented Jsxh2.5mm",
         "staffApprovals": 0,
-        "staffRejections": 1
+        "staffRejections": 2
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "DrGalio": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -335,13 +396,34 @@
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 20,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "approvalsReceived": 11,
+    "staffReviewedPrs": 5,
+    "staffRejectionsReceived": 2,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
+      {
+        "number": 620,
+        "url": "https://github.com/tscircuit/props/pull/620",
+        "title": "add stepUrl to CadModelBase ",
+        "staffApprovals": 1,
+        "staffRejections": 2
+      },
+      {
+        "number": 2517,
+        "url": "https://github.com/tscircuit/cli/pull/2517",
+        "title": "Fix: import step and obj as static imports for jlcpcb component when using --download",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2509,
+        "url": "https://github.com/tscircuit/cli/pull/2509",
+        "title": "Feat: download flag for downloading and localizing 3d models from JLCPCB",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2456,
         "url": "https://github.com/tscircuit/cli/pull/2456",
@@ -357,24 +439,20 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 5,
-    "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 10,
+    "approvalsGiven": 8,
+    "rejectionsGiven": 1,
+    "prsOpened": 17,
+    "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 5,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 6,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 18,
+    "score": 30,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 4,
-    "tiny": 5
+    "major": 2,
+    "minor": 7,
+    "tiny": 7
   },
   "Nithinfgs": {
     "reviewsReceived": 0,
@@ -386,7 +464,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -400,9 +478,9 @@
     "stars": ""
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 11,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
+    "approvalsReceived": 7,
     "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 4,
@@ -438,18 +516,18 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 7,
+    "prsOpened": 15,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 16,
+    "score": 32,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 4,
     "minor": 4,
-    "tiny": 2
+    "tiny": 6
   },
   "SolariResearch": {
     "reviewsReceived": 0,
@@ -462,6 +540,52 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "acercreed305": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "ayushopchauhan": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -521,12 +645,12 @@
     "stars": ""
   },
   "dwiel": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 521,
@@ -534,12 +658,19 @@
         "title": "fix: use LayerRef for via route point from_layer/to_layer",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 125,
+        "url": "https://github.com/tscircuit/dsn-converter/pull/125",
+        "title": "fix: propagate num_layers to via padstacks, through-hole pads, and wire layers",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 2,
-    "prsMerged": 1,
+    "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -548,16 +679,16 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 4,
+    "score": 6,
     "stars": "⭐",
     "major": 1,
-    "minor": 0,
+    "minor": 1,
     "tiny": 0
   },
   "imrishabh18": {
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 1,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
@@ -570,14 +701,14 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 4,
-    "rejectionsGiven": 2,
-    "prsOpened": 18,
-    "prsMerged": 15,
+    "approvalsGiven": 5,
+    "rejectionsGiven": 4,
+    "prsOpened": 19,
+    "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -589,13 +720,19 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 27,
+    "score": 28,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 8,
-    "tiny": 6
+    "tiny": 7
   },
   "iprevail-io": {
     "reviewsReceived": 2,
@@ -652,10 +789,60 @@
     "score": 0,
     "stars": ""
   },
-  "rushabhcodes": {
-    "reviewsReceived": 30,
+  "misteromb": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
-    "approvalsReceived": 13,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "mohan-bee": {
+    "reviewsReceived": 10,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
+    "prsMerged": 1,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 1,
+    "stars": "",
+    "major": 0,
+    "minor": 0,
+    "tiny": 1
+  },
+  "rushabhcodes": {
+    "reviewsReceived": 31,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 14,
     "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 7,
@@ -710,14 +897,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 5,
     "rejectionsGiven": 3,
     "prsOpened": 12,
     "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -730,22 +917,22 @@
     "tiny": 2
   },
   "seveibar": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 43,
-    "rejectionsGiven": 5,
-    "prsOpened": 34,
-    "prsMerged": 22,
+    "approvalsGiven": 52,
+    "rejectionsGiven": 7,
+    "prsOpened": 43,
+    "prsMerged": 31,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 34,
-    "distinctPrsReviewedAsCodeOwner": 7,
+    "distinctPrsReviewedNonCodeOwner": 42,
+    "distinctPrsReviewedAsCodeOwner": 8,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit.com",
@@ -754,19 +941,19 @@
         ]
       }
     ],
-    "score": 61,
+    "score": 68,
     "stars": "⭐⭐⭐",
-    "major": 15,
-    "minor": 5,
-    "tiny": 2
+    "major": 18,
+    "minor": 7,
+    "tiny": 5
   },
   "techmannih": {
-    "reviewsReceived": 28,
-    "rejectionsReceived": 3,
-    "approvalsReceived": 12,
-    "staffReviewedPrs": 4,
-    "staffRejectionsReceived": 3,
-    "staffApprovalsReceived": 2,
+    "reviewsReceived": 35,
+    "rejectionsReceived": 4,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 5,
+    "staffRejectionsReceived": 4,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 704,
@@ -778,9 +965,9 @@
       {
         "number": 366,
         "url": "https://github.com/tscircuit/easyeda-converter/pull/366",
-        "title": "feat: Implement dynamic silkscreen reference designators using manufacturer part numbers as component names",
+        "title": "feat: support {props.name} in silkscreen text for component name",
         "staffApprovals": 0,
-        "staffRejections": 1
+        "staffRejections": 2
       },
       {
         "number": 2061,
@@ -795,12 +982,19 @@
         "title": "feat: add support --download flag to downloading and localizing 3D models from JLCPCB",
         "staffApprovals": 0,
         "staffRejections": 1
+      },
+      {
+        "number": 168,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/168",
+        "title": "feat: Add repro and KiCad PCB asset for non-plated holes",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 15,
-    "prsMerged": 9,
+    "prsOpened": 16,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -818,11 +1012,34 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 11,
+    "score": 13,
     "stars": "⭐⭐",
     "major": 0,
-    "minor": 2,
+    "minor": 3,
     "tiny": 7
+  },
+  "themachinehf": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "tscircuitbot": {
     "reviewsReceived": 2,
@@ -834,8 +1051,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 241,
-    "prsMerged": 220,
+    "prsOpened": 280,
+    "prsMerged": 249,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -848,7 +1065,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 220
+    "tiny": 249
   },
   "victorjzq": {
     "reviewsReceived": 19,
@@ -898,7 +1115,7 @@
     "minor": 2,
     "tiny": 2
   },
-  "zamadye": {
+  "yutubeboss575-create": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
@@ -909,6 +1126,29 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "zamadye": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
