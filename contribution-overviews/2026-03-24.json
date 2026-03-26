@@ -1,8 +1,34 @@
 {
-  "Abse2001": {
-    "reviewsReceived": 2,
+  "0hmX": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 2,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 6,
+    "stars": "⭐",
+    "major": 1,
+    "minor": 1,
+    "tiny": 0
+  },
+  "Abse2001": {
+    "reviewsReceived": 5,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 5,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 2,
@@ -22,31 +48,32 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 2,
+    "prsOpened": 5,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 6,
-    "stars": "⭐",
-    "major": 1,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 13,
+    "stars": "⭐⭐",
+    "major": 2,
     "minor": 1,
-    "tiny": 0
+    "tiny": 2
   },
   "AnasSarkiz": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 711,
@@ -54,12 +81,19 @@
         "title": "Migrate FixedTopologyHighDensityIntraNodeSolver to fixed-via-hypergraph-solver",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 47,
+        "url": "https://github.com/tscircuit/high-density-a01/pull/47",
+        "title": "Add adaptive iteration limits and search budgets based on node size and trace count",
+        "staffApprovals": 1,
+        "staffRejections": 1
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 6,
-    "prsMerged": 5,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -68,14 +102,124 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 14,
+    "score": 18,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 4,
     "minor": 0,
     "tiny": 2
   },
   "Koizain": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "MustafaMulla29": {
+    "reviewsReceived": 5,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 173,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/173",
+        "title": "Fix KiCad 3D model Y-offset sign to match tscircuit placement",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 5,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 4,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 4,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 6,
+    "stars": "⭐",
+    "major": 0,
+    "minor": 1,
+    "tiny": 3
+  },
+  "ShiboSoftwareDev": {
+    "reviewsReceived": 8,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 4,
+    "staffReviewedPrLinks": [
+      {
+        "number": 715,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/715",
+        "title": "auto-solve debug option",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 708,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/708",
+        "title": "Avoid center-via shortcuts for same-point intra-node layer changes",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 712,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/712",
+        "title": "Add auto-run DRC toggle to autorouting debugger & Remove DRC alerts on DRC completed",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 714,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/714",
+        "title": "Revert \"add auto solve debug option\"",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 1,
+    "rejectionsGiven": 0,
+    "prsOpened": 12,
+    "prsMerged": 7,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 19,
+    "stars": "⭐⭐",
+    "major": 4,
+    "minor": 0,
+    "tiny": 2
+  },
+  "chengyixu": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -97,82 +241,18 @@
     "score": 0,
     "stars": ""
   },
-  "MustafaMulla29": {
-    "reviewsReceived": 4,
+  "cmalthusian-cyber": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
-    "staffReviewedPrLinks": [
-      {
-        "number": 173,
-        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/173",
-        "title": "Fix KiCad 3D model Y-offset sign to match tscircuit placement",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      }
-    ],
-    "approvalsGiven": 4,
-    "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 3,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 5,
-    "stars": "⭐",
-    "major": 0,
-    "minor": 1,
-    "tiny": 2
-  },
-  "ShiboSoftwareDev": {
-    "reviewsReceived": 6,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 4,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 4,
-    "staffReviewedPrLinks": [
-      {
-        "number": 715,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/715",
-        "title": "auto-solve debug option",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 714,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/714",
-        "title": "Revert \"add auto solve debug option\"",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 712,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/712",
-        "title": "Add auto-run DRC toggle to autorouting debugger & Remove DRC alerts on DRC completed",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 708,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/708",
-        "title": "Avoid center-via shortcuts for same-point intra-node layer changes",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      }
-    ],
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 4,
+    "prsOpened": 3,
+    "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -181,11 +261,8 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 9,
-    "stars": "⭐",
-    "major": 2,
-    "minor": 0,
-    "tiny": 1
+    "score": 0,
+    "stars": ""
   },
   "imrishabh18": {
     "reviewsReceived": 2,
@@ -204,7 +281,7 @@
       }
     ],
     "approvalsGiven": 4,
-    "rejectionsGiven": 0,
+    "rejectionsGiven": 1,
     "prsOpened": 2,
     "prsMerged": 1,
     "issuesCreated": 0,
@@ -266,23 +343,32 @@
     "tiny": 1
   },
   "seveibar": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 12,
+    "approvalsGiven": 16,
     "rejectionsGiven": 1,
-    "prsOpened": 2,
-    "prsMerged": 1,
+    "prsOpened": 18,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 11,
-    "distinctPrsReviewedAsCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 16,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "reposOwned": [
+      {
+        "repo": "tscircuit/pcb-viewer",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/tscircuit.com",
         "paths": [
@@ -290,16 +376,17 @@
         ]
       }
     ],
-    "score": 2,
-    "stars": "",
-    "major": 0,
-    "minor": 0,
-    "tiny": 1
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 32,
+    "stars": "⭐⭐",
+    "major": 4,
+    "minor": 5,
+    "tiny": 5
   },
   "techmannih": {
-    "reviewsReceived": 11,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 5,
+    "reviewsReceived": 16,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 6,
     "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 1,
@@ -314,7 +401,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
+    "prsOpened": 9,
     "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -341,8 +428,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 48,
-    "prsMerged": 36,
+    "prsOpened": 96,
+    "prsMerged": 72,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -351,11 +438,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 12,
+    "score": 12.5,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 36
+    "tiny": 72
   },
   "zhaog100": {
     "reviewsReceived": 0,
