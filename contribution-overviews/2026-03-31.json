@@ -1,23 +1,23 @@
 {
   "0hmX": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
-      {
-        "number": 784,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/784",
-        "title": "Nearby obstacle-segment proximity check for high-density solver; enable for VertHorzLayer strategy and update tests",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
       {
         "number": 780,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/780",
         "title": "Fix hypergraph pipelines ignoring necessary cramped port point filtering",
+        "staffApprovals": 2,
+        "staffRejections": 0
+      },
+      {
+        "number": 784,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/784",
+        "title": "Nearby obstacle-segment proximity check for high-density solver; enable for VertHorzLayer strategy and update tests",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -27,12 +27,19 @@
         "title": "Update to use the alias for the autorouter",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 23,
+        "url": "https://github.com/tscircuit/tiny-hypergraph/pull/23",
+        "title": "Pre exit if fount an port that contains an net belong to same connection and go to the same obstacle",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 6,
-    "prsMerged": 3,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -42,34 +49,42 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 7,
-    "stars": "⭐",
-    "major": 1,
+    "score": 15,
+    "stars": "⭐⭐",
+    "major": 3,
     "minor": 1,
     "tiny": 1
   },
   "Abse2001": {
-    "reviewsReceived": 3,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 3025,
+        "url": "https://github.com/tscircuit/runframe/pull/3025",
+        "title": "Refactor exports to dynamic loading to ensure latest dependency used",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 6,
+    "prsOpened": 9,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 18.5,
+    "score": 21.5,
     "stars": "⭐⭐",
     "major": 3,
-    "minor": 0,
-    "tiny": 3
+    "minor": 1,
+    "tiny": 4
   },
   "AnasSarkiz": {
     "reviewsReceived": 7,
@@ -131,6 +146,29 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "Cripto5588": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -230,13 +268,20 @@
     "stars": ""
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 9,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 6,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 6,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
+      {
+        "number": 2100,
+        "url": "https://github.com/tscircuit/core/pull/2100",
+        "title": "Preserve imported footprint aliases and internal pin connectivity during inflation",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 795,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/795",
@@ -282,8 +327,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 17,
-    "prsMerged": 11,
+    "prsOpened": 19,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -293,11 +338,34 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 40,
+    "score": 44,
     "stars": "⭐⭐",
-    "major": 9,
+    "major": 10,
     "minor": 1,
     "tiny": 1
+  },
+  "Susanth2005": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "billwestrup": {
     "reviewsReceived": 0,
@@ -368,6 +436,29 @@
     "score": 0,
     "stars": ""
   },
+  "drmabus": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "hinzwilliam52-ship-it": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -417,12 +508,35 @@
     "minor": 0,
     "tiny": 1
   },
-  "mohan-bee": {
-    "reviewsReceived": 24,
-    "rejectionsReceived": 5,
+  "mitchellecm7": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 1,
     "approvalsReceived": 0,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 3,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "mohan-bee": {
+    "reviewsReceived": 30,
+    "rejectionsReceived": 7,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 5,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [
       {
@@ -431,6 +545,13 @@
         "title": "Fix Human readable IDs in autorouter diagnostics",
         "staffApprovals": 0,
         "staffRejections": 3
+      },
+      {
+        "number": 193,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/193",
+        "title": "Add KiCad footprint export converter",
+        "staffApprovals": 0,
+        "staffRejections": 2
       }
     ],
     "approvalsGiven": 0,
@@ -473,17 +594,25 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 22,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 6,
+        "url": "https://github.com/tscircuit/mm/pull/6",
+        "title": "Prevent mmStr from emitting scientific notation for small metric values",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 3,
+    "rejectionsGiven": 2,
+    "prsOpened": 6,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -492,37 +621,38 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 3,
-    "stars": "",
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 6,
+    "stars": "⭐",
     "major": 0,
-    "minor": 0,
-    "tiny": 3
+    "minor": 1,
+    "tiny": 4
   },
   "seveibar": {
-    "reviewsReceived": 7,
+    "reviewsReceived": 8,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 25,
-    "rejectionsGiven": 3,
-    "prsOpened": 27,
-    "prsMerged": 13,
+    "approvalsGiven": 30,
+    "rejectionsGiven": 6,
+    "prsOpened": 34,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 22,
+    "distinctPrsReviewedNonCodeOwner": 28,
     "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 39,
+    "score": 46,
     "stars": "⭐⭐",
     "major": 8,
-    "minor": 1,
-    "tiny": 4
+    "minor": 3,
+    "tiny": 7
   },
   "sungdark": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -531,7 +661,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -545,13 +675,20 @@
     "stars": ""
   },
   "techmannih2": {
-    "reviewsReceived": 9,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 12,
+    "rejectionsReceived": 2,
     "approvalsReceived": 4,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
+      {
+        "number": 2099,
+        "url": "https://github.com/tscircuit/core/pull/2099",
+        "title": "Repro: add repro for alphanumeric pin number validation error",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 2094,
         "url": "https://github.com/tscircuit/core/pull/2094",
@@ -562,7 +699,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
+    "prsOpened": 10,
     "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -579,7 +716,7 @@
     "tiny": 3
   },
   "tscircuitbot": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -588,8 +725,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 52,
-    "prsMerged": 42,
+    "prsOpened": 89,
+    "prsMerged": 68,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -602,6 +739,6 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 42
+    "tiny": 68
   }
 }
