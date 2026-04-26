@@ -24,8 +24,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 4,
+    "prsOpened": 11,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -34,10 +34,10 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 7,
+    "score": 9,
     "stars": "⭐",
     "major": 1,
-    "minor": 0,
+    "minor": 1,
     "tiny": 3
   },
   "168062576-tech": {
@@ -110,17 +110,31 @@
     "tiny": 3
   },
   "AnasSarkiz": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 11,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 11,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 992,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/992",
+        "title": "fix(autorouter): resolve bugreport50 node cmn_645__sub_0_0 ",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 949,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/949",
         "title": "improves margin-aware violation detection",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 38,
+        "url": "https://github.com/tscircuit/copper-pour-solver/pull/38",
+        "title": "Adds a full-board STM32F746G-DISCO circuit JSON fixture and regression coverage for the current copper pour boolean failure on the GND net.",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -134,18 +148,18 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 7,
+    "prsOpened": 14,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 24,
+    "score": 33,
     "stars": "⭐⭐",
-    "major": 4,
+    "major": 6,
     "minor": 1,
-    "tiny": 2
+    "tiny": 3
   },
   "Angelebeats": {
     "reviewsReceived": 0,
@@ -180,7 +194,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
+    "prsOpened": 5,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -494,17 +508,31 @@
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 11,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 2184,
+        "url": "https://github.com/tscircuit/core/pull/2184",
+        "title": "Add ccwRotation to the pill shaped smtpads in the output of simpleRouteJson's",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2183,
         "url": "https://github.com/tscircuit/core/pull/2183",
         "title": "Add the `rotation` property to the srj obstacle output",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 142,
+        "url": "https://github.com/tscircuit/checks/pull/142",
+        "title": "Add the checkTracesAreContiguous drc checks to the runAllRoutingChecks",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -518,8 +546,8 @@
     ],
     "approvalsGiven": 9,
     "rejectionsGiven": 1,
-    "prsOpened": 15,
-    "prsMerged": 13,
+    "prsOpened": 26,
+    "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -533,18 +561,18 @@
         ]
       }
     ],
-    "score": 20,
+    "score": 33,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 3,
-    "tiny": 9
+    "major": 3,
+    "minor": 4,
+    "tiny": 13
   },
   "mohan-bee": {
-    "reviewsReceived": 22,
-    "rejectionsReceived": 2,
+    "reviewsReceived": 27,
+    "rejectionsReceived": 3,
     "approvalsReceived": 10,
     "staffReviewedPrs": 4,
-    "staffRejectionsReceived": 0,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
@@ -566,7 +594,7 @@
         "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/241",
         "title": "Use manufacturer part number for simple chip schematic values",
         "staffApprovals": 1,
-        "staffRejections": 0
+        "staffRejections": 1
       },
       {
         "number": 235,
@@ -594,6 +622,29 @@
     "major": 1,
     "minor": 2,
     "tiny": 3
+  },
+  "nehaaprasaad": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "pavel493": {
     "reviewsReceived": 0,
@@ -682,7 +733,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 50,
+    "prsOpened": 57,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -703,23 +754,23 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 43,
-    "rejectionsGiven": 1,
-    "prsOpened": 5,
-    "prsMerged": 2,
+    "approvalsGiven": 50,
+    "rejectionsGiven": 2,
+    "prsOpened": 10,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 37,
-    "distinctPrsReviewedAsCodeOwner": 3,
-    "score": 9,
-    "stars": "⭐",
-    "major": 2,
-    "minor": 0,
-    "tiny": 0
+    "distinctPrsReviewedNonCodeOwner": 43,
+    "distinctPrsReviewedAsCodeOwner": 4,
+    "score": 28,
+    "stars": "⭐⭐",
+    "major": 6,
+    "minor": 1,
+    "tiny": 1
   },
   "techmannih": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 13,
     "rejectionsReceived": 0,
     "approvalsReceived": 10,
     "staffReviewedPrs": 4,
@@ -757,7 +808,7 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
+    "prsOpened": 11,
     "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -774,6 +825,40 @@
     "minor": 5,
     "tiny": 4
   },
+  "techmannih2": {
+    "reviewsReceived": 3,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 252,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/252",
+        "title": "feat: add support for corner_radius and rect_border_radius to SMD pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 2,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 3,
+    "stars": "",
+    "major": 0,
+    "minor": 1,
+    "tiny": 1
+  },
   "tscircuitbot": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -784,8 +869,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 266,
-    "prsMerged": 211,
+    "prsOpened": 293,
+    "prsMerged": 234,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -798,6 +883,6 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 211
+    "tiny": 234
   }
 }
