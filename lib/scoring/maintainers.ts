@@ -3,7 +3,7 @@ export const MAINTAINERS = {
   Abse2001: "maintainer4",
   AnasSarkiz: "maintainer4",
   "techmannih": "maintainer1",
-  "rushabhcodes": "maintainer1"
+  "rushabhcodes": "maintainer1",
 }
 
 // Alum Maintainers
