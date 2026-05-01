@@ -4,6 +4,7 @@ export const MAINTAINERS = {
   AnasSarkiz: "maintainer4",
   techmannih: "maintainer1",
   rushabhcodes: "maintainer1",
+  "mohan-bee": "maintainer1",
 }
 
 // Alum Maintainers
