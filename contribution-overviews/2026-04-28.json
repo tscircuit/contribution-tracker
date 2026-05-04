@@ -1,12 +1,19 @@
 {
   "0hmX": {
-    "reviewsReceived": 3,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 118,
+        "url": "https://github.com/tscircuit/rectdiff/pull/118",
+        "title": "feat: implement an benchmark script",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 113,
         "url": "https://github.com/tscircuit/rectdiff/pull/113",
@@ -17,8 +24,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 2,
+    "prsOpened": 9,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -27,9 +34,9 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 4,
+    "score": 8,
     "stars": "⭐",
-    "major": 1,
+    "major": 2,
     "minor": 0,
     "tiny": 0
   },
@@ -66,7 +73,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 34,
+    "prsOpened": 36,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -108,7 +115,7 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 16,
+    "prsOpened": 18,
     "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -233,12 +240,12 @@
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 14,
+    "reviewsReceived": 16,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 11,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 5,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 3306,
@@ -255,6 +262,13 @@
         "staffRejections": 1
       },
       {
+        "number": 92,
+        "url": "https://github.com/tscircuit/calculate-packing/pull/92",
+        "title": "Fix Courtyard Extraction To Be Footprint-Scoped Instead Of Group Scoped",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 91,
         "url": "https://github.com/tscircuit/calculate-packing/pull/91",
         "title": "Add courtyard support for component collision boundaries",
@@ -267,22 +281,29 @@
         "title": "Implement kicadSchematicScaleFactor to scale all schematic symbols and wiring in KiCad export",
         "staffApprovals": 2,
         "staffRejections": 1
+      },
+      {
+        "number": 12,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/12",
+        "title": "feat(schematic-placemenent): add numeric resize suggestions for pin-padding-to-edge issues",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 6,
     "rejectionsGiven": 0,
-    "prsOpened": 23,
-    "prsMerged": 21,
+    "prsOpened": 27,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 6,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 27,
+    "score": 31,
     "stars": "⭐⭐",
     "major": 1,
-    "minor": 5,
-    "tiny": 15
+    "minor": 7,
+    "tiny": 16
   },
   "Sang-it": {
     "reviewsReceived": 15,
@@ -351,8 +372,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 26,
-    "prsMerged": 19,
+    "prsOpened": 29,
+    "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -361,11 +382,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 44,
+    "score": 46,
     "stars": "⭐⭐",
     "major": 8,
     "minor": 2,
-    "tiny": 9
+    "tiny": 11
   },
   "ShiboSoftwareDev": {
     "reviewsReceived": 12,
@@ -460,6 +481,29 @@
     "score": 0,
     "stars": ""
   },
+  "artylobos": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "benzaid32": {
     "reviewsReceived": 1,
     "rejectionsReceived": 1,
@@ -517,6 +561,29 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "chengyixu": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -663,7 +730,7 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 8,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -693,7 +760,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -730,9 +797,9 @@
     "stars": ""
   },
   "mohan-bee": {
-    "reviewsReceived": 29,
+    "reviewsReceived": 38,
     "rejectionsReceived": 3,
-    "approvalsReceived": 11,
+    "approvalsReceived": 14,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 2,
@@ -761,8 +828,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
-    "prsMerged": 4,
+    "prsOpened": 12,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -772,11 +839,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 8,
-    "stars": "⭐",
+    "score": 12,
+    "stars": "⭐⭐",
     "major": 1,
     "minor": 0,
-    "tiny": 3
+    "tiny": 7
   },
   "orbitwebsites-cloud": {
     "reviewsReceived": 2,
@@ -802,16 +869,24 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 19,
+    "reviewsReceived": 23,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 1,
+        "url": "https://github.com/tscircuit/circuit-json-to-3d-png/pull/1",
+        "title": "Add initial workflow configurations and project setup files",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 3,
-    "rejectionsGiven": 1,
-    "prsOpened": 12,
+    "rejectionsGiven": 2,
+    "prsOpened": 13,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -825,35 +900,35 @@
     "tiny": 5
   },
   "seveibar": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 13,
     "rejectionsReceived": 0,
     "approvalsReceived": 9,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 57,
+    "approvalsGiven": 64,
     "rejectionsGiven": 3,
-    "prsOpened": 23,
-    "prsMerged": 13,
+    "prsOpened": 33,
+    "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 48,
-    "distinctPrsReviewedAsCodeOwner": 8,
-    "score": 36,
-    "stars": "⭐⭐",
-    "major": 6,
-    "minor": 4,
-    "tiny": 3
+    "distinctPrsReviewedNonCodeOwner": 53,
+    "distinctPrsReviewedAsCodeOwner": 9,
+    "score": 51,
+    "stars": "⭐⭐⭐",
+    "major": 7,
+    "minor": 8,
+    "tiny": 6
   },
   "techmannih": {
-    "reviewsReceived": 17,
+    "reviewsReceived": 21,
     "rejectionsReceived": 1,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 612,
@@ -861,6 +936,13 @@
         "title": "fix: align passive silkscreen geometry with KiCad standards",
         "staffApprovals": 0,
         "staffRejections": 1
+      },
+      {
+        "number": 69,
+        "url": "https://github.com/tscircuit/kicad-to-circuit-json/pull/69",
+        "title": "Support gr_curve on Edge.Cuts board outlines",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 68,
@@ -878,13 +960,13 @@
       }
     ],
     "approvalsGiven": 2,
-    "rejectionsGiven": 2,
-    "prsOpened": 11,
-    "prsMerged": 6,
+    "rejectionsGiven": 1,
+    "prsOpened": 14,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -910,11 +992,11 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 11,
+    "score": 17,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 2,
     "minor": 1,
-    "tiny": 4
+    "tiny": 5
   },
   "tscircuitbot": {
     "reviewsReceived": 0,
@@ -926,8 +1008,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 329,
-    "prsMerged": 276,
+    "prsOpened": 363,
+    "prsMerged": 301,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -940,7 +1022,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 276
+    "tiny": 301
   },
   "webhop123": {
     "reviewsReceived": 1,
@@ -966,6 +1048,29 @@
     "stars": ""
   },
   "worthyfarmstead-rgb": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "yowanda": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
