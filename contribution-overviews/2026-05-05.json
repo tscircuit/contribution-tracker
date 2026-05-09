@@ -1,6 +1,6 @@
 {
   "0hmX": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
     "approvalsReceived": 4,
     "staffReviewedPrs": 2,
@@ -25,7 +25,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 17,
-    "prsMerged": 9,
+    "prsMerged": 13,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -35,11 +35,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 15,
+    "score": 28,
     "stars": "⭐⭐",
-    "major": 2,
+    "major": 5,
     "minor": 0,
-    "tiny": 7
+    "tiny": 8
   },
   "64johnlee": {
     "reviewsReceived": 0,
@@ -65,9 +65,9 @@
     "stars": ""
   },
   "Abse2001": {
-    "reviewsReceived": 7,
+    "reviewsReceived": 8,
     "rejectionsReceived": 1,
-    "approvalsReceived": 3,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 2,
@@ -96,8 +96,8 @@
     ],
     "approvalsGiven": 6,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 3,
+    "prsOpened": 5,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -107,11 +107,19 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 4,
-    "score": 17,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/high-density-repair03",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 18,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 0,
-    "tiny": 0
+    "tiny": 1
   },
   "AnasSarkiz": {
     "reviewsReceived": 4,
@@ -129,16 +137,16 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 6,
     "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 15,
+    "score": 16,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 0,
@@ -229,14 +237,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 6,
     "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -249,9 +257,9 @@
     "tiny": 4
   },
   "Sang-it": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
+    "approvalsReceived": 7,
     "staffReviewedPrs": 6,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 6,
@@ -301,8 +309,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 8,
+    "prsOpened": 12,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -311,11 +319,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 21,
+    "score": 23,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 4,
-    "tiny": 1
+    "tiny": 3
   },
   "ShiboSoftwareDev": {
     "reviewsReceived": 9,
@@ -448,6 +456,29 @@
     "score": 0,
     "stars": ""
   },
+  "grantf04": {
+    "reviewsReceived": 4,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "gsdali": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -458,7 +489,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
+    "prsOpened": 17,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -472,12 +503,12 @@
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 16,
+    "reviewsReceived": 17,
     "rejectionsReceived": 0,
-    "approvalsReceived": 13,
-    "staffReviewedPrs": 11,
+    "approvalsReceived": 14,
+    "staffReviewedPrs": 12,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 11,
+    "staffApprovalsReceived": 12,
     "staffReviewedPrLinks": [
       {
         "number": 2262,
@@ -536,6 +567,13 @@
         "staffRejections": 0
       },
       {
+        "number": 85,
+        "url": "https://github.com/tscircuit/kicad-to-circuit-json/pull/85",
+        "title": "Create pcbtrace conectivity graph for segments and via's",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 82,
         "url": "https://github.com/tscircuit/kicad-to-circuit-json/pull/82",
         "title": "Add source_net support",
@@ -559,8 +597,8 @@
     ],
     "approvalsGiven": 9,
     "rejectionsGiven": 2,
-    "prsOpened": 38,
-    "prsMerged": 34,
+    "prsOpened": 43,
+    "prsMerged": 39,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -578,11 +616,11 @@
         ]
       }
     ],
-    "score": 75,
+    "score": 79,
     "stars": "⭐⭐⭐",
-    "major": 11,
+    "major": 12,
     "minor": 9,
-    "tiny": 14
+    "tiny": 18
   },
   "mert-kocoglu": {
     "reviewsReceived": 0,
@@ -608,12 +646,12 @@
     "stars": ""
   },
   "mohan-bee": {
-    "reviewsReceived": 27,
+    "reviewsReceived": 31,
     "rejectionsReceived": 5,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 4,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 2257,
@@ -621,6 +659,20 @@
         "title": "Fix invalid Circuit JSON routes from through-obstacle autorouting",
         "staffApprovals": 0,
         "staffRejections": 2
+      },
+      {
+        "number": 144,
+        "url": "https://github.com/tscircuit/checks/pull/144",
+        "title": "Fix false DRC missing-connection errors for multi-pad PCB ports",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 86,
+        "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/86",
+        "title": "repro for rotated pill plated hole copper/paste mismatch",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 548,
@@ -639,8 +691,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 1,
+    "prsOpened": 12,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -650,11 +702,34 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 2,
-    "stars": "",
+    "score": 5,
+    "stars": "⭐",
     "major": 0,
-    "minor": 0,
-    "tiny": 1
+    "minor": 1,
+    "tiny": 2
+  },
+  "nexiumbiz-debug": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "rushabhcodes": {
     "reviewsReceived": 10,
@@ -714,30 +789,53 @@
     "score": 0,
     "stars": ""
   },
+  "serfersac": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "seveibar": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 43,
+    "approvalsGiven": 47,
     "rejectionsGiven": 7,
-    "prsOpened": 21,
-    "prsMerged": 17,
+    "prsOpened": 25,
+    "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 40,
+    "distinctPrsReviewedNonCodeOwner": 44,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 42,
-    "stars": "⭐⭐",
-    "major": 6,
+    "score": 54,
+    "stars": "⭐⭐⭐",
+    "major": 9,
     "minor": 6,
     "tiny": 5
   },
@@ -900,8 +998,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 219,
-    "prsMerged": 182,
+    "prsOpened": 240,
+    "prsMerged": 190,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -914,6 +1012,6 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 182
+    "tiny": 190
   }
 }
