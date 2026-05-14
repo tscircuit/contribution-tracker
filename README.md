@@ -41,11 +41,11 @@ pie
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
 | [techmannih](#techmannih) | 7 | 0 | 7 | 100.0% |
+| [MustafaMulla29](#MustafaMulla29) | 3 | 0 | 3 | 100.0% |
+| [mohan-bee](#mohan-bee) | 3 | 3 | 3 | 0.0% |
 | [imrishabh18](#imrishabh18) | 2 | 0 | 2 | 100.0% |
-| [mohan-bee](#mohan-bee) | 2 | 0 | 2 | 100.0% |
+| [Sang-it](#Sang-it) | 2 | 0 | 2 | 100.0% |
 | [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 0 | 2 | 100.0% |
-| [MustafaMulla29](#MustafaMulla29) | 1 | 0 | 1 | 100.0% |
-| [Sang-it](#Sang-it) | 1 | 0 | 1 | 100.0% |
 | [thisisharsh7](#thisisharsh7) | 1 | 0 | 1 | 100.0% |
 
 <details>
@@ -62,6 +62,24 @@ pie
 </details>
 
 <details>
+<summary>MustafaMulla29 SPR PRs (3)</summary>
+
+- [#2297](https://github.com/tscircuit/core/pull/2297) Fix default nominal trace width for krt autorouter routes
+- [#89](https://github.com/tscircuit/circuit-json-to-gerber/pull/89) Fix blind vias being emitted in through-board drill output
+- [#2674](https://github.com/tscircuit/eval/pull/2674) Use jscdn as Primary CDN and keep jsDelivr as fallback
+
+</details>
+
+<details>
+<summary>mohan-bee SPR PRs (3)</summary>
+
+- [#147](https://github.com/tscircuit/checks/pull/147) Detect footprint overlap when holes collides with courtyards
+- [#279](https://github.com/tscircuit/sparkfun-boards/pull/279) Add SparkFun RGB and Gesture Sensor - APDS-9960
+- [#264](https://github.com/tscircuit/circuit-json-to-kicad/pull/264) Add Copper Pour Export
+
+</details>
+
+<details>
 <summary>imrishabh18 SPR PRs (2)</summary>
 
 - [#2665](https://github.com/tscircuit/eval/pull/2665) Add unpkg fallback for worker CDN fetch
@@ -70,10 +88,10 @@ pie
 </details>
 
 <details>
-<summary>mohan-bee SPR PRs (2)</summary>
+<summary>Sang-it SPR PRs (2)</summary>
 
-- [#147](https://github.com/tscircuit/checks/pull/147) Detect footprint overlap when holes collides with courtyards
-- [#279](https://github.com/tscircuit/sparkfun-boards/pull/279) Add SparkFun RGB and Gesture Sensor - APDS-9960
+- [#669](https://github.com/tscircuit/props/pull/669) add nominalTraceWidth field to Net
+- [#2294](https://github.com/tscircuit/core/pull/2294) pass missing info to the schematic trace solver
 
 </details>
 
@@ -82,20 +100,6 @@ pie
 
 - [#2296](https://github.com/tscircuit/core/pull/2296) Fix invalid source trace IDs in region reroute output
 - [#2295](https://github.com/tscircuit/core/pull/2295) Fix Arduino Uno region reroute cleanup
-
-</details>
-
-<details>
-<summary>MustafaMulla29 SPR PRs (1)</summary>
-
-- [#2674](https://github.com/tscircuit/eval/pull/2674) Use jscdn as Primary CDN and keep jsDelivr as fallback
-
-</details>
-
-<details>
-<summary>Sang-it SPR PRs (1)</summary>
-
-- [#2294](https://github.com/tscircuit/core/pull/2294) pass missing info to the schematic trace solver
 
 </details>
 
@@ -124,25 +128,46 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
+| [TodouWisiper](#TodouWisiper) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [sandliu](#sandliu) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Kidkrow12](#Kidkrow12) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 64 | 54 | 0 |
-| [imrishabh18](#imrishabh18) | 2 | 2 | 0 | 2 | 0 | 6 | 5 | 0 |
-| [intagold561](#intagold561) | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 |
+| [minhduytran](#minhduytran) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [intagold561](#intagold561) | 1 | 0 | 0 | 0 | 0 | 8 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 131 | 104 | 0 |
+| [imrishabh18](#imrishabh18) | 2 | 2 | 0 | 4 | 2 | 15 | 14 | 0 |
+| [seveibar](#seveibar) | 0 | 0 | 0 | 20 | 0 | 4 | 1 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 5 | 4 | 0 | 9 | 1 | 9 | 8 | 0 |
 | [gwhthompson](#gwhthompson) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 6 | 3 | 0 | 3 | 2 | 3 | 2 | 0 |
-| [mohan-bee](#mohan-bee) | 14 | 5 | 2 | 0 | 0 | 7 | 2 | 0 |
-| [techmannih](#techmannih) | 14 | 9 | 0 | 1 | 0 | 9 | 9 | 0 |
-| [seveibar](#seveibar) | 0 | 0 | 0 | 16 | 0 | 2 | 1 | 0 |
+| [mohan-bee](#mohan-bee) | 22 | 15 | 2 | 0 | 0 | 12 | 9 | 0 |
+| [techmannih](#techmannih) | 20 | 9 | 1 | 1 | 0 | 16 | 12 | 0 |
+| [Sang-it](#Sang-it) | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 |
+| [CodeForFee](#CodeForFee) | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 |
 | [ErguLan](#ErguLan) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [zzhang82](#zzhang82) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [Guzzzzzzzz](#Guzzzzzzzz) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [tungnguyentu](#tungnguyentu) | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 |
+| [mochammadfarkhan](#mochammadfarkhan) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [watcharaponthod-code](#watcharaponthod-code) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [sureshchouksey8](#sureshchouksey8) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [fangzheli](#fangzheli) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [starburtMr](#starburtMr) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [phungkaizen](#phungkaizen) | 1 | 0 | 0 | 0 | 0 | 6 | 0 | 0 |
-| [newmattock](#newmattock) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [0hmX](#0hmX) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [newmattock](#newmattock) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [colorbank](#colorbank) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [MestreY0d4-Uninter](#MestreY0d4-Uninter) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [0hmX](#0hmX) | 4 | 0 | 0 | 0 | 0 | 6 | 1 | 0 |
 | [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 2 | 0 | 0 | 0 | 3 | 2 | 0 |
-| [Sang-it](#Sang-it) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
+| [kodokushi444-commits](#kodokushi444-commits) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [IbrahimLaeeq](#IbrahimLaeeq) | 3 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [haim1120](#haim1120) | 0 | 0 | 0 | 0 | 0 | 27 | 0 | 0 |
+| [CalyxNZ](#CalyxNZ) | 2 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [kingzzoov-ctrl](#kingzzoov-ctrl) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Minori016](#Minori016) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [william08190](#william08190) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [Treasure520520](#Treasure520520) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [realkoreanbeef](#realkoreanbeef) | 1 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [Mira-Mjodheim](#Mira-Mjodheim) | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 |
+| [Adysekus](#Adysekus) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Donutking20](#Donutking20) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [himanalot](#himanalot) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [jynbil1](#jynbil1) | 2 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
@@ -151,55 +176,73 @@ pie
 | [xXGoziXx](#xXGoziXx) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [imaanmulji](#imaanmulji) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [richboyneedcash](#richboyneedcash) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [CodeForFee](#CodeForFee) | 0 | 0 | 0 | 0 | 0 | 7 | 0 | 0 |
 | [Jahrome907](#Jahrome907) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [JimmiFriborg](#JimmiFriborg) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [partyplatter08-lab](#partyplatter08-lab) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [dennywu2966](#dennywu2966) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [zaixincheng174-ai](#zaixincheng174-ai) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [Mira-Mjodheim](#Mira-Mjodheim) | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 |
 | [raunaqsingh](#raunaqsingh) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [jorgeschulz](#jorgeschulz) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [lasgg](#lasgg) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [joel777rubio-web](#joel777rubio-web) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [0xdungki](#0xdungki) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [nicovaleops](#nicovaleops) | 1 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [Sparvovic](#Sparvovic) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [adminlip](#adminlip) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [realkoreanbeef](#realkoreanbeef) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [nicovaleops](#nicovaleops) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [adminlip](#adminlip) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
 | [thisismyburner](#thisismyburner) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [bmoh95](#bmoh95) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [8npyvz5bd8-lang](#8npyvz5bd8-lang) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [FJ-CX](#FJ-CX) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [zeppnyc](#zeppnyc) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [jswagbo](#jswagbo) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [time-turner42](#time-turner42) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [Gimyoonsoo](#Gimyoonsoo) | 6 | 0 | 0 | 0 | 0 | 42 | 0 | 0 |
+| [FeeeeelixWong](#FeeeeelixWong) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [foxhub2020](#foxhub2020) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [KarlZhu-ZXC](#KarlZhu-ZXC) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [lyd123qw2008](#lyd123qw2008) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [albercr3](#albercr3) | 0 | 0 | 0 | 0 | 0 | 7 | 0 | 0 |
+| [alan747271363-art](#alan747271363-art) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [yusufdalbudak](#yusufdalbudak) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [ramrap](#ramrap) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [tmchang1258](#tmchang1258) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Gimyoonsoo](#Gimyoonsoo) | 10 | 0 | 0 | 0 | 0 | 42 | 0 | 0 |
+| [serendipitous-syntax](#serendipitous-syntax) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [kenproxx](#kenproxx) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [MNgaminhhh](#MNgaminhhh) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Mermaid-Man](#Mermaid-Man) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [yusufdalbudak](#yusufdalbudak) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [TsukinowaRin](#TsukinowaRin) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [douglasflysuper01-cell](#douglasflysuper01-cell) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [serendipitous-syntax](#serendipitous-syntax) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [TheWaste11202](#TheWaste11202) | 0 | 0 | 0 | 0 | 0 | 7 | 0 | 0 |
 | [suhail-ak-2](#suhail-ak-2) | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 |
 | [Serve63](#Serve63) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [nam27062002](#nam27062002) | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 |
 | [xlocalvn-svg](#xlocalvn-svg) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [masuda-so](#masuda-so) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [GabrielSotto](#GabrielSotto) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [autochamchikim-pixel](#autochamchikim-pixel) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [masuda-so](#masuda-so) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [qjly421](#qjly421) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [tarunag10](#tarunag10) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [AmanKishore](#AmanKishore) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [iamdinhthuan](#iamdinhthuan) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Two-wood-three-soil](#Two-wood-three-soil) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [mushfique-dgist](#mushfique-dgist) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [thisisharsh7](#thisisharsh7) | 2 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
 | [federicoschermi](#federicoschermi) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Bilal-Lodhi](#Bilal-Lodhi) | 2 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [rushabhcodes](#rushabhcodes) | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| [Sinceretoad](#Sinceretoad) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [Havarry](#Havarry) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [s53zo](#s53zo) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [chenchong0215](#chenchong0215) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [digzrow-coder](#digzrow-coder) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| [Vinzz2303](#Vinzz2303) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Chaos-among-us](#Chaos-among-us) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [theRadicalSoftware](#theRadicalSoftware) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Sinceretoad](#Sinceretoad) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [ArtemisMoysen](#ArtemisMoysen) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Dannier314](#Dannier314) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [s53zo](#s53zo) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Havarry](#Havarry) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [chenchong0215](#chenchong0215) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [IssacDanny](#IssacDanny) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Abse2001](#Abse2001) | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 
 ## Changes by Repository
 
