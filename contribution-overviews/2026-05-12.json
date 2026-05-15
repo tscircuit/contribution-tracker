@@ -19,8 +19,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 4,
+    "stars": "⭐",
+    "major": 1,
+    "minor": 0,
+    "tiny": 0
   },
   "0xdungki": {
     "reviewsReceived": 0,
@@ -111,8 +114,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 4,
+    "stars": "⭐",
+    "major": 1,
+    "minor": 0,
+    "tiny": 0
   },
   "Adysekus": {
     "reviewsReceived": 0,
@@ -168,19 +174,15 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 2,
+    "approvalsGiven": 3,
     "rejectionsGiven": 0,
     "prsOpened": 0,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
     "score": 0,
     "stars": ""
   },
@@ -386,10 +388,6 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
     "score": 0,
     "stars": ""
   },
@@ -824,11 +822,11 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "discussionComments": 0,
+    "discussionComments": 1,
     "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
+    "discussionGreatInformativeComments": 1,
     "discussionIncredibleComments": 0,
-    "score": 0,
+    "score": 2,
     "stars": ""
   },
   "Minori016": {
@@ -915,13 +913,16 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 10,
-    "discussionComments": 0,
+    "discussionComments": 1,
     "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
+    "discussionGreatInformativeComments": 1,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 0,
-    "stars": ""
+    "score": 27,
+    "stars": "⭐⭐",
+    "major": 3,
+    "minor": 3,
+    "tiny": 8
   },
   "SUNNY-Fu-ai": {
     "reviewsReceived": 0,
@@ -988,8 +989,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 8,
+    "stars": "⭐",
+    "major": 1,
+    "minor": 2,
+    "tiny": 0
   },
   "Serve63": {
     "reviewsReceived": 0,
@@ -1017,7 +1021,7 @@
   "ShiboSoftwareDev": {
     "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
+    "approvalsReceived": 5,
     "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 4,
@@ -1054,7 +1058,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 6,
-    "prsMerged": 2,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1063,8 +1067,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 4,
+    "stars": "⭐",
+    "major": 0,
+    "minor": 2,
+    "tiny": 0
   },
   "Sinceretoad": {
     "reviewsReceived": 1,
@@ -1939,8 +1946,11 @@
         ]
       }
     ],
-    "score": 0,
-    "stars": ""
+    "score": 52,
+    "stars": "⭐⭐⭐",
+    "major": 8,
+    "minor": 4,
+    "tiny": 11
   },
   "intagold561": {
     "reviewsReceived": 1,
@@ -2407,8 +2417,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 0,
-    "stars": ""
+    "score": 28,
+    "stars": "⭐⭐",
+    "major": 3,
+    "minor": 7,
+    "tiny": 2
   },
   "mushfique-dgist": {
     "reviewsReceived": 1,
@@ -2785,8 +2798,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 0,
-    "stars": ""
+    "score": 3,
+    "stars": "",
+    "major": 0,
+    "minor": 1,
+    "tiny": 0
   },
   "s53zo": {
     "reviewsReceived": 1,
@@ -2872,14 +2888,17 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 25,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 26,
+    "discussionComments": 1,
+    "discussionNormalComments": 1,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 0,
-    "stars": ""
+    "score": 2,
+    "stars": "",
+    "major": 0,
+    "minor": 0,
+    "tiny": 1
   },
   "siiferdiiii": {
     "reviewsReceived": 0,
@@ -3023,21 +3042,14 @@
     "reviewsReceived": 23,
     "rejectionsReceived": 0,
     "approvalsReceived": 13,
-    "staffReviewedPrs": 10,
+    "staffReviewedPrs": 9,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 10,
+    "staffApprovalsReceived": 9,
     "staffReviewedPrLinks": [
       {
         "number": 583,
         "url": "https://github.com/tscircuit/circuit-json/pull/583",
         "title": "add ccw_rotation to pcb fabrication note text",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 671,
-        "url": "https://github.com/tscircuit/props/pull/671",
-        "title": "add JLCPCB footprint autocomplete",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -3119,8 +3131,11 @@
         ]
       }
     ],
-    "score": 0,
-    "stars": ""
+    "score": 33,
+    "stars": "⭐⭐",
+    "major": 1,
+    "minor": 11,
+    "tiny": 6
   },
   "theRadicalSoftware": {
     "reviewsReceived": 0,
@@ -3173,8 +3188,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 2,
+    "stars": "",
+    "major": 0,
+    "minor": 1,
+    "tiny": 0
   },
   "thisismyburner": {
     "reviewsReceived": 0,
@@ -3265,8 +3283,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 14,
+    "stars": "⭐⭐",
+    "major": 0,
+    "minor": 0,
+    "tiny": 170
   },
   "tungnguyentu": {
     "reviewsReceived": 0,
