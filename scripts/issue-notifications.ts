@@ -1,7 +1,8 @@
-import { WebhookClient, type MessageCreateOptions } from "discord.js"
+import { type MessageCreateOptions, WebhookClient } from "discord.js"
+import { EXCLUDED_BOTS } from "lib/constants"
+import { extractIssueBounty } from "lib/data-retrieval/extract-issue-bounty"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
-import { EXCLUDED_BOTS } from "lib/constants"
 
 const discordWebhook = new WebhookClient({
   url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
@@ -15,6 +16,9 @@ interface Issue {
     login: string
   }
   created_at: string
+  body?: string | null
+  labels?: Array<string | { name?: string | null }>
+  bounty?: string | null
 }
 
 function getUTCDateTime(): string {
@@ -47,11 +51,27 @@ async function getRecentIssues(repo: string): Promise<Issue[]> {
         issue.user.login as (typeof EXCLUDED_BOTS)[number],
       ),
   ) as Issue[]
-  console.log(
-    `[${getUTCDateTime()}] Found ${filteredIssues.length} new issues in ${repo}`,
+
+  const issuesWithBounties = await Promise.all(
+    filteredIssues.map(async (issue) => {
+      const { data: comments } = await octokit.issues.listComments({
+        owner,
+        repo: repoName,
+        issue_number: issue.number,
+      })
+
+      return {
+        ...issue,
+        bounty: extractIssueBounty(issue, comments),
+      }
+    }),
   )
 
-  return filteredIssues
+  console.log(
+    `[${getUTCDateTime()}] Found ${issuesWithBounties.length} new issues in ${repo}`,
+  )
+
+  return issuesWithBounties
 }
 
 async function notifyDiscord(issues: Issue[], repo: string) {
@@ -61,14 +81,13 @@ async function notifyDiscord(issues: Issue[], repo: string) {
     `[${getUTCDateTime()}] Sending notification for ${issues.length} issues from ${repo} to Discord`,
   )
 
-  const messageContent =
-    `New issues in ${repo}:\n` +
-    issues
-      .map(
-        (issue) =>
-          `• #${issue.number} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`,
-      )
-      .join("\n")
+  const issueLines = issues
+    .map((issue) => {
+      const bounty = issue.bounty ? ` [${issue.bounty} bounty]` : ""
+      return `- #${issue.number}${bounty} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`
+    })
+    .join("\n")
+  const messageContent = `New issues in ${repo}:\n${issueLines}`
 
   const messageOptions: MessageCreateOptions = {
     content: messageContent,
