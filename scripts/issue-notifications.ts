@@ -1,7 +1,7 @@
-import { WebhookClient, type MessageCreateOptions } from "discord.js"
+import { type MessageCreateOptions, WebhookClient } from "discord.js"
+import { EXCLUDED_BOTS } from "lib/constants"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
-import { EXCLUDED_BOTS } from "lib/constants"
 
 const discordWebhook = new WebhookClient({
   url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
@@ -11,14 +11,60 @@ interface Issue {
   number: number
   title: string
   html_url: string
+  bounty?: string | null
   user: {
     login: string
   }
   created_at: string
 }
 
+interface IssueComment {
+  body?: string | null
+  user?: {
+    login?: string
+  } | null
+}
+
 function getUTCDateTime(): string {
   return new Date().toISOString()
+}
+
+function formatUsd(amount: number): string {
+  return `$${Number.isInteger(amount) ? amount : amount.toFixed(2)}`
+}
+
+function getBountyLabelFromComment(body: string): string | null {
+  const bountyMatches = Array.from(
+    body.matchAll(/^##\s+.*?\$([0-9][0-9,]*(?:\.[0-9]{1,2})?)\s+bounty\b/gim),
+  )
+
+  if (bountyMatches.length === 0) return null
+
+  const bountyTotal = bountyMatches.reduce((total, match) => {
+    return total + Number.parseFloat(match[1].replace(/,/g, ""))
+  }, 0)
+
+  return `${formatUsd(bountyTotal)} bounty`
+}
+
+async function getBountyForIssue(repo: string, issueNumber: number) {
+  const [owner, repoName] = repo.split("/")
+  const { data: comments } = await octokit.issues.listComments({
+    owner,
+    repo: repoName,
+    issue_number: issueNumber,
+    per_page: 100,
+  })
+
+  for (const comment of comments as IssueComment[]) {
+    if (!comment.user?.login?.startsWith("algora-pbc")) continue
+    if (!comment.body) continue
+
+    const bountyLabel = getBountyLabelFromComment(comment.body)
+    if (bountyLabel) return bountyLabel
+  }
+
+  return null
 }
 
 async function getRecentIssues(repo: string): Promise<Issue[]> {
@@ -47,11 +93,19 @@ async function getRecentIssues(repo: string): Promise<Issue[]> {
         issue.user.login as (typeof EXCLUDED_BOTS)[number],
       ),
   ) as Issue[]
-  console.log(
-    `[${getUTCDateTime()}] Found ${filteredIssues.length} new issues in ${repo}`,
+
+  const issuesWithBounties = await Promise.all(
+    filteredIssues.map(async (issue) => ({
+      ...issue,
+      bounty: await getBountyForIssue(repo, issue.number),
+    })),
   )
 
-  return filteredIssues
+  console.log(
+    `[${getUTCDateTime()}] Found ${issuesWithBounties.length} new issues in ${repo}`,
+  )
+
+  return issuesWithBounties
 }
 
 async function notifyDiscord(issues: Issue[], repo: string) {
@@ -61,14 +115,12 @@ async function notifyDiscord(issues: Issue[], repo: string) {
     `[${getUTCDateTime()}] Sending notification for ${issues.length} issues from ${repo} to Discord`,
   )
 
-  const messageContent =
-    `New issues in ${repo}:\n` +
-    issues
-      .map(
-        (issue) =>
-          `• #${issue.number} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`,
-      )
-      .join("\n")
+  const messageContent = `New issues in ${repo}:\n${issues
+    .map((issue) => {
+      const bounty = issue.bounty ? ` [${issue.bounty}]` : ""
+      return `• #${issue.number}${bounty} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`
+    })
+    .join("\n")}`
 
   const messageOptions: MessageCreateOptions = {
     content: messageContent,
