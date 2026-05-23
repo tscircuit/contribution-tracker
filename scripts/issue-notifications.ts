@@ -1,7 +1,7 @@
-import { WebhookClient, type MessageCreateOptions } from "discord.js"
+import { type MessageCreateOptions, WebhookClient } from "discord.js"
+import { EXCLUDED_BOTS } from "lib/constants"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
-import { EXCLUDED_BOTS } from "lib/constants"
 
 const discordWebhook = new WebhookClient({
   url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
@@ -11,6 +11,13 @@ interface Issue {
   number: number
   title: string
   html_url: string
+  body?: string | null
+  labels: Array<
+    | string
+    | {
+        name?: string
+      }
+  >
   user: {
     login: string
   }
@@ -19,6 +26,53 @@ interface Issue {
 
 function getUTCDateTime(): string {
   return new Date().toISOString()
+}
+
+function getLabelNames(issue: Issue): string[] {
+  return issue.labels
+    .map((label) => (typeof label === "string" ? label : label.name))
+    .filter((label): label is string => Boolean(label))
+}
+
+function findBountyAmount(text: string): string | null {
+  const bountyMatch = text.match(
+    /(?:\/bounty|bounty)\s*\$\s*([\d,]+(?:\.\d{1,2})?)/i,
+  )
+  if (bountyMatch) return `$${bountyMatch[1]}`
+
+  const dollarMatch = text.match(/\$\s*([\d,]+(?:\.\d{1,2})?)/)
+  if (dollarMatch) return `$${dollarMatch[1]}`
+
+  return null
+}
+
+async function getIssueBounty(
+  repo: string,
+  issue: Issue,
+): Promise<string | null> {
+  const labelBounty = getLabelNames(issue)
+    .filter((label) => !label.toLowerCase().includes("rewarded"))
+    .map(findBountyAmount)
+    .find((amount) => amount)
+
+  if (labelBounty) return labelBounty
+
+  const bodyBounty = findBountyAmount(issue.body ?? "")
+  if (bodyBounty) return bodyBounty
+
+  const [owner, repoName] = repo.split("/")
+  const { data: comments } = await octokit.issues.listComments({
+    owner,
+    repo: repoName,
+    issue_number: issue.number,
+    per_page: 20,
+  })
+
+  return (
+    comments
+      .map((comment) => findBountyAmount(comment.body ?? ""))
+      .find((amount) => amount) ?? null
+  )
 }
 
 async function getRecentIssues(repo: string): Promise<Issue[]> {
@@ -61,14 +115,15 @@ async function notifyDiscord(issues: Issue[], repo: string) {
     `[${getUTCDateTime()}] Sending notification for ${issues.length} issues from ${repo} to Discord`,
   )
 
-  const messageContent =
-    `New issues in ${repo}:\n` +
-    issues
-      .map(
-        (issue) =>
-          `• #${issue.number} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`,
-      )
-      .join("\n")
+  const issueLines = await Promise.all(
+    issues.map(async (issue) => {
+      const bounty = await getIssueBounty(repo, issue)
+      const bountyText = bounty ? ` [bounty: ${bounty}]` : ""
+      return `• #${issue.number} ${issue.title}${bountyText} by ${issue.user.login} - <${issue.html_url}>`
+    }),
+  )
+
+  const messageContent = `New issues in ${repo}:\n${issueLines.join("\n")}`
 
   const messageOptions: MessageCreateOptions = {
     content: messageContent,
