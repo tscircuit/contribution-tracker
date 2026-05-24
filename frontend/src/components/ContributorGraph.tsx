@@ -10,6 +10,7 @@ import {
   ReferenceLine,
   Label,
 } from "recharts"
+import { SCORE_TO_STAR_THRESHOLDS } from "lib/scoring/scoreToStars"
 
 const DROPDOWN_MENU_ITEMS = [
   { key: "prsMerged", label: "Pull Requests Merged" },
@@ -25,14 +26,9 @@ const DROPDOWN_MENU_ITEMS = [
   { key: "bountiedIssuesTotal", label: "Bountied Issues (Total)" },
 ]
 
-const SCORE_LABEL_ENTRIES: [number, string][] = [
-  [3, "⭐"],
-  [10, "⭐⭐"],
-  [30, "⭐⭐⭐"],
-  [50, "👑"],
-  [75, "👑👑"],
-  [100, "👑👑👑"],
-]
+const SCORE_LABEL_ENTRIES = SCORE_TO_STAR_THRESHOLDS.filter(
+  ({ minScore, starString }) => minScore > 0 && starString !== "",
+).map(({ minScore, starString }) => [minScore, starString] as const)
 
 const DOT_CONFIG = { r: 3 }
 const CHART_CONTAINER_STYLE = { width: "100%", height: 400 }
