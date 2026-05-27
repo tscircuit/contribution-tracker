@@ -1,11 +1,11 @@
 {
   "0hmX": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 18,
     "rejectionsReceived": 1,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 1244,
@@ -29,6 +29,13 @@
         "staffRejections": 0
       },
       {
+        "number": 80,
+        "url": "https://github.com/tscircuit/high-density-a01/pull/80",
+        "title": "Add explicit portPointPairIds support for explicit port-to-port pairing",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 79,
         "url": "https://github.com/tscircuit/high-density-a01/pull/79",
         "title": "use the new portPointsInPairs",
@@ -38,8 +45,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 1,
-    "prsOpened": 18,
-    "prsMerged": 11,
+    "prsOpened": 25,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -49,11 +56,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 25,
+    "score": 28,
     "stars": "⭐⭐",
     "major": 5,
     "minor": 0,
-    "tiny": 4
+    "tiny": 7
   },
   "100more": {
     "reviewsReceived": 0,
@@ -421,6 +428,29 @@
     "score": 0,
     "stars": ""
   },
+  "CharlieLZ": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "Charolex": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -744,6 +774,29 @@
     "score": 0,
     "stars": ""
   },
+  "Gaotax2006": {
+    "reviewsReceived": 3,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "Globalpropertyguy": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -800,7 +853,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
+    "prsOpened": 5,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -1270,12 +1323,12 @@
     "tiny": 0
   },
   "MustafaMulla29": {
-    "reviewsReceived": 24,
+    "reviewsReceived": 28,
     "rejectionsReceived": 0,
-    "approvalsReceived": 11,
-    "staffReviewedPrs": 9,
+    "approvalsReceived": 14,
+    "staffReviewedPrs": 10,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 10,
+    "staffApprovalsReceived": 11,
     "staffReviewedPrLinks": [
       {
         "number": 2311,
@@ -1320,6 +1373,13 @@
         "staffRejections": 0
       },
       {
+        "number": 12,
+        "url": "https://github.com/tscircuit/breakout-point-solver/pull/12",
+        "title": "Fix shared breakout point selection for multi-target pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 8,
         "url": "https://github.com/tscircuit/breakout-point-solver/pull/8",
         "title": "obstacle-aware breakout point selection using rectangular keepout collision checks",
@@ -1341,20 +1401,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 6,
     "rejectionsGiven": 2,
-    "prsOpened": 22,
-    "prsMerged": 20,
+    "prsOpened": 33,
+    "prsMerged": 29,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 6,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 42,
-    "stars": "⭐⭐",
-    "major": 5,
+    "score": 53,
+    "stars": "⭐⭐⭐",
+    "major": 7,
     "minor": 6,
-    "tiny": 9
+    "tiny": 16
   },
   "Myrarc": {
     "reviewsReceived": 0,
@@ -1610,12 +1674,12 @@
     "stars": ""
   },
   "Sang-it": {
-    "reviewsReceived": 30,
+    "reviewsReceived": 32,
     "rejectionsReceived": 1,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 394,
@@ -1632,6 +1696,20 @@
         "staffRejections": 0
       },
       {
+        "number": 28,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/28",
+        "title": "add component-label-overlap anayzer",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2,
+        "url": "https://github.com/tscircuit/fake-fabrication-server/pull/2",
+        "title": "design initial api spec",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 1,
         "url": "https://github.com/tscircuit/fake-fabrication-server/pull/1",
         "title": "design initial api spec",
@@ -1641,8 +1719,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
-    "prsMerged": 5,
+    "prsOpened": 13,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1652,9 +1730,9 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 10,
-    "stars": "⭐",
-    "major": 1,
+    "score": 14,
+    "stars": "⭐⭐",
+    "major": 2,
     "minor": 2,
     "tiny": 2
   },
@@ -2027,6 +2105,29 @@
     "score": 0,
     "stars": ""
   },
+  "Zhenvip": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "a1local": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -2212,9 +2313,9 @@
     "stars": ""
   },
   "anil08607": {
-    "reviewsReceived": 4,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -2222,7 +2323,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 7,
-    "prsMerged": 2,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -2231,11 +2332,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 3,
-    "stars": "",
+    "score": 4,
+    "stars": "⭐",
     "major": 0,
     "minor": 1,
-    "tiny": 1
+    "tiny": 2
   },
   "anytimeatvibe": {
     "reviewsReceived": 0,
@@ -2513,6 +2614,29 @@
     "score": 0,
     "stars": ""
   },
+  "cuongdodhct-a11y": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "cuongwf1711": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -2523,7 +2647,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -2720,6 +2844,29 @@
     "score": 0,
     "stars": ""
   },
+  "duongynhi000005-oss": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "emulatronicGIT": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -2847,6 +2994,29 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "gamechangsu": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -3043,6 +3213,29 @@
     "score": 0,
     "stars": ""
   },
+  "hz19880404-tech": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "iFaceTheWind": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -3119,16 +3312,16 @@
         "staffRejections": 0
       },
       {
-        "number": 1218,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1218",
-        "title": "fix: Increasing the effort level was preventing globalDrcForceImprovementSolver to use the preplaced via's",
+        "number": 1210,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1210",
+        "title": "fix: Don't send the routes which have pre placed via's to the later cleanup solver",
         "staffApprovals": 1,
         "staffRejections": 0
       },
       {
-        "number": 1210,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1210",
-        "title": "fix: Don't send the routes which have pre placed via's to the later cleanup solver",
+        "number": 1218,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1218",
+        "title": "fix: Increasing the effort level was preventing globalDrcForceImprovementSolver to use the preplaced via's",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -3140,14 +3333,14 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 11,
+    "approvalsGiven": 13,
     "rejectionsGiven": 4,
     "prsOpened": 19,
     "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
+    "distinctPrsReviewedNonCodeOwner": 10,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -3191,12 +3384,12 @@
     "stars": ""
   },
   "itisrohit": {
-    "reviewsReceived": 16,
+    "reviewsReceived": 23,
     "rejectionsReceived": 4,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 3461,
@@ -3204,12 +3397,26 @@
         "title": "fix: preserve full redirect URL (path, query, and hash) on login and session timeout",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 1492,
+        "url": "https://github.com/tscircuit/svg.tscircuit.com/pull/1492",
+        "title": "fix: use Buffer in bytesToBase64 to prevent call stack size crashes on large payloads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1490,
+        "url": "https://github.com/tscircuit/svg.tscircuit.com/pull/1490",
+        "title": "fix: escape special XML characters in getErrorSvg to prevent rendering crashes",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 2,
+    "prsOpened": 13,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -3219,11 +3426,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 8,
-    "stars": "⭐",
-    "major": 2,
-    "minor": 0,
-    "tiny": 0
+    "score": 15,
+    "stars": "⭐⭐",
+    "major": 3,
+    "minor": 1,
+    "tiny": 1
   },
   "itsdior01": {
     "reviewsReceived": 0,
@@ -3618,7 +3825,7 @@
     "stars": ""
   },
   "khozakhulile27-netizen": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -3637,6 +3844,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
     "score": 0,
     "stars": ""
   },
@@ -3939,6 +4147,29 @@
     "score": 0,
     "stars": ""
   },
+  "manhtoan122": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "mara-241": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -4100,16 +4331,16 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 6,
     "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 12,
+    "score": 13,
     "stars": "⭐⭐",
     "major": 2,
     "minor": 0,
@@ -4368,6 +4599,29 @@
     "score": 0,
     "stars": ""
   },
+  "praysimanjuntak": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "qkzdreamer": {
     "reviewsReceived": 1,
     "rejectionsReceived": 0,
@@ -4484,12 +4738,12 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 35,
+    "reviewsReceived": 38,
     "rejectionsReceived": 0,
-    "approvalsReceived": 13,
-    "staffReviewedPrs": 6,
+    "approvalsReceived": 14,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 7,
+    "staffApprovalsReceived": 8,
     "staffReviewedPrLinks": [
       {
         "number": 2330,
@@ -4532,12 +4786,19 @@
         "title": "Handle react-error-boundary unknown fallback errors in RunFrame error boundaries and update @tscircuit/3d-viewer to version 0.0.560",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 26,
+        "url": "https://github.com/tscircuit/poppygl/pull/26",
+        "title": "test: add node backward-compat regression coverage",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 15,
-    "prsMerged": 13,
+    "prsOpened": 17,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -4552,6 +4813,29 @@
     "major": 3,
     "minor": 5,
     "tiny": 5
+  },
+  "ryantanton1122-lang": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "ryonakae": {
     "reviewsReceived": 0,
@@ -4630,14 +4914,14 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 56,
+    "approvalsGiven": 66,
     "rejectionsGiven": 2,
-    "prsOpened": 45,
-    "prsMerged": 24,
+    "prsOpened": 46,
+    "prsMerged": 25,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 43,
+    "distinctPrsReviewedNonCodeOwner": 52,
     "distinctPrsReviewedAsCodeOwner": 12,
     "score": 59,
     "stars": "⭐⭐⭐",
@@ -4832,6 +5116,29 @@
     "score": 0,
     "stars": ""
   },
+  "sucloudflare": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 7,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "surim0n": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -4925,7 +5232,7 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 23,
+    "reviewsReceived": 27,
     "rejectionsReceived": 0,
     "approvalsReceived": 15,
     "staffReviewedPrs": 10,
@@ -5003,14 +5310,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 22,
+    "prsOpened": 24,
     "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -5024,7 +5331,7 @@
         ]
       }
     ],
-    "score": 32,
+    "score": 33,
     "stars": "⭐⭐",
     "major": 2,
     "minor": 9,
@@ -5122,6 +5429,29 @@
     "score": 0,
     "stars": ""
   },
+  "trigga6006": {
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "tscircuitbot": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -5132,8 +5462,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 197,
-    "prsMerged": 147,
+    "prsOpened": 202,
+    "prsMerged": 151,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -5146,7 +5476,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 147
+    "tiny": 151
   },
   "tungpham-dev": {
     "reviewsReceived": 0,
