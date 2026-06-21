@@ -37,6 +37,10 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 22,
     "stars": "⭐⭐",
@@ -45,13 +49,20 @@
     "tiny": 5
   },
   "Abse2001": {
-    "reviewsReceived": 3,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 4,
+        "url": "https://github.com/tscircuit/system-diagram-proposal/pull/4",
+        "title": "Add visual diff tooling for reference image validation",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 1,
         "url": "https://github.com/tscircuit/system-diagram-proposal/pull/1",
@@ -63,7 +74,7 @@
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 5,
-    "prsMerged": 3,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -153,7 +164,7 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 11,
+    "approvalsGiven": 12,
     "rejectionsGiven": 0,
     "prsOpened": 13,
     "prsMerged": 12,
@@ -325,19 +336,47 @@
     "tiny": 2
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 22,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 19,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "reviewsReceived": 32,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 23,
+    "staffReviewedPrs": 6,
+    "staffRejectionsReceived": 2,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
+      {
+        "number": 229,
+        "url": "https://github.com/tscircuit/schematic-viewer/pull/229",
+        "title": "fix AnalogSimulationViewer aspect ratio",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 614,
+        "url": "https://github.com/tscircuit/circuit-json/pull/614",
+        "title": " Rename simulation probe display fields for scope-style scaling",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 699,
+        "url": "https://github.com/tscircuit/props/pull/699",
+        "title": "add name to analog simulation component props",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2459,
         "url": "https://github.com/tscircuit/core/pull/2459",
         "title": " Wire simulation timing, SPICE options, pulse controls, and probe display options",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 580,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/580",
+        "title": "Add scope-style channel legend for simulation display options",
+        "staffApprovals": 0,
+        "staffRejections": 1
       },
       {
         "number": 20,
@@ -347,14 +386,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
-    "prsOpened": 29,
-    "prsMerged": 28,
+    "prsOpened": 33,
+    "prsMerged": 31,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -368,11 +407,34 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 42.5,
+    "score": 43.5,
     "stars": "⭐⭐",
     "major": 0,
-    "minor": 13,
+    "minor": 16,
     "tiny": 14
+  },
+  "Woody-os": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "XananasX7": {
     "reviewsReceived": 0,
@@ -398,17 +460,32 @@
     "stars": ""
   },
   "anil08607": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 700,
+        "url": "https://github.com/tscircuit/props/pull/700",
+        "title": "Allow pcbRotation on courtyard rect props",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 25,
+        "url": "https://github.com/tscircuit/kicad-mod-cache/pull/25",
+        "title": "Replace legacy kicad-component-converter footprint path with KicadFootprintToCircuitJsonConverter",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 4,
+    "prsOpened": 7,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -417,10 +494,10 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 6,
+    "score": 8,
     "stars": "⭐",
     "major": 0,
-    "minor": 2,
+    "minor": 3,
     "tiny": 2
   },
   "b3417": {
@@ -434,6 +511,29 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 5,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "caaeco": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -527,11 +627,11 @@
     "tiny": 0
   },
   "imrishabh18": {
-    "reviewsReceived": 1,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 2,
+    "rejectionsReceived": 1,
     "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
       {
@@ -540,6 +640,13 @@
         "title": "Add support for `<silkscreengraphics />`",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 756,
+        "url": "https://github.com/tscircuit/docs/pull/756",
+        "title": "Add doc on creating Wifi Antenna",
+        "staffApprovals": 0,
+        "staffRejections": 1
       }
     ],
     "approvalsGiven": 24,
@@ -554,7 +661,7 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 2,
+    "distinctPrsReviewedAsCodeOwner": 3,
     "score": 19,
     "stars": "⭐⭐",
     "major": 1,
@@ -661,10 +768,33 @@
     "minor": 1,
     "tiny": 1
   },
-  "r-bt": {
-    "reviewsReceived": 3,
+  "qlufiq-collab": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "r-bt": {
+    "reviewsReceived": 4,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -685,17 +815,25 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 33,
+    "reviewsReceived": 37,
     "rejectionsReceived": 1,
-    "approvalsReceived": 20,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 21,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
-    "approvalsGiven": 6,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 3730,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/3730",
+        "title": "Render true 3D board image for \"3D\" PNG exports instead of a flat SVG approximation",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
-    "prsOpened": 26,
-    "prsMerged": 16,
+    "prsOpened": 27,
+    "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -705,9 +843,9 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 26,
+    "score": 30,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 2,
     "minor": 3,
     "tiny": 12
   },
@@ -719,15 +857,15 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 24,
-    "rejectionsGiven": 2,
-    "prsOpened": 0,
+    "approvalsGiven": 31,
+    "rejectionsGiven": 4,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 23,
-    "distinctPrsReviewedAsCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 27,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "score": 0,
     "stars": ""
   },
@@ -795,8 +933,8 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 17,
-    "prsMerged": 10,
+    "prsOpened": 18,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -806,11 +944,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 16,
+    "score": 19,
     "stars": "⭐⭐",
     "major": 0,
-    "minor": 3,
-    "tiny": 6
+    "minor": 4,
+    "tiny": 7
   },
   "tscircuitbot": {
     "reviewsReceived": 0,
@@ -822,8 +960,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 339,
-    "prsMerged": 252,
+    "prsOpened": 351,
+    "prsMerged": 260,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -836,7 +974,30 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 252
+    "tiny": 260
+  },
+  "whitewofe": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "xgcing": {
     "reviewsReceived": 0,
