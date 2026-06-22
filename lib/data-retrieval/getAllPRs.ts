@@ -6,6 +6,83 @@ import type {
 } from "../types"
 import { batchProcess } from "../utils/batch-process"
 
+interface PullRequestReview {
+  state: string
+  user: {
+    login: string
+  }
+}
+
+export function summarizePullRequestReviews({
+  reviews,
+  prNumber,
+  isMerged,
+}: {
+  reviews: PullRequestReview[]
+  prNumber: number
+  isMerged: boolean
+}): Pick<
+  PullRequestWithReviews,
+  | "reviewsReceived"
+  | "approvalsReceived"
+  | "rejectionsReceived"
+  | "reviewsByUser"
+  | "allReviewsByUser"
+> {
+  const allReviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
+    (acc, review) => {
+      const reviewer = review.user.login
+      if (!acc[reviewer]) {
+        acc[reviewer] = {
+          approvalsGiven: 0,
+          rejectionsGiven: 0,
+          prNumbers: new Set<number>(),
+        }
+      }
+
+      if (review.state === "APPROVED") {
+        acc[reviewer].approvalsGiven++
+        acc[reviewer].prNumbers?.add(prNumber)
+      } else if (review.state === "CHANGES_REQUESTED") {
+        acc[reviewer].rejectionsGiven++
+        acc[reviewer].prNumbers?.add(prNumber)
+      }
+
+      return acc
+    },
+    {},
+  )
+
+  let processedReviews = reviews
+
+  // For merged PRs, received review counts should reflect the latest review per user.
+  if (isMerged) {
+    const userLatestReviewMap = new Map<string, PullRequestReview>()
+    for (const review of [...reviews].reverse()) {
+      const reviewer = review.user.login
+      if (!userLatestReviewMap.has(reviewer)) {
+        userLatestReviewMap.set(reviewer, review)
+      }
+    }
+    processedReviews = Array.from(userLatestReviewMap.values())
+  }
+
+  const approvalsReceived = processedReviews.filter(
+    (review) => review.state === "APPROVED",
+  ).length
+  const rejectionsReceived = processedReviews.filter(
+    (review) => review.state === "CHANGES_REQUESTED",
+  ).length
+
+  return {
+    reviewsReceived: processedReviews.length,
+    approvalsReceived,
+    rejectionsReceived,
+    reviewsByUser: allReviewsByUser,
+    allReviewsByUser,
+  }
+}
+
 export async function getAllPRs(
   repo: string,
   since: string,
@@ -68,90 +145,15 @@ export async function getAllPRs(
     async (pr) => {
       const reviews = await fetchReviews(pr.number)
       const isMerged = !!pr.merged_at
-
-      const allReviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
-        (acc, review) => {
-          const reviewer = review.user.login
-          if (!acc[reviewer]) {
-            acc[reviewer] = {
-              approvalsGiven: 0,
-              rejectionsGiven: 0,
-              prNumbers: new Set<number>(),
-            }
-          }
-
-          if (review.state === "APPROVED") {
-            acc[reviewer].approvalsGiven++
-            acc[reviewer].prNumbers?.add(pr.number)
-          } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer].rejectionsGiven++
-            acc[reviewer].prNumbers?.add(pr.number)
-          }
-
-          return acc
-        },
-        {},
-      )
-
-      let processedReviews = reviews
-
-      // For merged PRs, get the latest review per user
-      if (isMerged) {
-        const userLatestReviewMap = new Map<string, any>()
-        // Process in reverse to get the latest review first
-        for (const review of [...reviews].reverse()) {
-          const reviewer = review.user.login
-          if (!userLatestReviewMap.has(reviewer)) {
-            userLatestReviewMap.set(reviewer, review)
-          }
-        }
-        processedReviews = Array.from(userLatestReviewMap.values())
-      }
-
-      const approvalsReceived = processedReviews.filter(
-        (review) => review.state === "APPROVED",
-      ).length
-      const rejectionsReceived = processedReviews.filter(
-        (review) => review.state === "CHANGES_REQUESTED",
-      ).length
-
-      const reviewsByUser = processedReviews.reduce<
-        Record<string, ReviewerStats>
-      >((acc, review) => {
-        const reviewer = review.user.login
-        if (!acc[reviewer]) {
-          acc[reviewer] = {
-            approvalsGiven: 0,
-            rejectionsGiven: 0,
-            prNumbers: new Set<number>(),
-          }
-        }
-
-        if (isMerged) {
-          // For merged PRs, only add to prNumbers if approved
-          if (review.state === "APPROVED") {
-            acc[reviewer].approvalsGiven++
-            acc[reviewer].prNumbers?.add(pr.number)
-          } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer].rejectionsGiven++
-          }
-        } else {
-          if (review.state === "APPROVED") {
-            acc[reviewer].approvalsGiven++
-          } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer].rejectionsGiven++
-          }
-        }
-        return acc
-      }, {})
+      const reviewSummary = summarizePullRequestReviews({
+        reviews,
+        prNumber: pr.number,
+        isMerged,
+      })
 
       return {
         ...pr,
-        reviewsReceived: processedReviews.length,
-        approvalsReceived,
-        rejectionsReceived,
-        reviewsByUser,
-        allReviewsByUser,
+        ...reviewSummary,
         isClosed: pr.state === "closed",
         state:
           pr.state === "closed" && !pr.merged_at
