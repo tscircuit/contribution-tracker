@@ -28,6 +28,18 @@ export interface DiscussionContribution {
   count: number
 }
 
+export interface ReviewLatencyEntry {
+  repo: string
+  number: number
+  title: string
+  url: string
+  author: string
+  createdAt: string
+  firstReviewAt: string
+  firstReviewer: string
+  timeToFirstReviewMs: number
+}
+
 export interface ContributorStats {
   reviewsReceived: number
   rejectionsReceived: number
@@ -91,6 +103,9 @@ export interface PullRequestWithReviews extends PullRequest {
   rejectionsReceived: number
   approvalsReceived: number
   isClosed: boolean
+  firstReviewAt?: string
+  firstReviewer?: string
+  timeToFirstReviewMs?: number
   reviewsByUser?: Record<string, ReviewerStats>
   allReviewsByUser?: Record<string, ReviewerStats>
 }
