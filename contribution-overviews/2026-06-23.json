@@ -1,6 +1,6 @@
 {
   "0hmX": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 9,
     "rejectionsReceived": 0,
     "approvalsReceived": 4,
     "staffReviewedPrs": 4,
@@ -38,7 +38,7 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
+    "prsOpened": 13,
     "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -153,8 +153,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 3,
+    "prsOpened": 8,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -168,11 +168,34 @@
         ]
       }
     ],
-    "score": 14,
+    "score": 23,
     "stars": "⭐⭐",
-    "major": 3,
-    "minor": 0,
-    "tiny": 0
+    "major": 4,
+    "minor": 1,
+    "tiny": 3
+  },
+  "Ghostofcaldera": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 6,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "HarshalPatel1972": {
     "reviewsReceived": 1,
@@ -279,7 +302,7 @@
       }
     ],
     "approvalsGiven": 9,
-    "rejectionsGiven": 0,
+    "rejectionsGiven": 1,
     "prsOpened": 16,
     "prsMerged": 14,
     "issuesCreated": 0,
@@ -300,7 +323,7 @@
   "Sang-it": {
     "reviewsReceived": 6,
     "rejectionsReceived": 1,
-    "approvalsReceived": 3,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
@@ -323,7 +346,7 @@
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 11,
-    "prsMerged": 8,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -333,11 +356,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 10.5,
-    "stars": "⭐",
+    "score": 11.5,
+    "stars": "⭐⭐",
     "major": 0,
     "minor": 2,
-    "tiny": 6
+    "tiny": 7
   },
   "ShiboSoftwareDev": {
     "reviewsReceived": 16,
@@ -415,6 +438,40 @@
     "score": 0,
     "stars": ""
   },
+  "anil08607": {
+    "reviewsReceived": 2,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 339,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/339",
+        "title": "Add .kicad_mod footprint export support and snapshot coverage",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 1,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 2,
+    "stars": "",
+    "major": 0,
+    "minor": 1,
+    "tiny": 0
+  },
   "bingmokaka": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -484,7 +541,7 @@
     "score": 0,
     "stars": ""
   },
-  "imrishabh18": {
+  "guiwenlingmu962-bot": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
@@ -492,41 +549,10 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 17,
-    "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 17,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 16,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 32,
-    "stars": "⭐⭐",
-    "major": 4,
-    "minor": 2,
-    "tiny": 11
-  },
-  "mohan-bee": {
-    "reviewsReceived": 9,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
-    "staffReviewedPrLinks": [
-      {
-        "number": 3793,
-        "url": "https://github.com/tscircuit/runframe/pull/3793",
-        "title": "fix static runframe file hash selection",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      }
-    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 7,
+    "prsOpened": 1,
+    "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -535,10 +561,108 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 9,
-    "stars": "⭐",
-    "major": 0,
-    "minor": 2,
+    "score": 0,
+    "stars": ""
+  },
+  "imrishabh18": {
+    "reviewsReceived": 4,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 623,
+        "url": "https://github.com/tscircuit/circuit-json/pull/623",
+        "title": "Add optional sheet_outline_color property to SchematicSheet",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2514,
+        "url": "https://github.com/tscircuit/core/pull/2514",
+        "title": "Add <schematicsheet /> component",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 582,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/582",
+        "title": "Add support for schematic_sheet, the subcircuit_id linked to the schematic_sheet is rendered in the center of the sheet",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 18,
+    "rejectionsGiven": 0,
+    "prsOpened": 31,
+    "prsMerged": 28,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 17,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/circuit-to-svg",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 61,
+    "stars": "⭐⭐⭐",
+    "major": 8,
+    "minor": 8,
+    "tiny": 12
+  },
+  "mohan-bee": {
+    "reviewsReceived": 11,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 3,
+    "staffReviewedPrLinks": [
+      {
+        "number": 3722,
+        "url": "https://github.com/tscircuit/runframe/pull/3722",
+        "title": "Add footprint preview in import dialog",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3793,
+        "url": "https://github.com/tscircuit/runframe/pull/3793",
+        "title": "fix static runframe file hash selection",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 15,
+        "url": "https://github.com/tscircuit/internal-dynamic-import/pull/15",
+        "title": "Add kicad-to-circuit-json to internal dynamic imports",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 9,
+    "prsMerged": 9,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 15,
+    "stars": "⭐⭐",
+    "major": 1,
+    "minor": 3,
     "tiny": 5
   },
   "needsbuilder": {
@@ -635,8 +759,8 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 21,
-    "prsMerged": 10,
+    "prsOpened": 30,
+    "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -646,33 +770,33 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 17,
+    "score": 33,
     "stars": "⭐⭐",
-    "major": 0,
+    "major": 3,
     "minor": 3,
-    "tiny": 7
+    "tiny": 11
   },
   "seveibar": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 26,
-    "rejectionsGiven": 4,
-    "prsOpened": 7,
-    "prsMerged": 4,
+    "approvalsGiven": 32,
+    "rejectionsGiven": 6,
+    "prsOpened": 15,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 21,
+    "distinctPrsReviewedNonCodeOwner": 25,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 1,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
         "repo": "tscircuit/copper-pour-solver",
@@ -681,10 +805,10 @@
         ]
       }
     ],
-    "score": 12,
+    "score": 30,
     "stars": "⭐⭐",
-    "major": 2,
-    "minor": 1,
+    "major": 5,
+    "minor": 4,
     "tiny": 1
   },
   "shehanrao12-cpu": {
@@ -734,12 +858,12 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 9,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 3,
-    "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 2,
+    "reviewsReceived": 11,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 943,
@@ -761,12 +885,19 @@
         "title": "Support simple_test_point inference for TP symbols and footprints",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 46,
+        "url": "https://github.com/tscircuit/ti/pull/46",
+        "title": "Add short name TI chip exports and document chip-to-MPN mappings",
+        "staffApprovals": 1,
+        "staffRejections": 1
       }
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 9,
+    "prsOpened": 14,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -776,14 +907,14 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 19,
+    "score": 23,
     "stars": "⭐⭐",
-    "major": 2,
+    "major": 3,
     "minor": 3,
     "tiny": 4
   },
   "technologyet31-create": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 1,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -815,8 +946,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 238,
-    "prsMerged": 178,
+    "prsOpened": 260,
+    "prsMerged": 196,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -825,11 +956,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 13,
+    "score": 14,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 178
+    "tiny": 196
   },
   "vahapogut": {
     "reviewsReceived": 0,
