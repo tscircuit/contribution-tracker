@@ -38,8 +38,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 4,
+    "prsOpened": 17,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -49,18 +49,18 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 14,
+    "score": 27,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 6,
     "minor": 0,
-    "tiny": 1
+    "tiny": 2
   },
   "Abse2001": {
-    "reviewsReceived": 14,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 0,
+    "reviewsReceived": 13,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
@@ -76,24 +76,27 @@
         "title": "Support polygon pads and improve KiCad parity comparison",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 3485,
+        "url": "https://github.com/tscircuit/cli/pull/3485",
+        "title": "Add Gerber-based PCB short circuit detection",
+        "staffApprovals": 0,
+        "staffRejections": 1
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
-    "prsMerged": 5,
+    "prsOpened": 12,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 11,
+    "score": 16,
     "stars": "⭐⭐",
-    "major": 0,
+    "major": 1,
     "minor": 2,
     "tiny": 3
   },
@@ -244,13 +247,20 @@
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 13,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 10,
-    "staffReviewedPrs": 7,
-    "staffRejectionsReceived": 2,
+    "reviewsReceived": 19,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 9,
+    "staffRejectionsReceived": 5,
     "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
+      {
+        "number": 630,
+        "url": "https://github.com/tscircuit/circuit-json/pull/630",
+        "title": "New warning type for schematic_sheet",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 618,
         "url": "https://github.com/tscircuit/circuit-json/pull/618",
@@ -266,6 +276,20 @@
         "staffRejections": 0
       },
       {
+        "number": 2520,
+        "url": "https://github.com/tscircuit/core/pull/2520",
+        "title": "Emit a warning when schematic sheet is not found",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 2522,
+        "url": "https://github.com/tscircuit/core/pull/2522",
+        "title": "feat: lay out and render schematic sheets independently",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
         "number": 2504,
         "url": "https://github.com/tscircuit/core/pull/2504",
         "title": "Add trace name/displayName support for schematic net labels",
@@ -276,13 +300,6 @@
         "number": 3469,
         "url": "https://github.com/tscircuit/cli/pull/3469",
         "title": "Fix: tsci dev uses the project-local tscircuit version when available",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 766,
-        "url": "https://github.com/tscircuit/docs/pull/766",
-        "title": "Document trace.md props",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -303,8 +320,8 @@
     ],
     "approvalsGiven": 9,
     "rejectionsGiven": 1,
-    "prsOpened": 16,
-    "prsMerged": 14,
+    "prsOpened": 24,
+    "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -314,11 +331,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 24.5,
+    "score": 33.5,
     "stars": "⭐⭐",
     "major": 1,
-    "minor": 7,
-    "tiny": 6
+    "minor": 10,
+    "tiny": 9
   },
   "Sang-it": {
     "reviewsReceived": 6,
@@ -363,13 +380,20 @@
     "tiny": 7
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 16,
+    "reviewsReceived": 22,
     "rejectionsReceived": 0,
-    "approvalsReceived": 16,
-    "staffReviewedPrs": 3,
-    "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "approvalsReceived": 21,
+    "staffReviewedPrs": 5,
+    "staffRejectionsReceived": 2,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
+      {
+        "number": 712,
+        "url": "https://github.com/tscircuit/props/pull/712",
+        "title": " Remove probe axis props and add multipleGraphYAxes simulation option",
+        "staffApprovals": 2,
+        "staffRejections": 1
+      },
       {
         "number": 702,
         "url": "https://github.com/tscircuit/props/pull/702",
@@ -385,6 +409,13 @@
         "staffRejections": 0
       },
       {
+        "number": 770,
+        "url": "https://github.com/tscircuit/docs/pull/770",
+        "title": "Document ammeter and multi-axis simulation graph controls",
+        "staffApprovals": 2,
+        "staffRejections": 0
+      },
+      {
         "number": 53,
         "url": "https://github.com/tscircuit/copper-pour-solver/pull/53",
         "title": "Resolve copper pour connectivity by source net & usage documentation & cosmos deploy",
@@ -392,14 +423,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
-    "prsOpened": 16,
-    "prsMerged": 16,
+    "prsOpened": 21,
+    "prsMerged": 19,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 5,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -409,11 +440,11 @@
         ]
       }
     ],
-    "score": 32,
+    "score": 39,
     "stars": "⭐⭐",
     "major": 2,
-    "minor": 7,
-    "tiny": 6
+    "minor": 9,
+    "tiny": 7
   },
   "addibble": {
     "reviewsReceived": 2,
@@ -426,6 +457,29 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "alan-provable": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -473,29 +527,6 @@
     "tiny": 0
   },
   "bingmokaka": {
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
-    "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 0,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
-  },
-  "daxia778": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
@@ -594,15 +625,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 18,
+    "approvalsGiven": 22,
     "rejectionsGiven": 0,
-    "prsOpened": 31,
-    "prsMerged": 28,
+    "prsOpened": 37,
+    "prsMerged": 35,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 17,
-    "distinctPrsReviewedAsCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 19,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
         "repo": "tscircuit/circuit-to-svg",
@@ -611,14 +642,14 @@
         ]
       }
     ],
-    "score": 61,
+    "score": 73,
     "stars": "⭐⭐⭐",
-    "major": 8,
-    "minor": 8,
-    "tiny": 12
+    "major": 10,
+    "minor": 10,
+    "tiny": 15
   },
   "mohan-bee": {
-    "reviewsReceived": 11,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
     "approvalsReceived": 10,
     "staffReviewedPrs": 3,
@@ -649,8 +680,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
-    "prsMerged": 9,
+    "prsOpened": 10,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -659,11 +690,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 15,
+    "score": 16,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 3,
-    "tiny": 5
+    "tiny": 6
   },
   "needsbuilder": {
     "reviewsReceived": 0,
@@ -735,13 +766,20 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 26,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 11,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "reviewsReceived": 30,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 12,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 3764,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/3764",
+        "title": "Fix editor auth dead-end and unify login redirect handling",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 1686,
         "url": "https://github.com/tscircuit/svg.tscircuit.com/pull/1686",
@@ -755,48 +793,51 @@
         "title": "Update schematic symbols",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 23,
+        "url": "https://github.com/tscircuit/ngspice-spice-engine/pull/23",
+        "title": "fix: avoid Node ESM blob URL failure while preserving browser loader behavior",
+        "staffApprovals": 0,
+        "staffRejections": 1
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 30,
-    "prsMerged": 17,
+    "prsOpened": 35,
+    "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 33,
+    "score": 44,
     "stars": "⭐⭐",
-    "major": 3,
-    "minor": 3,
+    "major": 5,
+    "minor": 4,
     "tiny": 11
   },
   "seveibar": {
-    "reviewsReceived": 7,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 32,
-    "rejectionsGiven": 6,
-    "prsOpened": 15,
-    "prsMerged": 10,
+    "approvalsGiven": 37,
+    "rejectionsGiven": 9,
+    "prsOpened": 26,
+    "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 25,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 30,
+    "distinctPrsReviewedAsCodeOwner": 3,
     "reposOwned": [
       {
         "repo": "tscircuit/copper-pour-solver",
@@ -805,11 +846,11 @@
         ]
       }
     ],
-    "score": 30,
-    "stars": "⭐⭐",
-    "major": 5,
-    "minor": 4,
-    "tiny": 1
+    "score": 50,
+    "stars": "⭐⭐⭐",
+    "major": 7,
+    "minor": 8,
+    "tiny": 5
   },
   "shehanrao12-cpu": {
     "reviewsReceived": 0,
@@ -858,8 +899,8 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 11,
-    "rejectionsReceived": 2,
+    "reviewsReceived": 10,
+    "rejectionsReceived": 1,
     "approvalsReceived": 9,
     "staffReviewedPrs": 4,
     "staffRejectionsReceived": 2,
@@ -896,8 +937,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 10,
+    "prsOpened": 15,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -907,14 +948,97 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 23,
+    "score": 28,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 4,
     "minor": 3,
-    "tiny": 4
+    "tiny": 5
   },
   "technologyet31-create": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 4,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 163,
+        "url": "https://github.com/tscircuit/checks/pull/163",
+        "title": "fix: handle non-rotated pill pads in trace clearance/overlap checks",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
+    "prsMerged": 3,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 5,
+    "stars": "⭐",
+    "major": 0,
+    "minor": 2,
+    "tiny": 1
+  },
+  "tscircuitbot": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 293,
+    "prsMerged": 222,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 14,
+    "stars": "⭐⭐",
+    "major": 0,
+    "minor": 0,
+    "tiny": 222
+  },
+  "vahapogut": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 10,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "victordb9997": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -936,7 +1060,7 @@
     "score": 0,
     "stars": ""
   },
-  "tscircuitbot": {
+  "yanyishuai": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
@@ -946,33 +1070,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 260,
-    "prsMerged": 196,
-    "issuesCreated": 0,
-    "bountiedIssuesCount": 0,
-    "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 14,
-    "stars": "⭐⭐",
-    "major": 0,
-    "minor": 0,
-    "tiny": 196
-  },
-  "vahapogut": {
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
-    "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 10,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
