@@ -56,9 +56,9 @@
     "tiny": 2
   },
   "Abse2001": {
-    "reviewsReceived": 13,
+    "reviewsReceived": 14,
     "rejectionsReceived": 1,
-    "approvalsReceived": 6,
+    "approvalsReceived": 7,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 2,
@@ -87,18 +87,18 @@
     ],
     "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 6,
+    "prsOpened": 16,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 16,
+    "score": 24,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 2,
     "minor": 2,
-    "tiny": 3
+    "tiny": 7
   },
   "AdityaSinghBiztech": {
     "reviewsReceived": 0,
@@ -247,13 +247,20 @@
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 19,
-    "rejectionsReceived": 3,
-    "approvalsReceived": 13,
-    "staffReviewedPrs": 9,
-    "staffRejectionsReceived": 5,
-    "staffApprovalsReceived": 6,
+    "reviewsReceived": 27,
+    "rejectionsReceived": 4,
+    "approvalsReceived": 20,
+    "staffReviewedPrs": 13,
+    "staffRejectionsReceived": 8,
+    "staffApprovalsReceived": 10,
     "staffReviewedPrLinks": [
+      {
+        "number": 235,
+        "url": "https://github.com/tscircuit/schematic-viewer/pull/235",
+        "title": "feat: add schematic sheet selector to switch between sheets",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 630,
         "url": "https://github.com/tscircuit/circuit-json/pull/630",
@@ -276,9 +283,9 @@
         "staffRejections": 0
       },
       {
-        "number": 2520,
-        "url": "https://github.com/tscircuit/core/pull/2520",
-        "title": "Emit a warning when schematic sheet is not found",
+        "number": 2527,
+        "url": "https://github.com/tscircuit/core/pull/2527",
+        "title": "Lay out schematic sheets independently",
         "staffApprovals": 1,
         "staffRejections": 1
       },
@@ -287,6 +294,20 @@
         "url": "https://github.com/tscircuit/core/pull/2522",
         "title": "feat: lay out and render schematic sheets independently",
         "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 2526,
+        "url": "https://github.com/tscircuit/core/pull/2526",
+        "title": "Emit unnamed trace warning",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2520,
+        "url": "https://github.com/tscircuit/core/pull/2520",
+        "title": "Emit a warning when schematic sheet is not found",
+        "staffApprovals": 1,
         "staffRejections": 1
       },
       {
@@ -316,39 +337,53 @@
         "title": "Force name on trace",
         "staffApprovals": 0,
         "staffRejections": 1
+      },
+      {
+        "number": 26,
+        "url": "https://github.com/tscircuit/system-block-designer/pull/26",
+        "title": "Support browser PDF generation and add browser tests",
+        "staffApprovals": 1,
+        "staffRejections": 2
       }
     ],
-    "approvalsGiven": 9,
+    "approvalsGiven": 10,
     "rejectionsGiven": 1,
-    "prsOpened": 24,
-    "prsMerged": 20,
+    "prsOpened": 30,
+    "prsMerged": 27,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 9,
+    "distinctPrsReviewedNonCodeOwner": 10,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 33.5,
+    "score": 43.5,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 10,
-    "tiny": 9
+    "major": 2,
+    "minor": 12,
+    "tiny": 11
   },
   "Sang-it": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 18,
     "rejectionsReceived": 1,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 2511,
         "url": "https://github.com/tscircuit/core/pull/2511",
         "title": "fix matchpack pin offsets for text-aware schematic components - repro133",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 435,
+        "url": "https://github.com/tscircuit/schematic-symbols/pull/435",
+        "title": "scale down resistor, capacitor to kicad proportions",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -362,8 +397,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
-    "prsMerged": 9,
+    "prsOpened": 13,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -380,13 +415,20 @@
     "tiny": 7
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 22,
+    "reviewsReceived": 24,
     "rejectionsReceived": 0,
-    "approvalsReceived": 21,
-    "staffReviewedPrs": 5,
+    "approvalsReceived": 23,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 7,
+    "staffApprovalsReceived": 8,
     "staffReviewedPrLinks": [
+      {
+        "number": 713,
+        "url": "https://github.com/tscircuit/props/pull/713",
+        "title": " Restore graph scaling props for probes and ammeters",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 712,
         "url": "https://github.com/tscircuit/props/pull/712",
@@ -402,17 +444,17 @@
         "staffRejections": 1
       },
       {
+        "number": 2523,
+        "url": "https://github.com/tscircuit/core/pull/2523",
+        "title": "Auto-scale simulation graphs with independent axes",
+        "staffApprovals": 2,
+        "staffRejections": 0
+      },
+      {
         "number": 2503,
         "url": "https://github.com/tscircuit/core/pull/2503",
         "title": "update copper-pour-solver & usage",
         "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 770,
-        "url": "https://github.com/tscircuit/docs/pull/770",
-        "title": "Document ammeter and multi-axis simulation graph controls",
-        "staffApprovals": 2,
         "staffRejections": 0
       },
       {
@@ -423,14 +465,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 7,
+    "approvalsGiven": 8,
     "rejectionsGiven": 0,
-    "prsOpened": 21,
-    "prsMerged": 19,
+    "prsOpened": 23,
+    "prsMerged": 23,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 7,
+    "distinctPrsReviewedNonCodeOwner": 8,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -440,11 +482,11 @@
         ]
       }
     ],
-    "score": 39,
+    "score": 49,
     "stars": "⭐⭐",
-    "major": 2,
-    "minor": 9,
-    "tiny": 7
+    "major": 3,
+    "minor": 11,
+    "tiny": 8
   },
   "addibble": {
     "reviewsReceived": 2,
@@ -549,6 +591,29 @@
     "score": 0,
     "stars": ""
   },
+  "chenlinxi890-spec": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "ghorhh473-coder": {
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
@@ -596,7 +661,7 @@
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 4,
+    "reviewsReceived": 7,
     "rejectionsReceived": 1,
     "approvalsReceived": 1,
     "staffReviewedPrs": 3,
@@ -625,14 +690,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 22,
-    "rejectionsGiven": 0,
-    "prsOpened": 37,
-    "prsMerged": 35,
+    "approvalsGiven": 26,
+    "rejectionsGiven": 1,
+    "prsOpened": 42,
+    "prsMerged": 39,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 19,
+    "distinctPrsReviewedNonCodeOwner": 23,
     "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
@@ -642,11 +707,34 @@
         ]
       }
     ],
-    "score": 73,
+    "score": 81,
     "stars": "⭐⭐⭐",
-    "major": 10,
-    "minor": 10,
+    "major": 11,
+    "minor": 12,
     "tiny": 15
+  },
+  "mitre88": {
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "mohan-bee": {
     "reviewsReceived": 12,
@@ -766,17 +854,31 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 30,
+    "reviewsReceived": 31,
     "rejectionsReceived": 1,
-    "approvalsReceived": 12,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 16,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
         "number": 3764,
         "url": "https://github.com/tscircuit/tscircuit.com/pull/3764",
         "title": "Fix editor auth dead-end and unify login redirect handling",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 60,
+        "url": "https://github.com/tscircuit/circuit-json-to-tscircuit/pull/60",
+        "title": "Add pcb_board template support for board-level Circuit JSON conversion",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1704,
+        "url": "https://github.com/tscircuit/svg.tscircuit.com/pull/1704",
+        "title": "refactor(3d): switch PNG rendering to circuit-json-to-3d-png",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -804,8 +906,8 @@
     ],
     "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 35,
-    "prsMerged": 20,
+    "prsOpened": 38,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -815,11 +917,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 44,
-    "stars": "⭐⭐",
-    "major": 5,
-    "minor": 4,
-    "tiny": 11
+    "score": 51,
+    "stars": "⭐⭐⭐",
+    "major": 6,
+    "minor": 5,
+    "tiny": 13
   },
   "seveibar": {
     "reviewsReceived": 12,
@@ -829,15 +931,15 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 37,
+    "approvalsGiven": 52,
     "rejectionsGiven": 9,
     "prsOpened": 26,
     "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 30,
-    "distinctPrsReviewedAsCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 42,
+    "distinctPrsReviewedAsCodeOwner": 6,
     "reposOwned": [
       {
         "repo": "tscircuit/copper-pour-solver",
@@ -899,12 +1001,12 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 10,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 9,
+    "reviewsReceived": 12,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 11,
     "staffReviewedPrs": 4,
-    "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 3,
+    "staffRejectionsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 943,
@@ -916,9 +1018,9 @@
       {
         "number": 764,
         "url": "https://github.com/tscircuit/docs/pull/764",
-        "title": "docs: update tscircuit TI library guide for current Subcircuit exports",
-        "staffApprovals": 0,
-        "staffRejections": 1
+        "title": "docs: update tscircuit TI library guide for chip exports",
+        "staffApprovals": 1,
+        "staffRejections": 2
       },
       {
         "number": 152,
@@ -937,8 +1039,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 15,
-    "prsMerged": 12,
+    "prsOpened": 18,
+    "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -948,32 +1050,46 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 28,
+    "score": 39,
     "stars": "⭐⭐",
-    "major": 4,
-    "minor": 3,
-    "tiny": 5
+    "major": 6,
+    "minor": 4,
+    "tiny": 6
   },
   "technologyet31-create": {
-    "reviewsReceived": 4,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "reviewsReceived": 11,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 671,
+        "url": "https://github.com/tscircuit/footprinter/pull/671",
+        "title": "fix: match the KiCad SOT-89-3 land pattern (large collector tab)",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 163,
         "url": "https://github.com/tscircuit/checks/pull/163",
         "title": "fix: handle non-rotated pill pads in trace clearance/overlap checks",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 158,
+        "url": "https://github.com/tscircuit/kicad-to-circuit-json/pull/158",
+        "title": "fix: include the anchor shape of KiCad custom pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 3,
+    "prsOpened": 9,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -982,11 +1098,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 5,
+    "score": 7,
     "stars": "⭐",
     "major": 0,
     "minor": 2,
-    "tiny": 1
+    "tiny": 3
   },
   "tscircuitbot": {
     "reviewsReceived": 0,
@@ -998,8 +1114,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 293,
-    "prsMerged": 222,
+    "prsOpened": 353,
+    "prsMerged": 275,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1012,7 +1128,30 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 222
+    "tiny": 275
+  },
+  "vagdotdev": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 14,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "vahapogut": {
     "reviewsReceived": 0,
@@ -1047,7 +1186,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
