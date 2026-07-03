@@ -1,16 +1,30 @@
 {
   "0hmX": {
-    "reviewsReceived": 10,
-    "rejectionsReceived": 2,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 2,
+    "reviewsReceived": 16,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 2568,
+        "url": "https://github.com/tscircuit/core/pull/2568",
+        "title": "Update capacity-autorouter version to 0.0.625",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2540,
         "url": "https://github.com/tscircuit/core/pull/2540",
         "title": "update autorouter to use the new Pipeline 7",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1492,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1492",
+        "title": "add connectTo to all",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -24,8 +38,8 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 1,
-    "prsOpened": 13,
-    "prsMerged": 2,
+    "prsOpened": 20,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -35,11 +49,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 5,
-    "stars": "⭐",
-    "major": 1,
+    "score": 20,
+    "stars": "⭐⭐",
+    "major": 4,
     "minor": 0,
-    "tiny": 1
+    "tiny": 4
   },
   "Abse2001": {
     "reviewsReceived": 1,
@@ -57,10 +71,6 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 3,
     "stars": "",
@@ -141,12 +151,12 @@
     "tiny": 1
   },
   "MustafaMulla29": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 16,
     "rejectionsReceived": 1,
-    "approvalsReceived": 9,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 3,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
         "number": 2555,
@@ -163,6 +173,20 @@
         "staffRejections": 1
       },
       {
+        "number": 357,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/357",
+        "title": "Add hierarchical schematic sheet (.kicad_sch) export support",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 31,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/31",
+        "title": "Add schematic sheet support to schematic placement analysis",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 26,
         "url": "https://github.com/tscircuit/system-block-designer/pull/26",
         "title": "Support browser PDF generation and add browser tests",
@@ -170,24 +194,24 @@
         "staffRejections": 2
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 16,
+    "prsOpened": 21,
+    "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 29,
+    "score": 39,
     "stars": "⭐⭐",
-    "major": 2,
-    "minor": 6,
-    "tiny": 8
+    "major": 3,
+    "minor": 8,
+    "tiny": 10
   },
   "Sang-it": {
     "reviewsReceived": 11,
@@ -198,24 +222,24 @@
     "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
-        "number": 570,
-        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/570",
-        "title": "add spec for adding textBoxes to the InputProblem",
+        "number": 569,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/569",
+        "title": "fix gnd label failing to route downward due to trace crossings  - example43",
         "staffApprovals": 1,
         "staffRejections": 0
       },
       {
-        "number": 569,
-        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/569",
-        "title": "fix gnd label failing to route downward due to trace crossings  - example43",
+        "number": 570,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/570",
+        "title": "add spec for adding textBoxes to the InputProblem",
         "staffApprovals": 1,
         "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 8,
+    "prsOpened": 16,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -225,34 +249,34 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 14,
+    "score": 15,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 3,
-    "tiny": 4
+    "tiny": 5
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 2,
+    "approvalsGiven": 3,
     "rejectionsGiven": 0,
     "prsOpened": 5,
     "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 8,
+    "score": 9,
     "stars": "⭐",
     "major": 1,
     "minor": 1,
@@ -282,7 +306,30 @@
     "stars": ""
   },
   "anil08607": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "b3417": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -337,7 +384,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -360,7 +407,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -383,7 +430,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
+    "prsOpened": 7,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -419,24 +466,20 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 16,
-    "rejectionsGiven": 2,
-    "prsOpened": 14,
-    "prsMerged": 13,
+    "approvalsGiven": 24,
+    "rejectionsGiven": 1,
+    "prsOpened": 18,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 13,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 19,
     "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 32,
+    "score": 41,
     "stars": "⭐⭐",
-    "major": 5,
-    "minor": 4,
-    "tiny": 3
+    "major": 6,
+    "minor": 5,
+    "tiny": 6
   },
   "lucientheski": {
     "reviewsReceived": 0,
@@ -462,9 +505,9 @@
     "stars": ""
   },
   "mohan-bee": {
-    "reviewsReceived": 18,
+    "reviewsReceived": 19,
     "rejectionsReceived": 2,
-    "approvalsReceived": 5,
+    "approvalsReceived": 6,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 2,
@@ -493,8 +536,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 3,
+    "prsOpened": 7,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -504,11 +547,34 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 8,
+    "score": 10,
     "stars": "⭐",
     "major": 1,
-    "minor": 1,
+    "minor": 2,
     "tiny": 1
+  },
+  "r-audio": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "rovidev95": {
     "reviewsReceived": 0,
@@ -534,12 +600,12 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 9,
+    "reviewsReceived": 27,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 60,
@@ -547,12 +613,19 @@
         "title": "Add pcb_board template support for board-level Circuit JSON conversion",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 17,
+        "url": "https://github.com/tscircuit/internal-dynamic-import/pull/17",
+        "title": "chore(deps): update circuit-json-to-tscircuit to ^0.0.40",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 5,
+    "prsOpened": 20,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -562,11 +635,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 11,
+    "score": 22,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 2,
-    "tiny": 2
+    "major": 2,
+    "minor": 3,
+    "tiny": 7
   },
   "saitejabandaru-in": {
     "reviewsReceived": 0,
@@ -592,27 +665,64 @@
     "stars": ""
   },
   "seveibar": {
-    "reviewsReceived": 4,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 17,
+    "approvalsGiven": 24,
     "rejectionsGiven": 4,
-    "prsOpened": 7,
-    "prsMerged": 6,
+    "prsOpened": 12,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 14,
+    "distinctPrsReviewedNonCodeOwner": 19,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 23,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/footprinter",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/circuit-json-to-gerber",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 27,
     "stars": "⭐⭐",
     "major": 5,
-    "minor": 1,
+    "minor": 3,
     "tiny": 0
+  },
+  "silasbrookshaha": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "sureshchouksey8": {
     "reviewsReceived": 0,
@@ -638,7 +748,7 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
     "approvalsReceived": 6,
     "staffReviewedPrs": 1,
@@ -655,27 +765,46 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
-    "prsMerged": 8,
+    "prsOpened": 12,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/footprinter",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 18,
+    "score": 19,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 1,
-    "tiny": 4
+    "tiny": 5
   },
   "technologyet31-create": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 11,
     "rejectionsReceived": 1,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 43,
+        "url": "https://github.com/tscircuit/circuit-json-to-spice/pull/43",
+        "title": "Emit DC voltage sources that use terminal1/terminal2",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 103,
         "url": "https://github.com/tscircuit/calculate-packing/pull/103",
@@ -693,8 +822,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 2,
+    "prsOpened": 16,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -703,11 +832,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 4,
+    "score": 7,
     "stars": "⭐",
     "major": 0,
-    "minor": 2,
-    "tiny": 0
+    "minor": 3,
+    "tiny": 1
   },
   "tscircuitbot": {
     "reviewsReceived": 0,
@@ -719,8 +848,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 148,
-    "prsMerged": 133,
+    "prsOpened": 210,
+    "prsMerged": 188,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -729,11 +858,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 15,
+    "score": 16,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 133
+    "tiny": 188
   },
   "yanyishuai": {
     "reviewsReceived": 0,
