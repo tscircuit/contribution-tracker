@@ -1,16 +1,23 @@
 {
   "0hmX": {
-    "reviewsReceived": 17,
+    "reviewsReceived": 19,
     "rejectionsReceived": 1,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 2540,
         "url": "https://github.com/tscircuit/core/pull/2540",
         "title": "update autorouter to use the new Pipeline 7",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1499,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1499",
+        "title": "getNearestIndexForDistance returns route index, but pathSegments index is needed",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -36,10 +43,10 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 3,
     "rejectionsGiven": 1,
-    "prsOpened": 24,
-    "prsMerged": 13,
+    "prsOpened": 32,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -49,20 +56,41 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 23,
+    "score": 32,
     "stars": "⭐⭐",
-    "major": 4,
+    "major": 6,
     "minor": 0,
-    "tiny": 7
+    "tiny": 8
   },
   "Abse2001": {
-    "reviewsReceived": 2,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 717,
+        "url": "https://github.com/tscircuit/props/pull/717",
+        "title": "Add pinLabels support to switch props",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 402,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/402",
+        "title": "Generate pushbutton components from switch categories",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2580,
+        "url": "https://github.com/tscircuit/core/pull/2580",
+        "title": "Add pinLabels support to switch components",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 5,
         "url": "https://github.com/tscircuit/check-shorts/pull/5",
@@ -73,23 +101,23 @@
     ],
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 1,
+    "prsOpened": 7,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 4,
-    "stars": "⭐",
-    "major": 0,
-    "minor": 0,
+    "score": 12,
+    "stars": "⭐⭐",
+    "major": 1,
+    "minor": 2,
     "tiny": 1
   },
   "AnasSarkiz": {
-    "reviewsReceived": 3,
+    "reviewsReceived": 7,
     "rejectionsReceived": 1,
-    "approvalsReceived": 1,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
@@ -111,7 +139,7 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
+    "prsOpened": 13,
     "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -202,14 +230,14 @@
         "staffRejections": 2
       }
     ],
-    "approvalsGiven": 4,
-    "rejectionsGiven": 0,
+    "approvalsGiven": 6,
+    "rejectionsGiven": 2,
     "prsOpened": 21,
     "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -220,6 +248,29 @@
     "major": 3,
     "minor": 8,
     "tiny": 10
+  },
+  "Ojas2095": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "Sang-it": {
     "reviewsReceived": 11,
@@ -357,7 +408,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
+    "prsOpened": 10,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -403,7 +454,30 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
+    "prsOpened": 6,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "cyrillical00": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -463,7 +537,7 @@
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 9,
     "rejectionsReceived": 0,
     "approvalsReceived": 6,
     "staffReviewedPrs": 6,
@@ -515,8 +589,8 @@
     ],
     "approvalsGiven": 24,
     "rejectionsGiven": 2,
-    "prsOpened": 23,
-    "prsMerged": 22,
+    "prsOpened": 28,
+    "prsMerged": 27,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -534,11 +608,11 @@
         ]
       }
     ],
-    "score": 51,
+    "score": 60,
     "stars": "⭐⭐⭐",
-    "major": 7,
-    "minor": 8,
-    "tiny": 6
+    "major": 8,
+    "minor": 9,
+    "tiny": 9
   },
   "joebkarwalo": {
     "reviewsReceived": 0,
@@ -678,12 +752,12 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 53,
+    "reviewsReceived": 60,
     "rejectionsReceived": 1,
-    "approvalsReceived": 12,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 692,
@@ -707,6 +781,13 @@
         "staffRejections": 0
       },
       {
+        "number": 253,
+        "url": "https://github.com/tscircuit/circuit-to-canvas/pull/253",
+        "title": "Fix PCB cutouts leaving copper in overlapping SMT pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 17,
         "url": "https://github.com/tscircuit/internal-dynamic-import/pull/17",
         "title": "chore(deps): update circuit-json-to-tscircuit to ^0.0.40",
@@ -716,8 +797,8 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 24,
-    "prsMerged": 16,
+    "prsOpened": 29,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -727,11 +808,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 29,
+    "score": 32,
     "stars": "⭐⭐",
     "major": 2,
-    "minor": 3,
-    "tiny": 11
+    "minor": 4,
+    "tiny": 12
   },
   "saitejabandaru-in": {
     "reviewsReceived": 0,
@@ -757,22 +838,26 @@
     "stars": ""
   },
   "seveibar": {
-    "reviewsReceived": 9,
+    "reviewsReceived": 11,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 36,
-    "rejectionsGiven": 7,
-    "prsOpened": 20,
-    "prsMerged": 17,
+    "approvalsGiven": 47,
+    "rejectionsGiven": 6,
+    "prsOpened": 30,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 26,
-    "distinctPrsReviewedAsCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 37,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedAsCodeOwner": 5,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -793,11 +878,11 @@
         ]
       }
     ],
-    "score": 51,
+    "score": 67,
     "stars": "⭐⭐⭐",
-    "major": 8,
-    "minor": 9,
-    "tiny": 0
+    "major": 10,
+    "minor": 12,
+    "tiny": 2
   },
   "silasbrookshaha": {
     "reviewsReceived": 0,
@@ -845,14 +930,44 @@
     "score": 0,
     "stars": ""
   },
-  "techmannih": {
-    "reviewsReceived": 10,
+  "tangmingxiu11-commits": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "techmannih": {
+    "reviewsReceived": 11,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 694,
+        "url": "https://github.com/tscircuit/footprinter/pull/694",
+        "title": "Add fabrication note support to all diode footprints",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 28,
         "url": "https://github.com/tscircuit/system-block-designer/pull/28",
@@ -863,13 +978,16 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 9,
+    "prsOpened": 14,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 1,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -878,26 +996,41 @@
         ]
       }
     ],
-    "score": 20,
+    "distinctPrsReviewedAsCodeOwner": 1,
+    "score": 22,
     "stars": "⭐⭐",
     "major": 3,
-    "minor": 1,
+    "minor": 2,
     "tiny": 5
   },
   "technologyet31-create": {
-    "reviewsReceived": 18,
-    "rejectionsReceived": 3,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 4,
+    "reviewsReceived": 32,
+    "rejectionsReceived": 4,
+    "approvalsReceived": 14,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
         "number": 104,
         "url": "https://github.com/tscircuit/circuit-json-util/pull/104",
         "title": "Account for pcb_component rotation in getBoundsOfPcbElements",
-        "staffApprovals": 0,
+        "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 2574,
+        "url": "https://github.com/tscircuit/core/pull/2574",
+        "title": "Propagate board solderMaskColor/silkscreenColor to pcb_board",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2573,
+        "url": "https://github.com/tscircuit/core/pull/2573",
+        "title": "Add a repro test for board solderMaskColor/silkscreenColor being dropped",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 43,
@@ -923,8 +1056,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 21,
-    "prsMerged": 5,
+    "prsOpened": 26,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -934,11 +1067,11 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 8,
-    "stars": "⭐",
+    "score": 17,
+    "stars": "⭐⭐",
     "major": 0,
-    "minor": 3,
-    "tiny": 2
+    "minor": 7,
+    "tiny": 3
   },
   "tscircuitbot": {
     "reviewsReceived": 0,
@@ -950,8 +1083,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 253,
-    "prsMerged": 219,
+    "prsOpened": 303,
+    "prsMerged": 257,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -964,7 +1097,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 219
+    "tiny": 257
   },
   "yanyishuai": {
     "reviewsReceived": 0,
