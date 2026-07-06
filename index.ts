@@ -1,6 +1,6 @@
 import * as fs from "fs"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
-import { getLastTuesday1830 } from "lib/ai/date-utils"
+import { getContributionOverviewWindow } from "lib/ai/date-utils"
 import {
   generateMarkdown,
   scoreToStarString,
@@ -457,7 +457,7 @@ async function generateAndWriteFiles(
 }
 
 export async function generateWeeklyOverview() {
-  const weekStart = getLastTuesday1830(new Date())
-  const weekStartString = weekStart.toISOString()
-  await generateOverview(weekStartString)
+  const { startDate, endDate } = getContributionOverviewWindow(new Date())
+  const weekStartString = startDate.toISOString()
+  await generateOverview(weekStartString, endDate)
 }

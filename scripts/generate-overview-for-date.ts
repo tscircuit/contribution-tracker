@@ -1,5 +1,5 @@
 import { generateOverview } from ".."
-import { getLastTuesday1830 } from "../lib/ai/date-utils"
+import { getContributionOverviewWindow } from "../lib/ai/date-utils"
 
 const dateArg = process.argv[2]
 
@@ -28,14 +28,14 @@ if (isNaN(parsedDate.getTime())) {
 const currentTime = new Date(dateArg)
 currentTime.setUTCHours(18, 0, 0, 0)
 
-// Calculate the start date (last Tuesday at 18:30 UTC based on the current time)
-const weekStart = getLastTuesday1830(currentTime)
-const weekStartString = weekStart.toISOString()
+const { startDate, endDate } = getContributionOverviewWindow(currentTime)
+const weekStartString = startDate.toISOString()
 
 console.log(`Current time: ${currentTime.toISOString()}`)
-console.log(`Week start (last Tuesday): ${weekStart.toISOString()}`)
+console.log(`Week start: ${startDate.toISOString()}`)
+console.log(`Week end: ${endDate.toISOString()}`)
 console.log(
-  `Generating overview from ${weekStartString} to ${currentTime.toISOString()}`,
+  `Generating overview from ${weekStartString} to ${endDate.toISOString()}`,
 )
 
-generateOverview(weekStartString, currentTime).catch(console.error)
+generateOverview(weekStartString, endDate).catch(console.error)

@@ -15,31 +15,36 @@ export function getLastWednesday(date: Date): Date {
   return result
 }
 
-/**
- * Gets the most recent Tuesday at 18:30 UTC.
- * If the current time is before Tuesday 18:30 UTC, returns the previous Tuesday at 18:30 UTC.
- * If the current time is on or after Tuesday 18:30 UTC, returns the current Tuesday at 18:30 UTC.
- */
-export function getLastTuesday1830(date: Date): Date {
+export const CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC = 18
+
+function setContributionOverviewCutoff(date: Date): Date {
   const result = new Date(date)
+  result.setUTCHours(CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC, 0, 0, 0)
+  return result
+}
+
+export function getLatestContributionOverviewCutoff(date: Date): Date {
+  const cutoff = setContributionOverviewCutoff(date)
+  if (date.getTime() < cutoff.getTime()) {
+    cutoff.setUTCDate(cutoff.getUTCDate() - 1)
+  }
+  return cutoff
+}
+
+export function getContributionOverviewWindow(date: Date): {
+  startDate: Date
+  endDate: Date
+} {
+  const endDate = getLatestContributionOverviewCutoff(date)
+  const startDate = new Date(endDate)
 
   // Get the current day (0 = Sunday, 2 = Tuesday)
-  const currentDay = result.getUTCDay()
+  const currentDay = startDate.getUTCDay()
 
-  // Calculate days to subtract to get to the most recent Tuesday
-  // If it's Tuesday, check if we're past 18:30 UTC
+  // Tuesday at cutoff closes the previous reporting week.
   let daysToSubtract: number
   if (currentDay === 2) {
-    // It's Tuesday - check if we're past 18:30 UTC
-    const currentHour = result.getUTCHours()
-    const currentMinute = result.getUTCMinutes()
-    if (currentHour > 18 || (currentHour === 18 && currentMinute >= 30)) {
-      // We're past 18:30 UTC on Tuesday, use today
-      daysToSubtract = 0
-    } else {
-      // We're before 18:30 UTC on Tuesday, go back to last Tuesday
-      daysToSubtract = 7
-    }
+    daysToSubtract = 7
   } else if (currentDay < 2) {
     // Sunday (0) or Monday (1) - go back to previous Tuesday
     daysToSubtract = currentDay + 5 // Sunday: 0+5=5, Monday: 1+5=6
@@ -48,8 +53,12 @@ export function getLastTuesday1830(date: Date): Date {
     daysToSubtract = currentDay - 2
   }
 
-  result.setUTCDate(result.getUTCDate() - daysToSubtract)
-  result.setUTCHours(18, 30, 0, 0) // Set to 18:30 UTC
+  startDate.setUTCDate(startDate.getUTCDate() - daysToSubtract)
+  startDate.setUTCHours(CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC, 0, 0, 0)
 
-  return result
+  return { startDate, endDate }
+}
+
+export function getLastTuesday1800(date: Date): Date {
+  return getContributionOverviewWindow(date).startDate
 }
