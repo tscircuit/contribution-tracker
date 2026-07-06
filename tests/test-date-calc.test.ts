@@ -105,6 +105,17 @@ test("getContributionOverviewWindow: Tuesday at cutoff closes previous week", ()
   expect(result.endDate.toISOString()).toBe("2024-01-16T18:00:00.000Z")
 })
 
+// Given Wednesday Jan 17 at 10:00 UTC, Wednesday's 18:00 UTC cutoff has not
+// happened yet. The latest 18:00 UTC cutoff is Tuesday Jan 16, so the report
+// should still cover the completed previous week from Tuesday Jan 9 at 18:00 UTC
+// through Tuesday Jan 16 at 18:00 UTC.
+test("getContributionOverviewWindow: Wednesday morning runs the completed previous week", () => {
+  const wednesdayMorning = new Date("2024-01-17T10:00:00.000Z")
+  const result = getContributionOverviewWindow(wednesdayMorning)
+  expect(result.startDate.toISOString()).toBe("2024-01-09T18:00:00.000Z")
+  expect(result.endDate.toISOString()).toBe("2024-01-16T18:00:00.000Z")
+})
+
 // Given Wednesday Jan 17 at 19:00 UTC, Tuesday's weekly cutoff has already
 // happened. The report should cover the new week from Tuesday Jan 16 at
 // 18:00 UTC through Wednesday Jan 17 at 18:00 UTC.
