@@ -1,0 +1,52 @@
+name: Manual Sponsorships CSV
+
+on:
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Month to generate sponsorships for (YYYY-MM format)"
+        required: true
+        type: string
+
+jobs:
+  update-sponsorships:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Parse month
+        id: month
+        env:
+          INPUT_MONTH: ${{ github.event.inputs.month }}
+        run: |
+          if [[ ! "$INPUT_MONTH" =~ ^[0-9]{4}-(0[1-9]|1[0-2])$ ]]; then
+            echo "Month must be in YYYY-MM format"
+            exit 1
+          fi
+
+          echo "year=${INPUT_MONTH%-*}" >> "$GITHUB_OUTPUT"
+          echo "month=${INPUT_MONTH#*-}" >> "$GITHUB_OUTPUT"
+
+      - name: Generate sponsorships CSV for specified month
+        run: bun scripts/generate-sponsorship-csv.ts ${{ steps.month.outputs.year }} ${{ steps.month.outputs.month }}
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sponsorships
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update sponsorships CSV for ${{ github.event.inputs.month }}"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
