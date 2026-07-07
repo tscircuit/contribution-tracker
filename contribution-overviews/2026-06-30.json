@@ -1,8 +1,8 @@
 {
   "0hmX": {
-    "reviewsReceived": 20,
+    "reviewsReceived": 22,
     "rejectionsReceived": 1,
-    "approvalsReceived": 10,
+    "approvalsReceived": 11,
     "staffReviewedPrs": 5,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 4,
@@ -11,6 +11,13 @@
         "number": 2540,
         "url": "https://github.com/tscircuit/core/pull/2540",
         "title": "update autorouter to use the new Pipeline 7",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1492,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1492",
+        "title": "add connectTo to all",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -29,13 +36,6 @@
         "staffRejections": 0
       },
       {
-        "number": 1492,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1492",
-        "title": "add connectTo to all",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
         "number": 1480,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1480",
         "title": "refine approximation obstacle ownership",
@@ -43,24 +43,20 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 3,
-    "rejectionsGiven": 1,
-    "prsOpened": 35,
-    "prsMerged": 15,
+    "approvalsGiven": 10,
+    "rejectionsGiven": 2,
+    "prsOpened": 43,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 33,
+    "score": 45,
     "stars": "⭐⭐",
-    "major": 6,
+    "major": 8,
     "minor": 0,
-    "tiny": 8
+    "tiny": 15
   },
   "Abse2001": {
     "reviewsReceived": 9,
@@ -78,16 +74,16 @@
         "staffRejections": 0
       },
       {
-        "number": 405,
-        "url": "https://github.com/tscircuit/easyeda-converter/pull/405",
-        "title": "Recognize polarity aliases for diode pin labels",
+        "number": 403,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/403",
+        "title": "Preserve diode polarity metadata in generated components",
         "staffApprovals": 1,
         "staffRejections": 0
       },
       {
-        "number": 403,
-        "url": "https://github.com/tscircuit/easyeda-converter/pull/403",
-        "title": "Preserve diode polarity metadata in generated components",
+        "number": 405,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/405",
+        "title": "Recognize polarity aliases for diode pin labels",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -113,28 +109,28 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 3,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
     "prsOpened": 11,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 21,
+    "score": 22,
     "stars": "⭐⭐",
     "major": 2,
     "minor": 4,
     "tiny": 2
   },
   "AnasSarkiz": {
-    "reviewsReceived": 7,
+    "reviewsReceived": 9,
     "rejectionsReceived": 1,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 1720,
@@ -149,16 +145,23 @@
         "title": "Introduce QR Code Silkscreen Documentation with 3D and PCB Example using`silkscreengraphic`",
         "staffApprovals": 0,
         "staffRejections": 1
+      },
+      {
+        "number": 1533,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1533",
+        "title": "Fix stitch endpoint snapping to prevent closed-loop two-port traces",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 3,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
+    "prsOpened": 15,
     "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -172,7 +175,7 @@
         ]
       }
     ],
-    "score": 35,
+    "score": 37,
     "stars": "⭐⭐",
     "major": 5,
     "minor": 5,
@@ -205,13 +208,20 @@
     "tiny": 2
   },
   "MustafaMulla29": {
-    "reviewsReceived": 16,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 13,
-    "staffReviewedPrs": 5,
-    "staffRejectionsReceived": 3,
-    "staffApprovalsReceived": 5,
+    "reviewsReceived": 22,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 15,
+    "staffReviewedPrs": 7,
+    "staffRejectionsReceived": 4,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
+      {
+        "number": 2600,
+        "url": "https://github.com/tscircuit/core/pull/2600",
+        "title": "Fix duplicate net label on unconnected pins with text-expanded bounds",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2555,
         "url": "https://github.com/tscircuit/core/pull/2555",
@@ -224,6 +234,13 @@
         "url": "https://github.com/tscircuit/core/pull/2527",
         "title": "Lay out schematic sheets independently",
         "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 601,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/601",
+        "title": "Add net-label hover highlighting for schematic net labels",
+        "staffApprovals": 0,
         "staffRejections": 1
       },
       {
@@ -248,20 +265,24 @@
         "staffRejections": 2
       }
     ],
-    "approvalsGiven": 7,
+    "approvalsGiven": 8,
     "rejectionsGiven": 2,
-    "prsOpened": 21,
-    "prsMerged": 21,
+    "prsOpened": 26,
+    "prsMerged": 25,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 7,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 39,
+    "score": 43,
     "stars": "⭐⭐",
     "major": 3,
-    "minor": 8,
-    "tiny": 10
+    "minor": 9,
+    "tiny": 13
   },
   "Ojas2095": {
     "reviewsReceived": 0,
@@ -287,13 +308,34 @@
     "stars": ""
   },
   "Sang-it": {
-    "reviewsReceived": 13,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "reviewsReceived": 19,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 5,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 2588,
+        "url": "https://github.com/tscircuit/core/pull/2588",
+        "title": "fix(schematic): only pass net label orientations for power and gnd",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 596,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/596",
+        "title": "Fix label placement near traces",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 591,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/591",
+        "title": "fix: re-anchor net labels when NetLabelTraceCollisionSolver reroutes a trace",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 569,
         "url": "https://github.com/tscircuit/schematic-trace-solver/pull/569",
@@ -309,33 +351,68 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 22,
-    "prsMerged": 13,
+    "prsOpened": 33,
+    "prsMerged": 23,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 19,
+    "score": 41,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 3,
-    "tiny": 9
+    "major": 5,
+    "minor": 4,
+    "tiny": 14
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 6,
+    "reviewsReceived": 27,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "approvalsReceived": 24,
+    "staffReviewedPrs": 6,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
+      {
+        "number": 2589,
+        "url": "https://github.com/tscircuit/core/pull/2589",
+        "title": "Preserve explicit narrow autoroute trace widths",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 226,
+        "url": "https://github.com/tscircuit/graphics-debug/pull/226",
+        "title": "Add step support for arrows",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3569,
+        "url": "https://github.com/tscircuit/cli/pull/3569",
+        "title": "Fix concurrent build with function-valued platformConfig",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1510,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1510",
+        "title": "Expose and expand AI-readable visualization artifacts in run-sample",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 634,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/634",
+        "title": "Reject reroutes along component boundaries",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 64,
         "url": "https://github.com/tscircuit/ti/pull/64",
@@ -344,24 +421,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 5,
+    "prsOpened": 21,
+    "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 13,
+    "score": 32.5,
     "stars": "⭐⭐",
-    "major": 1,
-    "minor": 3,
-    "tiny": 0
+    "major": 2,
+    "minor": 8,
+    "tiny": 5
   },
   "StealthEyeLLC": {
     "reviewsReceived": 0,
@@ -453,7 +530,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 17,
+    "prsOpened": 19,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -605,7 +682,7 @@
     "stars": ""
   },
   "imrishabh18": {
-    "reviewsReceived": 8,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
     "approvalsReceived": 6,
     "staffReviewedPrs": 6,
@@ -655,14 +732,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 32,
-    "rejectionsGiven": 2,
-    "prsOpened": 31,
-    "prsMerged": 29,
+    "approvalsGiven": 36,
+    "rejectionsGiven": 3,
+    "prsOpened": 36,
+    "prsMerged": 35,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 24,
+    "distinctPrsReviewedNonCodeOwner": 28,
     "distinctPrsReviewedAsCodeOwner": 3,
     "reposOwned": [
       {
@@ -672,11 +749,11 @@
         ]
       }
     ],
-    "score": 65,
+    "score": 79,
     "stars": "⭐⭐⭐",
-    "major": 9,
-    "minor": 9,
-    "tiny": 10
+    "major": 11,
+    "minor": 11,
+    "tiny": 12
   },
   "joebkarwalo": {
     "reviewsReceived": 0,
@@ -689,6 +766,52 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "laogongcy-del": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "lifuzhang1108": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -725,8 +848,8 @@
     "stars": ""
   },
   "maci0": {
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 2,
+    "rejectionsReceived": 1,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
@@ -734,7 +857,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 10,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -748,13 +871,20 @@
     "stars": ""
   },
   "mohan-bee": {
-    "reviewsReceived": 21,
-    "rejectionsReceived": 2,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 3,
-    "staffRejectionsReceived": 2,
+    "reviewsReceived": 27,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 3,
     "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 2607,
+        "url": "https://github.com/tscircuit/core/pull/2607",
+        "title": "Fix schematic trace endpoints stopping short of connected symbol ports",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 356,
         "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/356",
@@ -777,24 +907,20 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 4,
+    "prsOpened": 12,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 11,
+    "score": 14,
     "stars": "⭐⭐",
     "major": 1,
     "minor": 2,
-    "tiny": 1
+    "tiny": 2
   },
   "r-audio": {
     "reviewsReceived": 0,
@@ -843,9 +969,9 @@
     "stars": ""
   },
   "rushabhcodes": {
-    "reviewsReceived": 93,
+    "reviewsReceived": 109,
     "rejectionsReceived": 3,
-    "approvalsReceived": 22,
+    "approvalsReceived": 27,
     "staffReviewedPrs": 10,
     "staffRejectionsReceived": 3,
     "staffApprovalsReceived": 8,
@@ -854,6 +980,13 @@
         "number": 692,
         "url": "https://github.com/tscircuit/footprinter/pull/692",
         "title": "Fix KiCad boolean-difference rendering for rounded and circular SMT pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 953,
+        "url": "https://github.com/tscircuit/3d-viewer/pull/953",
+        "title": "Fix Manifold PCB textures disappearing in StrictMode iframes",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -886,23 +1019,9 @@
         "staffRejections": 0
       },
       {
-        "number": 115,
-        "url": "https://github.com/tscircuit/circuit-json-to-step/pull/115",
-        "title": "update circuit-json-to-gltf",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
         "number": 253,
         "url": "https://github.com/tscircuit/circuit-to-canvas/pull/253",
         "title": "Fix PCB cutouts leaving copper in overlapping SMT pads",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 20,
-        "url": "https://github.com/tscircuit/internal-dynamic-import/pull/20",
-        "title": "update circuit-json-to-gltf",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -914,6 +1033,13 @@
         "staffRejections": 0
       },
       {
+        "number": 20,
+        "url": "https://github.com/tscircuit/internal-dynamic-import/pull/20",
+        "title": "update circuit-json-to-gltf",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 17,
         "url": "https://github.com/tscircuit/internal-dynamic-import/pull/17",
         "title": "chore(deps): update circuit-json-to-tscircuit to ^0.0.40",
@@ -921,24 +1047,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
-    "prsOpened": 37,
-    "prsMerged": 23,
+    "prsOpened": 43,
+    "prsMerged": 29,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 42,
+    "score": 49,
     "stars": "⭐⭐",
-    "major": 3,
-    "minor": 6,
-    "tiny": 14
+    "major": 4,
+    "minor": 7,
+    "tiny": 18
   },
   "sagarmaurya64-ai": {
     "reviewsReceived": 0,
@@ -987,26 +1113,26 @@
     "stars": ""
   },
   "seveibar": {
-    "reviewsReceived": 11,
+    "reviewsReceived": 14,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 56,
-    "rejectionsGiven": 9,
-    "prsOpened": 30,
-    "prsMerged": 25,
+    "approvalsGiven": 72,
+    "rejectionsGiven": 12,
+    "prsOpened": 38,
+    "prsMerged": 29,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 45,
+    "distinctPrsReviewedNonCodeOwner": 60,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "distinctPrsReviewedAsCodeOwner": 6,
+    "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -1027,11 +1153,11 @@
         ]
       }
     ],
-    "score": 71,
+    "score": 78,
     "stars": "⭐⭐⭐",
-    "major": 11,
+    "major": 12,
     "minor": 12,
-    "tiny": 2
+    "tiny": 5
   },
   "silasbrookshaha": {
     "reviewsReceived": 0,
@@ -1103,7 +1229,7 @@
     "stars": ""
   },
   "techmannih": {
-    "reviewsReceived": 12,
+    "reviewsReceived": 14,
     "rejectionsReceived": 0,
     "approvalsReceived": 8,
     "staffReviewedPrs": 2,
@@ -1127,7 +1253,7 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 15,
+    "prsOpened": 17,
     "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -1146,19 +1272,19 @@
       }
     ],
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 22,
+    "score": 23,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 2,
-    "tiny": 5
+    "tiny": 6
   },
   "technologyet31-create": {
-    "reviewsReceived": 36,
+    "reviewsReceived": 39,
     "rejectionsReceived": 5,
-    "approvalsReceived": 17,
-    "staffReviewedPrs": 7,
+    "approvalsReceived": 19,
+    "staffReviewedPrs": 8,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 6,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 104,
@@ -1178,6 +1304,13 @@
         "number": 2573,
         "url": "https://github.com/tscircuit/core/pull/2573",
         "title": "Add a repro test for board solderMaskColor/silkscreenColor being dropped",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 302,
+        "url": "https://github.com/tscircuit/jscad-electronics/pull/302",
+        "title": "Fix led0603 throwing by bumping @tscircuit/footprinter to 0.0.374",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -1212,8 +1345,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 35,
-    "prsMerged": 11,
+    "prsOpened": 37,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1223,24 +1356,24 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 18,
+    "score": 20,
     "stars": "⭐⭐",
     "major": 0,
-    "minor": 7,
+    "minor": 8,
     "tiny": 4
   },
   "tscircuitbot": {
-    "reviewsReceived": 0,
+    "reviewsReceived": 1,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
+    "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 323,
-    "prsMerged": 276,
+    "prsOpened": 403,
+    "prsMerged": 335,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1253,7 +1386,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 276
+    "tiny": 335
   },
   "yanyishuai": {
     "reviewsReceived": 0,
