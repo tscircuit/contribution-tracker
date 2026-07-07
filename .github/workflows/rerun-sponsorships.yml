@@ -30,8 +30,6 @@ jobs:
           fi
 
           echo "value=$MONTH" >> "$GITHUB_OUTPUT"
-          echo "year=${MONTH%%-*}" >> "$GITHUB_OUTPUT"
-          echo "number=${MONTH##*-}" >> "$GITHUB_OUTPUT"
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -42,10 +40,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Regenerate sponsorships CSV
-        run: >-
-          bun scripts/generate-sponsorship-csv.ts
-          ${{ steps.month.outputs.year }}
-          ${{ steps.month.outputs.number }}
+        run: bun scripts/rerun-sponsorship-csv.ts ${{ steps.month.outputs.value }}
 
       - name: Create correction PR
         id: create-pr

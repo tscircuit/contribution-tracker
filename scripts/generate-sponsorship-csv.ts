@@ -2,18 +2,18 @@ import fs from "node:fs"
 import path from "node:path"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
 import {
+  getSponsorshipAmount,
+  scoreToSponsorshipStarCount,
+} from "../lib/scoring"
+import {
+  isUserIneligible,
+  INELIGIBLE_FOR_SPONSORSHIP,
+} from "../lib/ineligible-sponsorships"
+import {
   applyHardwareReimbursements,
   filterHardwareReimbursementsForMonth,
   readHardwareReimbursements,
 } from "../lib/hardware-reimbursements"
-import {
-  INELIGIBLE_FOR_SPONSORSHIP,
-  isUserIneligible,
-} from "../lib/ineligible-sponsorships"
-import {
-  getSponsorshipAmount,
-  scoreToSponsorshipStarCount,
-} from "../lib/scoring"
 
 interface ContributorData {
   stars?: string
@@ -30,61 +30,86 @@ interface WeekData {
   weekEndDate: Date
 }
 
-export function getFullWeeksForMonth(
-  year: number,
-  month: number,
-  today = new Date(),
-  overviewsDir = path.join(process.cwd(), "contribution-overviews"),
-): WeekData[] {
+function getFullWeeksForMonth(year: number, month: number): WeekData[] {
+  const overviewsDir = path.join(process.cwd(), "contribution-overviews")
+
   // First day of the target month
   const monthStart = new Date(Date.UTC(year, month - 1, 1))
   // First day of next month
   const nextMonthStart = new Date(Date.UTC(year, month, 1))
 
-  // Get all JSON files in the directory
-  return (
-    fs
-      .readdirSync(overviewsDir)
-      .filter((file) => file.endsWith(".json"))
-      .map((file) => {
-        const datePart = file.replace(".json", "")
-        const fileDate = new Date(datePart)
-        return {
-          filePath: path.join(overviewsDir, file),
-          fileDate,
-          datePart, // Keep the original date string for debugging
-        }
-      })
-      .filter(({ fileDate }) => !isNaN(fileDate.getTime()))
-      .map(({ filePath, fileDate }) => {
-        const weekStartDate = new Date(
-          Date.UTC(
-            fileDate.getUTCFullYear(),
-            fileDate.getUTCMonth(),
-            fileDate.getUTCDate(),
-          ),
-        )
-        const weekEndDate = new Date(
-          Date.UTC(
-            fileDate.getUTCFullYear(),
-            fileDate.getUTCMonth(),
-            fileDate.getUTCDate() + 6,
-          ),
-        )
+  // We'll collect weeks with data that are relevant for the month
+  const weeks: WeekData[] = []
 
-        return { filePath, weekStartDate, weekEndDate }
-      })
-      // A month owns weeks that end in that month. This keeps historical reruns
-      // stable when a week starts near the end of one month and ends in the next.
-      .filter(
-        ({ weekEndDate }) =>
-          weekEndDate >= monthStart &&
-          weekEndDate < nextMonthStart &&
-          weekEndDate <= today,
-      )
-      .sort((a, b) => b.weekStartDate.getTime() - a.weekStartDate.getTime())
-      .slice(0, 5)
-  )
+  // Get all JSON files in the directory
+  const allFiles = fs
+    .readdirSync(overviewsDir)
+    .filter((file) => file.endsWith(".json"))
+    .map((file) => {
+      const datePart = file.replace(".json", "")
+      const fileDate = new Date(datePart)
+      return {
+        filePath: path.join(overviewsDir, file),
+        fileDate,
+        datePart, // Keep the original date string for debugging
+      }
+    })
+    .filter(({ fileDate }) => !isNaN(fileDate.getTime())) // Filter out invalid dates
+    .sort((a, b) => b.fileDate.getTime() - a.fileDate.getTime()) // Sort in descending order (newest first)
+
+  // For each week's data file
+  for (const { filePath, fileDate, datePart } of allFiles) {
+    // The date in the filename is the START of the week
+    const weekStartDate = new Date(
+      Date.UTC(
+        fileDate.getUTCFullYear(),
+        fileDate.getUTCMonth(),
+        fileDate.getUTCDate(),
+      ),
+    )
+
+    // End date is the Tuesday following the start date (which should be a Wednesday)
+    const weekEndDate = new Date(
+      Date.UTC(
+        fileDate.getUTCFullYear(),
+        fileDate.getUTCMonth(),
+        fileDate.getUTCDate() + 6,
+      ),
+    )
+
+    // For March, we want COMPLETE weeks:
+    // - 02/26, 03/05, 03/12, 03/19 (we exclude 03/26 since it's not a complete week)
+
+    // Include weeks that start in February but end in target month
+    // OR weeks that start AND end in the target month
+    const startsBeforeMonth = weekStartDate < monthStart
+    const endsInMonth =
+      weekEndDate >= monthStart && weekEndDate < nextMonthStart
+    const startsInMonth =
+      weekStartDate >= monthStart && weekStartDate < nextMonthStart
+
+    // Include if it overlaps with the target month
+    if ((startsBeforeMonth && endsInMonth) || startsInMonth) {
+      // But only include if we have complete data for this week
+      // For files generated on the last day of the month, we might not have complete data
+      // Assuming a complete week has data through the end date
+      const today = new Date()
+      if (weekEndDate <= today) {
+        weeks.push({
+          filePath,
+          weekStartDate,
+          weekEndDate,
+        })
+      }
+    }
+
+    // Stop once we've collected 4-5 weeks or gone past the relevant time period
+    if (weeks.length >= 5 || weekStartDate > nextMonthStart) {
+      break
+    }
+  }
+
+  return weeks
 }
 
 function readWeeklyData(filePath: string): WeeklyData {
@@ -309,4 +334,4 @@ function main() {
   }
 }
 
-if (import.meta.main) main()
+main()
