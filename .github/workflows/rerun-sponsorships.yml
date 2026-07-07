@@ -1,0 +1,67 @@
+name: Rerun Sponsorships CSV
+
+on:
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Month to regenerate (YYYY-MM)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  rerun-sponsorships:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate month
+        id: month
+        env:
+          MONTH: ${{ inputs.month }}
+        run: |
+          if [[ ! "$MONTH" =~ ^[0-9]{4}-(0[1-9]|1[0-2])$ ]]; then
+            echo "month must use YYYY-MM format" >&2
+            exit 1
+          fi
+
+          echo "value=$MONTH" >> "$GITHUB_OUTPUT"
+          echo "year=${MONTH%%-*}" >> "$GITHUB_OUTPUT"
+          echo "number=${MONTH##*-}" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.1
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Regenerate sponsorships CSV
+        run: >-
+          bun scripts/generate-sponsorship-csv.ts
+          ${{ steps.month.outputs.year }}
+          ${{ steps.month.outputs.number }}
+
+      - name: Create correction PR
+        id: create-pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: sponsorships/${{ steps.month.outputs.value }}.csv
+          branch: automation/rerun-sponsorships-${{ steps.month.outputs.value }}
+          delete-branch: true
+          commit-message: Regenerate sponsorships for ${{ steps.month.outputs.value }}
+          title: Regenerate sponsorships for ${{ steps.month.outputs.value }}
+          body: |
+            Regenerates `${{ steps.month.outputs.value }}` from the latest contribution overview data.
+
+            This PR was created by the manually dispatched sponsorship rerun workflow.
+
+      - name: Add result to summary
+        if: steps.create-pr.outputs.pull-request-url != ''
+        run: echo "Created ${{ steps.create-pr.outputs.pull-request-url }}" >> "$GITHUB_STEP_SUMMARY"
