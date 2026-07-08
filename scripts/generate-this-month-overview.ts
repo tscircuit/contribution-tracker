@@ -14,4 +14,7 @@ function getLastMonthStart(): string {
   return today.toISOString().split("T")[0]
 }
 
-generateOverview(getLastMonthStart()).catch(console.error)
+generateOverview(getLastMonthStart()).catch((error) => {
+  console.error(error)
+  process.exit(1)
+})

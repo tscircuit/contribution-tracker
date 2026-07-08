@@ -38,4 +38,7 @@ console.log(
   `Generating overview from ${weekStartString} to ${endDate.toISOString()}`,
 )
 
-generateOverview(weekStartString, endDate).catch(console.error)
+generateOverview(weekStartString, endDate).catch((error) => {
+  console.error(error)
+  process.exit(1)
+})

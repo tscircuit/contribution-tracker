@@ -1,3 +1,6 @@
 import { generateWeeklyOverview } from ".."
 
-generateWeeklyOverview().catch(console.error)
+generateWeeklyOverview().catch((error) => {
+  console.error(error)
+  process.exit(1)
+})
