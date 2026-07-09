@@ -154,7 +154,8 @@ export async function generateMarkdown(
     const discussionNormalComments =
       contributorIdToStatsMap[contributor]?.discussionNormalComments || 0
     const discussionGreatInformativeComments =
-      contributorIdToStatsMap[contributor]?.discussionGreatInformativeComments || 0
+      contributorIdToStatsMap[contributor]
+        ?.discussionGreatInformativeComments || 0
     const discussionIncredibleComments =
       contributorIdToStatsMap[contributor]?.discussionIncredibleComments || 0
     const discussionSummary = `${discussionNormalComments}🔹 ${discussionGreatInformativeComments}🔶 ${discussionIncredibleComments}💎`
