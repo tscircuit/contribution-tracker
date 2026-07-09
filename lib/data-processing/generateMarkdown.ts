@@ -152,12 +152,12 @@ export async function generateMarkdown(
   for (const [contributor, effort] of sortedContributors) {
     // Calculate discussion contributions summary
     const discussionNormalComments =
-      contributorIdToStatsMap[contributor].discussionNormalComments || 0
+      contributorIdToStatsMap[contributor]?.discussionNormalComments || 0
     const discussionGreatInformativeComments =
-      contributorIdToStatsMap[contributor].discussionGreatInformativeComments ||
-      0
+      contributorIdToStatsMap[contributor]
+        ?.discussionGreatInformativeComments || 0
     const discussionIncredibleComments =
-      contributorIdToStatsMap[contributor].discussionIncredibleComments || 0
+      contributorIdToStatsMap[contributor]?.discussionIncredibleComments || 0
     const discussionSummary = `${discussionNormalComments}🔹 ${discussionGreatInformativeComments}🔶 ${discussionIncredibleComments}💎`
 
     markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${
