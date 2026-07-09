@@ -151,13 +151,13 @@ export async function generateMarkdown(
   // Generate table rows
   for (const [contributor, effort] of sortedContributors) {
     // Calculate discussion contributions summary
+    const contributorStats = contributorIdToStatsMap[contributor]
     const discussionNormalComments =
-      contributorIdToStatsMap[contributor].discussionNormalComments || 0
+      contributorStats?.discussionNormalComments || 0
     const discussionGreatInformativeComments =
-      contributorIdToStatsMap[contributor].discussionGreatInformativeComments ||
-      0
+      contributorStats?.discussionGreatInformativeComments || 0
     const discussionIncredibleComments =
-      contributorIdToStatsMap[contributor].discussionIncredibleComments || 0
+      contributorStats?.discussionIncredibleComments || 0
     const discussionSummary = `${discussionNormalComments}🔹 ${discussionGreatInformativeComments}🔶 ${discussionIncredibleComments}💎`
 
     markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${
