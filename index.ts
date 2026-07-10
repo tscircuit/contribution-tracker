@@ -18,6 +18,7 @@ import { getRepos } from "lib/data-retrieval/getRepos"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { postMergeComment } from "lib/notifications/notify-pr-change"
 import { SENIOR_STAFF_USERNAMES } from "lib/constants"
+import { getCanonicalUsername } from "lib/contributor-aliases"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
@@ -58,7 +59,7 @@ export async function generateOverview(
         continue
       }
 
-      const contributor = pr.user.login
+      const contributor = getCanonicalUsername(pr.user.login)
       if (!contributorData[contributor]) {
         contributorData[contributor] = {
           reviewsReceived: 0,
@@ -144,9 +145,10 @@ export async function generateOverview(
 
       if (pr.reviewsByUser) {
         Object.entries(pr.reviewsByUser).forEach(
-          ([reviewer, reviewerStats]) => {
+          ([rawReviewer, reviewerStats]) => {
+            const reviewer = getCanonicalUsername(rawReviewer)
             const isReviewerRepoOwner = repoOwners.some((content) =>
-              content.owners.includes(reviewer),
+              content.owners.includes(rawReviewer),
             )
             if (!contributorData[reviewer]) {
               contributorData[reviewer] = {
