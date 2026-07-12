@@ -43,14 +43,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 13,
+    "approvalsGiven": 14,
     "rejectionsGiven": 0,
     "prsOpened": 26,
     "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedNonCodeOwner": 13,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 56,
     "stars": "⭐⭐⭐",
@@ -58,13 +58,36 @@
     "minor": 5,
     "tiny": 9
   },
-  "Abse2001": {
-    "reviewsReceived": 23,
+  "AM-Mehrabii": {
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
-    "approvalsReceived": 22,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "Abse2001": {
+    "reviewsReceived": 25,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 24,
+    "staffReviewedPrs": 5,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
         "number": 2617,
@@ -77,6 +100,13 @@
         "number": 2608,
         "url": "https://github.com/tscircuit/core/pull/2608",
         "title": "Use automatic net labels on repro46",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3647,
+        "url": "https://github.com/tscircuit/cli/pull/3647",
+        "title": "Enable routing on check shorts",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -97,18 +127,18 @@
     ],
     "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 20,
-    "prsMerged": 17,
+    "prsOpened": 22,
+    "prsMerged": 19,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 31.5,
+    "score": 34.5,
     "stars": "⭐⭐",
     "major": 3,
-    "minor": 2,
-    "tiny": 12
+    "minor": 3,
+    "tiny": 13
   },
   "AnasSarkiz": {
     "reviewsReceived": 23,
@@ -140,14 +170,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 19,
+    "approvalsGiven": 21,
     "rejectionsGiven": 0,
     "prsOpened": 12,
     "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 18,
+    "distinctPrsReviewedNonCodeOwner": 20,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -282,39 +312,53 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 12,
+    "approvalsGiven": 13,
     "rejectionsGiven": 0,
-    "prsOpened": 15,
-    "prsMerged": 15,
+    "prsOpened": 18,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedNonCodeOwner": 13,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 31,
+    "score": 35,
     "stars": "⭐⭐",
     "major": 4,
-    "minor": 3,
-    "tiny": 8
+    "minor": 4,
+    "tiny": 10
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 34,
+    "reviewsReceived": 41,
     "rejectionsReceived": 0,
-    "approvalsReceived": 32,
-    "staffReviewedPrs": 9,
+    "approvalsReceived": 37,
+    "staffReviewedPrs": 12,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 10,
+    "staffApprovalsReceived": 13,
     "staffReviewedPrLinks": [
+      {
+        "number": 2641,
+        "url": "https://github.com/tscircuit/core/pull/2641",
+        "title": "Fix SRJ obstacles for rotated and polygon SMT pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 1763,
         "url": "https://github.com/tscircuit/svg.tscircuit.com/pull/1763",
         "title": "Support standalone simulation graph SVG URLs and prevent ngspice from crashing Next’s server router",
         "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 1596,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1596",
+        "title": "add Pipeline 7 net-based visualization colors",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 1592,
@@ -366,6 +410,13 @@
         "staffRejections": 0
       },
       {
+        "number": 167,
+        "url": "https://github.com/tscircuit/kicad-to-circuit-json/pull/167",
+        "title": "Fix mirrored custom pad polygons on rotated footprints",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 163,
         "url": "https://github.com/tscircuit/kicad-to-circuit-json/pull/163",
         "title": "Fix KiCad connectivity conversion and validation",
@@ -375,17 +426,21 @@
     ],
     "approvalsGiven": 16,
     "rejectionsGiven": 0,
-    "prsOpened": 28,
-    "prsMerged": 22,
+    "prsOpened": 34,
+    "prsMerged": 25,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 15,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 59,
+    "score": 67,
     "stars": "⭐⭐⭐",
-    "major": 6,
-    "minor": 5,
+    "major": 7,
+    "minor": 7,
     "tiny": 11
   },
   "abdalraof-albarbar": {
@@ -480,13 +535,20 @@
     "tiny": 0
   },
   "anil08607": {
-    "reviewsReceived": 10,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
+    "reviewsReceived": 20,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
+      {
+        "number": 616,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/616",
+        "title": "Fix: schematic SVG bounds for symbol reference/value text",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 613,
         "url": "https://github.com/tscircuit/circuit-to-svg/pull/613",
@@ -497,8 +559,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 2,
+    "prsOpened": 11,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -507,11 +569,34 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 3,
-    "stars": "",
+    "score": 7,
+    "stars": "⭐",
     "major": 0,
-    "minor": 1,
-    "tiny": 1
+    "minor": 2,
+    "tiny": 3
+  },
+  "holistis": {
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "imrishabh18": {
     "reviewsReceived": 4,
@@ -577,7 +662,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -637,7 +722,7 @@
     "stars": ""
   },
   "mohan-bee": {
-    "reviewsReceived": 31,
+    "reviewsReceived": 32,
     "rejectionsReceived": 1,
     "approvalsReceived": 21,
     "staffReviewedPrs": 5,
@@ -700,65 +785,104 @@
     "tiny": 10
   },
   "rushabhcodes": {
-    "reviewsReceived": 24,
+    "reviewsReceived": 35,
     "rejectionsReceived": 1,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 3893,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/3893",
+        "title": "Remove redundant converter dependencies loaded dynamically at runtime",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3890,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/3890",
+        "title": "Fix 3D PNG downloads by preloading the GLTF converter",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 3882,
         "url": "https://github.com/tscircuit/tscircuit.com/pull/3882",
         "title": "Fix 3D package previews with native PNG rendering",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 32,
+        "url": "https://github.com/tscircuit/poppygl/pull/32",
+        "title": "Fix browser 3D PNG rendering by removing Node-only PoppyGL exports",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 2,
-    "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 12,
+    "rejectionsGiven": 1,
+    "prsOpened": 20,
+    "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 22,
+    "score": 34,
     "stars": "⭐⭐",
-    "major": 2,
-    "minor": 2,
-    "tiny": 8
+    "major": 4,
+    "minor": 3,
+    "tiny": 10
   },
   "seveibar": {
-    "reviewsReceived": 1,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 63,
-    "rejectionsGiven": 3,
-    "prsOpened": 15,
-    "prsMerged": 12,
+    "approvalsGiven": 72,
+    "rejectionsGiven": 6,
+    "prsOpened": 41,
+    "prsMerged": 36,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 54,
-    "distinctPrsReviewedAsCodeOwner": 5,
-    "score": 34,
-    "stars": "⭐⭐",
-    "major": 5,
-    "minor": 6,
-    "tiny": 1
+    "distinctPrsReviewedNonCodeOwner": 62,
+    "distinctPrsReviewedAsCodeOwner": 6,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/copper-pour-solver",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 65,
+    "stars": "⭐⭐⭐",
+    "major": 7,
+    "minor": 12,
+    "tiny": 15
   },
   "techmannih": {
-    "reviewsReceived": 9,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 11,
+    "rejectionsReceived": 3,
     "approvalsReceived": 7,
     "staffReviewedPrs": 6,
-    "staffRejectionsReceived": 3,
+    "staffRejectionsReceived": 5,
     "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
@@ -773,7 +897,7 @@
         "url": "https://github.com/tscircuit/core/pull/2631",
         "title": "Fix inherited default trace width handling in PCB routing",
         "staffApprovals": 0,
-        "staffRejections": 1
+        "staffRejections": 3
       },
       {
         "number": 2629,
@@ -804,14 +928,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 3,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
     "prsOpened": 10,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -856,8 +980,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 365,
-    "prsMerged": 284,
+    "prsOpened": 458,
+    "prsMerged": 355,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -870,7 +994,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 284
+    "tiny": 354
   },
   "wanglianglll": {
     "reviewsReceived": 0,
