@@ -51,6 +51,12 @@ export async function getMergedPRs(
       if (!diffData) {
         return null
       }
+      if (!pr.user) {
+        console.log(
+          `Skipping PR ${pr.number} because its author is unavailable`,
+        )
+        return null
+      }
 
       const filteredDiff = filterDiff(String(diffData))
 
@@ -84,7 +90,8 @@ export async function getMergedPRs(
       return {
         ...pr,
         user: {
-          login: pr.user?.login ?? "unknown",
+          id: pr.user.id,
+          login: pr.user.login,
         },
         state: "merged",
         diff: filteredDiff,

@@ -1,4 +1,5 @@
 import type { ContributorStats } from "lib/types"
+import { getOrCreateContributor } from "../contributor-identity"
 import { analyzeDiscussionWithAI } from "../ai-stuff/analyze-discussion"
 import { getAllDiscussionComments } from "./getAllDiscussionComments"
 
@@ -20,41 +21,23 @@ export async function processDiscussionsForContributors(
     // Analyze each comment and update stats based on contribution level
     for (const comment of discussionComments) {
       const analysis = await analyzeDiscussionWithAI(comment)
-      if (
-        !contributorsStats[comment.discussionAuthor] ||
-        contributorsStats[comment.discussionAuthor]?.discussionComments ===
-          undefined
-      ) {
-        contributorsStats[comment.discussionAuthor] = {
-          discussionComments: 0,
-          discussionNormalComments: 0,
-          discussionGreatInformativeComments: 0,
-          discussionIncredibleComments: 0,
-          ...contributorsStats[comment.discussionAuthor],
-        }
-      }
-      contributorsStats[comment.discussionAuthor].discussionComments =
-        (contributorsStats[comment.discussionAuthor]?.discussionComments || 0) +
-        1
+      const { stats } = getOrCreateContributor(contributorsStats, {
+        id: comment.discussionAuthorId,
+        login: comment.discussionAuthor,
+      })
+      stats.discussionComments = (stats.discussionComments || 0) + 1
       switch (analysis.level) {
         case "NormalComment":
-          contributorsStats[comment.discussionAuthor].discussionNormalComments =
-            (contributorsStats[comment.discussionAuthor]
-              ?.discussionNormalComments || 0) + 1
+          stats.discussionNormalComments =
+            (stats.discussionNormalComments || 0) + 1
           break
         case "GreatInformativeComment":
-          contributorsStats[
-            comment.discussionAuthor
-          ].discussionGreatInformativeComments =
-            (contributorsStats[comment.discussionAuthor]
-              ?.discussionGreatInformativeComments || 0) + 1
+          stats.discussionGreatInformativeComments =
+            (stats.discussionGreatInformativeComments || 0) + 1
           break
         case "IncredibleCommentTopTier":
-          contributorsStats[
-            comment.discussionAuthor
-          ].discussionIncredibleComments =
-            (contributorsStats[comment.discussionAuthor]
-              ?.discussionIncredibleComments || 0) + 1
+          stats.discussionIncredibleComments =
+            (stats.discussionIncredibleComments || 0) + 1
           break
       }
     }

@@ -57,13 +57,18 @@ async function fetchPullRequestDetails(
     )
     .find((l) => l !== null)
 
+  if (!pr.user) {
+    throw new Error(`PR #${pr.number} does not have an available author`)
+  }
+
   return {
     number: pr.number,
     state: pr.merged_at ? "merged" : (pr.state as "opened" | "closed"),
     title: pr.title,
     body: pr.body || "",
     user: {
-      login: pr.user?.login || "unknown",
+      id: pr.user.id,
+      login: pr.user.login,
     },
     html_url: pr.html_url,
     created_at: pr.created_at,

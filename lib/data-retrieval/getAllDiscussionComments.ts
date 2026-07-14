@@ -35,6 +35,9 @@ export async function getAllDiscussionComments(
             number
             author {
               login
+              ... on User {
+                databaseId
+              }
             }
             bodyText
             createdAt
@@ -42,6 +45,9 @@ export async function getAllDiscussionComments(
               nodes {
                 author {
                   login
+                  ... on User {
+                    databaseId
+                  }
                 }
                 bodyText
                 createdAt
@@ -69,16 +75,20 @@ export async function getAllDiscussionComments(
       for (const discussion of result.organization?.repository.discussions
         .nodes) {
         if (discussion.comments?.nodes) {
-          discussionComments.push({
-            discussionTitle: discussion.title,
-            discussionNumber: discussion.number,
-            discussionUrl: discussion.url,
-            discussionAuthor: discussion.author?.login,
-            body: discussion.bodyText,
-            url: discussion.url,
-            createdAt: discussion.createdAt,
-          })
+          if (discussion.author) {
+            discussionComments.push({
+              discussionTitle: discussion.title,
+              discussionNumber: discussion.number,
+              discussionUrl: discussion.url,
+              discussionAuthor: discussion.author.login,
+              discussionAuthorId: discussion.author.databaseId ?? undefined,
+              body: discussion.bodyText,
+              url: discussion.url,
+              createdAt: discussion.createdAt,
+            })
+          }
           for (const comment of discussion.comments.nodes) {
+            if (!comment.author) continue
             // Only include comments by the specified user and within the date range
             const commentTime = new Date(comment.createdAt).getTime()
             if (
@@ -92,6 +102,7 @@ export async function getAllDiscussionComments(
                 body: comment.bodyText,
                 url: comment.url,
                 discussionAuthor: comment.author.login,
+                discussionAuthorId: comment.author.databaseId ?? undefined,
                 createdAt: comment.createdAt,
               })
             }
