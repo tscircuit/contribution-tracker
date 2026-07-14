@@ -1,12 +1,26 @@
 {
   "0hmX": {
-    "reviewsReceived": 21,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 15,
-    "staffReviewedPrs": 5,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 5,
+    "reviewsReceived": 50,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 17,
+    "staffReviewedPrs": 7,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
+      {
+        "number": 727,
+        "url": "https://github.com/tscircuit/props/pull/727",
+        "title": "feat: add differential pair props",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2671,
+        "url": "https://github.com/tscircuit/core/pull/2671",
+        "title": "feat: add differential pair autorouting constraints",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 2624,
         "url": "https://github.com/tscircuit/core/pull/2624",
@@ -43,20 +57,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 16,
+    "approvalsGiven": 20,
     "rejectionsGiven": 0,
-    "prsOpened": 36,
-    "prsMerged": 34,
+    "prsOpened": 46,
+    "prsMerged": 42,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 14,
+    "distinctPrsReviewedNonCodeOwner": 19,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 69,
+    "score": 75,
     "stars": "⭐⭐⭐",
-    "major": 11,
-    "minor": 6,
-    "tiny": 15
+    "major": 15,
+    "minor": 7,
+    "tiny": 18
   },
   "AM-Mehrabii": {
     "reviewsReceived": 0,
@@ -152,19 +170,19 @@
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 42.5,
+    "score": 38.5,
     "stars": "⭐⭐",
-    "major": 4,
+    "major": 3,
     "minor": 5,
     "tiny": 13
   },
   "AnasSarkiz": {
-    "reviewsReceived": 23,
+    "reviewsReceived": 26,
     "rejectionsReceived": 0,
-    "approvalsReceived": 21,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 24,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 773,
@@ -186,24 +204,27 @@
         "title": "Introduce Ratsnest-Free Schematic Solver Visualizations for Cleaner Bug Report Snapshots",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 7,
+        "url": "https://github.com/tscircuit/tsci-agent/pull/7",
+        "title": "Surface model request failures from the CLI",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 23,
+    "approvalsGiven": 31,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 11,
+    "prsOpened": 16,
+    "prsMerged": 13,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 22,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 29,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 34,
+    "score": 42,
     "stars": "⭐⭐",
-    "major": 2,
+    "major": 4,
     "minor": 3,
     "tiny": 5
   },
@@ -234,9 +255,9 @@
     "tiny": 0
   },
   "GokulPandi-M": {
-    "reviewsReceived": 6,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 0,
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -244,7 +265,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
-    "prsMerged": 0,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -253,8 +274,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 4,
+    "stars": "⭐",
+    "major": 1,
+    "minor": 0,
+    "tiny": 0
   },
   "HimanshuShukla671": {
     "reviewsReceived": 0,
@@ -280,12 +304,12 @@
     "stars": ""
   },
   "MustafaMulla29": {
-    "reviewsReceived": 15,
+    "reviewsReceived": 20,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
-    "staffReviewedPrs": 6,
+    "approvalsReceived": 12,
+    "staffReviewedPrs": 8,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 6,
+    "staffApprovalsReceived": 8,
     "staffReviewedPrLinks": [
       {
         "number": 237,
@@ -316,6 +340,20 @@
         "staffRejections": 0
       },
       {
+        "number": 663,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/663",
+        "title": "Align same-net schematic rails during trace cleanup",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 660,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/660",
+        "title": "Fix RP2040 crystal trace falling back to net labels",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 648,
         "url": "https://github.com/tscircuit/schematic-trace-solver/pull/648",
         "title": "Fix schematic routing regressions from pin-band penalty and chip-boundary reject",
@@ -330,37 +368,72 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 13,
+    "approvalsGiven": 19,
     "rejectionsGiven": 0,
-    "prsOpened": 22,
-    "prsMerged": 22,
+    "prsOpened": 29,
+    "prsMerged": 28,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 13,
+    "distinctPrsReviewedNonCodeOwner": 19,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 44,
+    "score": 49,
     "stars": "⭐⭐",
-    "major": 6,
+    "major": 7,
     "minor": 4,
-    "tiny": 11
+    "tiny": 16
   },
   "ShiboSoftwareDev": {
-    "reviewsReceived": 46,
+    "reviewsReceived": 72,
     "rejectionsReceived": 0,
-    "approvalsReceived": 42,
-    "staffReviewedPrs": 14,
+    "approvalsReceived": 68,
+    "staffReviewedPrs": 22,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 15,
+    "staffApprovalsReceived": 23,
     "staffReviewedPrLinks": [
+      {
+        "number": 240,
+        "url": "https://github.com/tscircuit/schematic-viewer/pull/240",
+        "title": "Add an analog simulation selector",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2677,
+        "url": "https://github.com/tscircuit/core/pull/2677",
+        "title": "Support multiple analog simulations per circuit",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2675,
+        "url": "https://github.com/tscircuit/core/pull/2675",
+        "title": "fix: hide collapsed group internal connectivity labels",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2669,
+        "url": "https://github.com/tscircuit/core/pull/2669",
+        "title": "Fix group port connectsTo wiring across schematic and PCB",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2641,
         "url": "https://github.com/tscircuit/core/pull/2641",
         "title": "Fix SRJ obstacles for rotated and polygon SMT pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3688,
+        "url": "https://github.com/tscircuit/cli/pull/3688",
+        "title": "Output SVGs for every analog simulation",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -370,6 +443,20 @@
         "title": "Support standalone simulation graph SVG URLs and prevent ngspice from crashing Next’s server router",
         "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 1625,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1625",
+        "title": "Pin selective rerip starvation fix",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1617,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1617",
+        "title": "Order tiny-hypergraph connections by net cardinality during selective rerip",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 1599,
@@ -449,6 +536,13 @@
         "staffRejections": 0
       },
       {
+        "number": 127,
+        "url": "https://github.com/tscircuit/tiny-hypergraph/pull/127",
+        "title": "Prevent selective rerip route starvation",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 125,
         "url": "https://github.com/tscircuit/tiny-hypergraph/pull/125",
         "title": " Add selective rerip routing for blocked tiny-hypergraph paths",
@@ -456,27 +550,27 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 17,
+    "approvalsGiven": 19,
     "rejectionsGiven": 0,
-    "prsOpened": 39,
-    "prsMerged": 27,
+    "prsOpened": 70,
+    "prsMerged": 47,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 16,
+    "distinctPrsReviewedNonCodeOwner": 18,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 75,
-    "stars": "⭐⭐⭐",
-    "major": 9,
-    "minor": 7,
-    "tiny": 11
+    "score": 98,
+    "stars": "👑",
+    "major": 15,
+    "minor": 11,
+    "tiny": 21
   },
   "abdalraof-albarbar": {
-    "reviewsReceived": 19,
+    "reviewsReceived": 20,
     "rejectionsReceived": 1,
     "approvalsReceived": 15,
     "staffReviewedPrs": 10,
@@ -556,7 +650,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 29,
+    "prsOpened": 32,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -574,9 +668,9 @@
     "tiny": 0
   },
   "anil08607": {
-    "reviewsReceived": 20,
+    "reviewsReceived": 22,
     "rejectionsReceived": 2,
-    "approvalsReceived": 9,
+    "approvalsReceived": 11,
     "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 1,
@@ -591,8 +685,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 8,
+    "prsOpened": 16,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -601,11 +695,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 10,
-    "stars": "⭐",
+    "score": 11,
+    "stars": "⭐⭐",
     "major": 0,
     "minor": 2,
-    "tiny": 6
+    "tiny": 7
   },
   "bnuckols13": {
     "reviewsReceived": 0,
@@ -843,29 +937,29 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 2,
-    "rejectionsGiven": 1,
+    "approvalsGiven": 3,
+    "rejectionsGiven": 0,
     "prsOpened": 23,
     "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 34,
+    "score": 35,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 5,
     "tiny": 10
   },
   "rushabhcodes": {
-    "reviewsReceived": 37,
+    "reviewsReceived": 47,
     "rejectionsReceived": 1,
-    "approvalsReceived": 11,
+    "approvalsReceived": 14,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 3,
@@ -892,43 +986,49 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 4,
     "rejectionsGiven": 1,
-    "prsOpened": 22,
-    "prsMerged": 19,
+    "prsOpened": 29,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 36,
-    "stars": "⭐⭐",
-    "major": 4,
+    "score": 54,
+    "stars": "⭐⭐⭐",
+    "major": 8,
     "minor": 3,
-    "tiny": 12
+    "tiny": 13
   },
   "seveibar": {
-    "reviewsReceived": 11,
+    "reviewsReceived": 13,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 81,
-    "rejectionsGiven": 6,
-    "prsOpened": 71,
-    "prsMerged": 60,
+    "approvalsGiven": 101,
+    "rejectionsGiven": 7,
+    "prsOpened": 83,
+    "prsMerged": 68,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 71,
-    "distinctPrsReviewedAsCodeOwner": 7,
+    "distinctPrsReviewedNonCodeOwner": 88,
+    "distinctPrsReviewedAsCodeOwner": 8,
     "reposOwned": [
+      {
+        "repo": "tscircuit/footprinter",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/schematic-symbols",
         "paths": [
@@ -946,21 +1046,27 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/common",
+        "paths": [
+          "*"
+        ]
       }
     ],
     "score": 85,
     "stars": "👑",
-    "major": 14,
-    "minor": 17,
-    "tiny": 28
+    "major": 15,
+    "minor": 18,
+    "tiny": 32
   },
   "techmannih": {
-    "reviewsReceived": 17,
+    "reviewsReceived": 23,
     "rejectionsReceived": 4,
-    "approvalsReceived": 9,
-    "staffReviewedPrs": 7,
+    "approvalsReceived": 14,
+    "staffReviewedPrs": 9,
     "staffRejectionsReceived": 6,
-    "staffApprovalsReceived": 5,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 718,
@@ -998,6 +1104,20 @@
         "staffRejections": 1
       },
       {
+        "number": 3229,
+        "url": "https://github.com/tscircuit/eval/pull/3229",
+        "title": "Add default .kicad_sym static file import support",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3679,
+        "url": "https://github.com/tscircuit/cli/pull/3679",
+        "title": "Add .kicad_sym import support to CLI dev and build",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 375,
         "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/375",
         "title": "fix(pcb): preserve PCB text size and emit explicit text thickness",
@@ -1012,24 +1132,20 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 7,
+    "approvalsGiven": 9,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 10,
+    "prsOpened": 25,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 7,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 9,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 21,
+    "score": 32,
     "stars": "⭐⭐",
     "major": 2,
-    "minor": 4,
-    "tiny": 4
+    "minor": 7,
+    "tiny": 9
   },
   "thienanwspace": {
     "reviewsReceived": 0,
@@ -1064,8 +1180,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 545,
-    "prsMerged": 424,
+    "prsOpened": 685,
+    "prsMerged": 538,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1078,7 +1194,7 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 410
+    "tiny": 458
   },
   "wanglianglll": {
     "reviewsReceived": 0,
@@ -1113,7 +1229,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
