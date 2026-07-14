@@ -1,13 +1,13 @@
-import type { ContributorStats } from "./types"
 import { scoreToStarString } from "./scoring/scoreToStars"
+import type { AnalyzedPR, ContributorStats } from "./types"
 
-export interface GitHubIdentityInput {
+export interface GitHubUserIdentity {
   id?: number
   login: string
 }
 
-export interface ResolvedGitHubIdentity {
-  key: string
+export interface ContributorIdentity {
+  contributorIdentityKey: string
   githubId?: number
   githubLogin: string
 }
@@ -16,7 +16,7 @@ export interface ResolvedGitHubIdentity {
  * Overview files generated before GitHub IDs were persisted need a one-time
  * bridge to the durable identity. New data never relies on this table.
  */
-const LEGACY_IDENTITIES_BY_LOGIN: Record<
+const LEGACY_CONTRIBUTOR_IDENTITIES_BY_LOGIN: Record<
   string,
   { githubId: number; githubLogin: string }
 > = {
@@ -30,7 +30,7 @@ const LEGACY_IDENTITIES_BY_LOGIN: Record<
   },
 }
 
-const ADDITIVE_STAT_FIELDS = [
+const ADDITIVE_CONTRIBUTOR_STAT_FIELDS = [
   "reviewsReceived",
   "rejectionsReceived",
   "approvalsReceived",
@@ -56,40 +56,43 @@ const ADDITIVE_STAT_FIELDS = [
   "discussionIncredibleComments",
 ] as const satisfies readonly (keyof ContributorStats)[]
 
-export function resolveGitHubIdentity({
+export function resolveContributorIdentity({
   id,
   login,
-}: GitHubIdentityInput): ResolvedGitHubIdentity {
-  const normalizedLogin = login.trim()
+}: GitHubUserIdentity): ContributorIdentity {
+  const trimmedLogin = login.trim()
   if (id !== undefined) {
     return {
-      key: `github:${id}`,
+      contributorIdentityKey: `github:${id}`,
       githubId: id,
-      githubLogin: normalizedLogin,
+      githubLogin: trimmedLogin,
     }
   }
 
-  const legacy = LEGACY_IDENTITIES_BY_LOGIN[normalizedLogin.toLowerCase()]
-  if (legacy) {
+  const legacyContributorIdentity =
+    LEGACY_CONTRIBUTOR_IDENTITIES_BY_LOGIN[trimmedLogin.toLowerCase()]
+  if (legacyContributorIdentity) {
     return {
-      key: `github:${legacy.githubId}`,
-      ...legacy,
+      contributorIdentityKey: `github:${legacyContributorIdentity.githubId}`,
+      ...legacyContributorIdentity,
     }
   }
 
   return {
-    key: `login:${normalizedLogin.toLowerCase()}`,
-    githubLogin: normalizedLogin,
+    contributorIdentityKey: `login:${trimmedLogin.toLowerCase()}`,
+    githubLogin: trimmedLogin,
   }
 }
 
 export function createEmptyContributorStats(
-  identity?: GitHubIdentityInput,
+  githubUserIdentity?: GitHubUserIdentity,
 ): ContributorStats {
-  const resolved = identity ? resolveGitHubIdentity(identity) : undefined
+  const contributorIdentity = githubUserIdentity
+    ? resolveContributorIdentity(githubUserIdentity)
+    : undefined
   return {
-    githubId: resolved?.githubId,
-    githubLogin: resolved?.githubLogin,
+    githubId: contributorIdentity?.githubId,
+    githubLogin: contributorIdentity?.githubLogin,
     reviewsReceived: 0,
     rejectionsReceived: 0,
     approvalsReceived: 0,
@@ -113,102 +116,166 @@ export function createEmptyContributorStats(
   }
 }
 
-export function getOrCreateContributor(
-  contributorsByIdentity: Record<string, ContributorStats>,
-  user: GitHubIdentityInput,
-): { key: string; stats: ContributorStats } {
-  const identity = resolveGitHubIdentity(user)
-  const stats =
-    contributorsByIdentity[identity.key] ?? createEmptyContributorStats(user)
+export function getOrCreateContributorStats(
+  contributorStatsByIdentity: Record<string, ContributorStats>,
+  githubUserIdentity: GitHubUserIdentity,
+): ContributorStats {
+  const contributorIdentity = resolveContributorIdentity(githubUserIdentity)
+  const contributorStats =
+    contributorStatsByIdentity[contributorIdentity.contributorIdentityKey] ??
+    createEmptyContributorStats(githubUserIdentity)
 
-  stats.githubId = identity.githubId
-  stats.githubLogin = identity.githubLogin
-  contributorsByIdentity[identity.key] = stats
+  contributorStats.githubId = contributorIdentity.githubId
+  contributorStats.githubLogin = contributorIdentity.githubLogin
+  contributorStatsByIdentity[contributorIdentity.contributorIdentityKey] =
+    contributorStats
 
-  return { key: identity.key, stats }
+  return contributorStats
 }
 
-function dedupeBy<T>(items: T[], getKey: (item: T) => string): T[] {
+function dedupeBy<T>(items: T[], getItemKey: (item: T) => string): T[] {
   const seen = new Set<string>()
   return items.filter((item) => {
-    const key = getKey(item)
-    if (seen.has(key)) return false
-    seen.add(key)
+    const itemKey = getItemKey(item)
+    if (seen.has(itemKey)) return false
+    seen.add(itemKey)
     return true
   })
 }
 
 export function mergeContributorStats(
-  first: ContributorStats,
-  second: ContributorStats,
+  firstContributorStats: ContributorStats,
+  secondContributorStats: ContributorStats,
 ): ContributorStats {
-  const merged: ContributorStats = { ...first }
+  const mergedContributorStats: ContributorStats = {
+    ...firstContributorStats,
+  }
 
-  for (const field of ADDITIVE_STAT_FIELDS) {
-    const firstValue = first[field]
-    const secondValue = second[field]
-    if (typeof firstValue === "number" || typeof secondValue === "number") {
-      Object.assign(merged, {
+  for (const field of ADDITIVE_CONTRIBUTOR_STAT_FIELDS) {
+    const firstStat = firstContributorStats[field]
+    const secondStat = secondContributorStats[field]
+    if (typeof firstStat === "number" || typeof secondStat === "number") {
+      Object.assign(mergedContributorStats, {
         [field]:
-          (typeof firstValue === "number" ? firstValue : 0) +
-          (typeof secondValue === "number" ? secondValue : 0),
+          (typeof firstStat === "number" ? firstStat : 0) +
+          (typeof secondStat === "number" ? secondStat : 0),
       })
     }
   }
 
-  merged.githubId = second.githubId ?? first.githubId
-  merged.githubLogin = second.githubLogin ?? first.githubLogin
-  merged.staffReviewedPrLinks = dedupeBy(
+  mergedContributorStats.githubId =
+    secondContributorStats.githubId ?? firstContributorStats.githubId
+  mergedContributorStats.githubLogin =
+    secondContributorStats.githubLogin ?? firstContributorStats.githubLogin
+  mergedContributorStats.staffReviewedPrLinks = dedupeBy(
     [
-      ...(first.staffReviewedPrLinks ?? []),
-      ...(second.staffReviewedPrLinks ?? []),
+      ...(firstContributorStats.staffReviewedPrLinks ?? []),
+      ...(secondContributorStats.staffReviewedPrLinks ?? []),
     ],
     (pr) => pr.url,
   )
-  merged.reposOwned = dedupeBy(
-    [...(first.reposOwned ?? []), ...(second.reposOwned ?? [])],
+  mergedContributorStats.reposOwned = dedupeBy(
+    [
+      ...(firstContributorStats.reposOwned ?? []),
+      ...(secondContributorStats.reposOwned ?? []),
+    ],
     (ownedRepo) => `${ownedRepo.repo}:${ownedRepo.paths.join(",")}`,
   )
 
-  if (typeof merged.score === "number") {
-    merged.stars = scoreToStarString(merged.score)
+  if (typeof mergedContributorStats.score === "number") {
+    mergedContributorStats.stars = scoreToStarString(
+      mergedContributorStats.score,
+    )
   } else {
-    merged.stars = second.stars ?? first.stars
+    mergedContributorStats.stars =
+      secondContributorStats.stars ?? firstContributorStats.stars
   }
 
-  return merged
+  return mergedContributorStats
 }
 
-/** Converts ID-keyed runtime data or legacy login-keyed JSON to display data. */
-export function normalizeContributorOverview(
-  raw: Record<string, ContributorStats>,
+/**
+ * Merges contributor stats by durable GitHub ID and returns them keyed by the
+ * contributor's current login for display and persisted overview files.
+ */
+export function mergeContributorStatsByGitHubId(
+  contributorStatsByLoginOrIdentity: Record<string, ContributorStats>,
 ): Record<string, ContributorStats> {
-  const byIdentity = new Map<
+  const contributorStatsByIdentity = new Map<
     string,
-    { githubLogin: string; stats: ContributorStats }
+    { githubLogin: string; contributorStats: ContributorStats }
   >()
 
-  for (const [outerLogin, rawStats] of Object.entries(raw)) {
-    const identity = resolveGitHubIdentity({
-      id: rawStats.githubId,
-      login: rawStats.githubLogin ?? outerLogin,
+  for (const [loginOrIdentityKey, contributorStats] of Object.entries(
+    contributorStatsByLoginOrIdentity,
+  )) {
+    const contributorIdentity = resolveContributorIdentity({
+      id: contributorStats.githubId,
+      login: contributorStats.githubLogin ?? loginOrIdentityKey,
     })
-    const stats: ContributorStats = {
-      ...rawStats,
-      githubId: identity.githubId,
-      githubLogin: identity.githubLogin,
+    const contributorStatsWithIdentity: ContributorStats = {
+      ...contributorStats,
+      githubId: contributorIdentity.githubId,
+      githubLogin: contributorIdentity.githubLogin,
     }
-    const existing = byIdentity.get(identity.key)
+    const existingContributor = contributorStatsByIdentity.get(
+      contributorIdentity.contributorIdentityKey,
+    )
 
-    byIdentity.set(identity.key, {
-      githubLogin: identity.githubLogin,
-      stats: existing ? mergeContributorStats(existing.stats, stats) : stats,
+    contributorStatsByIdentity.set(contributorIdentity.contributorIdentityKey, {
+      githubLogin: contributorIdentity.githubLogin,
+      contributorStats: existingContributor
+        ? mergeContributorStats(
+            existingContributor.contributorStats,
+            contributorStatsWithIdentity,
+          )
+        : contributorStatsWithIdentity,
     })
   }
 
   return Object.fromEntries(
-    [...byIdentity.values()]
+    [...contributorStatsByIdentity.values()]
       .sort((a, b) => a.githubLogin.localeCompare(b.githubLogin))
-      .map(({ githubLogin, stats }) => [githubLogin, stats]),
+      .map(({ githubLogin, contributorStats }) => [
+        githubLogin,
+        contributorStats,
+      ]),
   )
+}
+
+export function getPrsWithCurrentContributorLogins(
+  analyzedPrs: AnalyzedPR[],
+  contributorStatsByLogin: Record<string, ContributorStats>,
+): AnalyzedPR[] {
+  const currentLoginByGithubId = new Map(
+    Object.entries(contributorStatsByLogin).flatMap(
+      ([login, contributorStats]) =>
+        contributorStats.githubId === undefined
+          ? []
+          : [[contributorStats.githubId, login] as const],
+    ),
+  )
+
+  return analyzedPrs.map((analyzedPr) => {
+    const contributorIdentity = resolveContributorIdentity({
+      id: analyzedPr.contributorId ?? analyzedPr.user.id,
+      login: analyzedPr.contributor,
+    })
+    const currentContributorLogin =
+      (contributorIdentity.githubId === undefined
+        ? undefined
+        : currentLoginByGithubId.get(contributorIdentity.githubId)) ??
+      contributorIdentity.githubLogin
+
+    return {
+      ...analyzedPr,
+      contributor: currentContributorLogin,
+      contributorId: contributorIdentity.githubId,
+      user: {
+        ...analyzedPr.user,
+        id: contributorIdentity.githubId,
+        login: currentContributorLogin,
+      },
+    }
+  })
 }

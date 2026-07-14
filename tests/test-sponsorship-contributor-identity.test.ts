@@ -10,12 +10,12 @@ test("sponsorship follows a contributor across a legacy username change", () => 
 
   const sponsorships = calculateSponsorship([
     {
-      data: { "abdalraof-albarbar": newStats },
+      contributorStatsByLogin: { "abdalraof-albarbar": newStats },
       weekStartDate: new Date("2026-07-07T00:00:00Z"),
       weekEndDate: new Date("2026-07-13T00:00:00Z"),
     },
     {
-      data: { "technologyet31-create": oldStats },
+      contributorStatsByLogin: { "technologyet31-create": oldStats },
       weekStartDate: new Date("2026-06-30T00:00:00Z"),
       weekEndDate: new Date("2026-07-06T00:00:00Z"),
     },
@@ -45,12 +45,12 @@ test("sponsorship uses the latest login for the same durable ID", () => {
   // Deliberately oldest-first: the date, not input ordering, chooses the login.
   const sponsorships = calculateSponsorship([
     {
-      data: { "old-login": oldStats },
+      contributorStatsByLogin: { "old-login": oldStats },
       weekStartDate: new Date("2026-06-30T00:00:00Z"),
       weekEndDate: new Date("2026-07-06T00:00:00Z"),
     },
     {
-      data: { "new-login": newStats },
+      contributorStatsByLogin: { "new-login": newStats },
       weekStartDate: new Date("2026-07-07T00:00:00Z"),
       weekEndDate: new Date("2026-07-13T00:00:00Z"),
     },

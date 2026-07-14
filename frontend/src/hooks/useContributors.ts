@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import {
-  normalizeContributorOverview,
-  resolveGitHubIdentity,
+  mergeContributorStatsByGitHubId,
+  resolveContributorIdentity,
 } from "lib/contributor-identity"
 import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 import {
@@ -138,7 +138,7 @@ export function useContributors(): UseContributorsReturn {
           return fileDate >= eightWeeksAgo && fileDate <= selectedWeekDate
         })
 
-        const [weekJsonResp, historicalDataResults, prAnalysisResp] =
+        const [weekJsonResp, historicalContributorResults, prAnalysisResp] =
           await Promise.all([
             fetch(selectedFile.download_url),
             Promise.all(
@@ -150,12 +150,11 @@ export function useContributors(): UseContributorsReturn {
                   )
                   return null
                 }
-                const historicalRecord = normalizeContributorOverview(
-                  await resp.json(),
-                )
+                const historicalContributorStatsByLogin =
+                  mergeContributorStatsByGitHubId(await resp.json())
                 const fileDate = new Date(file.name.replace(".json", ""))
                 return {
-                  contributors: historicalRecord,
+                  contributors: historicalContributorStatsByLogin,
                   date: fileDate,
                 }
               }),
@@ -181,14 +180,14 @@ export function useContributors(): UseContributorsReturn {
 
         if (cancelled) return
 
-        const validHistoricalRecords = historicalDataResults.filter(
+        const validHistoricalRecords = historicalContributorResults.filter(
           (record) => record !== null,
         )
 
         const prsByContributor: Record<string, PrAnalysisResult[]> = {}
         const prsByRepo: Record<string, PrAnalysisResult[]> = {}
         for (const pr of prAnalysis) {
-          const contributorIdentity = resolveGitHubIdentity({
+          const contributorIdentity = resolveContributorIdentity({
             id: pr.contributorId,
             login: pr.contributor,
           })
@@ -205,7 +204,7 @@ export function useContributors(): UseContributorsReturn {
         }
 
         setContributorsByUsername(
-          normalizeContributorOverview(latestContributorsJson),
+          mergeContributorStatsByGitHubId(latestContributorsJson),
         )
         setJsonRecords(validHistoricalRecords)
         setPrsResultant({
@@ -245,7 +244,7 @@ export function useContributors(): UseContributorsReturn {
       if (jsonRecords.length === 0) return []
 
       const selectedStats = contributorsByUsername[username]
-      const selectedIdentity = resolveGitHubIdentity({
+      const selectedContributorIdentity = resolveContributorIdentity({
         id: selectedStats?.githubId,
         login: selectedStats?.githubLogin ?? username,
       })
@@ -253,18 +252,19 @@ export function useContributors(): UseContributorsReturn {
       const records: { date: Date; [key: string]: any }[] = []
 
       for (const record of jsonRecords) {
-        const contributor = Object.entries(record.contributors).find(
-          ([recordLogin, stats]) =>
-            resolveGitHubIdentity({
-              id: stats.githubId,
-              login: stats.githubLogin ?? recordLogin,
-            }).key === selectedIdentity.key,
+        const contributorStats = Object.entries(record.contributors).find(
+          ([recordLogin, recordContributorStats]) =>
+            resolveContributorIdentity({
+              id: recordContributorStats.githubId,
+              login: recordContributorStats.githubLogin ?? recordLogin,
+            }).contributorIdentityKey ===
+            selectedContributorIdentity.contributorIdentityKey,
         )?.[1]
-        if (!contributor) continue
+        if (!contributorStats) continue
         const timestamp = new Date(record.date).getTime()
         if (seen.has(timestamp)) continue
         seen.add(timestamp)
-        records.push({ date: new Date(record.date), ...contributor })
+        records.push({ date: new Date(record.date), ...contributorStats })
       }
 
       records.sort((a, b) => a.date.getTime() - b.date.getTime())

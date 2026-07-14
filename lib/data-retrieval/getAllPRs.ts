@@ -1,5 +1,5 @@
 import { octokit } from "lib/sdks"
-import { resolveGitHubIdentity } from "../contributor-identity"
+import { resolveContributorIdentity } from "../contributor-identity"
 import type { PullRequestWithReviews, ReviewerStats } from "../types"
 import { batchProcess } from "../utils/batch-process"
 
@@ -70,11 +70,11 @@ export async function getAllPRs(
       const allReviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
         (acc, review) => {
           if (!review.user) return acc
-          const reviewer = resolveGitHubIdentity(review.user)
-          if (!acc[reviewer.key]) {
-            acc[reviewer.key] = {
-              githubId: reviewer.githubId,
-              githubLogin: reviewer.githubLogin,
+          const reviewerIdentity = resolveContributorIdentity(review.user)
+          if (!acc[reviewerIdentity.contributorIdentityKey]) {
+            acc[reviewerIdentity.contributorIdentityKey] = {
+              githubId: reviewerIdentity.githubId,
+              githubLogin: reviewerIdentity.githubLogin,
               approvalsGiven: 0,
               rejectionsGiven: 0,
               prNumbers: new Set<number>(),
@@ -82,11 +82,15 @@ export async function getAllPRs(
           }
 
           if (review.state === "APPROVED") {
-            acc[reviewer.key].approvalsGiven++
-            acc[reviewer.key].prNumbers?.add(pr.number)
+            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
+              pr.number,
+            )
           } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer.key].rejectionsGiven++
-            acc[reviewer.key].prNumbers?.add(pr.number)
+            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
+              pr.number,
+            )
           }
 
           return acc
@@ -98,16 +102,25 @@ export async function getAllPRs(
 
       // For merged PRs, get the latest review per user
       if (isMerged) {
-        const userLatestReviewMap = new Map<string, any>()
+        const latestReviewByContributorIdentity = new Map<string, any>()
         // Process in reverse to get the latest review first
         for (const review of [...reviews].reverse()) {
           if (!review.user) continue
-          const reviewerKey = resolveGitHubIdentity(review.user).key
-          if (!userLatestReviewMap.has(reviewerKey)) {
-            userLatestReviewMap.set(reviewerKey, review)
+          const reviewerIdentity = resolveContributorIdentity(review.user)
+          if (
+            !latestReviewByContributorIdentity.has(
+              reviewerIdentity.contributorIdentityKey,
+            )
+          ) {
+            latestReviewByContributorIdentity.set(
+              reviewerIdentity.contributorIdentityKey,
+              review,
+            )
           }
         }
-        processedReviews = Array.from(userLatestReviewMap.values())
+        processedReviews = Array.from(
+          latestReviewByContributorIdentity.values(),
+        )
       }
 
       const approvalsReceived = processedReviews.filter(
@@ -121,11 +134,11 @@ export async function getAllPRs(
         Record<string, ReviewerStats>
       >((acc, review) => {
         if (!review.user) return acc
-        const reviewer = resolveGitHubIdentity(review.user)
-        if (!acc[reviewer.key]) {
-          acc[reviewer.key] = {
-            githubId: reviewer.githubId,
-            githubLogin: reviewer.githubLogin,
+        const reviewerIdentity = resolveContributorIdentity(review.user)
+        if (!acc[reviewerIdentity.contributorIdentityKey]) {
+          acc[reviewerIdentity.contributorIdentityKey] = {
+            githubId: reviewerIdentity.githubId,
+            githubLogin: reviewerIdentity.githubLogin,
             approvalsGiven: 0,
             rejectionsGiven: 0,
             prNumbers: new Set<number>(),
@@ -135,16 +148,18 @@ export async function getAllPRs(
         if (isMerged) {
           // For merged PRs, only add to prNumbers if approved
           if (review.state === "APPROVED") {
-            acc[reviewer.key].approvalsGiven++
-            acc[reviewer.key].prNumbers?.add(pr.number)
+            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
+              pr.number,
+            )
           } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer.key].rejectionsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
           }
         } else {
           if (review.state === "APPROVED") {
-            acc[reviewer.key].approvalsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
           } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer.key].rejectionsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
           }
         }
         return acc

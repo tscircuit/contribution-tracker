@@ -14,20 +14,20 @@ import {
   filterHardwareReimbursementsForMonth,
   readHardwareReimbursements,
 } from "../lib/hardware-reimbursements"
-import { resolveGitHubIdentity } from "../lib/contributor-identity"
+import { resolveContributorIdentity } from "../lib/contributor-identity"
 
-interface ContributorData {
+interface WeeklyContributorStats {
   githubId?: number
   githubLogin?: string
   stars?: string
   score?: number
 }
 
-interface WeeklyData {
-  [username: string]: ContributorData
+interface ContributorStatsByLogin {
+  [username: string]: WeeklyContributorStats
 }
 
-export interface WeekData {
+export interface ContributionWeek {
   filePath: string
   weekStartDate: Date
   weekEndDate: Date
@@ -37,7 +37,7 @@ export function getFullWeeksForMonth(
   year: number,
   month: number,
   today = new Date(),
-): WeekData[] {
+): ContributionWeek[] {
   const overviewsDir = path.join(process.cwd(), "contribution-overviews")
 
   // First day of the target month
@@ -88,7 +88,9 @@ export function getFullWeeksForMonth(
     .sort((a, b) => b.weekStartDate.getTime() - a.weekStartDate.getTime())
 }
 
-function readWeeklyData(filePath: string): WeeklyData {
+function readContributorStatsByLogin(
+  filePath: string,
+): ContributorStatsByLogin {
   const content = fs.readFileSync(filePath, "utf-8")
   return JSON.parse(content)
 }
@@ -108,18 +110,20 @@ function isTuesday(date: Date): boolean {
   return date.getUTCDay() === 2 // 0 = Sunday, 2 = Tuesday
 }
 
-export interface WeeklyDataWithDates {
-  data: WeeklyData
+export interface ContributorStatsForWeek {
+  contributorStatsByLogin: ContributorStatsByLogin
   weekStartDate: Date
   weekEndDate: Date
 }
 
-export function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
+export function calculateSponsorship(
+  contributorStatsByWeek: ContributorStatsForWeek[],
+): {
   username: string
   amount: number
   remarks: string
 }[] {
-  const sponsorships: Map<
+  const sponsorshipByContributorIdentity: Map<
     string,
     {
       username: string
@@ -132,52 +136,68 @@ export function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
   > = new Map()
 
   // Collect data from all weeks
-  weeksWithDates.forEach(
-    ({ data: weekData, weekStartDate, weekEndDate }, weekIndex) => {
-      Object.entries(weekData).forEach(([outerLogin, data]) => {
-        const identity = resolveGitHubIdentity({
-          id: data.githubId,
-          login: data.githubLogin ?? outerLogin,
-        })
-
-        if (!sponsorships.has(identity.key)) {
-          // Initialize with correct weekly date ranges
-          const weekDates = weeksWithDates.map(
-            ({ weekStartDate, weekEndDate }) => {
-              return {
-                start: new Date(weekStartDate),
-                end: new Date(weekEndDate),
-              }
-            },
-          )
-
-          sponsorships.set(identity.key, {
-            username: identity.githubLogin,
-            weeklyScores: Array(weeksWithDates.length).fill(0),
-            hasWeeklyScore: Array(weeksWithDates.length).fill(false),
-            fallbackWeeklyStars: Array(weeksWithDates.length).fill(0),
-            weekDates,
-            latestWeekEnd: weekEndDate.getTime(),
+  contributorStatsByWeek.forEach(
+    ({ contributorStatsByLogin, weekStartDate, weekEndDate }, weekIndex) => {
+      Object.entries(contributorStatsByLogin).forEach(
+        ([storedLogin, contributorStats]) => {
+          const contributorIdentity = resolveContributorIdentity({
+            id: contributorStats.githubId,
+            login: contributorStats.githubLogin ?? storedLogin,
           })
-        }
 
-        const userSponsorship = sponsorships.get(identity.key)!
-        if (weekEndDate.getTime() > userSponsorship.latestWeekEnd) {
-          userSponsorship.username = identity.githubLogin
-          userSponsorship.latestWeekEnd = weekEndDate.getTime()
-        }
-        if (typeof data.score === "number") {
-          userSponsorship.weeklyScores[weekIndex] += data.score
-          userSponsorship.hasWeeklyScore[weekIndex] = true
-        } else if (data.stars) {
-          userSponsorship.fallbackWeeklyStars[weekIndex] = Math.max(
-            userSponsorship.fallbackWeeklyStars[weekIndex],
-            countStars(data.stars),
-          )
-        }
+          if (
+            !sponsorshipByContributorIdentity.has(
+              contributorIdentity.contributorIdentityKey,
+            )
+          ) {
+            // Initialize with correct weekly date ranges
+            const weekDates = contributorStatsByWeek.map(
+              ({ weekStartDate, weekEndDate }) => {
+                return {
+                  start: new Date(weekStartDate),
+                  end: new Date(weekEndDate),
+                }
+              },
+            )
 
-        // We don't need to update the dates here as they're already initialized correctly
-      })
+            sponsorshipByContributorIdentity.set(
+              contributorIdentity.contributorIdentityKey,
+              {
+                username: contributorIdentity.githubLogin,
+                weeklyScores: Array(contributorStatsByWeek.length).fill(0),
+                hasWeeklyScore: Array(contributorStatsByWeek.length).fill(
+                  false,
+                ),
+                fallbackWeeklyStars: Array(contributorStatsByWeek.length).fill(
+                  0,
+                ),
+                weekDates,
+                latestWeekEnd: weekEndDate.getTime(),
+              },
+            )
+          }
+
+          const contributorSponsorship = sponsorshipByContributorIdentity.get(
+            contributorIdentity.contributorIdentityKey,
+          )!
+          if (weekEndDate.getTime() > contributorSponsorship.latestWeekEnd) {
+            contributorSponsorship.username = contributorIdentity.githubLogin
+            contributorSponsorship.latestWeekEnd = weekEndDate.getTime()
+          }
+          if (typeof contributorStats.score === "number") {
+            contributorSponsorship.weeklyScores[weekIndex] +=
+              contributorStats.score
+            contributorSponsorship.hasWeeklyScore[weekIndex] = true
+          } else if (contributorStats.stars) {
+            contributorSponsorship.fallbackWeeklyStars[weekIndex] = Math.max(
+              contributorSponsorship.fallbackWeeklyStars[weekIndex],
+              countStars(contributorStats.stars),
+            )
+          }
+
+          // We don't need to update the dates here as they're already initialized correctly
+        },
+      )
     },
   )
 
@@ -187,9 +207,9 @@ export function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
   }
 
   // Calculate sponsorship amounts
-  return Array.from(sponsorships.entries())
-    .map(([, data]) => {
-      const { username, weeklyScores, weekDates } = data
+  return Array.from(sponsorshipByContributorIdentity.values())
+    .map((contributorSponsorship) => {
+      const { username, weeklyScores, weekDates } = contributorSponsorship
       // Skip full-timers
       if (STAFF_USERNAMES.includes(username)) return null
 
@@ -197,9 +217,9 @@ export function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
       if (isUserIneligible(username)) return null
 
       const weeklyStars = weeklyScores.map((score, index) =>
-        data.hasWeeklyScore[index]
+        contributorSponsorship.hasWeeklyScore[index]
           ? scoreToSponsorshipStarCount(score, username)
-          : data.fallbackWeeklyStars[index],
+          : contributorSponsorship.fallbackWeeklyStars[index],
       )
       const highScore = Math.max(...weeklyScores)
 
@@ -263,20 +283,20 @@ function main() {
   const weeks = getFullWeeksForMonth(year, month)
 
   // Read weekly data for each week
-  const weeksWithContributions = weeks.map((week) => ({
-    data: readWeeklyData(week.filePath),
+  const contributorStatsByWeek = weeks.map((week) => ({
+    contributorStatsByLogin: readContributorStatsByLogin(week.filePath),
     weekStartDate: week.weekStartDate,
     weekEndDate: week.weekEndDate,
   }))
 
   // Check if we have enough weeks
-  if (weeksWithContributions.length === 0) {
+  if (contributorStatsByWeek.length === 0) {
     console.error(`No weekly data found for ${year}-${month}`)
     process.exit(1)
   }
 
   // Calculate sponsorships
-  const sponsorships = calculateSponsorship(weeksWithContributions)
+  const sponsorships = calculateSponsorship(contributorStatsByWeek)
   const hardwareReimbursements = filterHardwareReimbursementsForMonth(
     readHardwareReimbursements(),
     year,

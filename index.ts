@@ -6,9 +6,9 @@ import {
   scoreToStarString,
 } from "lib/data-processing/generateMarkdown"
 import {
-  getOrCreateContributor,
-  normalizeContributorOverview,
-  resolveGitHubIdentity,
+  getOrCreateContributorStats,
+  getPrsWithCurrentContributorLogins,
+  mergeContributorStatsByGitHubId,
 } from "lib/contributor-identity"
 import {
   getExistingPrAnalysis,
@@ -37,8 +37,8 @@ export async function generateOverview(
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
   // Runtime aggregation is keyed by durable GitHub account ID, never login.
-  const contributorDataByIdentity: Record<string, ContributorStats> = {}
-  const reviewerToReviewedPrs: Record<
+  const contributorStatsByIdentity: Record<string, ContributorStats> = {}
+  const reviewedPrsByReviewerIdentity: Record<
     string,
     Set<{ number: number; isReviewerRepoOwner: boolean }>
   > = {}
@@ -64,14 +64,14 @@ export async function generateOverview(
         continue
       }
 
-      const contributor = pr.user.login
-      const { stats: contributorStats } = getOrCreateContributor(
-        contributorDataByIdentity,
+      const contributorLogin = pr.user.login
+      const contributorStats = getOrCreateContributorStats(
+        contributorStatsByIdentity,
         pr.user,
       )
 
       const isRepoOwner = repoOwners.some((content) =>
-        content.owners.includes(contributor),
+        content.owners.includes(contributorLogin),
       )
       if (isRepoOwner) {
         const existingRepo = contributorStats.reposOwned?.find(
@@ -83,7 +83,7 @@ export async function generateOverview(
           ).concat({
             repo,
             paths: repoOwners.find((content) =>
-              content.owners.includes(contributor),
+              content.owners.includes(contributorLogin),
             )?.paths ?? ["*"],
           })
         }
@@ -131,31 +131,33 @@ export async function generateOverview(
 
       if (pr.reviewsByUser) {
         Object.entries(pr.reviewsByUser).forEach(
-          ([reviewerKey, reviewerStats]) => {
-            const reviewer = reviewerStats.githubLogin
+          ([reviewerIdentityKey, reviewerStats]) => {
+            const reviewerLogin = reviewerStats.githubLogin
             const isReviewerRepoOwner = repoOwners.some((content) =>
-              content.owners.includes(reviewer),
+              content.owners.includes(reviewerLogin),
             )
-            const { stats } = getOrCreateContributor(
-              contributorDataByIdentity,
+            const reviewerContributorStats = getOrCreateContributorStats(
+              contributorStatsByIdentity,
               {
                 id: reviewerStats.githubId,
-                login: reviewer,
+                login: reviewerLogin,
               },
             )
-            stats.approvalsGiven += reviewerStats.approvalsGiven
-            stats.rejectionsGiven += reviewerStats.rejectionsGiven
+            reviewerContributorStats.approvalsGiven +=
+              reviewerStats.approvalsGiven
+            reviewerContributorStats.rejectionsGiven +=
+              reviewerStats.rejectionsGiven
 
             // Collect unique PR numbers for each reviewer
-            if (!reviewerToReviewedPrs[reviewerKey]) {
-              reviewerToReviewedPrs[reviewerKey] = new Set<{
+            if (!reviewedPrsByReviewerIdentity[reviewerIdentityKey]) {
+              reviewedPrsByReviewerIdentity[reviewerIdentityKey] = new Set<{
                 number: number
                 isReviewerRepoOwner: boolean
               }>()
             }
             if (reviewerStats.prNumbers) {
               reviewerStats.prNumbers.forEach((prNum) =>
-                reviewerToReviewedPrs[reviewerKey].add({
+                reviewedPrsByReviewerIdentity[reviewerIdentityKey].add({
                   number: prNum,
                   isReviewerRepoOwner: isReviewerRepoOwner || false,
                 }),
@@ -169,16 +171,16 @@ export async function generateOverview(
     }
 
     // After processing all PRs, set distinctPrsReviewedNonCodeOwner for each reviewer
-    Object.entries(reviewerToReviewedPrs).forEach(
-      ([reviewerKey, prReviewMeta]) => {
-        if (contributorDataByIdentity[reviewerKey]) {
-          contributorDataByIdentity[
-            reviewerKey
+    Object.entries(reviewedPrsByReviewerIdentity).forEach(
+      ([reviewerIdentityKey, prReviewMeta]) => {
+        if (contributorStatsByIdentity[reviewerIdentityKey]) {
+          contributorStatsByIdentity[
+            reviewerIdentityKey
           ].distinctPrsReviewedNonCodeOwner = Array.from(prReviewMeta).filter(
             (pr) => !pr.isReviewerRepoOwner,
           ).length
-          contributorDataByIdentity[
-            reviewerKey
+          contributorStatsByIdentity[
+            reviewerIdentityKey
           ].distinctPrsReviewedAsCodeOwner = Array.from(prReviewMeta).filter(
             (pr) => pr.isReviewerRepoOwner,
           ).length
@@ -248,7 +250,7 @@ export async function generateOverview(
      * can optimize or cache these requests, this section is commented out.
      */
     // const bountiedIssuesPromises = Object.values(
-    //   contributorDataByIdentity,
+    //   contributorStatsByIdentity,
     // ).map(async (contributorStats) => {
     //     const contributor = contributorStats.githubLogin
     //     if (!contributor) return
@@ -268,7 +270,7 @@ export async function generateOverview(
     // await Promise.all(bountiedIssuesPromises)
 
     // const getIssuesCreatedPromises = Object.values(
-    //   contributorDataByIdentity,
+    //   contributorStatsByIdentity,
     // ).map(async (contributorStats) => {
     //     const contributor = contributorStats.githubLogin
     //     if (!contributor) return
@@ -294,91 +296,77 @@ export async function generateOverview(
     // await Promise.all(getIssuesCreatedPromises)
   }
   // Process GitHub Discussions for all contributors
-  const allGithubDiscussions = await processDiscussionsForContributors(
-    startDate,
-    contributorDataByIdentity,
-    currentTime,
-  )
-  const processDiscussionsPromises = Object.entries(allGithubDiscussions).map(
-    async ([contributorKey, discussionStats]) => {
-      contributorDataByIdentity[contributorKey] = discussionStats
-      const contributor =
-        discussionStats.githubLogin ?? `unknown-${contributorKey}`
-      console.log(
-        `Processed discussion for ${contributor} - discussionComments: ${discussionStats.discussionComments}`,
-      )
+  const contributorStatsWithDiscussionsByIdentity =
+    await processDiscussionsForContributors({
+      startDate,
+      currentTime,
+      contributorStatsByIdentity,
+    })
+  for (const [contributorIdentityKey, contributorStats] of Object.entries(
+    contributorStatsWithDiscussionsByIdentity,
+  )) {
+    contributorStatsByIdentity[contributorIdentityKey] = contributorStats
+    const contributorLogin =
+      contributorStats.githubLogin ?? `unknown-${contributorIdentityKey}`
+    console.log(
+      `Processed discussion for ${contributorLogin} - discussionComments: ${contributorStats.discussionComments}`,
+    )
 
-      // Add to score based on discussion contribution levels
-      discussionStats.score =
-        (discussionStats.score ?? 0) +
-        (discussionStats.discussionNormalComments ?? 0) * 1 // 1 point each
-      discussionStats.score =
-        (discussionStats.score ?? 0) +
-        (discussionStats.discussionGreatInformativeComments ?? 0) * 2 // 2 points each
-      discussionStats.score =
-        (discussionStats.score ?? 0) +
-        (discussionStats.discussionIncredibleComments ?? 0) * 4 // 4 points each
+    // Add to score based on discussion contribution levels
+    contributorStats.score =
+      (contributorStats.score ?? 0) +
+      (contributorStats.discussionNormalComments ?? 0) * 1 // 1 point each
+    contributorStats.score =
+      (contributorStats.score ?? 0) +
+      (contributorStats.discussionGreatInformativeComments ?? 0) * 2 // 2 points each
+    contributorStats.score =
+      (contributorStats.score ?? 0) +
+      (contributorStats.discussionIncredibleComments ?? 0) * 4 // 4 points each
 
-      discussionStats.stars = scoreToStarString(discussionStats.score ?? 0)
+    contributorStats.stars = scoreToStarString(contributorStats.score ?? 0)
+  }
+
+  // Remove bot accounts from contributor stats
+  Object.entries(contributorStatsByIdentity).forEach(
+    ([contributorIdentityKey, contributorStats]) => {
+      if (contributorStats.githubLogin?.includes("[bot]")) {
+        delete contributorStatsByIdentity[contributorIdentityKey]
+      }
     },
   )
-  await Promise.all(processDiscussionsPromises)
 
-  // Remove bot accounts from contributor data
-  Object.entries(contributorDataByIdentity).forEach(([key, stats]) => {
-    if (stats.githubLogin?.includes("[bot]")) {
-      delete contributorDataByIdentity[key]
-    }
-  })
-
-  const contributorData = normalizeContributorOverview(
-    contributorDataByIdentity,
+  const contributorStatsByLogin = mergeContributorStatsByGitHubId(
+    contributorStatsByIdentity,
   )
-  const currentLoginById = new Map(
-    Object.entries(contributorData).flatMap(([login, stats]) =>
-      stats.githubId === undefined ? [] : [[stats.githubId, login] as const],
-    ),
-  )
-  const normalizedPrs = mergedPrsWithAnalysis.map((pr) => {
-    const identity = resolveGitHubIdentity({
-      id: pr.contributorId ?? pr.user.id,
-      login: pr.contributor,
-    })
-    const currentLogin =
-      (identity.githubId === undefined
-        ? undefined
-        : currentLoginById.get(identity.githubId)) ?? identity.githubLogin
-
-    return {
-      ...pr,
-      contributor: currentLogin,
-      contributorId: identity.githubId,
-      user: {
-        ...pr.user,
-        id: identity.githubId,
-        login: currentLogin,
-      },
-    }
-  })
+  const mergedPrsWithCurrentContributorLogins =
+    getPrsWithCurrentContributorLogins(
+      mergedPrsWithAnalysis,
+      contributorStatsByLogin,
+    )
 
   // Data processing complete
-  await generateAndWriteFiles(
-    normalizedPrs,
-    contributorData,
+  await generateAndWriteFiles({
+    mergedPrsWithCurrentContributorLogins,
+    contributorStatsByLogin,
     startDateString,
     repoOwnersMap,
-  )
+  })
 }
 
-async function generateAndWriteFiles(
-  mergedPrsWithAnalysis: AnalyzedPR[],
-  contributorData: Record<string, ContributorStats>,
-  startDateString: string,
-  repoOwnersMap: Record<string, string[]>,
-) {
+async function generateAndWriteFiles({
+  mergedPrsWithCurrentContributorLogins,
+  contributorStatsByLogin,
+  startDateString,
+  repoOwnersMap,
+}: {
+  mergedPrsWithCurrentContributorLogins: AnalyzedPR[]
+  contributorStatsByLogin: Record<string, ContributorStats>
+  startDateString: string
+  repoOwnersMap: Record<string, string[]>
+}) {
   console.log("Generating markdown")
   // Group PRs by contributor
-  const contributorPRs = mergedPrsWithAnalysis.reduce(
+  const contributorPRs = mergedPrsWithCurrentContributorLogins.reduce(
     (acc, pr) => {
       if (!acc[pr.contributor]) {
         acc[pr.contributor] = []
@@ -401,19 +389,19 @@ async function generateAndWriteFiles(
   const sortedPRs = Object.values(contributorPRs).flat()
   const markdown = await generateMarkdown(
     sortedPRs,
-    contributorData,
+    contributorStatsByLogin,
     startDateString,
     repoOwnersMap,
   )
   console.log("Generated markdown", markdown)
 
-  // Sort contributor data alphabetically by contributor name
-  const contributorUsernames = Object.keys(contributorData)
+  // Sort contributor stats alphabetically by contributor name
+  const contributorStatsBySortedLogin = Object.keys(contributorStatsByLogin)
     .sort()
     .reduce(
-      (acc, key) => {
-        acc[key] = contributorData[key]
-        return acc
+      (sortedContributorStats, login) => {
+        sortedContributorStats[login] = contributorStatsByLogin[login]
+        return sortedContributorStats
       },
       {} as Record<string, ContributorStats>,
     )
@@ -423,7 +411,7 @@ async function generateAndWriteFiles(
   console.log(`Generated contribution-overviews/${startDateString}.md`)
   fs.writeFileSync(
     `contribution-overviews/${startDateString}.json`,
-    JSON.stringify(contributorUsernames, null, 2),
+    JSON.stringify(contributorStatsBySortedLogin, null, 2),
   )
   console.log(`Generated contribution-overviews/${startDateString}.json`)
 
