@@ -5,6 +5,7 @@ import { generateAnalyzePRPrompt } from "lib/ai-stuff/prompts"
 import { generateAiObjectCached } from "./sdk"
 import { pr_attribute_schema } from "./pr-attributes"
 import { getContributionStarRatingFromAttributes } from "./getConstributionStarRatingFromAttributes"
+import { getCanonicalUsername } from "lib/contributor-aliases"
 
 const prSchema = z
   .object({
@@ -52,7 +53,7 @@ export async function analyzePRWithAI(
     state: pr.state,
     number: result.object.number,
     title: result.object.title,
-    contributor: result.object.contributor,
+    contributor: getCanonicalUsername(result.object.contributor),
     repo: result.object.repo,
     url: result.object.url,
     isAlignedWithMilestone: false,

@@ -14,6 +14,7 @@ import {
   filterHardwareReimbursementsForMonth,
   readHardwareReimbursements,
 } from "../lib/hardware-reimbursements"
+import { getCanonicalUsername } from "../lib/contributor-aliases"
 
 interface ContributorData {
   stars?: string
@@ -128,7 +129,10 @@ function calculateSponsorship(weeksWithDates: WeeklyDataWithDates[]): {
   // Collect data from all weeks
   weeksWithDates.forEach(
     ({ data: weekData, weekStartDate, weekEndDate }, weekIndex) => {
-      Object.entries(weekData).forEach(([username, data]) => {
+      Object.entries(weekData).forEach(([rawUsername, data]) => {
+        // Merge renamed accounts into their current login so a rename mid-month
+        // doesn't split someone's weekly scores across two usernames.
+        const username = getCanonicalUsername(rawUsername)
         // Skip full-timers
         if (STAFF_USERNAMES.includes(username)) return
 

@@ -1,4 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import { getCanonicalUsername } from "lib/contributor-aliases"
+import {
+  combineStats,
+  mergeAliasedContributors,
+} from "lib/merge-contributor-stats"
 import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 import {
   type ContributorStats,
@@ -174,6 +179,9 @@ export function useContributors(): UseContributorsReturn {
         const prsByContributor: Record<string, PrAnalysisResult[]> = {}
         const prsByRepo: Record<string, PrAnalysisResult[]> = {}
         for (const pr of prAnalysis) {
+          // Normalize a renamed account to its current login so the PR shows up
+          // under one contributor everywhere it's listed.
+          pr.contributor = getCanonicalUsername(pr.contributor)
           if (!prsByRepo[pr.repo]) {
             prsByRepo[pr.repo] = []
           }
@@ -184,7 +192,12 @@ export function useContributors(): UseContributorsReturn {
           prsByContributor[pr.contributor].push(pr)
         }
 
-        setContributorsByUsername(latestContributorsJson)
+        setContributorsByUsername(
+          mergeAliasedContributors(latestContributorsJson) as unknown as Record<
+            string,
+            ContributorStats
+          >,
+        )
         setJsonRecords(validHistoricalRecords)
         setPrsResultant({
           prsByContributors: prsByContributor,
@@ -226,11 +239,18 @@ export function useContributors(): UseContributorsReturn {
       const records: { date: Date; [key: string]: any }[] = []
 
       for (const record of jsonRecords) {
-        if (!record[username]) continue
+        const aliasKeys = Object.keys(record).filter(
+          (key) => key !== "date" && getCanonicalUsername(key) === username,
+        )
+        if (aliasKeys.length === 0) continue
         const timestamp = new Date(record.date).getTime()
         if (seen.has(timestamp)) continue
         seen.add(timestamp)
-        records.push({ date: new Date(record.date), ...record[username] })
+        const combined = aliasKeys.reduce<Record<string, unknown>>(
+          (acc, key) => combineStats(acc, record[key]),
+          {},
+        )
+        records.push({ date: new Date(record.date), ...combined })
       }
 
       records.sort((a, b) => a.date.getTime() - b.date.getTime())

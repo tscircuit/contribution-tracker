@@ -1,5 +1,6 @@
 import type { AnalyzedPR } from "lib/types"
 import fs from "fs"
+import { getCanonicalUsername } from "lib/contributor-aliases"
 
 export interface StoredPrAnalysis extends AnalyzedPR {
   tag: string
@@ -14,7 +15,13 @@ export const loadPrAnalysis = (weekStartDate: string): StoredPrAnalysis[] => {
   }
   try {
     const content = fs.readFileSync(filePath, "utf-8")
-    return JSON.parse(content) as StoredPrAnalysis[]
+    // Heal renamed accounts (see contributor-aliases) so cached analyses
+    // aggregate under one login in generated markdown and are rewritten to the
+    // canonical login the next time this week is stored.
+    return (JSON.parse(content) as StoredPrAnalysis[]).map((pr) => ({
+      ...pr,
+      contributor: getCanonicalUsername(pr.contributor),
+    }))
   } catch (e) {
     console.error(`Failed to load PR analysis from ${filePath}`, e)
     return []
