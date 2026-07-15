@@ -5,6 +5,8 @@ import type {
 } from "./ai-stuff/pr-attributes"
 
 export interface ReviewerStats {
+  githubId?: number
+  githubLogin: string
   approvalsGiven: number
   rejectionsGiven: number
   prNumbers?: Set<number> // Set of PR numbers this reviewer has reviewed
@@ -18,6 +20,7 @@ export interface DiscussionComment {
   url: string
   createdAt: string
   discussionAuthor: string
+  discussionAuthorId?: number
 }
 
 export interface DiscussionContribution {
@@ -29,6 +32,10 @@ export interface DiscussionContribution {
 }
 
 export interface ContributorStats {
+  /** Durable GitHub account ID. Missing only from overview files generated before ID tracking. */
+  githubId?: number
+  /** Most recently observed GitHub login; used only for display and API filters. */
+  githubLogin?: string
   reviewsReceived: number
   rejectionsReceived: number
   approvalsReceived: number
@@ -72,6 +79,7 @@ export interface PullRequest {
   title: string
   body: string
   user: {
+    id?: number
     login: string
   }
   html_url: string
@@ -104,6 +112,8 @@ export interface AnalyzedPR extends PullRequest, PrAttributeSchema {
   /** @deprecated */
   impact: "Major" | "Minor" | "Tiny"
   contributor: string
+  /** Durable identity for the contributor. Missing only from legacy cached analyses. */
+  contributorId?: number
   repo: string
   url: string
   /** @deprecated */

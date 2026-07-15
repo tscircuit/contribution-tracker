@@ -1,9 +1,6 @@
 import { octokit } from "lib/sdks"
-import type {
-  ContributorStats,
-  PullRequestWithReviews,
-  ReviewerStats,
-} from "../types"
+import { resolveContributorIdentity } from "../contributor-identity"
+import type { PullRequestWithReviews, ReviewerStats } from "../types"
 import { batchProcess } from "../utils/batch-process"
 
 export async function getAllPRs(
@@ -33,6 +30,7 @@ export async function getAllPRs(
   const sinceDate = new Date(since)
   const currentTimeMs = currentTime.getTime()
   const filteredPRs = prs.filter((pr) => {
+    if (!pr.user) return false
     if (pr.user.login.includes("renovate")) return false
     const createdDate = pr.created_at ? new Date(pr.created_at) : null
     const mergedDate = pr.merged_at ? new Date(pr.merged_at) : null
@@ -71,9 +69,12 @@ export async function getAllPRs(
 
       const allReviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
         (acc, review) => {
-          const reviewer = review.user.login
-          if (!acc[reviewer]) {
-            acc[reviewer] = {
+          if (!review.user) return acc
+          const reviewerIdentity = resolveContributorIdentity(review.user)
+          if (!acc[reviewerIdentity.contributorIdentityKey]) {
+            acc[reviewerIdentity.contributorIdentityKey] = {
+              githubId: reviewerIdentity.githubId,
+              githubLogin: reviewerIdentity.githubLogin,
               approvalsGiven: 0,
               rejectionsGiven: 0,
               prNumbers: new Set<number>(),
@@ -81,11 +82,15 @@ export async function getAllPRs(
           }
 
           if (review.state === "APPROVED") {
-            acc[reviewer].approvalsGiven++
-            acc[reviewer].prNumbers?.add(pr.number)
+            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
+              pr.number,
+            )
           } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer].rejectionsGiven++
-            acc[reviewer].prNumbers?.add(pr.number)
+            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
+              pr.number,
+            )
           }
 
           return acc
@@ -97,15 +102,25 @@ export async function getAllPRs(
 
       // For merged PRs, get the latest review per user
       if (isMerged) {
-        const userLatestReviewMap = new Map<string, any>()
+        const latestReviewByContributorIdentity = new Map<string, any>()
         // Process in reverse to get the latest review first
         for (const review of [...reviews].reverse()) {
-          const reviewer = review.user.login
-          if (!userLatestReviewMap.has(reviewer)) {
-            userLatestReviewMap.set(reviewer, review)
+          if (!review.user) continue
+          const reviewerIdentity = resolveContributorIdentity(review.user)
+          if (
+            !latestReviewByContributorIdentity.has(
+              reviewerIdentity.contributorIdentityKey,
+            )
+          ) {
+            latestReviewByContributorIdentity.set(
+              reviewerIdentity.contributorIdentityKey,
+              review,
+            )
           }
         }
-        processedReviews = Array.from(userLatestReviewMap.values())
+        processedReviews = Array.from(
+          latestReviewByContributorIdentity.values(),
+        )
       }
 
       const approvalsReceived = processedReviews.filter(
@@ -118,9 +133,12 @@ export async function getAllPRs(
       const reviewsByUser = processedReviews.reduce<
         Record<string, ReviewerStats>
       >((acc, review) => {
-        const reviewer = review.user.login
-        if (!acc[reviewer]) {
-          acc[reviewer] = {
+        if (!review.user) return acc
+        const reviewerIdentity = resolveContributorIdentity(review.user)
+        if (!acc[reviewerIdentity.contributorIdentityKey]) {
+          acc[reviewerIdentity.contributorIdentityKey] = {
+            githubId: reviewerIdentity.githubId,
+            githubLogin: reviewerIdentity.githubLogin,
             approvalsGiven: 0,
             rejectionsGiven: 0,
             prNumbers: new Set<number>(),
@@ -130,16 +148,18 @@ export async function getAllPRs(
         if (isMerged) {
           // For merged PRs, only add to prNumbers if approved
           if (review.state === "APPROVED") {
-            acc[reviewer].approvalsGiven++
-            acc[reviewer].prNumbers?.add(pr.number)
+            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
+              pr.number,
+            )
           } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer].rejectionsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
           }
         } else {
           if (review.state === "APPROVED") {
-            acc[reviewer].approvalsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
           } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewer].rejectionsGiven++
+            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
           }
         }
         return acc
@@ -163,56 +183,6 @@ export async function getAllPRs(
     },
     20, // Process 20 PRs at a time
     100, // 100ms delay between batches
-  )
-
-  // Map of reviewer usernames to their set of reviewed PR numbers
-  const reviewerUserNameToReviewedPrsSet: Record<string, Set<number>> = {}
-  const contributorStats: Record<string, ContributorStats> = {}
-
-  // First pass: collect all PR numbers for each reviewer
-  prsWithDetails.forEach((pr) => {
-    if (!pr.reviewsByUser) return
-
-    Object.entries(pr.reviewsByUser).forEach(([reviewer, stats]) => {
-      if (!reviewerUserNameToReviewedPrsSet[reviewer]) {
-        reviewerUserNameToReviewedPrsSet[reviewer] = new Set<number>()
-      }
-      if (stats.prNumbers) {
-        // Union the PR numbers from this review into the aggregate set
-        stats.prNumbers.forEach((prNum) =>
-          reviewerUserNameToReviewedPrsSet[reviewer].add(prNum),
-        )
-      }
-
-      // Initialize contributor stats if needed
-      if (!contributorStats[reviewer]) {
-        contributorStats[reviewer] = {
-          reviewsReceived: 0,
-          rejectionsReceived: 0,
-          approvalsReceived: 0,
-          prsOpened: 0,
-          prsMerged: 0,
-          issuesCreated: 0,
-          approvalsGiven: 0,
-          rejectionsGiven: 0,
-          distinctPrsReviewedNonCodeOwner: 0,
-        }
-      }
-
-      // Add this PR's review counts to the total
-      contributorStats[reviewer].approvalsGiven += stats.approvalsGiven
-      contributorStats[reviewer].rejectionsGiven += stats.rejectionsGiven
-    })
-  })
-
-  // Second pass: set distinctPrsReviewedNonCodeOwner from aggregated PR numbers
-  Object.entries(reviewerUserNameToReviewedPrsSet).forEach(
-    ([reviewer, prNumbers]) => {
-      if (contributorStats[reviewer]) {
-        contributorStats[reviewer].distinctPrsReviewedNonCodeOwner =
-          prNumbers.size
-      }
-    },
   )
 
   return prsWithDetails

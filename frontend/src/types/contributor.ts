@@ -1,23 +1,11 @@
-export interface ContributorStats {
-  reviewsReceived: number
-  rejectionsReceived: number
-  approvalsReceived: number
-  approvalsGiven: number
-  rejectionsGiven: number
-  prsOpened: number
-  prsMerged: number
-  issuesCreated: number
-  bountiedIssuesCount: number
-  bountiedIssuesTotal: number
-  major?: number
-  minor?: number
-  tiny?: number
-  stars?: string
-  score?: number
-  distinctPrsReviewedNonCodeOwner?: number
-  discussionComments?: number
+import type { ContributorStats as SharedContributorStats } from "lib/types"
+
+export interface ContributorStats extends SharedContributorStats {
+  /** @deprecated Legacy frontend field retained for old overview JSON. */
   discussionParticipating?: number
+  /** @deprecated Legacy frontend field retained for old overview JSON. */
   discussionVeryActive?: number
+  /** @deprecated Legacy frontend field retained for old overview JSON. */
   discussionExtremelyActive?: number
 }
 
@@ -29,6 +17,7 @@ export interface PrAnalysisResult {
   impact: "Major" | "Minor" | "Tiny"
   starRating?: number
   contributor: string
+  contributorId?: number
   repo: string
   url: string
   isAlignedWithMilestone: boolean

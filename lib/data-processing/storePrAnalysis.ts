@@ -39,22 +39,30 @@ export const storePrAnalysis = (
   }
 
   const existingAnalysis = loadPrAnalysis(weekStartDate)
-  const existingTags = new Set(existingAnalysis.map((pr) => pr.tag))
+  const analysesByTag = new Map(
+    existingAnalysis.map((pr) => [pr.tag, pr] as const),
+  )
+  let newCount = 0
+  let updatedCount = 0
 
-  const newPrs = mergedPrsWithAnalysis
-    .filter((pr) => !existingTags.has(`${pr.repo}#${pr.number}`))
-    .map((pr) => ({
+  for (const pr of mergedPrsWithAnalysis) {
+    const tag = `${pr.repo}#${pr.number}`
+    const existing = analysesByTag.get(tag)
+    if (existing) updatedCount++
+    else newCount++
+
+    analysesByTag.set(tag, {
+      ...existing,
       tag: `${pr.repo}#${pr.number}`,
       ...pr,
-    }))
-
-  const allAnalysis = [...existingAnalysis, ...newPrs]
+    })
+  }
 
   fs.writeFileSync(
     `${PR_ANALYSIS_DIR}/${weekStartDate}.json`,
-    JSON.stringify(allAnalysis, null, 2),
+    JSON.stringify([...analysesByTag.values()], null, 2),
   )
   console.log(
-    `Generated pr-analysis/${weekStartDate}.json (${newPrs.length} new PRs added)`,
+    `Generated pr-analysis/${weekStartDate}.json (${newCount} added, ${updatedCount} refreshed)`,
   )
 }

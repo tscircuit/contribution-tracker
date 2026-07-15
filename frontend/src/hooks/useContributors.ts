@@ -1,4 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import {
+  mergeContributorStatsByGitHubId,
+  resolveContributorIdentity,
+} from "lib/contributor-identity"
 import { getContributionOverviewsUrl, getPrAnalysisUrl } from "../constants/api"
 import {
   type ContributorStats,
@@ -44,7 +48,12 @@ export function useContributors(): UseContributorsReturn {
   const [prsResultant, setPrsResultant] = useState<PrsResultant>()
   const [selectedContributor, setSelectedContributor] = useState<string>()
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [jsonRecords, setJsonRecords] = useState<any[]>([])
+  const [jsonRecords, setJsonRecords] = useState<
+    Array<{
+      date: Date
+      contributors: Record<string, ContributorStats>
+    }>
+  >([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
 
@@ -129,7 +138,7 @@ export function useContributors(): UseContributorsReturn {
           return fileDate >= eightWeeksAgo && fileDate <= selectedWeekDate
         })
 
-        const [weekJsonResp, historicalDataResults, prAnalysisResp] =
+        const [weekJsonResp, historicalContributorResults, prAnalysisResp] =
           await Promise.all([
             fetch(selectedFile.download_url),
             Promise.all(
@@ -141,9 +150,13 @@ export function useContributors(): UseContributorsReturn {
                   )
                   return null
                 }
-                const historicalRecord = await resp.json()
+                const historicalContributorStatsByLogin =
+                  mergeContributorStatsByGitHubId(await resp.json())
                 const fileDate = new Date(file.name.replace(".json", ""))
-                return { ...historicalRecord, date: fileDate }
+                return {
+                  contributors: historicalContributorStatsByLogin,
+                  date: fileDate,
+                }
               }),
             ),
             fetch(getPrAnalysisUrl(weekToLoad)),
@@ -167,13 +180,19 @@ export function useContributors(): UseContributorsReturn {
 
         if (cancelled) return
 
-        const validHistoricalRecords = historicalDataResults.filter(
+        const validHistoricalRecords = historicalContributorResults.filter(
           (record) => record !== null,
         )
 
         const prsByContributor: Record<string, PrAnalysisResult[]> = {}
         const prsByRepo: Record<string, PrAnalysisResult[]> = {}
         for (const pr of prAnalysis) {
+          const contributorIdentity = resolveContributorIdentity({
+            id: pr.contributorId,
+            login: pr.contributor,
+          })
+          pr.contributor = contributorIdentity.githubLogin
+          pr.contributorId = contributorIdentity.githubId
           if (!prsByRepo[pr.repo]) {
             prsByRepo[pr.repo] = []
           }
@@ -184,7 +203,9 @@ export function useContributors(): UseContributorsReturn {
           prsByContributor[pr.contributor].push(pr)
         }
 
-        setContributorsByUsername(latestContributorsJson)
+        setContributorsByUsername(
+          mergeContributorStatsByGitHubId(latestContributorsJson),
+        )
         setJsonRecords(validHistoricalRecords)
         setPrsResultant({
           prsByContributors: prsByContributor,
@@ -222,15 +243,28 @@ export function useContributors(): UseContributorsReturn {
     (username: string) => {
       if (jsonRecords.length === 0) return []
 
+      const selectedStats = contributorsByUsername[username]
+      const selectedContributorIdentity = resolveContributorIdentity({
+        id: selectedStats?.githubId,
+        login: selectedStats?.githubLogin ?? username,
+      })
       const seen = new Set<number>()
       const records: { date: Date; [key: string]: any }[] = []
 
       for (const record of jsonRecords) {
-        if (!record[username]) continue
+        const contributorStats = Object.entries(record.contributors).find(
+          ([recordLogin, recordContributorStats]) =>
+            resolveContributorIdentity({
+              id: recordContributorStats.githubId,
+              login: recordContributorStats.githubLogin ?? recordLogin,
+            }).contributorIdentityKey ===
+            selectedContributorIdentity.contributorIdentityKey,
+        )?.[1]
+        if (!contributorStats) continue
         const timestamp = new Date(record.date).getTime()
         if (seen.has(timestamp)) continue
         seen.add(timestamp)
-        records.push({ date: new Date(record.date), ...record[username] })
+        records.push({ date: new Date(record.date), ...contributorStats })
       }
 
       records.sort((a, b) => a.date.getTime() - b.date.getTime())
@@ -244,7 +278,7 @@ export function useContributors(): UseContributorsReturn {
         ...rest,
       }))
     },
-    [jsonRecords],
+    [contributorsByUsername, jsonRecords],
   )
 
   const handleSetSelectedWeek = (week: string) => {
