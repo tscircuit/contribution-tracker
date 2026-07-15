@@ -114,6 +114,13 @@ export async function getAllPRs(
       const rejectionsReceived = processedReviews.filter(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
+      const firstReview = reviews
+        .filter((review) => review.submitted_at)
+        .sort(
+          (a, b) =>
+            new Date(a.submitted_at).getTime() -
+            new Date(b.submitted_at).getTime(),
+        )[0]
 
       const reviewsByUser = processedReviews.reduce<
         Record<string, ReviewerStats>
@@ -150,6 +157,15 @@ export async function getAllPRs(
         reviewsReceived: processedReviews.length,
         approvalsReceived,
         rejectionsReceived,
+        firstReviewAt: firstReview?.submitted_at,
+        firstReviewer: firstReview?.user.login,
+        timeToFirstReviewMs: firstReview
+          ? Math.max(
+              0,
+              new Date(firstReview.submitted_at).getTime() -
+                new Date(pr.created_at).getTime(),
+            )
+          : undefined,
         reviewsByUser,
         allReviewsByUser,
         isClosed: pr.state === "closed",

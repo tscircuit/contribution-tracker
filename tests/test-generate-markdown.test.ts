@@ -1,6 +1,13 @@
 import { describe, it, expect } from "bun:test"
-import { generateMarkdown } from "lib/data-processing/generateMarkdown"
-import type { AnalyzedPR, ContributorStats } from "lib/types"
+import {
+  formatReviewLatency,
+  generateMarkdown,
+} from "lib/data-processing/generateMarkdown"
+import type {
+  AnalyzedPR,
+  ContributorStats,
+  ReviewLatencyEntry,
+} from "lib/types"
 
 const minimalPrAttributes = {
   mostly_style: false,
@@ -175,13 +182,50 @@ const mockStats: Record<string, ContributorStats> = {
   },
 }
 
+const mockReviewLatencyEntries: ReviewLatencyEntry[] = [
+  {
+    repo: "org/repo",
+    number: 1,
+    title: "Add feature X",
+    url: "https://github.com/org/repo/pull/1",
+    author: "alice",
+    createdAt: "2024-06-01T00:00:00Z",
+    firstReviewAt: "2024-06-02T02:30:00Z",
+    firstReviewer: "reviewer-a",
+    timeToFirstReviewMs: 26.5 * 60 * 60 * 1000,
+  },
+  {
+    repo: "org/repo",
+    number: 2,
+    title: "Fix bug Y",
+    url: "https://github.com/org/repo/pull/2",
+    author: "bob",
+    createdAt: "2024-06-03T00:00:00Z",
+    firstReviewAt: "2024-06-03T01:15:00Z",
+    firstReviewer: "reviewer-b",
+    timeToFirstReviewMs: 75 * 60 * 1000,
+  },
+]
+
 describe("generateMarkdown", () => {
+  it("formats review latency durations", () => {
+    expect(formatReviewLatency(0)).toBe("0m")
+    expect(formatReviewLatency(75 * 60 * 1000)).toBe("1h 15m")
+    expect(formatReviewLatency(26.5 * 60 * 60 * 1000)).toBe("1d 2h 30m")
+  })
+
   it("should generate markdown with expected sections and contributor data", async () => {
-    const markdown = await generateMarkdown(mockPRs, mockStats, "2024-07-01", {
-      "tscircuit/gyromug": ["alice", "bob"],
-      "tscircuit/schematic-corpus": ["Abse2001", "alice"],
-      "tscircuit/lol": [],
-    })
+    const markdown = await generateMarkdown(
+      mockPRs,
+      mockStats,
+      "2024-07-01",
+      {
+        "tscircuit/gyromug": ["alice", "bob"],
+        "tscircuit/schematic-corpus": ["Abse2001", "alice"],
+        "tscircuit/lol": [],
+      },
+      mockReviewLatencyEntries,
+    )
     expect(markdown).toContain("# Contribution Overview 2024-07-01")
     expect(markdown).toContain("## Contributor Overview")
     expect(markdown).toContain("alice")
@@ -193,6 +237,13 @@ describe("generateMarkdown", () => {
     expect(markdown).toContain("Update docs")
     expect(markdown).toContain("Discussion Contribution Legend")
     expect(markdown).toContain("## Staff Pass Ratio (SPR)")
+    expect(markdown).toContain("## Review Timing")
+    expect(markdown).toContain("| [#1 Add feature X]")
+    expect(markdown.indexOf("#1 Add feature X")).toBeLessThan(
+      markdown.indexOf("#2 Fix bug Y"),
+    )
+    expect(markdown).toContain("1d 2h 30m")
+    expect(markdown).toContain("1h 15m")
     expect(markdown).toContain("| [alice](#alice) | 1 | 1 | 2 | 0.0% |")
     expect(markdown).toContain("| [bob](#bob) | 1 | 2 | 1 | -100.0% |")
     expect(markdown).toContain("<summary>alice SPR PRs (1)</summary>")

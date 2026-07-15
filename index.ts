@@ -18,7 +18,11 @@ import { getRepos } from "lib/data-retrieval/getRepos"
 import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { postMergeComment } from "lib/notifications/notify-pr-change"
 import { SENIOR_STAFF_USERNAMES } from "lib/constants"
-import type { AnalyzedPR, ContributorStats } from "lib/types"
+import type {
+  AnalyzedPR,
+  ContributorStats,
+  ReviewLatencyEntry,
+} from "lib/types"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
 export async function generateOverview(
@@ -31,6 +35,7 @@ export async function generateOverview(
 
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
+  const reviewLatencyEntries: ReviewLatencyEntry[] = []
   const contributorData: Record<string, ContributorStats> = {}
   const reviewerToReviewedPrs: Record<
     string,
@@ -106,6 +111,20 @@ export async function generateOverview(
       contributorData[contributor].rejectionsReceived += pr.rejectionsReceived
       contributorData[contributor].approvalsReceived += pr.approvalsReceived
       contributorData[contributor].prsOpened += 1
+
+      if (pr.firstReviewAt && pr.timeToFirstReviewMs !== undefined) {
+        reviewLatencyEntries.push({
+          repo,
+          number: pr.number,
+          title: pr.title,
+          url: pr.html_url,
+          author: contributor,
+          createdAt: pr.created_at,
+          firstReviewAt: pr.firstReviewAt,
+          firstReviewer: pr.firstReviewer ?? "",
+          timeToFirstReviewMs: pr.timeToFirstReviewMs,
+        })
+      }
 
       const seniorStaffReviewStats = Object.entries(
         pr.allReviewsByUser ?? {},
@@ -387,6 +406,7 @@ export async function generateOverview(
     contributorData,
     startDateString,
     repoOwnersMap,
+    reviewLatencyEntries,
   )
 }
 
@@ -395,6 +415,7 @@ async function generateAndWriteFiles(
   contributorData: Record<string, ContributorStats>,
   startDateString: string,
   repoOwnersMap: Record<string, string[]>,
+  reviewLatencyEntries: ReviewLatencyEntry[],
 ) {
   console.log("Generating markdown")
   // Group PRs by contributor
@@ -424,6 +445,7 @@ async function generateAndWriteFiles(
     contributorData,
     startDateString,
     repoOwnersMap,
+    reviewLatencyEntries,
   )
   console.log("Generated markdown", markdown)
 
