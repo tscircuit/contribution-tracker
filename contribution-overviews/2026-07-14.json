@@ -2,12 +2,12 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 9,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
         "number": 2671,
@@ -15,6 +15,13 @@
         "title": "feat: add differential pair autorouting constraints",
         "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 1680,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1680",
+        "title": "Preserve net-owned routing regions",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 1669,
@@ -38,35 +45,42 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 12,
+    "approvalsGiven": 14,
     "rejectionsGiven": 0,
-    "prsOpened": 21,
-    "prsMerged": 12,
+    "prsOpened": 23,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 9,
+    "distinctPrsReviewedNonCodeOwner": 13,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 32,
+    "score": 40,
     "stars": "⭐⭐",
-    "major": 6,
+    "major": 8,
     "minor": 1,
     "tiny": 5
   },
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 2714,
+        "url": "https://github.com/tscircuit/core/pull/2714",
+        "title": "Fix subcircuit autorouting to ignore descendant routing intent",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2681,
         "url": "https://github.com/tscircuit/core/pull/2681",
@@ -84,8 +98,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 3,
+    "prsOpened": 5,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -95,9 +109,9 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 9,
-    "stars": "⭐",
-    "major": 2,
+    "score": 13,
+    "stars": "⭐⭐",
+    "major": 3,
     "minor": 0,
     "tiny": 1
   },
@@ -126,20 +140,20 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 14,
+    "approvalsGiven": 18,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
+    "prsOpened": 12,
     "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 14,
+    "distinctPrsReviewedNonCodeOwner": 17,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 25,
+    "score": 26,
     "stars": "⭐⭐",
     "major": 2,
     "minor": 1,
@@ -166,7 +180,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
-    "prsMerged": 0,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -176,25 +190,28 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 2,
+    "stars": "",
+    "major": 0,
+    "minor": 1,
+    "tiny": 0
   },
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 6,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 6,
-    "staffRejectionsReceived": 0,
+    "reviewsReceived": 12,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 7,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
-        "number": 738,
-        "url": "https://github.com/tscircuit/props/pull/738",
-        "title": "Add chip internal circuit prop and wrapper",
-        "staffApprovals": 1,
-        "staffRejections": 0
+        "number": 2718,
+        "url": "https://github.com/tscircuit/core/pull/2718",
+        "title": "Support internal circuits in chip packages",
+        "staffApprovals": 0,
+        "staffRejections": 1
       },
       {
         "number": 161,
@@ -204,9 +221,9 @@
         "staffRejections": 0
       },
       {
-        "number": 668,
-        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/668",
-        "title": "Fix U-shaped endpoint obstacle detours",
+        "number": 672,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/672",
+        "title": "fix: route endpoint U-detours without trace overlaps",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -214,6 +231,13 @@
         "number": 669,
         "url": "https://github.com/tscircuit/schematic-trace-solver/pull/669",
         "title": "Fix routing past open obstacle sides",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 668,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/668",
+        "title": "Fix U-shaped endpoint obstacle detours",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -232,39 +256,74 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 7,
+    "approvalsGiven": 11,
     "rejectionsGiven": 1,
-    "prsOpened": 18,
-    "prsMerged": 14,
+    "prsOpened": 22,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 11,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 25,
+    "score": 34,
     "stars": "⭐⭐",
-    "major": 4,
-    "minor": 0,
-    "tiny": 8
+    "major": 5,
+    "minor": 1,
+    "tiny": 11
   },
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 48,
+    "reviewsReceived": 63,
     "rejectionsReceived": 1,
-    "approvalsReceived": 45,
-    "staffReviewedPrs": 12,
+    "approvalsReceived": 60,
+    "staffReviewedPrs": 20,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 13,
+    "staffApprovalsReceived": 21,
     "staffReviewedPrLinks": [
+      {
+        "number": 647,
+        "url": "https://github.com/tscircuit/circuit-json/pull/647",
+        "title": "Support 10-layer circuit JSON",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 739,
+        "url": "https://github.com/tscircuit/props/pull/739",
+        "title": "Use 10-layer Circuit JSON schema",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 734,
+        "url": "https://github.com/tscircuit/props/pull/734",
+        "title": "Allow 10-layer boards",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2690,
+        "url": "https://github.com/tscircuit/core/pull/2690",
+        "title": "Support 10-layer routing throughout Core",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 171,
         "url": "https://github.com/tscircuit/checks/pull/171",
         "title": "Fix rotated-pad and duplicate DRC reports",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 124,
+        "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/124",
+        "title": "feat: support 10-layer gerber output",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -279,6 +338,20 @@
         "number": 797,
         "url": "https://github.com/tscircuit/docs/pull/797",
         "title": "Document multiple analog simulations",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1648,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1648",
+        "title": "Add CM5 10-layer fixture and Pipeline 7 support",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1674,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1674",
+        "title": "Use checks 0.0.145 and restore clearance repair",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -300,13 +373,6 @@
         "number": 1653,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1653",
         "title": "Reduce post-route vias with safe geometry shortcuts",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 1648,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1648",
-        "title": "Add CM5 10-layer fixture and Pipeline 7 support",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -344,12 +410,26 @@
         "title": "[41.6% reduction in DRC] Deduplicate autorouter DRC reports",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 59,
+        "url": "https://github.com/tscircuit/kicadts/pull/59",
+        "title": "Support additional KiCad PCB metadata",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 168,
+        "url": "https://github.com/tscircuit/kicad-to-circuit-json/pull/168",
+        "title": "Fix KiCad connectivity edge cases",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 6,
     "rejectionsGiven": 0,
-    "prsOpened": 42,
-    "prsMerged": 27,
+    "prsOpened": 56,
+    "prsMerged": 42,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -359,11 +439,19 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 70.5,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/circuit-json-to-gerber",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 81.5,
     "stars": "⭐⭐⭐",
-    "major": 15,
-    "minor": 5,
-    "tiny": 7
+    "major": 23,
+    "minor": 9,
+    "tiny": 10
   },
   "Wandererchr": {
     "githubId": 202453935,
@@ -411,7 +499,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
+    "prsOpened": 4,
     "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -431,12 +519,12 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 3946,
@@ -451,22 +539,35 @@
         "title": "fix: autorouter diagnostic which get's triggered after 10sec of `tsci build` is making the build stuck",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 6,
+        "url": "https://github.com/tscircuit/fast-footprint-compare/pull/6",
+        "title": "Show hole IoU in footprint comparison",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 4,
     "rejectionsGiven": 2,
-    "prsOpened": 9,
-    "prsMerged": 7,
+    "prsOpened": 16,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
-    "distinctPrsReviewedAsCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
     "reposOwned": [
+      {
+        "repo": "tscircuit/circuit-to-svg",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/tscircuit.com",
         "paths": [
@@ -474,11 +575,45 @@
         ]
       }
     ],
-    "score": 12,
+    "score": 22,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 3,
     "minor": 2,
-    "tiny": 3
+    "tiny": 5
+  },
+  "itisrohit": {
+    "githubId": 93656009,
+    "githubLogin": "itisrohit",
+    "reviewsReceived": 1,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [
+      {
+        "number": 382,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/382",
+        "title": "repro(pcb): document fiducial F.Paste export (#372)",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "kapookky123": {
     "githubId": 299628772,
@@ -561,31 +696,65 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 4,
+    "reviewsReceived": 8,
     "rejectionsReceived": 1,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 678,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/678",
+        "title": "Align net labels vertically with traces ",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 3,
+    "prsOpened": 9,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 4,
-    "stars": "⭐",
-    "major": 0,
-    "minor": 0,
+    "score": 15,
+    "stars": "⭐⭐",
+    "major": 2,
+    "minor": 1,
     "tiny": 3
+  },
+  "namdamdoi68-oss": {
+    "githubId": 266451592,
+    "githubLogin": "namdamdoi68-oss",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
   },
   "partyplatter08-lab": {
     "githubId": 226721044,
@@ -616,13 +785,20 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 22,
+    "reviewsReceived": 29,
     "rejectionsReceived": 1,
-    "approvalsReceived": 9,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 12,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 2717,
+        "url": "https://github.com/tscircuit/core/pull/2717",
+        "title": "Fix PCB autorouting around fixed footprint copper traces",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2696,
         "url": "https://github.com/tscircuit/core/pull/2696",
@@ -638,24 +814,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 3,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 7,
+    "prsOpened": 14,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 18,
+    "score": 30,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 5,
     "minor": 0,
-    "tiny": 4
+    "tiny": 6
   },
   "seveibar": {
     "githubId": 1910070,
@@ -667,24 +843,24 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 42,
-    "rejectionsGiven": 1,
-    "prsOpened": 9,
-    "prsMerged": 8,
+    "approvalsGiven": 58,
+    "rejectionsGiven": 3,
+    "prsOpened": 11,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 37,
-    "distinctPrsReviewedAsCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 55,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 15,
+    "score": 20,
     "stars": "⭐⭐",
-    "major": 1,
+    "major": 2,
     "minor": 5,
-    "tiny": 0
+    "tiny": 1
   },
   "sureshchouksey8": {
     "githubId": 22729151,
@@ -715,9 +891,9 @@
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 3,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
+    "approvalsReceived": 6,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 2,
@@ -739,8 +915,8 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 9,
+    "prsOpened": 13,
+    "prsMerged": 13,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -750,11 +926,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 12,
+    "score": 17,
     "stars": "⭐⭐",
     "major": 0,
-    "minor": 2,
-    "tiny": 7
+    "minor": 3,
+    "tiny": 10
   },
   "tscircuitbot": {
     "githubId": 174540199,
@@ -768,8 +944,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 226,
-    "prsMerged": 197,
+    "prsOpened": 250,
+    "prsMerged": 208,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -783,6 +959,6 @@
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 197
+    "tiny": 207
   }
 }
