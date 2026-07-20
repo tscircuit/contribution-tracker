@@ -3,6 +3,45 @@ import { getContributorScore } from "lib/scoring/getContributorScore"
 import { MAINTAINERS } from "lib/scoring/maintainers"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 
+const createPRs = (
+  starRating: AnalyzedPR["starRating"],
+  impact: AnalyzedPR["impact"],
+  count: number,
+): AnalyzedPR[] =>
+  Array.from({ length: count }, () => ({ starRating, impact }) as AnalyzedPR)
+
+describe("PR scoring caps", () => {
+  it("should cap tiny PRs at 12", () => {
+    const result = getContributorScore({
+      contributorPRs: createPRs(1, "Tiny", 13),
+      contributorStats: undefined,
+    })
+
+    expect(result.rating1Count).toBe(13)
+    expect(result.score).toBe(12)
+  })
+
+  it("should not cap minor PRs", () => {
+    const result = getContributorScore({
+      contributorPRs: createPRs(2, "Minor", 13),
+      contributorStats: undefined,
+    })
+
+    expect(result.rating2Count).toBe(13)
+    expect(result.score).toBe(26)
+  })
+
+  it("should not cap major PRs", () => {
+    const result = getContributorScore({
+      contributorPRs: createPRs(3, "Major", 13),
+      contributorStats: undefined,
+    })
+
+    expect(result.rating3Count).toBe(13)
+    expect(result.score).toBe(52)
+  })
+})
+
 it("should count distinct PRs reviewed", () => {
   const mockPRs: AnalyzedPR[] = []
   const stats: ContributorStats = {
