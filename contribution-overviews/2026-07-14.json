@@ -2,12 +2,12 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 17,
+    "reviewsReceived": 18,
     "rejectionsReceived": 0,
-    "approvalsReceived": 10,
-    "staffReviewedPrs": 6,
+    "approvalsReceived": 11,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 6,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 2671,
@@ -20,6 +20,13 @@
         "number": 801,
         "url": "https://github.com/tscircuit/docs/pull/801",
         "title": "Switch to a more palatable example using usb and test point",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1702,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1702",
+        "title": "Use rectdiff obstacle connectivity in Pipeline 7",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -54,8 +61,8 @@
     ],
     "approvalsGiven": 15,
     "rejectionsGiven": 0,
-    "prsOpened": 31,
-    "prsMerged": 20,
+    "prsOpened": 33,
+    "prsMerged": 22,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -65,21 +72,21 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 48,
-    "stars": "⭐⭐",
-    "major": 8,
+    "score": 56,
+    "stars": "⭐⭐⭐",
+    "major": 10,
     "minor": 3,
     "tiny": 9
   },
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 9,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 5,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 5,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
         "number": 712,
@@ -92,6 +99,13 @@
         "number": 709,
         "url": "https://github.com/tscircuit/footprinter/pull/709",
         "title": "Add configurable missing pad positions to DFN footprints",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2732,
+        "url": "https://github.com/tscircuit/core/pull/2732",
+        "title": "Track physical trace connectivity for preserved routed subcircuits",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -119,8 +133,8 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
-    "prsMerged": 8,
+    "prsOpened": 10,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -139,9 +153,9 @@
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 6,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
+    "approvalsReceived": 7,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 3,
@@ -168,22 +182,22 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 21,
+    "approvalsGiven": 22,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 6,
+    "prsOpened": 13,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 21,
+    "distinctPrsReviewedNonCodeOwner": 22,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 31,
+    "score": 35,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 4,
     "minor": 1,
     "tiny": 2
   },
@@ -207,7 +221,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 3,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -227,8 +241,8 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 1,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 3,
+    "rejectionsReceived": 3,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
@@ -279,13 +293,20 @@
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 12,
+    "reviewsReceived": 18,
     "rejectionsReceived": 1,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 7,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 8,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 6,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
+      {
+        "number": 2733,
+        "url": "https://github.com/tscircuit/core/pull/2733",
+        "title": "Add internal circuit MOSFET schematic rendering",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2718,
         "url": "https://github.com/tscircuit/core/pull/2718",
@@ -336,23 +357,23 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 13,
+    "approvalsGiven": 14,
     "rejectionsGiven": 2,
-    "prsOpened": 22,
-    "prsMerged": 18,
+    "prsOpened": 23,
+    "prsMerged": 19,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedNonCodeOwner": 13,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 34,
+    "score": 36,
     "stars": "⭐⭐",
     "major": 5,
-    "minor": 1,
+    "minor": 2,
     "tiny": 11
   },
   "RenaDCR": {
@@ -384,13 +405,20 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 81,
-    "rejectionsReceived": 2,
-    "approvalsReceived": 77,
-    "staffReviewedPrs": 28,
-    "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 29,
+    "reviewsReceived": 92,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 81,
+    "staffReviewedPrs": 30,
+    "staffRejectionsReceived": 3,
+    "staffApprovalsReceived": 31,
     "staffReviewedPrLinks": [
+      {
+        "number": 244,
+        "url": "https://github.com/tscircuit/schematic-viewer/pull/244",
+        "title": "Fix analog simulation canvas background",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 242,
         "url": "https://github.com/tscircuit/schematic-viewer/pull/242",
@@ -469,16 +497,23 @@
         "staffRejections": 0
       },
       {
-        "number": 1688,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1688",
-        "title": "Preserve fragmented pad reachability",
-        "staffApprovals": 1,
-        "staffRejections": 0
+        "number": 1694,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1694",
+        "title": "Add DRC-safe post-repair trace simplification",
+        "staffApprovals": 0,
+        "staffRejections": 1
       },
       {
         "number": 1700,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1700",
         "title": "Scale bounded exact DRC repair with effort",
+        "staffApprovals": 2,
+        "staffRejections": 0
+      },
+      {
+        "number": 1688,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1688",
+        "title": "Preserve fragmented pad reachability",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -588,14 +623,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 9,
+    "approvalsGiven": 11,
     "rejectionsGiven": 0,
-    "prsOpened": 78,
-    "prsMerged": 61,
+    "prsOpened": 80,
+    "prsMerged": 62,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 9,
+    "distinctPrsReviewedNonCodeOwner": 11,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
@@ -621,10 +656,10 @@
         ]
       }
     ],
-    "score": 93.5,
+    "score": 95.5,
     "stars": "👑",
     "major": 30,
-    "minor": 17,
+    "minor": 18,
     "tiny": 14
   },
   "Wandererchr": {
@@ -678,7 +713,7 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 8,
     "prsMerged": 5,
@@ -735,7 +770,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 12,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -752,13 +787,20 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 3,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 408,
+        "url": "https://github.com/tscircuit/easyeda-converter/pull/408",
+        "title": "Add EasyEDA schematic symbols to generated TSX",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 3946,
         "url": "https://github.com/tscircuit/tscircuit.com/pull/3946",
@@ -781,15 +823,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 5,
+    "approvalsGiven": 6,
     "rejectionsGiven": 2,
     "prsOpened": 16,
-    "prsMerged": 11,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 2,
+    "distinctPrsReviewedAsCodeOwner": 3,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -808,27 +850,27 @@
         ]
       }
     ],
-    "score": 22,
+    "score": 23,
     "stars": "⭐⭐",
     "major": 3,
     "minor": 2,
-    "tiny": 5
+    "tiny": 6
   },
   "itisrohit": {
     "githubId": 93656009,
     "githubLogin": "itisrohit",
-    "reviewsReceived": 2,
+    "reviewsReceived": 4,
     "rejectionsReceived": 1,
-    "approvalsReceived": 0,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 1,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 0,
+    "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
       {
         "number": 382,
         "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/382",
         "title": "repro(pcb): document fiducial F.Paste export (#372)",
-        "staffApprovals": 0,
+        "staffApprovals": 1,
         "staffRejections": 1
       }
     ],
@@ -929,12 +971,12 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 9,
+    "reviewsReceived": 11,
     "rejectionsReceived": 1,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 678,
@@ -942,12 +984,19 @@
         "title": "Align net labels vertically with traces ",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 25,
+        "url": "https://github.com/tscircuit/internal-dynamic-import/pull/25",
+        "title": "build circuit-json-to-gerber",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 7,
+    "prsOpened": 14,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -957,11 +1006,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 19,
+    "score": 22,
     "stars": "⭐⭐",
     "major": 2,
-    "minor": 1,
-    "tiny": 4
+    "minor": 2,
+    "tiny": 5
   },
   "namdamdoi68-oss": {
     "githubId": 266451592,
@@ -1044,12 +1093,12 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 37,
+    "reviewsReceived": 46,
     "rejectionsReceived": 1,
-    "approvalsReceived": 13,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 15,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 2717,
@@ -1066,6 +1115,13 @@
         "staffRejections": 1
       },
       {
+        "number": 804,
+        "url": "https://github.com/tscircuit/docs/pull/804",
+        "title": "Remove embedded circuit editor from docs previews",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 107,
         "url": "https://github.com/tscircuit/calculate-packing/pull/107",
         "title": "Fix fixed-component packing obstacles to respect PCB courtyards",
@@ -1073,52 +1129,52 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
-    "rejectionsGiven": 1,
-    "prsOpened": 21,
-    "prsMerged": 17,
+    "approvalsGiven": 7,
+    "rejectionsGiven": 3,
+    "prsOpened": 26,
+    "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 40,
+    "score": 49,
     "stars": "⭐⭐",
-    "major": 5,
-    "minor": 2,
+    "major": 6,
+    "minor": 4,
     "tiny": 10
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 4,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 73,
-    "rejectionsGiven": 5,
-    "prsOpened": 12,
-    "prsMerged": 9,
+    "approvalsGiven": 81,
+    "rejectionsGiven": 6,
+    "prsOpened": 13,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 67,
+    "distinctPrsReviewedNonCodeOwner": 72,
     "distinctPrsReviewedAsCodeOwner": 5,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 20,
+    "score": 22,
     "stars": "⭐⭐",
     "major": 2,
-    "minor": 5,
+    "minor": 6,
     "tiny": 1
   },
   "singularitycurse26-svg": {
@@ -1229,8 +1285,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 328,
-    "prsMerged": 274,
+    "prsOpened": 343,
+    "prsMerged": 285,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1240,11 +1296,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 14.5,
+    "score": 15,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 274
+    "tiny": 285
   },
   "vasu-rs": {
     "githubId": 306787528,
