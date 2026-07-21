@@ -2,12 +2,12 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 18,
+    "reviewsReceived": 19,
     "rejectionsReceived": 0,
-    "approvalsReceived": 11,
-    "staffReviewedPrs": 7,
+    "approvalsReceived": 12,
+    "staffReviewedPrs": 8,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 7,
+    "staffApprovalsReceived": 8,
     "staffReviewedPrLinks": [
       {
         "number": 2671,
@@ -20,6 +20,13 @@
         "number": 801,
         "url": "https://github.com/tscircuit/docs/pull/801",
         "title": "Switch to a more palatable example using usb and test point",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1715,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1715",
+        "title": "Fix solved visualization layer colors",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -61,8 +68,8 @@
     ],
     "approvalsGiven": 15,
     "rejectionsGiven": 0,
-    "prsOpened": 33,
-    "prsMerged": 22,
+    "prsOpened": 42,
+    "prsMerged": 27,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -72,20 +79,20 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 56,
+    "score": 70,
     "stars": "⭐⭐⭐",
-    "major": 10,
+    "major": 13,
     "minor": 3,
-    "tiny": 9
+    "tiny": 11
   },
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 10,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 9,
-    "staffReviewedPrs": 6,
-    "staffRejectionsReceived": 1,
+    "reviewsReceived": 13,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 7,
+    "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
@@ -124,6 +131,13 @@
         "staffRejections": 0
       },
       {
+        "number": 1708,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1708",
+        "title": "Merge overlapping external connection groups in autorouting",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
         "number": 33,
         "url": "https://github.com/tscircuit/skill/pull/33",
         "title": "Add tsci check shorts to the CLI, checklist, and AI skill documentation",
@@ -133,8 +147,8 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 9,
+    "prsOpened": 13,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -144,11 +158,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 25,
+    "score": 30,
     "stars": "⭐⭐",
-    "major": 4,
+    "major": 5,
     "minor": 1,
-    "tiny": 3
+    "tiny": 4
   },
   "AnasSarkiz": {
     "githubId": 72264380,
@@ -182,14 +196,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 22,
+    "approvalsGiven": 26,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
+    "prsOpened": 18,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 22,
+    "distinctPrsReviewedNonCodeOwner": 26,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
@@ -204,11 +218,11 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 5,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
+    "reviewsReceived": 9,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
       {
@@ -217,11 +231,47 @@
         "title": "fix: resolve overlay bleed-through on search dropdown results",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 808,
+        "url": "https://github.com/tscircuit/docs/pull/808",
+        "title": "docs: add properties table for capacitor",
+        "staffApprovals": 0,
+        "staffRejections": 1
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
+    "prsOpened": 5,
+    "prsMerged": 2,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 3,
+    "stars": "",
+    "major": 0,
+    "minor": 1,
+    "tiny": 1
+  },
+  "Hero988": {
+    "githubId": 61606444,
+    "githubLogin": "Hero988",
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -232,11 +282,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 2,
+    "score": 1,
     "stars": "",
     "major": 0,
-    "minor": 1,
-    "tiny": 0
+    "minor": 0,
+    "tiny": 1
   },
   "KrishnaX12": {
     "githubId": 186785561,
@@ -290,16 +340,74 @@
     "score": 0,
     "stars": ""
   },
+  "Lathikaa-S": {
+    "githubId": 202630750,
+    "githubLogin": "Lathikaa-S",
+    "reviewsReceived": 14,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 3981,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/3981",
+        "title": "Route logged-out dashboard users through the login page",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 3,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 1,
+    "stars": "",
+    "major": 0,
+    "minor": 0,
+    "tiny": 1
+  },
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 18,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 8,
-    "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 7,
+    "reviewsReceived": 28,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 11,
+    "staffRejectionsReceived": 2,
+    "staffApprovalsReceived": 9,
     "staffReviewedPrLinks": [
+      {
+        "number": 653,
+        "url": "https://github.com/tscircuit/circuit-json/pull/653",
+        "title": "Add internal circuit schematic port flags",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2737,
+        "url": "https://github.com/tscircuit/core/pull/2737",
+        "title": "Connect external traces to internal circuit ports",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 2738,
+        "url": "https://github.com/tscircuit/core/pull/2738",
+        "title": "Hide internal connectivity labels on boxed subcircuit ports",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2733,
         "url": "https://github.com/tscircuit/core/pull/2733",
@@ -357,24 +465,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 14,
-    "rejectionsGiven": 2,
-    "prsOpened": 23,
-    "prsMerged": 19,
+    "approvalsGiven": 16,
+    "rejectionsGiven": 3,
+    "prsOpened": 31,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 13,
+    "distinctPrsReviewedNonCodeOwner": 15,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 36,
+    "score": 41,
     "stars": "⭐⭐",
     "major": 5,
-    "minor": 2,
-    "tiny": 11
+    "minor": 4,
+    "tiny": 14
   },
   "RenaDCR": {
     "githubId": 302284865,
@@ -405,12 +513,12 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 92,
+    "reviewsReceived": 130,
     "rejectionsReceived": 3,
-    "approvalsReceived": 81,
-    "staffReviewedPrs": 30,
+    "approvalsReceived": 88,
+    "staffReviewedPrs": 32,
     "staffRejectionsReceived": 3,
-    "staffApprovalsReceived": 31,
+    "staffApprovalsReceived": 33,
     "staffReviewedPrLinks": [
       {
         "number": 244,
@@ -425,6 +533,13 @@
         "title": "Add option to hide schematic in analog simulation viewer",
         "staffApprovals": 2,
         "staffRejections": 1
+      },
+      {
+        "number": 9,
+        "url": "https://github.com/tscircuit/rfc/pull/9",
+        "title": "Add analog simulation analyses and parameter sweep RFC",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 647,
@@ -451,6 +566,13 @@
         "number": 2690,
         "url": "https://github.com/tscircuit/core/pull/2690",
         "title": "Support 10-layer routing throughout Core",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 347,
+        "url": "https://github.com/tscircuit/contribution-tracker/pull/347",
+        "title": "Only cap tiny PR scoring",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -625,8 +747,8 @@
     ],
     "approvalsGiven": 11,
     "rejectionsGiven": 0,
-    "prsOpened": 80,
-    "prsMerged": 62,
+    "prsOpened": 87,
+    "prsMerged": 66,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -656,11 +778,11 @@
         ]
       }
     ],
-    "score": 95.5,
-    "stars": "👑",
-    "major": 30,
-    "minor": 18,
-    "tiny": 14
+    "score": 185.5,
+    "stars": "👑👑👑",
+    "major": 31,
+    "minor": 19,
+    "tiny": 15
   },
   "Wandererchr": {
     "githubId": 202453935,
@@ -691,9 +813,9 @@
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 13,
+    "reviewsReceived": 15,
     "rejectionsReceived": 2,
-    "approvalsReceived": 11,
+    "approvalsReceived": 13,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
@@ -715,8 +837,8 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 5,
+    "prsOpened": 10,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -726,10 +848,10 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 9,
-    "stars": "⭐",
+    "score": 13,
+    "stars": "⭐⭐",
     "major": 1,
-    "minor": 1,
+    "minor": 3,
     "tiny": 3
   },
   "chfr19820610-cell": {
@@ -823,15 +945,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
+    "approvalsGiven": 8,
     "rejectionsGiven": 2,
-    "prsOpened": 16,
-    "prsMerged": 12,
+    "prsOpened": 20,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedAsCodeOwner": 4,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
@@ -850,21 +972,21 @@
         ]
       }
     ],
-    "score": 23,
+    "score": 29,
     "stars": "⭐⭐",
-    "major": 3,
+    "major": 4,
     "minor": 2,
-    "tiny": 6
+    "tiny": 8
   },
   "itisrohit": {
     "githubId": 93656009,
     "githubLogin": "itisrohit",
-    "reviewsReceived": 4,
+    "reviewsReceived": 6,
     "rejectionsReceived": 1,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 382,
@@ -872,12 +994,19 @@
         "title": "repro(pcb): document fiducial F.Paste export (#372)",
         "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 389,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/389",
+        "title": "fix(pcb): omit F.Paste layer on fiducial pads (#372)",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 0,
+    "prsOpened": 3,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -887,8 +1016,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "score": 2,
+    "stars": "",
+    "major": 0,
+    "minor": 1,
+    "tiny": 0
   },
   "kapookky123": {
     "githubId": 299628772,
@@ -993,20 +1125,20 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 5,
+    "approvalsGiven": 9,
     "rejectionsGiven": 0,
     "prsOpened": 14,
     "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 5,
+    "distinctPrsReviewedNonCodeOwner": 9,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 22,
+    "score": 26,
     "stars": "⭐⭐",
     "major": 2,
     "minor": 2,
@@ -1090,15 +1222,67 @@
     "score": 0,
     "stars": ""
   },
+  "poaspergillus": {
+    "githubId": 289178957,
+    "githubLogin": "poaspergillus",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
+  "rootdgy": {
+    "githubId": 47914644,
+    "githubLogin": "rootdgy",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "discussionComments": 0,
+    "discussionNormalComments": 0,
+    "discussionGreatInformativeComments": 0,
+    "discussionIncredibleComments": 0,
+    "score": 0,
+    "stars": ""
+  },
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 46,
+    "reviewsReceived": 50,
     "rejectionsReceived": 1,
-    "approvalsReceived": 15,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 17,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 2717,
@@ -1115,13 +1299,6 @@
         "staffRejections": 1
       },
       {
-        "number": 804,
-        "url": "https://github.com/tscircuit/docs/pull/804",
-        "title": "Remove embedded circuit editor from docs previews",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
         "number": 107,
         "url": "https://github.com/tscircuit/calculate-packing/pull/107",
         "title": "Fix fixed-component packing obstacles to respect PCB courtyards",
@@ -1129,53 +1306,67 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 7,
+    "approvalsGiven": 10,
     "rejectionsGiven": 3,
-    "prsOpened": 26,
-    "prsMerged": 21,
+    "prsOpened": 29,
+    "prsMerged": 22,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 7,
+    "distinctPrsReviewedNonCodeOwner": 9,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 49,
-    "stars": "⭐⭐",
+    "score": 53,
+    "stars": "⭐⭐⭐",
     "major": 6,
     "minor": 4,
-    "tiny": 10
+    "tiny": 12
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 81,
-    "rejectionsGiven": 6,
-    "prsOpened": 13,
-    "prsMerged": 10,
+    "approvalsGiven": 95,
+    "rejectionsGiven": 9,
+    "prsOpened": 19,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 72,
-    "distinctPrsReviewedAsCodeOwner": 5,
+    "distinctPrsReviewedNonCodeOwner": 83,
+    "distinctPrsReviewedAsCodeOwner": 7,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 22,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/footprinter",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/common",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 30,
     "stars": "⭐⭐",
-    "major": 2,
-    "minor": 6,
-    "tiny": 1
+    "major": 3,
+    "minor": 7,
+    "tiny": 3
   },
   "singularitycurse26-svg": {
     "githubId": 294903826,
@@ -1254,24 +1445,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 5,
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
     "prsOpened": 13,
     "prsMerged": 13,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 5,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 0,
     "discussionComments": 0,
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 17,
+    "score": 16,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 3,
-    "tiny": 10
+    "tiny": 9
   },
   "tscircuitbot": {
     "githubId": 174540199,
@@ -1285,8 +1476,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 343,
-    "prsMerged": 285,
+    "prsOpened": 415,
+    "prsMerged": 346,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1296,11 +1487,11 @@
     "discussionNormalComments": 0,
     "discussionGreatInformativeComments": 0,
     "discussionIncredibleComments": 0,
-    "score": 15,
+    "score": 16.5,
     "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 285
+    "tiny": 322
   },
   "vasu-rs": {
     "githubId": 306787528,
