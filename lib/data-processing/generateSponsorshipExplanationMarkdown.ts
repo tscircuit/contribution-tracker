@@ -21,7 +21,7 @@ export const generateSponsorshipExplanationMarkdown = () => {
   markdown += "## Scoring & Sponsorship System\n\n"
   markdown += "### Overview\n\n"
   markdown +=
-    "PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR, with 1-star PRs capped at 12 per week, plus review/discussion points.\n\n"
+    "PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR, with 1-star PRs capped at 12 per week, plus review points.\n\n"
 
   markdown += "### Weekly Score → Star String\n\n"
   markdown += "| Score Range | Star String | Count Value |\n"

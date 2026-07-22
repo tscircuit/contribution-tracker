@@ -1,44 +1,5 @@
-import type { DiscussionComment } from "lib/types"
 import { CURRENT_MILESTONES } from "milestones"
 import { PR_ATTRIBUTES } from "./pr-attributes"
-
-export function generateAnalyzeDiscussionPrompt(
-  comment: DiscussionComment,
-): string {
-  return `
-<task>
-Analyze the following GitHub Discussion comment and classify its quality and contribution level based on strict criteria. Assess depth, relevance, effort, and value added to the conversation.
-</task>
-
-<discussion-context>
-- Title: ${comment.discussionTitle}
-- Comment Body: ${comment.body}
-</discussion-context>
-
-<classification-guide>
-Assign one of the following labels and corresponding contribution scores:
-
-1. "NormalComment" (count: 1)
-   - Short, basic, or low-effort participation
-   - Adds little to no substantive value
-   - Examples: "+1", "Thanks", "I agree", or off-topic replies
-   - If the comment is not helpful or not related to the discussion
-   - If low effort
-
-2. "GreatInformativeComment" (count: 2)
-   - Provides useful insights, thoughtful feedback, or raises meaningful questions
-   - Demonstrates effort and relevance to the discussion
-   - May include concise reasoning or helpful references
-
-3. "IncredibleCommentTopTier" (count: 3)
-   - Highly valuable and impactful
-   - Deep analysis, comprehensive explanations, unique perspectives, or code examples
-   - Demonstrates expert-level understanding or significantly advances the topic
-
-Be strict in classification. Do not elevate a comment unless it clearly meets the criteria.
-</classification-guide>
-`.trim()
-}
 
 export function generateAnalyzePRPrompt(
   pr: {

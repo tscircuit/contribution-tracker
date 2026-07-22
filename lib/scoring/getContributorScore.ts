@@ -26,7 +26,7 @@ export interface ContributorScore {
 }
 
 /**
- * Calculate score for a contributor based on PRs, issues, reviews, and discussions
+ * Calculate score for a contributor based on PRs and reviews
  */
 export function getContributorScore({
   contributorPRs,

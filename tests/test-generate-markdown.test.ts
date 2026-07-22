@@ -120,9 +120,6 @@ const mockStats: Record<string, ContributorStats> = {
     issuesCreated: 1,
     bountiedIssuesCount: 0,
     bountiedIssuesTotal: 0,
-    discussionNormalComments: 2,
-    discussionGreatInformativeComments: 1,
-    discussionIncredibleComments: 0,
     reposOwned: [{ repo: "org/repo", paths: ["src/"] }],
   },
   bob: {
@@ -148,9 +145,6 @@ const mockStats: Record<string, ContributorStats> = {
     issuesCreated: 0,
     bountiedIssuesCount: 0,
     bountiedIssuesTotal: 0,
-    discussionNormalComments: 0,
-    discussionGreatInformativeComments: 0,
-    discussionIncredibleComments: 1,
     reposOwned: [],
   },
   "cypher[bot]": {
@@ -168,9 +162,6 @@ const mockStats: Record<string, ContributorStats> = {
     issuesCreated: 0,
     bountiedIssuesCount: 0,
     bountiedIssuesTotal: 0,
-    discussionNormalComments: 0,
-    discussionGreatInformativeComments: 0,
-    discussionIncredibleComments: 1,
     reposOwned: [],
   },
 }
@@ -191,7 +182,7 @@ describe("generateMarkdown", () => {
     expect(markdown).toContain("Add feature X")
     expect(markdown).toContain("Fix bug Y")
     expect(markdown).toContain("Update docs")
-    expect(markdown).toContain("Discussion Contribution Legend")
+    expect(markdown).not.toContain("Discussion")
     expect(markdown).toContain("## Staff Pass Ratio (SPR)")
     expect(markdown).toContain("| [alice](#alice) | 1 | 1 | 2 | 0.0% |")
     expect(markdown).toContain("| [bob](#bob) | 1 | 2 | 1 | -100.0% |")

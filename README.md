@@ -59,19 +59,19 @@ pie
 
 ## Contributor Overview
 
-| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ | Discussion Contributions |
-|-------------|---------|---------|---------|-------|-----|--------------------------|
-| [seveibar](#seveibar) | 4 | 4 | 9 | 34 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [imrishabh18](#imrishabh18) | 2 | 4 | 5 | 22 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 4 | 0 | 1 | 18 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 139 | 13 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [techmannih](#techmannih) | 2 | 1 | 3 | 13 | ⭐⭐ | 0🔹 0🔶 0💎 |
-| [0hmX](#0hmX) | 2 | 0 | 2 | 10 | ⭐ | 0🔹 0🔶 0💎 |
-| [AnasSarkiz](#AnasSarkiz) | 1 | 0 | 1 | 9.5 | ⭐ | 0🔹 0🔶 0💎 |
-| [MustafaMulla29](#MustafaMulla29) | 1 | 0 | 2 | 6 | ⭐ | 0🔹 0🔶 0💎 |
-| [itisrohit](#itisrohit) | 0 | 1 | 1 | 3 |  | 0🔹 0🔶 0💎 |
-| [Lathikaa-S](#Lathikaa-S) | 0 | 0 | 1 | 1 |  | 0🔹 0🔶 0💎 |
-| [Abse2001](#Abse2001) | 0 | 0 | 1 | 1 |  | 0🔹 0🔶 0💎 |
+| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ |
+|-------------|---------|---------|---------|-------|-----|
+| [seveibar](#seveibar) | 4 | 4 | 9 | 34 | ⭐⭐ |
+| [imrishabh18](#imrishabh18) | 2 | 4 | 5 | 22 | ⭐⭐ |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 4 | 0 | 1 | 18 | ⭐⭐ |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 139 | 13 | ⭐⭐ |
+| [techmannih](#techmannih) | 2 | 1 | 3 | 13 | ⭐⭐ |
+| [0hmX](#0hmX) | 2 | 0 | 2 | 10 | ⭐ |
+| [AnasSarkiz](#AnasSarkiz) | 1 | 0 | 1 | 9.5 | ⭐ |
+| [MustafaMulla29](#MustafaMulla29) | 1 | 0 | 2 | 6 | ⭐ |
+| [itisrohit](#itisrohit) | 0 | 1 | 1 | 3 |  |
+| [Lathikaa-S](#Lathikaa-S) | 0 | 0 | 1 | 1 |  |
+| [Abse2001](#Abse2001) | 0 | 0 | 1 | 1 |  |
 
 ## Staff Pass Ratio (SPR)
 
@@ -142,12 +142,6 @@ pie
 </details>
 
 > Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.
-
-### Discussion Contribution Legend
-
-- 🔹 Normal Comments: Basic participation with minimal effort
-- 🔶 Great Informative Comments: Thoughtful participation that adds value
-- 💎 Incredible Comments: Exceptional participation with high-quality content
 
 ## Review Table
 
