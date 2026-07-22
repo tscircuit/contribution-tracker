@@ -12,25 +12,6 @@ export interface ReviewerStats {
   prNumbers?: Set<number> // Set of PR numbers this reviewer has reviewed
 }
 
-export interface DiscussionComment {
-  discussionTitle: string
-  discussionNumber: number
-  discussionUrl: string
-  body: string
-  url: string
-  createdAt: string
-  discussionAuthor: string
-  discussionAuthorId?: number
-}
-
-export interface DiscussionContribution {
-  level:
-    | "NormalComment"
-    | "GreatInformativeComment"
-    | "IncredibleCommentTopTier"
-  count: number
-}
-
 export interface ContributorStats {
   /** Durable GitHub account ID. Missing only from overview files generated before ID tracking. */
   githubId?: number
@@ -63,10 +44,6 @@ export interface ContributorStats {
   minor?: number // Count of Minor PRs
   tiny?: number // Count of Tiny PRs
   stars?: string // Either "⭐" or "👑" based on score
-  discussionComments?: number // Total number of discussion comments
-  discussionNormalComments?: number // Count of "NormalComment" level comments
-  discussionGreatInformativeComments?: number // Count of "GreatInformativeComment" level comments
-  discussionIncredibleComments?: number // Count of "IncredibleCommentTopTier" level comments
   reposOwned?: Array<{
     repo: string
     paths: string[]

@@ -1,10 +1,7 @@
 import * as fs from "fs"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { getContributionOverviewWindow } from "lib/ai/date-utils"
-import {
-  generateMarkdown,
-  scoreToStarString,
-} from "lib/data-processing/generateMarkdown"
+import { generateMarkdown } from "lib/data-processing/generateMarkdown"
 import {
   getOrCreateContributorStats,
   getPrsWithCurrentContributorLogins,
@@ -20,7 +17,6 @@ import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
 import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getRepos } from "lib/data-retrieval/getRepos"
-import { processDiscussionsForContributors } from "lib/data-retrieval/processDiscussions"
 import { postMergeComment } from "lib/notifications/notify-pr-change"
 import { SENIOR_STAFF_USERNAMES } from "lib/constants"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
@@ -295,37 +291,6 @@ export async function generateOverview(
     //   })
     // await Promise.all(getIssuesCreatedPromises)
   }
-  // Process GitHub Discussions for all contributors
-  const contributorStatsWithDiscussionsByIdentity =
-    await processDiscussionsForContributors({
-      startDate,
-      currentTime,
-      contributorStatsByIdentity,
-    })
-  for (const [contributorIdentityKey, contributorStats] of Object.entries(
-    contributorStatsWithDiscussionsByIdentity,
-  )) {
-    contributorStatsByIdentity[contributorIdentityKey] = contributorStats
-    const contributorLogin =
-      contributorStats.githubLogin ?? `unknown-${contributorIdentityKey}`
-    console.log(
-      `Processed discussion for ${contributorLogin} - discussionComments: ${contributorStats.discussionComments}`,
-    )
-
-    // Add to score based on discussion contribution levels
-    contributorStats.score =
-      (contributorStats.score ?? 0) +
-      (contributorStats.discussionNormalComments ?? 0) * 1 // 1 point each
-    contributorStats.score =
-      (contributorStats.score ?? 0) +
-      (contributorStats.discussionGreatInformativeComments ?? 0) * 2 // 2 points each
-    contributorStats.score =
-      (contributorStats.score ?? 0) +
-      (contributorStats.discussionIncredibleComments ?? 0) * 4 // 4 points each
-
-    contributorStats.stars = scoreToStarString(contributorStats.score ?? 0)
-  }
-
   // Remove bot accounts from contributor stats
   Object.entries(contributorStatsByIdentity).forEach(
     ([contributorIdentityKey, contributorStats]) => {

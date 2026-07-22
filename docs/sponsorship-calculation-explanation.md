@@ -14,7 +14,7 @@ This document explains how contribution points, scores, and sponsorship tiers ar
 
 ### Overview
 
-PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR, with 1-star PRs capped at 12 per week, plus review/discussion points.
+PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR, with 1-star PRs capped at 12 per week, plus review points.
 
 ### Weekly Score → Star String
 

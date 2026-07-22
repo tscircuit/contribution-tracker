@@ -60,20 +60,10 @@ const buildContributorScores = (
     return b[1].score - a[1].score
   })
 
-  const contributorsHavingOnlyDiscussions = Object.keys(
-    contributorIdToStatsMap,
-  ).filter(
-    (contributor) =>
-      !sortedContributors.some(
-        ([sortedContributor]) => sortedContributor === contributor,
-      ),
-  )
-
   return {
     prsByContributor,
     contributorScores,
     sortedContributors,
-    contributorsHavingOnlyDiscussions,
   }
 }
 
@@ -134,58 +124,24 @@ export async function generateMarkdown(
   })
   markdown += "```\n\n"
 
-  const {
-    prsByContributor,
-    sortedContributors,
-    contributorsHavingOnlyDiscussions,
-  } = buildContributorScores(prs, contributorIdToStatsMap)
+  const { prsByContributor, sortedContributors } = buildContributorScores(
+    prs,
+    contributorIdToStatsMap,
+  )
 
   // Generate contributor overview table
   markdown += "## Contributor Overview\n\n"
 
-  markdown +=
-    "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ | Discussion Contributions |\n"
-  markdown +=
-    "|-------------|---------|---------|---------|-------|-----|--------------------------|\n"
+  markdown += "| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ |\n"
+  markdown += "|-------------|---------|---------|---------|-------|-----|\n"
 
   // Generate table rows
   for (const [contributor, effort] of sortedContributors) {
-    // Calculate discussion contributions summary
-    const discussionNormalComments =
-      contributorIdToStatsMap[contributor]?.discussionNormalComments || 0
-    const discussionGreatInformativeComments =
-      contributorIdToStatsMap[contributor]
-        ?.discussionGreatInformativeComments || 0
-    const discussionIncredibleComments =
-      contributorIdToStatsMap[contributor]?.discussionIncredibleComments || 0
-    const discussionSummary = `${discussionNormalComments}🔹 ${discussionGreatInformativeComments}🔶 ${discussionIncredibleComments}💎`
-
     markdown += `| [${contributor}](#${contributor.replace(/\s/g, "-")}) | ${
       effort.major
     } | ${effort.minor} | ${effort.tiny} | ${effort.score} | ${scoreToStarString(
       effort.score,
-    )} | ${discussionSummary} |\n`
-  }
-
-  for (const contributor of contributorsHavingOnlyDiscussions) {
-    const stats = contributorIdToStatsMap[contributor]
-    if (!contributorIdToStatsMap[contributor].discussionComments) continue
-    // Calculate discussion contributions summary
-    const discussionNormalComments =
-      contributorIdToStatsMap[contributor].discussionNormalComments || 0
-    const discussionGreatInformativeComments =
-      contributorIdToStatsMap[contributor].discussionGreatInformativeComments ||
-      0
-    const discussionIncredibleComments =
-      contributorIdToStatsMap[contributor].discussionIncredibleComments || 0
-    const discussionSummary = `${discussionNormalComments}🔹 ${discussionGreatInformativeComments}🔶 ${discussionIncredibleComments}💎`
-
-    markdown += `| [${contributor}](#${contributor.replace(
-      /\s/g,
-      "-",
-    )}) | 0 | 0 | 0 | ${stats.score || 0} | ${scoreToStarString(
-      stats.score || 0,
-    )} | ${discussionSummary} |\n`
+    )} |\n`
   }
   markdown += "\n"
 
@@ -237,14 +193,6 @@ export async function generateMarkdown(
   // Add note about AI star ratings
   markdown +=
     "> Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.\n\n"
-
-  // Add explanation for discussion contribution symbols
-  markdown += "### Discussion Contribution Legend\n\n"
-  markdown += "- 🔹 Normal Comments: Basic participation with minimal effort\n"
-  markdown +=
-    "- 🔶 Great Informative Comments: Thoughtful participation that adds value\n"
-  markdown +=
-    "- 💎 Incredible Comments: Exceptional participation with high-quality content\n\n"
 
   // Generate Review Table
   markdown += "## Review Table\n\n"

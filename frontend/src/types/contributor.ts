@@ -1,13 +1,6 @@
 import type { ContributorStats as SharedContributorStats } from "lib/types"
 
-export interface ContributorStats extends SharedContributorStats {
-  /** @deprecated Legacy frontend field retained for old overview JSON. */
-  discussionParticipating?: number
-  /** @deprecated Legacy frontend field retained for old overview JSON. */
-  discussionVeryActive?: number
-  /** @deprecated Legacy frontend field retained for old overview JSON. */
-  discussionExtremelyActive?: number
-}
+export type ContributorStats = SharedContributorStats
 
 export interface PrAnalysisResult {
   tag: string

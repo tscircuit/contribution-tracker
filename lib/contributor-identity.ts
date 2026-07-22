@@ -50,10 +50,6 @@ const ADDITIVE_CONTRIBUTOR_STAT_FIELDS = [
   "major",
   "minor",
   "tiny",
-  "discussionComments",
-  "discussionNormalComments",
-  "discussionGreatInformativeComments",
-  "discussionIncredibleComments",
 ] as const satisfies readonly (keyof ContributorStats)[]
 
 export function resolveContributorIdentity({
@@ -109,10 +105,6 @@ export function createEmptyContributorStats(
     bountiedIssuesTotal: 0,
     distinctPrsReviewedNonCodeOwner: 0,
     distinctPrsReviewedAsCodeOwner: 0,
-    discussionComments: 0,
-    discussionNormalComments: 0,
-    discussionGreatInformativeComments: 0,
-    discussionIncredibleComments: 0,
   }
 }
 

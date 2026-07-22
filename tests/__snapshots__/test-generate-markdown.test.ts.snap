@@ -20,10 +20,10 @@ pie
 
 ## Contributor Overview
 
-| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ | Discussion Contributions |
-|-------------|---------|---------|---------|-------|-----|--------------------------|
-| [alice](#alice) | 1 | 0 | 1 | 5 | ⭐ | 2🔹 1🔶 0💎 |
-| [bob](#bob) | 0 | 1 | 0 | 2 |  | 0🔹 0🔶 1💎 |
+| Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ |
+|-------------|---------|---------|---------|-------|-----|
+| [alice](#alice) | 1 | 0 | 1 | 5 | ⭐ |
+| [bob](#bob) | 0 | 1 | 0 | 2 |  |
 
 ## Staff Pass Ratio (SPR)
 
@@ -47,12 +47,6 @@ pie
 </details>
 
 > Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.
-
-### Discussion Contribution Legend
-
-- 🔹 Normal Comments: Basic participation with minimal effort
-- 🔶 Great Informative Comments: Thoughtful participation that adds value
-- 💎 Incredible Comments: Exceptional participation with high-quality content
 
 ## Review Table
 
