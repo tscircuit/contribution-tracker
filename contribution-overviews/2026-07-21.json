@@ -2,13 +2,20 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 2,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 1743,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1743",
+        "title": "Add benchmark history dashboard",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 1728,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1728",
@@ -17,24 +24,20 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 4,
+    "prsOpened": 14,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 10,
-    "stars": "⭐",
-    "major": 2,
+    "score": 25,
+    "major": 5,
     "minor": 0,
-    "tiny": 2
+    "tiny": 4,
+    "stars": "⭐⭐"
   },
   "Abse2001": {
     "githubId": 54582525,
@@ -48,32 +51,36 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/sparkfun-boards",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
     "score": 1,
-    "stars": "",
     "major": 0,
     "minor": 0,
-    "tiny": 1
+    "tiny": 1,
+    "stars": ""
   },
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 4,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 15,
@@ -81,31 +88,81 @@
         "title": "Add OpenAI login support",
         "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 23,
+        "url": "https://github.com/tscircuit/datasheet-to-tscircuit/pull/23",
+        "title": "Add authenticated OpenAI execution across agent workflows",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 5,
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
-    "prsMerged": 2,
+    "prsOpened": 6,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 5,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 9.5,
-    "stars": "⭐",
-    "major": 1,
+    "score": 27.5,
+    "major": 5,
     "minor": 0,
-    "tiny": 1
+    "tiny": 1,
+    "stars": "⭐⭐"
   },
   "Hero988": {
     "githubId": 61606444,
     "githubLogin": "Hero988",
-    "reviewsReceived": 1,
+    "reviewsReceived": 8,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 2739,
+        "url": "https://github.com/tscircuit/core/pull/2739",
+        "title": "fix: defaultTraceWidth/nominalTraceWidth board props now control autorouted trace width",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2765,
+        "url": "https://github.com/tscircuit/core/pull/2765",
+        "title": "fix: <switch /> drops supplierPartNumbers/manufacturerPartNumber, part missing from BOM",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 690,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/690",
+        "title": "fix: resolve stuck net-label collisions with a least-overlap fallback",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 9,
+    "prsMerged": 3,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 9,
+    "major": 2,
+    "minor": 0,
+    "tiny": 1,
+    "stars": "⭐"
+  },
+  "Hivesmith-dev": {
+    "githubId": 306785898,
+    "githubLogin": "Hivesmith-dev",
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -114,19 +171,13 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "KrishnaX12": {
     "githubId": 186785561,
@@ -146,13 +197,7 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "Lathikaa-S": {
     "githubId": 202630750,
@@ -173,26 +218,29 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
     "score": 1,
-    "stars": "",
     "major": 0,
     "minor": 0,
-    "tiny": 1
+    "tiny": 1,
+    "stars": ""
   },
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 4,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 2794,
+        "url": "https://github.com/tscircuit/core/pull/2794",
+        "title": "Revert internal circuit implementation",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2761,
         "url": "https://github.com/tscircuit/core/pull/2761",
@@ -206,42 +254,52 @@
         "title": "Render chip ports on internal circuit symbols",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 694,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/694",
+        "title": "Untangle merged-label trace crossings",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 3,
+    "prsOpened": 14,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 6,
-    "stars": "⭐",
-    "major": 1,
-    "minor": 0,
-    "tiny": 2
+    "score": 14,
+    "major": 2,
+    "minor": 1,
+    "tiny": 3,
+    "stars": "⭐⭐"
   },
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 7,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 9,
         "url": "https://github.com/tscircuit/rfc/pull/9",
         "title": "Add analog simulation analyses and parameter sweep RFC",
         "staffApprovals": 2,
+        "staffRejections": 0
+      },
+      {
+        "number": 22,
+        "url": "https://github.com/tscircuit/datasheet-to-tscircuit/pull/22",
+        "title": "multi typical applications & mse",
+        "staffApprovals": 1,
         "staffRejections": 0
       },
       {
@@ -252,35 +310,63 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 6,
+    "prsOpened": 29,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 18,
-    "stars": "⭐⭐",
-    "major": 4,
+    "score": 34,
+    "major": 7,
     "minor": 0,
-    "tiny": 1
+    "tiny": 2,
+    "stars": "⭐⭐"
+  },
+  "anil08607": {
+    "githubId": 285619933,
+    "githubLogin": "anil08607",
+    "reviewsReceived": 4,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 2,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 2,
+    "major": 0,
+    "minor": 0,
+    "tiny": 2,
+    "stars": ""
   },
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 6,
+    "reviewsReceived": 13,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
+      {
+        "number": 747,
+        "url": "https://github.com/tscircuit/props/pull/747",
+        "title": "Add schSheetName to schematic box props",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 746,
         "url": "https://github.com/tscircuit/props/pull/746",
@@ -292,6 +378,13 @@
         "number": 745,
         "url": "https://github.com/tscircuit/props/pull/745",
         "title": "Add schematic box chip reference props",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2763,
+        "url": "https://github.com/tscircuit/core/pull/2763",
+        "title": "Infer schematic sheets from schematic box connections",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -308,21 +401,24 @@
         "title": "Example test for multiple schematic sheet representation of a chip",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 61,
+        "url": "https://github.com/tscircuit/system-block-designer/pull/61",
+        "title": "Support TI GPIO and SPI interface traces",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
-    "rejectionsGiven": 1,
-    "prsOpened": 16,
-    "prsMerged": 12,
+    "approvalsGiven": 14,
+    "rejectionsGiven": 3,
+    "prsOpened": 33,
+    "prsMerged": 29,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 12,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit.com",
@@ -331,21 +427,21 @@
         ]
       }
     ],
-    "score": 22,
-    "stars": "⭐⭐",
-    "major": 2,
-    "minor": 4,
-    "tiny": 5
+    "score": 47,
+    "major": 4,
+    "minor": 9,
+    "tiny": 15,
+    "stars": "⭐⭐"
   },
   "itisrohit": {
     "githubId": 93656009,
     "githubLogin": "itisrohit",
-    "reviewsReceived": 8,
+    "reviewsReceived": 21,
     "rejectionsReceived": 2,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 718,
@@ -353,6 +449,13 @@
         "title": "repro(dip): add fabrication note pin label rendering repro",
         "staffApprovals": 0,
         "staffRejections": 1
+      },
+      {
+        "number": 2776,
+        "url": "https://github.com/tscircuit/core/pull/2776",
+        "title": "repro: mosfet doesn't propagate manufacturerPartNumber and supplierPartNumbers",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 2749,
@@ -371,26 +474,76 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 2,
+    "prsOpened": 12,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 3,
-    "stars": "",
+    "score": 9,
     "major": 0,
-    "minor": 1,
-    "tiny": 1
+    "minor": 4,
+    "tiny": 1,
+    "stars": "⭐"
   },
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
+    "reviewsReceived": 21,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 12,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 4,
+    "staffReviewedPrLinks": [
+      {
+        "number": 439,
+        "url": "https://github.com/tscircuit/schematic-symbols/pull/439",
+        "title": "scale down polarised capacitor",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 168,
+        "url": "https://github.com/tscircuit/matchpack/pull/168",
+        "title": "add isCrystal in InputProblem",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 165,
+        "url": "https://github.com/tscircuit/matchpack/pull/165",
+        "title": "Align capacitor partition on VCC/GND pins side",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 164,
+        "url": "https://github.com/tscircuit/matchpack/pull/164",
+        "title": "Fix rail-only decoupling capacitor grouping",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 6,
+    "rejectionsGiven": 0,
+    "prsOpened": 11,
+    "prsMerged": 7,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 20,
+    "major": 2,
+    "minor": 1,
+    "tiny": 4,
+    "stars": "⭐⭐"
+  },
+  "namdamdoi68-oss": {
+    "githubId": 266451592,
+    "githubLogin": "namdamdoi68-oss",
     "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
@@ -398,21 +551,15 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 3,
+    "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "rootdgy": {
     "githubId": 47914644,
@@ -432,83 +579,78 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 2,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 1,
+    "prsOpened": 3,
+    "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 0,
+    "score": 3,
+    "major": 0,
+    "minor": 0,
+    "tiny": 2,
     "stars": ""
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 6,
+    "reviewsReceived": 11,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 13,
-    "rejectionsGiven": 2,
-    "prsOpened": 20,
-    "prsMerged": 18,
+    "approvalsGiven": 34,
+    "rejectionsGiven": 3,
+    "prsOpened": 57,
+    "prsMerged": 37,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedNonCodeOwner": 33,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/common",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 34,
-    "stars": "⭐⭐",
-    "major": 4,
-    "minor": 4,
-    "tiny": 9
+    "score": 87,
+    "major": 13,
+    "minor": 11,
+    "tiny": 13,
+    "stars": "👑"
   },
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 6,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "reviewsReceived": 12,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 5,
     "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 1,
@@ -521,19 +663,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
-    "rejectionsGiven": 0,
-    "prsOpened": 10,
-    "prsMerged": 6,
+    "approvalsGiven": 4,
+    "rejectionsGiven": 1,
+    "prsOpened": 14,
+    "prsMerged": 13,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
         "repo": "tscircuit/schematic-symbols",
@@ -542,11 +680,11 @@
         ]
       }
     ],
-    "score": 13,
-    "stars": "⭐⭐",
-    "major": 2,
+    "score": 27,
+    "major": 4,
     "minor": 1,
-    "tiny": 3
+    "tiny": 8,
+    "stars": "⭐⭐"
   },
   "thairc-dev": {
     "githubId": 141122955,
@@ -566,13 +704,7 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
-    "score": 0,
-    "stars": ""
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "tscircuitbot": {
     "githubId": 174540199,
@@ -586,21 +718,17 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 162,
-    "prsMerged": 140,
+    "prsOpened": 283,
+    "prsMerged": 242,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "discussionComments": 0,
-    "discussionNormalComments": 0,
-    "discussionGreatInformativeComments": 0,
-    "discussionIncredibleComments": 0,
     "score": 13,
-    "stars": "⭐⭐",
     "major": 0,
     "minor": 0,
-    "tiny": 139
+    "tiny": 240,
+    "stars": "⭐⭐"
   }
 }
