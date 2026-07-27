@@ -14,6 +14,7 @@ import {
   filterHardwareReimbursementsForMonth,
   readHardwareReimbursements,
 } from "../lib/hardware-reimbursements"
+import { CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC } from "../lib/ai/date-utils"
 import { resolveContributorIdentity } from "../lib/contributor-identity"
 
 interface WeeklyContributorStats {
@@ -31,6 +32,7 @@ export interface ContributionWeek {
   filePath: string
   weekStartDate: Date
   weekEndDate: Date
+  completedAt: Date
 }
 
 export function getFullWeeksForMonth(
@@ -71,18 +73,26 @@ export function getFullWeeksForMonth(
           fileDate.getUTCDate() + 6,
         ),
       )
+      const completedAt = new Date(weekEndDate)
+      // Current overview files start at Tuesday's cutoff and are complete at
+      // the following Tuesday's cutoff. Older files started on Wednesday.
+      if (isTuesday(fileDate)) {
+        completedAt.setUTCDate(completedAt.getUTCDate() + 1)
+      }
+      completedAt.setUTCHours(CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC, 0, 0, 0)
 
       return {
         filePath,
         weekStartDate,
         weekEndDate,
+        completedAt,
       }
     })
-    .filter(({ weekEndDate }) => {
+    .filter(({ weekEndDate, completedAt }) => {
       return (
         weekEndDate >= monthStart &&
         weekEndDate < nextMonthStart &&
-        weekEndDate <= today
+        completedAt <= today
       )
     })
     .sort((a, b) => b.weekStartDate.getTime() - a.weekStartDate.getTime())
