@@ -14,6 +14,7 @@ import {
   filterHardwareReimbursementsForMonth,
   readHardwareReimbursements,
 } from "../lib/hardware-reimbursements"
+import { CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC } from "../lib/ai/date-utils"
 import { resolveContributorIdentity } from "../lib/contributor-identity"
 
 interface WeeklyContributorStats {
@@ -31,6 +32,7 @@ export interface ContributionWeek {
   filePath: string
   weekStartDate: Date
   weekEndDate: Date
+  completedAt: Date
 }
 
 export function getFullWeeksForMonth(
@@ -71,18 +73,26 @@ export function getFullWeeksForMonth(
           fileDate.getUTCDate() + 6,
         ),
       )
+      const completedAt = new Date(weekEndDate)
+      // Current overview files start at Tuesday's cutoff and are complete at
+      // the following Tuesday's cutoff. Older files started on Wednesday.
+      if (isTuesday(fileDate)) {
+        completedAt.setUTCDate(completedAt.getUTCDate() + 1)
+      }
+      completedAt.setUTCHours(CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC, 0, 0, 0)
 
       return {
         filePath,
         weekStartDate,
         weekEndDate,
+        completedAt,
       }
     })
-    .filter(({ weekEndDate }) => {
+    .filter(({ weekEndDate, completedAt }) => {
       return (
         weekEndDate >= monthStart &&
         weekEndDate < nextMonthStart &&
-        weekEndDate <= today
+        completedAt <= today
       )
     })
     .sort((a, b) => b.weekStartDate.getTime() - a.weekStartDate.getTime())
@@ -116,6 +126,43 @@ export interface ContributorStatsForWeek {
   weekEndDate: Date
 }
 
+function getDurableIdentityKeyByLegacyLogin(
+  contributorStatsByWeek: ContributorStatsForWeek[],
+): Map<string, string> {
+  const durableIdentityKeyByLogin = new Map<string, string>()
+  const ambiguousLogins = new Set<string>()
+
+  for (const { contributorStatsByLogin } of contributorStatsByWeek) {
+    for (const [storedLogin, contributorStats] of Object.entries(
+      contributorStatsByLogin,
+    )) {
+      if (contributorStats.githubId === undefined) continue
+
+      const contributorIdentity = resolveContributorIdentity({
+        id: contributorStats.githubId,
+        login: contributorStats.githubLogin ?? storedLogin,
+      })
+      const normalizedLogin = contributorIdentity.githubLogin.toLowerCase()
+      const existingIdentityKey = durableIdentityKeyByLogin.get(normalizedLogin)
+
+      if (
+        existingIdentityKey &&
+        existingIdentityKey !== contributorIdentity.contributorIdentityKey
+      ) {
+        durableIdentityKeyByLogin.delete(normalizedLogin)
+        ambiguousLogins.add(normalizedLogin)
+      } else if (!ambiguousLogins.has(normalizedLogin)) {
+        durableIdentityKeyByLogin.set(
+          normalizedLogin,
+          contributorIdentity.contributorIdentityKey,
+        )
+      }
+    }
+  }
+
+  return durableIdentityKeyByLogin
+}
+
 export function calculateSponsorship(
   contributorStatsByWeek: ContributorStatsForWeek[],
 ): {
@@ -134,6 +181,9 @@ export function calculateSponsorship(
       latestWeekEnd: number
     }
   > = new Map()
+  const durableIdentityKeyByLegacyLogin = getDurableIdentityKeyByLegacyLogin(
+    contributorStatsByWeek,
+  )
 
   // Collect data from all weeks
   contributorStatsByWeek.forEach(
@@ -144,12 +194,17 @@ export function calculateSponsorship(
             id: contributorStats.githubId,
             login: contributorStats.githubLogin ?? storedLogin,
           })
+          // Overview files created before GitHub IDs were persisted only have
+          // login keys. Bridge them when this month contains exactly one
+          // durable identity with the same login.
+          const contributorIdentityKey =
+            contributorIdentity.githubId === undefined
+              ? (durableIdentityKeyByLegacyLogin.get(
+                  contributorIdentity.githubLogin.toLowerCase(),
+                ) ?? contributorIdentity.contributorIdentityKey)
+              : contributorIdentity.contributorIdentityKey
 
-          if (
-            !sponsorshipByContributorIdentity.has(
-              contributorIdentity.contributorIdentityKey,
-            )
-          ) {
+          if (!sponsorshipByContributorIdentity.has(contributorIdentityKey)) {
             // Initialize with correct weekly date ranges
             const weekDates = contributorStatsByWeek.map(
               ({ weekStartDate, weekEndDate }) => {
@@ -160,25 +215,18 @@ export function calculateSponsorship(
               },
             )
 
-            sponsorshipByContributorIdentity.set(
-              contributorIdentity.contributorIdentityKey,
-              {
-                username: contributorIdentity.githubLogin,
-                weeklyScores: Array(contributorStatsByWeek.length).fill(0),
-                hasWeeklyScore: Array(contributorStatsByWeek.length).fill(
-                  false,
-                ),
-                fallbackWeeklyStars: Array(contributorStatsByWeek.length).fill(
-                  0,
-                ),
-                weekDates,
-                latestWeekEnd: weekEndDate.getTime(),
-              },
-            )
+            sponsorshipByContributorIdentity.set(contributorIdentityKey, {
+              username: contributorIdentity.githubLogin,
+              weeklyScores: Array(contributorStatsByWeek.length).fill(0),
+              hasWeeklyScore: Array(contributorStatsByWeek.length).fill(false),
+              fallbackWeeklyStars: Array(contributorStatsByWeek.length).fill(0),
+              weekDates,
+              latestWeekEnd: weekEndDate.getTime(),
+            })
           }
 
           const contributorSponsorship = sponsorshipByContributorIdentity.get(
-            contributorIdentity.contributorIdentityKey,
+            contributorIdentityKey,
           )!
           if (weekEndDate.getTime() > contributorSponsorship.latestWeekEnd) {
             contributorSponsorship.username = contributorIdentity.githubLogin

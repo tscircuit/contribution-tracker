@@ -31,3 +31,15 @@ test("sponsorship month lookup scans past newer overview files", () => {
     "2026-01-28.json",
   ])
 })
+
+test("sponsorship excludes the active week until its Tuesday cutoff", () => {
+  const beforeCutoff = basenamesForMonth(
+    2026,
+    7,
+    new Date("2026-07-28T17:59:59Z"),
+  )
+  const atCutoff = basenamesForMonth(2026, 7, new Date("2026-07-28T18:00:00Z"))
+
+  expect(beforeCutoff).not.toContain("2026-07-21.json")
+  expect(atCutoff[0]).toBe("2026-07-21.json")
+})
