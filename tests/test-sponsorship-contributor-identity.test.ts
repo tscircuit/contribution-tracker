@@ -62,3 +62,38 @@ test("sponsorship uses the latest login for the same durable ID", () => {
     amount: 120,
   })
 })
+
+test("sponsorship bridges pre-ID weeks to a matching durable identity", () => {
+  const legacyStats = createEmptyContributorStats()
+  legacyStats.score = 11
+  const durableStats = createEmptyContributorStats({
+    id: 987654321,
+    login: "example-contributor",
+  })
+  durableStats.score = 4
+
+  const sponsorships = calculateSponsorship([
+    {
+      contributorStatsByLogin: {
+        "example-contributor": durableStats,
+      },
+      weekStartDate: new Date("2026-07-07T00:00:00Z"),
+      weekEndDate: new Date("2026-07-13T00:00:00Z"),
+    },
+    {
+      contributorStatsByLogin: {
+        "example-contributor": legacyStats,
+      },
+      weekStartDate: new Date("2026-06-30T00:00:00Z"),
+      weekEndDate: new Date("2026-07-06T00:00:00Z"),
+    },
+  ])
+
+  expect(sponsorships).toEqual([
+    {
+      username: "example-contributor",
+      amount: 120,
+      remarks: "Weekly scores: [2 (06/30-07/06), 1 (07/07-07/13)]",
+    },
+  ])
+})
