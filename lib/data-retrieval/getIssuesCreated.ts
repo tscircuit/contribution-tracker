@@ -1,4 +1,9 @@
 import { octokit } from "lib/sdks"
+import { GITHUB_PAGE_SIZE } from "./pagination"
+
+type RepoIssue = Awaited<
+  ReturnType<typeof octokit.issues.listForRepo>
+>["data"][number]
 
 export async function getIssuesCreated(
   repo: string,
@@ -6,13 +11,21 @@ export async function getIssuesCreated(
   startDate: string,
 ): Promise<{ totalIssues: number; majorIssues: number }> {
   try {
-    const { data: issues } = await octokit.issues.listForRepo({
-      owner: repo.split("/")[0],
-      repo: repo.split("/")[1],
-      creator: contributor,
-      since: startDate,
-      state: "all",
-    })
+    const fetchIssues = async (page = 1): Promise<RepoIssue[]> => {
+      const { data } = await octokit.issues.listForRepo({
+        owner: repo.split("/")[0],
+        repo: repo.split("/")[1],
+        creator: contributor,
+        since: startDate,
+        state: "all",
+        per_page: GITHUB_PAGE_SIZE,
+        page,
+      })
+      if (data.length < GITHUB_PAGE_SIZE) return data
+      return [...data, ...(await fetchIssues(page + 1))]
+    }
+
+    const issues = await fetchIssues()
 
     // Filter out pull requests by checking for the absence of `pull_request` property
     const openedIssues = issues.filter((issue) => !issue.pull_request)
