@@ -2,13 +2,27 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 2,
+    "reviewsReceived": 31,
     "rejectionsReceived": 1,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 0,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 12,
+        "url": "https://github.com/tscircuit/rfc/pull/12",
+        "title": "Add automatic decoupling capacitor detection and enforcement RFC",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2937,
+        "url": "https://github.com/tscircuit/core/pull/2937",
+        "title": "Fix inherited routingDisabled for sequential traces",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 88,
         "url": "https://github.com/tscircuit/common/pull/88",
@@ -19,43 +33,65 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 4,
+    "prsOpened": 13,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 14,
+    "score": 18,
     "major": 3,
-    "minor": 0,
+    "minor": 2,
     "tiny": 1,
     "stars": "⭐⭐"
   },
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 1,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 3,
+    "staffReviewedPrLinks": [
+      {
+        "number": 756,
+        "url": "https://github.com/tscircuit/footprinter/pull/756",
+        "title": "Fix SOT-25 pad-row width handling",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 755,
+        "url": "https://github.com/tscircuit/footprinter/pull/755",
+        "title": "Fix TSSOP rounded pad parameter handling for C78589 SOP-6",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 73,
+        "url": "https://github.com/tscircuit/circuit-json-to-footprinter/pull/73",
+        "title": "Improve discovery for BGA grids, large SMD push buttons, and precise DFN-4 footprints",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 1,
+    "prsOpened": 5,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 1,
-    "major": 0,
-    "minor": 0,
+    "score": 9,
+    "major": 1,
+    "minor": 2,
     "tiny": 1,
-    "stars": ""
+    "stars": "⭐"
   },
   "AnasSarkiz": {
     "githubId": 72264380,
@@ -163,7 +199,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
+    "prsOpened": 8,
     "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -179,12 +215,12 @@
   "Hero988": {
     "githubId": 61606444,
     "githubLogin": "Hero988",
-    "reviewsReceived": 5,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 3,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "reviewsReceived": 29,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 6,
+    "staffRejectionsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 110,
@@ -192,6 +228,27 @@
         "title": "fix: transform pcb_solder_paste and other component-attached elements in transformPCBElement",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 767,
+        "url": "https://github.com/tscircuit/props/pull/767",
+        "title": "feat: add solderPasteMargin prop to all smtpad variants",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 2930,
+        "url": "https://github.com/tscircuit/core/pull/2930",
+        "title": "fix: emit solder paste for polygon and pill smtpads",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 2945,
+        "url": "https://github.com/tscircuit/core/pull/2945",
+        "title": "feat: make smtpad solder paste aperture configurable via solderPasteMargin",
+        "staffApprovals": 0,
+        "staffRejections": 1
       },
       {
         "number": 2916,
@@ -210,29 +267,36 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 2,
+    "prsOpened": 10,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 4,
+    "score": 8,
     "major": 0,
-    "minor": 2,
-    "tiny": 0,
+    "minor": 3,
+    "tiny": 2,
     "stars": "⭐"
   },
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 3,
+    "reviewsReceived": 4,
     "rejectionsReceived": 3,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 0,
+    "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
+      {
+        "number": 830,
+        "url": "https://github.com/tscircuit/docs/pull/830",
+        "title": "docs: fix inductor incorrect unit ",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 827,
         "url": "https://github.com/tscircuit/docs/pull/827",
@@ -244,17 +308,22 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 6,
-    "prsMerged": 0,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 2,
+    "major": 0,
+    "minor": 1,
+    "tiny": 0,
+    "stars": ""
   },
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 6,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
     "approvalsReceived": 5,
     "staffReviewedPrs": 2,
@@ -276,19 +345,19 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 7,
     "rejectionsGiven": 1,
-    "prsOpened": 12,
-    "prsMerged": 9,
+    "prsOpened": 13,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 6,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 16,
-    "major": 2,
+    "score": 21,
+    "major": 3,
     "minor": 0,
-    "tiny": 7,
+    "tiny": 8,
     "stars": "⭐⭐"
   },
   "Sang-it": {
@@ -339,38 +408,61 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 1,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 768,
+        "url": "https://github.com/tscircuit/props/pull/768",
+        "title": "Add SPICE waveform and measurement props",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1799,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1799",
+        "title": "fix(topology): detect BGA cores in mixed packages",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 1,
+    "prsOpened": 16,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 3,
-    "major": 0,
+    "score": 8,
+    "major": 1,
     "minor": 0,
-    "tiny": 1,
-    "stars": ""
+    "tiny": 2,
+    "stars": "⭐"
   },
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 4,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 6,
+    "rejectionsReceived": 1,
     "approvalsReceived": 3,
-    "staffReviewedPrs": 0,
-    "staffRejectionsReceived": 0,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffReviewedPrLinks": [
+      {
+        "number": 316,
+        "url": "https://github.com/tscircuit/jscad-electronics/pull/316",
+        "title": "Add 3D CAD model for radial electrolytic capacitors",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 3,
@@ -389,9 +481,9 @@
   "astrimid": {
     "githubId": 310314232,
     "githubLogin": "astrimid",
-    "reviewsReceived": 1,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -399,16 +491,16 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 8,
-    "prsMerged": 4,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 4,
+    "score": 5,
     "major": 0,
     "minor": 0,
-    "tiny": 4,
+    "tiny": 5,
     "stars": "⭐"
   },
   "b3417": {
@@ -444,15 +536,15 @@
     "approvalsGiven": 11,
     "rejectionsGiven": 3,
     "prsOpened": 17,
-    "prsMerged": 13,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 11,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 22,
+    "score": 24,
     "major": 2,
-    "minor": 2,
+    "minor": 3,
     "tiny": 9,
     "stars": "⭐⭐"
   },
@@ -495,6 +587,26 @@
     "minor": 1,
     "tiny": 0,
     "stars": ""
+  },
+  "kaivalyaarisetty": {
+    "githubId": 308814180,
+    "githubLogin": "kaivalyaarisetty",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "koolniko396-coder": {
     "githubId": 310696992,
@@ -539,13 +651,20 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 21,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 16,
-    "staffReviewedPrs": 8,
-    "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 8,
+    "reviewsReceived": 24,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 17,
+    "staffReviewedPrs": 10,
+    "staffRejectionsReceived": 2,
+    "staffApprovalsReceived": 9,
     "staffReviewedPrLinks": [
+      {
+        "number": 247,
+        "url": "https://github.com/tscircuit/schematic-viewer/pull/247",
+        "title": "Add component and net search with across sheets focus",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 2902,
         "url": "https://github.com/tscircuit/core/pull/2902",
@@ -557,6 +676,13 @@
         "number": 129,
         "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/129",
         "title": "Fix stretched silkscreen text",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 191,
+        "url": "https://github.com/tscircuit/matchpack/pull/191",
+        "title": "Index pin ownership before building chip partitions",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -603,31 +729,38 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 5,
+    "approvalsGiven": 6,
     "rejectionsGiven": 1,
-    "prsOpened": 27,
-    "prsMerged": 22,
+    "prsOpened": 32,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 5,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 51,
-    "major": 6,
-    "minor": 7,
+    "score": 59,
+    "major": 7,
+    "minor": 9,
     "tiny": 8,
     "stars": "⭐⭐⭐"
   },
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 13,
+    "reviewsReceived": 22,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 172,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/172",
+        "title": "Add true elliptical PCB hole rendering for oval shapes with regression coverage",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 171,
         "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/171",
@@ -638,62 +771,82 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 4,
+    "prsOpened": 13,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 5,
+    "score": 16,
     "major": 0,
-    "minor": 1,
-    "tiny": 3,
-    "stars": "⭐"
+    "minor": 5,
+    "tiny": 6,
+    "stars": "⭐⭐"
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 6,
+    "reviewsReceived": 11,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 32,
-    "rejectionsGiven": 3,
-    "prsOpened": 42,
-    "prsMerged": 23,
+    "approvalsGiven": 48,
+    "rejectionsGiven": 8,
+    "prsOpened": 87,
+    "prsMerged": 68,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 22,
-    "distinctPrsReviewedAsCodeOwner": 7,
+    "distinctPrsReviewedNonCodeOwner": 37,
+    "distinctPrsReviewedAsCodeOwner": 9,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 56,
-    "major": 9,
-    "minor": 5,
-    "tiny": 9,
-    "stars": "⭐⭐⭐"
+    "score": 175,
+    "major": 33,
+    "minor": 15,
+    "tiny": 17,
+    "stars": "👑👑👑"
   },
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 4,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "reviewsReceived": 13,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 754,
+        "url": "https://github.com/tscircuit/footprinter/pull/754",
+        "title": "feat(stampboard): support offset side rows and inner SMT grids",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 2928,
+        "url": "https://github.com/tscircuit/core/pull/2928",
+        "title": "Fix supplier footprint loading without a library resolver",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 60,
         "url": "https://github.com/tscircuit/kicadts/pull/60",
@@ -702,19 +855,27 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
-    "rejectionsGiven": 2,
-    "prsOpened": 15,
-    "prsMerged": 12,
+    "approvalsGiven": 3,
+    "rejectionsGiven": 3,
+    "prsOpened": 19,
+    "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 13.5,
-    "major": 0,
-    "minor": 1,
-    "tiny": 11,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/footprinter",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 22.5,
+    "major": 1,
+    "minor": 3,
+    "tiny": 12,
     "stars": "⭐⭐"
   },
   "tomlycett": {
@@ -749,17 +910,17 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 233,
-    "prsMerged": 183,
+    "prsOpened": 403,
+    "prsMerged": 319,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 14,
+    "score": 15.5,
     "major": 0,
     "minor": 0,
-    "tiny": 183,
+    "tiny": 319,
     "stars": "⭐⭐"
   }
 }
