@@ -87,18 +87,18 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 4,
+    "prsOpened": 7,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 9,
-    "major": 1,
+    "score": 15,
+    "major": 2,
     "minor": 2,
-    "tiny": 1,
-    "stars": "⭐"
+    "tiny": 3,
+    "stars": "⭐⭐"
   },
   "AnasSarkiz": {
     "githubId": 72264380,
@@ -139,16 +139,16 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 15,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 18,
+    "score": 19,
     "major": 2,
     "minor": 3,
     "tiny": 3,
@@ -237,12 +237,12 @@
   "Hero988": {
     "githubId": 61606444,
     "githubLogin": "Hero988",
-    "reviewsReceived": 29,
-    "rejectionsReceived": 3,
-    "approvalsReceived": 10,
-    "staffReviewedPrs": 6,
-    "staffRejectionsReceived": 3,
-    "staffApprovalsReceived": 4,
+    "reviewsReceived": 31,
+    "rejectionsReceived": 4,
+    "approvalsReceived": 11,
+    "staffReviewedPrs": 8,
+    "staffRejectionsReceived": 4,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
         "number": 110,
@@ -256,6 +256,13 @@
         "url": "https://github.com/tscircuit/props/pull/767",
         "title": "feat: add solderPasteMargin prop to all smtpad variants",
         "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 2970,
+        "url": "https://github.com/tscircuit/core/pull/2970",
+        "title": "Apply pcbOffsetX/pcbOffsetY when placing components on the PCB (currently ignored)",
+        "staffApprovals": 0,
         "staffRejections": 1
       },
       {
@@ -285,11 +292,18 @@
         "title": "fix: paginate GitHub list calls in data-retrieval",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 648,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/648",
+        "title": "feat: add showSolderPaste option to render solder paste in the pcb view",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
+    "prsOpened": 11,
     "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -305,11 +319,11 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 6,
-    "rejectionsReceived": 4,
+    "reviewsReceived": 8,
+    "rejectionsReceived": 5,
     "approvalsReceived": 2,
     "staffReviewedPrs": 4,
-    "staffRejectionsReceived": 2,
+    "staffRejectionsReceived": 3,
     "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
@@ -317,7 +331,7 @@
         "url": "https://github.com/tscircuit/footprinter/pull/758",
         "title": "feat: add tsop48 footprint generator",
         "staffApprovals": 0,
-        "staffRejections": 1
+        "staffRejections": 2
       },
       {
         "number": 757,
@@ -381,14 +395,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 7,
+    "approvalsGiven": 8,
     "rejectionsGiven": 1,
     "prsOpened": 13,
     "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 1,
     "score": 21,
     "major": 3,
@@ -444,9 +458,9 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 4,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
+    "approvalsReceived": 5,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 3,
@@ -475,25 +489,25 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 31,
-    "prsMerged": 3,
+    "prsOpened": 69,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 9,
-    "major": 1,
+    "score": 17,
+    "major": 3,
     "minor": 0,
     "tiny": 2,
-    "stars": "⭐"
+    "stars": "⭐⭐"
   },
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 21,
+    "reviewsReceived": 25,
     "rejectionsReceived": 1,
-    "approvalsReceived": 8,
+    "approvalsReceived": 9,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 2,
@@ -523,16 +537,16 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 10,
-    "prsMerged": 4,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 6,
+    "score": 7,
     "major": 0,
     "minor": 2,
-    "tiny": 2,
+    "tiny": 3,
     "stars": "⭐"
   },
   "astrimid": {
@@ -744,9 +758,9 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 24,
+    "reviewsReceived": 27,
     "rejectionsReceived": 2,
-    "approvalsReceived": 17,
+    "approvalsReceived": 18,
     "staffReviewedPrs": 10,
     "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 9,
@@ -824,15 +838,15 @@
     ],
     "approvalsGiven": 6,
     "rejectionsGiven": 1,
-    "prsOpened": 33,
-    "prsMerged": 24,
+    "prsOpened": 34,
+    "prsMerged": 25,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 5,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 59,
-    "major": 7,
+    "score": 63,
+    "major": 8,
     "minor": 9,
     "tiny": 8,
     "stars": "⭐⭐⭐"
@@ -840,13 +854,20 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 22,
+    "reviewsReceived": 27,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 4177,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/4177",
+        "title": "Migrate web editor to Monaco WorkspaceCodeEditor with mobile memory toggle",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 172,
         "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/172",
@@ -860,41 +881,48 @@
         "title": "Fix rectangular PCB holes rendering as solid surfaces in 3D",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 17,
+        "url": "https://github.com/tscircuit/circuit-json-to-3d-png/pull/17",
+        "title": "update circuit-json-to-gltf",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 11,
+    "prsOpened": 17,
+    "prsMerged": 13,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 16,
+    "score": 19,
     "major": 0,
-    "minor": 5,
-    "tiny": 6,
+    "minor": 6,
+    "tiny": 7,
     "stars": "⭐⭐"
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 14,
+    "reviewsReceived": 19,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 57,
-    "rejectionsGiven": 11,
-    "prsOpened": 117,
-    "prsMerged": 91,
+    "approvalsGiven": 60,
+    "rejectionsGiven": 13,
+    "prsOpened": 150,
+    "prsMerged": 114,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 40,
+    "distinctPrsReviewedNonCodeOwner": 42,
     "distinctPrsReviewedAsCodeOwner": 11,
     "reposOwned": [
       {
@@ -910,10 +938,10 @@
         ]
       }
     ],
-    "score": 235,
-    "major": 45,
-    "minor": 21,
-    "tiny": 24,
+    "score": 289,
+    "major": 52,
+    "minor": 34,
+    "tiny": 27,
     "stars": "👑👑👑"
   },
   "techmannih": {
@@ -948,14 +976,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 5,
     "rejectionsGiven": 3,
     "prsOpened": 19,
     "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
@@ -1003,8 +1031,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 451,
-    "prsMerged": 356,
+    "prsOpened": 505,
+    "prsMerged": 394,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1013,7 +1041,7 @@
     "score": 15.5,
     "major": 0,
     "minor": 0,
-    "tiny": 356,
+    "tiny": 385,
     "stars": "⭐⭐"
   },
   "vasu-rs": {
