@@ -10,18 +10,32 @@ export async function getMergedPRs(
   currentTime: Date = new Date(),
 ): Promise<MergedPullRequest[]> {
   const [owner, repo_name] = repo.split("/")
-  const { data } = await octokit.pulls.list({
-    owner,
-    repo: repo_name,
-    state: "closed",
-    sort: "updated",
-    direction: "desc",
-    per_page: 100,
-  })
+  type PullRequestListData = Awaited<
+    ReturnType<typeof octokit.pulls.list>
+  >["data"]
+
+  const fetchPRs = async (page = 1): Promise<PullRequestListData> => {
+    const { data } = await octokit.pulls.list({
+      owner,
+      repo: repo_name,
+      state: "closed",
+      sort: "updated",
+      direction: "desc",
+      per_page: 100,
+      page,
+    })
+    if (data.length === 100) {
+      const nextPagePRs = await fetchPRs(page + 1)
+      return [...data, ...nextPagePRs]
+    }
+    return data
+  }
+
+  const prs = await fetchPRs()
 
   const sinceDate = new Date(since)
   const currentTimeMs = currentTime.getTime()
-  const filteredPRs = data.filter((pr) => {
+  const filteredPRs = prs.filter((pr) => {
     if (!pr.merged_at) return false
     const mergedTime = new Date(pr.merged_at).getTime()
     const inRange =
