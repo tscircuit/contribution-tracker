@@ -1,5 +1,6 @@
 import { generateOverview } from ".."
 import { getContributionOverviewWindow } from "../lib/ai/date-utils"
+import { isCurrentContributionOverview } from "../lib/data-processing/current-week-readme"
 
 const dateArg = process.argv[2]
 
@@ -38,7 +39,14 @@ console.log(
   `Generating overview from ${weekStartString} to ${endDate.toISOString()}`,
 )
 
-generateOverview(weekStartString, endDate).catch((error) => {
+const updateReadme = isCurrentContributionOverview(startDate, endDate)
+console.log(
+  updateReadme
+    ? "README current-week block will be updated"
+    : "README current-week block will not be updated for this historical window",
+)
+
+generateOverview(weekStartString, endDate, { updateReadme }).catch((error) => {
   console.error(error)
   process.exit(1)
 })

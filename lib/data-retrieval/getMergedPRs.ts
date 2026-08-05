@@ -3,6 +3,11 @@ import { filterDiff } from "lib/data-processing/filter-diff"
 import { octokit } from "lib/sdks"
 import type { MergedPullRequest } from "lib/types"
 import { batchProcess } from "../utils/batch-process"
+import { fetchAllPagesInWindow } from "./pagination"
+
+type ClosedPullRequest = Awaited<
+  ReturnType<typeof octokit.pulls.list>
+>["data"][number]
 
 export async function getMergedPRs(
   repo: string,
@@ -10,18 +15,25 @@ export async function getMergedPRs(
   currentTime: Date = new Date(),
 ): Promise<MergedPullRequest[]> {
   const [owner, repo_name] = repo.split("/")
-  const { data } = await octokit.pulls.list({
-    owner,
-    repo: repo_name,
-    state: "closed",
-    sort: "updated",
-    direction: "desc",
-    per_page: 100,
+  const sinceDate = new Date(since)
+  const closedPRs = await fetchAllPagesInWindow<ClosedPullRequest>({
+    since: sinceDate,
+    fetchPage: async (page, perPage) => {
+      const { data } = await octokit.pulls.list({
+        owner,
+        repo: repo_name,
+        state: "closed",
+        sort: "updated",
+        direction: "desc",
+        per_page: perPage,
+        page,
+      })
+      return data
+    },
   })
 
-  const sinceDate = new Date(since)
   const currentTimeMs = currentTime.getTime()
-  const filteredPRs = data.filter((pr) => {
+  const filteredPRs = closedPRs.filter((pr) => {
     if (!pr.merged_at) return false
     const mergedTime = new Date(pr.merged_at).getTime()
     const inRange =
