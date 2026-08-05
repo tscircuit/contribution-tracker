@@ -1,6 +1,7 @@
 import * as fs from "fs"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { getContributionOverviewWindow } from "lib/ai/date-utils"
+import { replaceCurrentWeekReadme } from "lib/data-processing/current-week-readme"
 import { generateMarkdown } from "lib/data-processing/generateMarkdown"
 import {
   getOrCreateContributorStats,
@@ -22,9 +23,14 @@ import { SENIOR_STAFF_USERNAMES } from "lib/constants"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
+export interface GenerateOverviewOptions {
+  updateReadme?: boolean
+}
+
 export async function generateOverview(
   startDate: string,
   currentTime: Date = new Date(),
+  options: GenerateOverviewOptions = {},
 ) {
   const seniorStaffUsernames = new Set<string>(SENIOR_STAFF_USERNAMES)
   // Extract date portion for file naming (handles both YYYY-MM-DD and full ISO timestamp)
@@ -315,6 +321,7 @@ export async function generateOverview(
     contributorStatsByLogin,
     startDateString,
     repoOwnersMap,
+    updateReadme: options.updateReadme ?? false,
   })
 }
 
@@ -323,11 +330,13 @@ async function generateAndWriteFiles({
   contributorStatsByLogin,
   startDateString,
   repoOwnersMap,
+  updateReadme,
 }: {
   mergedPrsWithCurrentContributorLogins: AnalyzedPR[]
   contributorStatsByLogin: Record<string, ContributorStats>
   startDateString: string
   repoOwnersMap: Record<string, string[]>
+  updateReadme: boolean
 }) {
   console.log("Generating markdown")
   // Group PRs by contributor
@@ -380,17 +389,16 @@ async function generateAndWriteFiles({
   )
   console.log(`Generated contribution-overviews/${startDateString}.json`)
 
-  // Edit the README.md file
-  const readme = fs.readFileSync("README.md", "utf8")
-  const updatedReadme = readme.replace(
-    /<!-- START_CURRENT_WEEK -->[\s\S]*<!-- END_CURRENT_WEEK -->/m,
-    `<!-- START_CURRENT_WEEK -->\n\n${markdown}\n\n<!-- END_CURRENT_WEEK -->`,
-  )
-  fs.writeFileSync("README.md", updatedReadme)
+  if (updateReadme) {
+    const readme = fs.readFileSync("README.md", "utf8")
+    fs.writeFileSync("README.md", replaceCurrentWeekReadme(readme, markdown))
+  } else {
+    console.log("Skipped README current-week update")
+  }
 }
 
 export async function generateWeeklyOverview() {
   const { startDate, endDate } = getContributionOverviewWindow(new Date())
   const weekStartString = startDate.toISOString()
-  await generateOverview(weekStartString, endDate)
+  await generateOverview(weekStartString, endDate, { updateReadme: true })
 }
