@@ -40,10 +40,10 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 39,
+    "score": 40,
     "major": 7,
     "minor": 2,
-    "tiny": 6,
+    "tiny": 7,
     "stars": "⭐⭐"
   },
   "Abse2001": {
@@ -94,18 +94,18 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 25,
+    "score": 26,
     "major": 3,
     "minor": 3,
-    "tiny": 5,
+    "tiny": 6,
     "stars": "⭐⭐"
   },
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 9,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
+    "approvalsReceived": 9,
     "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 5,
@@ -142,7 +142,7 @@
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
     "prsOpened": 24,
-    "prsMerged": 9,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -248,10 +248,10 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 4,
+    "score": 5,
     "major": 0,
     "minor": 0,
-    "tiny": 4,
+    "tiny": 5,
     "stars": "⭐"
   },
   "Hero988": {
@@ -339,7 +339,7 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 9,
+    "reviewsReceived": 10,
     "rejectionsReceived": 5,
     "approvalsReceived": 3,
     "staffReviewedPrs": 4,
@@ -542,7 +542,7 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
     "prsOpened": 107,
     "prsMerged": 11,
@@ -550,9 +550,9 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 30,
-    "major": 6,
+    "distinctPrsReviewedAsCodeOwner": 2,
+    "score": 35,
+    "major": 7,
     "minor": 0,
     "tiny": 2,
     "stars": "⭐⭐"
@@ -627,13 +627,20 @@
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 27,
+    "reviewsReceived": 23,
     "rejectionsReceived": 2,
-    "approvalsReceived": 14,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 15,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 760,
+        "url": "https://github.com/tscircuit/footprinter/pull/760",
+        "title": "fix(bga): use circular pads by default for KiCad parity",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2963,
         "url": "https://github.com/tscircuit/core/pull/2963",
@@ -659,17 +666,17 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 13,
-    "prsMerged": 8,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 9,
+    "score": 11,
     "major": 0,
-    "minor": 2,
+    "minor": 3,
     "tiny": 5,
-    "stars": "⭐"
+    "stars": "⭐⭐"
   },
   "astrimid": {
     "githubId": 310314232,
@@ -677,17 +684,10 @@
     "reviewsReceived": 4,
     "rejectionsReceived": 0,
     "approvalsReceived": 3,
-    "staffReviewedPrs": 2,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
-      {
-        "number": 4127,
-        "url": "https://github.com/tscircuit/tscircuit.com/pull/4127",
-        "title": "Update runframe and pcb-viewer",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
       {
         "number": 3530,
         "url": "https://github.com/tscircuit/eval/pull/3530",
@@ -705,11 +705,11 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 1,
+    "score": 5,
     "major": 0,
     "minor": 0,
-    "tiny": 1,
-    "stars": ""
+    "tiny": 5,
+    "stars": "⭐"
   },
   "b3417": {
     "githubId": 120667073,
@@ -772,16 +772,16 @@
     "approvalsGiven": 11,
     "rejectionsGiven": 3,
     "prsOpened": 17,
-    "prsMerged": 14,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 11,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 22,
+    "score": 24,
     "major": 2,
     "minor": 3,
-    "tiny": 7,
+    "tiny": 9,
     "stars": "⭐⭐"
   },
   "itisrohit": {
@@ -910,9 +910,9 @@
     "reviewsReceived": 27,
     "rejectionsReceived": 2,
     "approvalsReceived": 18,
-    "staffReviewedPrs": 11,
+    "staffReviewedPrs": 10,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 10,
+    "staffApprovalsReceived": 9,
     "staffReviewedPrLinks": [
       {
         "number": 247,
@@ -920,13 +920,6 @@
         "title": "Add component and net search with across sheets focus",
         "staffApprovals": 0,
         "staffRejections": 1
-      },
-      {
-        "number": 2926,
-        "url": "https://github.com/tscircuit/core/pull/2926",
-        "title": "update matchpack",
-        "staffApprovals": 1,
-        "staffRejections": 0
       },
       {
         "number": 2902,
@@ -995,16 +988,16 @@
     "approvalsGiven": 6,
     "rejectionsGiven": 2,
     "prsOpened": 34,
-    "prsMerged": 25,
+    "prsMerged": 26,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 6,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 62,
+    "score": 64,
     "major": 8,
     "minor": 9,
-    "tiny": 6,
+    "tiny": 8,
     "stars": "⭐⭐⭐"
   },
   "rushabhcodes": {
@@ -1076,11 +1069,11 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 49,
-    "major": 5,
+    "score": 53,
+    "major": 6,
     "minor": 7,
     "tiny": 12,
-    "stars": "⭐⭐"
+    "stars": "⭐⭐⭐"
   },
   "seveibar": {
     "githubId": 1910070,
@@ -1092,15 +1085,15 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 79,
+    "approvalsGiven": 80,
     "rejectionsGiven": 13,
     "prsOpened": 249,
-    "prsMerged": 203,
+    "prsMerged": 204,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 59,
-    "distinctPrsReviewedAsCodeOwner": 15,
+    "distinctPrsReviewedNonCodeOwner": 60,
+    "distinctPrsReviewedAsCodeOwner": 16,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -1127,10 +1120,10 @@
         ]
       }
     ],
-    "score": 474,
-    "major": 85,
-    "minor": 60,
-    "tiny": 49,
+    "score": 496,
+    "major": 89,
+    "minor": 63,
+    "tiny": 50,
     "stars": "👑👑👑"
   },
   "techmannih": {
@@ -1173,7 +1166,7 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 4,
-    "distinctPrsReviewedAsCodeOwner": 2,
+    "distinctPrsReviewedAsCodeOwner": 3,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -1182,10 +1175,10 @@
         ]
       }
     ],
-    "score": 21.5,
+    "score": 22.5,
     "major": 1,
     "minor": 3,
-    "tiny": 11,
+    "tiny": 12,
     "stars": "⭐⭐"
   },
   "tomlycett": {
@@ -1227,10 +1220,10 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 18,
+    "score": 20,
     "major": 0,
     "minor": 0,
-    "tiny": 486,
+    "tiny": 641,
     "stars": "⭐⭐"
   },
   "vasu-rs": {
