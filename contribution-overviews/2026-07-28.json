@@ -40,10 +40,10 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 40,
+    "score": 39,
     "major": 7,
     "minor": 2,
-    "tiny": 7,
+    "tiny": 6,
     "stars": "⭐⭐"
   },
   "Abse2001": {
@@ -94,18 +94,18 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 26,
+    "score": 25,
     "major": 3,
     "minor": 3,
-    "tiny": 6,
+    "tiny": 5,
     "stars": "⭐⭐"
   },
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 10,
+    "reviewsReceived": 9,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
+    "approvalsReceived": 8,
     "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 5,
@@ -142,15 +142,15 @@
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
     "prsOpened": 24,
-    "prsMerged": 10,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 19,
+    "score": 21,
     "major": 2,
-    "minor": 2,
+    "minor": 3,
     "tiny": 4,
     "stars": "⭐⭐"
   },
@@ -220,17 +220,10 @@
     "reviewsReceived": 17,
     "rejectionsReceived": 4,
     "approvalsReceived": 8,
-    "staffReviewedPrs": 3,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [
-      {
-        "number": 2904,
-        "url": "https://github.com/tscircuit/core/pull/2904",
-        "title": "Fix fuse sch show ratings",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
       {
         "number": 317,
         "url": "https://github.com/tscircuit/jscad-electronics/pull/317",
@@ -255,11 +248,11 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 3,
+    "score": 4,
     "major": 0,
     "minor": 0,
-    "tiny": 3,
-    "stars": ""
+    "tiny": 4,
+    "stars": "⭐"
   },
   "Hero988": {
     "githubId": 61606444,
@@ -346,7 +339,7 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 10,
+    "reviewsReceived": 9,
     "rejectionsReceived": 5,
     "approvalsReceived": 3,
     "staffReviewedPrs": 4,
@@ -462,7 +455,7 @@
     "score": 41,
     "major": 6,
     "minor": 2,
-    "tiny": 15,
+    "tiny": 16,
     "stars": "⭐⭐"
   },
   "Sang-it": {
@@ -549,7 +542,7 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 5,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
     "prsOpened": 107,
     "prsMerged": 11,
@@ -557,9 +550,9 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 35,
-    "major": 7,
+    "distinctPrsReviewedAsCodeOwner": 1,
+    "score": 30,
+    "major": 6,
     "minor": 0,
     "tiny": 2,
     "stars": "⭐⭐"
@@ -634,20 +627,13 @@
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 23,
+    "reviewsReceived": 27,
     "rejectionsReceived": 2,
-    "approvalsReceived": 15,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 14,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
-      {
-        "number": 760,
-        "url": "https://github.com/tscircuit/footprinter/pull/760",
-        "title": "fix(bga): use circular pads by default for KiCad parity",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
       {
         "number": 2963,
         "url": "https://github.com/tscircuit/core/pull/2963",
@@ -673,17 +659,17 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 13,
-    "prsMerged": 9,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 11,
+    "score": 9,
     "major": 0,
-    "minor": 3,
+    "minor": 2,
     "tiny": 5,
-    "stars": "⭐⭐"
+    "stars": "⭐"
   },
   "astrimid": {
     "githubId": 310314232,
@@ -691,9 +677,9 @@
     "reviewsReceived": 4,
     "rejectionsReceived": 0,
     "approvalsReceived": 3,
-    "staffReviewedPrs": 3,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 4127,
@@ -708,13 +694,6 @@
         "title": "Better language in bun-pver-release.yml",
         "staffApprovals": 1,
         "staffRejections": 0
-      },
-      {
-        "number": 4205,
-        "url": "https://github.com/tscircuit/runframe/pull/4205",
-        "title": "Bun install proper deps",
-        "staffApprovals": 1,
-        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
@@ -725,7 +704,12 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 1,
+    "major": 0,
+    "minor": 0,
+    "tiny": 1,
+    "stars": ""
   },
   "b3417": {
     "githubId": 120667073,
@@ -788,7 +772,7 @@
     "approvalsGiven": 11,
     "rejectionsGiven": 3,
     "prsOpened": 17,
-    "prsMerged": 15,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -926,9 +910,9 @@
     "reviewsReceived": 27,
     "rejectionsReceived": 2,
     "approvalsReceived": 18,
-    "staffReviewedPrs": 10,
+    "staffReviewedPrs": 11,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 9,
+    "staffApprovalsReceived": 10,
     "staffReviewedPrLinks": [
       {
         "number": 247,
@@ -936,6 +920,13 @@
         "title": "Add component and net search with across sheets focus",
         "staffApprovals": 0,
         "staffRejections": 1
+      },
+      {
+        "number": 2926,
+        "url": "https://github.com/tscircuit/core/pull/2926",
+        "title": "update matchpack",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 2902,
@@ -1004,7 +995,7 @@
     "approvalsGiven": 6,
     "rejectionsGiven": 2,
     "prsOpened": 34,
-    "prsMerged": 26,
+    "prsMerged": 25,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1012,8 +1003,8 @@
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 62,
     "major": 8,
-    "minor": 8,
-    "tiny": 8,
+    "minor": 9,
+    "tiny": 6,
     "stars": "⭐⭐⭐"
   },
   "rushabhcodes": {
@@ -1085,11 +1076,11 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 53,
-    "major": 6,
+    "score": 49,
+    "major": 5,
     "minor": 7,
     "tiny": 12,
-    "stars": "⭐⭐⭐"
+    "stars": "⭐⭐"
   },
   "seveibar": {
     "githubId": 1910070,
@@ -1101,15 +1092,15 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 80,
+    "approvalsGiven": 79,
     "rejectionsGiven": 13,
     "prsOpened": 249,
-    "prsMerged": 204,
+    "prsMerged": 203,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 60,
-    "distinctPrsReviewedAsCodeOwner": 16,
+    "distinctPrsReviewedNonCodeOwner": 59,
+    "distinctPrsReviewedAsCodeOwner": 15,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -1136,9 +1127,9 @@
         ]
       }
     ],
-    "score": 482,
-    "major": 86,
-    "minor": 62,
+    "score": 474,
+    "major": 85,
+    "minor": 60,
     "tiny": 49,
     "stars": "👑👑👑"
   },
@@ -1182,7 +1173,7 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 4,
-    "distinctPrsReviewedAsCodeOwner": 3,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
         "repo": "tscircuit/footprinter",
@@ -1191,10 +1182,10 @@
         ]
       }
     ],
-    "score": 19.5,
+    "score": 21.5,
     "major": 1,
     "minor": 3,
-    "tiny": 9,
+    "tiny": 11,
     "stars": "⭐⭐"
   },
   "tomlycett": {
@@ -1236,10 +1227,10 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 16.5,
+    "score": 18,
     "major": 0,
     "minor": 0,
-    "tiny": 416,
+    "tiny": 486,
     "stars": "⭐⭐"
   },
   "vasu-rs": {
