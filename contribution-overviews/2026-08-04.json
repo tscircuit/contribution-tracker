@@ -2,12 +2,12 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 21,
+    "reviewsReceived": 29,
     "rejectionsReceived": 2,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 9,
-    "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 7,
+    "approvalsReceived": 14,
+    "staffReviewedPrs": 13,
+    "staffRejectionsReceived": 3,
+    "staffApprovalsReceived": 11,
     "staffReviewedPrLinks": [
       {
         "number": 13,
@@ -27,6 +27,34 @@
         "number": 113,
         "url": "https://github.com/tscircuit/circuit-json-util/pull/113",
         "title": "Add source diagnostic category",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3082,
+        "url": "https://github.com/tscircuit/core/pull/3082",
+        "title": "Update capacity autorouter to 0.0.772",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3060,
+        "url": "https://github.com/tscircuit/core/pull/3060",
+        "title": "Fix netlabel routing when schematics are disabled",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3058,
+        "url": "https://github.com/tscircuit/core/pull/3058",
+        "title": "Add failing netlabel routing repro with schematics disabled",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 3054,
+        "url": "https://github.com/tscircuit/core/pull/3054",
+        "title": "Make autorouting phase snapshots square",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -75,36 +103,29 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 29,
-    "prsMerged": 17,
+    "prsOpened": 53,
+    "prsMerged": 34,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 48,
-    "major": 8,
-    "minor": 6,
-    "tiny": 3,
-    "stars": "⭐⭐"
+    "score": 97,
+    "major": 19,
+    "minor": 8,
+    "tiny": 4,
+    "stars": "👑"
   },
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 10,
+    "reviewsReceived": 11,
     "rejectionsReceived": 5,
-    "approvalsReceived": 5,
+    "approvalsReceived": 6,
     "staffReviewedPrs": 8,
-    "staffRejectionsReceived": 6,
+    "staffRejectionsReceived": 5,
     "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
-      {
-        "number": 781,
-        "url": "https://github.com/tscircuit/footprinter/pull/781",
-        "title": "Add a generic linear SMD pad footprint",
-        "staffApprovals": 1,
-        "staffRejections": 1
-      },
       {
         "number": 773,
         "url": "https://github.com/tscircuit/footprinter/pull/773",
@@ -141,9 +162,9 @@
         "staffRejections": 1
       },
       {
-        "number": 3018,
-        "url": "https://github.com/tscircuit/core/pull/3018",
-        "title": "Add dense hierarchical autorouting failure repro",
+        "number": 3081,
+        "url": "https://github.com/tscircuit/core/pull/3081",
+        "title": "Prefer explicit trace max length",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -153,12 +174,19 @@
         "title": "Fix parent routing through breakout traces",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 3018,
+        "url": "https://github.com/tscircuit/core/pull/3018",
+        "title": "Add dense hierarchical autorouting failure repro",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 7,
+    "prsOpened": 20,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -172,10 +200,10 @@
         ]
       }
     ],
-    "score": 13,
-    "major": 1,
-    "minor": 2,
-    "tiny": 3,
+    "score": 20,
+    "major": 2,
+    "minor": 3,
+    "tiny": 4,
     "stars": "⭐⭐"
   },
   "AnasSarkiz": {
@@ -188,20 +216,68 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 6,
+    "approvalsGiven": 10,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
+    "prsOpened": 4,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 10,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 10,
+    "score": 14,
     "major": 1,
     "minor": 0,
     "tiny": 0,
-    "stars": "⭐"
+    "stars": "⭐⭐"
+  },
+  "Excellencedev": {
+    "githubId": 177100208,
+    "githubLogin": "Excellencedev",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "GokulPandi-M": {
+    "githubId": 187867218,
+    "githubLogin": "GokulPandi-M",
+    "reviewsReceived": 1,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [
+      {
+        "number": 217,
+        "url": "https://github.com/tscircuit/matchpack/pull/217",
+        "title": "Preserve grounded load alignment with unrelated chips",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "MustafaMulla29": {
     "githubId": 97171641,
@@ -235,14 +311,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 4,
     "rejectionsGiven": 1,
     "prsOpened": 13,
     "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 28,
     "major": 5,
@@ -273,24 +349,24 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 15,
+    "reviewsReceived": 18,
     "rejectionsReceived": 0,
-    "approvalsReceived": 15,
+    "approvalsReceived": 18,
     "staffReviewedPrs": 6,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
-        "number": 1950,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1950",
-        "title": "Include preloaded traces in Pipeline7 DRC feedback",
+        "number": 1968,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1968",
+        "title": "Use original pad geometry for relaxed DRC",
         "staffApprovals": 1,
         "staffRejections": 0
       },
       {
-        "number": 1968,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1968",
-        "title": "Use original pad geometry for relaxed DRC",
+        "number": 1950,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1950",
+        "title": "Include preloaded traces in Pipeline7 DRC feedback",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -325,17 +401,17 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 41,
-    "prsMerged": 20,
+    "prsOpened": 59,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 58,
-    "major": 12,
+    "score": 65,
+    "major": 13,
     "minor": 1,
-    "tiny": 6,
+    "tiny": 9,
     "stars": "⭐⭐⭐"
   },
   "addibble": {
@@ -395,7 +471,7 @@
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 16,
+    "reviewsReceived": 18,
     "rejectionsReceived": 2,
     "approvalsReceived": 9,
     "staffReviewedPrs": 2,
@@ -419,7 +495,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
+    "prsOpened": 14,
     "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -455,12 +531,12 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 6,
+    "reviewsReceived": 9,
     "rejectionsReceived": 1,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 5,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 8,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 692,
@@ -477,9 +553,30 @@
         "staffRejections": 0
       },
       {
+        "number": 1999,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1999",
+        "title": "Use fixed RectDiff for board outline routing",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2001,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2001",
+        "title": "Always use conservative approximation for connected rotated pads remove the fallback",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 1951,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/1951",
         "title": "Fix conservative approximation of rotated pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 121,
+        "url": "https://github.com/tscircuit/calculate-packing/pull/121",
+        "title": "Index weighted connection lookups",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -491,26 +588,26 @@
         "staffRejections": 0
       },
       {
-        "number": 121,
-        "url": "https://github.com/tscircuit/calculate-packing/pull/121",
-        "title": "Index weighted connection lookups",
+        "number": 140,
+        "url": "https://github.com/tscircuit/rectdiff/pull/140",
+        "title": "Prevent mesh overlap outside diagonal board outlines",
         "staffApprovals": 1,
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
-    "rejectionsGiven": 2,
-    "prsOpened": 17,
-    "prsMerged": 14,
+    "approvalsGiven": 10,
+    "rejectionsGiven": 4,
+    "prsOpened": 22,
+    "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 5,
+    "distinctPrsReviewedNonCodeOwner": 6,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 27,
-    "major": 3,
-    "minor": 3,
-    "tiny": 8,
+    "score": 46,
+    "major": 7,
+    "minor": 4,
+    "tiny": 9,
     "stars": "⭐⭐"
   },
   "mattkanwisher": {
@@ -536,17 +633,24 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 13,
+    "reviewsReceived": 16,
     "rejectionsReceived": 2,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 6,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 5,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
         "number": 134,
         "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/134",
         "title": "Preserve arbitrary rectangular SMT pad rotation in Gerber",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 213,
+        "url": "https://github.com/tscircuit/matchpack/pull/213",
+        "title": "Place split rail loads after decoupling rows",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -586,59 +690,79 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 27,
-    "prsMerged": 17,
+    "prsOpened": 36,
+    "prsMerged": 20,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 37,
-    "major": 4,
-    "minor": 6,
-    "tiny": 7,
+    "score": 44,
+    "major": 5,
+    "minor": 7,
+    "tiny": 8,
     "stars": "⭐⭐"
   },
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 2,
+    "reviewsReceived": 14,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
-    "approvalsGiven": 1,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 964,
+        "url": "https://github.com/tscircuit/3d-viewer/pull/964",
+        "title": "fix: add mirrored underside light rig so bottom board views are no longer near-black",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4303,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/4303",
+        "title": "Add a draggable divider to resize the code editor and preview in the web editor",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 0,
+    "prsOpened": 7,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 9,
+    "major": 1,
+    "minor": 1,
+    "tiny": 2,
+    "stars": "⭐"
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 13,
+    "reviewsReceived": 18,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 42,
-    "rejectionsGiven": 10,
-    "prsOpened": 42,
-    "prsMerged": 26,
+    "approvalsGiven": 54,
+    "rejectionsGiven": 11,
+    "prsOpened": 123,
+    "prsMerged": 84,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 33,
+    "distinctPrsReviewedNonCodeOwner": 45,
     "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
@@ -646,13 +770,19 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 60.5,
-    "major": 9,
-    "minor": 8,
-    "tiny": 8,
-    "stars": "⭐⭐⭐"
+    "score": 185.5,
+    "major": 33,
+    "minor": 20,
+    "tiny": 28,
+    "stars": "👑👑👑"
   },
   "techmannih": {
     "githubId": 125847751,
@@ -699,32 +829,32 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 264,
-    "prsMerged": 204,
+    "prsOpened": 474,
+    "prsMerged": 359,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 15.5,
+    "score": 20.5,
     "major": 0,
     "minor": 0,
-    "tiny": 204,
+    "tiny": 357,
     "stars": "⭐⭐"
   },
   "zkasuran": {
     "githubId": 289388318,
     "githubLogin": "zkasuran",
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
+    "reviewsReceived": 14,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
+    "prsOpened": 26,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
