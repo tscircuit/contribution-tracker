@@ -1,6 +1,8 @@
 import type { StarRating } from "lib/types"
 import type { PrAttributeSchema } from "./pr-attributes"
 
+const MIN_AUTOMATIC_STAR_RATING = 1
+
 export const getContributionStarRatingFromAttributes = (
   a: PrAttributeSchema,
   repo: string,
@@ -31,5 +33,8 @@ export const getContributionStarRatingFromAttributes = (
   if (a.new_page_or_component) score *= 1.25
   if (a.major_improvement_to_core_data_modeling) score *= 1.6
 
-  return Math.min(maxRating, Math.round(score)) as StarRating
+  return Math.max(
+    MIN_AUTOMATIC_STAR_RATING,
+    Math.min(maxRating, Math.round(score)),
+  ) as StarRating
 }
