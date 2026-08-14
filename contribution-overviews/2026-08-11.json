@@ -9,26 +9,40 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 1,
-    "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "approvalsGiven": 4,
+    "rejectionsGiven": 1,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0
   },
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 8,
+    "reviewsReceived": 11,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 11,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 3213,
+        "url": "https://github.com/tscircuit/core/pull/3213",
+        "title": "Route parent net connections through child breakout points",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3212,
+        "url": "https://github.com/tscircuit/core/pull/3212",
+        "title": "Fix default breakout routing with one-point nets",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 13,
         "url": "https://github.com/tscircuit/boosters/pull/13",
@@ -39,28 +53,28 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
-    "prsMerged": 9,
+    "prsOpened": 14,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 12,
-    "major": 1,
+    "score": 21,
+    "major": 3,
     "minor": 0,
-    "tiny": 8,
+    "tiny": 9,
     "stars": "⭐⭐"
   },
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 19,
+    "reviewsReceived": 27,
     "rejectionsReceived": 0,
-    "approvalsReceived": 19,
-    "staffReviewedPrs": 9,
+    "approvalsReceived": 27,
+    "staffReviewedPrs": 13,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 9,
+    "staffApprovalsReceived": 13,
     "staffReviewedPrLinks": [
       {
         "number": 448,
@@ -105,6 +119,27 @@
         "staffRejections": 0
       },
       {
+        "number": 203,
+        "url": "https://github.com/tscircuit/checks/pull/203",
+        "title": "fix: enforce shape-accurate copper clearance against polygon board edges",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4247,
+        "url": "https://github.com/tscircuit/cli/pull/4247",
+        "title": "fix: make check placement fail when placement errors are reported",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4248,
+        "url": "https://github.com/tscircuit/cli/pull/4248",
+        "title": "fix: preserve absolute paths passed to tsci export --output",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 2071,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2071",
         "title": "Pin repair03 low-count topology fix",
@@ -119,6 +154,13 @@
         "staffRejections": 0
       },
       {
+        "number": 127,
+        "url": "https://github.com/tscircuit/autorouting-dataset-01/pull/127",
+        "title": "Prevent invalid PCB geometry from entering dataset01 benchmarks",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 66,
         "url": "https://github.com/tscircuit/high-density-repair03/pull/66",
         "title": "Repair low-count single-trace topology conflicts",
@@ -128,18 +170,18 @@
     ],
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 27,
-    "prsMerged": 20,
+    "prsOpened": 33,
+    "prsMerged": 28,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 47,
-    "major": 6,
-    "minor": 6,
-    "tiny": 8,
-    "stars": "⭐⭐"
+    "score": 63,
+    "major": 8,
+    "minor": 9,
+    "tiny": 10,
+    "stars": "⭐⭐⭐"
   },
   "ArnavK-09": {
     "githubId": 69188140,
@@ -215,7 +257,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
+    "prsOpened": 11,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -291,17 +333,24 @@
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 6,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 6,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
         "number": 3155,
         "url": "https://github.com/tscircuit/core/pull/3155",
         "title": "Clear overlapping different-net copper pours",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 11,
+        "url": "https://github.com/tscircuit/circuit-json-routing-analysis/pull/11",
+        "title": "Add congestion severity metadata and deterministic tie-breaking",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -322,15 +371,15 @@
     ],
     "approvalsGiven": 3,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
-    "prsMerged": 11,
+    "prsOpened": 13,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 24,
-    "major": 3,
+    "score": 28,
+    "major": 4,
     "minor": 3,
     "tiny": 5,
     "stars": "⭐⭐"
@@ -358,12 +407,12 @@
   "Sang-it": {
     "githubId": 79345518,
     "githubLogin": "Sang-it",
-    "reviewsReceived": 5,
+    "reviewsReceived": 7,
     "rejectionsReceived": 0,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
         "number": 30,
@@ -392,21 +441,28 @@
         "title": "Warn on suboptimal two-pin orientations",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 17,
+        "url": "https://github.com/tscircuit/biscuit-board-autorouter/pull/17",
+        "title": "Prune redundant same-net copper cycles",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 19,
-    "prsMerged": 16,
+    "prsOpened": 20,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 28,
-    "major": 2,
+    "score": 34,
+    "major": 3,
     "minor": 6,
-    "tiny": 7,
+    "tiny": 9,
     "stars": "⭐⭐"
   },
   "ShiboSoftwareDev": {
@@ -445,17 +501,31 @@
   "addibble": {
     "githubId": 56509,
     "githubLogin": "addibble",
-    "reviewsReceived": 12,
+    "reviewsReceived": 18,
     "rejectionsReceived": 0,
-    "approvalsReceived": 10,
-    "staffReviewedPrs": 6,
+    "approvalsReceived": 14,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 6,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 974,
         "url": "https://github.com/tscircuit/3d-viewer/pull/974",
         "title": "Add appearance controls for the assembled enclosure",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3152,
+        "url": "https://github.com/tscircuit/core/pull/3152",
+        "title": "Orient enclosure apertures from the component frame",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3174,
+        "url": "https://github.com/tscircuit/core/pull/3174",
+        "title": "Adopt the staged two-part FDM enclosure solver",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -470,13 +540,6 @@
         "number": 3180,
         "url": "https://github.com/tscircuit/core/pull/3180",
         "title": "Emit separate base and lid CAD components",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 3174,
-        "url": "https://github.com/tscircuit/core/pull/3174",
-        "title": "Adopt the staged two-part FDM enclosure solver",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -497,17 +560,17 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 17,
-    "prsMerged": 10,
+    "prsOpened": 18,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 22,
-    "major": 3,
+    "score": 29,
+    "major": 4,
     "minor": 3,
-    "tiny": 4,
+    "tiny": 7,
     "stars": "⭐⭐"
   },
   "fxp": {
@@ -533,9 +596,9 @@
   "hrithik18k": {
     "githubId": 178554403,
     "githubLogin": "hrithik18k",
-    "reviewsReceived": 4,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 3,
+    "reviewsReceived": 9,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 6,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
@@ -557,25 +620,25 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
-    "prsMerged": 2,
+    "prsOpened": 7,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 4,
+    "score": 5,
     "major": 0,
     "minor": 2,
-    "tiny": 0,
+    "tiny": 1,
     "stars": "⭐"
   },
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 4,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 1,
+    "reviewsReceived": 6,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
@@ -595,30 +658,30 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 18,
+    "approvalsGiven": 21,
     "rejectionsGiven": 1,
-    "prsOpened": 12,
-    "prsMerged": 9,
+    "prsOpened": 14,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 17,
+    "distinctPrsReviewedNonCodeOwner": 20,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 16,
+    "score": 17,
     "major": 2,
     "minor": 0,
-    "tiny": 7,
+    "tiny": 8,
     "stars": "⭐⭐"
   },
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 17,
+    "reviewsReceived": 20,
     "rejectionsReceived": 0,
-    "approvalsReceived": 16,
-    "staffReviewedPrs": 8,
+    "approvalsReceived": 19,
+    "staffReviewedPrs": 10,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 8,
+    "staffApprovalsReceived": 10,
     "staffReviewedPrLinks": [
       {
         "number": 116,
@@ -645,6 +708,20 @@
         "number": 9,
         "url": "https://github.com/tscircuit/circuit-json-to-pnp-csv/pull/9",
         "title": "skip do-not-place parts in pick and place",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 29,
+        "url": "https://github.com/tscircuit/calculate-cell-boundaries/pull/29",
+        "title": "merge overlapping horizontal boundaries",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 218,
+        "url": "https://github.com/tscircuit/matchpack/pull/218",
+        "title": "detect and align grounded load rows",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -677,19 +754,19 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
-    "prsOpened": 22,
-    "prsMerged": 18,
+    "prsOpened": 28,
+    "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 40,
-    "major": 3,
-    "minor": 7,
-    "tiny": 8,
+    "score": 48,
+    "major": 4,
+    "minor": 8,
+    "tiny": 9,
     "stars": "⭐⭐"
   },
   "mojeed-painless": {
@@ -775,25 +852,37 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 10,
+    "reviewsReceived": 18,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 65,
+    "approvalsGiven": 87,
     "rejectionsGiven": 4,
-    "prsOpened": 105,
-    "prsMerged": 77,
+    "prsOpened": 137,
+    "prsMerged": 103,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 62,
-    "distinctPrsReviewedAsCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 83,
+    "distinctPrsReviewedAsCodeOwner": 4,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/footprinter",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/schematic-symbols",
         "paths": [
           "*"
         ]
@@ -805,22 +894,29 @@
         ]
       }
     ],
-    "score": 159,
-    "major": 28,
-    "minor": 17,
-    "tiny": 30,
-    "stars": "👑👑"
+    "score": 209,
+    "major": 36,
+    "minor": 26,
+    "tiny": 39,
+    "stars": "👑👑👑"
   },
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 15,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 1,
+    "reviewsReceived": 19,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 797,
+        "url": "https://github.com/tscircuit/footprinter/pull/797",
+        "title": "Add thermal vias to QFN exposed pads",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 17,
         "url": "https://github.com/tscircuit/circuit-json-placement-analysis/pull/17",
@@ -829,16 +925,22 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 10,
+    "prsOpened": 25,
+    "prsMerged": 22,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
+      {
+        "repo": "tscircuit/footprinter",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/jscad-electronics",
         "paths": [
@@ -846,10 +948,10 @@
         ]
       }
     ],
-    "score": 21,
-    "major": 2,
-    "minor": 4,
-    "tiny": 4,
+    "score": 47,
+    "major": 6,
+    "minor": 6,
+    "tiny": 10,
     "stars": "⭐⭐"
   },
   "tscircuitbot": {
@@ -864,17 +966,17 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 304,
-    "prsMerged": 211,
+    "prsOpened": 486,
+    "prsMerged": 344,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 16,
+    "score": 19.5,
     "major": 0,
     "minor": 0,
-    "tiny": 211,
+    "tiny": 344,
     "stars": "⭐⭐"
   },
   "w1ne": {
