@@ -1,11 +1,18 @@
 import { octokit } from "lib/sdks"
 
+const EXCLUDED_REPOS = new Set(["tscircuit/sparkfun-boards"])
+
+export const excludeNonPointAwardingRepos = (repos: string[]): string[] =>
+  repos.filter((repo) => !EXCLUDED_REPOS.has(repo))
+
 export async function getRepos(): Promise<string[]> {
   if (process.env.SHORT_REPO_LIST) {
     if (process.env.SHORT_REPO_LIST.includes("tscircuit/")) {
-      return process.env.SHORT_REPO_LIST.split(",")
+      return excludeNonPointAwardingRepos(
+        process.env.SHORT_REPO_LIST.split(","),
+      )
     }
-    return [
+    return excludeNonPointAwardingRepos([
       "tscircuit/tscircuit.com",
       "tscircuit/tscircuit",
       "tscircuit/cli",
@@ -17,7 +24,7 @@ export async function getRepos(): Promise<string[]> {
       "tscircuit/soup",
       "tscircuit/props",
       "tscircuit/jscad-fiber",
-    ]
+    ])
   }
 
   let repos: string[] = []
@@ -40,5 +47,5 @@ export async function getRepos(): Promise<string[]> {
 
   // Process complete
 
-  return repos
+  return excludeNonPointAwardingRepos(repos)
 }
