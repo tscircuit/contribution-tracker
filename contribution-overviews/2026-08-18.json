@@ -2,7 +2,7 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 3,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
@@ -11,12 +11,12 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 6,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
+    "prsOpened": 13,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 24,
     "major": 5,
@@ -47,12 +47,12 @@
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 7,
+    "reviewsReceived": 8,
     "rejectionsReceived": 0,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 5,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 5,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
         "number": 500,
@@ -65,6 +65,13 @@
         "number": 4650,
         "url": "https://github.com/tscircuit/runframe/pull/4650",
         "title": "Handle wrapped solver constructor args from Core",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2201,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2201",
+        "title": "fix: update length matching solver",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -92,8 +99,8 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 6,
+    "prsOpened": 15,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -113,8 +120,8 @@
         ]
       }
     ],
-    "score": 17,
-    "major": 3,
+    "score": 25,
+    "major": 5,
     "minor": 1,
     "tiny": 1,
     "stars": "⭐⭐"
@@ -122,13 +129,20 @@
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 12,
+    "reviewsReceived": 17,
     "rejectionsReceived": 1,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
+      {
+        "number": 2207,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2207",
+        "title": "Update power trace expander to finalize MangoPi within budget",
+        "staffApprovals": 2,
+        "staffRejections": 0
+      },
       {
         "number": 2173,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2173",
@@ -142,21 +156,28 @@
         "title": "Eliminate Pipeline7 circuit018's false DRC failure",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 19,
+        "url": "https://github.com/tscircuit/power-trace-expander/pull/19",
+        "title": "Finalize the best power-trace result within the iteration budget",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 6,
+    "prsOpened": 21,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 17,
-    "major": 2,
+    "score": 31,
+    "major": 5,
     "minor": 3,
-    "tiny": 1,
+    "tiny": 3,
     "stars": "⭐⭐"
   },
   "ArnavK-09": {
@@ -190,13 +211,20 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 16,
+    "reviewsReceived": 17,
     "rejectionsReceived": 0,
-    "approvalsReceived": 13,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 15,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 810,
+        "url": "https://github.com/tscircuit/props/pull/810",
+        "title": "Add per-port schematic pin label font size",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 459,
         "url": "https://github.com/tscircuit/easyeda-converter/pull/459",
@@ -207,18 +235,18 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 7,
+    "prsOpened": 15,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 8,
+    "score": 13,
     "major": 0,
-    "minor": 1,
-    "tiny": 6,
-    "stars": "⭐"
+    "minor": 3,
+    "tiny": 7,
+    "stars": "⭐⭐"
   },
   "KrishnaX12": {
     "githubId": 186785561,
@@ -245,16 +273,43 @@
     "tiny": 4,
     "stars": "⭐"
   },
+  "Luvi-1": {
+    "githubId": 115382358,
+    "githubLogin": "Luvi-1",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 12,
+    "reviewsReceived": 13,
     "rejectionsReceived": 2,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 5,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
+      {
+        "number": 818,
+        "url": "https://github.com/tscircuit/footprinter/pull/818",
+        "title": "feat: support explicit courtyard dimensions for custom passives",
+        "staffApprovals": 2,
+        "staffRejections": 0
+      },
       {
         "number": 3290,
         "url": "https://github.com/tscircuit/core/pull/3290",
@@ -294,15 +349,15 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 13,
-    "prsMerged": 9,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 15,
+    "score": 17,
     "major": 0,
-    "minor": 6,
+    "minor": 7,
     "tiny": 3,
     "stars": "⭐⭐"
   },
@@ -462,9 +517,9 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 30,
+    "reviewsReceived": 31,
     "rejectionsReceived": 1,
-    "approvalsReceived": 24,
+    "approvalsReceived": 25,
     "staffReviewedPrs": 14,
     "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 13,
@@ -526,16 +581,16 @@
         "staffRejections": 0
       },
       {
-        "number": 18,
-        "url": "https://github.com/tscircuit/circuit-json-to-altium/pull/18",
-        "title": "Render schematic off-sheet ports",
+        "number": 19,
+        "url": "https://github.com/tscircuit/circuit-json-to-altium/pull/19",
+        "title": "Render schematic sheet annotations",
         "staffApprovals": 1,
         "staffRejections": 0
       },
       {
-        "number": 19,
-        "url": "https://github.com/tscircuit/circuit-json-to-altium/pull/19",
-        "title": "Render schematic sheet annotations",
+        "number": 18,
+        "url": "https://github.com/tscircuit/circuit-json-to-altium/pull/18",
+        "title": "Render schematic off-sheet ports",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -568,19 +623,19 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 17,
+    "approvalsGiven": 19,
     "rejectionsGiven": 0,
-    "prsOpened": 87,
-    "prsMerged": 29,
+    "prsOpened": 91,
+    "prsMerged": 30,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedNonCodeOwner": 13,
     "distinctPrsReviewedAsCodeOwner": 2,
-    "score": 77.5,
+    "score": 79.5,
     "major": 8,
     "minor": 11,
-    "tiny": 10,
+    "tiny": 11,
     "stars": "⭐⭐⭐"
   },
   "addibble": {
@@ -625,14 +680,14 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 9,
-    "prsMerged": 6,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 12,
-    "major": 1,
+    "score": 16,
+    "major": 2,
     "minor": 3,
     "tiny": 2,
     "stars": "⭐⭐"
@@ -640,22 +695,27 @@
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 1,
+    "reviewsReceived": 6,
     "rejectionsReceived": 1,
-    "approvalsReceived": 0,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 0,
+    "prsOpened": 7,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 1,
+    "major": 0,
+    "minor": 0,
+    "tiny": 1,
+    "stars": ""
   },
   "creationsunitassistant": {
     "githubId": 261931807,
@@ -857,7 +917,7 @@
     ],
     "approvalsGiven": 8,
     "rejectionsGiven": 2,
-    "prsOpened": 51,
+    "prsOpened": 55,
     "prsMerged": 25,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -947,22 +1007,22 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 36,
+    "reviewsReceived": 38,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 57,
+    "approvalsGiven": 67,
     "rejectionsGiven": 6,
-    "prsOpened": 199,
-    "prsMerged": 149,
+    "prsOpened": 227,
+    "prsMerged": 166,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 48,
-    "distinctPrsReviewedAsCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 58,
+    "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -1013,11 +1073,11 @@
         ]
       }
     ],
-    "score": 139,
-    "major": 20,
-    "minor": 23,
-    "tiny": 106,
-    "stars": "👑👑"
+    "score": 173,
+    "major": 25,
+    "minor": 30,
+    "tiny": 111,
+    "stars": "👑👑👑"
   },
   "techmannih": {
     "githubId": 125847751,
@@ -1036,7 +1096,7 @@
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -1064,8 +1124,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 476,
-    "prsMerged": 345,
+    "prsOpened": 497,
+    "prsMerged": 359,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1074,7 +1134,7 @@
     "score": 16,
     "major": 0,
     "minor": 0,
-    "tiny": 344,
+    "tiny": 359,
     "stars": "⭐⭐"
   }
 }
