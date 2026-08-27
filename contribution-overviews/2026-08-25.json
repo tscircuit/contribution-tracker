@@ -82,13 +82,28 @@
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 3,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 149,
+        "url": "https://github.com/tscircuit/ti/pull/149",
+        "title": "Add TIDA-00699 power supply reference schematic",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 165,
+        "url": "https://github.com/tscircuit/ti/pull/165",
+        "title": "Add TIDEP-01024 radar front-end modules",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 8,
@@ -369,18 +384,18 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 43,
-    "rejectionsReceived": 6,
-    "approvalsReceived": 23,
-    "staffReviewedPrs": 15,
-    "staffRejectionsReceived": 5,
-    "staffApprovalsReceived": 11,
+    "reviewsReceived": 45,
+    "rejectionsReceived": 4,
+    "approvalsReceived": 29,
+    "staffReviewedPrs": 19,
+    "staffRejectionsReceived": 6,
+    "staffApprovalsReceived": 17,
     "staffReviewedPrLinks": [
       {
         "number": 736,
         "url": "https://github.com/tscircuit/circuit-json/pull/736",
-        "title": "Add path-shaped PCB keepouts",
-        "staffApprovals": 0,
+        "title": "Add PCB keepout outlines",
+        "staffApprovals": 1,
         "staffRejections": 1
       },
       {
@@ -398,11 +413,18 @@
         "staffRejections": 0
       },
       {
+        "number": 2249,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2249",
+        "title": "Fix Pipeline 9 multipoint bus length matching",
+        "staffApprovals": 1,
+        "staffRejections": 2
+      },
+      {
         "number": 2251,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2251",
-        "title": "Continue high-density portfolio after validation rejection",
+        "title": "Continue the high-density portfolio after rejecting an invalid candidate",
         "staffApprovals": 0,
-        "staffRejections": 1
+        "staffRejections": 2
       },
       {
         "number": 2248,
@@ -410,13 +432,6 @@
         "title": "Honor Pipeline9 bus allowed layers per connection",
         "staffApprovals": 0,
         "staffRejections": 1
-      },
-      {
-        "number": 2249,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2249",
-        "title": "Match Pipeline9 bus route lengths",
-        "staffApprovals": 0,
-        "staffRejections": 2
       },
       {
         "number": 2247,
@@ -429,6 +444,20 @@
         "number": 888,
         "url": "https://github.com/tscircuit/schematic-trace-solver/pull/888",
         "title": "Deduplicate schematic routing pairs",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 164,
+        "url": "https://github.com/tscircuit/ti/pull/164",
+        "title": "Add TIDC-WL1837MODCOM8I W3006 antenna subcircuit",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 163,
+        "url": "https://github.com/tscircuit/ti/pull/163",
+        "title": "Add SN74LVC1G34 logic buffer subcircuit",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -461,6 +490,13 @@
         "staffRejections": 0
       },
       {
+        "number": 82,
+        "url": "https://github.com/tscircuit/altiumts/pull/82",
+        "title": "Preserve PCB track keepout flags",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 63,
         "url": "https://github.com/tscircuit/altiumts/pull/63",
         "title": "Serialize PCB component body contours",
@@ -475,6 +511,13 @@
         "staffRejections": 0
       },
       {
+        "number": 50,
+        "url": "https://github.com/tscircuit/circuit-json-to-altium/pull/50",
+        "title": "Preserve PCB keepout outlines",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 13,
         "url": "https://github.com/tscircuit/circuit-json-to-altium/pull/13",
         "title": "Preserve PCB component body contours",
@@ -485,7 +528,7 @@
     "approvalsGiven": 14,
     "rejectionsGiven": 0,
     "prsOpened": 73,
-    "prsMerged": 29,
+    "prsMerged": 36,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -682,6 +725,13 @@
         "staffRejections": 1
       },
       {
+        "number": 917,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/917",
+        "title": "Anchor vertical ground labels to clear component-side rails",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 927,
         "url": "https://github.com/tscircuit/schematic-trace-solver/pull/927",
         "title": "Collapse redundant same-net cycles",
@@ -699,13 +749,6 @@
         "number": 919,
         "url": "https://github.com/tscircuit/schematic-trace-solver/pull/919",
         "title": "Prevent grouped ground rails from crossing component rows",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 917,
-        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/917",
-        "title": "Anchor vertical ground labels to clear component-side rails",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -775,14 +818,14 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 58,
-    "rejectionsGiven": 9,
+    "approvalsGiven": 66,
+    "rejectionsGiven": 7,
     "prsOpened": 68,
-    "prsMerged": 48,
+    "prsMerged": 50,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 52,
+    "distinctPrsReviewedNonCodeOwner": 58,
     "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
