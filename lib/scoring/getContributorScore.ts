@@ -1,3 +1,4 @@
+import { countEligibleReviewedPrs } from "./review-weeks"
 import { MAINTAINERS } from "./maintainers"
 import type { AnalyzedPR, ContributorStats } from "../types"
 
@@ -93,13 +94,21 @@ export function getContributorScore({
   const isMaintainer =
     contributor && (MAINTAINERS as Record<string, string>)[contributor]
 
-  const totalDistinctPrsReviewed =
-    (contributorStats.distinctPrsReviewedNonCodeOwner || 0) +
-    (contributorStats.distinctPrsReviewedAsCodeOwner || 0)
+  const totalDistinctPrsReviewed = contributorStats.reviewWeeks
+    ? countEligibleReviewedPrs(contributorStats.reviewWeeks)
+    : (contributorStats.distinctPrsReviewedNonCodeOwner || 0) +
+      (contributorStats.distinctPrsReviewedAsCodeOwner || 0)
   let reviewPoints = Math.min(totalDistinctPrsReviewed, isMaintainer ? 15 : 5)
 
   if (!isMaintainer) {
     reviewPoints = Math.min(reviewPoints, impactWorth.Tiny)
+  }
+
+  if (
+    !contributorStats.reviewWeeks &&
+    (contributorStats.downvotedReviews ?? 0) >= 3
+  ) {
+    reviewPoints = 0
   }
 
   result.score += reviewPoints
