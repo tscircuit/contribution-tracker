@@ -1,3 +1,4 @@
+import type { ReviewWeeks } from "./scoring/review-weeks"
 import type { z } from "zod"
 import type {
   pr_attribute_schema,
@@ -7,6 +8,8 @@ import type {
 export interface ReviewerStats {
   githubId?: number
   githubLogin: string
+  reviewWeeks?: ReviewWeeks
+  downvotedReviews?: number
   approvalsGiven: number
   rejectionsGiven: number
   prNumbers?: Set<number> // Set of PR numbers this reviewer has reviewed
@@ -36,6 +39,8 @@ export interface ContributorStats {
   bountiedIssuesCount?: number
   bountiedIssuesTotal?: number
   score?: number
+  reviewWeeks?: ReviewWeeks
+  downvotedReviews?: number
   approvalsGiven: number
   rejectionsGiven: number
   distinctPrsReviewedNonCodeOwner?: number // Number of unique PRs reviewed by this contributor
