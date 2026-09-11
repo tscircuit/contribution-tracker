@@ -2,6 +2,7 @@ import { WebhookClient, type MessageCreateOptions } from "discord.js"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
 import { EXCLUDED_BOTS } from "lib/constants"
+import { splitDiscordContent } from "lib/utils/split-discord-content"
 
 const discordWebhook = new WebhookClient({
   url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
@@ -70,15 +71,21 @@ async function notifyDiscord(issues: Issue[], repo: string) {
       )
       .join("\n")
 
-  const messageOptions: MessageCreateOptions = {
-    content: messageContent,
-    allowedMentions: { parse: [] }, // This prevents link previews
-  }
+  // Discord rejects any payload over 2,000 characters, so a busy repository
+  // has to be announced in several messages instead of one oversized one.
+  const chunks = splitDiscordContent(messageContent)
 
-  await discordWebhook.send(messageOptions)
-  console.log(
-    `[${getUTCDateTime()}] Successfully sent Discord notification for ${repo}`,
-  )
+  for (const [index, content] of chunks.entries()) {
+    const messageOptions: MessageCreateOptions = {
+      content,
+      allowedMentions: { parse: [] }, // This prevents link previews
+    }
+
+    await discordWebhook.send(messageOptions)
+    console.log(
+      `[${getUTCDateTime()}] Sent Discord notification chunk ${index + 1}/${chunks.length} for ${repo}`,
+    )
+  }
 }
 
 async function main() {
