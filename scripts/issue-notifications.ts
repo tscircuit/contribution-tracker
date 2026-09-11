@@ -2,6 +2,10 @@ import { WebhookClient, type MessageCreateOptions } from "discord.js"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
 import { EXCLUDED_BOTS } from "lib/constants"
+import {
+  buildIssueNotificationContent,
+  splitDiscordContent,
+} from "lib/notifications/split-discord-content"
 
 const discordWebhook = new WebhookClient({
   url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
@@ -61,23 +65,18 @@ async function notifyDiscord(issues: Issue[], repo: string) {
     `[${getUTCDateTime()}] Sending notification for ${issues.length} issues from ${repo} to Discord`,
   )
 
-  const messageContent =
-    `New issues in ${repo}:\n` +
-    issues
-      .map(
-        (issue) =>
-          `• #${issue.number} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`,
-      )
-      .join("\n")
+  const messageContent = buildIssueNotificationContent(repo, issues)
+  const chunks = splitDiscordContent(messageContent)
 
-  const messageOptions: MessageCreateOptions = {
-    content: messageContent,
-    allowedMentions: { parse: [] }, // This prevents link previews
+  for (const content of chunks) {
+    const messageOptions: MessageCreateOptions = {
+      content,
+      allowedMentions: { parse: [] },
+    }
+    await discordWebhook.send(messageOptions)
   }
-
-  await discordWebhook.send(messageOptions)
   console.log(
-    `[${getUTCDateTime()}] Successfully sent Discord notification for ${repo}`,
+    `[${getUTCDateTime()}] Successfully sent Discord notification for ${repo} (${chunks.length} message(s))`,
   )
 }
 
@@ -103,7 +102,14 @@ async function main() {
   )
 
   for (const [repo, issues] of Object.entries(allIssues)) {
-    await notifyDiscord(issues, repo)
+    try {
+      await notifyDiscord(issues, repo)
+    } catch (error) {
+      console.error(
+        `[${getUTCDateTime()}] Failed Discord notification for ${repo}:`,
+        error,
+      )
+    }
   }
 
   console.log(`[${getUTCDateTime()}] Completed issue notification process`)
