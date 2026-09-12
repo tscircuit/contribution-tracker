@@ -113,6 +113,7 @@ const mockStats: Record<string, ContributorStats> = {
         staffRejections: 0,
       },
     ],
+    downvotedReviews: 2,
     approvalsGiven: 2,
     rejectionsGiven: 0,
     prsOpened: 2,

@@ -1,3 +1,5 @@
+import { getReviewWeek } from "../scoring/review-weeks"
+import { getReviewDownvotes } from "./getReviewDownvotes"
 import { octokit } from "lib/sdks"
 import { resolveContributorIdentity } from "../contributor-identity"
 import type { PullRequestWithReviews, ReviewerStats } from "../types"
@@ -7,10 +9,11 @@ export async function getAllPRs(
   repo: string,
   since: string,
   currentTime: Date = new Date(),
+  client: Pick<typeof octokit, "pulls" | "reviewReactionNodes"> = octokit,
 ): Promise<PullRequestWithReviews[]> {
   const [owner, repo_name] = repo.split("/")
   const fetchPRs = async (page = 1): Promise<any[]> => {
-    const { data } = await octokit.pulls.list({
+    const { data } = await client.pulls.list({
       owner,
       repo: repo_name,
       sort: "updated",
@@ -46,7 +49,7 @@ export async function getAllPRs(
   })
 
   const fetchReviews = async (prNumber: number, page = 1): Promise<any[]> => {
-    const { data } = await octokit.pulls.listReviews({
+    const { data } = await client.pulls.listReviews({
       owner,
       repo: repo_name,
       pull_number: prNumber,
@@ -65,6 +68,10 @@ export async function getAllPRs(
     filteredPRs,
     async (pr) => {
       const reviews = await fetchReviews(pr.number)
+      const downvotedReviewIds = await getReviewDownvotes(
+        reviews.map((review) => review.node_id),
+        (ids) => client.reviewReactionNodes(ids),
+      )
       const isMerged = !!pr.merged_at
 
       const allReviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
@@ -145,6 +152,9 @@ export async function getAllPRs(
           }
         }
 
+        // Keep the raw review counts above; only withhold scoring credit.
+        if (downvotedReviewIds.has(review.node_id)) return acc
+
         if (isMerged) {
           // For merged PRs, only add to prNumbers if approved
           if (review.state === "APPROVED") {
@@ -164,6 +174,39 @@ export async function getAllPRs(
         }
         return acc
       }, {})
+
+      // Persist weekly evidence so longer reports do not apply a month-wide penalty.
+      for (const stats of Object.values(reviewsByUser)) stats.reviewWeeks = {}
+      for (const review of reviews) {
+        if (!review.user) continue
+        const submittedAt = Date.parse(review.submitted_at)
+        if (!Number.isFinite(submittedAt)) continue
+        const key = resolveContributorIdentity(
+          review.user,
+        ).contributorIdentityKey
+        const stats = reviewsByUser[key]
+        if (!stats) continue
+        const week = getReviewWeek(review.submitted_at)
+        const weekly = (stats.reviewWeeks![week] ??= {
+          downvotedReviewIds: [],
+          eligiblePrs: [],
+        })
+        if (downvotedReviewIds.has(review.node_id)) {
+          weekly.downvotedReviewIds.push(review.node_id)
+          if (
+            submittedAt >= sinceDate.getTime() &&
+            submittedAt <= currentTimeMs
+          ) {
+            stats.downvotedReviews = (stats.downvotedReviews ?? 0) + 1
+          }
+        } else if (
+          isMerged &&
+          review.state === "APPROVED" &&
+          processedReviews.includes(review)
+        ) {
+          weekly.eligiblePrs.push(`${repo}#${pr.number}`)
+        }
+      }
 
       return {
         ...pr,

@@ -1,3 +1,4 @@
+import { mergeReviewWeeks } from "lib/scoring/review-weeks"
 import * as fs from "fs"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { getContributionOverviewWindow } from "lib/ai/date-utils"
@@ -145,6 +146,13 @@ export async function generateOverview(
                 login: reviewerLogin,
               },
             )
+            reviewerContributorStats.reviewWeeks = mergeReviewWeeks(
+              reviewerContributorStats.reviewWeeks,
+              reviewerStats.reviewWeeks,
+            )
+            reviewerContributorStats.downvotedReviews =
+              (reviewerContributorStats.downvotedReviews ?? 0) +
+              (reviewerStats.downvotedReviews ?? 0)
             reviewerContributorStats.approvalsGiven +=
               reviewerStats.approvalsGiven
             reviewerContributorStats.rejectionsGiven +=

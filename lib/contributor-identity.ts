@@ -1,3 +1,4 @@
+import { mergeReviewWeeks } from "./scoring/review-weeks"
 import { scoreToStarString } from "./scoring/scoreToStars"
 import type { AnalyzedPR, ContributorStats } from "./types"
 
@@ -43,6 +44,7 @@ const ADDITIVE_CONTRIBUTOR_STAT_FIELDS = [
   "bountiedIssuesCount",
   "bountiedIssuesTotal",
   "score",
+  "downvotedReviews",
   "approvalsGiven",
   "rejectionsGiven",
   "distinctPrsReviewedNonCodeOwner",
@@ -96,6 +98,7 @@ export function createEmptyContributorStats(
     staffRejectionsReceived: 0,
     staffApprovalsReceived: 0,
     staffReviewedPrLinks: [],
+    downvotedReviews: 0,
     approvalsGiven: 0,
     rejectionsGiven: 0,
     prsOpened: 0,
@@ -153,6 +156,13 @@ export function mergeContributorStats(
           (typeof secondStat === "number" ? secondStat : 0),
       })
     }
+  }
+
+  if (firstContributorStats.reviewWeeks || secondContributorStats.reviewWeeks) {
+    mergedContributorStats.reviewWeeks = mergeReviewWeeks(
+      firstContributorStats.reviewWeeks,
+      secondContributorStats.reviewWeeks,
+    )
   }
 
   mergedContributorStats.githubId =
