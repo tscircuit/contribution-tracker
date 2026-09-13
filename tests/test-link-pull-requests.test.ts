@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test"
-import { linkPullRequests } from "lib/data-processing/linkPullRequests"
+import { linkPullRequests } from "../lib/data-processing/linkPullRequests"
 
 describe("linkPullRequests", () => {
   const prMap = new Map([
@@ -118,7 +118,9 @@ describe("linkPullRequests", () => {
       "- 3D/GLTF pipeline overhaul – poppygl PNG renderer in cli (#435), environment maps & FR4 material in 3d-viewer (#509), bottom-side fixes (#44)"
     const output = linkPullRequests(input, prMap)
 
-    expect(output).toContain("[#435](https://github.com/tscircuit/cli/pull/435)")
+    expect(output).toContain(
+      "[#435](https://github.com/tscircuit/cli/pull/435)",
+    )
     expect(output).toContain(
       "[#509](https://github.com/tscircuit/3d-viewer/pull/509)",
     )
