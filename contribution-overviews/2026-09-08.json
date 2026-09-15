@@ -2,26 +2,26 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 4,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 3,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 2,
+    "prsOpened": 9,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 4,
+    "score": 5,
     "major": 0,
     "minor": 1,
-    "tiny": 1,
+    "tiny": 2,
     "stars": "⭐"
   },
   "5p00kyy": {
@@ -50,22 +50,14 @@
     "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
-    "staffReviewedPrs": 1,
+    "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
-    "staffReviewedPrLinks": [
-      {
-        "number": 356,
-        "url": "https://github.com/tscircuit/jscad-electronics/pull/356",
-        "title": "Restore slide-switch and JST SH models",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      }
-    ],
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 9,
     "rejectionsGiven": 0,
-    "prsOpened": 26,
-    "prsMerged": 4,
+    "prsOpened": 30,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -79,10 +71,10 @@
         ]
       }
     ],
-    "score": 19,
+    "score": 20,
     "major": 2,
     "minor": 0,
-    "tiny": 2,
+    "tiny": 3,
     "stars": "⭐⭐"
   },
   "AnasSarkiz": {
@@ -126,7 +118,7 @@
     ],
     "approvalsGiven": 6,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
+    "prsOpened": 26,
     "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -231,7 +223,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -251,7 +243,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -342,11 +334,11 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 33,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 26,
-    "staffReviewedPrs": 5,
-    "staffRejectionsReceived": 2,
+    "reviewsReceived": 34,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 27,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
@@ -376,28 +368,21 @@
         "title": "Fix bottom-side 3D model rotation and offsets",
         "staffApprovals": 1,
         "staffRejections": 0
-      },
-      {
-        "number": 64,
-        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/64",
-        "title": "test: add repro for cropped full-schematic previews",
-        "staffApprovals": 0,
-        "staffRejections": 1
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 23,
-    "prsMerged": 14,
+    "prsOpened": 24,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 24,
+    "score": 25,
     "major": 2,
     "minor": 4,
-    "tiny": 8,
+    "tiny": 9,
     "stars": "⭐⭐"
   },
   "Hello2021Year": {
@@ -413,6 +398,26 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "Ialyahya96": {
+    "githubId": 69951688,
+    "githubLogin": "Ialyahya96",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -472,7 +477,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 10,
+    "prsOpened": 11,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -715,12 +720,12 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 27,
+    "reviewsReceived": 30,
     "rejectionsReceived": 0,
-    "approvalsReceived": 27,
-    "staffReviewedPrs": 11,
+    "approvalsReceived": 30,
+    "staffReviewedPrs": 13,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 11,
+    "staffApprovalsReceived": 13,
     "staffReviewedPrLinks": [
       {
         "number": 3891,
@@ -730,9 +735,16 @@
         "staffRejections": 0
       },
       {
-        "number": 232,
-        "url": "https://github.com/tscircuit/fanout-solver/pull/232",
-        "title": "fix: route complete AM62L DDR4 fanout",
+        "number": 2579,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2579",
+        "title": "Advance exact T113 routing past closed fanout routes",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 188,
+        "url": "https://github.com/tscircuit/tiny-hypergraph/pull/188",
+        "title": "Serialize closed routes after consuming their segments",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -742,6 +754,13 @@
         "title": "Show live progress in fanout solver visualizations",
         "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 232,
+        "url": "https://github.com/tscircuit/fanout-solver/pull/232",
+        "title": "fix: route complete AM62L DDR4 fanout",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 230,
@@ -800,18 +819,18 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 27,
+    "approvalsGiven": 28,
     "rejectionsGiven": 0,
-    "prsOpened": 73,
-    "prsMerged": 35,
+    "prsOpened": 97,
+    "prsMerged": 39,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 27,
+    "distinctPrsReviewedNonCodeOwner": 28,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 91,
-    "major": 10,
-    "minor": 12,
+    "score": 105,
+    "major": 13,
+    "minor": 13,
     "tiny": 13,
     "stars": "👑"
   },
@@ -951,9 +970,9 @@
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 13,
+    "reviewsReceived": 15,
     "rejectionsReceived": 6,
-    "approvalsReceived": 5,
+    "approvalsReceived": 7,
     "staffReviewedPrs": 3,
     "staffRejectionsReceived": 4,
     "staffApprovalsReceived": 1,
@@ -982,18 +1001,18 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 6,
+    "prsOpened": 16,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 10,
+    "score": 12,
     "major": 0,
     "minor": 3,
-    "tiny": 3,
-    "stars": "⭐"
+    "tiny": 5,
+    "stars": "⭐⭐"
   },
   "antonioscafaro": {
     "githubId": 86375260,
@@ -1198,17 +1217,24 @@
   "hrithik18k": {
     "githubId": 178554403,
     "githubLogin": "hrithik18k",
-    "reviewsReceived": 31,
+    "reviewsReceived": 32,
     "rejectionsReceived": 0,
-    "approvalsReceived": 25,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 26,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 769,
         "url": "https://github.com/tscircuit/circuit-json/pull/769",
         "title": "feat: add styled parts to schematic text",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1195,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/1195",
+        "title": "Fix net-label branch origin at component edge",
         "staffApprovals": 1,
         "staffRejections": 0
       }
@@ -1293,15 +1319,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 24,
-    "rejectionsGiven": 5,
-    "prsOpened": 54,
-    "prsMerged": 39,
+    "approvalsGiven": 25,
+    "rejectionsGiven": 6,
+    "prsOpened": 65,
+    "prsMerged": 49,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 17,
-    "distinctPrsReviewedAsCodeOwner": 6,
+    "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit.com",
@@ -1310,11 +1336,11 @@
         ]
       }
     ],
-    "score": 77,
-    "major": 10,
-    "minor": 12,
-    "tiny": 17,
-    "stars": "⭐⭐⭐"
+    "score": 101,
+    "major": 14,
+    "minor": 16,
+    "tiny": 19,
+    "stars": "👑"
   },
   "iprasen": {
     "githubId": 280958636,
@@ -1693,7 +1719,7 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 48,
+    "reviewsReceived": 49,
     "rejectionsReceived": 0,
     "approvalsReceived": 14,
     "staffReviewedPrs": 0,
@@ -1702,17 +1728,17 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 28,
-    "prsMerged": 14,
+    "prsOpened": 29,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 22.5,
+    "score": 23.5,
     "major": 1,
     "minor": 5,
-    "tiny": 8,
+    "tiny": 9,
     "stars": "⭐⭐"
   },
   "saiyer123": {
@@ -1734,6 +1760,31 @@
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "santosh-kumar-git": {
+    "githubId": 56650638,
+    "githubLogin": "santosh-kumar-git",
+    "reviewsReceived": 2,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 7,
+    "prsMerged": 1,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 2,
+    "major": 0,
+    "minor": 1,
+    "tiny": 0,
+    "stars": ""
   },
   "sen-ye": {
     "githubId": 92638886,
@@ -1758,23 +1809,35 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 28,
+    "reviewsReceived": 43,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 46,
-    "rejectionsGiven": 7,
-    "prsOpened": 145,
-    "prsMerged": 93,
+    "approvalsGiven": 50,
+    "rejectionsGiven": 6,
+    "prsOpened": 205,
+    "prsMerged": 145,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 43,
-    "distinctPrsReviewedAsCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 46,
+    "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
+      {
+        "repo": "tscircuit/pcb-viewer",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/footprinter",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/jscad-electronics",
         "paths": [
@@ -1794,10 +1857,10 @@
         ]
       }
     ],
-    "score": 189,
-    "major": 28,
-    "minor": 32,
-    "tiny": 31,
+    "score": 260.5,
+    "major": 40,
+    "minor": 43,
+    "tiny": 59,
     "stars": "👑👑👑"
   },
   "singhharsh1708": {
@@ -1863,7 +1926,7 @@
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 37,
+    "reviewsReceived": 40,
     "rejectionsReceived": 2,
     "approvalsReceived": 19,
     "staffReviewedPrs": 6,
@@ -1913,19 +1976,27 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 7,
+    "approvalsGiven": 9,
     "rejectionsGiven": 0,
-    "prsOpened": 40,
-    "prsMerged": 27,
+    "prsOpened": 47,
+    "prsMerged": 28,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 7,
+    "distinctPrsReviewedNonCodeOwner": 9,
     "distinctPrsReviewedAsCodeOwner": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/circuit-to-canvas",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
     "score": 35,
     "major": 4,
     "minor": 3,
-    "tiny": 20,
+    "tiny": 21,
     "stars": "⭐⭐"
   },
   "th3o6a1d": {
@@ -1960,17 +2031,17 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 694,
-    "prsMerged": 487,
+    "prsOpened": 822,
+    "prsMerged": 568,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 15.5,
+    "score": 16.5,
     "major": 0,
     "minor": 0,
-    "tiny": 487,
+    "tiny": 568,
     "stars": "⭐⭐"
   },
   "ugin-man": {
