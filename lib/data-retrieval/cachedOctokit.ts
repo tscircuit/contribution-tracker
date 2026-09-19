@@ -1,3 +1,7 @@
+import {
+  REVIEW_DOWNVOTES_QUERY,
+  type ReviewReactionNode,
+} from "./getReviewDownvotes"
 import { Octokit } from "@octokit/rest"
 import FileSystemCache from "file-system-cache"
 import type { Endpoints } from "@octokit/types"
@@ -124,6 +128,22 @@ export class CachedOctokit {
       )
       return response
     },
+  }
+
+  public reviewReactionNodes = async (
+    ids: string[],
+  ): Promise<(ReviewReactionNode | null)[]> => {
+    const params = { ids }
+    const cached = await this.getCached<(ReviewReactionNode | null)[]>(
+      "reviews.downvotes",
+      params,
+    )
+    if (cached) return cached
+    const result = await this.octokit.graphql<{
+      nodes: (ReviewReactionNode | null)[]
+    }>(REVIEW_DOWNVOTES_QUERY, params)
+    await this.setCached("reviews.downvotes", params, result.nodes)
+    return result.nodes
   }
 
   public issues = {

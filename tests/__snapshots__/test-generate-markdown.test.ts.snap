@@ -50,16 +50,17 @@ pie
 
 ## Review Table
 
+[downvoted-reviews-hover]: ## "Reviews submitted in the reporting period with a thumbs-down reaction"
 [reviews-received-hover]: ## "Number of reviews received for PRs for this contributor"
 [approvals-received-hover]: ## "Number of approvals received for PRs this contributor authored"
 [rejections-received-hover]: ## "Number of rejections received for PRs this contributor authored"
 [prs-opened-hover]: ## "Number of PRs opened by this contributor"
 [issues-created-hover]: ## "Number of issues created by this contributor"
 
-| Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
-|---|---|---|---|---|---|---|---|---|
-| [alice](#alice) | 1 | 1 | 0 | 2 | 0 | 2 | 1 | 1 |
-| [bob](#bob) | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+| Contributor | Reviews Received | Approvals Received | Rejections Received | Downvoted Reviews | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
+|---|---|---|---|---|---|---|---|---|---|
+| [alice](#alice) | 1 | 1 | 0 | 2 | 2 | 0 | 2 | 1 | 1 |
+| [bob](#bob) | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
 
 ## Changes by Repository
 

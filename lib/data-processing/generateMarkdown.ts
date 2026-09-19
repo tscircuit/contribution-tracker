@@ -198,6 +198,8 @@ export async function generateMarkdown(
   markdown += "## Review Table\n\n"
 
   const columnTitleToDescription = {
+    "Downvoted Reviews":
+      "Reviews submitted in the reporting period with a thumbs-down reaction",
     "Reviews Received":
       "Number of reviews received for PRs for this contributor",
     "Approvals Received":
@@ -226,6 +228,7 @@ export async function generateMarkdown(
     "Reviews Received": "reviewsReceived",
     "Approvals Received": "approvalsReceived",
     "Rejections Received": "rejectionsReceived",
+    "Downvoted Reviews": "downvotedReviews",
     Approvals: "approvalsGiven",
     "Rejections Given": "rejectionsGiven",
     "PRs Opened": "prsOpened",
@@ -255,7 +258,7 @@ export async function generateMarkdown(
           markdown += ` [${contributor}](#${contributor.replace(/\s/g, "-")}) |`
           return
         }
-        markdown += ` ${stats[columnTitleToPropName[columnTitle] as keyof ContributorStats]} |`
+        markdown += ` ${stats[columnTitleToPropName[columnTitle] as keyof ContributorStats] ?? 0} |`
       })
       markdown += "\n"
     },
