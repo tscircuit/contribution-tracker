@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import { chunkDiscordMessages } from "../lib/discord/chunk-discord-messages"
+import { chunkDiscordMessages } from "lib/discord/chunk-discord-messages"
 
 test("returns empty array when issues lines are empty", () => {
   const chunks = chunkDiscordMessages("New issues in tscircuit/tscircuit:\n", [])
