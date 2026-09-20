@@ -2,6 +2,7 @@ import { WebhookClient, type MessageCreateOptions } from "discord.js"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
 import { EXCLUDED_BOTS } from "lib/constants"
+import { chunkDiscordMessages } from "lib/discord/chunk-discord-messages"
 
 const discordWebhook = new WebhookClient({
   url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
