@@ -50,6 +50,13 @@
     "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
+        "number": 2630,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2630",
+        "title": "Improve trace widths after hypergraph pathing",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 2664,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2664",
         "title": "Detect through-hole via collisions in reference DRC",
@@ -60,13 +67,6 @@
         "number": 2609,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2609",
         "title": "Detect through-hole via collisions in reference DRC",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 2630,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2630",
-        "title": "Improve trace widths after hypergraph pathing",
         "staffApprovals": 1,
         "staffRejections": 0
       }
@@ -231,7 +231,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
+    "prsOpened": 14,
     "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -316,7 +316,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 21,
+    "prsOpened": 22,
     "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -332,22 +332,63 @@
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
+    "reviewsReceived": 10,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 5,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 5,
+    "staffReviewedPrLinks": [
+      {
+        "number": 1238,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/1238",
+        "title": "Recheck power and ground labels after rail alignment",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1236,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/1236",
+        "title": "Keep rail labels on moved trace corners",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1233,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/1233",
+        "title": "Fix RP2040 gamepad rail alignment regression",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 97,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/97",
+        "title": "feat: detect separated USB series resistor pairs",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 83,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/83",
+        "title": "feat: detect misplaced low-side NPN load drivers",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 3,
     "rejectionsGiven": 1,
-    "prsOpened": 6,
-    "prsMerged": 0,
+    "prsOpened": 18,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 16,
+    "major": 3,
+    "minor": 0,
+    "tiny": 3,
+    "stars": "⭐⭐"
   },
   "MyDude92": {
     "githubId": 88647056,
@@ -361,7 +402,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
+    "prsOpened": 14,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -464,7 +505,7 @@
     ],
     "approvalsGiven": 24,
     "rejectionsGiven": 0,
-    "prsOpened": 68,
+    "prsOpened": 70,
     "prsMerged": 21,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -476,6 +517,26 @@
     "minor": 12,
     "tiny": 3,
     "stars": "⭐⭐⭐"
+  },
+  "TonF1917": {
+    "githubId": 266329044,
+    "githubLogin": "TonF1917",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "VykosMolt": {
     "githubId": 270193506,
@@ -547,13 +608,21 @@
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 6,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 7,
+    "rejectionsReceived": 1,
     "approvalsReceived": 5,
-    "staffReviewedPrs": 0,
-    "staffRejectionsReceived": 0,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffReviewedPrLinks": [
+      {
+        "number": 809,
+        "url": "https://github.com/tscircuit/circuit-json/pull/809",
+        "title": "Add standalone PCB solder-mask openings",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 10,
@@ -601,7 +670,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 4,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -701,7 +770,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 28,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -752,8 +821,8 @@
   "hrithik18k": {
     "githubId": 178554403,
     "githubLogin": "hrithik18k",
-    "reviewsReceived": 18,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 22,
+    "rejectionsReceived": 2,
     "approvalsReceived": 15,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
@@ -792,12 +861,12 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 3,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "reviewsReceived": 7,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 801,
@@ -805,21 +874,50 @@
         "title": "Add optional pcb_port_ids to pcb_via",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 2676,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2676",
+        "title": "update tiny-hypergraph to avoid disconnected blocker searches",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 2673,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2673",
+        "title": "Speed up trace simplification with geometry-first filtering",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 209,
+        "url": "https://github.com/tscircuit/tiny-hypergraph/pull/209",
+        "title": "fix: precheck reachability before selective blocker search",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 19,
-    "rejectionsGiven": 4,
-    "prsOpened": 28,
-    "prsMerged": 22,
+    "approvalsGiven": 24,
+    "rejectionsGiven": 7,
+    "prsOpened": 39,
+    "prsMerged": 32,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 17,
+    "distinctPrsReviewedNonCodeOwner": 22,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 63,
-    "major": 12,
-    "minor": 4,
-    "tiny": 6,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/circuit-to-svg",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 79,
+    "major": 14,
+    "minor": 5,
+    "tiny": 13,
     "stars": "⭐⭐⭐"
   },
   "iprasen": {
@@ -965,12 +1063,12 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 15,
+    "reviewsReceived": 16,
     "rejectionsReceived": 1,
-    "approvalsReceived": 12,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 4029,
@@ -978,22 +1076,29 @@
         "title": "honor net nominal trace width during pcb routing",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 1226,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/1226",
+        "title": "remove unnecessary detours around net label connectors",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 8,
     "rejectionsGiven": 0,
-    "prsOpened": 35,
-    "prsMerged": 19,
+    "prsOpened": 37,
+    "prsMerged": 24,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 8,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 44,
-    "major": 3,
+    "score": 52,
+    "major": 4,
     "minor": 8,
-    "tiny": 8,
-    "stars": "⭐⭐"
+    "tiny": 12,
+    "stars": "⭐⭐⭐"
   },
   "petermm": {
     "githubId": 1033636,
@@ -1038,11 +1143,11 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 57,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 58,
+    "rejectionsReceived": 2,
     "approvalsReceived": 10,
-    "staffReviewedPrs": 3,
-    "staffRejectionsReceived": 1,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
@@ -1058,6 +1163,13 @@
         "title": "Fix do-not-place mixed courtyard overlaps",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 135,
+        "url": "https://github.com/tscircuit/calculate-packing/pull/135",
+        "title": "Honor maximum trace lengths during PCB packing",
+        "staffApprovals": 0,
+        "staffRejections": 1
       },
       {
         "number": 70,
@@ -1105,21 +1217,21 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 26,
+    "reviewsReceived": 32,
     "rejectionsReceived": 0,
     "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 27,
-    "rejectionsGiven": 5,
-    "prsOpened": 90,
-    "prsMerged": 60,
+    "approvalsGiven": 40,
+    "rejectionsGiven": 8,
+    "prsOpened": 122,
+    "prsMerged": 89,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 21,
+    "distinctPrsReviewedNonCodeOwner": 28,
     "distinctPrsReviewedAsCodeOwner": 3,
     "reposOwned": [
       {
@@ -1135,17 +1247,23 @@
         ]
       },
       {
+        "repo": "tscircuit/schematic-symbols",
+        "paths": [
+          "*"
+        ]
+      },
+      {
         "repo": "tscircuit/tscircuit.com",
         "paths": [
           "*"
         ]
       }
     ],
-    "score": 155,
-    "major": 28,
-    "minor": 15,
-    "tiny": 15,
-    "stars": "👑👑"
+    "score": 213.5,
+    "major": 41,
+    "minor": 18,
+    "tiny": 26,
+    "stars": "👑👑👑"
   },
   "singhharsh1708": {
     "githubId": 143034341,
@@ -1190,17 +1308,24 @@
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 20,
+    "reviewsReceived": 30,
     "rejectionsReceived": 3,
-    "approvalsReceived": 14,
-    "staffReviewedPrs": 5,
-    "staffRejectionsReceived": 5,
-    "staffApprovalsReceived": 5,
+    "approvalsReceived": 23,
+    "staffReviewedPrs": 10,
+    "staffRejectionsReceived": 8,
+    "staffApprovalsReceived": 10,
     "staffReviewedPrLinks": [
       {
         "number": 1010,
         "url": "https://github.com/tscircuit/pcb-viewer/pull/1010",
         "title": "fix: respect board via tenting and preserve board context in PCB viewer",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 996,
+        "url": "https://github.com/tscircuit/3d-viewer/pull/996",
+        "title": "Render standalone and trace-route vias with board tenting defaults",
         "staffApprovals": 1,
         "staffRejections": 1
       },
@@ -1219,11 +1344,39 @@
         "staffRejections": 1
       },
       {
+        "number": 766,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/766",
+        "title": "Clip via tenting at exposed pad openings",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 768,
+        "url": "https://github.com/tscircuit/circuit-to-svg/pull/768",
+        "title": "Keep silkscreen visible over tented vias",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
         "number": 752,
         "url": "https://github.com/tscircuit/circuit-to-svg/pull/752",
         "title": "Resolve board defaults for via tenting",
         "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 219,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/219",
+        "title": "Update SVG rendering for via tenting in GLB exports",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 291,
+        "url": "https://github.com/tscircuit/circuit-to-canvas/pull/291",
+        "title": "Keep pad openings exposed over tented vias",
+        "staffApprovals": 1,
+        "staffRejections": 0
       },
       {
         "number": 288,
@@ -1235,8 +1388,8 @@
     ],
     "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 30,
-    "prsMerged": 17,
+    "prsOpened": 38,
+    "prsMerged": 27,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1250,11 +1403,11 @@
         ]
       }
     ],
-    "score": 38,
-    "major": 5,
-    "minor": 5,
-    "tiny": 7,
-    "stars": "⭐⭐"
+    "score": 59,
+    "major": 7,
+    "minor": 10,
+    "tiny": 10,
+    "stars": "⭐⭐⭐"
   },
   "themaksat": {
     "githubId": 147267171,
@@ -1268,7 +1421,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -1288,17 +1441,37 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 456,
-    "prsMerged": 341,
+    "prsOpened": 656,
+    "prsMerged": 490,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 14.5,
+    "score": 16,
     "major": 0,
     "minor": 0,
-    "tiny": 341,
+    "tiny": 490,
     "stars": "⭐⭐"
+  },
+  "yanyishuai": {
+    "githubId": 25838307,
+    "githubLogin": "yanyishuai",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   }
 }
