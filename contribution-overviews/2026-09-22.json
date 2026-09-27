@@ -56,17 +56,25 @@
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 0,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
-    "approvalsGiven": 4,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 24,
+        "url": "https://github.com/tscircuit/high-density-repair01/pull/24",
+        "title": "Make force-improvement vector lengths consistent across platforms",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
     "prsOpened": 17,
-    "prsMerged": 0,
+    "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -79,18 +87,30 @@
           "*"
         ]
       }
-    ]
+    ],
+    "score": 7,
+    "major": 1,
+    "minor": 0,
+    "tiny": 1,
+    "stars": "⭐"
   },
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 1,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 4170,
+        "url": "https://github.com/tscircuit/core/pull/4170",
+        "title": "fix: preserve rect-pad plated hole IDs and port positions",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2724,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2724",
@@ -99,19 +119,19 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
-    "prsMerged": 3,
+    "prsOpened": 12,
+    "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 13,
+    "score": 18,
     "major": 3,
     "minor": 0,
-    "tiny": 0,
+    "tiny": 2,
     "stars": "⭐⭐"
   },
   "Devesh36": {
@@ -201,7 +221,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
+    "prsOpened": 9,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -217,9 +237,9 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 7,
+    "reviewsReceived": 9,
     "rejectionsReceived": 0,
-    "approvalsReceived": 7,
+    "approvalsReceived": 9,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 2,
@@ -241,17 +261,17 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 7,
+    "prsOpened": 11,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 11,
+    "score": 14,
     "major": 0,
-    "minor": 4,
-    "tiny": 3,
+    "minor": 5,
+    "tiny": 4,
     "stars": "⭐⭐"
   },
   "Lathikaa-S": {
@@ -412,9 +432,9 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 5,
+    "approvalsReceived": 6,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 2,
@@ -434,20 +454,40 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 13,
+    "approvalsGiven": 16,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 5,
+    "prsOpened": 24,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedNonCodeOwner": 15,
     "distinctPrsReviewedAsCodeOwner": 1,
-    "score": 19,
+    "score": 23,
     "major": 1,
-    "minor": 0,
+    "minor": 1,
     "tiny": 2,
     "stars": "⭐⭐"
+  },
+  "Strohutt": {
+    "githubId": 84200776,
+    "githubLogin": "Strohutt",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "anil08607": {
     "githubId": 285619933,
@@ -487,6 +527,26 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "gabrielszabos": {
+    "githubId": 297046997,
+    "githubLogin": "gabrielszabos",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -575,8 +635,8 @@
     ],
     "approvalsGiven": 20,
     "rejectionsGiven": 1,
-    "prsOpened": 35,
-    "prsMerged": 22,
+    "prsOpened": 42,
+    "prsMerged": 29,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -588,12 +648,18 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 50,
+    "score": 55,
     "major": 8,
-    "minor": 3,
-    "tiny": 11,
+    "minor": 5,
+    "tiny": 16,
     "stars": "⭐⭐⭐"
   },
   "infosbighouse-glitch": {
@@ -629,6 +695,26 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "marcos452652258-gif": {
+    "githubId": 321122341,
+    "githubLogin": "marcos452652258-gif",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -800,14 +886,14 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 31,
+    "approvalsGiven": 33,
     "rejectionsGiven": 7,
-    "prsOpened": 74,
-    "prsMerged": 61,
+    "prsOpened": 84,
+    "prsMerged": 65,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 25,
+    "distinctPrsReviewedNonCodeOwner": 26,
     "distinctPrsReviewedAsCodeOwner": 3,
     "reposOwned": [
       {
@@ -827,12 +913,18 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/copper-pour-solver",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 171,
-    "major": 31,
-    "minor": 17,
-    "tiny": 13,
+    "score": 181,
+    "major": 33,
+    "minor": 18,
+    "tiny": 14,
     "stars": "👑👑👑"
   },
   "techmannih": {
@@ -893,16 +985,16 @@
   "trixie010": {
     "githubId": 203519918,
     "githubLogin": "trixie010",
-    "reviewsReceived": 0,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 3,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -922,8 +1014,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 422,
-    "prsMerged": 303,
+    "prsOpened": 432,
+    "prsMerged": 311,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -932,7 +1024,7 @@
     "score": 15,
     "major": 0,
     "minor": 0,
-    "tiny": 302,
+    "tiny": 311,
     "stars": "⭐⭐"
   },
   "wroscoe": {
@@ -947,7 +1039,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
