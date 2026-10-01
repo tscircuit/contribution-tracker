@@ -3,6 +3,7 @@ import path from "node:path"
 import { z } from "zod"
 import { generateAiObjectCached } from "../lib/ai-stuff/sdk"
 import { openai } from "@ai-sdk/openai"
+import { linkPullRequests } from "../lib/data-processing/linkPullRequests"
 
 const GUIDELINES = [
   "Ignore PRs that are vague",
@@ -68,18 +69,7 @@ async function main() {
     .trim()
 
   // Post-process to add proper PR links
-  // Convert all repo #123 references to markdown links [#123](url)
-  formatted = formatted.replace(
-    /([\w-]+\/[\w-]+)\s+#(\d+)/g,
-    (match: string, repo: string, prNumber: string) => {
-      const key = `${repo}#${prNumber}`
-      const pullRequestDetails = prMap.get(key)
-      if (!pullRequestDetails) {
-        return match // Keep original if not found
-      }
-      return `[${repo} #${prNumber}](${pullRequestDetails.url})`
-    },
-  )
+  formatted = linkPullRequests(formatted, prMap)
 
   fs.writeFileSync(
     filePath,
