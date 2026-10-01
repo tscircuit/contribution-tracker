@@ -1,23 +1,77 @@
 {
-  "Abse2001": {
-    "githubId": 54582525,
-    "githubLogin": "Abse2001",
-    "reviewsReceived": 0,
+  "0hmX": {
+    "githubId": 109351887,
+    "githubLogin": "0hmX",
+    "reviewsReceived": 1,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
-    "approvalsGiven": 3,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 623,
+        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/623",
+        "title": "fix: preserve source board thickness in KiCad PCB exports",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 0,
+    "prsOpened": 7,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 2,
+    "major": 0,
+    "minor": 1,
+    "tiny": 0,
+    "stars": ""
+  },
+  "Abse2001": {
+    "githubId": 54582525,
+    "githubLogin": "Abse2001",
+    "reviewsReceived": 4,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 2740,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2740",
+        "title": "Fix through-via drill spans in Pipeline 9 routing and repair",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 12,
+    "rejectionsGiven": 5,
+    "prsOpened": 11,
+    "prsMerged": 4,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 9,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/high-density-repair03",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 19,
+    "major": 2,
+    "minor": 0,
+    "tiny": 2,
+    "stars": "⭐⭐"
   },
   "Ahmed5754": {
     "githubId": 148712865,
@@ -42,9 +96,9 @@
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 9,
+    "reviewsReceived": 17,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
+    "approvalsReceived": 15,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 2,
@@ -64,19 +118,19 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 3,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 15,
-    "prsMerged": 9,
+    "prsOpened": 22,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 22,
-    "major": 3,
-    "minor": 1,
-    "tiny": 5,
+    "score": 34,
+    "major": 4,
+    "minor": 3,
+    "tiny": 8,
     "stars": "⭐⭐"
   },
   "Ante042": {
@@ -147,27 +201,27 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 11,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 9,
+    "reviewsReceived": 18,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 14,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 6,
+    "prsOpened": 16,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 7,
+    "score": 13,
     "major": 0,
-    "minor": 2,
-    "tiny": 3,
-    "stars": "⭐"
+    "minor": 4,
+    "tiny": 5,
+    "stars": "⭐⭐"
   },
   "JoelGellis": {
     "githubId": 79152895,
@@ -192,9 +246,9 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 5,
+    "reviewsReceived": 10,
     "rejectionsReceived": 1,
-    "approvalsReceived": 4,
+    "approvalsReceived": 7,
     "staffReviewedPrs": 1,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 0,
@@ -209,29 +263,57 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
-    "prsMerged": 4,
+    "prsOpened": 16,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 6,
-    "major": 0,
-    "minor": 2,
+    "score": 14,
+    "major": 1,
+    "minor": 4,
     "tiny": 2,
-    "stars": "⭐"
+    "stars": "⭐⭐"
   },
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 4,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 4,
-    "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 3,
+    "reviewsReceived": 9,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 9,
+    "staffRejectionsReceived": 3,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
+      {
+        "number": 368,
+        "url": "https://github.com/tscircuit/checks/pull/368",
+        "title": "feat: add regulator capacitor and pull-resistor placement warnings",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 1264,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/1264",
+        "title": "fix: simplify power label connectors by reattaching to rail corners",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 159,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/159",
+        "title": "feat: detect misplaced charge-pump capacitors",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 156,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/156",
+        "title": "feat: detect separated pi-filter components",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 146,
         "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/146",
@@ -240,11 +322,11 @@
         "staffRejections": 1
       },
       {
-        "number": 138,
-        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/138",
-        "title": "feat: detect scattered MOSFET gate resistor networks",
-        "staffApprovals": 1,
-        "staffRejections": 0
+        "number": 153,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/153",
+        "title": "feat: detect scattered battery cell-sense filter ladders",
+        "staffApprovals": 0,
+        "staffRejections": 1
       },
       {
         "number": 127,
@@ -259,21 +341,28 @@
         "title": "feat: detect current-sense shunts separated from their inputs",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 138,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/138",
+        "title": "feat: detect scattered MOSFET gate resistor networks",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
-    "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 5,
+    "approvalsGiven": 2,
+    "rejectionsGiven": 1,
+    "prsOpened": 19,
+    "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 2,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 13,
-    "major": 2,
-    "minor": 1,
-    "tiny": 2,
+    "score": 27,
+    "major": 4,
+    "minor": 2,
+    "tiny": 6,
     "stars": "⭐⭐"
   },
   "NOyu015": {
@@ -296,12 +385,32 @@
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
   },
+  "NicholasIGuess": {
+    "githubId": 114117177,
+    "githubLogin": "NicholasIGuess",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 17,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 17,
+    "reviewsReceived": 31,
+    "rejectionsReceived": 5,
+    "approvalsReceived": 26,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 2,
@@ -321,47 +430,85 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 15,
+    "approvalsGiven": 27,
     "rejectionsGiven": 0,
-    "prsOpened": 27,
-    "prsMerged": 22,
+    "prsOpened": 86,
+    "prsMerged": 29,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedNonCodeOwner": 24,
     "distinctPrsReviewedAsCodeOwner": 3,
-    "score": 58,
-    "major": 5,
-    "minor": 7,
-    "tiny": 9,
+    "score": 80,
+    "major": 9,
+    "minor": 9,
+    "tiny": 11,
     "stars": "⭐⭐⭐"
+  },
+  "addibble": {
+    "githubId": 56509,
+    "githubLogin": "addibble",
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 224,
+        "url": "https://github.com/tscircuit/circuit-json-to-gltf/pull/224",
+        "title": "Fix X and Y CAD rotation directions",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 2,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 3,
+    "major": 0,
+    "minor": 1,
+    "tiny": 1,
+    "stars": ""
   },
   "anil08607": {
     "githubId": 285619933,
     "githubLogin": "anil08607",
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 0,
+    "reviewsReceived": 4,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
-    "prsMerged": 0,
+    "prsOpened": 18,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 6,
+    "major": 0,
+    "minor": 3,
+    "tiny": 0,
+    "stars": "⭐"
   },
   "hrithik18k": {
     "githubId": 178554403,
     "githubLogin": "hrithik18k",
-    "reviewsReceived": 3,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 1,
+    "reviewsReceived": 4,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 1,
@@ -376,13 +523,18 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
-    "prsMerged": 0,
+    "prsOpened": 5,
+    "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 4,
+    "major": 1,
+    "minor": 0,
+    "tiny": 0,
+    "stars": "⭐"
   },
   "imrishabh18": {
     "githubId": 38923768,
@@ -394,13 +546,6 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
-      {
-        "number": 2769,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2769",
-        "title": "Improve Pipeline 9 clearance repair for straight trace spans",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
       {
         "number": 2776,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2776",
@@ -414,16 +559,23 @@
         "title": "Reduce bugreport107 DRC errors to 63 on macOS and 65 on Linux",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 2769,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2769",
+        "title": "Improve Pipeline 9 clearance repair for straight trace spans",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 8,
-    "rejectionsGiven": 2,
-    "prsOpened": 13,
+    "approvalsGiven": 13,
+    "rejectionsGiven": 1,
+    "prsOpened": 15,
     "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
+    "distinctPrsReviewedNonCodeOwner": 13,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 24,
     "major": 5,
@@ -451,7 +603,7 @@
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
+    "prsOpened": 6,
     "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -487,46 +639,46 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 18,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 2,
+    "reviewsReceived": 21,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 5,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 3,
+    "prsOpened": 15,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 7,
+    "score": 11,
     "major": 0,
-    "minor": 3,
-    "tiny": 0,
-    "stars": "⭐"
+    "minor": 4,
+    "tiny": 2,
+    "stars": "⭐⭐"
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 6,
+    "reviewsReceived": 16,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 16,
-    "rejectionsGiven": 3,
-    "prsOpened": 50,
-    "prsMerged": 40,
+    "approvalsGiven": 25,
+    "rejectionsGiven": 5,
+    "prsOpened": 113,
+    "prsMerged": 85,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 15,
+    "distinctPrsReviewedNonCodeOwner": 24,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -540,13 +692,25 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/circuit-json-to-gerber",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 65,
-    "major": 5,
-    "minor": 16,
-    "tiny": 17,
-    "stars": "⭐⭐⭐"
+    "score": 169,
+    "major": 29,
+    "minor": 20,
+    "tiny": 35,
+    "stars": "👑👑👑"
   },
   "techmannih": {
     "githubId": 125847751,
@@ -558,15 +722,23 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 10,
+    "approvalsGiven": 12,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
+    "prsOpened": 18,
     "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 10,
+    "distinctPrsReviewedNonCodeOwner": 12,
     "distinctPrsReviewedAsCodeOwner": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/circuit-to-canvas",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
     "score": 18,
     "major": 0,
     "minor": 5,
@@ -585,17 +757,17 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 280,
-    "prsMerged": 218,
+    "prsOpened": 406,
+    "prsMerged": 307,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 14,
+    "score": 15.5,
     "major": 0,
     "minor": 0,
-    "tiny": 216,
+    "tiny": 307,
     "stars": "⭐⭐"
   }
 }
