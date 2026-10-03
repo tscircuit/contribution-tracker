@@ -50,14 +50,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 17,
+    "approvalsGiven": 23,
     "rejectionsGiven": 2,
     "prsOpened": 12,
     "prsMerged": 5,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 14,
+    "distinctPrsReviewedNonCodeOwner": 20,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -67,7 +67,7 @@
         ]
       }
     ],
-    "score": 25,
+    "score": 26,
     "major": 2,
     "minor": 0,
     "tiny": 3,
@@ -96,13 +96,20 @@
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 17,
+    "reviewsReceived": 32,
     "rejectionsReceived": 0,
-    "approvalsReceived": 15,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 30,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 4323,
+        "url": "https://github.com/tscircuit/core/pull/4323",
+        "title": "Preserve PCB connections for separated polygon contacts",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 4204,
         "url": "https://github.com/tscircuit/core/pull/4204",
@@ -118,20 +125,20 @@
         "staffRejections": 1
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 30,
-    "prsMerged": 15,
+    "prsOpened": 50,
+    "prsMerged": 34,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 34,
-    "major": 4,
-    "minor": 3,
-    "tiny": 8,
-    "stars": "⭐⭐"
+    "score": 67,
+    "major": 6,
+    "minor": 13,
+    "tiny": 15,
+    "stars": "⭐⭐⭐"
   },
   "Angelel02": {
     "githubId": 64837769,
@@ -198,6 +205,26 @@
     "tiny": 2,
     "stars": ""
   },
+  "EazyHood": {
+    "githubId": 209367218,
+    "githubLogin": "EazyHood",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "Furox-Art": {
     "githubId": 177975472,
     "githubLogin": "Furox-Art",
@@ -221,26 +248,26 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 18,
+    "reviewsReceived": 19,
     "rejectionsReceived": 2,
-    "approvalsReceived": 14,
+    "approvalsReceived": 15,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 18,
-    "prsMerged": 9,
+    "prsOpened": 19,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 13,
+    "score": 14,
     "major": 0,
     "minor": 4,
-    "tiny": 5,
+    "tiny": 6,
     "stars": "⭐⭐"
   },
   "JoelGellis": {
@@ -283,7 +310,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 16,
+    "prsOpened": 17,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -445,12 +472,32 @@
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
   },
+  "Ratkir": {
+    "githubId": 108684927,
+    "githubLogin": "Ratkir",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 44,
+    "reviewsReceived": 45,
     "rejectionsReceived": 3,
-    "approvalsReceived": 38,
+    "approvalsReceived": 39,
     "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 3,
@@ -484,14 +531,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 32,
+    "approvalsGiven": 38,
     "rejectionsGiven": 0,
-    "prsOpened": 113,
-    "prsMerged": 40,
+    "prsOpened": 125,
+    "prsMerged": 41,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 29,
+    "distinctPrsReviewedNonCodeOwner": 35,
     "distinctPrsReviewedAsCodeOwner": 3,
     "reposOwned": [
       {
@@ -504,7 +551,7 @@
     "score": 92.5,
     "major": 11,
     "minor": 10,
-    "tiny": 19,
+    "tiny": 20,
     "stars": "👑"
   },
   "addibble": {
@@ -583,7 +630,7 @@
   "hrithik18k": {
     "githubId": 178554403,
     "githubLogin": "hrithik18k",
-    "reviewsReceived": 9,
+    "reviewsReceived": 11,
     "rejectionsReceived": 3,
     "approvalsReceived": 4,
     "staffReviewedPrs": 2,
@@ -607,7 +654,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
+    "prsOpened": 11,
     "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -623,13 +670,20 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 9,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 6,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 6,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
+      {
+        "number": 2820,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2820",
+        "title": "perf: reduce port ownership lookup and cache key overhead",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 2786,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/2786",
@@ -673,14 +727,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 13,
-    "rejectionsGiven": 2,
-    "prsOpened": 27,
-    "prsMerged": 14,
+    "approvalsGiven": 15,
+    "rejectionsGiven": 3,
+    "prsOpened": 28,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 13,
+    "distinctPrsReviewedNonCodeOwner": 15,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -690,8 +744,8 @@
         ]
       }
     ],
-    "score": 35,
-    "major": 6,
+    "score": 39,
+    "major": 7,
     "minor": 3,
     "tiny": 4,
     "stars": "⭐⭐"
@@ -811,21 +865,21 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 27,
+    "reviewsReceived": 36,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 35,
+    "approvalsGiven": 38,
     "rejectionsGiven": 8,
-    "prsOpened": 189,
-    "prsMerged": 153,
+    "prsOpened": 276,
+    "prsMerged": 227,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 29,
+    "distinctPrsReviewedNonCodeOwner": 32,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
@@ -863,12 +917,18 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/copper-pour-solver",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 295,
-    "major": 50,
-    "minor": 41,
-    "tiny": 60,
+    "score": 445,
+    "major": 75,
+    "minor": 66,
+    "tiny": 83,
     "stars": "👑👑👑"
   },
   "techmannih": {
@@ -883,8 +943,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 18,
     "rejectionsGiven": 0,
-    "prsOpened": 36,
-    "prsMerged": 22,
+    "prsOpened": 37,
+    "prsMerged": 23,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -898,16 +958,16 @@
         ]
       }
     ],
-    "score": 34,
+    "score": 35,
     "major": 0,
     "minor": 11,
-    "tiny": 11,
+    "tiny": 12,
     "stars": "⭐⭐"
   },
-  "trixie010": {
-    "githubId": 203519918,
-    "githubLogin": "trixie010",
-    "reviewsReceived": 3,
+  "theluckystrike": {
+    "githubId": 51033404,
+    "githubLogin": "theluckystrike",
+    "reviewsReceived": 0,
     "rejectionsReceived": 0,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -916,7 +976,27 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 3,
+    "prsOpened": 5,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "trixie010": {
+    "githubId": 203519918,
+    "githubLogin": "trixie010",
+    "reviewsReceived": 5,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -936,17 +1016,17 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 636,
-    "prsMerged": 499,
+    "prsOpened": 835,
+    "prsMerged": 655,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 18,
+    "score": 18.5,
     "major": 0,
     "minor": 0,
-    "tiny": 499,
+    "tiny": 655,
     "stars": "⭐⭐"
   }
 }
