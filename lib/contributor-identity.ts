@@ -1,4 +1,5 @@
 import { scoreToStarString } from "./scoring/scoreToStars"
+import { mergeDownvotedReviewsByWeek } from "./scoring/contribution-review-week"
 import type { AnalyzedPR, ContributorStats } from "./types"
 
 export interface GitHubUserIdentity {
@@ -45,6 +46,7 @@ const ADDITIVE_CONTRIBUTOR_STAT_FIELDS = [
   "score",
   "approvalsGiven",
   "rejectionsGiven",
+  "downvotedReviewsGiven",
   "distinctPrsReviewedNonCodeOwner",
   "distinctPrsReviewedAsCodeOwner",
   "major",
@@ -98,6 +100,8 @@ export function createEmptyContributorStats(
     staffReviewedPrLinks: [],
     approvalsGiven: 0,
     rejectionsGiven: 0,
+    downvotedReviewsGiven: 0,
+    downvotedReviewsGivenByWeek: {},
     prsOpened: 0,
     prsMerged: 0,
     issuesCreated: 0,
@@ -159,6 +163,36 @@ export function mergeContributorStats(
     secondContributorStats.githubId ?? firstContributorStats.githubId
   mergedContributorStats.githubLogin =
     secondContributorStats.githubLogin ?? firstContributorStats.githubLogin
+  if (
+    firstContributorStats.downvotedReviewsGivenByWeek ||
+    secondContributorStats.downvotedReviewsGivenByWeek
+  ) {
+    mergedContributorStats.downvotedReviewsGivenByWeek =
+      mergeDownvotedReviewsByWeek(
+        firstContributorStats.downvotedReviewsGivenByWeek,
+        secondContributorStats.downvotedReviewsGivenByWeek,
+      )
+  }
+  if (
+    firstContributorStats.distinctPrsReviewedByWeek ||
+    secondContributorStats.distinctPrsReviewedByWeek
+  ) {
+    mergedContributorStats.distinctPrsReviewedByWeek = {
+      ...firstContributorStats.distinctPrsReviewedByWeek,
+    }
+    for (const [reviewWeek, reviewedPrs] of Object.entries(
+      secondContributorStats.distinctPrsReviewedByWeek ?? {},
+    )) {
+      const firstReviewedPrs =
+        mergedContributorStats.distinctPrsReviewedByWeek[reviewWeek]
+      mergedContributorStats.distinctPrsReviewedByWeek[reviewWeek] = {
+        nonCodeOwner:
+          (firstReviewedPrs?.nonCodeOwner ?? 0) + reviewedPrs.nonCodeOwner,
+        asCodeOwner:
+          (firstReviewedPrs?.asCodeOwner ?? 0) + reviewedPrs.asCodeOwner,
+      }
+    }
+  }
   mergedContributorStats.staffReviewedPrLinks = dedupeBy(
     [
       ...(firstContributorStats.staffReviewedPrLinks ?? []),
