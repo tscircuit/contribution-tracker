@@ -2,6 +2,7 @@ import { describe, expect, it } from "bun:test"
 import { getContributorScore } from "lib/scoring/getContributorScore"
 import { MAINTAINERS } from "lib/scoring/maintainers"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
+import { createEmptyContributorStats } from "../lib/contributor-identity"
 
 const createPRs = (
   starRating: AnalyzedPR["starRating"],
@@ -11,6 +12,19 @@ const createPRs = (
   Array.from({ length: count }, () => ({ starRating, impact }) as AnalyzedPR)
 
 describe("PR scoring caps", () => {
+  it("keeps PR points when three downvoted reviews remove review points", () => {
+    const result = getContributorScore({
+      contributorPRs: createPRs(3, "Major", 2),
+      contributorStats: {
+        ...createEmptyContributorStats(),
+        distinctPrsReviewedNonCodeOwner: 5,
+        downvotedReviewsGiven: 3,
+      },
+      contributor: "reviewer",
+    })
+    expect(result.score).toBe(8)
+    expect(result.rating3Count).toBe(2)
+  })
   it("should cap tiny PRs at 12", () => {
     const result = getContributorScore({
       contributorPRs: createPRs(1, "Tiny", 13),
