@@ -4,7 +4,17 @@ import type { PrAttributeSchema } from "./pr-attributes"
 export const getContributionStarRatingFromAttributes = (
   a: PrAttributeSchema,
   repo: string,
+  manualStarRating?: StarRating,
 ): StarRating => {
+  if (
+    repo === "tscircuit/circuit-json-to-altium" ||
+    repo === "tscircuit/circuit-json-to-kicad"
+  ) {
+    return 1
+  }
+
+  if (manualStarRating !== undefined) return manualStarRating
+
   let maxRating = 3
   let score = 1
 
