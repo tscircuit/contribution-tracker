@@ -38,9 +38,11 @@ export async function analyzePRWithAI(
     prompt: generateAnalyzePRPrompt(pr, repo),
     debug: `PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
   })
-  const starRating =
-    pr.manualStarRating ??
-    getContributionStarRatingFromAttributes(result.object, repo)
+  const starRating = getContributionStarRatingFromAttributes(
+    result.object,
+    repo,
+    pr.manualStarRating,
+  )
   return {
     ...result.object,
     description: cleanDescription(result.object.description),
