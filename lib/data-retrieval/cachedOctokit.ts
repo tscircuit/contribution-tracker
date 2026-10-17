@@ -174,6 +174,25 @@ export class CachedOctokit {
       const response = await this.octokit.issues.createComment(params)
       return response
     },
+
+    get: async (
+      params: Endpoints["GET /repos/{owner}/{repo}/issues/{issue_number}"]["parameters"],
+    ): Promise<{
+      data: Endpoints["GET /repos/{owner}/{repo}/issues/{issue_number}"]["response"]["data"]
+    }> => {
+      const cached = await this.getCached<
+        Endpoints["GET /repos/{owner}/{repo}/issues/{issue_number}"]["response"]["data"]
+      >("issues.get", params as Record<string, unknown>)
+      if (cached) return { data: cached }
+
+      const response = await this.octokit.issues.get(params)
+      await this.setCached(
+        "issues.get",
+        params as Record<string, unknown>,
+        response.data,
+      )
+      return response
+    },
   }
 
   public repos = {
