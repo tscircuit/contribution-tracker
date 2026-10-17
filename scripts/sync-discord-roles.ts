@@ -1,6 +1,12 @@
 import fs from "fs"
 import path from "path"
 import { Client, Role, WebhookClient } from "discord.js"
+import {
+  CONTRIBUTION_TIER_ROLE_NAMES,
+  type ContributionTierRoleName,
+  getContributionTierRoleNames,
+  loadAllTimeContributionCounts,
+} from "lib/utils/contribution-level-utils"
 
 // ----- Role definitions ----- //
 
@@ -102,6 +108,7 @@ async function syncRoles(client: Client, guildId: string) {
   }
 
   const contributionsByUser = loadContributionData()
+  const allTimeContributionCounts = loadAllTimeContributionCounts()
   const userMappings = loadUserMappings()
 
   // Fetch all-time roles from the guild
@@ -124,6 +131,17 @@ async function syncRoles(client: Client, guildId: string) {
       continue
     }
     weeklyRoles[roleName] = role
+  }
+
+  // Fetch contribution tier roles from the guild
+  const tierRoles: Record<ContributionTierRoleName, Role> = {} as any
+  for (const roleName of CONTRIBUTION_TIER_ROLE_NAMES) {
+    const role = guild.roles.cache.find((r) => r.name === roleName)
+    if (!role) {
+      console.warn(`Contribution tier role '${roleName}' not found.`)
+      continue
+    }
+    tierRoles[roleName] = role
   }
 
   console.log("\n")
@@ -205,6 +223,39 @@ async function syncRoles(client: Client, guildId: string) {
         })
       console.log(
         `Added all-time roles [${allTimeRolesToAdd.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
+      )
+      await Bun.sleep(1000)
+    }
+
+    // --- Sync Contribution Tier Roles (c-tier, b-tier, a-tier) ---
+    const totalContributions =
+      Object.entries(allTimeContributionCounts).find(
+        ([name]) => name.toLowerCase() === githubUsername.toLowerCase(),
+      )?.[1] ??
+      contributorDetails.prsMerged ??
+      0
+    const desiredTierRoles = getContributionTierRoleNames(totalContributions)
+      .map((roleName) => tierRoles[roleName])
+      .filter((role): role is Role => Boolean(role))
+    const currentTierRoles = discordUser.roles.cache.filter((role) =>
+      CONTRIBUTION_TIER_ROLE_NAMES.includes(
+        role.name as ContributionTierRoleName,
+      ),
+    )
+    const currentTierRoleIds = new Set(currentTierRoles.map((r) => r.id))
+    const tierRolesToAdd = desiredTierRoles.filter(
+      (role) => !currentTierRoleIds.has(role.id),
+    )
+    if (tierRolesToAdd.length > 0) {
+      await discordUser.roles
+        .add(tierRolesToAdd.map((r) => r.id))
+        .catch((e) => {
+          console.warn(
+            `Error adding tier roles to ${githubUsername} (${discordId}): ${e.message}`,
+          )
+        })
+      console.log(
+        `Added tier roles [${tierRolesToAdd.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
       )
       await Bun.sleep(1000)
     }
