@@ -9,6 +9,8 @@ export interface ReviewerStats {
   githubLogin: string
   approvalsGiven: number
   rejectionsGiven: number
+  downvotedReviewsGiven?: number
+  downvotedReviewsGivenByWeek?: Record<string, number>
   prNumbers?: Set<number> // Set of PR numbers this reviewer has reviewed
 }
 
@@ -38,6 +40,14 @@ export interface ContributorStats {
   score?: number
   approvalsGiven: number
   rejectionsGiven: number
+  /** Reviews submitted in this reporting window with at least one thumbs-down reaction. */
+  downvotedReviewsGiven?: number
+  downvotedReviewsGivenByWeek?: Record<string, number>
+  /** Review credit is attributed to the week the reviewed PR merged. */
+  distinctPrsReviewedByWeek?: Record<
+    string,
+    { nonCodeOwner: number; asCodeOwner: number }
+  >
   distinctPrsReviewedNonCodeOwner?: number // Number of unique PRs reviewed by this contributor
   distinctPrsReviewedAsCodeOwner?: number // Number of unique PRs reviewed by this contributor as a code owner
   major?: number // Count of Major PRs

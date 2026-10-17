@@ -167,6 +167,22 @@ const mockStats: Record<string, ContributorStats> = {
 }
 
 describe("generateMarkdown", () => {
+  it("shows downvoted review counts and defaults legacy overview counts to zero", async () => {
+    const markdown = await generateMarkdown(
+      [],
+      {
+        alice: { ...mockStats.alice, downvotedReviewsGiven: 3 },
+        bob: { ...mockStats.bob },
+      },
+      "2024-07-01",
+      {},
+    )
+    expect(markdown).toContain(
+      "Rejections Given | Downvoted Reviews | PRs Opened",
+    )
+    expect(markdown).toMatch(/\| \[alice\]\(#alice\)[^\n]* \| 3 \|/)
+    expect(markdown).not.toContain("undefined")
+  })
   it("should generate markdown with expected sections and contributor data", async () => {
     const markdown = await generateMarkdown(mockPRs, mockStats, "2024-07-01", {
       "tscircuit/gyromug": ["alice", "bob"],
