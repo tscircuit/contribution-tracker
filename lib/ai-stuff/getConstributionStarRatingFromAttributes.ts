@@ -5,6 +5,7 @@ export const getContributionStarRatingFromAttributes = (
   a: PrAttributeSchema,
   repo: string,
   manualStarRating?: StarRating,
+  hasMajorTag?: boolean,
 ): StarRating => {
   if (
     repo === "tscircuit/circuit-json-to-altium" ||
@@ -14,6 +15,7 @@ export const getContributionStarRatingFromAttributes = (
   }
 
   if (manualStarRating !== undefined) return manualStarRating
+  if (hasMajorTag) return 3
 
   let maxRating = 3
   let score = 1
