@@ -29,10 +29,10 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/core" : 42
+    "tscircuit/core" : 43
     "tscircuit/checks" : 2
-    "tscircuit/tscircuit.com" : 44
-    "tscircuit/cli" : 76
+    "tscircuit/tscircuit.com" : 46
+    "tscircuit/cli" : 78
     "tscircuit/tscircuit-autorouter" : 20
     "tscircuit/parts-engine" : 2
     "tscircuit/circuit-json-to-gltf" : 2
@@ -44,14 +44,14 @@ pie
     "tscircuit/schematic-viewer" : 1
     "tscircuit/props" : 3
     "tscircuit/internal-dynamic-import" : 4
-    "tscircuit/circuit-json-webgpu" : 5
+    "tscircuit/circuit-json-webgpu" : 6
     "tscircuit/tscircuit-standalone" : 11
     "tscircuit/easyeda-converter" : 2
     "tscircuit/circuit-json-to-kicad" : 13
     "tscircuit/pcb-viewer" : 3
-    "tscircuit/tscircuit" : 144
-    "tscircuit/eval" : 49
-    "tscircuit/runframe" : 64
+    "tscircuit/tscircuit" : 148
+    "tscircuit/eval" : 51
+    "tscircuit/runframe" : 66
     "tscircuit/svg.tscircuit.com" : 38
     "tscircuit/circuit-json-to-step" : 9
     "tscircuit/circuit-json-schematic-placement-analysis" : 19
@@ -63,14 +63,14 @@ pie
     "tscircuit/footprinter" : 3
     "tscircuit/circuit-to-svg" : 2
     "tscircuit/docs" : 1
+    "tscircuit/models.tscircuit.com" : 2
+    "tscircuit/jscad-electronics" : 1
+    "tscircuit/modelprinter" : 1
     "tscircuit/copper-pour-solver" : 2
     "tscircuit/kicad-to-circuit-json" : 1
     "tscircuit/circuit-to-canvas" : 1
     "tscircuit/circuit-json-placement-analysis" : 2
     "tscircuit/dataset-srj24" : 2
-    "tscircuit/models.tscircuit.com" : 2
-    "tscircuit/jscad-electronics" : 1
-    "tscircuit/modelprinter" : 1
     "tscircuit/circuit-json-to-bom-csv" : 2
     "tscircuit/dataset-tsx35-kicad-boards" : 4
     "tscircuit/ti" : 3
@@ -82,13 +82,13 @@ pie
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ |
 |-------------|---------|---------|---------|-------|-----|
 | [seveibar](#seveibar) | 26 | 21 | 15 | 159 | 👑👑 |
-| [imrishabh18](#imrishabh18) | 11 | 11 | 16 | 79 | ⭐⭐⭐ |
+| [imrishabh18](#imrishabh18) | 11 | 11 | 17 | 79 | ⭐⭐⭐ |
 | [ShiboSoftwareDev](#ShiboSoftwareDev) | 4 | 7 | 4 | 49 | ⭐⭐ |
 | [MustafaMulla29](#MustafaMulla29) | 5 | 6 | 14 | 45 | ⭐⭐ |
 | [techmannih](#techmannih) | 6 | 1 | 4 | 31 | ⭐⭐ |
 | [Abse2001](#Abse2001) | 0 | 3 | 4 | 25 | ⭐⭐ |
 | [rushabhcodes](#rushabhcodes) | 1 | 6 | 4 | 21 | ⭐⭐ |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 411 | 18 | ⭐⭐ |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 423 | 18 | ⭐⭐ |
 | [Devesh36](#Devesh36) | 1 | 2 | 7 | 16 | ⭐⭐ |
 | [0hmX](#0hmX) | 2 | 1 | 2 | 13 | ⭐⭐ |
 | [GokulPandi-M](#GokulPandi-M) | 0 | 4 | 3 | 11 | ⭐⭐ |
@@ -96,7 +96,7 @@ pie
 | [KrishnaX12](#KrishnaX12) | 0 | 3 | 2 | 8 | ⭐ |
 | [mohan-bee](#mohan-bee) | 0 | 3 | 1 | 8 | ⭐ |
 | [AnasSarkiz](#AnasSarkiz) | 1 | 1 | 2 | 8 | ⭐ |
-| [hrithik18k](#hrithik18k) | 0 | 2 | 1 | 5 | ⭐ |
+| [hrithik18k](#hrithik18k) | 0 | 3 | 1 | 7 | ⭐ |
 | [anil08607](#anil08607) | 0 | 1 | 1 | 3 |  |
 | [raykholo](#raykholo) | 0 | 0 | 1 | 1 |  |
 
@@ -110,7 +110,7 @@ pie
 | [Abse2001](#Abse2001) | 3 | 0 | 3 | 100.0% |
 | [techmannih](#techmannih) | 3 | 2 | 2 | 33.3% |
 | [trixie010](#trixie010) | 3 | 0 | 3 | 100.0% |
-| [0hmX](#0hmX) | 1 | 0 | 1 | 100.0% |
+| [0hmX](#0hmX) | 2 | 0 | 2 | 100.0% |
 | [hrithik18k](#hrithik18k) | 1 | 1 | 0 | 0.0% |
 | [mohan-bee](#mohan-bee) | 1 | 0 | 1 | 100.0% |
 | [raykholo](#raykholo) | 1 | 0 | 1 | 100.0% |
@@ -119,8 +119,8 @@ pie
 <details>
 <summary>imrishabh18 SPR PRs (12)</summary>
 
-- [#5390](https://github.com/tscircuit/cli/pull/5390) Route standalone imports through the baked asset server
 - [#5395](https://github.com/tscircuit/cli/pull/5395) Search baked datasheets in standalone
+- [#5390](https://github.com/tscircuit/cli/pull/5390) Route standalone imports through the baked asset server
 - [#5384](https://github.com/tscircuit/cli/pull/5384) Use embedded eval worker configuration for standalone dev
 - [#5388](https://github.com/tscircuit/cli/pull/5388) Block network fallbacks for standalone imports
 - [#5368](https://github.com/tscircuit/cli/pull/5368) Serve baked assets and expose parts-engine base URLs
@@ -187,9 +187,10 @@ pie
 </details>
 
 <details>
-<summary>0hmX SPR PRs (1)</summary>
+<summary>0hmX SPR PRs (2)</summary>
 
 - [#4529](https://github.com/tscircuit/core/pull/4529) fix: report disallowed blind/buried vias in manual paths
+- [#442](https://github.com/tscircuit/checks/pull/442) Repro: missed dead-end copper pour finger on a UART adapter
 
 </details>
 
@@ -233,44 +234,47 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [0hmX](#0hmX) | 3 | 1 | 1 | 2 | 0 | 12 | 5 | 0 |
+| [0hmX](#0hmX) | 18 | 2 | 1 | 2 | 0 | 18 | 5 | 0 |
 | [Abse2001](#Abse2001) | 4 | 3 | 0 | 15 | 0 | 20 | 7 | 0 |
 | [adamscarmccoy-boop](#adamscarmccoy-boop) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 3 | 3 | 0 | 0 | 0 | 4 | 4 | 0 |
-| [anil08607](#anil08607) | 5 | 3 | 1 | 0 | 0 | 5 | 2 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 3 | 3 | 0 | 0 | 0 | 6 | 4 | 0 |
+| [anil08607](#anil08607) | 9 | 4 | 3 | 0 | 0 | 9 | 2 | 0 |
 | [atani](#atani) | 24 | 0 | 0 | 0 | 0 | 16 | 0 | 0 |
 | [CloudCorpRecords](#CloudCorpRecords) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [CreedTech](#CreedTech) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [daniellachev](#daniellachev) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [deus-intus](#deus-intus) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Devesh36](#Devesh36) | 14 | 10 | 1 | 1 | 0 | 19 | 10 | 0 |
-| [duongynhi000005-oss](#duongynhi000005-oss) | 0 | 0 | 0 | 0 | 0 | 129 | 0 | 0 |
+| [duongynhi000005-oss](#duongynhi000005-oss) | 0 | 0 | 0 | 0 | 0 | 147 | 0 | 0 |
 | [elcuervo171234](#elcuervo171234) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [exantiv](#exantiv) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [GokulPandi-M](#GokulPandi-M) | 9 | 8 | 1 | 0 | 0 | 9 | 7 | 0 |
-| [hrithik18k](#hrithik18k) | 11 | 3 | 2 | 0 | 0 | 16 | 3 | 0 |
-| [imrishabh18](#imrishabh18) | 17 | 15 | 0 | 16 | 10 | 48 | 38 | 0 |
+| [GokulPandi-M](#GokulPandi-M) | 9 | 8 | 1 | 0 | 0 | 10 | 7 | 0 |
+| [hiyouwhatsapp](#hiyouwhatsapp) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
+| [hrithik18k](#hrithik18k) | 21 | 5 | 5 | 0 | 0 | 19 | 4 | 0 |
+| [imrishabh18](#imrishabh18) | 17 | 15 | 0 | 17 | 13 | 50 | 39 | 0 |
 | [jloa-dev](#jloa-dev) | 0 | 0 | 0 | 0 | 0 | 21 | 0 | 0 |
-| [KrishnaX12](#KrishnaX12) | 7 | 5 | 0 | 0 | 0 | 5 | 5 | 0 |
+| [KrishnaX12](#KrishnaX12) | 7 | 5 | 0 | 0 | 0 | 7 | 5 | 0 |
 | [LuisaW07](#LuisaW07) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [mohan-bee](#mohan-bee) | 5 | 3 | 1 | 1 | 0 | 29 | 4 | 0 |
 | [MustafaMulla29](#MustafaMulla29) | 15 | 11 | 1 | 12 | 0 | 29 | 25 | 0 |
 | [oziass](#oziass) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Pr1yansu](#Pr1yansu) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
 | [prajwal-0706](#prajwal-0706) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [proofline-studio](#proofline-studio) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Ratanlavate](#Ratanlavate) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [raykholo](#raykholo) | 2 | 2 | 0 | 0 | 0 | 12 | 2 | 0 |
+| [rjwalters](#rjwalters) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [robertomartinezconsultor](#robertomartinezconsultor) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [rushabhcodes](#rushabhcodes) | 45 | 17 | 0 | 1 | 0 | 17 | 12 | 0 |
 | [Sayandevxyz](#Sayandevxyz) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
 | [sebas8866](#sebas8866) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [seveibar](#seveibar) | 13 | 1 | 0 | 43 | 2 | 96 | 62 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 16 | 12 | 0 | 16 | 0 | 119 | 15 | 0 |
+| [seveibar](#seveibar) | 13 | 1 | 0 | 44 | 2 | 96 | 62 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 16 | 12 | 0 | 18 | 0 | 120 | 15 | 0 |
 | [smartcalsystems-sketch](#smartcalsystems-sketch) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
 | [tarazum](#tarazum) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [techmannih](#techmannih) | 19 | 8 | 1 | 3 | 0 | 20 | 11 | 0 |
-| [trixie010](#trixie010) | 9 | 5 | 3 | 0 | 0 | 6 | 3 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 527 | 411 | 0 |
+| [techmannih](#techmannih) | 19 | 8 | 1 | 3 | 2 | 21 | 11 | 0 |
+| [trixie010](#trixie010) | 9 | 5 | 3 | 0 | 0 | 7 | 3 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 542 | 423 | 0 |
 | [vreview](#vreview) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [WilliamxLeismer](#WilliamxLeismer) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 
@@ -297,11 +301,11 @@ pie
 | [#4571](https://github.com/tscircuit/core/pull/4571) | 🐙 Minor | ⭐⭐ | rushabhcodes | Fixes the issue where footprint keepouts do not move with their associated PCB components during layout, allowing copper to intrude into designated clearance areas. |
 | [#4570](https://github.com/tscircuit/core/pull/4570) | 🐙 Minor | ⭐⭐ | rushabhcodes | Fixes incorrect source trace assignments for routed traces on rotated SMT pads, resolving trace-continuity validation failures. |
 | [#4623](https://github.com/tscircuit/core/pull/4623) | 🐙 Minor | ⭐⭐ | Devesh36 | Fixes the issue where mounting slots do not rotate with the connector footprint in PCB designs, ensuring visual consistency in the layout. |
-| [#4694](https://github.com/tscircuit/core/pull/4694) | 🐙 Minor | ⭐⭐ | KrishnaX12 | Fixes false supplier-footprint mismatch warnings that occur after rotating components by adjusting the calculation of copper bounds without altering the emitted geometry. |
-| [#4378](https://github.com/tscircuit/core/pull/4378) | 🐙 Minor | ⭐⭐ | mohan-bee | Fixes the issue where a rectangular cutout does not rotate correctly with its footprint, ensuring alignment during board design. |
-| [#4377](https://github.com/tscircuit/core/pull/4377) | 🐙 Minor | ⭐⭐ | mohan-bee | Reproduces a bug where a rectangular cutout does not rotate with its footprint in a PCB design, ensuring the cutout aligns with the rotated pads. |
-| [#4652](https://github.com/tscircuit/core/pull/4652) | 🐙 Minor | ⭐⭐ | mohan-bee | Demonstrates that an exposed pad with noSolderPaste still receives solder paste, by adding a test and PCB snapshot showing paste on both pads, including the one marked no paste. |
 | [#4656](https://github.com/tscircuit/core/pull/4656) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes alignment of generated rounded board outlines with the resolved board center during rendering, preventing false outside-board errors. |
+| [#4694](https://github.com/tscircuit/core/pull/4694) | 🐙 Minor | ⭐⭐ | KrishnaX12 | Fixes false supplier-footprint mismatch warnings that occur after rotating components by adjusting the calculation of copper bounds without altering the emitted geometry. |
+| [#4652](https://github.com/tscircuit/core/pull/4652) | 🐙 Minor | ⭐⭐ | mohan-bee | Demonstrates that an exposed pad with noSolderPaste still receives solder paste, by adding a test and PCB snapshot showing paste on both pads, including the one marked no paste. |
+| [#4377](https://github.com/tscircuit/core/pull/4377) | 🐙 Minor | ⭐⭐ | mohan-bee | Reproduces a bug where a rectangular cutout does not rotate with its footprint in a PCB design, ensuring the cutout aligns with the rotated pads. |
+| [#4378](https://github.com/tscircuit/core/pull/4378) | 🐙 Minor | ⭐⭐ | mohan-bee | Fixes the issue where a rectangular cutout does not rotate correctly with its footprint, ensuring alignment during board design. |
 | [#4649](https://github.com/tscircuit/core/pull/4649) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Preserves required schematic branches and routes when removing redundant net-label wires, ensuring connectivity to fixed net labels without altering source-net connectivity. |
 | [#4648](https://github.com/tscircuit/core/pull/4648) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Reproduces the dangling EP trace below U_PDs explicit GND symbol in the PD sheet, preserving schematic symbols and connections without altering production behavior. |
 | [#4645](https://github.com/tscircuit/core/pull/4645) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Fixes the issue of extra built-in terminals being created when a custom symbol declares its own ports, preventing false unconnected-pin warnings. |
@@ -309,7 +313,7 @@ pie
 | [#4529](https://github.com/tscircuit/core/pull/4529) | 🐙 Minor | ⭐⭐ | 0hmX | Reports disallowed blind or buried vias in manual paths when the board disables them, preserving saved copper and aggregating all disallowed vias. |
 
 <details>
-<summary>🐌 Tiny Contributions (15)</summary>
+<summary>🐌 Tiny Contributions (16)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
@@ -323,9 +327,10 @@ pie
 | [#4682](https://github.com/tscircuit/core/pull/4682) | 🐌 Tiny | Devesh36 | Updates tscircuitfootprinter from 0.0.431 to 0.0.440, ensuring core uses the latest footprint definitions and fixes. |
 | [#4671](https://github.com/tscircuit/core/pull/4671) | 🐌 Tiny | Devesh36 | Fixes overlapping copper pads in the imported ESD5Z5.0T1G TVS footprint when using a 0.8 mm flex gap. |
 | [#4622](https://github.com/tscircuit/core/pull/4622) | 🐌 Tiny | Devesh36 | Reproduces a bug where LED silkscreen rectangles do not rotate with their corresponding pads when set at 45 degrees. |
+| [#4766](https://github.com/tscircuit/core/pull/4766) | 🐌 Tiny | imrishabh18 | Updates tscircuitcapacity-autorouter from 0.0.986 to the latest published version, 0.0.988, bringing in the QFP thermal-pad copper connectivity fix from tscircuit-autorouter3127, which fixes routing for bugreport109. |
+| [#4666](https://github.com/tscircuit/core/pull/4666) | 🐌 Tiny | imrishabh18 | Updates the tscircuitchecks dependency to version 0.0.256 and aligns existing fixtures with courtyard-aware boundary checks, including adjustments to board dimensions and validation of routing fixtures. |
 | [#4693](https://github.com/tscircuit/core/pull/4693) | 🐌 Tiny | KrishnaX12 | Fixes false footprint mismatch warnings for rotated components in the supplier footprint matching system. |
 | [#4653](https://github.com/tscircuit/core/pull/4653) | 🐌 Tiny | mohan-bee | Honors the noSolderPaste directive on exposed SMT pads in the design files. |
-| [#4666](https://github.com/tscircuit/core/pull/4666) | 🐌 Tiny | imrishabh18 | Updates the tscircuitchecks dependency to version 0.0.256 and aligns existing fixtures with courtyard-aware boundary checks, including adjustments to board dimensions and validation of routing fixtures. |
 | [#4644](https://github.com/tscircuit/core/pull/4644) | 🐌 Tiny | MustafaMulla29 | Fixes the issue where the custom DPDT symbol incorrectly inherits an extra phantom pin4, leading to missing trace warnings. |
 | [#4557](https://github.com/tscircuit/core/pull/4557) | 🐌 Tiny | GokulPandi-M | Fixes rendering issue where a female pinheader with an explicit footprint incorrectly renders male pins instead of female sockets in 3D. |
 
@@ -345,11 +350,13 @@ pie
 | [#5454](https://github.com/tscircuit/tscircuit.com/pull/5454) | 🐳 Major | ⭐⭐⭐ | seveibar | Displays each pins permanently connected contacts in the datasheet, makes them searchable, and includes internallyConnectedPins in the generated TSX component. |
 
 <details>
-<summary>🐌 Tiny Contributions (43)</summary>
+<summary>🐌 Tiny Contributions (45)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#5437](https://github.com/tscircuit/tscircuit.com/pull/5437) | 🐌 Tiny | seveibar | Removes the blue introduction label, the entire Downloads and versions section, and the closing local-project sentence, while adjusting typography for consistency. |
+| [#5482](https://github.com/tscircuit/tscircuit.com/pull/5482) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5481](https://github.com/tscircuit/tscircuit.com/pull/5481) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5480](https://github.com/tscircuit/tscircuit.com/pull/5480) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3010 to 0.0.3011 |
 | [#5479](https://github.com/tscircuit/tscircuit.com/pull/5479) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5477](https://github.com/tscircuit/tscircuit.com/pull/5477) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -415,27 +422,29 @@ pie
 | [#5218](https://github.com/tscircuit/cli/pull/5218) | 🐙 Minor | ⭐⭐ | GokulPandi-M | Fixes the issue where KiCad exports do not include hierarchical child schematic files, resulting in blank pages when attempting to open them. |
 
 <details>
-<summary>🐌 Tiny Contributions (62)</summary>
+<summary>🐌 Tiny Contributions (64)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#5443](https://github.com/tscircuit/cli/pull/5443) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5442](https://github.com/tscircuit/cli/pull/5442) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3011 to 0.0.3012 |
 | [#5440](https://github.com/tscircuit/cli/pull/5440) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5439](https://github.com/tscircuit/cli/pull/5439) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3010 to 0.0.3011 |
 | [#5438](https://github.com/tscircuit/cli/pull/5438) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5437](https://github.com/tscircuit/cli/pull/5437) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3009 to 0.0.3010 |
-| [#5436](https://github.com/tscircuit/cli/pull/5436) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5435](https://github.com/tscircuit/cli/pull/5435) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3008 to 0.0.3009 |
 | [#5434](https://github.com/tscircuit/cli/pull/5434) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5432](https://github.com/tscircuit/cli/pull/5432) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5431](https://github.com/tscircuit/cli/pull/5431) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3007 to 0.0.3008 |
 | [#5429](https://github.com/tscircuit/cli/pull/5429) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5428](https://github.com/tscircuit/cli/pull/5428) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3006 to 0.0.3007 |
 | [#5427](https://github.com/tscircuit/cli/pull/5427) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5426](https://github.com/tscircuit/cli/pull/5426) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3005 to 0.0.3006 |
 | [#5423](https://github.com/tscircuit/cli/pull/5423) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5422](https://github.com/tscircuit/cli/pull/5422) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3004 to 0.0.3005 |
 | [#5421](https://github.com/tscircuit/cli/pull/5421) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5420](https://github.com/tscircuit/cli/pull/5420) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3003 to 0.0.3004 |
+| [#5436](https://github.com/tscircuit/cli/pull/5436) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5428](https://github.com/tscircuit/cli/pull/5428) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3006 to 0.0.3007 |
 | [#5399](https://github.com/tscircuit/cli/pull/5399) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package version from 0.0.2997 to 0.0.2999 in package.json |
 | [#5412](https://github.com/tscircuit/cli/pull/5412) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3002 to 0.0.3003 |
 | [#5404](https://github.com/tscircuit/cli/pull/5404) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitrunframe package from 0.0.3000 to 0.0.3001 in package.json |
@@ -490,9 +499,9 @@ pie
 |------|--------|--------|-------------|-------------|
 | [#3114](https://github.com/tscircuit/tscircuit-autorouter/pull/3114) | 🐳 Major | ⭐⭐⭐ | seveibar | Run bounded regional repair before the broad exactB01 portfolio on boards without preloaded copper, achieving a 3.96 local speedup while maintaining zero-issue reference DRC results. |
 | [#2998](https://github.com/tscircuit/tscircuit-autorouter/pull/2998) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds a post-repair cleanup stage that commits only valid improvements and preserves route endpoints while reducing via counts in autorouting. |
+| [#3127](https://github.com/tscircuit/tscircuit-autorouter/pull/3127) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Fixes copper connectivity issues for QFP thermal pads, ensuring proper routing and obstacle handling in autorouting. |
 | [#3054](https://github.com/tscircuit/tscircuit-autorouter/pull/3054) | 🐳 Major | ⭐⭐⭐ | techmannih | Fixes autorouting failure when routing around unconnected rotated keepouts by ensuring proper clearance is maintained without increasing approximation rectangle count. |
 | [#3098](https://github.com/tscircuit/tscircuit-autorouter/pull/3098) | 🐳 Major | ⭐⭐⭐ | techmannih | Applies the approved rotated keepout fix from 3054 to main, preventing Pipeline9 from routing through uncovered portions of an unconnected rotated keepout. |
-| [#3127](https://github.com/tscircuit/tscircuit-autorouter/pull/3127) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Fixes copper connectivity issues for QFP thermal pads, ensuring proper routing and obstacle handling in autorouting. |
 | [#3126](https://github.com/tscircuit/tscircuit-autorouter/pull/3126) | 🐙 Minor | ⭐⭐ | seveibar | Adds the ability to specify the number of routing threads per sample for Pipeline9 in the benchmarking process, allowing for improved concurrency and resource management during routing tasks. |
 
 <details>
@@ -512,8 +521,8 @@ pie
 | [#3069](https://github.com/tscircuit/tscircuit-autorouter/pull/3069) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#3062](https://github.com/tscircuit/tscircuit-autorouter/pull/3062) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#3057](https://github.com/tscircuit/tscircuit-autorouter/pull/3057) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3055](https://github.com/tscircuit/tscircuit-autorouter/pull/3055) | 🐌 Tiny | techmannih | Reproduces a bug where Pipeline9 incorrectly routes traces through a rotated keepout area, adding tests and fixtures to validate the issue without changing production code. |
 | [#3088](https://github.com/tscircuit/tscircuit-autorouter/pull/3088) | 🐌 Tiny | imrishabh18 | Add bugreport109-book-reading-clip-lamp for the full placements-only book reading clip lamp 0.4.3(https:tscircuit.commusebook-reading-clip-lampfiles). Placements, connections and board rules are preserved; existing copper is removed. The number follows the packages bug-report script: highest existing number (108) plus one. The directory contains the matching .fixture.tsx and .srj.json files. There is no provenance file. Start the debugger with bun run start, then select bug-reports  bugreport109-book-reading-clip-lamp. One test attempts the entire circuit at effort 1 with caching disabled and saves a single native pipeline snapshot. Current Pipeline 9 stops at the static reachability precheck for source_net_0_mst26 (U5 EP  GND1), before detailed routing. The test asserts that existing failure. No solver changes. !Full-circuit Pipeline 9 routing attempt(https:raw.githubusercontent.comtscircuittscircuit-autorouterf3bf5bc4e944523437d470100800994b2a3ed88dtestsbugs__snapshots__bugreport109-book-reading-clip-lamp.snap.svg) Validation: renamed test passes against the existing snapshot; type check and full format check pass. sh bun test --timeout 9999999 testsbugsbugreport109-book-reading-clip-lamp.test.ts |
+| [#3055](https://github.com/tscircuit/tscircuit-autorouter/pull/3055) | 🐌 Tiny | techmannih | Reproduces a bug where Pipeline9 incorrectly routes traces through a rotated keepout area, adding tests and fixtures to validate the issue without changing production code. |
 
 </details>
 
@@ -572,11 +581,11 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#33](https://github.com/tscircuit/motorcontrol/pull/33) | 🐳 Major | ⭐⭐⭐ | seveibar | The earlier NEMA17 current-pattern indicator used one 500 ms harmonic model and often missed fixture-confirmed stalls at other speeds. Replace it with a speed-conditioned, six-feature model trained from 24 user-labelled recordings. Feature windows are 100 ms at 60100 full stepssec, 400 ms at 25, and 800 ms at 12.5. Thresholds reject the free-running envelope instead of using a class midpoint. Expose explicit freesuspecteduncertain states, keep the unreliable low-speed profile uncertain, and flag interpolation, unfamiliar current patterns and temperatures outside the recorded range. Unsupported speedsvoltage requests return unknown. This remains observational and never controls motion or power. Evaluate every 50 ms and emit lightweight motion telemetry every 100 ms. Trainingexport tools, dataset fingerprint and nested whole-trial validation results are checked in. Retrospective outer-fold worst window error was 61.5, 10, 0, and 8.6 at 12.52560100 respectively; these are small-data development estimates, not universal accuracy claims or a new blind test. Validation: native tests replay eight recorded waveform windows and verify featurescore parity, timing, uncertaintydomain gates, gaps and trace retention; host comparison matches all 24 final-model cases. Dashboard tests and all 45 Python tests pass. RP2040 build succeeds. Firmware 1.0.13 was flashed and re-identified on the target NEMA17; bounded commanded-motion checks verify pulse counts and no dropped samples. A fresh fixture-confirmed stall validation is still needed beyond the recorded data. |
+| [#25](https://github.com/tscircuit/motorcontrol/pull/25) | 🐳 Major | ⭐⭐⭐ | seveibar | NEMA23 runtime interlock and driver reports previously latched off firmware and independently stopped browser jogging. Add a report-only default and an explicit Stop on detected stall  electrical fault checkbox, off after reboot. Both firmware and browser honor the policy. Hardware interlocks and driver protection still act independently; the UI warns when shaft motion is inhibited and labels positions as commanded. Observe the DRV8452 sensorless torque counter by default, with a configurable software threshold, startupsteady-motion warmup, invalid-data exclusion and 200 ms persistence. Stall indication does not drive nFAULT and causes no software stop unless the optional policy is enabled. Show stall suspected as an uncalibrated indication, with unknown states for shortstoppedstartupfault conditions. Add a torque-count plot sharing the currenttemperature time window. Thermal, sensor, communication and SPI configuration shutdown behavior remains independent. Validation: native defaultopt-in policy, stall debouncerecoveryinvalid-data and protection regressions; all dashboard tests including browser policy, stall controls and chart gaps; 45 Python tests; local NEMA23 UF2 build. Physical shaft-stall accuracy is not yet calibrated. Firmware version: 1.0.6. Connected-board verification: report-only full-scaleinterlock test completed all 160 commanded pulses while recording hardware inhibition, with no firmware latch. The same interlock test with stopping enabled latched off after 49 pulses. At 1 A, forwardreverse commands completed 640 pulses each, and a longer run yielded live torque counts of 1226. FNB58 input-voltagecurrent packets were CRC-validated throughout. These are commandsensor checks, not calibrated physical stall detection. The live stall-notification path was also checked with a deliberately high temporary threshold (4095), without inducing a physical shaft stall: reporting-only emitted stall suspected and completed all 1280 requested pulses; opt-in stopping latched on the indication after 608 pulses. Threshold 3, stop mode off, the users 3 A setting and disabled motor power were restored afterward. This validates notificationpolicy integration, not physical-stall classification accuracy. |
 | [#36](https://github.com/tscircuit/motorcontrol/pull/36) | 🐳 Major | ⭐⭐⭐ | seveibar | Changes Add saved stall sensitivity and Run Stall-based Homing on the single-axis, XY, and general motor pages. The sensitivity slider moves the current-score threshold used by the graph, warning and homing detector. NEMA23 retains its torque-threshold control. Homing seeks both ends, verifies release during each backoff, applies a conservative contactdetector allowance, saves the usable travel range, and returns to zero. Each leg has a finite travel ceiling and timeout. Stop, USBheartbeat loss and faults abort. Two connected axes run sequentially, and a failed axis cancels the batch. The firmware reserves queued STEP pulses against the saved bounds, rejects out-of-range finite moves and clips joggingbraking at the boundary. Reboot preserves bounds but requires a fresh home; homing changes the coordinate session so old saved positions cannot be reused.  Validation Native tests: two-contact state machine, clear-stall requirement, no-contacttimeoutcancel paths, settings migrationpersistence, both travel bounds and queued-pulse reservations. Dashboard tests: sensitivity commands, singleXY homing, sequential execution, cancellation, connectionpower failures. Existing nativedashboard suites and 45 Python tests pass. Local ARM builds pass for all three board profiles. Physical end-stop homing has not been run: mechanism suitability is awaiting operator confirmation. These are inferred commanded-step bounds, not encoder-backed travel protection. |
 | [#34](https://github.com/tscircuit/motorcontrol/pull/34) | 🐳 Major | ⭐⭐⭐ | seveibar | Changes Add persistent Stall beeping on and Stall time until auto stop settings to the controller and all motor-control pages. Beeping defaults on; auto-stop defaults off (0 seconds). A detected stall produces three rapid 1800 Hz chirps, distinct from the higher-pitched overheat alarm, which retains priority. A configured timeout stops only after a continuous valid stall detection. Free, uncertain, stale, stopped, and unknown states reset the timer. NEMA17 uses its experimental current estimator and NEMA23 uses valid torque stall detection; unsupported DRV8847 boards do not expose the controls. Existing temperature and USB-name settings migrate without being reset.  Validation Native host suite including protocol validation, actual stop behavior, alarm priority, settings migrationpersistence, timeout reset, disabled timeout, and chirp cadence. All dashboard tests and 45 Python tests pass. RP2040 builds for all three board profiles. The NEMA17 detector remains experimental; timing follows its reported stall state and does not supply independent shaft feedback. |
-| [#33](https://github.com/tscircuit/motorcontrol/pull/33) | 🐳 Major | ⭐⭐⭐ | seveibar | The earlier NEMA17 current-pattern indicator used one 500 ms harmonic model and often missed fixture-confirmed stalls at other speeds. Replace it with a speed-conditioned, six-feature model trained from 24 user-labelled recordings. Feature windows are 100 ms at 60100 full stepssec, 400 ms at 25, and 800 ms at 12.5. Thresholds reject the free-running envelope instead of using a class midpoint. Expose explicit freesuspecteduncertain states, keep the unreliable low-speed profile uncertain, and flag interpolation, unfamiliar current patterns and temperatures outside the recorded range. Unsupported speedsvoltage requests return unknown. This remains observational and never controls motion or power. Evaluate every 50 ms and emit lightweight motion telemetry every 100 ms. Trainingexport tools, dataset fingerprint and nested whole-trial validation results are checked in. Retrospective outer-fold worst window error was 61.5, 10, 0, and 8.6 at 12.52560100 respectively; these are small-data development estimates, not universal accuracy claims or a new blind test. Validation: native tests replay eight recorded waveform windows and verify featurescore parity, timing, uncertaintydomain gates, gaps and trace retention; host comparison matches all 24 final-model cases. Dashboard tests and all 45 Python tests pass. RP2040 build succeeds. Firmware 1.0.13 was flashed and re-identified on the target NEMA17; bounded commanded-motion checks verify pulse counts and no dropped samples. A fresh fixture-confirmed stall validation is still needed beyond the recorded data. |
 | [#31](https://github.com/tscircuit/motorcontrol/pull/31) | 🐳 Major | ⭐⭐⭐ | seveibar | Move the NEMA17 current-pattern estimator into firmware so USB drops no longer determine its input. Consume the 100 kHz-per-winding ADC stream with an independent cursor, extract 1 kHz waveform features in bounded chunks, and report score, extrapolation status, sample losses, raw ripple RMS and processing time. No estimator result controls motion or power. Normalize logical step modes to physical full-step frequency. Other voltage requests, directions, speeds and temperature conditions produce explicitly unvalidated extrapolations; missing current, faults, insufficient cycles or bandwidth report unknown. The supported feature range is 4320 full stepssec. The dashboard prefers firmware scores and retains the browser estimator for older firmware. Waveform export is now opt-in for this target; default USB traffic contains scores and ordinary telemetry. Optional export uses peak-preserving 10 ms summaries. Firmware 1.0.11. Validation: recorded freestalled waveform tests; logical-resolution, gap, stoppedfault and extrapolation tests; dashboard and Python suites; native firmware builds. Connected-board tests covered all five logical step modes, reverse direction, alternative voltage requests and low speed. Final default-mode runs at 60 and 4 full stepssec analyzed approximately 100,000 samplessec, reported no analysis drops or pulse underruns, and completed commanded pulse counts. Optional waveform export can reduce availability of long uninterrupted windows; 15 V requested produced insufficient winding current to estimate on this setup. |
-| [#25](https://github.com/tscircuit/motorcontrol/pull/25) | 🐳 Major | ⭐⭐⭐ | seveibar | NEMA23 runtime interlock and driver reports previously latched off firmware and independently stopped browser jogging. Add a report-only default and an explicit Stop on detected stall  electrical fault checkbox, off after reboot. Both firmware and browser honor the policy. Hardware interlocks and driver protection still act independently; the UI warns when shaft motion is inhibited and labels positions as commanded. Observe the DRV8452 sensorless torque counter by default, with a configurable software threshold, startupsteady-motion warmup, invalid-data exclusion and 200 ms persistence. Stall indication does not drive nFAULT and causes no software stop unless the optional policy is enabled. Show stall suspected as an uncalibrated indication, with unknown states for shortstoppedstartupfault conditions. Add a torque-count plot sharing the currenttemperature time window. Thermal, sensor, communication and SPI configuration shutdown behavior remains independent. Validation: native defaultopt-in policy, stall debouncerecoveryinvalid-data and protection regressions; all dashboard tests including browser policy, stall controls and chart gaps; 45 Python tests; local NEMA23 UF2 build. Physical shaft-stall accuracy is not yet calibrated. Firmware version: 1.0.6. Connected-board verification: report-only full-scaleinterlock test completed all 160 commanded pulses while recording hardware inhibition, with no firmware latch. The same interlock test with stopping enabled latched off after 49 pulses. At 1 A, forwardreverse commands completed 640 pulses each, and a longer run yielded live torque counts of 1226. FNB58 input-voltagecurrent packets were CRC-validated throughout. These are commandsensor checks, not calibrated physical stall detection. The live stall-notification path was also checked with a deliberately high temporary threshold (4095), without inducing a physical shaft stall: reporting-only emitted stall suspected and completed all 1280 requested pulses; opt-in stopping latched on the indication after 608 pulses. Threshold 3, stop mode off, the users 3 A setting and disabled motor power were restored afterward. This validates notificationpolicy integration, not physical-stall classification accuracy. |
 | [#17](https://github.com/tscircuit/motorcontrol/pull/17) | 🐳 Major | ⭐⭐⭐ | seveibar | The published NEMA23 1.3.2 board has a different driver, GPIO map, current scale and power interlocks from the DRV8825 controller. Add a separate MOTOR_BOARDnema23_drv8452 native C target and matching controls on the bench, single-motor and gantry pages. This PR is based on 16s current-capture work. The profile uses the published STEPDIRSPIRGBbuzzer wiring, nominal 0.2 VA current sensing, a conservative 1 A peak current default and a verified fixed 116 driver configuration. Both regular telemetry and high-rate graph frames use the boards current scale. Driver SPI is checked with ARM low before motion; fault clearing is limited to explicit power arming. Sensorless stall detection and the DNP encoder are not enabled. POWER_ARMARMWAKEbuffer enable boot low. Voltage changes isolate and discharge the rail for 12 seconds, then require fresh PD communicationprotocolcurrent checks. PG is ignored by default so a deasserted signal cannot prevent the first software voltage request. The UI exposes optional strict PG gating, and changing it disarms the rail. Raw PG telemetry remains separate from the override and measured voltage remains unavailable. Power needs explicit arming below 55C; 60C folds current back and 70C or sensoreFusedriverSPI failure latches off the rail. HeartbeatUSB loss disarms. The buffer is disabled after disarm, communication failure or any latched fault. Validation: Both ARM targets built; UBSan motionprotocolsettingscurrent and new production NEMA23 parserpowerSPI tests passed. All 45 Python regressions and dashboardjogpositionssongcurrent-graphcontrol tests passed. CI builds both board profiles and runs ASanUBSan. Flashed two physical NEMA23 controllers. The second (e6658c344b0a562a) is connected to a motor and reported healthy temperaturecurrent sensing, approximately 100k ADC samplessec per winding, a 1 A peak default, and disabled motorpower rail. Driver-disabled PIO tests emitted exact counts at 1k64k200k settings with zero queue underruns while current data streamed. With PG ignored, the second board completed a 15 V request and reported a 3 A PD contract. Protected-rail and SPI readback checks passed. At a 1 A peak limit it completed ten full steps forward and ten back (18 commanded each way) at 20 full stepssec, with 160 counted pulses each direction and about 0.7 A measured in an energized winding. The user confirmed seeing forwardreverse motion. Test ended stopped and disarmed. Actual rail voltage, calibrated current and loaded positional accuracy remain unmeasured. Matching UI deployed to https:motorcontrol.tscircuit.com; explicit armcurrent controls preserve legacy board behavior. |
 | [#13](https://github.com/tscircuit/motorcontrol/pull/13) | 🐳 Major | ⭐⭐⭐ | seveibar | The latest RP2040 motor controller uses DRV8825 STEPDIR, transistor-driven RGB outputs, winding-current ADC inputs and GPIO-controlled CH224K voltage selection. The firmware and dashboard, single-motor jog and gantry pages now support that board while retaining the original DRV8847 profile. Startup keeps the motor disabled at 5 V. Voltage changes disable the driver and enforce a settling interval; temperature, heartbeat, watchdog and driver-fault protection remain active. Automatic RGB status and manual colors are available, with alarms taking priority. The hardware fixes 116 microsteps; larger selected increments group pulses and saved-position GOTO uses the finest supported increment. Validation: 45 Python tests and all dashboardjogGOTOsong checks pass; CI stages both board profiles. On board e66568714f117e21, all 21 uploaded files matched SHA-256. Live Web Serial controls applied RGB settings and the user confirmed LED operation. With the replacement charger and an explicit 9 V request, two 800-microstep forwardreverse moves completed with exact commanded counts, about 0.87 A peak absolute winding samples and no reported faults; the user confirmed the motor spun. Temperature stayed around 28 C and the motor was stopped afterward. Use 9 V with the tested charger. A 15 V request yielded a measured 9 V input and no movement; the actual PG behavior was not measured. Voltage telemetry represents the request and settling timer, not measured rail voltage. Current samples are uncalibrated, and high-speedloadphysical return accuracy remain unverified. |
 | [#15](https://github.com/tscircuit/motorcontrol/pull/15) | 🐳 Major | ⭐⭐⭐ | seveibar | DRV8825 controllers currently generate STEP edges in MicroPython, so higher requested speeds can exceed the interpreters pulse throughput. Add a native Pico SDK C application that generates pulses in PIO and counts emitted edges with a separate PIO state machine and DMA. The application retains protocol 3, the existing dashboardgantry commands, 400 ms ramps, deferred GOTO starts, RGBUSB-PD controls, alarms, songs, and temperaturedriverheartbeatwatchdog protections. Native settings use two reserved flash sectors with checksum and partial-write recovery. A build fingerprint identifies the image on live boards. The legacy DRV8847 MicroPython implementation remains available; this native image targets the DRV8825RGB PCB. Validation: Cross-built the UF2 with Pico SDK 2.3.1; native motion, protocolprotection, and settings tests passed with UBSan. Existing 45 Python tests and dashboard, song, single-motor, gantry, and saved-position checks passed. Flashed both physical controllers and checked their build fingerprints. Driver-disabled electrical tests emitted exact requested counts at 1k, 64k, 128k, and 200k physical pulsessec with zero PIO queue underruns. At the 200k setting, observed throughput was approximately 199.7k pulsessec on both boards. Verified heartbeat expiry and USB disconnect stop pulse generation, heartbeats do not resume it, settings survive restart, and restarts return to disabled 5 V with fresh position sessions. No shaft movement or loaded mechanical performance was tested. Independent pulse-widthjitter measurement, loaded torque, and physical positional accuracy remain unverified. CI adds host native tests and an ARM UF2 build. |
@@ -623,8 +632,8 @@ pie
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#938](https://github.com/tscircuit/props/pull/938) | 🐙 Minor | ⭐⭐ | seveibar | Adds noSolderPaste?: boolean to the TypeScript interfaces and Zod schemas for every smtpad shape: rect, rotated rect, circle, pill, rotated pill, and polygon, allowing TSX authors to express testprobe pads with exposed copper and no solder paste. |
-| [#942](https://github.com/tscircuit/props/pull/942) | 🐙 Minor | ⭐⭐ | Abse2001 | Adds optional fit modes and viewbox bounds to symbol properties, allowing for better control over symbol sizing and proportions. |
 | [#943](https://github.com/tscircuit/props/pull/943) | 🐙 Minor | ⭐⭐ | Abse2001 | Adds optional custom-symbol fit modes and viewbox properties for improved symbol rendering in local coordinate space. |
+| [#942](https://github.com/tscircuit/props/pull/942) | 🐙 Minor | ⭐⭐ | Abse2001 | Adds optional fit modes and viewbox bounds to symbol properties, allowing for better control over symbol sizing and proportions. |
 
 ### [tscircuit/internal-dynamic-import](https://github.com/tscircuit/internal-dynamic-import)
 
@@ -648,6 +657,7 @@ pie
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#48](https://github.com/tscircuit/circuit-json-webgpu/pull/48) | 🐙 Minor | ⭐⭐ | seveibar | Fixes repeated diagnostics for unsupported PCB elements by recognizing and skipping mechanical elements like pcb_bend and pcb_stiffener in the 2D view. |
+| [#49](https://github.com/tscircuit/circuit-json-webgpu/pull/49) | 🐙 Minor | ⭐⭐ | hrithik18k | Fixes rendering issues with polygon-pad plated holes by translating pad outlines into board coordinates and reusing existing copper, soldermask, and drill passes, ensuring drill offsets are maintained correctly. |
 | [#46](https://github.com/tscircuit/circuit-json-webgpu/pull/46) | 🐙 Minor | ⭐⭐ | anil08607 | Sets the default copper pour opacity to 50 to match circuit-to-canvas and circuit-to-svgs topbottom appearance, preserving explicit opacity overrides and opaque X-Ray selections. |
 
 <details>
@@ -655,8 +665,8 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#54](https://github.com/tscircuit/circuit-json-webgpu/pull/54) | 🐌 Tiny | imrishabh18 | Removes tracking of all generated distribution files in the repository, ensuring that they are ignored by Git. |
 | [#52](https://github.com/tscircuit/circuit-json-webgpu/pull/52) | 🐌 Tiny | imrishabh18 | Remove the generated distindex.js bundle from version control and ignore that path so future builds do not add it back. The existing release workflow builds before publishing, and files: dist includes the generated bundle in published packages. Fix existing CI blockers in the base revision: Remove duplicate Resvg and convertCircuitJsonToPcbSvg imports from testsvisual.ts. Align the unit and browser bend tests with the renderers existing treatment of pcb_bend as mechanical metadata. The unit test compares the full board meshes with and without bend metadata; browser pixel and snapshot checks remain in place. Validation on 5873575: Renderer CI passes(https:github.comtscircuitcircuit-json-webgpuactionsruns39049840535): type checking, 89 unit tests, distribution build, 24 visual snapshots, all 597 feature snapshots, and layout checks. Parity CI passes(https:github.comtscircuitcircuit-json-webgpuactionsruns39049840217): zero regressions across 597 comparisons against the base revision. Vercel preview deployment passes. git check-ignore confirms the bundle is ignored. |
+| [#54](https://github.com/tscircuit/circuit-json-webgpu/pull/54) | 🐌 Tiny | imrishabh18 | Removes tracking of all generated distribution files in the repository, ensuring that they are ignored by Git. |
 | [#43](https://github.com/tscircuit/circuit-json-webgpu/pull/43) | 🐌 Tiny | anil08607 | Reproduces unsupported-element diagnostics for two PCB bend elements that do not render centerlines in WebGPU. |
 
 </details>
@@ -744,24 +754,26 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (144)</summary>
+<summary>🐌 Tiny Contributions (148)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#5793](https://github.com/tscircuit/tscircuit/pull/5793) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5792](https://github.com/tscircuit/tscircuit/pull/5792) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package version from 0.1.2363 to 0.1.2364 |
+| [#5791](https://github.com/tscircuit/tscircuit/pull/5791) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5790](https://github.com/tscircuit/tscircuit/pull/5790) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5784](https://github.com/tscircuit/tscircuit/pull/5784) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package version from 0.1.2361 to 0.1.2362 in package.json |
+| [#5780](https://github.com/tscircuit/tscircuit/pull/5780) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitcli package from 0.1.2360 to 0.1.2361 and the tscircuitcore package from 0.0.2170 to 0.0.2171, along with the tscircuitprops package from 0.0.703 to 0.0.704. |
 | [#5789](https://github.com/tscircuit/tscircuit/pull/5789) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5788](https://github.com/tscircuit/tscircuit/pull/5788) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package to version 0.1.2363 |
-| [#5787](https://github.com/tscircuit/tscircuit/pull/5787) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5786](https://github.com/tscircuit/tscircuit/pull/5786) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5785](https://github.com/tscircuit/tscircuit/pull/5785) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5784](https://github.com/tscircuit/tscircuit/pull/5784) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package version from 0.1.2361 to 0.1.2362 in package.json |
 | [#5783](https://github.com/tscircuit/tscircuit/pull/5783) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5782](https://github.com/tscircuit/tscircuit/pull/5782) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5781](https://github.com/tscircuit/tscircuit/pull/5781) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5780](https://github.com/tscircuit/tscircuit/pull/5780) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitcli package from 0.1.2360 to 0.1.2361 and the tscircuitcore package from 0.0.2170 to 0.0.2171, along with the tscircuitprops package from 0.0.703 to 0.0.704. |
 | [#5779](https://github.com/tscircuit/tscircuit/pull/5779) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5778](https://github.com/tscircuit/tscircuit/pull/5778) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5777](https://github.com/tscircuit/tscircuit/pull/5777) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5776](https://github.com/tscircuit/tscircuit/pull/5776) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package to version 0.1.2360 |
 | [#5775](https://github.com/tscircuit/tscircuit/pull/5775) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5774](https://github.com/tscircuit/tscircuit/pull/5774) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5773](https://github.com/tscircuit/tscircuit/pull/5773) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -784,6 +796,8 @@ pie
 | [#5755](https://github.com/tscircuit/tscircuit/pull/5755) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package version from 0.1.2354 to 0.1.2355 in package.json |
 | [#5754](https://github.com/tscircuit/tscircuit/pull/5754) | 🐌 Tiny | tscircuitbot | Updates the package version from 0.0.2922 to 0.0.2923 in package.json |
 | [#5753](https://github.com/tscircuit/tscircuit/pull/5753) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5776](https://github.com/tscircuit/tscircuit/pull/5776) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package to version 0.1.2360 |
+| [#5787](https://github.com/tscircuit/tscircuit/pull/5787) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5744](https://github.com/tscircuit/tscircuit/pull/5744) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5742](https://github.com/tscircuit/tscircuit/pull/5742) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5741](https://github.com/tscircuit/tscircuit/pull/5741) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -902,10 +916,12 @@ pie
 | [#5252](https://github.com/tscircuit/eval/pull/5252) | 🐙 Minor | ⭐⭐ | imrishabh18 | Allows CircuitRunner and createCircuitWebWorker to pass serializable jlcSearchBaseUrl and datasheetApiBaseUrl options into the default parts engine, preserving custom engines and EasyEDA proxy configuration, while updating the parts-engine dependency to 0.0.39. |
 
 <details>
-<summary>🐌 Tiny Contributions (48)</summary>
+<summary>🐌 Tiny Contributions (50)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#5307](https://github.com/tscircuit/eval/pull/5307) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5306](https://github.com/tscircuit/eval/pull/5306) | 🐌 Tiny | tscircuitbot | Updates the version of tscircuitcore from 0.0.2170 to 0.0.2171 and tscircuitprops from 0.0.703 to 0.0.704 in package.json |
 | [#5304](https://github.com/tscircuit/eval/pull/5304) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5302](https://github.com/tscircuit/eval/pull/5302) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5300](https://github.com/tscircuit/eval/pull/5300) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -961,10 +977,12 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (64)</summary>
+<summary>🐌 Tiny Contributions (66)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#5787](https://github.com/tscircuit/runframe/pull/5787) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5786](https://github.com/tscircuit/runframe/pull/5786) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1631 to 0.0.1632 |
 | [#5785](https://github.com/tscircuit/runframe/pull/5785) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5784](https://github.com/tscircuit/runframe/pull/5784) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5783](https://github.com/tscircuit/runframe/pull/5783) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -976,11 +994,11 @@ pie
 | [#5777](https://github.com/tscircuit/runframe/pull/5777) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5776](https://github.com/tscircuit/runframe/pull/5776) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1629 to 0.0.1630 |
 | [#5775](https://github.com/tscircuit/runframe/pull/5775) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5773](https://github.com/tscircuit/runframe/pull/5773) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1628 to 0.0.1629 in the package.json file. |
 | [#5771](https://github.com/tscircuit/runframe/pull/5771) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5770](https://github.com/tscircuit/runframe/pull/5770) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1627 to 0.0.1628 |
 | [#5769](https://github.com/tscircuit/runframe/pull/5769) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5768](https://github.com/tscircuit/runframe/pull/5768) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1626 to 0.0.1627 |
+| [#5773](https://github.com/tscircuit/runframe/pull/5773) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1628 to 0.0.1629 in the package.json file. |
 | [#5767](https://github.com/tscircuit/runframe/pull/5767) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5766](https://github.com/tscircuit/runframe/pull/5766) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1625 to 0.0.1626 |
 | [#5764](https://github.com/tscircuit/runframe/pull/5764) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -1096,8 +1114,8 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#158](https://github.com/tscircuit/circuit-json-to-step/pull/158) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#157](https://github.com/tscircuit/circuit-json-to-step/pull/157) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#156](https://github.com/tscircuit/circuit-json-to-step/pull/156) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#157](https://github.com/tscircuit/circuit-json-to-step/pull/157) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#143](https://github.com/tscircuit/circuit-json-to-step/pull/143) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#151](https://github.com/tscircuit/circuit-json-to-step/pull/151) | 🐌 Tiny | Devesh36 | Fixes the issue where imported STEP models do not respect CAD color overrides, resulting in incorrect color exports. |
 
@@ -1222,6 +1240,45 @@ pie
 
 </details>
 
+### [tscircuit/models.tscircuit.com](https://github.com/tscircuit/models.tscircuit.com)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#12](https://github.com/tscircuit/models.tscircuit.com/pull/12) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Required compatibility changes for 11: replace removed enum parameters with the current boolean selectors, preserve legacy hex-bolt links, and regenerate catalogssource pins for ModelPrinter 0.0.35. Includes NEMA23 rear-spacing and arc controls. This PR is stacked on 11 so that 11 stays limited to package versions and the lockfile. Validation: all 239 unit tests, 16 production browser tests, type checking, and the production build passed locally. CI checks the combined changes. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#11](https://github.com/tscircuit/models.tscircuit.com/pull/11) | 🐌 Tiny | imrishabh18 | Update tscircuitmodelprinter to 0.0.35 and jscad-electronics to 0.0.238, including the merged NEMA23 model correction. Update the lockfile for frozen installs. Required site API compatibility is isolated in 12. Its CI validates both changes together. |
+
+</details>
+
+### [tscircuit/jscad-electronics](https://github.com/tscircuit/jscad-electronics)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#503](https://github.com/tscircuit/jscad-electronics/pull/503) | 🐌 Tiny | imrishabh18 | Aligns the NEMA23 motor body with a newly designed curved rear cap, ensuring a flush fit without side overhang, while maintaining existing front features and improving rear mounting options. |
+
+</details>
+
+### [tscircuit/modelprinter](https://github.com/tscircuit/modelprinter)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#119](https://github.com/tscircuit/modelprinter/pull/119) | 🐌 Tiny | imrishabh18 | Aligns the NEMA23 rear cap with a new curved design and rectangular rear pattern, ensuring proper fit and validation against existing dimensions. |
+
+</details>
+
 ### [tscircuit/copper-pour-solver](https://github.com/tscircuit/copper-pour-solver)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -1272,45 +1329,6 @@ pie
 |------|--------|-------------|-------------|
 | [#18](https://github.com/tscircuit/dataset-srj24/pull/18) | 🐌 Tiny | techmannih | Motivation: Refresh all six TI Altium samples (sample021sample026) from their SHA-256-pinned sources using released converter updates, so the saved routing inputs reflect the boards declared routing constraints. Actual: The stored samples use altium-to-circuit-json 0.0.75. Their SRJs default to a 0.1 mm minimum trace width, omit source via padhole diameter limits, and disable blindburied vias for every board. The saved Circuit JSON also lacks the CAD bodies preserved by the newer importer. Expected  fix: Pin altium-to-circuit-json 0.0.106, altiumts 0.0.94, core 0.0.2165, Circuit JSON 0.0.528, and circuit-to-svg 0.0.450, then regenerate all six Circuit JSON files, SRJs, and comparison SVGs. The generator uses the public byte-input conversion API so parser objects do not cross different installed altiumts instances. Update the six README connection counts. The regenerated SRJs retain the sources 0.1524 mm minimum trace width and board-specific via dimensions; sample023 and sample024 now allow blindburied vias. Source hashes, obstacle geometry, connection counts, and endpoint definitions are unchanged across all six boards. The refreshed Circuit JSON adds 1,899 CAD component records and nine fabrication-note paths. Validation: Generate all six boards with bun run generate:ti --source-root verified-source-root; every source hash and generated Circuit JSON element passes validation. bun run test: 26 samples and 858 through-hole obstacles validated. bun run build: passes. All six regenerated samples have finite, noncollapsed rectangular obstacle bounds with dimensions above 1e-9 mm. Pipeline 9 with autorouter 0.0.985 and effort: 0.1 completes all 16 point-pair routes for regenerated sample023 without an error. This is a focused smoke test, not a full routing benchmark of all six boards. Rendered and visually inspected all six comparison SVGs; git diff --check passes. Related: Consumes released Altium routing-constraint support(https:github.comtscircuitaltium-to-circuit-jsonpull186) and primitive 3D body support(https:github.comtscircuitaltium-to-circuit-jsonpull208). Overlaps the routing-metadata regeneration in dataset-srj24 8(https:github.comtscircuitdataset-srj24pull8), and builds on main after the merged sample024 keepout regeneration 14(https:github.comtscircuitdataset-srj24pull14). Samples 001020 are unchanged. |
 | [#14](https://github.com/tscircuit/dataset-srj24/pull/14) | 🐌 Tiny | techmannih | Sample024s five open keepout arcs expand into 1,430 SRJ obstacles; this PR regenerates them as 475 native rotated rectangles and square joinscaps and updates the SRJ comparison panel. It pins the official releases tscircuitcore0.0.2163 from merged core 4669(https:github.comtscircuitcorepull4669) and tscircuitcapacity-autorouter0.0.985 containing merged autorouter 3098(https:github.comtscircuittscircuit-autorouterpull3098), with integrity recorded in bun.lock. The other 2,988 obstacles, all 409 connections, routing settings, source metadata, and the original AltiumCircuit JSON comparison panels remain unchanged. Results compared with main: Five arcs: 1,430  475 obstacles. Sample024 total: 4,418  3,463 obstacles. Validation with Bun 1.4.0: Frozen-lockfile install passes with the official release versions. Regeneration with those releases reproduced the committed Sample024 JSON and SVG byte-for-byte. bun run test passes using the existing validator: 26 samples and 858 through-hole obstacles. bun run build passes with existing Vite browser-compatibility and chunk-size warnings. git diff --check passes. The PR targets main and changes only package.json, bun.lock, samplessample024.json, and its comparison SVG. Preprocessing coverage is covered by the merged coreautorouter regression tests. Vercel currently reports Authorization required to deploy. for fork commits; the local production build passes. |
-
-</details>
-
-### [tscircuit/models.tscircuit.com](https://github.com/tscircuit/models.tscircuit.com)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#12](https://github.com/tscircuit/models.tscircuit.com/pull/12) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Required compatibility changes for 11: replace removed enum parameters with the current boolean selectors, preserve legacy hex-bolt links, and regenerate catalogssource pins for ModelPrinter 0.0.35. Includes NEMA23 rear-spacing and arc controls. This PR is stacked on 11 so that 11 stays limited to package versions and the lockfile. Validation: all 239 unit tests, 16 production browser tests, type checking, and the production build passed locally. CI checks the combined changes. |
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#11](https://github.com/tscircuit/models.tscircuit.com/pull/11) | 🐌 Tiny | imrishabh18 | Update tscircuitmodelprinter to 0.0.35 and jscad-electronics to 0.0.238, including the merged NEMA23 model correction. Update the lockfile for frozen installs. Required site API compatibility is isolated in 12. Its CI validates both changes together. |
-
-</details>
-
-### [tscircuit/jscad-electronics](https://github.com/tscircuit/jscad-electronics)
-
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#503](https://github.com/tscircuit/jscad-electronics/pull/503) | 🐌 Tiny | imrishabh18 | Aligns the NEMA23 motor body with a newly designed curved rear cap, ensuring a flush fit without side overhang, while maintaining existing front features and improving rear mounting options. |
-
-</details>
-
-### [tscircuit/modelprinter](https://github.com/tscircuit/modelprinter)
-
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#119](https://github.com/tscircuit/modelprinter/pull/119) | 🐌 Tiny | imrishabh18 | Aligns the NEMA23 rear cap with a new curved design and rectangular rear pattern, ensuring proper fit and validation against existing dimensions. |
 
 </details>
 
@@ -1389,11 +1407,11 @@ pie
 | [#255](https://github.com/tscircuit/fanout-solver/pull/255) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where dogbone matching rejects a legal TOP escape wire due to unrelated BOTTOM pad overlaps, by filtering source-wire obstacles based on the wires layer while retaining through-via clearance checks on every layer. |
 | [#61](https://github.com/tscircuit/bus-lanes-solver/pull/61) | 🐳 Major | ⭐⭐⭐ | Fixes the handling of omitted optional allowedLayers in native-layer escape fallback to align with pipeline allocation, ensuring proper escape assignment for DDR routing. |
 | [#59](https://github.com/tscircuit/bus-lanes-solver/pull/59) | 🐳 Major | ⭐⭐⭐ | Stacked on 58, targeting its repro branch. A routable near-horizontal pair can return null when centerline shortening reverses one offset rail and creates a 135 corner. Add an optional validity predicate to the ordinary reducer and check conventional turns and self-clearance on both paired rails. Shortcuts preserve already-valid rails while allowing progressive repair of initially invalid paths. Ordinary callers retain their behavior and final routing validation remains in place. Add the exact repro as coupled-offset-shortening, the twelfth case in both the default CLI benchmark and the shared main-versus-PR manifest. It routes through each selected revisions public pipeline, with independent requirements for 2 signals, no fixed copper or buses, and one matched pair. The eleven AM3352 cases retain their original 47-signal161-fixed-fanout checks. Tests cover revision selection, failedcontradictory solver states, missing cases, strict reports and completion statistics. Validation: Original repro unchanged: 3 tests  86 assertions pass. Current benchmarkregression suite: 35 tests  987 assertions across 7 files pass; type checking and the full 338-file format check pass. The actual new benchmark worker fails on pre-fix revision 7726294 with coupled_routing_failed (02 signals), and passes on the fix (22, full DRCconnectivitycouplingmatching, 0 mm pair skew, 68.263 ms solve). A fresh AM3352 control run passes 4747 signals with full DRCmatching and all 161 fixed fanouts preserved: 42.978 s solve. Total-copper byte-bus skews are approximately 0.635 mm; pair skews are 0.077868, 0.126884 and 0.072830 mm. The prior completed eleven-case AM3352 run and all eleven inspected PNGs remain unchanged. A separate fully validated reduced-case PNGSVG and native worker report are added; its PNG was opened and inspected. See measurements, native reports and completed snapshots(https:github.comtscircuitbus-lanes-solverblobd61928ea9b2ab6640b06932d10fdcf25b3dbcdc0docscoupled-offset-shortening-fixREADME.md). The historical eleven-case run is not presented as a newly rerun twelve-case aggregate. Its mixed GC settings remain documented, and its original JSON capture stays byte-for-byte intact. GitHub benchmark uses the trusted default-branch harness: it will include the new case after this harnessmanifest change reaches main. |
+| [#33](https://github.com/tscircuit/motorcontrol/pull/33) | 🐳 Major | ⭐⭐⭐ | The earlier NEMA17 current-pattern indicator used one 500 ms harmonic model and often missed fixture-confirmed stalls at other speeds. Replace it with a speed-conditioned, six-feature model trained from 24 user-labelled recordings. Feature windows are 100 ms at 60100 full stepssec, 400 ms at 25, and 800 ms at 12.5. Thresholds reject the free-running envelope instead of using a class midpoint. Expose explicit freesuspecteduncertain states, keep the unreliable low-speed profile uncertain, and flag interpolation, unfamiliar current patterns and temperatures outside the recorded range. Unsupported speedsvoltage requests return unknown. This remains observational and never controls motion or power. Evaluate every 50 ms and emit lightweight motion telemetry every 100 ms. Trainingexport tools, dataset fingerprint and nested whole-trial validation results are checked in. Retrospective outer-fold worst window error was 61.5, 10, 0, and 8.6 at 12.52560100 respectively; these are small-data development estimates, not universal accuracy claims or a new blind test. Validation: native tests replay eight recorded waveform windows and verify featurescore parity, timing, uncertaintydomain gates, gaps and trace retention; host comparison matches all 24 final-model cases. Dashboard tests and all 45 Python tests pass. RP2040 build succeeds. Firmware 1.0.13 was flashed and re-identified on the target NEMA17; bounded commanded-motion checks verify pulse counts and no dropped samples. A fresh fixture-confirmed stall validation is still needed beyond the recorded data. |
+| [#25](https://github.com/tscircuit/motorcontrol/pull/25) | 🐳 Major | ⭐⭐⭐ | NEMA23 runtime interlock and driver reports previously latched off firmware and independently stopped browser jogging. Add a report-only default and an explicit Stop on detected stall  electrical fault checkbox, off after reboot. Both firmware and browser honor the policy. Hardware interlocks and driver protection still act independently; the UI warns when shaft motion is inhibited and labels positions as commanded. Observe the DRV8452 sensorless torque counter by default, with a configurable software threshold, startupsteady-motion warmup, invalid-data exclusion and 200 ms persistence. Stall indication does not drive nFAULT and causes no software stop unless the optional policy is enabled. Show stall suspected as an uncalibrated indication, with unknown states for shortstoppedstartupfault conditions. Add a torque-count plot sharing the currenttemperature time window. Thermal, sensor, communication and SPI configuration shutdown behavior remains independent. Validation: native defaultopt-in policy, stall debouncerecoveryinvalid-data and protection regressions; all dashboard tests including browser policy, stall controls and chart gaps; 45 Python tests; local NEMA23 UF2 build. Physical shaft-stall accuracy is not yet calibrated. Firmware version: 1.0.6. Connected-board verification: report-only full-scaleinterlock test completed all 160 commanded pulses while recording hardware inhibition, with no firmware latch. The same interlock test with stopping enabled latched off after 49 pulses. At 1 A, forwardreverse commands completed 640 pulses each, and a longer run yielded live torque counts of 1226. FNB58 input-voltagecurrent packets were CRC-validated throughout. These are commandsensor checks, not calibrated physical stall detection. The live stall-notification path was also checked with a deliberately high temporary threshold (4095), without inducing a physical shaft stall: reporting-only emitted stall suspected and completed all 1280 requested pulses; opt-in stopping latched on the indication after 608 pulses. Threshold 3, stop mode off, the users 3 A setting and disabled motor power were restored afterward. This validates notificationpolicy integration, not physical-stall classification accuracy. |
 | [#36](https://github.com/tscircuit/motorcontrol/pull/36) | 🐳 Major | ⭐⭐⭐ | Changes Add saved stall sensitivity and Run Stall-based Homing on the single-axis, XY, and general motor pages. The sensitivity slider moves the current-score threshold used by the graph, warning and homing detector. NEMA23 retains its torque-threshold control. Homing seeks both ends, verifies release during each backoff, applies a conservative contactdetector allowance, saves the usable travel range, and returns to zero. Each leg has a finite travel ceiling and timeout. Stop, USBheartbeat loss and faults abort. Two connected axes run sequentially, and a failed axis cancels the batch. The firmware reserves queued STEP pulses against the saved bounds, rejects out-of-range finite moves and clips joggingbraking at the boundary. Reboot preserves bounds but requires a fresh home; homing changes the coordinate session so old saved positions cannot be reused.  Validation Native tests: two-contact state machine, clear-stall requirement, no-contacttimeoutcancel paths, settings migrationpersistence, both travel bounds and queued-pulse reservations. Dashboard tests: sensitivity commands, singleXY homing, sequential execution, cancellation, connectionpower failures. Existing nativedashboard suites and 45 Python tests pass. Local ARM builds pass for all three board profiles. Physical end-stop homing has not been run: mechanism suitability is awaiting operator confirmation. These are inferred commanded-step bounds, not encoder-backed travel protection. |
 | [#34](https://github.com/tscircuit/motorcontrol/pull/34) | 🐳 Major | ⭐⭐⭐ | Changes Add persistent Stall beeping on and Stall time until auto stop settings to the controller and all motor-control pages. Beeping defaults on; auto-stop defaults off (0 seconds). A detected stall produces three rapid 1800 Hz chirps, distinct from the higher-pitched overheat alarm, which retains priority. A configured timeout stops only after a continuous valid stall detection. Free, uncertain, stale, stopped, and unknown states reset the timer. NEMA17 uses its experimental current estimator and NEMA23 uses valid torque stall detection; unsupported DRV8847 boards do not expose the controls. Existing temperature and USB-name settings migrate without being reset.  Validation Native host suite including protocol validation, actual stop behavior, alarm priority, settings migrationpersistence, timeout reset, disabled timeout, and chirp cadence. All dashboard tests and 45 Python tests pass. RP2040 builds for all three board profiles. The NEMA17 detector remains experimental; timing follows its reported stall state and does not supply independent shaft feedback. |
-| [#33](https://github.com/tscircuit/motorcontrol/pull/33) | 🐳 Major | ⭐⭐⭐ | The earlier NEMA17 current-pattern indicator used one 500 ms harmonic model and often missed fixture-confirmed stalls at other speeds. Replace it with a speed-conditioned, six-feature model trained from 24 user-labelled recordings. Feature windows are 100 ms at 60100 full stepssec, 400 ms at 25, and 800 ms at 12.5. Thresholds reject the free-running envelope instead of using a class midpoint. Expose explicit freesuspecteduncertain states, keep the unreliable low-speed profile uncertain, and flag interpolation, unfamiliar current patterns and temperatures outside the recorded range. Unsupported speedsvoltage requests return unknown. This remains observational and never controls motion or power. Evaluate every 50 ms and emit lightweight motion telemetry every 100 ms. Trainingexport tools, dataset fingerprint and nested whole-trial validation results are checked in. Retrospective outer-fold worst window error was 61.5, 10, 0, and 8.6 at 12.52560100 respectively; these are small-data development estimates, not universal accuracy claims or a new blind test. Validation: native tests replay eight recorded waveform windows and verify featurescore parity, timing, uncertaintydomain gates, gaps and trace retention; host comparison matches all 24 final-model cases. Dashboard tests and all 45 Python tests pass. RP2040 build succeeds. Firmware 1.0.13 was flashed and re-identified on the target NEMA17; bounded commanded-motion checks verify pulse counts and no dropped samples. A fresh fixture-confirmed stall validation is still needed beyond the recorded data. |
 | [#31](https://github.com/tscircuit/motorcontrol/pull/31) | 🐳 Major | ⭐⭐⭐ | Move the NEMA17 current-pattern estimator into firmware so USB drops no longer determine its input. Consume the 100 kHz-per-winding ADC stream with an independent cursor, extract 1 kHz waveform features in bounded chunks, and report score, extrapolation status, sample losses, raw ripple RMS and processing time. No estimator result controls motion or power. Normalize logical step modes to physical full-step frequency. Other voltage requests, directions, speeds and temperature conditions produce explicitly unvalidated extrapolations; missing current, faults, insufficient cycles or bandwidth report unknown. The supported feature range is 4320 full stepssec. The dashboard prefers firmware scores and retains the browser estimator for older firmware. Waveform export is now opt-in for this target; default USB traffic contains scores and ordinary telemetry. Optional export uses peak-preserving 10 ms summaries. Firmware 1.0.11. Validation: recorded freestalled waveform tests; logical-resolution, gap, stoppedfault and extrapolation tests; dashboard and Python suites; native firmware builds. Connected-board tests covered all five logical step modes, reverse direction, alternative voltage requests and low speed. Final default-mode runs at 60 and 4 full stepssec analyzed approximately 100,000 samplessec, reported no analysis drops or pulse underruns, and completed commanded pulse counts. Optional waveform export can reduce availability of long uninterrupted windows; 15 V requested produced insufficient winding current to estimate on this setup. |
-| [#25](https://github.com/tscircuit/motorcontrol/pull/25) | 🐳 Major | ⭐⭐⭐ | NEMA23 runtime interlock and driver reports previously latched off firmware and independently stopped browser jogging. Add a report-only default and an explicit Stop on detected stall  electrical fault checkbox, off after reboot. Both firmware and browser honor the policy. Hardware interlocks and driver protection still act independently; the UI warns when shaft motion is inhibited and labels positions as commanded. Observe the DRV8452 sensorless torque counter by default, with a configurable software threshold, startupsteady-motion warmup, invalid-data exclusion and 200 ms persistence. Stall indication does not drive nFAULT and causes no software stop unless the optional policy is enabled. Show stall suspected as an uncalibrated indication, with unknown states for shortstoppedstartupfault conditions. Add a torque-count plot sharing the currenttemperature time window. Thermal, sensor, communication and SPI configuration shutdown behavior remains independent. Validation: native defaultopt-in policy, stall debouncerecoveryinvalid-data and protection regressions; all dashboard tests including browser policy, stall controls and chart gaps; 45 Python tests; local NEMA23 UF2 build. Physical shaft-stall accuracy is not yet calibrated. Firmware version: 1.0.6. Connected-board verification: report-only full-scaleinterlock test completed all 160 commanded pulses while recording hardware inhibition, with no firmware latch. The same interlock test with stopping enabled latched off after 49 pulses. At 1 A, forwardreverse commands completed 640 pulses each, and a longer run yielded live torque counts of 1226. FNB58 input-voltagecurrent packets were CRC-validated throughout. These are commandsensor checks, not calibrated physical stall detection. The live stall-notification path was also checked with a deliberately high temporary threshold (4095), without inducing a physical shaft stall: reporting-only emitted stall suspected and completed all 1280 requested pulses; opt-in stopping latched on the indication after 608 pulses. Threshold 3, stop mode off, the users 3 A setting and disabled motor power were restored afterward. This validates notificationpolicy integration, not physical-stall classification accuracy. |
 | [#17](https://github.com/tscircuit/motorcontrol/pull/17) | 🐳 Major | ⭐⭐⭐ | The published NEMA23 1.3.2 board has a different driver, GPIO map, current scale and power interlocks from the DRV8825 controller. Add a separate MOTOR_BOARDnema23_drv8452 native C target and matching controls on the bench, single-motor and gantry pages. This PR is based on 16s current-capture work. The profile uses the published STEPDIRSPIRGBbuzzer wiring, nominal 0.2 VA current sensing, a conservative 1 A peak current default and a verified fixed 116 driver configuration. Both regular telemetry and high-rate graph frames use the boards current scale. Driver SPI is checked with ARM low before motion; fault clearing is limited to explicit power arming. Sensorless stall detection and the DNP encoder are not enabled. POWER_ARMARMWAKEbuffer enable boot low. Voltage changes isolate and discharge the rail for 12 seconds, then require fresh PD communicationprotocolcurrent checks. PG is ignored by default so a deasserted signal cannot prevent the first software voltage request. The UI exposes optional strict PG gating, and changing it disarms the rail. Raw PG telemetry remains separate from the override and measured voltage remains unavailable. Power needs explicit arming below 55C; 60C folds current back and 70C or sensoreFusedriverSPI failure latches off the rail. HeartbeatUSB loss disarms. The buffer is disabled after disarm, communication failure or any latched fault. Validation: Both ARM targets built; UBSan motionprotocolsettingscurrent and new production NEMA23 parserpowerSPI tests passed. All 45 Python regressions and dashboardjogpositionssongcurrent-graphcontrol tests passed. CI builds both board profiles and runs ASanUBSan. Flashed two physical NEMA23 controllers. The second (e6658c344b0a562a) is connected to a motor and reported healthy temperaturecurrent sensing, approximately 100k ADC samplessec per winding, a 1 A peak default, and disabled motorpower rail. Driver-disabled PIO tests emitted exact counts at 1k64k200k settings with zero queue underruns while current data streamed. With PG ignored, the second board completed a 15 V request and reported a 3 A PD contract. Protected-rail and SPI readback checks passed. At a 1 A peak limit it completed ten full steps forward and ten back (18 commanded each way) at 20 full stepssec, with 160 counted pulses each direction and about 0.7 A measured in an energized winding. The user confirmed seeing forwardreverse motion. Test ended stopped and disarmed. Actual rail voltage, calibrated current and loaded positional accuracy remain unmeasured. Matching UI deployed to https:motorcontrol.tscircuit.com; explicit armcurrent controls preserve legacy board behavior. |
 | [#13](https://github.com/tscircuit/motorcontrol/pull/13) | 🐳 Major | ⭐⭐⭐ | The latest RP2040 motor controller uses DRV8825 STEPDIR, transistor-driven RGB outputs, winding-current ADC inputs and GPIO-controlled CH224K voltage selection. The firmware and dashboard, single-motor jog and gantry pages now support that board while retaining the original DRV8847 profile. Startup keeps the motor disabled at 5 V. Voltage changes disable the driver and enforce a settling interval; temperature, heartbeat, watchdog and driver-fault protection remain active. Automatic RGB status and manual colors are available, with alarms taking priority. The hardware fixes 116 microsteps; larger selected increments group pulses and saved-position GOTO uses the finest supported increment. Validation: 45 Python tests and all dashboardjogGOTOsong checks pass; CI stages both board profiles. On board e66568714f117e21, all 21 uploaded files matched SHA-256. Live Web Serial controls applied RGB settings and the user confirmed LED operation. With the replacement charger and an explicit 9 V request, two 800-microstep forwardreverse moves completed with exact commanded counts, about 0.87 A peak absolute winding samples and no reported faults; the user confirmed the motor spun. Temperature stayed around 28 C and the motor was stopped afterward. Use 9 V with the tested charger. A 15 V request yielded a measured 9 V input and no movement; the actual PG behavior was not measured. Voltage telemetry represents the request and settling timer, not measured rail voltage. Current samples are uncalibrated, and high-speedloadphysical return accuracy remain unverified. |
 | [#15](https://github.com/tscircuit/motorcontrol/pull/15) | 🐳 Major | ⭐⭐⭐ | DRV8825 controllers currently generate STEP edges in MicroPython, so higher requested speeds can exceed the interpreters pulse throughput. Add a native Pico SDK C application that generates pulses in PIO and counts emitted edges with a separate PIO state machine and DMA. The application retains protocol 3, the existing dashboardgantry commands, 400 ms ramps, deferred GOTO starts, RGBUSB-PD controls, alarms, songs, and temperaturedriverheartbeatwatchdog protections. Native settings use two reserved flash sectors with checksum and partial-write recovery. A build fingerprint identifies the image on live boards. The legacy DRV8847 MicroPython implementation remains available; this native image targets the DRV8825RGB PCB. Validation: Cross-built the UF2 with Pico SDK 2.3.1; native motion, protocolprotection, and settings tests passed with UBSan. Existing 45 Python tests and dashboard, song, single-motor, gantry, and saved-position checks passed. Flashed both physical controllers and checked their build fingerprints. Driver-disabled electrical tests emitted exact requested counts at 1k, 64k, 128k, and 200k physical pulsessec with zero PIO queue underruns. At the 200k setting, observed throughput was approximately 199.7k pulsessec on both boards. Verified heartbeat expiry and USB disconnect stop pulse generation, heartbeats do not resume it, settings survive restart, and restarts return to disabled 5 V with fresh position sessions. No shaft movement or loaded mechanical performance was tested. Independent pulse-widthjitter measurement, loaded torque, and physical positional accuracy remain unverified. CI adds host native tests and an ARM UF2 build. |
@@ -1449,25 +1467,27 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (411)</summary>
+<summary>🐌 Tiny Contributions (423)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#1095](https://github.com/tscircuit/pcb-viewer/pull/1095) | 🐌 Tiny | Automated package update |
+| [#5793](https://github.com/tscircuit/tscircuit/pull/5793) | 🐌 Tiny | Automated package update |
+| [#5792](https://github.com/tscircuit/tscircuit/pull/5792) | 🐌 Tiny | Updates the tscircuitcli package version from 0.1.2363 to 0.1.2364 |
+| [#5791](https://github.com/tscircuit/tscircuit/pull/5791) | 🐌 Tiny | Automated package update |
+| [#5790](https://github.com/tscircuit/tscircuit/pull/5790) | 🐌 Tiny | Automated package update |
+| [#5784](https://github.com/tscircuit/tscircuit/pull/5784) | 🐌 Tiny | Updates the tscircuitcli package version from 0.1.2361 to 0.1.2362 in package.json |
+| [#5780](https://github.com/tscircuit/tscircuit/pull/5780) | 🐌 Tiny | Updates the version of the tscircuitcli package from 0.1.2360 to 0.1.2361 and the tscircuitcore package from 0.0.2170 to 0.0.2171, along with the tscircuitprops package from 0.0.703 to 0.0.704. |
 | [#5789](https://github.com/tscircuit/tscircuit/pull/5789) | 🐌 Tiny | Automated package update |
 | [#5788](https://github.com/tscircuit/tscircuit/pull/5788) | 🐌 Tiny | Updates the tscircuitcli package to version 0.1.2363 |
-| [#5787](https://github.com/tscircuit/tscircuit/pull/5787) | 🐌 Tiny | Automated package update |
 | [#5786](https://github.com/tscircuit/tscircuit/pull/5786) | 🐌 Tiny | Automated package update |
 | [#5785](https://github.com/tscircuit/tscircuit/pull/5785) | 🐌 Tiny | Automated package update |
-| [#5784](https://github.com/tscircuit/tscircuit/pull/5784) | 🐌 Tiny | Updates the tscircuitcli package version from 0.1.2361 to 0.1.2362 in package.json |
 | [#5783](https://github.com/tscircuit/tscircuit/pull/5783) | 🐌 Tiny | Automated package update |
 | [#5782](https://github.com/tscircuit/tscircuit/pull/5782) | 🐌 Tiny | Automated package update |
 | [#5781](https://github.com/tscircuit/tscircuit/pull/5781) | 🐌 Tiny | Automated package update |
-| [#5780](https://github.com/tscircuit/tscircuit/pull/5780) | 🐌 Tiny | Updates the version of the tscircuitcli package from 0.1.2360 to 0.1.2361 and the tscircuitcore package from 0.0.2170 to 0.0.2171, along with the tscircuitprops package from 0.0.703 to 0.0.704. |
 | [#5779](https://github.com/tscircuit/tscircuit/pull/5779) | 🐌 Tiny | Automated package update |
 | [#5778](https://github.com/tscircuit/tscircuit/pull/5778) | 🐌 Tiny | Automated package update |
 | [#5777](https://github.com/tscircuit/tscircuit/pull/5777) | 🐌 Tiny | Automated package update |
-| [#5776](https://github.com/tscircuit/tscircuit/pull/5776) | 🐌 Tiny | Updates the tscircuitcli package to version 0.1.2360 |
 | [#5775](https://github.com/tscircuit/tscircuit/pull/5775) | 🐌 Tiny | Automated package update |
 | [#5774](https://github.com/tscircuit/tscircuit/pull/5774) | 🐌 Tiny | Automated package update |
 | [#5773](https://github.com/tscircuit/tscircuit/pull/5773) | 🐌 Tiny | Automated package update |
@@ -1490,6 +1510,8 @@ pie
 | [#5755](https://github.com/tscircuit/tscircuit/pull/5755) | 🐌 Tiny | Updates the tscircuitcli package version from 0.1.2354 to 0.1.2355 in package.json |
 | [#5754](https://github.com/tscircuit/tscircuit/pull/5754) | 🐌 Tiny | Updates the package version from 0.0.2922 to 0.0.2923 in package.json |
 | [#5753](https://github.com/tscircuit/tscircuit/pull/5753) | 🐌 Tiny | Automated package update |
+| [#5776](https://github.com/tscircuit/tscircuit/pull/5776) | 🐌 Tiny | Updates the tscircuitcli package to version 0.1.2360 |
+| [#5787](https://github.com/tscircuit/tscircuit/pull/5787) | 🐌 Tiny | Automated package update |
 | [#5744](https://github.com/tscircuit/tscircuit/pull/5744) | 🐌 Tiny | Automated package update |
 | [#5742](https://github.com/tscircuit/tscircuit/pull/5742) | 🐌 Tiny | Automated package update |
 | [#5741](https://github.com/tscircuit/tscircuit/pull/5741) | 🐌 Tiny | Automated package update |
@@ -1599,6 +1621,8 @@ pie
 | [#5677](https://github.com/tscircuit/tscircuit/pull/5677) | 🐌 Tiny | Automated package update |
 | [#5639](https://github.com/tscircuit/tscircuit/pull/5639) | 🐌 Tiny | Automated package update |
 | [#4665](https://github.com/tscircuit/core/pull/4665) | 🐌 Tiny | Updates the tscircuitchecks package from version 0.0.253 to 0.0.255 in package.json |
+| [#5482](https://github.com/tscircuit/tscircuit.com/pull/5482) | 🐌 Tiny | Automated package update |
+| [#5481](https://github.com/tscircuit/tscircuit.com/pull/5481) | 🐌 Tiny | Automated package update |
 | [#5480](https://github.com/tscircuit/tscircuit.com/pull/5480) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3010 to 0.0.3011 |
 | [#5479](https://github.com/tscircuit/tscircuit.com/pull/5479) | 🐌 Tiny | Automated package update |
 | [#5477](https://github.com/tscircuit/tscircuit.com/pull/5477) | 🐌 Tiny | Automated package update |
@@ -1639,6 +1663,8 @@ pie
 | [#5420](https://github.com/tscircuit/tscircuit.com/pull/5420) | 🐌 Tiny | Updates the tscircuitrunframe package to version 0.0.2981 |
 | [#5419](https://github.com/tscircuit/tscircuit.com/pull/5419) | 🐌 Tiny | Automated package update |
 | [#5433](https://github.com/tscircuit/tscircuit.com/pull/5433) | 🐌 Tiny | Updates the tscircuitrunframe package to version 0.0.2987 in package.json |
+| [#5307](https://github.com/tscircuit/eval/pull/5307) | 🐌 Tiny | Automated package update |
+| [#5306](https://github.com/tscircuit/eval/pull/5306) | 🐌 Tiny | Updates the version of tscircuitcore from 0.0.2170 to 0.0.2171 and tscircuitprops from 0.0.703 to 0.0.704 in package.json |
 | [#5304](https://github.com/tscircuit/eval/pull/5304) | 🐌 Tiny | Automated package update |
 | [#5302](https://github.com/tscircuit/eval/pull/5302) | 🐌 Tiny | Automated package update |
 | [#5300](https://github.com/tscircuit/eval/pull/5300) | 🐌 Tiny | Automated package update |
@@ -1687,6 +1713,8 @@ pie
 | [#5228](https://github.com/tscircuit/eval/pull/5228) | 🐌 Tiny | Automated package update |
 | [#5242](https://github.com/tscircuit/eval/pull/5242) | 🐌 Tiny | Automated package update |
 | [#5227](https://github.com/tscircuit/eval/pull/5227) | 🐌 Tiny | Updates the version of the tscircuitcore package from 0.0.2144 to 0.0.2145 in package.json |
+| [#5787](https://github.com/tscircuit/runframe/pull/5787) | 🐌 Tiny | Automated package update |
+| [#5786](https://github.com/tscircuit/runframe/pull/5786) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1631 to 0.0.1632 |
 | [#5785](https://github.com/tscircuit/runframe/pull/5785) | 🐌 Tiny | Automated package update |
 | [#5784](https://github.com/tscircuit/runframe/pull/5784) | 🐌 Tiny | Automated package update |
 | [#5783](https://github.com/tscircuit/runframe/pull/5783) | 🐌 Tiny | Automated package update |
@@ -1698,11 +1726,11 @@ pie
 | [#5777](https://github.com/tscircuit/runframe/pull/5777) | 🐌 Tiny | Automated package update |
 | [#5776](https://github.com/tscircuit/runframe/pull/5776) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1629 to 0.0.1630 |
 | [#5775](https://github.com/tscircuit/runframe/pull/5775) | 🐌 Tiny | Automated package update |
-| [#5773](https://github.com/tscircuit/runframe/pull/5773) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1628 to 0.0.1629 in the package.json file. |
 | [#5771](https://github.com/tscircuit/runframe/pull/5771) | 🐌 Tiny | Automated package update |
 | [#5770](https://github.com/tscircuit/runframe/pull/5770) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1627 to 0.0.1628 |
 | [#5769](https://github.com/tscircuit/runframe/pull/5769) | 🐌 Tiny | Automated package update |
 | [#5768](https://github.com/tscircuit/runframe/pull/5768) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1626 to 0.0.1627 |
+| [#5773](https://github.com/tscircuit/runframe/pull/5773) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1628 to 0.0.1629 in the package.json file. |
 | [#5767](https://github.com/tscircuit/runframe/pull/5767) | 🐌 Tiny | Automated package update |
 | [#5766](https://github.com/tscircuit/runframe/pull/5766) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1625 to 0.0.1626 |
 | [#5764](https://github.com/tscircuit/runframe/pull/5764) | 🐌 Tiny | Automated package update |
@@ -1749,23 +1777,25 @@ pie
 | [#5722](https://github.com/tscircuit/runframe/pull/5722) | 🐌 Tiny | Automated package update |
 | [#5717](https://github.com/tscircuit/runframe/pull/5717) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1608 to 0.0.1609 |
 | [#5716](https://github.com/tscircuit/runframe/pull/5716) | 🐌 Tiny | Automated package update |
+| [#5443](https://github.com/tscircuit/cli/pull/5443) | 🐌 Tiny | Automated package update |
+| [#5442](https://github.com/tscircuit/cli/pull/5442) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3011 to 0.0.3012 |
 | [#5440](https://github.com/tscircuit/cli/pull/5440) | 🐌 Tiny | Automated package update |
 | [#5439](https://github.com/tscircuit/cli/pull/5439) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3010 to 0.0.3011 |
 | [#5438](https://github.com/tscircuit/cli/pull/5438) | 🐌 Tiny | Automated package update |
 | [#5437](https://github.com/tscircuit/cli/pull/5437) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3009 to 0.0.3010 |
-| [#5436](https://github.com/tscircuit/cli/pull/5436) | 🐌 Tiny | Automated package update |
 | [#5435](https://github.com/tscircuit/cli/pull/5435) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3008 to 0.0.3009 |
 | [#5434](https://github.com/tscircuit/cli/pull/5434) | 🐌 Tiny | Automated package update |
 | [#5432](https://github.com/tscircuit/cli/pull/5432) | 🐌 Tiny | Automated package update |
 | [#5431](https://github.com/tscircuit/cli/pull/5431) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3007 to 0.0.3008 |
 | [#5429](https://github.com/tscircuit/cli/pull/5429) | 🐌 Tiny | Automated package update |
-| [#5428](https://github.com/tscircuit/cli/pull/5428) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3006 to 0.0.3007 |
 | [#5427](https://github.com/tscircuit/cli/pull/5427) | 🐌 Tiny | Automated package update |
 | [#5426](https://github.com/tscircuit/cli/pull/5426) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3005 to 0.0.3006 |
 | [#5423](https://github.com/tscircuit/cli/pull/5423) | 🐌 Tiny | Automated package update |
 | [#5422](https://github.com/tscircuit/cli/pull/5422) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3004 to 0.0.3005 |
 | [#5421](https://github.com/tscircuit/cli/pull/5421) | 🐌 Tiny | Automated package update |
 | [#5420](https://github.com/tscircuit/cli/pull/5420) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3003 to 0.0.3004 |
+| [#5436](https://github.com/tscircuit/cli/pull/5436) | 🐌 Tiny | Automated package update |
+| [#5428](https://github.com/tscircuit/cli/pull/5428) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3006 to 0.0.3007 |
 | [#5399](https://github.com/tscircuit/cli/pull/5399) | 🐌 Tiny | Updates the tscircuitrunframe package version from 0.0.2997 to 0.0.2999 in package.json |
 | [#5412](https://github.com/tscircuit/cli/pull/5412) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3002 to 0.0.3003 |
 | [#5404](https://github.com/tscircuit/cli/pull/5404) | 🐌 Tiny | Updates the version of the tscircuitrunframe package from 0.0.3000 to 0.0.3001 in package.json |
@@ -1852,8 +1882,8 @@ pie
 | [#3062](https://github.com/tscircuit/tscircuit-autorouter/pull/3062) | 🐌 Tiny | Automated package update |
 | [#3057](https://github.com/tscircuit/tscircuit-autorouter/pull/3057) | 🐌 Tiny | Automated package update |
 | [#158](https://github.com/tscircuit/circuit-json-to-step/pull/158) | 🐌 Tiny | Automated package update |
-| [#157](https://github.com/tscircuit/circuit-json-to-step/pull/157) | 🐌 Tiny | Automated package update |
 | [#156](https://github.com/tscircuit/circuit-json-to-step/pull/156) | 🐌 Tiny | Automated package update |
+| [#157](https://github.com/tscircuit/circuit-json-to-step/pull/157) | 🐌 Tiny | Automated package update |
 | [#143](https://github.com/tscircuit/circuit-json-to-step/pull/143) | 🐌 Tiny | Automated package update |
 | [#659](https://github.com/tscircuit/circuit-json-to-kicad/pull/659) | 🐌 Tiny | Automated package update |
 | [#653](https://github.com/tscircuit/circuit-json-to-kicad/pull/653) | 🐌 Tiny | Automated package update |
@@ -1899,8 +1929,8 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#942](https://github.com/tscircuit/props/pull/942) | 🐙 Minor | ⭐⭐ | Adds optional fit modes and viewbox bounds to symbol properties, allowing for better control over symbol sizing and proportions. |
 | [#943](https://github.com/tscircuit/props/pull/943) | 🐙 Minor | ⭐⭐ | Adds optional custom-symbol fit modes and viewbox properties for improved symbol rendering in local coordinate space. |
+| [#942](https://github.com/tscircuit/props/pull/942) | 🐙 Minor | ⭐⭐ | Adds optional fit modes and viewbox bounds to symbol properties, allowing for better control over symbol sizing and proportions. |
 | [#197](https://github.com/tscircuit/circuit-json-to-gerber/pull/197) | 🐙 Minor | ⭐⭐ | Fixes the issue where filled fabrication symbols for polarity markings on a real LED board were not exported correctly in Gerber files, ensuring they are preserved during the fabrication export process. |
 
 <details>
@@ -1970,6 +2000,58 @@ pie
 
 </details>
 
+### [imrishabh18](https://github.com/imrishabh18)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#433](https://github.com/tscircuit/checks/pull/433) | 🐳 Major | ⭐⭐⭐ | Fixes incorrect reporting of component overhangs by using actual footprint geometry for boundary checks instead of bounding rectangles. |
+| [#5384](https://github.com/tscircuit/cli/pull/5384) | 🐳 Major | ⭐⭐⭐ | When TSCIRCUIT_STANDALONE1, serve the bundled RunFrame and preset the CLIs pinned eval version through the existing TSCIRCUIT_LATEST_EVAL_VERSION global. Disable online version selection, telemetry, and hosted page resources. Normal CLI behavior is unchanged. |
+| [#5368](https://github.com/tscircuit/cli/pull/5368) | 🐳 Major | ⭐⭐⭐ | Starts a loopback asset server for every command when TSCIRCUIT_BAKED_ASSET_SERVER_DIR is set, sets provider base URLs, and honors them in CLI searchimport lookups. |
+| [#5324](https://github.com/tscircuit/cli/pull/5324) | 🐳 Major | ⭐⭐⭐ | Add --jscdn-base-url url to tsci build, allowing users to set the JS CDN base URL for dynamic imports in the generated static site. |
+| [#3127](https://github.com/tscircuit/tscircuit-autorouter/pull/3127) | 🐳 Major | ⭐⭐⭐ | Fixes copper connectivity issues for QFP thermal pads, ensuring proper routing and obstacle handling in autorouting. |
+| [#142](https://github.com/tscircuit/circuit-json-to-step/pull/142) | 🐳 Major | ⭐⭐⭐ | STEP exports currently split printed parts into a filename map, which consumers package as ZIPs while omitting boards and ordinary assembly parts. Make circuitJsonToStep(circuitJson) return one STEP string containing the complete named assembly by default, including all supported PCB boards, components, printed parts, and other CAD parts. No exportMode or component-inclusion flags are needed for the default export; explicit exportMode: pcb retains the existing PCB-only path. Preserve colors, model origins, unit scale, rotations, and placement for JSCAD and imported STEP parts. Include supported external meshes with shared topology and scope holes to each board in multi-board designs. Missing geometry and nested imported STEP assemblies fail explicitly rather than producing incomplete assemblies. Update public types, the demo, documentation, and regression snapshots. Migration: Assembly output changes from Recordstring, string to string, and the default now includes the complete design even without assembly-part tags. Consumers requiring the previous PCB-only behavior must explicitly select exportMode: pcb. Validation: 29 converter tests (279 assertions), TypeScript, formatting, ESMdeclaration build, and whitespace checks passed. OCCT checks verify default exports for ordinary PCBs, mixed assemblies, multiple boards, and bare CAD, plus names, body counts, colors, transforms, cached STEP instances, and external meshes. The demo browser build remains blocked by the existing native resvgresvg-js .node dependency; the same error was reproduced at the prior PR head f3eca47. Consumer update: https:github.comtscircuittscircuit.compull5409 (draft until a release containing this default behavior is available). |
+| [#12](https://github.com/tscircuit/models.tscircuit.com/pull/12) | 🐳 Major | ⭐⭐⭐ | Required compatibility changes for 11: replace removed enum parameters with the current boolean selectors, preserve legacy hex-bolt links, and regenerate catalogssource pins for ModelPrinter 0.0.35. Includes NEMA23 rear-spacing and arc controls. This PR is stacked on 11 so that 11 stays limited to package versions and the lockfile. Validation: all 239 unit tests, 16 production browser tests, type checking, and the production build passed locally. CI checks the combined changes. |
+| [#18](https://github.com/tscircuit/tscircuit-standalone/pull/18) | 🐳 Major | ⭐⭐⭐ | Publish direct binaries for all five targets and link to them first in release notes. Keep optional archives, companion license notices, and checksums for every asset. Documentation edits are limited to the download table and usagechecksum details. |
+| [#15](https://github.com/tscircuit/tscircuit-standalone/pull/15) | 🐳 Major | ⭐⭐⭐ | Embed complete datasheet API responses, including generated TSX and pin attributes, and set TSCIRCUIT_BAKED_ASSET_SERVER_DIR to their extracted directory before launching the shared CLI. Reuse the catalog downloader and asset embedding, update the CLI pin to its merged server support, and share the baked snapshot across release targets. |
+| [#16](https://github.com/tscircuit/tscircuit-standalone/pull/16) | 🐳 Major | ⭐⭐⭐ | Add a macOS terminal installer that downloads a specified release with curl, selects arm64 or x64 automatically, verifies the selected archive against SHA256SUMS before extracting, and preserves all redistribution notices. |
+| [#11](https://github.com/tscircuit/tscircuit-standalone/pull/11) | 🐳 Major | ⭐⭐⭐ | The standalone executable now launches the shared tscircuitcli and supplies the prepared JS CDN directory expected by its merged devsite support. The CLI dependency is pinned to merged commit fc0f4e0739ce3b93b1fb1c332387c9ce9449ae98 (tscircuitcli5350). At build time, follow that CLIs RunFrame dependency graph to discover internal-dynamic-import calls, bundle the 11 requested packages from existing dependencies, and reuse the browserWASM adapters. At startup, extract the embedded files into a temporary directory and set TSCIRCUIT_STANDALONE1 and TSCIRCUIT_JSCDN_DIR before loading the CLI. tsci dev serves jscdn; tsci build --site automatically copies the files into distjscdn. Asset URLs remain relative for sites hosted below a subpath. Include the shared CLIs buildsnapshot workers and runtime module registration. Use portable RollupResvg WASM loaders for compilation. The previous prototype CLI remains available from source; the README and CI now describe and exercise the shared CLI. This bundles the JS CDN packages, not every remote service used by the CLI or RunFrame. No CLI package.json dependencies are added. Validation: Typechecks and the two small JS CDN unit tests pass. Compiled executable smoke passes on macOS arm64Bun 1.3.14: versionhelp, sequential and worker TSX builds, PNG output, automatic site copying, and real tsci dev, with no project dependencies or runtime on PATH. Chromium imports all 11 bundled packages and runs a WASM-backed FDM exporter from both dev and nested static-site URLs, with external browser requests blocked. Linux x64 cross-compilation and license inventory pass with CIs pinned Bun 1.3.12; the graph contains no native .node addons. Bun 1.3.12s compiled executables could not run on this Mac, so native local smoke used 1.3.14. Existing suite: 149 pass; one existing archive test requires GNU tar (--sortname), unavailable with this Macs BSD tar. Ubuntu CI covers the full suite, loopback-only browser check, and five compilation targets. |
+| [#4656](https://github.com/tscircuit/core/pull/4656) | 🐙 Minor | ⭐⭐ | Fixes alignment of generated rounded board outlines with the resolved board center during rendering, preventing false outside-board errors. |
+| [#5252](https://github.com/tscircuit/eval/pull/5252) | 🐙 Minor | ⭐⭐ | Allows CircuitRunner and createCircuitWebWorker to pass serializable jlcSearchBaseUrl and datasheetApiBaseUrl options into the default parts engine, preserving custom engines and EasyEDA proxy configuration, while updating the parts-engine dependency to 0.0.39. |
+| [#5390](https://github.com/tscircuit/cli/pull/5390) | 🐙 Minor | ⭐⭐ | Replaces the standalone import bailout with platformFetch routing to the local baked asset server, allowing EasyEDA requests, model downloads, and registry requests to stay local while handling missing baked responses appropriately. |
+| [#5380](https://github.com/tscircuit/cli/pull/5380) | 🐙 Minor | ⭐⭐ | Adds functionality to import generated datasheet TSX files in standalone mode, saving them to the imports directory before searching JLCSearch. |
+| [#5388](https://github.com/tscircuit/cli/pull/5388) | 🐙 Minor | ⭐⭐ | Standalone imports that cannot use the baked TSX now exit with code 1 and display a message indicating unavailability in tscircuit standalone, preventing fallback to online sources. |
+| [#5350](https://github.com/tscircuit/cli/pull/5350) | 🐙 Minor | ⭐⭐ | Copies prepared JS CDN packages to distjscdn when TSCIRCUIT_STANDALONE is set, allowing for automatic site builds with a default base URL. |
+| [#5344](https://github.com/tscircuit/cli/pull/5344) | 🐙 Minor | ⭐⭐ | Copies prepared JS CDN packages from TSCIRCUIT_JSCDN_DIR into distjscdn for static site builds, preserving paths and contents without downloading or rebuilding packages. |
+| [#5348](https://github.com/tscircuit/cli/pull/5348) | 🐙 Minor | ⭐⭐ | Serve prepared packages from TSCIRCUIT_JSCDN_DIR at jscdn and set window.TSCIRCUIT_JSCDN_BASE_URL  jscdn before runframe loads, with support for local testing via --jscdn-dir path. |
+| [#67](https://github.com/tscircuit/parts-engine/pull/67) | 🐙 Minor | ⭐⭐ | Allows JLC, DigiKey, Mouser, and datasheet requests to use serialized base URL options or their TSCIRCUIT__BASE_URL environment variables, preserving local server path prefixes and isolating cached responses by request URL. |
+| [#38](https://github.com/tscircuit/internal-dynamic-import/pull/38) | 🐙 Minor | ⭐⭐ | Allows hosts to set window.TSCIRCUIT_JSCDN_BASE_URL for importing optional modules, enabling a standalone CLI to serve bundled dependencies without custom importers. |
+| [#14](https://github.com/tscircuit/tscircuit-standalone/pull/14) | 🐙 Minor | ⭐⭐ | Fixes startup issues for the development environment when the standalone binary is located within the project directory, ensuring the executable is excluded during the process. |
+
+<details>
+<summary>🐌 Tiny Contributions (17)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#4766](https://github.com/tscircuit/core/pull/4766) | 🐌 Tiny | Updates tscircuitcapacity-autorouter from 0.0.986 to the latest published version, 0.0.988, bringing in the QFP thermal-pad copper connectivity fix from tscircuit-autorouter3127, which fixes routing for bugreport109. |
+| [#4666](https://github.com/tscircuit/core/pull/4666) | 🐌 Tiny | Updates the tscircuitchecks dependency to version 0.0.256 and aligns existing fixtures with courtyard-aware boundary checks, including adjustments to board dimensions and validation of routing fixtures. |
+| [#503](https://github.com/tscircuit/jscad-electronics/pull/503) | 🐌 Tiny | Aligns the NEMA23 motor body with a newly designed curved rear cap, ensuring a flush fit without side overhang, while maintaining existing front features and improving rear mounting options. |
+| [#5739](https://github.com/tscircuit/runframe/pull/5739) | 🐌 Tiny | Forwards TSCIRCUIT_JLCSEARCH_BASE_URL and TSCIRCUIT_DATASHEET_API_BASE_URL from the page to evals partsEngineOptions whenever a worker is created, reusing existing lifecycle tests to cover configured and absent URLs. |
+| [#5715](https://github.com/tscircuit/runframe/pull/5715) | 🐌 Tiny | Updates the tscircuitinternal-dynamic-import package from version 0.0.15 to 0.0.18 and tscircuitprops from 0.0.697 to 0.0.702, enabling support for local JS CDN imports with a new base URL configuration. |
+| [#5433](https://github.com/tscircuit/cli/pull/5433) | 🐌 Tiny | Removes the --private flag from the tsci push command, clarifying that it does not affect existing package visibility and replaces it with a regression test for help output. |
+| [#5363](https://github.com/tscircuit/cli/pull/5363) | 🐌 Tiny | Excludes the running executable from initial file synchronization and filesystem watching during tsci dev, preventing upload timeouts. |
+| [#5378](https://github.com/tscircuit/cli/pull/5378) | 🐌 Tiny | Update tscircuiteval to 0.0.1619 and tscircuitrunframe to 0.0.2995 to consume the merged parts-engine base URL support in the CLI and browser worker. |
+| [#3088](https://github.com/tscircuit/tscircuit-autorouter/pull/3088) | 🐌 Tiny | Add bugreport109-book-reading-clip-lamp for the full placements-only book reading clip lamp 0.4.3(https:tscircuit.commusebook-reading-clip-lampfiles). Placements, connections and board rules are preserved; existing copper is removed. The number follows the packages bug-report script: highest existing number (108) plus one. The directory contains the matching .fixture.tsx and .srj.json files. There is no provenance file. Start the debugger with bun run start, then select bug-reports  bugreport109-book-reading-clip-lamp. One test attempts the entire circuit at effort 1 with caching disabled and saves a single native pipeline snapshot. Current Pipeline 9 stops at the static reachability precheck for source_net_0_mst26 (U5 EP  GND1), before detailed routing. The test asserts that existing failure. No solver changes. !Full-circuit Pipeline 9 routing attempt(https:raw.githubusercontent.comtscircuittscircuit-autorouterf3bf5bc4e944523437d470100800994b2a3ed88dtestsbugs__snapshots__bugreport109-book-reading-clip-lamp.snap.svg) Validation: renamed test passes against the existing snapshot; type check and full format check pass. sh bun test --timeout 9999999 testsbugsbugreport109-book-reading-clip-lamp.test.ts |
+| [#119](https://github.com/tscircuit/modelprinter/pull/119) | 🐌 Tiny | Aligns the NEMA23 rear cap with a new curved design and rectangular rear pattern, ensuring proper fit and validation against existing dimensions. |
+| [#52](https://github.com/tscircuit/circuit-json-webgpu/pull/52) | 🐌 Tiny | Remove the generated distindex.js bundle from version control and ignore that path so future builds do not add it back. The existing release workflow builds before publishing, and files: dist includes the generated bundle in published packages. Fix existing CI blockers in the base revision: Remove duplicate Resvg and convertCircuitJsonToPcbSvg imports from testsvisual.ts. Align the unit and browser bend tests with the renderers existing treatment of pcb_bend as mechanical metadata. The unit test compares the full board meshes with and without bend metadata; browser pixel and snapshot checks remain in place. Validation on 5873575: Renderer CI passes(https:github.comtscircuitcircuit-json-webgpuactionsruns39049840535): type checking, 89 unit tests, distribution build, 24 visual snapshots, all 597 feature snapshots, and layout checks. Parity CI passes(https:github.comtscircuitcircuit-json-webgpuactionsruns39049840217): zero regressions across 597 comparisons against the base revision. Vercel preview deployment passes. git check-ignore confirms the bundle is ignored. |
+| [#54](https://github.com/tscircuit/circuit-json-webgpu/pull/54) | 🐌 Tiny | Removes tracking of all generated distribution files in the repository, ensuring that they are ignored by Git. |
+| [#11](https://github.com/tscircuit/models.tscircuit.com/pull/11) | 🐌 Tiny | Update tscircuitmodelprinter to 0.0.35 and jscad-electronics to 0.0.238, including the merged NEMA23 model correction. Update the lockfile for frozen installs. Required site API compatibility is isolated in 12. Its CI validates both changes together. |
+| [#20](https://github.com/tscircuit/tscircuit-standalone/pull/20) | 🐌 Tiny | Updates the macOS installer example in the README to always download the latest published release using GitHubs releases API instead of a fixed dated release. |
+| [#19](https://github.com/tscircuit/tscircuit-standalone/pull/19) | 🐌 Tiny | Pins the CLI to a specific commit to ensure unavailable standalone imports return a representative message instead of falling back to EasyEDA or the registry. |
+| [#17](https://github.com/tscircuit/tscircuit-standalone/pull/17) | 🐌 Tiny | Embed the CLIs eval worker through RunFrames existing INJECT_TSCIRCUIT_EVAL_WEB_WORKER_BLOB_URL placeholder during binary compilation, allowing the browser to start the embedded code from a Blob URL without a separate worker file or endpoint. |
+| [#13](https://github.com/tscircuit/tscircuit-standalone/pull/13) | 🐌 Tiny | Fixes macOS standalone binaries being killed on startup due to malformed signature by updating Bun version and ensuring proper signing and verification of binaries. |
+
+</details>
+
 ### [KrishnaX12](https://github.com/KrishnaX12)
 
 | PRs # | Impact | Rating | Description |
@@ -1992,9 +2074,9 @@ pie
 
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
-| [#4378](https://github.com/tscircuit/core/pull/4378) | 🐙 Minor | ⭐⭐ | Fixes the issue where a rectangular cutout does not rotate correctly with its footprint, ensuring alignment during board design. |
-| [#4377](https://github.com/tscircuit/core/pull/4377) | 🐙 Minor | ⭐⭐ | Reproduces a bug where a rectangular cutout does not rotate with its footprint in a PCB design, ensuring the cutout aligns with the rotated pads. |
 | [#4652](https://github.com/tscircuit/core/pull/4652) | 🐙 Minor | ⭐⭐ | Demonstrates that an exposed pad with noSolderPaste still receives solder paste, by adding a test and PCB snapshot showing paste on both pads, including the one marked no paste. |
+| [#4377](https://github.com/tscircuit/core/pull/4377) | 🐙 Minor | ⭐⭐ | Reproduces a bug where a rectangular cutout does not rotate with its footprint in a PCB design, ensuring the cutout aligns with the rotated pads. |
+| [#4378](https://github.com/tscircuit/core/pull/4378) | 🐙 Minor | ⭐⭐ | Fixes the issue where a rectangular cutout does not rotate correctly with its footprint, ensuring alignment during board design. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
@@ -2026,57 +2108,6 @@ pie
 | [#42](https://github.com/tscircuit/circuit-json-placement-analysis/pull/42) | 🐌 Tiny | Reproduces a bug where PCB placement analysis suggests moving an overlapping component in the wrong vertical direction and labels the nearest top board edge as bottom, capturing this behavior before applying the fix. |
 | [#18](https://github.com/tscircuit/dataset-srj24/pull/18) | 🐌 Tiny | Motivation: Refresh all six TI Altium samples (sample021sample026) from their SHA-256-pinned sources using released converter updates, so the saved routing inputs reflect the boards declared routing constraints. Actual: The stored samples use altium-to-circuit-json 0.0.75. Their SRJs default to a 0.1 mm minimum trace width, omit source via padhole diameter limits, and disable blindburied vias for every board. The saved Circuit JSON also lacks the CAD bodies preserved by the newer importer. Expected  fix: Pin altium-to-circuit-json 0.0.106, altiumts 0.0.94, core 0.0.2165, Circuit JSON 0.0.528, and circuit-to-svg 0.0.450, then regenerate all six Circuit JSON files, SRJs, and comparison SVGs. The generator uses the public byte-input conversion API so parser objects do not cross different installed altiumts instances. Update the six README connection counts. The regenerated SRJs retain the sources 0.1524 mm minimum trace width and board-specific via dimensions; sample023 and sample024 now allow blindburied vias. Source hashes, obstacle geometry, connection counts, and endpoint definitions are unchanged across all six boards. The refreshed Circuit JSON adds 1,899 CAD component records and nine fabrication-note paths. Validation: Generate all six boards with bun run generate:ti --source-root verified-source-root; every source hash and generated Circuit JSON element passes validation. bun run test: 26 samples and 858 through-hole obstacles validated. bun run build: passes. All six regenerated samples have finite, noncollapsed rectangular obstacle bounds with dimensions above 1e-9 mm. Pipeline 9 with autorouter 0.0.985 and effort: 0.1 completes all 16 point-pair routes for regenerated sample023 without an error. This is a focused smoke test, not a full routing benchmark of all six boards. Rendered and visually inspected all six comparison SVGs; git diff --check passes. Related: Consumes released Altium routing-constraint support(https:github.comtscircuitaltium-to-circuit-jsonpull186) and primitive 3D body support(https:github.comtscircuitaltium-to-circuit-jsonpull208). Overlaps the routing-metadata regeneration in dataset-srj24 8(https:github.comtscircuitdataset-srj24pull8), and builds on main after the merged sample024 keepout regeneration 14(https:github.comtscircuitdataset-srj24pull14). Samples 001020 are unchanged. |
 | [#14](https://github.com/tscircuit/dataset-srj24/pull/14) | 🐌 Tiny | Sample024s five open keepout arcs expand into 1,430 SRJ obstacles; this PR regenerates them as 475 native rotated rectangles and square joinscaps and updates the SRJ comparison panel. It pins the official releases tscircuitcore0.0.2163 from merged core 4669(https:github.comtscircuitcorepull4669) and tscircuitcapacity-autorouter0.0.985 containing merged autorouter 3098(https:github.comtscircuittscircuit-autorouterpull3098), with integrity recorded in bun.lock. The other 2,988 obstacles, all 409 connections, routing settings, source metadata, and the original AltiumCircuit JSON comparison panels remain unchanged. Results compared with main: Five arcs: 1,430  475 obstacles. Sample024 total: 4,418  3,463 obstacles. Validation with Bun 1.4.0: Frozen-lockfile install passes with the official release versions. Regeneration with those releases reproduced the committed Sample024 JSON and SVG byte-for-byte. bun run test passes using the existing validator: 26 samples and 858 through-hole obstacles. bun run build passes with existing Vite browser-compatibility and chunk-size warnings. git diff --check passes. The PR targets main and changes only package.json, bun.lock, samplessample024.json, and its comparison SVG. Preprocessing coverage is covered by the merged coreautorouter regression tests. Vercel currently reports Authorization required to deploy. for fork commits; the local production build passes. |
-
-</details>
-
-### [imrishabh18](https://github.com/imrishabh18)
-
-| PRs # | Impact | Rating | Description |
-|------|--------|--------|-------------|
-| [#433](https://github.com/tscircuit/checks/pull/433) | 🐳 Major | ⭐⭐⭐ | Fixes incorrect reporting of component overhangs by using actual footprint geometry for boundary checks instead of bounding rectangles. |
-| [#5384](https://github.com/tscircuit/cli/pull/5384) | 🐳 Major | ⭐⭐⭐ | When TSCIRCUIT_STANDALONE1, serve the bundled RunFrame and preset the CLIs pinned eval version through the existing TSCIRCUIT_LATEST_EVAL_VERSION global. Disable online version selection, telemetry, and hosted page resources. Normal CLI behavior is unchanged. |
-| [#5368](https://github.com/tscircuit/cli/pull/5368) | 🐳 Major | ⭐⭐⭐ | Starts a loopback asset server for every command when TSCIRCUIT_BAKED_ASSET_SERVER_DIR is set, sets provider base URLs, and honors them in CLI searchimport lookups. |
-| [#5324](https://github.com/tscircuit/cli/pull/5324) | 🐳 Major | ⭐⭐⭐ | Add --jscdn-base-url url to tsci build, allowing users to set the JS CDN base URL for dynamic imports in the generated static site. |
-| [#3127](https://github.com/tscircuit/tscircuit-autorouter/pull/3127) | 🐳 Major | ⭐⭐⭐ | Fixes copper connectivity issues for QFP thermal pads, ensuring proper routing and obstacle handling in autorouting. |
-| [#142](https://github.com/tscircuit/circuit-json-to-step/pull/142) | 🐳 Major | ⭐⭐⭐ | STEP exports currently split printed parts into a filename map, which consumers package as ZIPs while omitting boards and ordinary assembly parts. Make circuitJsonToStep(circuitJson) return one STEP string containing the complete named assembly by default, including all supported PCB boards, components, printed parts, and other CAD parts. No exportMode or component-inclusion flags are needed for the default export; explicit exportMode: pcb retains the existing PCB-only path. Preserve colors, model origins, unit scale, rotations, and placement for JSCAD and imported STEP parts. Include supported external meshes with shared topology and scope holes to each board in multi-board designs. Missing geometry and nested imported STEP assemblies fail explicitly rather than producing incomplete assemblies. Update public types, the demo, documentation, and regression snapshots. Migration: Assembly output changes from Recordstring, string to string, and the default now includes the complete design even without assembly-part tags. Consumers requiring the previous PCB-only behavior must explicitly select exportMode: pcb. Validation: 29 converter tests (279 assertions), TypeScript, formatting, ESMdeclaration build, and whitespace checks passed. OCCT checks verify default exports for ordinary PCBs, mixed assemblies, multiple boards, and bare CAD, plus names, body counts, colors, transforms, cached STEP instances, and external meshes. The demo browser build remains blocked by the existing native resvgresvg-js .node dependency; the same error was reproduced at the prior PR head f3eca47. Consumer update: https:github.comtscircuittscircuit.compull5409 (draft until a release containing this default behavior is available). |
-| [#12](https://github.com/tscircuit/models.tscircuit.com/pull/12) | 🐳 Major | ⭐⭐⭐ | Required compatibility changes for 11: replace removed enum parameters with the current boolean selectors, preserve legacy hex-bolt links, and regenerate catalogssource pins for ModelPrinter 0.0.35. Includes NEMA23 rear-spacing and arc controls. This PR is stacked on 11 so that 11 stays limited to package versions and the lockfile. Validation: all 239 unit tests, 16 production browser tests, type checking, and the production build passed locally. CI checks the combined changes. |
-| [#18](https://github.com/tscircuit/tscircuit-standalone/pull/18) | 🐳 Major | ⭐⭐⭐ | Publish direct binaries for all five targets and link to them first in release notes. Keep optional archives, companion license notices, and checksums for every asset. Documentation edits are limited to the download table and usagechecksum details. |
-| [#15](https://github.com/tscircuit/tscircuit-standalone/pull/15) | 🐳 Major | ⭐⭐⭐ | Embed complete datasheet API responses, including generated TSX and pin attributes, and set TSCIRCUIT_BAKED_ASSET_SERVER_DIR to their extracted directory before launching the shared CLI. Reuse the catalog downloader and asset embedding, update the CLI pin to its merged server support, and share the baked snapshot across release targets. |
-| [#16](https://github.com/tscircuit/tscircuit-standalone/pull/16) | 🐳 Major | ⭐⭐⭐ | Add a macOS terminal installer that downloads a specified release with curl, selects arm64 or x64 automatically, verifies the selected archive against SHA256SUMS before extracting, and preserves all redistribution notices. |
-| [#11](https://github.com/tscircuit/tscircuit-standalone/pull/11) | 🐳 Major | ⭐⭐⭐ | The standalone executable now launches the shared tscircuitcli and supplies the prepared JS CDN directory expected by its merged devsite support. The CLI dependency is pinned to merged commit fc0f4e0739ce3b93b1fb1c332387c9ce9449ae98 (tscircuitcli5350). At build time, follow that CLIs RunFrame dependency graph to discover internal-dynamic-import calls, bundle the 11 requested packages from existing dependencies, and reuse the browserWASM adapters. At startup, extract the embedded files into a temporary directory and set TSCIRCUIT_STANDALONE1 and TSCIRCUIT_JSCDN_DIR before loading the CLI. tsci dev serves jscdn; tsci build --site automatically copies the files into distjscdn. Asset URLs remain relative for sites hosted below a subpath. Include the shared CLIs buildsnapshot workers and runtime module registration. Use portable RollupResvg WASM loaders for compilation. The previous prototype CLI remains available from source; the README and CI now describe and exercise the shared CLI. This bundles the JS CDN packages, not every remote service used by the CLI or RunFrame. No CLI package.json dependencies are added. Validation: Typechecks and the two small JS CDN unit tests pass. Compiled executable smoke passes on macOS arm64Bun 1.3.14: versionhelp, sequential and worker TSX builds, PNG output, automatic site copying, and real tsci dev, with no project dependencies or runtime on PATH. Chromium imports all 11 bundled packages and runs a WASM-backed FDM exporter from both dev and nested static-site URLs, with external browser requests blocked. Linux x64 cross-compilation and license inventory pass with CIs pinned Bun 1.3.12; the graph contains no native .node addons. Bun 1.3.12s compiled executables could not run on this Mac, so native local smoke used 1.3.14. Existing suite: 149 pass; one existing archive test requires GNU tar (--sortname), unavailable with this Macs BSD tar. Ubuntu CI covers the full suite, loopback-only browser check, and five compilation targets. |
-| [#4656](https://github.com/tscircuit/core/pull/4656) | 🐙 Minor | ⭐⭐ | Fixes alignment of generated rounded board outlines with the resolved board center during rendering, preventing false outside-board errors. |
-| [#5252](https://github.com/tscircuit/eval/pull/5252) | 🐙 Minor | ⭐⭐ | Allows CircuitRunner and createCircuitWebWorker to pass serializable jlcSearchBaseUrl and datasheetApiBaseUrl options into the default parts engine, preserving custom engines and EasyEDA proxy configuration, while updating the parts-engine dependency to 0.0.39. |
-| [#5390](https://github.com/tscircuit/cli/pull/5390) | 🐙 Minor | ⭐⭐ | Replaces the standalone import bailout with platformFetch routing to the local baked asset server, allowing EasyEDA requests, model downloads, and registry requests to stay local while handling missing baked responses appropriately. |
-| [#5380](https://github.com/tscircuit/cli/pull/5380) | 🐙 Minor | ⭐⭐ | Adds functionality to import generated datasheet TSX files in standalone mode, saving them to the imports directory before searching JLCSearch. |
-| [#5388](https://github.com/tscircuit/cli/pull/5388) | 🐙 Minor | ⭐⭐ | Standalone imports that cannot use the baked TSX now exit with code 1 and display a message indicating unavailability in tscircuit standalone, preventing fallback to online sources. |
-| [#5350](https://github.com/tscircuit/cli/pull/5350) | 🐙 Minor | ⭐⭐ | Copies prepared JS CDN packages to distjscdn when TSCIRCUIT_STANDALONE is set, allowing for automatic site builds with a default base URL. |
-| [#5344](https://github.com/tscircuit/cli/pull/5344) | 🐙 Minor | ⭐⭐ | Copies prepared JS CDN packages from TSCIRCUIT_JSCDN_DIR into distjscdn for static site builds, preserving paths and contents without downloading or rebuilding packages. |
-| [#5348](https://github.com/tscircuit/cli/pull/5348) | 🐙 Minor | ⭐⭐ | Serve prepared packages from TSCIRCUIT_JSCDN_DIR at jscdn and set window.TSCIRCUIT_JSCDN_BASE_URL  jscdn before runframe loads, with support for local testing via --jscdn-dir path. |
-| [#67](https://github.com/tscircuit/parts-engine/pull/67) | 🐙 Minor | ⭐⭐ | Allows JLC, DigiKey, Mouser, and datasheet requests to use serialized base URL options or their TSCIRCUIT__BASE_URL environment variables, preserving local server path prefixes and isolating cached responses by request URL. |
-| [#38](https://github.com/tscircuit/internal-dynamic-import/pull/38) | 🐙 Minor | ⭐⭐ | Allows hosts to set window.TSCIRCUIT_JSCDN_BASE_URL for importing optional modules, enabling a standalone CLI to serve bundled dependencies without custom importers. |
-| [#14](https://github.com/tscircuit/tscircuit-standalone/pull/14) | 🐙 Minor | ⭐⭐ | Fixes startup issues for the development environment when the standalone binary is located within the project directory, ensuring the executable is excluded during the process. |
-
-<details>
-<summary>🐌 Tiny Contributions (16)</summary>
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#4666](https://github.com/tscircuit/core/pull/4666) | 🐌 Tiny | Updates the tscircuitchecks dependency to version 0.0.256 and aligns existing fixtures with courtyard-aware boundary checks, including adjustments to board dimensions and validation of routing fixtures. |
-| [#503](https://github.com/tscircuit/jscad-electronics/pull/503) | 🐌 Tiny | Aligns the NEMA23 motor body with a newly designed curved rear cap, ensuring a flush fit without side overhang, while maintaining existing front features and improving rear mounting options. |
-| [#5739](https://github.com/tscircuit/runframe/pull/5739) | 🐌 Tiny | Forwards TSCIRCUIT_JLCSEARCH_BASE_URL and TSCIRCUIT_DATASHEET_API_BASE_URL from the page to evals partsEngineOptions whenever a worker is created, reusing existing lifecycle tests to cover configured and absent URLs. |
-| [#5715](https://github.com/tscircuit/runframe/pull/5715) | 🐌 Tiny | Updates the tscircuitinternal-dynamic-import package from version 0.0.15 to 0.0.18 and tscircuitprops from 0.0.697 to 0.0.702, enabling support for local JS CDN imports with a new base URL configuration. |
-| [#5433](https://github.com/tscircuit/cli/pull/5433) | 🐌 Tiny | Removes the --private flag from the tsci push command, clarifying that it does not affect existing package visibility and replaces it with a regression test for help output. |
-| [#5363](https://github.com/tscircuit/cli/pull/5363) | 🐌 Tiny | Excludes the running executable from initial file synchronization and filesystem watching during tsci dev, preventing upload timeouts. |
-| [#5378](https://github.com/tscircuit/cli/pull/5378) | 🐌 Tiny | Update tscircuiteval to 0.0.1619 and tscircuitrunframe to 0.0.2995 to consume the merged parts-engine base URL support in the CLI and browser worker. |
-| [#3088](https://github.com/tscircuit/tscircuit-autorouter/pull/3088) | 🐌 Tiny | Add bugreport109-book-reading-clip-lamp for the full placements-only book reading clip lamp 0.4.3(https:tscircuit.commusebook-reading-clip-lampfiles). Placements, connections and board rules are preserved; existing copper is removed. The number follows the packages bug-report script: highest existing number (108) plus one. The directory contains the matching .fixture.tsx and .srj.json files. There is no provenance file. Start the debugger with bun run start, then select bug-reports  bugreport109-book-reading-clip-lamp. One test attempts the entire circuit at effort 1 with caching disabled and saves a single native pipeline snapshot. Current Pipeline 9 stops at the static reachability precheck for source_net_0_mst26 (U5 EP  GND1), before detailed routing. The test asserts that existing failure. No solver changes. !Full-circuit Pipeline 9 routing attempt(https:raw.githubusercontent.comtscircuittscircuit-autorouterf3bf5bc4e944523437d470100800994b2a3ed88dtestsbugs__snapshots__bugreport109-book-reading-clip-lamp.snap.svg) Validation: renamed test passes against the existing snapshot; type check and full format check pass. sh bun test --timeout 9999999 testsbugsbugreport109-book-reading-clip-lamp.test.ts |
-| [#119](https://github.com/tscircuit/modelprinter/pull/119) | 🐌 Tiny | Aligns the NEMA23 rear cap with a new curved design and rectangular rear pattern, ensuring proper fit and validation against existing dimensions. |
-| [#54](https://github.com/tscircuit/circuit-json-webgpu/pull/54) | 🐌 Tiny | Removes tracking of all generated distribution files in the repository, ensuring that they are ignored by Git. |
-| [#52](https://github.com/tscircuit/circuit-json-webgpu/pull/52) | 🐌 Tiny | Remove the generated distindex.js bundle from version control and ignore that path so future builds do not add it back. The existing release workflow builds before publishing, and files: dist includes the generated bundle in published packages. Fix existing CI blockers in the base revision: Remove duplicate Resvg and convertCircuitJsonToPcbSvg imports from testsvisual.ts. Align the unit and browser bend tests with the renderers existing treatment of pcb_bend as mechanical metadata. The unit test compares the full board meshes with and without bend metadata; browser pixel and snapshot checks remain in place. Validation on 5873575: Renderer CI passes(https:github.comtscircuitcircuit-json-webgpuactionsruns39049840535): type checking, 89 unit tests, distribution build, 24 visual snapshots, all 597 feature snapshots, and layout checks. Parity CI passes(https:github.comtscircuitcircuit-json-webgpuactionsruns39049840217): zero regressions across 597 comparisons against the base revision. Vercel preview deployment passes. git check-ignore confirms the bundle is ignored. |
-| [#11](https://github.com/tscircuit/models.tscircuit.com/pull/11) | 🐌 Tiny | Update tscircuitmodelprinter to 0.0.35 and jscad-electronics to 0.0.238, including the merged NEMA23 model correction. Update the lockfile for frozen installs. Required site API compatibility is isolated in 12. Its CI validates both changes together. |
-| [#20](https://github.com/tscircuit/tscircuit-standalone/pull/20) | 🐌 Tiny | Updates the macOS installer example in the README to always download the latest published release using GitHubs releases API instead of a fixed dated release. |
-| [#19](https://github.com/tscircuit/tscircuit-standalone/pull/19) | 🐌 Tiny | Pins the CLI to a specific commit to ensure unavailable standalone imports return a representative message instead of falling back to EasyEDA or the registry. |
-| [#17](https://github.com/tscircuit/tscircuit-standalone/pull/17) | 🐌 Tiny | Embed the CLIs eval worker through RunFrames existing INJECT_TSCIRCUIT_EVAL_WEB_WORKER_BLOB_URL placeholder during binary compilation, allowing the browser to start the embedded code from a Blob URL without a separate worker file or endpoint. |
-| [#13](https://github.com/tscircuit/tscircuit-standalone/pull/13) | 🐌 Tiny | Fixes macOS standalone binaries being killed on startup due to malformed signature by updating Bun version and ensuring proper signing and verification of binaries. |
 
 </details>
 
@@ -2144,6 +2175,7 @@ pie
 |------|--------|--------|-------------|
 | [#4593](https://github.com/tscircuit/core/pull/4593) | 🐙 Minor | ⭐⭐ | Modifies solder paste generation logic to respect the isSmt property, preventing unwanted paste for through-hole components while retaining paste for mixed footprints. |
 | [#862](https://github.com/tscircuit/circuit-to-svg/pull/862) | 🐙 Minor | ⭐⭐ | Fixes incorrect rendering of vias with ignored dimensions and missing vias on different layers in PCB SVGs, ensuring accurate representation during layout review. |
+| [#49](https://github.com/tscircuit/circuit-json-webgpu/pull/49) | 🐙 Minor | ⭐⭐ | Fixes rendering issues with polygon-pad plated holes by translating pad outlines into board coordinates and reusing existing copper, soldermask, and drill passes, ensuring drill offsets are maintained correctly. |
 
 <details>
 <summary>🐌 Tiny Contributions (1)</summary>
