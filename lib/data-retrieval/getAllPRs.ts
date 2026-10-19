@@ -2,7 +2,6 @@ import { octokit } from "lib/sdks"
 import { resolveContributorIdentity } from "../contributor-identity"
 import type { PullRequestWithReviews, ReviewerStats } from "../types"
 import { batchProcess } from "../utils/batch-process"
-import { fetchAllPagesInWindow } from "./pagination"
 
 export async function getAllPRs(
   repo: string,
@@ -10,22 +9,25 @@ export async function getAllPRs(
   currentTime: Date = new Date(),
 ): Promise<PullRequestWithReviews[]> {
   const [owner, repo_name] = repo.split("/")
+  const fetchPRs = async (page = 1): Promise<any[]> => {
+    const { data } = await octokit.pulls.list({
+      owner,
+      repo: repo_name,
+      sort: "updated",
+      direction: "desc",
+      state: "all",
+      per_page: 100,
+      page,
+    })
+    if (data.length === 100) {
+      const nextPagePRs = await fetchPRs(page + 1)
+      return [...data, ...nextPagePRs]
+    }
+    return data
+  }
+
+  const prs = await fetchPRs()
   const sinceDate = new Date(since)
-  const prs = await fetchAllPagesInWindow({
-    since: sinceDate,
-    fetchPage: async (page, perPage) => {
-      const { data } = await octokit.pulls.list({
-        owner,
-        repo: repo_name,
-        sort: "updated",
-        direction: "desc",
-        state: "all",
-        per_page: perPage,
-        page,
-      })
-      return data
-    },
-  })
   const currentTimeMs = currentTime.getTime()
   const filteredPRs = prs.filter((pr) => {
     if (!pr.user) return false
