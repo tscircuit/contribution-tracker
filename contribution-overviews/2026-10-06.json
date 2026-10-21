@@ -4,24 +4,53 @@
     "githubLogin": "0hmX",
     "reviewsReceived": 29,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 4,
+    "staffReviewedPrLinks": [
+      {
+        "number": 4536,
+        "url": "https://github.com/tscircuit/core/pull/4536",
+        "title": "fix: expose through-hole via ports on every occupied layer",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4529,
+        "url": "https://github.com/tscircuit/core/pull/4529",
+        "title": "fix: report disallowed blind/buried vias in manual paths",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4535,
+        "url": "https://github.com/tscircuit/core/pull/4535",
+        "title": "fix: report disconnected manual via paths as PCB errors",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4534,
+        "url": "https://github.com/tscircuit/core/pull/4534",
+        "title": "repro: through-hole vias omit inner-layer ports",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 49,
-    "prsMerged": 7,
+    "prsOpened": 52,
+    "prsMerged": 14,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 14,
+    "score": 22,
     "major": 1,
-    "minor": 3,
-    "tiny": 3,
+    "minor": 5,
+    "tiny": 7,
     "stars": "⭐⭐"
   },
   "2503piglu": {
@@ -82,16 +111,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 9,
+    "approvalsGiven": 12,
     "rejectionsGiven": 1,
-    "prsOpened": 12,
+    "prsOpened": 15,
     "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
+    "distinctPrsReviewedNonCodeOwner": 11,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 13,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/3d-viewer",
+        "paths": [
+          "*"
+        ]
+      }
+    ],
+    "score": 16,
     "major": 1,
     "minor": 0,
     "tiny": 1,
@@ -165,7 +202,7 @@
   "Devesh36": {
     "githubId": 142524747,
     "githubLogin": "Devesh36",
-    "reviewsReceived": 34,
+    "reviewsReceived": 36,
     "rejectionsReceived": 10,
     "approvalsReceived": 20,
     "staffReviewedPrs": 1,
@@ -238,9 +275,9 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 15,
+    "reviewsReceived": 19,
     "rejectionsReceived": 4,
-    "approvalsReceived": 6,
+    "approvalsReceived": 12,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
@@ -263,7 +300,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 18,
-    "prsMerged": 6,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -275,12 +312,32 @@
     "tiny": 2,
     "stars": "⭐⭐"
   },
+  "KAGUYA0423": {
+    "githubId": 341954040,
+    "githubLogin": "KAGUYA0423",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 2,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 1,
+    "reviewsReceived": 9,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -288,7 +345,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 15,
-    "prsMerged": 1,
+    "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -323,13 +380,55 @@
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 13,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 10,
-    "staffReviewedPrs": 4,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 5,
+    "reviewsReceived": 22,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 16,
+    "staffReviewedPrs": 10,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 11,
     "staffReviewedPrLinks": [
+      {
+        "number": 238,
+        "url": "https://github.com/tscircuit/circuit-json-util/pull/238",
+        "title": "fix: preserve rectangular solder paste orientation during transforms",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4596,
+        "url": "https://github.com/tscircuit/core/pull/4596",
+        "title": "Add standalone solder paste apertures",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4567,
+        "url": "https://github.com/tscircuit/core/pull/4567",
+        "title": "fix: use proportional schematic text widths to avoid GND detours",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 249,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/249",
+        "title": "feat: detect separated switch diodes and excessive matrix spacing",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 256,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/256",
+        "title": "feat: detect parallel resistors drawn inline",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 244,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/244",
+        "title": "feat: detect separated series RC filter components",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 259,
         "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/259",
@@ -359,20 +458,60 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
+    "approvalsGiven": 11,
     "rejectionsGiven": 1,
-    "prsOpened": 32,
-    "prsMerged": 21,
+    "prsOpened": 36,
+    "prsMerged": 32,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 11,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 44,
+    "score": 55,
     "major": 5,
-    "minor": 7,
-    "tiny": 9,
-    "stars": "⭐⭐"
+    "minor": 11,
+    "tiny": 13,
+    "stars": "⭐⭐⭐"
+  },
+  "PINYOPATTANAWASANPORN": {
+    "githubId": 317272744,
+    "githubLogin": "PINYOPATTANAWASANPORN",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "Pr1yansu": {
+    "githubId": 113017699,
+    "githubLogin": "Pr1yansu",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "Ratanlavate": {
     "githubId": 250927248,
@@ -397,9 +536,9 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 35,
+    "reviewsReceived": 34,
     "rejectionsReceived": 0,
-    "approvalsReceived": 31,
+    "approvalsReceived": 32,
     "staffReviewedPrs": 5,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 5,
@@ -440,15 +579,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 24,
+    "approvalsGiven": 27,
     "rejectionsGiven": 0,
-    "prsOpened": 155,
-    "prsMerged": 42,
+    "prsOpened": 164,
+    "prsMerged": 44,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 23,
-    "distinctPrsReviewedAsCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 25,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -461,12 +600,18 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/tscircuit-autorouter",
+        "paths": [
+          "*"
+        ]
       }
     ],
     "score": 87,
     "major": 7,
     "minor": 16,
-    "tiny": 19,
+    "tiny": 20,
     "stars": "👑"
   },
   "TassioSales": {
@@ -481,7 +626,27 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 17,
+    "prsOpened": 29,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "ZitRatInka96": {
+    "githubId": 337455981,
+    "githubLogin": "ZitRatInka96",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -532,7 +697,7 @@
   "atani": {
     "githubId": 76104,
     "githubLogin": "atani",
-    "reviewsReceived": 21,
+    "reviewsReceived": 37,
     "rejectionsReceived": 1,
     "approvalsReceived": 0,
     "staffReviewedPrs": 0,
@@ -541,7 +706,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
+    "prsOpened": 14,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -652,17 +817,31 @@
   "hrithik18k": {
     "githubId": 178554403,
     "githubLogin": "hrithik18k",
-    "reviewsReceived": 15,
-    "rejectionsReceived": 3,
-    "approvalsReceived": 9,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 2,
+    "reviewsReceived": 22,
+    "rejectionsReceived": 5,
+    "approvalsReceived": 10,
+    "staffReviewedPrs": 4,
+    "staffRejectionsReceived": 4,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [
+      {
+        "number": 928,
+        "url": "https://github.com/tscircuit/props/pull/928",
+        "title": "Allow plated holes to suppress automatic solder paste",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
       {
         "number": 4427,
         "url": "https://github.com/tscircuit/core/pull/4427",
         "title": "fix: preserve property inheritance for explicit undefined values",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 4480,
+        "url": "https://github.com/tscircuit/core/pull/4480",
+        "title": "Stop generating automatic solder paste for plated holes",
         "staffApprovals": 0,
         "staffRejections": 1
       },
@@ -676,8 +855,8 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 22,
-    "prsMerged": 7,
+    "prsOpened": 24,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -692,17 +871,24 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 5,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 5654,
         "url": "https://github.com/tscircuit/runframe/pull/5654",
         "title": "Export printed parts as STEP assemblies",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5324,
+        "url": "https://github.com/tscircuit/cli/pull/5324",
+        "title": "Add --jscdn-base-url to static site builds",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -721,14 +907,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 18,
-    "rejectionsGiven": 9,
-    "prsOpened": 63,
-    "prsMerged": 32,
+    "approvalsGiven": 27,
+    "rejectionsGiven": 12,
+    "prsOpened": 76,
+    "prsMerged": 46,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedNonCodeOwner": 19,
     "distinctPrsReviewedAsCodeOwner": 5,
     "reposOwned": [
       {
@@ -738,10 +924,10 @@
         ]
       }
     ],
-    "score": 55,
-    "major": 7,
-    "minor": 7,
-    "tiny": 18,
+    "score": 71,
+    "major": 8,
+    "minor": 13,
+    "tiny": 22,
     "stars": "⭐⭐⭐"
   },
   "jloa-dev": {
@@ -764,12 +950,32 @@
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
   },
+  "melcheikh": {
+    "githubId": 157884230,
+    "githubLogin": "melcheikh",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 6,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 5,
+    "approvalsReceived": 7,
     "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 4,
@@ -805,18 +1011,18 @@
     ],
     "approvalsGiven": 7,
     "rejectionsGiven": 1,
-    "prsOpened": 54,
-    "prsMerged": 21,
+    "prsOpened": 55,
+    "prsMerged": 26,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 5,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 49,
+    "score": 52,
     "major": 5,
     "minor": 8,
-    "tiny": 8,
-    "stars": "⭐⭐"
+    "tiny": 11,
+    "stars": "⭐⭐⭐"
   },
   "rjdotdev": {
     "githubId": 191971597,
@@ -841,12 +1047,12 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 34,
+    "reviewsReceived": 37,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 12,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 901,
@@ -861,12 +1067,26 @@
         "title": "feat: allow custom pin row courtyard dimensions",
         "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 4571,
+        "url": "https://github.com/tscircuit/core/pull/4571",
+        "title": "Fix footprint keepouts staying behind after PCB layout",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4570,
+        "url": "https://github.com/tscircuit/core/pull/4570",
+        "title": "fix: respect rotated pad geometry when assigning routed source traces",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 14,
     "rejectionsGiven": 0,
     "prsOpened": 17,
-    "prsMerged": 7,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -881,22 +1101,22 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 93,
+    "reviewsReceived": 105,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 25,
-    "rejectionsGiven": 6,
-    "prsOpened": 520,
-    "prsMerged": 295,
+    "approvalsGiven": 44,
+    "rejectionsGiven": 8,
+    "prsOpened": 573,
+    "prsMerged": 331,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 22,
-    "distinctPrsReviewedAsCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 36,
+    "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -917,7 +1137,19 @@
         ]
       },
       {
+        "repo": "tscircuit/circuit-json-to-gerber",
+        "paths": [
+          "*"
+        ]
+      },
+      {
         "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit-autorouter",
         "paths": [
           "*"
         ]
@@ -935,11 +1167,31 @@
         ]
       }
     ],
-    "score": 639.5,
-    "major": 121,
-    "minor": 71,
-    "tiny": 99,
+    "score": 725.5,
+    "major": 137,
+    "minor": 82,
+    "tiny": 106,
     "stars": "👑👑👑"
+  },
+  "shkwan411": {
+    "githubId": 331648675,
+    "githubLogin": "shkwan411",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "sprintstate": {
     "githubId": 89783358,
@@ -1009,17 +1261,45 @@
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 22,
+    "reviewsReceived": 42,
     "rejectionsReceived": 3,
-    "approvalsReceived": 14,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 1,
+    "approvalsReceived": 23,
+    "staffReviewedPrs": 6,
+    "staffRejectionsReceived": 3,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
+      {
+        "number": 4597,
+        "url": "https://github.com/tscircuit/core/pull/4597",
+        "title": "Preserve native keepout outlines with verified autorouter coverage",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 4580,
+        "url": "https://github.com/tscircuit/core/pull/4580",
+        "title": "Include custom-symbol pins in schematic routing bounds",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 814,
         "url": "https://github.com/tscircuit/circuit-to-svg/pull/814",
         "title": "Show dark centers on tented vias",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3054,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3054",
+        "title": "Preserve coverage of unconnected rotated keepouts",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 3055,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3055",
+        "title": "Reproduce Pipeline9 routing through rotated keepouts",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -1033,12 +1313,12 @@
     ],
     "approvalsGiven": 16,
     "rejectionsGiven": 3,
-    "prsOpened": 29,
-    "prsMerged": 22,
+    "prsOpened": 43,
+    "prsMerged": 31,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 15,
+    "distinctPrsReviewedNonCodeOwner": 16,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -1048,10 +1328,10 @@
         ]
       }
     ],
-    "score": 34,
-    "major": 0,
+    "score": 39,
+    "major": 1,
     "minor": 11,
-    "tiny": 11,
+    "tiny": 12,
     "stars": "⭐⭐"
   },
   "techmannih2": {
@@ -1077,9 +1357,9 @@
   "trixie010": {
     "githubId": 203519918,
     "githubLogin": "trixie010",
-    "reviewsReceived": 3,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 2,
@@ -1102,7 +1382,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 3,
-    "prsMerged": 2,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1126,8 +1406,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 751,
-    "prsMerged": 617,
+    "prsOpened": 979,
+    "prsMerged": 799,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1136,8 +1416,28 @@
     "score": 15,
     "major": 0,
     "minor": 0,
-    "tiny": 617,
+    "tiny": 798,
     "stars": "⭐⭐"
+  },
+  "valmir5522": {
+    "githubId": 329320595,
+    "githubLogin": "valmir5522",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "xiaolu-FS": {
     "githubId": 269728253,
