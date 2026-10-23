@@ -316,19 +316,19 @@ function getMonthFile(year: number, month: number): string {
   )
 }
 
-function main() {
-  // Get the current month by default
-  const date = new Date()
-  const currentYear = date.getUTCFullYear()
-  const currentMonth = date.getUTCMonth() + 1
-
-  // Use command line args if provided (format: year month)
-  const args = process.argv.slice(2)
-  const year = args[0] ? parseInt(args[0]) : currentYear
-  const month = args[1] ? parseInt(args[1]) : currentMonth
-
+function generateMonthSponsorship({
+  year,
+  month,
+  today,
+  skipEmptyMonth = false,
+}: {
+  year: number
+  month: number
+  today: Date
+  skipEmptyMonth?: boolean
+}) {
   // Get full weeks for the specified month
-  const weeks = getFullWeeksForMonth(year, month)
+  const weeks = getFullWeeksForMonth(year, month, today)
 
   // Read weekly data for each week
   const contributorStatsByWeek = weeks.map((week) => ({
@@ -339,6 +339,10 @@ function main() {
 
   // Check if we have enough weeks
   if (contributorStatsByWeek.length === 0) {
+    if (skipEmptyMonth) {
+      console.log(`Skipping ${year}-${month}: no completed weekly data`)
+      return
+    }
     console.error(`No weekly data found for ${year}-${month}`)
     process.exit(1)
   }
@@ -396,6 +400,34 @@ function main() {
     console.log(`\nUsers excluded from sponsorship (ineligible):`)
     INELIGIBLE_FOR_SPONSORSHIP.forEach((entry) => {
       console.log(`  - ${entry.github_username}: ${entry.reason}`)
+    })
+  }
+}
+
+function main() {
+  const today = new Date()
+  const args = process.argv.slice(2)
+
+  // An explicit year/month still regenerates only the requested month.
+  if (args.length > 0) {
+    generateMonthSponsorship({
+      year: args[0] ? parseInt(args[0]) : today.getUTCFullYear(),
+      month: args[1] ? parseInt(args[1]) : today.getUTCMonth() + 1,
+      today,
+    })
+    return
+  }
+
+  // The previous month's final week can complete after the month rolls over.
+  const previousMonth = new Date(
+    Date.UTC(today.getUTCFullYear(), today.getUTCMonth() - 1, 1),
+  )
+  for (const monthDate of [previousMonth, today]) {
+    generateMonthSponsorship({
+      year: monthDate.getUTCFullYear(),
+      month: monthDate.getUTCMonth() + 1,
+      today,
+      skipEmptyMonth: true,
     })
   }
 }
