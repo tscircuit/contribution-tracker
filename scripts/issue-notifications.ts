@@ -1,7 +1,8 @@
-import { WebhookClient, type MessageCreateOptions } from "discord.js"
-import { getRepos } from "lib/data-retrieval/getRepos"
-import { octokit } from "lib/sdks"
+import { type MessageCreateOptions, WebhookClient } from "discord.js"
 import { EXCLUDED_BOTS } from "lib/constants"
+import { getRepos } from "lib/data-retrieval/getRepos"
+import { chunkDiscordIssueNotification } from "lib/notifications/chunkDiscordIssues"
+import { octokit } from "lib/sdks"
 
 const discordWebhook = new WebhookClient({
   url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
@@ -61,21 +62,20 @@ async function notifyDiscord(issues: Issue[], repo: string) {
     `[${getUTCDateTime()}] Sending notification for ${issues.length} issues from ${repo} to Discord`,
   )
 
-  const messageContent =
-    `New issues in ${repo}:\n` +
-    issues
-      .map(
-        (issue) =>
-          `• #${issue.number} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`,
-      )
-      .join("\n")
+  const chunks = chunkDiscordIssueNotification(issues, repo)
+  console.log(
+    `[${getUTCDateTime()}] Split notification into ${chunks.length} message(s) to respect Discord 2,000-character limit`,
+  )
 
-  const messageOptions: MessageCreateOptions = {
-    content: messageContent,
-    allowedMentions: { parse: [] }, // This prevents link previews
+  for (const chunk of chunks) {
+    const messageOptions: MessageCreateOptions = {
+      content: chunk,
+      allowedMentions: { parse: [] }, // This prevents link previews
+    }
+
+    await discordWebhook.send(messageOptions)
   }
 
-  await discordWebhook.send(messageOptions)
   console.log(
     `[${getUTCDateTime()}] Successfully sent Discord notification for ${repo}`,
   )
@@ -103,7 +103,14 @@ async function main() {
   )
 
   for (const [repo, issues] of Object.entries(allIssues)) {
-    await notifyDiscord(issues, repo)
+    try {
+      await notifyDiscord(issues, repo)
+    } catch (error) {
+      console.error(
+        `[${getUTCDateTime()}] Failed to send Discord notification for ${repo}:`,
+        error,
+      )
+    }
   }
 
   console.log(`[${getUTCDateTime()}] Completed issue notification process`)
