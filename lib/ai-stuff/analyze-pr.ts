@@ -42,6 +42,7 @@ export async function analyzePRWithAI(
     result.object,
     repo,
     pr.manualStarRating,
+    pr.hasMajorTag,
   )
   return {
     ...result.object,
