@@ -16,6 +16,7 @@ import {
 } from "../lib/hardware-reimbursements"
 import { CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC } from "../lib/ai/date-utils"
 import { resolveContributorIdentity } from "../lib/contributor-identity"
+import { arePaymentArtifactsDisabled } from "../lib/payment-artifacts"
 
 interface WeeklyContributorStats {
   githubId?: number
@@ -326,6 +327,13 @@ function main() {
   const args = process.argv.slice(2)
   const year = args[0] ? parseInt(args[0]) : currentYear
   const month = args[1] ? parseInt(args[1]) : currentMonth
+
+  if (arePaymentArtifactsDisabled(year, month)) {
+    console.log(
+      `Payment artifacts are disabled for ${year}-${month.toString().padStart(2, "0")}; skipping sponsorship CSV generation.`,
+    )
+    return
+  }
 
   // Get full weeks for the specified month
   const weeks = getFullWeeksForMonth(year, month)

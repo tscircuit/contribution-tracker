@@ -2625,6 +2625,13 @@ pie
 
 - `bun run export:sponsorship` - Generate sponsorship data CSV
 
+Payment CSV generation is disabled for November 2026 and all later payment
+months by `DISABLE_PAYMENT_ARTIFACTS` in `lib/payment-artifacts.ts` while CSV
+uploads are unavailable. Scheduled runs, manual workflows, and local exports
+skip these months successfully before reading payment data or writing files.
+October 2026 and earlier exports remain available. Set the flag to `false` to
+resume generation. Existing payment files and contribution overviews are preserved.
+
 #### Development
 
 - `bun run dev` - Start development server for web UI
