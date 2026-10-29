@@ -40,12 +40,28 @@ pie
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
+| [MustafaMulla29](#MustafaMulla29) | 7 | 0 | 7 | 100.0% |
 | [0hmX](#0hmX) | 5 | 0 | 5 | 100.0% |
-| [MustafaMulla29](#MustafaMulla29) | 5 | 0 | 5 | 100.0% |
-| [Abse2001](#Abse2001) | 3 | 0 | 3 | 100.0% |
+| [Abse2001](#Abse2001) | 4 | 0 | 4 | 100.0% |
+| [imrishabh18](#imrishabh18) | 1 | 0 | 2 | 100.0% |
 | [mohan-bee](#mohan-bee) | 1 | 0 | 1 | 100.0% |
 | [pthm](#pthm) | 1 | 0 | 1 | 100.0% |
+| [raykholo](#raykholo) | 1 | 0 | 1 | 100.0% |
 | [rushabhcodes](#rushabhcodes) | 1 | 0 | 1 | 100.0% |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 0 | 1 | 100.0% |
+
+<details>
+<summary>MustafaMulla29 SPR PRs (7)</summary>
+
+- [#27](https://github.com/tscircuit/circuit-json-to-pnp-csv/pull/27) fix: export PnP from authored footprint origin
+- [#761](https://github.com/tscircuit/circuit-json-to-kicad/pull/761) fix: preserve nets on internally connected pads
+- [#370](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/370) fix: detect ground pins above passive signal branches
+- [#366](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/366) Extend chip-pin capacitor placement checks to grounded capacitors
+- [#364](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/364) Detect separated RRC timing networks
+- [#357](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/357) Detect misaligned connector–test-point connections
+- [#355](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/355) Detect reversed inductor–capacitor grouping
+
+</details>
 
 <details>
 <summary>0hmX SPR PRs (5)</summary>
@@ -59,22 +75,19 @@ pie
 </details>
 
 <details>
-<summary>MustafaMulla29 SPR PRs (5)</summary>
+<summary>Abse2001 SPR PRs (4)</summary>
 
-- [#761](https://github.com/tscircuit/circuit-json-to-kicad/pull/761) fix: preserve nets on internally connected pads
-- [#366](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/366) Extend chip-pin capacitor placement checks to grounded capacitors
-- [#364](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/364) Detect separated RRC timing networks
-- [#357](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/357) Detect misaligned connector–test-point connections
-- [#355](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/355) Detect reversed inductor–capacitor grouping
+- [#1088](https://github.com/tscircuit/pcb-viewer/pull/1088) feat: search PCB components and briefly highlight results
+- [#226](https://github.com/tscircuit/circuit-json-to-gerber/pull/226) fix: preserve board and route via tenting in Gerber export (#3903)
+- [#5619](https://github.com/tscircuit/cli/pull/5619) chore: update KiCad exporter to 0.0.257
+- [#131](https://github.com/tscircuit/copper-pour-solver/pull/131) chore: prepare 0.0.68 release containing explicit-pour clipping
 
 </details>
 
 <details>
-<summary>Abse2001 SPR PRs (3)</summary>
+<summary>imrishabh18 SPR PRs (1)</summary>
 
-- [#226](https://github.com/tscircuit/circuit-json-to-gerber/pull/226) fix: preserve board and route via tenting in Gerber export (#3903)
-- [#5619](https://github.com/tscircuit/cli/pull/5619) chore: update KiCad exporter to 0.0.257
-- [#131](https://github.com/tscircuit/copper-pour-solver/pull/131) chore: prepare 0.0.68 release containing explicit-pour clipping
+- [#4959](https://github.com/tscircuit/core/pull/4959) refactor: resolve component-specific Footprinter definitions in core
 
 </details>
 
@@ -93,9 +106,23 @@ pie
 </details>
 
 <details>
+<summary>raykholo SPR PRs (1)</summary>
+
+- [#948](https://github.com/tscircuit/docs/pull/948) docs(symbol): sizing a symbol (width / height, fit, viewbox)
+
+</details>
+
+<details>
 <summary>rushabhcodes SPR PRs (1)</summary>
 
 - [#222](https://github.com/tscircuit/circuit-json-to-gerber/pull/222) fix: rotate polygon plated-hole pads and soldermask
+
+</details>
+
+<details>
+<summary>ShiboSoftwareDev SPR PRs (1)</summary>
+
+- [#4991](https://github.com/tscircuit/core/pull/4991) Bump circuit-json-to-gltf to 0.0.158
 
 </details>
 
@@ -111,25 +138,28 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [0hmX](#0hmX) | 9 | 5 | 0 | 0 | 0 | 21 | 15 | 0 |
-| [Abse2001](#Abse2001) | 3 | 3 | 0 | 1 | 0 | 7 | 5 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 5 | 5 | 0 | 0 | 0 | 8 | 7 | 0 |
+| [0hmX](#0hmX) | 12 | 5 | 0 | 1 | 0 | 29 | 18 | 0 |
+| [Abse2001](#Abse2001) | 4 | 4 | 0 | 5 | 0 | 17 | 6 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 5 | 5 | 0 | 0 | 0 | 12 | 8 | 0 |
 | [Daeil-Jung](#Daeil-Jung) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [GokulPandi-M](#GokulPandi-M) | 2 | 1 | 1 | 0 | 0 | 3 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 1 | 0 | 0 | 5 | 2 | 7 | 5 | 0 |
-| [KrishnaX12](#KrishnaX12) | 1 | 1 | 0 | 0 | 0 | 2 | 1 | 0 |
+| [GokulPandi-M](#GokulPandi-M) | 5 | 4 | 1 | 0 | 0 | 7 | 2 | 0 |
+| [imrishabh18](#imrishabh18) | 3 | 0 | 0 | 8 | 3 | 14 | 6 | 0 |
+| [KrishnaX12](#KrishnaX12) | 2 | 2 | 0 | 0 | 0 | 5 | 2 | 0 |
 | [mohan-bee](#mohan-bee) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 11 | 8 | 1 | 0 | 0 | 19 | 17 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 16 | 12 | 1 | 0 | 0 | 31 | 25 | 0 |
+| [natertatter](#natertatter) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [Ojas2095](#Ojas2095) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [pthm](#pthm) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
-| [rushabhcodes](#rushabhcodes) | 13 | 1 | 0 | 0 | 0 | 8 | 2 | 0 |
-| [seveibar](#seveibar) | 11 | 0 | 0 | 16 | 0 | 45 | 34 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 0 | 0 | 0 | 5 | 0 | 20 | 0 | 0 |
+| [raykholo](#raykholo) | 2 | 2 | 0 | 0 | 0 | 1 | 1 | 0 |
+| [rushabhcodes](#rushabhcodes) | 13 | 1 | 0 | 1 | 0 | 8 | 2 | 0 |
+| [seveibar](#seveibar) | 15 | 1 | 0 | 21 | 0 | 65 | 49 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 3 | 3 | 0 | 9 | 0 | 37 | 5 | 0 |
 | [sreecharan-desu](#sreecharan-desu) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [techmannih](#techmannih) | 1 | 1 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [techmannih](#techmannih) | 7 | 4 | 1 | 0 | 0 | 13 | 6 | 0 |
 | [thanhdo1991](#thanhdo1991) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 94 | 68 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 172 | 131 | 0 |
 | [voropaevv](#voropaevv) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [zainrizvi0611-cmd](#zainrizvi0611-cmd) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
 | [ZhaZhaBei](#ZhaZhaBei) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 
 ## Changes by Repository
