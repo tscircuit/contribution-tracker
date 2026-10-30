@@ -43,12 +43,14 @@ pie
 | [MustafaMulla29](#MustafaMulla29) | 7 | 0 | 7 | 100.0% |
 | [0hmX](#0hmX) | 5 | 0 | 5 | 100.0% |
 | [Abse2001](#Abse2001) | 4 | 0 | 4 | 100.0% |
-| [imrishabh18](#imrishabh18) | 1 | 0 | 2 | 100.0% |
-| [mohan-bee](#mohan-bee) | 1 | 0 | 1 | 100.0% |
+| [techmannih](#techmannih) | 3 | 0 | 3 | 100.0% |
+| [imrishabh18](#imrishabh18) | 2 | 0 | 3 | 100.0% |
+| [mohan-bee](#mohan-bee) | 2 | 0 | 2 | 100.0% |
+| [rushabhcodes](#rushabhcodes) | 2 | 0 | 2 | 100.0% |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 2 | 0 | 2 | 100.0% |
+| [AnasSarkiz](#AnasSarkiz) | 1 | 0 | 1 | 100.0% |
 | [pthm](#pthm) | 1 | 0 | 1 | 100.0% |
 | [raykholo](#raykholo) | 1 | 0 | 1 | 100.0% |
-| [rushabhcodes](#rushabhcodes) | 1 | 0 | 1 | 100.0% |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 1 | 0 | 1 | 100.0% |
 
 <details>
 <summary>MustafaMulla29 SPR PRs (7)</summary>
@@ -85,16 +87,50 @@ pie
 </details>
 
 <details>
-<summary>imrishabh18 SPR PRs (1)</summary>
+<summary>techmannih SPR PRs (3)</summary>
 
-- [#4959](https://github.com/tscircuit/core/pull/4959) refactor: resolve component-specific Footprinter definitions in core
+- [#3353](https://github.com/tscircuit/tscircuit-autorouter/pull/3353) fix: preserve routing quality while preventing new peer trace shorts
+- [#183](https://github.com/tscircuit/high-density-repair03/pull/183) fix: prevent new trace-to-trace shorts in repair output
+- [#182](https://github.com/tscircuit/high-density-repair03/pull/182) test: reproduce force repair introducing a peer trace short
 
 </details>
 
 <details>
-<summary>mohan-bee SPR PRs (1)</summary>
+<summary>imrishabh18 SPR PRs (2)</summary>
+
+- [#4959](https://github.com/tscircuit/core/pull/4959) refactor: resolve component-specific Footprinter definitions in core
+- [#3354](https://github.com/tscircuit/tscircuit-autorouter/pull/3354) Remove runtime checks calls from autorouter execution
+
+</details>
+
+<details>
+<summary>mohan-bee SPR PRs (2)</summary>
 
 - [#956](https://github.com/tscircuit/props/pull/956) add assembly cable waypoints
+- [#4868](https://github.com/tscircuit/core/pull/4868) add assembly cable waypoint routing
+
+</details>
+
+<details>
+<summary>rushabhcodes SPR PRs (2)</summary>
+
+- [#222](https://github.com/tscircuit/circuit-json-to-gerber/pull/222) fix: rotate polygon plated-hole pads and soldermask
+- [#5629](https://github.com/tscircuit/tscircuit.com/pull/5629) Add tooltip to GitHub repository refresh button
+
+</details>
+
+<details>
+<summary>ShiboSoftwareDev SPR PRs (2)</summary>
+
+- [#4991](https://github.com/tscircuit/core/pull/4991) Bump circuit-json-to-gltf to 0.0.158
+- [#507](https://github.com/tscircuit/jscad-electronics/pull/507) Preserve authored DFN body dimensions
+
+</details>
+
+<details>
+<summary>AnasSarkiz SPR PRs (1)</summary>
+
+- [#107](https://github.com/tscircuit/bus-lanes-solver/pull/107) fix: support board outlines
 
 </details>
 
@@ -112,20 +148,6 @@ pie
 
 </details>
 
-<details>
-<summary>rushabhcodes SPR PRs (1)</summary>
-
-- [#222](https://github.com/tscircuit/circuit-json-to-gerber/pull/222) fix: rotate polygon plated-hole pads and soldermask
-
-</details>
-
-<details>
-<summary>ShiboSoftwareDev SPR PRs (1)</summary>
-
-- [#4991](https://github.com/tscircuit/core/pull/4991) Bump circuit-json-to-gltf to 0.0.158
-
-</details>
-
 > Note: AI evaluates PRs and assigns 1-3 star ratings automatically. 4 and 5 star ratings require manual staff review.
 
 ## Review Table
@@ -139,27 +161,29 @@ pie
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
 | [0hmX](#0hmX) | 12 | 5 | 0 | 1 | 0 | 29 | 18 | 0 |
+| [1932819331hy-debug](#1932819331hy-debug) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [Abse2001](#Abse2001) | 4 | 4 | 0 | 5 | 0 | 17 | 6 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 5 | 5 | 0 | 0 | 0 | 12 | 8 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 6 | 6 | 0 | 4 | 0 | 20 | 10 | 0 |
 | [Daeil-Jung](#Daeil-Jung) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [GokulPandi-M](#GokulPandi-M) | 5 | 4 | 1 | 0 | 0 | 7 | 2 | 0 |
-| [imrishabh18](#imrishabh18) | 3 | 0 | 0 | 8 | 3 | 14 | 6 | 0 |
-| [KrishnaX12](#KrishnaX12) | 2 | 2 | 0 | 0 | 0 | 5 | 2 | 0 |
-| [mohan-bee](#mohan-bee) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 16 | 12 | 1 | 0 | 0 | 31 | 25 | 0 |
+| [GokulPandi-M](#GokulPandi-M) | 8 | 7 | 1 | 0 | 0 | 7 | 4 | 0 |
+| [imrishabh18](#imrishabh18) | 4 | 1 | 0 | 17 | 6 | 17 | 7 | 0 |
+| [KrishnaX12](#KrishnaX12) | 3 | 3 | 0 | 0 | 0 | 5 | 3 | 0 |
+| [maheshbawne987-coder](#maheshbawne987-coder) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [mohan-bee](#mohan-bee) | 2 | 2 | 0 | 0 | 0 | 2 | 2 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 21 | 14 | 3 | 1 | 0 | 41 | 37 | 0 |
 | [natertatter](#natertatter) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [Ojas2095](#Ojas2095) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [pthm](#pthm) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
 | [raykholo](#raykholo) | 2 | 2 | 0 | 0 | 0 | 1 | 1 | 0 |
-| [rushabhcodes](#rushabhcodes) | 13 | 1 | 0 | 1 | 0 | 8 | 2 | 0 |
-| [seveibar](#seveibar) | 15 | 1 | 0 | 21 | 0 | 65 | 49 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 3 | 3 | 0 | 9 | 0 | 37 | 5 | 0 |
+| [rushabhcodes](#rushabhcodes) | 41 | 8 | 1 | 4 | 0 | 26 | 9 | 0 |
+| [seveibar](#seveibar) | 19 | 1 | 0 | 29 | 0 | 94 | 70 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 10 | 9 | 0 | 9 | 0 | 67 | 16 | 0 |
 | [sreecharan-desu](#sreecharan-desu) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [techmannih](#techmannih) | 7 | 4 | 1 | 0 | 0 | 13 | 6 | 0 |
+| [techmannih](#techmannih) | 11 | 7 | 1 | 0 | 0 | 17 | 9 | 0 |
 | [thanhdo1991](#thanhdo1991) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 172 | 131 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 239 | 184 | 0 |
 | [voropaevv](#voropaevv) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [zainrizvi0611-cmd](#zainrizvi0611-cmd) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [zainrizvi0611-cmd](#zainrizvi0611-cmd) | 0 | 0 | 0 | 0 | 0 | 11 | 0 | 0 |
 | [ZhaZhaBei](#ZhaZhaBei) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 
 ## Changes by Repository

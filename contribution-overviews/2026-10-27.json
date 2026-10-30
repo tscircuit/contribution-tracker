@@ -55,6 +55,26 @@
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 1
   },
+  "1932819331hy-debug": {
+    "githubId": 343001481,
+    "githubLogin": "1932819331hy-debug",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
@@ -121,21 +141,29 @@
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 6,
+    "staffReviewedPrs": 1,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
-    "approvalsGiven": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 107,
+        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/107",
+        "title": "fix: support board outlines",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 12,
-    "prsMerged": 8,
+    "prsOpened": 20,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 3,
     "distinctPrsReviewedAsCodeOwner": 0
   },
   "Daeil-Jung": {
@@ -161,9 +189,9 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 5,
+    "reviewsReceived": 8,
     "rejectionsReceived": 1,
-    "approvalsReceived": 4,
+    "approvalsReceived": 7,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -171,7 +199,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 7,
-    "prsMerged": 2,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -181,9 +209,9 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
+    "approvalsReceived": 3,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -191,7 +219,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 5,
-    "prsMerged": 2,
+    "prsMerged": 3,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -201,9 +229,9 @@
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 16,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 12,
+    "reviewsReceived": 21,
+    "rejectionsReceived": 3,
+    "approvalsReceived": 14,
     "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 7,
@@ -258,10 +286,10 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 31,
-    "prsMerged": 25,
+    "prsOpened": 41,
+    "prsMerged": 37,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -291,12 +319,12 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 3,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 4991,
@@ -304,18 +332,31 @@
         "title": "Bump circuit-json-to-gltf to 0.0.158",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 507,
+        "url": "https://github.com/tscircuit/jscad-electronics/pull/507",
+        "title": "Preserve authored DFN body dimensions",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 9,
     "rejectionsGiven": 0,
-    "prsOpened": 37,
-    "prsMerged": 5,
+    "prsOpened": 67,
+    "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 8,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
+      {
+        "repo": "tscircuit/pcb-viewer",
+        "paths": [
+          "*"
+        ]
+      },
       {
         "repo": "tscircuit/jscad-electronics",
         "paths": [
@@ -324,6 +365,12 @@
       },
       {
         "repo": "tscircuit/tscircuit-autorouter",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/copper-pour-solver",
         "paths": [
           "*"
         ]
@@ -353,12 +400,12 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 3,
+    "reviewsReceived": 4,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 4959,
@@ -366,16 +413,23 @@
         "title": "refactor: resolve component-specific Footprinter definitions in core",
         "staffApprovals": 2,
         "staffRejections": 0
+      },
+      {
+        "number": 3354,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3354",
+        "title": "Remove runtime checks calls from autorouter execution",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 8,
-    "rejectionsGiven": 3,
-    "prsOpened": 14,
-    "prsMerged": 6,
+    "approvalsGiven": 17,
+    "rejectionsGiven": 6,
+    "prsOpened": 17,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
+    "distinctPrsReviewedNonCodeOwner": 17,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -386,15 +440,35 @@
       }
     ]
   },
+  "maheshbawne987-coder": {
+    "githubId": 282921652,
+    "githubLogin": "maheshbawne987-coder",
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 1,
+    "reviewsReceived": 2,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 956,
@@ -402,12 +476,19 @@
         "title": "add assembly cable waypoints",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 4868,
+        "url": "https://github.com/tscircuit/core/pull/4868",
+        "title": "add assembly cable waypoint routing",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
-    "prsMerged": 1,
+    "prsOpened": 2,
+    "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -493,12 +574,12 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 13,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 1,
+    "reviewsReceived": 41,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
         "number": 222,
@@ -506,37 +587,44 @@
         "title": "fix: rotate polygon plated-hole pads and soldermask",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 5629,
+        "url": "https://github.com/tscircuit/tscircuit.com/pull/5629",
+        "title": "Add tooltip to GitHub repository refresh button",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
-    "prsMerged": 2,
+    "prsOpened": 26,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 15,
+    "reviewsReceived": 19,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 21,
+    "approvalsGiven": 29,
     "rejectionsGiven": 0,
-    "prsOpened": 65,
-    "prsMerged": 49,
+    "prsOpened": 94,
+    "prsMerged": 70,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 16,
-    "distinctPrsReviewedAsCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 20,
+    "distinctPrsReviewedAsCodeOwner": 7,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -587,17 +675,39 @@
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 7,
+    "reviewsReceived": 11,
     "rejectionsReceived": 1,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 0,
+    "approvalsReceived": 7,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffApprovalsReceived": 3,
+    "staffReviewedPrLinks": [
+      {
+        "number": 3353,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3353",
+        "title": "fix: preserve routing quality while preventing new peer trace shorts",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 183,
+        "url": "https://github.com/tscircuit/high-density-repair03/pull/183",
+        "title": "fix: prevent new trace-to-trace shorts in repair output",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 182,
+        "url": "https://github.com/tscircuit/high-density-repair03/pull/182",
+        "title": "test: reproduce force repair introducing a peer trace short",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
-    "prsMerged": 6,
+    "prsOpened": 17,
+    "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -636,8 +746,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 172,
-    "prsMerged": 131,
+    "prsOpened": 239,
+    "prsMerged": 184,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -676,7 +786,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
+    "prsOpened": 11,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
