@@ -45,7 +45,7 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 1,
+    "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 29,
     "prsMerged": 18,
@@ -53,7 +53,7 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 1
+    "distinctPrsReviewedAsCodeOwner": 2
   },
   "1932819331hy-debug": {
     "githubId": 343001481,
@@ -67,7 +67,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 11,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -116,8 +116,8 @@
     ],
     "approvalsGiven": 5,
     "rejectionsGiven": 0,
-    "prsOpened": 17,
-    "prsMerged": 6,
+    "prsOpened": 19,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -156,14 +156,34 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 8,
     "rejectionsGiven": 0,
-    "prsOpened": 20,
-    "prsMerged": 10,
+    "prsOpened": 24,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 8,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "CaoTri253": {
+    "githubId": 133616254,
+    "githubLogin": "CaoTri253",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
   },
   "Daeil-Jung": {
@@ -189,17 +209,17 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 8,
+    "reviewsReceived": 12,
     "rejectionsReceived": 1,
-    "approvalsReceived": 7,
+    "approvalsReceived": 10,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 4,
+    "prsOpened": 9,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -209,17 +229,37 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 3,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 3,
+    "reviewsReceived": 5,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
+    "prsOpened": 10,
     "prsMerged": 3,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "Marwichmisi": {
+    "githubId": 216451040,
+    "githubLogin": "Marwichmisi",
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -308,7 +348,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -319,17 +359,31 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 10,
+    "reviewsReceived": 18,
     "rejectionsReceived": 0,
-    "approvalsReceived": 9,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 17,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 5018,
+        "url": "https://github.com/tscircuit/core/pull/5018",
+        "title": "fix: resolve named differential trunks on branched nets",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 4991,
         "url": "https://github.com/tscircuit/core/pull/4991",
         "title": "Bump circuit-json-to-gltf to 0.0.158",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 510,
+        "url": "https://github.com/tscircuit/jscad-electronics/pull/510",
+        "title": "Fix npm installs of the published package",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -341,18 +395,24 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 9,
+    "approvalsGiven": 10,
     "rejectionsGiven": 0,
-    "prsOpened": 67,
-    "prsMerged": 16,
+    "prsOpened": 123,
+    "prsMerged": 33,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
+    "distinctPrsReviewedNonCodeOwner": 9,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/3d-viewer",
         "paths": [
           "*"
         ]
@@ -389,6 +449,46 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "anubhabx": {
+    "githubId": 84611567,
+    "githubLogin": "anubhabx",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "aswadi": {
+    "githubId": 12741066,
+    "githubLogin": "aswadi",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
     "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
@@ -400,12 +500,12 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 4,
+    "reviewsReceived": 6,
     "rejectionsReceived": 0,
-    "approvalsReceived": 1,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
       {
         "number": 4959,
@@ -415,21 +515,35 @@
         "staffRejections": 0
       },
       {
+        "number": 5628,
+        "url": "https://github.com/tscircuit/cli/pull/5628",
+        "title": "Search all sources by default and add datasheet catalog search",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 3354,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3354",
         "title": "Remove runtime checks calls from autorouter execution",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 3375,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3375",
+        "title": "Optimize native autorouter continuity evaluation",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 17,
-    "rejectionsGiven": 6,
-    "prsOpened": 17,
-    "prsMerged": 7,
+    "approvalsGiven": 21,
+    "rejectionsGiven": 7,
+    "prsOpened": 18,
+    "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 17,
+    "distinctPrsReviewedNonCodeOwner": 20,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -487,7 +601,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 6,
     "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -609,22 +723,22 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 19,
+    "reviewsReceived": 21,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 29,
+    "approvalsGiven": 34,
     "rejectionsGiven": 0,
-    "prsOpened": 94,
-    "prsMerged": 70,
+    "prsOpened": 122,
+    "prsMerged": 87,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 20,
-    "distinctPrsReviewedAsCodeOwner": 7,
+    "distinctPrsReviewedNonCodeOwner": 22,
+    "distinctPrsReviewedAsCodeOwner": 11,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -646,6 +760,12 @@
       },
       {
         "repo": "tscircuit/copper-pour-solver",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/common",
         "paths": [
           "*"
         ]
@@ -675,13 +795,20 @@
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 11,
+    "reviewsReceived": 14,
     "rejectionsReceived": 1,
-    "approvalsReceived": 7,
-    "staffReviewedPrs": 3,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
+      {
+        "number": 3178,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3178",
+        "title": "fix: preserve terminals and repair coupled DRC conflicts",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 3353,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3353",
@@ -704,14 +831,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 17,
-    "prsMerged": 9,
+    "prsOpened": 27,
+    "prsMerged": 11,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0
   },
   "thanhdo1991": {
@@ -746,8 +873,28 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 239,
-    "prsMerged": 184,
+    "prsOpened": 312,
+    "prsMerged": 239,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "tungnguyen84": {
+    "githubId": 36720757,
+    "githubLogin": "tungnguyen84",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 36,
+    "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -786,7 +933,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
+    "prsOpened": 12,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
