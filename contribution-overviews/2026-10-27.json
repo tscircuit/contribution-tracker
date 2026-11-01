@@ -45,14 +45,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 2,
+    "approvalsGiven": 3,
     "rejectionsGiven": 0,
     "prsOpened": 29,
     "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 2
   },
   "1932819331hy-debug": {
@@ -67,7 +67,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 11,
+    "prsOpened": 13,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -114,14 +114,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 5,
+    "approvalsGiven": 11,
     "rejectionsGiven": 0,
-    "prsOpened": 19,
+    "prsOpened": 20,
     "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 10,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -137,6 +137,26 @@
         ]
       }
     ]
+  },
+  "Aming9303": {
+    "githubId": 215684766,
+    "githubLogin": "Aming9303",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "AnasSarkiz": {
     "githubId": 72264380,
@@ -206,11 +226,31 @@
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
   },
+  "Fuma2514": {
+    "githubId": 88251943,
+    "githubLogin": "Fuma2514",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 12,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 13,
+    "rejectionsReceived": 2,
     "approvalsReceived": 10,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
@@ -218,7 +258,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 9,
+    "prsOpened": 10,
     "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -229,9 +269,9 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 1,
-    "approvalsReceived": 4,
+    "approvalsReceived": 5,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -239,7 +279,7 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 10,
-    "prsMerged": 3,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -359,12 +399,12 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 18,
+    "reviewsReceived": 29,
     "rejectionsReceived": 0,
-    "approvalsReceived": 17,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 28,
+    "staffReviewedPrs": 8,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 8,
     "staffReviewedPrLinks": [
       {
         "number": 5018,
@@ -393,12 +433,40 @@
         "title": "Preserve authored DFN body dimensions",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 128,
+        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/128",
+        "title": "Retry paired package entries for independent DDR byte buses",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 125,
+        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/125",
+        "title": "Retry lane orders after DDR length matching fails",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 124,
+        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/124",
+        "title": "Reproduce OrangeCrab DDR byte-one length matching failure",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 122,
+        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/122",
+        "title": "Fix DQS tuning clearance and route the real OrangeCrab byte lane",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 10,
     "rejectionsGiven": 0,
-    "prsOpened": 123,
-    "prsMerged": 33,
+    "prsOpened": 151,
+    "prsMerged": 54,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -489,7 +557,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -500,7 +568,7 @@
   "imrishabh18": {
     "githubId": 38923768,
     "githubLogin": "imrishabh18",
-    "reviewsReceived": 6,
+    "reviewsReceived": 8,
     "rejectionsReceived": 0,
     "approvalsReceived": 3,
     "staffReviewedPrs": 4,
@@ -536,14 +604,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 21,
-    "rejectionsGiven": 7,
-    "prsOpened": 18,
-    "prsMerged": 10,
+    "approvalsGiven": 22,
+    "rejectionsGiven": 8,
+    "prsOpened": 25,
+    "prsMerged": 15,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 20,
+    "distinctPrsReviewedNonCodeOwner": 21,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -577,11 +645,11 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 2,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 5,
+    "rejectionsReceived": 1,
     "approvalsReceived": 2,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 0,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
@@ -590,6 +658,13 @@
         "title": "add assembly cable waypoints",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 5021,
+        "url": "https://github.com/tscircuit/core/pull/5021",
+        "title": "render pcb pin labels for imported library footprints",
+        "staffApprovals": 0,
+        "staffRejections": 1
       },
       {
         "number": 4868,
@@ -601,7 +676,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
+    "prsOpened": 8,
     "prsMerged": 2,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -622,6 +697,26 @@
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "ocakciomursel-pixel": {
+    "githubId": 276599321,
+    "githubLogin": "ocakciomursel-pixel",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -688,7 +783,7 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 41,
+    "reviewsReceived": 42,
     "rejectionsReceived": 1,
     "approvalsReceived": 8,
     "staffReviewedPrs": 2,
@@ -712,7 +807,7 @@
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 26,
+    "prsOpened": 27,
     "prsMerged": 9,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -730,14 +825,14 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 34,
-    "rejectionsGiven": 0,
-    "prsOpened": 122,
-    "prsMerged": 87,
+    "approvalsGiven": 38,
+    "rejectionsGiven": 1,
+    "prsOpened": 123,
+    "prsMerged": 91,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 22,
+    "distinctPrsReviewedNonCodeOwner": 26,
     "distinctPrsReviewedAsCodeOwner": 11,
     "reposOwned": [
       {
@@ -873,8 +968,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 312,
-    "prsMerged": 239,
+    "prsOpened": 353,
+    "prsMerged": 268,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -893,7 +988,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 36,
+    "prsOpened": 83,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
