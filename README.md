@@ -40,25 +40,26 @@ pie
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 8 | 0 | 8 | 100.0% |
-| [MustafaMulla29](#MustafaMulla29) | 7 | 0 | 7 | 100.0% |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 9 | 0 | 9 | 100.0% |
+| [MustafaMulla29](#MustafaMulla29) | 8 | 0 | 8 | 100.0% |
 | [0hmX](#0hmX) | 5 | 0 | 5 | 100.0% |
+| [rushabhcodes](#rushabhcodes) | 5 | 1 | 4 | 80.0% |
 | [Abse2001](#Abse2001) | 4 | 0 | 4 | 100.0% |
 | [imrishabh18](#imrishabh18) | 4 | 0 | 5 | 100.0% |
 | [techmannih](#techmannih) | 4 | 0 | 4 | 100.0% |
 | [mohan-bee](#mohan-bee) | 3 | 1 | 2 | 66.7% |
-| [rushabhcodes](#rushabhcodes) | 2 | 0 | 2 | 100.0% |
 | [AnasSarkiz](#AnasSarkiz) | 1 | 0 | 1 | 100.0% |
 | [pthm](#pthm) | 1 | 0 | 1 | 100.0% |
 | [raykholo](#raykholo) | 1 | 0 | 1 | 100.0% |
 
 <details>
-<summary>ShiboSoftwareDev SPR PRs (8)</summary>
+<summary>ShiboSoftwareDev SPR PRs (9)</summary>
 
 - [#5018](https://github.com/tscircuit/core/pull/5018) fix: resolve named differential trunks on branched nets
 - [#4991](https://github.com/tscircuit/core/pull/4991) Bump circuit-json-to-gltf to 0.0.158
 - [#510](https://github.com/tscircuit/jscad-electronics/pull/510) Fix npm installs of the published package
 - [#507](https://github.com/tscircuit/jscad-electronics/pull/507) Preserve authored DFN body dimensions
+- [#3435](https://github.com/tscircuit/tscircuit-autorouter/pull/3435) Allow connected target regions to share a routing exit
 - [#128](https://github.com/tscircuit/bus-lanes-solver/pull/128) Retry paired package entries for independent DDR byte buses
 - [#125](https://github.com/tscircuit/bus-lanes-solver/pull/125) Retry lane orders after DDR length matching fails
 - [#124](https://github.com/tscircuit/bus-lanes-solver/pull/124) Reproduce OrangeCrab DDR byte-one length matching failure
@@ -67,9 +68,10 @@ pie
 </details>
 
 <details>
-<summary>MustafaMulla29 SPR PRs (7)</summary>
+<summary>MustafaMulla29 SPR PRs (8)</summary>
 
 - [#27](https://github.com/tscircuit/circuit-json-to-pnp-csv/pull/27) fix: export PnP from authored footprint origin
+- [#773](https://github.com/tscircuit/circuit-json-to-kicad/pull/773) fix: preserve source net trace widths in KiCad projects
 - [#761](https://github.com/tscircuit/circuit-json-to-kicad/pull/761) fix: preserve nets on internally connected pads
 - [#370](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/370) fix: detect ground pins above passive signal branches
 - [#366](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/366) Extend chip-pin capacitor placement checks to grounded capacitors
@@ -87,6 +89,17 @@ pie
 - [#96](https://github.com/tscircuit/circuit-json-webgpu/pull/96) Keep covered traces visible under solder mask
 - [#95](https://github.com/tscircuit/circuit-json-webgpu/pull/95) Reproduce AM3352 traces hidden by solder mask
 - [#91](https://github.com/tscircuit/circuit-json-webgpu/pull/91) fix: accept pcb_stackup metadata without stopping PCB rendering
+
+</details>
+
+<details>
+<summary>rushabhcodes SPR PRs (5)</summary>
+
+- [#283](https://github.com/tscircuit/circuit-json-util/pull/283) fix: support position tolerance when matching route vias
+- [#4973](https://github.com/tscircuit/core/pull/4973) fix: preserve SMT pad solder mask settings during Circuit JSON import
+- [#4979](https://github.com/tscircuit/core/pull/4979) fix: import native testpoints from saved Circuit JSON
+- [#222](https://github.com/tscircuit/circuit-json-to-gerber/pull/222) fix: rotate polygon plated-hole pads and soldermask
+- [#5629](https://github.com/tscircuit/tscircuit.com/pull/5629) Add tooltip to GitHub repository refresh button
 
 </details>
 
@@ -130,14 +143,6 @@ pie
 </details>
 
 <details>
-<summary>rushabhcodes SPR PRs (2)</summary>
-
-- [#222](https://github.com/tscircuit/circuit-json-to-gerber/pull/222) fix: rotate polygon plated-hole pads and soldermask
-- [#5629](https://github.com/tscircuit/tscircuit.com/pull/5629) Add tooltip to GitHub repository refresh button
-
-</details>
-
-<details>
 <summary>AnasSarkiz SPR PRs (1)</summary>
 
 - [#107](https://github.com/tscircuit/bus-lanes-solver/pull/107) fix: support board outlines
@@ -170,36 +175,39 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [0hmX](#0hmX) | 12 | 5 | 0 | 3 | 0 | 29 | 18 | 0 |
+| [0hmX](#0hmX) | 12 | 5 | 0 | 4 | 0 | 32 | 18 | 0 |
 | [1932819331hy-debug](#1932819331hy-debug) | 0 | 0 | 0 | 0 | 0 | 13 | 0 | 0 |
-| [Abse2001](#Abse2001) | 4 | 4 | 0 | 11 | 0 | 20 | 7 | 0 |
+| [Abse2001](#Abse2001) | 4 | 4 | 0 | 12 | 0 | 20 | 7 | 0 |
 | [Aming9303](#Aming9303) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 6 | 6 | 0 | 8 | 0 | 24 | 11 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 7 | 7 | 0 | 8 | 0 | 28 | 12 | 0 |
 | [anubhabx](#anubhabx) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [aswadi](#aswadi) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [aswadi](#aswadi) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
 | [CaoTri253](#CaoTri253) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Daeil-Jung](#Daeil-Jung) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [Fuma2514](#Fuma2514) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [GokulPandi-M](#GokulPandi-M) | 13 | 10 | 2 | 0 | 0 | 10 | 6 | 0 |
-| [imrishabh18](#imrishabh18) | 8 | 3 | 0 | 22 | 8 | 25 | 15 | 0 |
-| [KrishnaX12](#KrishnaX12) | 6 | 5 | 1 | 0 | 0 | 10 | 4 | 0 |
+| [GokulPandi-M](#GokulPandi-M) | 13 | 10 | 2 | 0 | 0 | 11 | 6 | 0 |
+| [HarsH-1877](#HarsH-1877) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
+| [hrithik18k](#hrithik18k) | 1 | 1 | 0 | 0 | 0 | 3 | 1 | 0 |
+| [imrishabh18](#imrishabh18) | 8 | 3 | 0 | 27 | 8 | 32 | 23 | 0 |
+| [KrishnaX12](#KrishnaX12) | 6 | 5 | 1 | 0 | 0 | 10 | 5 | 0 |
 | [maheshbawne987-coder](#maheshbawne987-coder) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Marwichmisi](#Marwichmisi) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [mohan-bee](#mohan-bee) | 5 | 2 | 1 | 0 | 0 | 8 | 2 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 21 | 14 | 3 | 1 | 0 | 41 | 37 | 0 |
+| [mohan-bee](#mohan-bee) | 5 | 2 | 1 | 1 | 0 | 17 | 2 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 21 | 16 | 2 | 2 | 0 | 49 | 45 | 0 |
 | [natertatter](#natertatter) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [ocakciomursel-pixel](#ocakciomursel-pixel) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Ojas2095](#Ojas2095) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [pthm](#pthm) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
 | [raykholo](#raykholo) | 2 | 2 | 0 | 0 | 0 | 1 | 1 | 0 |
-| [rushabhcodes](#rushabhcodes) | 42 | 8 | 1 | 4 | 0 | 27 | 9 | 0 |
-| [seveibar](#seveibar) | 21 | 1 | 0 | 38 | 1 | 123 | 91 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 29 | 28 | 0 | 10 | 0 | 151 | 54 | 0 |
+| [rushabhcodes](#rushabhcodes) | 51 | 15 | 3 | 4 | 0 | 29 | 17 | 0 |
+| [seveibar](#seveibar) | 24 | 1 | 0 | 42 | 2 | 127 | 93 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 33 | 32 | 0 | 12 | 0 | 171 | 69 | 0 |
 | [sreecharan-desu](#sreecharan-desu) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [techmannih](#techmannih) | 14 | 9 | 1 | 1 | 0 | 27 | 11 | 0 |
+| [techmannih](#techmannih) | 14 | 9 | 1 | 1 | 0 | 30 | 11 | 0 |
 | [thanhdo1991](#thanhdo1991) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 353 | 268 | 0 |
-| [tungnguyen84](#tungnguyen84) | 0 | 0 | 0 | 0 | 0 | 83 | 0 | 0 |
+| [tonnylegacy](#tonnylegacy) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 424 | 324 | 0 |
+| [tungnguyen84](#tungnguyen84) | 0 | 0 | 0 | 0 | 0 | 91 | 0 | 0 |
 | [voropaevv](#voropaevv) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [zainrizvi0611-cmd](#zainrizvi0611-cmd) | 0 | 0 | 0 | 0 | 0 | 12 | 0 | 0 |
 | [ZhaZhaBei](#ZhaZhaBei) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
