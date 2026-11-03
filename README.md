@@ -40,21 +40,22 @@ pie
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 9 | 0 | 9 | 100.0% |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 10 | 0 | 10 | 100.0% |
 | [MustafaMulla29](#MustafaMulla29) | 8 | 0 | 8 | 100.0% |
 | [0hmX](#0hmX) | 5 | 0 | 5 | 100.0% |
 | [rushabhcodes](#rushabhcodes) | 5 | 1 | 4 | 80.0% |
 | [Abse2001](#Abse2001) | 4 | 0 | 4 | 100.0% |
 | [imrishabh18](#imrishabh18) | 4 | 0 | 5 | 100.0% |
+| [mohan-bee](#mohan-bee) | 4 | 2 | 2 | 50.0% |
 | [techmannih](#techmannih) | 4 | 0 | 4 | 100.0% |
-| [mohan-bee](#mohan-bee) | 3 | 1 | 2 | 66.7% |
 | [AnasSarkiz](#AnasSarkiz) | 1 | 0 | 1 | 100.0% |
 | [pthm](#pthm) | 1 | 0 | 1 | 100.0% |
 | [raykholo](#raykholo) | 1 | 0 | 1 | 100.0% |
 
 <details>
-<summary>ShiboSoftwareDev SPR PRs (9)</summary>
+<summary>ShiboSoftwareDev SPR PRs (10)</summary>
 
+- [#1150](https://github.com/tscircuit/pcb-viewer/pull/1150) Preserve the fitted camera on the first wheel gesture
 - [#5018](https://github.com/tscircuit/core/pull/5018) fix: resolve named differential trunks on branched nets
 - [#4991](https://github.com/tscircuit/core/pull/4991) Bump circuit-json-to-gltf to 0.0.158
 - [#510](https://github.com/tscircuit/jscad-electronics/pull/510) Fix npm installs of the published package
@@ -124,21 +125,22 @@ pie
 </details>
 
 <details>
+<summary>mohan-bee SPR PRs (4)</summary>
+
+- [#956](https://github.com/tscircuit/props/pull/956) add assembly cable waypoints
+- [#5021](https://github.com/tscircuit/core/pull/5021) render pcb pin labels for imported library footprints
+- [#4868](https://github.com/tscircuit/core/pull/4868) add assembly cable waypoint routing
+- [#3442](https://github.com/tscircuit/tscircuit-autorouter/pull/3442) use upstream power trace expansion batching
+
+</details>
+
+<details>
 <summary>techmannih SPR PRs (4)</summary>
 
 - [#3178](https://github.com/tscircuit/tscircuit-autorouter/pull/3178) fix: preserve terminals and repair coupled DRC conflicts
 - [#3353](https://github.com/tscircuit/tscircuit-autorouter/pull/3353) fix: preserve routing quality while preventing new peer trace shorts
 - [#183](https://github.com/tscircuit/high-density-repair03/pull/183) fix: prevent new trace-to-trace shorts in repair output
 - [#182](https://github.com/tscircuit/high-density-repair03/pull/182) test: reproduce force repair introducing a peer trace short
-
-</details>
-
-<details>
-<summary>mohan-bee SPR PRs (3)</summary>
-
-- [#956](https://github.com/tscircuit/props/pull/956) add assembly cable waypoints
-- [#5021](https://github.com/tscircuit/core/pull/5021) render pcb pin labels for imported library footprints
-- [#4868](https://github.com/tscircuit/core/pull/4868) add assembly cable waypoint routing
 
 </details>
 
@@ -175,39 +177,44 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [0hmX](#0hmX) | 12 | 5 | 0 | 4 | 0 | 32 | 18 | 0 |
-| [1932819331hy-debug](#1932819331hy-debug) | 0 | 0 | 0 | 0 | 0 | 13 | 0 | 0 |
-| [Abse2001](#Abse2001) | 4 | 4 | 0 | 12 | 0 | 20 | 7 | 0 |
+| [0hmX](#0hmX) | 12 | 5 | 0 | 6 | 0 | 32 | 18 | 0 |
+| [1932819331hy-debug](#1932819331hy-debug) | 0 | 0 | 0 | 0 | 0 | 17 | 0 | 0 |
+| [Abse2001](#Abse2001) | 4 | 4 | 0 | 13 | 0 | 42 | 7 | 0 |
 | [Aming9303](#Aming9303) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 7 | 7 | 0 | 8 | 0 | 28 | 12 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 7 | 7 | 0 | 8 | 0 | 32 | 12 | 0 |
 | [anubhabx](#anubhabx) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [aswadi](#aswadi) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [aswadi](#aswadi) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
+| [BrandoBlue](#BrandoBlue) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [CaoTri253](#CaoTri253) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [cocvn157](#cocvn157) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [Daeil-Jung](#Daeil-Jung) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [Fuma2514](#Fuma2514) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [GokulPandi-M](#GokulPandi-M) | 13 | 10 | 2 | 0 | 0 | 11 | 6 | 0 |
-| [HarsH-1877](#HarsH-1877) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [hrithik18k](#hrithik18k) | 1 | 1 | 0 | 0 | 0 | 3 | 1 | 0 |
-| [imrishabh18](#imrishabh18) | 8 | 3 | 0 | 27 | 8 | 32 | 23 | 0 |
-| [KrishnaX12](#KrishnaX12) | 6 | 5 | 1 | 0 | 0 | 10 | 5 | 0 |
+| [GokulPandi-M](#GokulPandi-M) | 18 | 13 | 2 | 0 | 0 | 13 | 8 | 0 |
+| [HarsH-1877](#HarsH-1877) | 0 | 0 | 0 | 0 | 0 | 7 | 0 | 0 |
+| [hrithik18k](#hrithik18k) | 2 | 2 | 0 | 0 | 0 | 5 | 2 | 0 |
+| [imrishabh18](#imrishabh18) | 8 | 3 | 0 | 33 | 5 | 37 | 26 | 0 |
+| [KrishnaX12](#KrishnaX12) | 6 | 5 | 1 | 0 | 0 | 12 | 5 | 0 |
+| [longdungai](#longdungai) | 4 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
 | [maheshbawne987-coder](#maheshbawne987-coder) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Marwichmisi](#Marwichmisi) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [mohan-bee](#mohan-bee) | 5 | 2 | 1 | 1 | 0 | 17 | 2 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 21 | 16 | 2 | 2 | 0 | 49 | 45 | 0 |
+| [mohan-bee](#mohan-bee) | 7 | 2 | 3 | 1 | 0 | 24 | 2 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 24 | 17 | 0 | 2 | 0 | 55 | 49 | 0 |
 | [natertatter](#natertatter) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [ocakciomursel-pixel](#ocakciomursel-pixel) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Ojas2095](#Ojas2095) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [PatchHarbor27](#PatchHarbor27) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [pthm](#pthm) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
 | [raykholo](#raykholo) | 2 | 2 | 0 | 0 | 0 | 1 | 1 | 0 |
 | [rushabhcodes](#rushabhcodes) | 51 | 15 | 3 | 4 | 0 | 29 | 17 | 0 |
-| [seveibar](#seveibar) | 24 | 1 | 0 | 42 | 2 | 127 | 93 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 33 | 32 | 0 | 12 | 0 | 171 | 69 | 0 |
+| [seveibar](#seveibar) | 25 | 1 | 0 | 43 | 3 | 140 | 102 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 39 | 38 | 0 | 14 | 1 | 194 | 87 | 0 |
+| [Shokun123](#Shokun123) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [sreecharan-desu](#sreecharan-desu) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [techmannih](#techmannih) | 14 | 9 | 1 | 1 | 0 | 30 | 11 | 0 |
+| [techmannih](#techmannih) | 20 | 10 | 0 | 1 | 0 | 44 | 12 | 0 |
 | [thanhdo1991](#thanhdo1991) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [tonnylegacy](#tonnylegacy) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 424 | 324 | 0 |
-| [tungnguyen84](#tungnguyen84) | 0 | 0 | 0 | 0 | 0 | 91 | 0 | 0 |
+| [tonnylegacy](#tonnylegacy) | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 516 | 401 | 0 |
+| [tungnguyen84](#tungnguyen84) | 0 | 0 | 0 | 0 | 0 | 92 | 0 | 0 |
 | [voropaevv](#voropaevv) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [zainrizvi0611-cmd](#zainrizvi0611-cmd) | 0 | 0 | 0 | 0 | 0 | 12 | 0 | 0 |
 | [ZhaZhaBei](#ZhaZhaBei) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
