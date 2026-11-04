@@ -204,6 +204,8 @@ export async function generateMarkdown(
       "Number of approvals received for PRs this contributor authored",
     "Rejections Received":
       "Number of rejections received for PRs this contributor authored",
+    "Downvoted Reviews":
+      "Reviews submitted in this reporting window with a thumbs-down reaction; three or more in one week remove that week's review points",
     "PRs Opened": "Number of PRs opened by this contributor",
     "Issues Created": "Number of issues created by this contributor",
   }
@@ -228,6 +230,7 @@ export async function generateMarkdown(
     "Rejections Received": "rejectionsReceived",
     Approvals: "approvalsGiven",
     "Rejections Given": "rejectionsGiven",
+    "Downvoted Reviews": "downvotedReviewsGiven",
     "PRs Opened": "prsOpened",
     "PRs Merged": "prsMerged",
     "Issues Created": "issuesCreated",
@@ -255,7 +258,7 @@ export async function generateMarkdown(
           markdown += ` [${contributor}](#${contributor.replace(/\s/g, "-")}) |`
           return
         }
-        markdown += ` ${stats[columnTitleToPropName[columnTitle] as keyof ContributorStats]} |`
+        markdown += ` ${stats[columnTitleToPropName[columnTitle] as keyof ContributorStats] ?? 0} |`
       })
       markdown += "\n"
     },

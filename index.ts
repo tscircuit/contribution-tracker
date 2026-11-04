@@ -20,6 +20,11 @@ import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { postMergeComment } from "lib/notifications/notify-pr-change"
 import { SENIOR_STAFF_USERNAMES } from "lib/constants"
+import {
+  getContributionReviewWeek,
+  getDistinctPrsReviewedByWeek,
+  mergeDownvotedReviewsByWeek,
+} from "lib/scoring/contribution-review-week"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
@@ -42,7 +47,7 @@ export async function generateOverview(
   const contributorStatsByIdentity: Record<string, ContributorStats> = {}
   const reviewedPrsByReviewerIdentity: Record<
     string,
-    Set<{ number: number; isReviewerRepoOwner: boolean }>
+    Set<{ number: number; isReviewerRepoOwner: boolean; reviewWeek: string }>
   > = {}
   const repoOwnersMap: Record<string, string[]> = {}
 
@@ -149,12 +154,21 @@ export async function generateOverview(
               reviewerStats.approvalsGiven
             reviewerContributorStats.rejectionsGiven +=
               reviewerStats.rejectionsGiven
+            reviewerContributorStats.downvotedReviewsGiven =
+              (reviewerContributorStats.downvotedReviewsGiven ?? 0) +
+              (reviewerStats.downvotedReviewsGiven ?? 0)
+            reviewerContributorStats.downvotedReviewsGivenByWeek =
+              mergeDownvotedReviewsByWeek(
+                reviewerContributorStats.downvotedReviewsGivenByWeek,
+                reviewerStats.downvotedReviewsGivenByWeek,
+              )
 
             // Collect unique PR numbers for each reviewer
             if (!reviewedPrsByReviewerIdentity[reviewerIdentityKey]) {
               reviewedPrsByReviewerIdentity[reviewerIdentityKey] = new Set<{
                 number: number
                 isReviewerRepoOwner: boolean
+                reviewWeek: string
               }>()
             }
             if (reviewerStats.prNumbers) {
@@ -162,6 +176,9 @@ export async function generateOverview(
                 reviewedPrsByReviewerIdentity[reviewerIdentityKey].add({
                   number: prNum,
                   isReviewerRepoOwner: isReviewerRepoOwner || false,
+                  reviewWeek: getContributionReviewWeek(
+                    new Date(pr.merged_at ?? pr.created_at),
+                  ),
                 }),
               )
             }
@@ -176,6 +193,10 @@ export async function generateOverview(
     Object.entries(reviewedPrsByReviewerIdentity).forEach(
       ([reviewerIdentityKey, prReviewMeta]) => {
         if (contributorStatsByIdentity[reviewerIdentityKey]) {
+          contributorStatsByIdentity[
+            reviewerIdentityKey
+          ].distinctPrsReviewedByWeek =
+            getDistinctPrsReviewedByWeek(prReviewMeta)
           contributorStatsByIdentity[
             reviewerIdentityKey
           ].distinctPrsReviewedNonCodeOwner = Array.from(prReviewMeta).filter(
