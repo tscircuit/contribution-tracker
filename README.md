@@ -16,7 +16,7 @@ You can find AI-generated monthly changelogs in the [changelogs directory](./cha
 
 <!-- START_CURRENT_WEEK -->
 
-# Contribution Overview 2026-10-27
+# Contribution Overview 2026-11-03
 
 The current week is shown below. There are 3 major sections:
 
@@ -40,128 +40,69 @@ pie
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 10 | 0 | 10 | 100.0% |
-| [MustafaMulla29](#MustafaMulla29) | 8 | 0 | 8 | 100.0% |
-| [0hmX](#0hmX) | 5 | 0 | 5 | 100.0% |
-| [rushabhcodes](#rushabhcodes) | 5 | 1 | 4 | 80.0% |
-| [Abse2001](#Abse2001) | 4 | 0 | 4 | 100.0% |
-| [imrishabh18](#imrishabh18) | 4 | 0 | 5 | 100.0% |
-| [mohan-bee](#mohan-bee) | 4 | 2 | 2 | 50.0% |
-| [techmannih](#techmannih) | 4 | 0 | 4 | 100.0% |
-| [AnasSarkiz](#AnasSarkiz) | 1 | 0 | 1 | 100.0% |
-| [pthm](#pthm) | 1 | 0 | 1 | 100.0% |
-| [raykholo](#raykholo) | 1 | 0 | 1 | 100.0% |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 5 | 0 | 5 | 100.0% |
+| [mohan-bee](#mohan-bee) | 3 | 1 | 3 | 66.7% |
+| [0hmX](#0hmX) | 2 | 0 | 2 | 100.0% |
+| [Abse2001](#Abse2001) | 2 | 0 | 2 | 100.0% |
+| [imrishabh18](#imrishabh18) | 2 | 0 | 2 | 100.0% |
+| [danielshawellis](#danielshawellis) | 1 | 0 | 1 | 100.0% |
+| [rushabhcodes](#rushabhcodes) | 1 | 1 | 1 | 0.0% |
 
 <details>
-<summary>ShiboSoftwareDev SPR PRs (10)</summary>
+<summary>ShiboSoftwareDev SPR PRs (5)</summary>
 
-- [#1150](https://github.com/tscircuit/pcb-viewer/pull/1150) Preserve the fitted camera on the first wheel gesture
-- [#5018](https://github.com/tscircuit/core/pull/5018) fix: resolve named differential trunks on branched nets
-- [#4991](https://github.com/tscircuit/core/pull/4991) Bump circuit-json-to-gltf to 0.0.158
-- [#510](https://github.com/tscircuit/jscad-electronics/pull/510) Fix npm installs of the published package
-- [#507](https://github.com/tscircuit/jscad-electronics/pull/507) Preserve authored DFN body dimensions
-- [#3435](https://github.com/tscircuit/tscircuit-autorouter/pull/3435) Allow connected target regions to share a routing exit
-- [#128](https://github.com/tscircuit/bus-lanes-solver/pull/128) Retry paired package entries for independent DDR byte buses
-- [#125](https://github.com/tscircuit/bus-lanes-solver/pull/125) Retry lane orders after DDR length matching fails
-- [#124](https://github.com/tscircuit/bus-lanes-solver/pull/124) Reproduce OrangeCrab DDR byte-one length matching failure
-- [#122](https://github.com/tscircuit/bus-lanes-solver/pull/122) Fix DQS tuning clearance and route the real OrangeCrab byte lane
+- [#3480](https://github.com/tscircuit/tscircuit-autorouter/pull/3480) Avoid retaining every temporary topology cell on DDR boards
+- [#3471](https://github.com/tscircuit/tscircuit-autorouter/pull/3471) Fix DDR pad drills through the existing repair search
+- [#147](https://github.com/tscircuit/bus-lanes-solver/pull/147) Route A64’s fourth DDR byte through available pad-edge escape sites
+- [#136](https://github.com/tscircuit/bus-lanes-solver/pull/136) Fix STMP157 DDR byte routing with valid pad-to-via approaches
+- [#137](https://github.com/tscircuit/bus-lanes-solver/pull/137) repro: STMP157 fourth DDR byte failure with SVG snapshot
 
 </details>
 
 <details>
-<summary>MustafaMulla29 SPR PRs (8)</summary>
+<summary>mohan-bee SPR PRs (3)</summary>
 
-- [#27](https://github.com/tscircuit/circuit-json-to-pnp-csv/pull/27) fix: export PnP from authored footprint origin
-- [#773](https://github.com/tscircuit/circuit-json-to-kicad/pull/773) fix: preserve source net trace widths in KiCad projects
-- [#761](https://github.com/tscircuit/circuit-json-to-kicad/pull/761) fix: preserve nets on internally connected pads
-- [#370](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/370) fix: detect ground pins above passive signal branches
-- [#366](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/366) Extend chip-pin capacitor placement checks to grounded capacitors
-- [#364](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/364) Detect separated RRC timing networks
-- [#357](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/357) Detect misaligned connector–test-point connections
-- [#355](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/355) Detect reversed inductor–capacitor grouping
+- [#290](https://github.com/tscircuit/circuit-json-util/pull/290) move brep copper pours with pcb transforms
+- [#3442](https://github.com/tscircuit/tscircuit-autorouter/pull/3442) use upstream power trace expansion batching
+- [#68](https://github.com/tscircuit/power-trace-expander/pull/68) batch power trace expansion while preserving work budgets
 
 </details>
 
 <details>
-<summary>0hmX SPR PRs (5)</summary>
+<summary>0hmX SPR PRs (2)</summary>
 
-- [#5945](https://github.com/tscircuit/runframe/pull/5945) Fix preview toolbar overlap and canvas sizing on small screens
-- [#5612](https://github.com/tscircuit/cli/pull/5612) fix: stop repeated preview refreshes during rapid edits
-- [#96](https://github.com/tscircuit/circuit-json-webgpu/pull/96) Keep covered traces visible under solder mask
-- [#95](https://github.com/tscircuit/circuit-json-webgpu/pull/95) Reproduce AM3352 traces hidden by solder mask
-- [#91](https://github.com/tscircuit/circuit-json-webgpu/pull/91) fix: accept pcb_stackup metadata without stopping PCB rendering
+- [#5121](https://github.com/tscircuit/core/pull/5121) fix: default board thickness to 1.6mm
+- [#5109](https://github.com/tscircuit/core/pull/5109) fix: warn when fabricatorPreset has no stackup template for the board
 
 </details>
 
 <details>
-<summary>rushabhcodes SPR PRs (5)</summary>
+<summary>Abse2001 SPR PRs (2)</summary>
+
+- [#5663](https://github.com/tscircuit/cli/pull/5663) fix: update STEP converter and preserve assembly ZIP exports (#5661)
+- [#177](https://github.com/tscircuit/circuit-json-to-step/pull/177) fix: export round pill drills without non-finite STEP directions (#176)
+
+</details>
+
+<details>
+<summary>imrishabh18 SPR PRs (2)</summary>
+
+- [#3477](https://github.com/tscircuit/tscircuit-autorouter/pull/3477) perf: reduce Pipeline9 clearance projection cost via repair04
+- [#62](https://github.com/tscircuit/repair04/pull/62) perf: prune clearance pairs and simplify via-pad distances
+
+</details>
+
+<details>
+<summary>danielshawellis SPR PRs (1)</summary>
+
+- [#5104](https://github.com/tscircuit/core/pull/5104) repro: copper pour still gets a redundant ground trace
+
+</details>
+
+<details>
+<summary>rushabhcodes SPR PRs (1)</summary>
 
 - [#283](https://github.com/tscircuit/circuit-json-util/pull/283) fix: support position tolerance when matching route vias
-- [#4973](https://github.com/tscircuit/core/pull/4973) fix: preserve SMT pad solder mask settings during Circuit JSON import
-- [#4979](https://github.com/tscircuit/core/pull/4979) fix: import native testpoints from saved Circuit JSON
-- [#222](https://github.com/tscircuit/circuit-json-to-gerber/pull/222) fix: rotate polygon plated-hole pads and soldermask
-- [#5629](https://github.com/tscircuit/tscircuit.com/pull/5629) Add tooltip to GitHub repository refresh button
-
-</details>
-
-<details>
-<summary>Abse2001 SPR PRs (4)</summary>
-
-- [#1088](https://github.com/tscircuit/pcb-viewer/pull/1088) feat: search PCB components and briefly highlight results
-- [#226](https://github.com/tscircuit/circuit-json-to-gerber/pull/226) fix: preserve board and route via tenting in Gerber export (#3903)
-- [#5619](https://github.com/tscircuit/cli/pull/5619) chore: update KiCad exporter to 0.0.257
-- [#131](https://github.com/tscircuit/copper-pour-solver/pull/131) chore: prepare 0.0.68 release containing explicit-pour clipping
-
-</details>
-
-<details>
-<summary>imrishabh18 SPR PRs (4)</summary>
-
-- [#4959](https://github.com/tscircuit/core/pull/4959) refactor: resolve component-specific Footprinter definitions in core
-- [#5628](https://github.com/tscircuit/cli/pull/5628) Search all sources by default and add datasheet catalog search
-- [#3354](https://github.com/tscircuit/tscircuit-autorouter/pull/3354) Remove runtime checks calls from autorouter execution
-- [#3375](https://github.com/tscircuit/tscircuit-autorouter/pull/3375) Optimize native autorouter continuity evaluation
-
-</details>
-
-<details>
-<summary>mohan-bee SPR PRs (4)</summary>
-
-- [#956](https://github.com/tscircuit/props/pull/956) add assembly cable waypoints
-- [#5021](https://github.com/tscircuit/core/pull/5021) render pcb pin labels for imported library footprints
-- [#4868](https://github.com/tscircuit/core/pull/4868) add assembly cable waypoint routing
-- [#3442](https://github.com/tscircuit/tscircuit-autorouter/pull/3442) use upstream power trace expansion batching
-
-</details>
-
-<details>
-<summary>techmannih SPR PRs (4)</summary>
-
-- [#3178](https://github.com/tscircuit/tscircuit-autorouter/pull/3178) fix: preserve terminals and repair coupled DRC conflicts
-- [#3353](https://github.com/tscircuit/tscircuit-autorouter/pull/3353) fix: preserve routing quality while preventing new peer trace shorts
-- [#183](https://github.com/tscircuit/high-density-repair03/pull/183) fix: prevent new trace-to-trace shorts in repair output
-- [#182](https://github.com/tscircuit/high-density-repair03/pull/182) test: reproduce force repair introducing a peer trace short
-
-</details>
-
-<details>
-<summary>AnasSarkiz SPR PRs (1)</summary>
-
-- [#107](https://github.com/tscircuit/bus-lanes-solver/pull/107) fix: support board outlines
-
-</details>
-
-<details>
-<summary>pthm SPR PRs (1)</summary>
-
-- [#127](https://github.com/tscircuit/circuit-json-to-step/pull/127) fix: export pcb_cutout geometry, including rounded rect corners
-
-</details>
-
-<details>
-<summary>raykholo SPR PRs (1)</summary>
-
-- [#948](https://github.com/tscircuit/docs/pull/948) docs(symbol): sizing a symbol (width / height, fit, viewbox)
 
 </details>
 
@@ -177,47 +118,28 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [0hmX](#0hmX) | 12 | 5 | 0 | 6 | 0 | 32 | 18 | 0 |
-| [1932819331hy-debug](#1932819331hy-debug) | 0 | 0 | 0 | 0 | 0 | 17 | 0 | 0 |
-| [Abse2001](#Abse2001) | 4 | 4 | 0 | 13 | 0 | 42 | 7 | 0 |
-| [Aming9303](#Aming9303) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 7 | 7 | 0 | 8 | 0 | 32 | 12 | 0 |
-| [anubhabx](#anubhabx) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [aswadi](#aswadi) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [BrandoBlue](#BrandoBlue) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [CaoTri253](#CaoTri253) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [cocvn157](#cocvn157) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [Daeil-Jung](#Daeil-Jung) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [Fuma2514](#Fuma2514) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [GokulPandi-M](#GokulPandi-M) | 18 | 13 | 2 | 0 | 0 | 13 | 8 | 0 |
-| [HarsH-1877](#HarsH-1877) | 0 | 0 | 0 | 0 | 0 | 7 | 0 | 0 |
-| [hrithik18k](#hrithik18k) | 2 | 2 | 0 | 0 | 0 | 5 | 2 | 0 |
-| [imrishabh18](#imrishabh18) | 8 | 3 | 0 | 33 | 5 | 37 | 26 | 0 |
-| [KrishnaX12](#KrishnaX12) | 6 | 5 | 1 | 0 | 0 | 12 | 5 | 0 |
-| [longdungai](#longdungai) | 4 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [maheshbawne987-coder](#maheshbawne987-coder) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [Marwichmisi](#Marwichmisi) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [mohan-bee](#mohan-bee) | 7 | 2 | 3 | 1 | 0 | 24 | 2 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 24 | 17 | 0 | 2 | 0 | 55 | 49 | 0 |
-| [natertatter](#natertatter) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [ocakciomursel-pixel](#ocakciomursel-pixel) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [Ojas2095](#Ojas2095) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [PatchHarbor27](#PatchHarbor27) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [pthm](#pthm) | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
-| [raykholo](#raykholo) | 2 | 2 | 0 | 0 | 0 | 1 | 1 | 0 |
-| [rushabhcodes](#rushabhcodes) | 51 | 15 | 3 | 4 | 0 | 29 | 17 | 0 |
-| [seveibar](#seveibar) | 25 | 1 | 0 | 43 | 3 | 140 | 102 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 39 | 38 | 0 | 14 | 1 | 194 | 87 | 0 |
-| [Shokun123](#Shokun123) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [sreecharan-desu](#sreecharan-desu) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [techmannih](#techmannih) | 20 | 10 | 0 | 1 | 0 | 44 | 12 | 0 |
-| [thanhdo1991](#thanhdo1991) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [tonnylegacy](#tonnylegacy) | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 516 | 401 | 0 |
-| [tungnguyen84](#tungnguyen84) | 0 | 0 | 0 | 0 | 0 | 92 | 0 | 0 |
-| [voropaevv](#voropaevv) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [zainrizvi0611-cmd](#zainrizvi0611-cmd) | 0 | 0 | 0 | 0 | 0 | 12 | 0 | 0 |
-| [ZhaZhaBei](#ZhaZhaBei) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [0hmX](#0hmX) | 4 | 2 | 0 | 3 | 0 | 30 | 16 | 0 |
+| [1932819331hy-debug](#1932819331hy-debug) | 1 | 0 | 0 | 0 | 0 | 10 | 0 | 0 |
+| [Abse2001](#Abse2001) | 2 | 2 | 0 | 3 | 0 | 7 | 3 | 0 |
+| [alokudyogi](#alokudyogi) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [balckwell](#balckwell) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [btctony1](#btctony1) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [cocvn157](#cocvn157) | 0 | 0 | 0 | 0 | 0 | 49 | 0 | 0 |
+| [danielshawellis](#danielshawellis) | 1 | 1 | 0 | 0 | 0 | 2 | 1 | 0 |
+| [GokulPandi-M](#GokulPandi-M) | 2 | 1 | 1 | 0 | 0 | 2 | 0 | 0 |
+| [HarsH-1877](#HarsH-1877) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 2 | 2 | 0 | 3 | 1 | 10 | 10 | 0 |
+| [longdungai](#longdungai) | 3 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [mohan-bee](#mohan-bee) | 3 | 3 | 0 | 0 | 0 | 7 | 5 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 7 | 4 | 0 | 2 | 0 | 25 | 19 | 0 |
+| [Plugv3](#Plugv3) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [rushabhcodes](#rushabhcodes) | 4 | 3 | 0 | 0 | 0 | 3 | 3 | 0 |
+| [seveibar](#seveibar) | 13 | 0 | 0 | 16 | 0 | 37 | 24 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 9 | 9 | 0 | 0 | 0 | 25 | 21 | 0 |
+| [Shokun123](#Shokun123) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
+| [techmannih](#techmannih) | 2 | 0 | 0 | 0 | 0 | 6 | 1 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 147 | 111 | 0 |
 
 ## Changes by Repository
 

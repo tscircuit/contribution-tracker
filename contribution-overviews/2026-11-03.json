@@ -1,0 +1,605 @@
+{
+  "0hmX": {
+    "githubId": 109351887,
+    "githubLogin": "0hmX",
+    "reviewsReceived": 4,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 5121,
+        "url": "https://github.com/tscircuit/core/pull/5121",
+        "title": "fix: default board thickness to 1.6mm",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5109,
+        "url": "https://github.com/tscircuit/core/pull/5109",
+        "title": "fix: warn when fabricatorPreset has no stackup template for the board",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 3,
+    "rejectionsGiven": 0,
+    "prsOpened": 30,
+    "prsMerged": 16,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedAsCodeOwner": 2
+  },
+  "1932819331hy-debug": {
+    "githubId": 343001481,
+    "githubLogin": "1932819331hy-debug",
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 10,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "Abse2001": {
+    "githubId": 54582525,
+    "githubLogin": "Abse2001",
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 5663,
+        "url": "https://github.com/tscircuit/cli/pull/5663",
+        "title": "fix: update STEP converter and preserve assembly ZIP exports (#5661)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 177,
+        "url": "https://github.com/tscircuit/circuit-json-to-step/pull/177",
+        "title": "fix: export round pill drills without non-finite STEP directions (#176)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 3,
+    "rejectionsGiven": 0,
+    "prsOpened": 7,
+    "prsMerged": 3,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/3d-viewer",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "AnasSarkiz": {
+    "githubId": 72264380,
+    "githubLogin": "AnasSarkiz",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "GokulPandi-M": {
+    "githubId": 187867218,
+    "githubLogin": "GokulPandi-M",
+    "reviewsReceived": 2,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "HarsH-1877": {
+    "githubId": 178315851,
+    "githubLogin": "HarsH-1877",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "MustafaMulla29": {
+    "githubId": 97171641,
+    "githubLogin": "MustafaMulla29",
+    "reviewsReceived": 7,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 2,
+    "rejectionsGiven": 0,
+    "prsOpened": 25,
+    "prsMerged": 19,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "Plugv3": {
+    "githubId": 284475314,
+    "githubLogin": "Plugv3",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "ShiboSoftwareDev": {
+    "githubId": 144173452,
+    "githubLogin": "ShiboSoftwareDev",
+    "reviewsReceived": 9,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 5,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 5,
+    "staffReviewedPrLinks": [
+      {
+        "number": 3480,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3480",
+        "title": "Avoid retaining every temporary topology cell on DDR boards",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3471,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3471",
+        "title": "Fix DDR pad drills through the existing repair search",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 147,
+        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/147",
+        "title": "Route A64’s fourth DDR byte through available pad-edge escape sites",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 136,
+        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/136",
+        "title": "Fix STMP157 DDR byte routing with valid pad-to-via approaches",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 137,
+        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/137",
+        "title": "repro: STMP157 fourth DDR byte failure with SVG snapshot",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 25,
+    "prsMerged": 21,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/3d-viewer",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit-autorouter",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "Shokun123": {
+    "githubId": 271351793,
+    "githubLogin": "Shokun123",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 5,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "alokudyogi": {
+    "githubId": 250127855,
+    "githubLogin": "alokudyogi",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "balckwell": {
+    "githubId": 120542819,
+    "githubLogin": "balckwell",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "btctony1": {
+    "githubId": 224235278,
+    "githubLogin": "btctony1",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "cocvn157": {
+    "githubId": 120394358,
+    "githubLogin": "cocvn157",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 49,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "danielshawellis": {
+    "githubId": 28659191,
+    "githubLogin": "danielshawellis",
+    "reviewsReceived": 1,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 5104,
+        "url": "https://github.com/tscircuit/core/pull/5104",
+        "title": "repro: copper pour still gets a redundant ground trace",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 1,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "imrishabh18": {
+    "githubId": 38923768,
+    "githubLogin": "imrishabh18",
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 2,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 2,
+    "staffReviewedPrLinks": [
+      {
+        "number": 3477,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3477",
+        "title": "perf: reduce Pipeline9 clearance projection cost via repair04",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 62,
+        "url": "https://github.com/tscircuit/repair04/pull/62",
+        "title": "perf: prune clearance pairs and simplify via-pad distances",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 3,
+    "rejectionsGiven": 1,
+    "prsOpened": 10,
+    "prsMerged": 10,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "longdungai": {
+    "githubId": 228216639,
+    "githubLogin": "longdungai",
+    "reviewsReceived": 3,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "mohan-bee": {
+    "githubId": 167054270,
+    "githubLogin": "mohan-bee",
+    "reviewsReceived": 3,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 3,
+    "staffReviewedPrLinks": [
+      {
+        "number": 290,
+        "url": "https://github.com/tscircuit/circuit-json-util/pull/290",
+        "title": "move brep copper pours with pcb transforms",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3442,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3442",
+        "title": "use upstream power trace expansion batching",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 68,
+        "url": "https://github.com/tscircuit/power-trace-expander/pull/68",
+        "title": "batch power trace expansion while preserving work budgets",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 7,
+    "prsMerged": 5,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "rushabhcodes": {
+    "githubId": 97875843,
+    "githubLogin": "rushabhcodes",
+    "reviewsReceived": 4,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 1,
+    "staffReviewedPrLinks": [
+      {
+        "number": 283,
+        "url": "https://github.com/tscircuit/circuit-json-util/pull/283",
+        "title": "fix: support position tolerance when matching route vias",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 3,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "seveibar": {
+    "githubId": 1910070,
+    "githubLogin": "seveibar",
+    "reviewsReceived": 13,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 16,
+    "rejectionsGiven": 0,
+    "prsOpened": 37,
+    "prsMerged": 24,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 12,
+    "distinctPrsReviewedAsCodeOwner": 4,
+    "reposOwned": [
+      {
+        "repo": "tscircuit/jscad-electronics",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/tscircuit.com",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "techmannih": {
+    "githubId": 125847751,
+    "githubLogin": "techmannih",
+    "reviewsReceived": 2,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 6,
+    "prsMerged": 1,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "tscircuitbot": {
+    "githubId": 174540199,
+    "githubLogin": "tscircuitbot",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 147,
+    "prsMerged": 111,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  }
+}
