@@ -40,22 +40,47 @@ pie
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 5 | 0 | 5 | 100.0% |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 9 | 0 | 9 | 100.0% |
+| [Abse2001](#Abse2001) | 4 | 0 | 4 | 100.0% |
+| [imrishabh18](#imrishabh18) | 3 | 0 | 3 | 100.0% |
 | [mohan-bee](#mohan-bee) | 3 | 1 | 3 | 66.7% |
+| [techmannih](#techmannih) | 3 | 0 | 3 | 100.0% |
 | [0hmX](#0hmX) | 2 | 0 | 2 | 100.0% |
-| [Abse2001](#Abse2001) | 2 | 0 | 2 | 100.0% |
-| [imrishabh18](#imrishabh18) | 2 | 0 | 2 | 100.0% |
+| [rushabhcodes](#rushabhcodes) | 2 | 1 | 2 | 50.0% |
+| [abdalraof-albarbar](#abdalraof-albarbar) | 1 | 1 | 0 | 0.0% |
 | [danielshawellis](#danielshawellis) | 1 | 0 | 1 | 100.0% |
-| [rushabhcodes](#rushabhcodes) | 1 | 1 | 1 | 0.0% |
 
 <details>
-<summary>ShiboSoftwareDev SPR PRs (5)</summary>
+<summary>ShiboSoftwareDev SPR PRs (9)</summary>
 
+- [#1163](https://github.com/tscircuit/pcb-viewer/pull/1163) Speed up WebGPU copper pours by updating Earcut
+- [#1095](https://github.com/tscircuit/3d-viewer/pull/1095) Release the 3D canvas WebGL context on teardown
+- [#6098](https://github.com/tscircuit/runframe/pull/6098) fix: keep system block viewer in development dependencies
 - [#3480](https://github.com/tscircuit/tscircuit-autorouter/pull/3480) Avoid retaining every temporary topology cell on DDR boards
 - [#3471](https://github.com/tscircuit/tscircuit-autorouter/pull/3471) Fix DDR pad drills through the existing repair search
 - [#147](https://github.com/tscircuit/bus-lanes-solver/pull/147) Route A64’s fourth DDR byte through available pad-edge escape sites
 - [#136](https://github.com/tscircuit/bus-lanes-solver/pull/136) Fix STMP157 DDR byte routing with valid pad-to-via approaches
 - [#137](https://github.com/tscircuit/bus-lanes-solver/pull/137) repro: STMP157 fourth DDR byte failure with SVG snapshot
+- [#101](https://github.com/tscircuit/circuit-json-webgpu/pull/101) perf: build WebGPU meshes in typed array chunks
+
+</details>
+
+<details>
+<summary>Abse2001 SPR PRs (4)</summary>
+
+- [#5076](https://github.com/tscircuit/core/pull/5076) fix: use the requested tab span and wider mouse-bite webs (#5066)
+- [#5071](https://github.com/tscircuit/core/pull/5071) fix: replace rounded panel slivers with continuous routing slots (#5065)
+- [#5663](https://github.com/tscircuit/cli/pull/5663) fix: update STEP converter and preserve assembly ZIP exports (#5661)
+- [#177](https://github.com/tscircuit/circuit-json-to-step/pull/177) fix: export round pill drills without non-finite STEP directions (#176)
+
+</details>
+
+<details>
+<summary>imrishabh18 SPR PRs (3)</summary>
+
+- [#3477](https://github.com/tscircuit/tscircuit-autorouter/pull/3477) perf: reduce Pipeline9 clearance projection cost via repair04
+- [#62](https://github.com/tscircuit/repair04/pull/62) perf: prune clearance pairs and simplify via-pad distances
+- [#49](https://github.com/tscircuit/tscircuit-standalone/pull/49) refactor: preserve the normal standalone package graph
 
 </details>
 
@@ -69,6 +94,15 @@ pie
 </details>
 
 <details>
+<summary>techmannih SPR PRs (3)</summary>
+
+- [#5143](https://github.com/tscircuit/core/pull/5143) Skip redundant autorouting between copper-connected terminals
+- [#3368](https://github.com/tscircuit/tscircuit-autorouter/pull/3368) chore: pin repair03 broad-force performance fix
+- [#187](https://github.com/tscircuit/high-density-repair03/pull/187) perf: reuse broad-force passes and avoid redundant DRC work
+
+</details>
+
+<details>
 <summary>0hmX SPR PRs (2)</summary>
 
 - [#5121](https://github.com/tscircuit/core/pull/5121) fix: default board thickness to 1.6mm
@@ -77,18 +111,17 @@ pie
 </details>
 
 <details>
-<summary>Abse2001 SPR PRs (2)</summary>
+<summary>rushabhcodes SPR PRs (2)</summary>
 
-- [#5663](https://github.com/tscircuit/cli/pull/5663) fix: update STEP converter and preserve assembly ZIP exports (#5661)
-- [#177](https://github.com/tscircuit/circuit-json-to-step/pull/177) fix: export round pill drills without non-finite STEP directions (#176)
+- [#283](https://github.com/tscircuit/circuit-json-util/pull/283) fix: support position tolerance when matching route vias
+- [#998](https://github.com/tscircuit/docs/pull/998) docs: remove package version notes from feature documentation
 
 </details>
 
 <details>
-<summary>imrishabh18 SPR PRs (2)</summary>
+<summary>abdalraof-albarbar SPR PRs (1)</summary>
 
-- [#3477](https://github.com/tscircuit/tscircuit-autorouter/pull/3477) perf: reduce Pipeline9 clearance projection cost via repair04
-- [#62](https://github.com/tscircuit/repair04/pull/62) perf: prune clearance pairs and simplify via-pad distances
+- [#304](https://github.com/tscircuit/schematic-viewer/pull/304) fix: hide internal component IDs from schematic details
 
 </details>
 
@@ -96,13 +129,6 @@ pie
 <summary>danielshawellis SPR PRs (1)</summary>
 
 - [#5104](https://github.com/tscircuit/core/pull/5104) repro: copper pour still gets a redundant ground trace
-
-</details>
-
-<details>
-<summary>rushabhcodes SPR PRs (1)</summary>
-
-- [#283](https://github.com/tscircuit/circuit-json-util/pull/283) fix: support position tolerance when matching route vias
 
 </details>
 
@@ -118,28 +144,36 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [0hmX](#0hmX) | 4 | 2 | 0 | 3 | 0 | 30 | 16 | 0 |
-| [1932819331hy-debug](#1932819331hy-debug) | 1 | 0 | 0 | 0 | 0 | 10 | 0 | 0 |
-| [Abse2001](#Abse2001) | 2 | 2 | 0 | 3 | 0 | 7 | 3 | 0 |
+| [0hmX](#0hmX) | 4 | 2 | 0 | 6 | 0 | 33 | 16 | 0 |
+| [1932819331hy-debug](#1932819331hy-debug) | 3 | 0 | 0 | 0 | 0 | 21 | 0 | 0 |
+| [abdalraof-albarbar](#abdalraof-albarbar) | 1 | 0 | 1 | 0 | 0 | 3 | 0 | 0 |
+| [Abse2001](#Abse2001) | 4 | 4 | 0 | 4 | 0 | 13 | 8 | 0 |
+| [Albertito-AI](#Albertito-AI) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [alokudyogi](#alokudyogi) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 1 | 1 | 0 | 0 | 0 | 9 | 2 | 0 |
 | [balckwell](#balckwell) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
 | [btctony1](#btctony1) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [cocvn157](#cocvn157) | 0 | 0 | 0 | 0 | 0 | 49 | 0 | 0 |
+| [cocvn157](#cocvn157) | 0 | 0 | 0 | 0 | 0 | 243 | 0 | 0 |
 | [danielshawellis](#danielshawellis) | 1 | 1 | 0 | 0 | 0 | 2 | 1 | 0 |
-| [GokulPandi-M](#GokulPandi-M) | 2 | 1 | 1 | 0 | 0 | 2 | 0 | 0 |
+| [DoctorLaplace](#DoctorLaplace) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [GokulPandi-M](#GokulPandi-M) | 2 | 1 | 1 | 0 | 0 | 3 | 0 | 0 |
 | [HarsH-1877](#HarsH-1877) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 2 | 2 | 0 | 3 | 1 | 10 | 10 | 0 |
+| [imrishabh18](#imrishabh18) | 3 | 3 | 0 | 4 | 1 | 19 | 17 | 0 |
 | [longdungai](#longdungai) | 3 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| [Luminaiai](#Luminaiai) | 0 | 0 | 0 | 0 | 0 | 19 | 0 | 0 |
+| [mau16ro](#mau16ro) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [mohan-bee](#mohan-bee) | 3 | 3 | 0 | 0 | 0 | 7 | 5 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 7 | 4 | 0 | 2 | 0 | 25 | 19 | 0 |
-| [Plugv3](#Plugv3) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [rushabhcodes](#rushabhcodes) | 4 | 3 | 0 | 0 | 0 | 3 | 3 | 0 |
-| [seveibar](#seveibar) | 13 | 0 | 0 | 16 | 0 | 37 | 24 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 9 | 9 | 0 | 0 | 0 | 25 | 21 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 7 | 4 | 0 | 2 | 0 | 35 | 26 | 0 |
+| [nhausmna](#nhausmna) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Plugv3](#Plugv3) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
+| [rafagil11](#rafagil11) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [rushabhcodes](#rushabhcodes) | 12 | 5 | 0 | 0 | 0 | 7 | 5 | 0 |
+| [seveibar](#seveibar) | 22 | 0 | 0 | 27 | 1 | 65 | 51 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 17 | 17 | 0 | 1 | 0 | 44 | 40 | 0 |
 | [Shokun123](#Shokun123) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
-| [techmannih](#techmannih) | 2 | 0 | 0 | 0 | 0 | 6 | 1 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 147 | 111 | 0 |
+| [techmannih](#techmannih) | 5 | 3 | 0 | 0 | 0 | 17 | 6 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 241 | 177 | 0 |
+| [zenoutlabs](#zenoutlabs) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 
 ## Changes by Repository
 
