@@ -54,6 +54,30 @@ async function getRecentIssues(repo: string): Promise<Issue[]> {
   return filteredIssues
 }
 
+const DISCORD_CONTENT_LIMIT = 2000
+
+export function chunkContent(content: string): string[] {
+  if (content.length <= DISCORD_CONTENT_LIMIT) return [content]
+  const chunks: string[] = []
+  let remaining = content
+  while (remaining.length > 0) {
+    if (remaining.length <= DISCORD_CONTENT_LIMIT) {
+      chunks.push(remaining)
+      break
+    }
+    // Split on the last newline within the limit to keep lines intact;
+    // fall back to a hard split for a single line longer than the limit.
+    let splitAt = remaining.lastIndexOf(
+      "\n",
+      DISCORD_CONTENT_LIMIT - 1,
+    )
+    if (splitAt <= 0) splitAt = DISCORD_CONTENT_LIMIT - 1
+    chunks.push(remaining.slice(0, splitAt))
+    remaining = remaining.slice(splitAt).replace(/^\n/, "")
+  }
+  return chunks
+}
+
 async function notifyDiscord(issues: Issue[], repo: string) {
   if (issues.length === 0) return
 
@@ -70,12 +94,13 @@ async function notifyDiscord(issues: Issue[], repo: string) {
       )
       .join("\n")
 
-  const messageOptions: MessageCreateOptions = {
-    content: messageContent,
-    allowedMentions: { parse: [] }, // This prevents link previews
+  for (const content of chunkContent(messageContent)) {
+    const messageOptions: MessageCreateOptions = {
+      content,
+      allowedMentions: { parse: [] }, // This prevents link previews
+    }
+    await discordWebhook.send(messageOptions)
   }
-
-  await discordWebhook.send(messageOptions)
   console.log(
     `[${getUTCDateTime()}] Successfully sent Discord notification for ${repo}`,
   )
