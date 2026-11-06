@@ -5,9 +5,9 @@
     "reviewsReceived": 12,
     "rejectionsReceived": 0,
     "approvalsReceived": 5,
-    "staffReviewedPrs": 5,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 5,
+    "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
       {
         "number": 5945,
@@ -31,13 +31,6 @@
         "staffRejections": 0
       },
       {
-        "number": 95,
-        "url": "https://github.com/tscircuit/circuit-json-webgpu/pull/95",
-        "title": "Reproduce AM3352 traces hidden by solder mask",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
         "number": 91,
         "url": "https://github.com/tscircuit/circuit-json-webgpu/pull/91",
         "title": "fix: accept pcb_stackup metadata without stopping PCB rendering",
@@ -53,7 +46,12 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
-    "distinctPrsReviewedAsCodeOwner": 5
+    "distinctPrsReviewedAsCodeOwner": 5,
+    "score": 37,
+    "major": 4,
+    "minor": 6,
+    "tiny": 8,
+    "stars": "⭐⭐"
   },
   "1932819331hy-debug": {
     "githubId": 343001481,
@@ -78,12 +76,12 @@
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 4,
-    "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 4,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 4,
+    "reviewsReceived": 10,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 8,
+    "staffRejectionsReceived": 2,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
         "number": 1088,
@@ -93,6 +91,41 @@
         "staffRejections": 0
       },
       {
+        "number": 940,
+        "url": "https://github.com/tscircuit/circuit-json/pull/940",
+        "title": "fix: retain schematic component rotation metadata (#4697)",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
+        "number": 955,
+        "url": "https://github.com/tscircuit/circuit-json/pull/955",
+        "title": "feat: allow panel fabrication notes without fake footprints (core#5067)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5076,
+        "url": "https://github.com/tscircuit/core/pull/5076",
+        "title": "fix: use the requested tab span and wider mouse-bite webs (#5066)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5071,
+        "url": "https://github.com/tscircuit/core/pull/5071",
+        "title": "fix: replace rounded panel slivers with continuous routing slots (#5065)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5074,
+        "url": "https://github.com/tscircuit/core/pull/5074",
+        "title": "fix: adopt courtyard outline props validation (#4772)",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      },
+      {
         "number": 226,
         "url": "https://github.com/tscircuit/circuit-json-to-gerber/pull/226",
         "title": "fix: preserve board and route via tenting in Gerber export (#3903)",
@@ -100,28 +133,21 @@
         "staffRejections": 0
       },
       {
-        "number": 5619,
-        "url": "https://github.com/tscircuit/cli/pull/5619",
-        "title": "chore: update KiCad exporter to 0.0.257",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 131,
-        "url": "https://github.com/tscircuit/copper-pour-solver/pull/131",
-        "title": "chore: prepare 0.0.68 release containing explicit-pour clipping",
+        "number": 5657,
+        "url": "https://github.com/tscircuit/cli/pull/5657",
+        "title": "fix: include relative local CAD models in GLB and GLTF exports (#5654)",
         "staffApprovals": 1,
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 13,
+    "approvalsGiven": 16,
     "rejectionsGiven": 0,
     "prsOpened": 42,
-    "prsMerged": 7,
+    "prsMerged": 13,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 11,
+    "distinctPrsReviewedNonCodeOwner": 14,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
@@ -136,7 +162,12 @@
           "*"
         ]
       }
-    ]
+    ],
+    "score": 27,
+    "major": 1,
+    "minor": 2,
+    "tiny": 4,
+    "stars": "⭐⭐"
   },
   "Aming9303": {
     "githubId": 215684766,
@@ -184,7 +215,12 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 8,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 28,
+    "major": 1,
+    "minor": 5,
+    "tiny": 6,
+    "stars": "⭐⭐"
   },
   "BrandoBlue": {
     "githubId": 225271846,
@@ -284,18 +320,31 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 12,
+    "major": 0,
+    "minor": 4,
+    "tiny": 4,
+    "stars": "⭐⭐"
   },
   "HarsH-1877": {
     "githubId": 178315851,
     "githubLogin": "HarsH-1877",
-    "reviewsReceived": 0,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 1,
+    "rejectionsReceived": 1,
     "approvalsReceived": 0,
-    "staffReviewedPrs": 0,
-    "staffRejectionsReceived": 0,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 0,
-    "staffReviewedPrLinks": [],
+    "staffReviewedPrLinks": [
+      {
+        "number": 5053,
+        "url": "https://github.com/tscircuit/core/pull/5053",
+        "title": "fix(schematicsymbol): preserve oriented symbolName and apply geometric schRotation",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 7,
@@ -309,8 +358,8 @@
   "KrishnaX12": {
     "githubId": 186785561,
     "githubLogin": "KrishnaX12",
-    "reviewsReceived": 6,
-    "rejectionsReceived": 1,
+    "reviewsReceived": 7,
+    "rejectionsReceived": 2,
     "approvalsReceived": 5,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
@@ -324,7 +373,12 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 11,
+    "major": 1,
+    "minor": 3,
+    "tiny": 1,
+    "stars": "⭐⭐"
   },
   "Marwichmisi": {
     "githubId": 216451040,
@@ -349,31 +403,17 @@
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 24,
+    "reviewsReceived": 25,
     "rejectionsReceived": 0,
-    "approvalsReceived": 17,
-    "staffReviewedPrs": 8,
+    "approvalsReceived": 20,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 8,
+    "staffApprovalsReceived": 6,
     "staffReviewedPrLinks": [
       {
         "number": 27,
         "url": "https://github.com/tscircuit/circuit-json-to-pnp-csv/pull/27",
         "title": "fix: export PnP from authored footprint origin",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 773,
-        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/773",
-        "title": "fix: preserve source net trace widths in KiCad projects",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 761,
-        "url": "https://github.com/tscircuit/circuit-json-to-kicad/pull/761",
-        "title": "fix: preserve nets on internally connected pads",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -416,12 +456,17 @@
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
     "prsOpened": 55,
-    "prsMerged": 49,
+    "prsMerged": 55,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 2,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 53,
+    "major": 4,
+    "minor": 12,
+    "tiny": 33,
+    "stars": "⭐⭐⭐"
   },
   "Ojas2095": {
     "githubId": 175488346,
@@ -466,12 +511,12 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 39,
+    "reviewsReceived": 40,
     "rejectionsReceived": 0,
-    "approvalsReceived": 38,
-    "staffReviewedPrs": 10,
+    "approvalsReceived": 39,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 10,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
       {
         "number": 1150,
@@ -488,23 +533,9 @@
         "staffRejections": 0
       },
       {
-        "number": 4991,
-        "url": "https://github.com/tscircuit/core/pull/4991",
-        "title": "Bump circuit-json-to-gltf to 0.0.158",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 510,
-        "url": "https://github.com/tscircuit/jscad-electronics/pull/510",
-        "title": "Fix npm installs of the published package",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 507,
-        "url": "https://github.com/tscircuit/jscad-electronics/pull/507",
-        "title": "Preserve authored DFN body dimensions",
+        "number": 3471,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3471",
+        "title": "Fix DDR pad drills through the existing repair search",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -530,13 +561,6 @@
         "staffRejections": 0
       },
       {
-        "number": 124,
-        "url": "https://github.com/tscircuit/bus-lanes-solver/pull/124",
-        "title": "Reproduce OrangeCrab DDR byte-one length matching failure",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
         "number": 122,
         "url": "https://github.com/tscircuit/bus-lanes-solver/pull/122",
         "title": "Fix DQS tuning clearance and route the real OrangeCrab byte lane",
@@ -547,7 +571,7 @@
     "approvalsGiven": 14,
     "rejectionsGiven": 1,
     "prsOpened": 194,
-    "prsMerged": 87,
+    "prsMerged": 89,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -584,7 +608,12 @@
           "*"
         ]
       }
-    ]
+    ],
+    "score": 171,
+    "major": 25,
+    "minor": 23,
+    "tiny": 38,
+    "stars": "👑👑👑"
   },
   "Shokun123": {
     "githubId": 271351793,
@@ -704,7 +733,12 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 2,
+    "major": 0,
+    "minor": 0,
+    "tiny": 2,
+    "stars": ""
   },
   "imrishabh18": {
     "githubId": 38923768,
@@ -746,13 +780,13 @@
       }
     ],
     "approvalsGiven": 33,
-    "rejectionsGiven": 5,
+    "rejectionsGiven": 6,
     "prsOpened": 37,
     "prsMerged": 26,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 31,
+    "distinctPrsReviewedNonCodeOwner": 32,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
@@ -761,7 +795,12 @@
           "*"
         ]
       }
-    ]
+    ],
+    "score": 41,
+    "major": 6,
+    "minor": 2,
+    "tiny": 18,
+    "stars": "⭐⭐"
   },
   "longdungai": {
     "githubId": 228216639,
@@ -806,13 +845,20 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 7,
-    "rejectionsReceived": 3,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 4,
+    "reviewsReceived": 9,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 5,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
+      {
+        "number": 290,
+        "url": "https://github.com/tscircuit/circuit-json-util/pull/290",
+        "title": "move brep copper pours with pcb transforms",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 956,
         "url": "https://github.com/tscircuit/props/pull/956",
@@ -838,19 +884,31 @@
         "number": 3442,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3442",
         "title": "use upstream power trace expansion batching",
-        "staffApprovals": 0,
+        "staffApprovals": 1,
         "staffRejections": 1
+      },
+      {
+        "number": 68,
+        "url": "https://github.com/tscircuit/power-trace-expander/pull/68",
+        "title": "batch power trace expansion while preserving work budgets",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 24,
-    "prsMerged": 2,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 7,
+    "major": 1,
+    "minor": 1,
+    "tiny": 0,
+    "stars": "⭐"
   },
   "natertatter": {
     "githubId": 20017025,
@@ -918,7 +976,12 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 2,
+    "major": 0,
+    "minor": 1,
+    "tiny": 0,
+    "stars": ""
   },
   "raykholo": {
     "githubId": 7330584,
@@ -926,18 +989,10 @@
     "reviewsReceived": 2,
     "rejectionsReceived": 0,
     "approvalsReceived": 2,
-    "staffReviewedPrs": 1,
+    "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
-    "staffReviewedPrLinks": [
-      {
-        "number": 948,
-        "url": "https://github.com/tscircuit/docs/pull/948",
-        "title": "docs(symbol): sizing a symbol (width / height, fit, viewbox)",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      }
-    ],
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
     "prsOpened": 1,
@@ -946,15 +1001,20 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 1,
+    "major": 0,
+    "minor": 0,
+    "tiny": 1,
+    "stars": ""
   },
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 51,
-    "rejectionsReceived": 3,
-    "approvalsReceived": 15,
-    "staffReviewedPrs": 5,
+    "reviewsReceived": 52,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 16,
+    "staffReviewedPrs": 4,
     "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 4,
     "staffReviewedPrLinks": [
@@ -962,7 +1022,7 @@
         "number": 283,
         "url": "https://github.com/tscircuit/circuit-json-util/pull/283",
         "title": "fix: support position tolerance when matching route vias",
-        "staffApprovals": 0,
+        "staffApprovals": 1,
         "staffRejections": 1
       },
       {
@@ -985,44 +1045,42 @@
         "title": "fix: rotate polygon plated-hole pads and soldermask",
         "staffApprovals": 1,
         "staffRejections": 0
-      },
-      {
-        "number": 5629,
-        "url": "https://github.com/tscircuit/tscircuit.com/pull/5629",
-        "title": "Add tooltip to GitHub repository refresh button",
-        "staffApprovals": 1,
-        "staffRejections": 0
       }
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
     "prsOpened": 29,
-    "prsMerged": 17,
+    "prsMerged": 18,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 4,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 36,
+    "major": 3,
+    "minor": 9,
+    "tiny": 5,
+    "stars": "⭐⭐"
   },
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 25,
+    "reviewsReceived": 27,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 43,
-    "rejectionsGiven": 3,
+    "approvalsGiven": 55,
+    "rejectionsGiven": 4,
     "prsOpened": 140,
-    "prsMerged": 102,
+    "prsMerged": 107,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 29,
-    "distinctPrsReviewedAsCodeOwner": 13,
+    "distinctPrsReviewedNonCodeOwner": 37,
+    "distinctPrsReviewedAsCodeOwner": 16,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -1054,7 +1112,12 @@
           "*"
         ]
       }
-    ]
+    ],
+    "score": 271,
+    "major": 51,
+    "minor": 27,
+    "tiny": 22,
+    "stars": "👑👑👑"
   },
   "sreecharan-desu": {
     "githubId": 116901889,
@@ -1079,13 +1142,20 @@
   "techmannih": {
     "githubId": 125847751,
     "githubLogin": "techmannih",
-    "reviewsReceived": 20,
+    "reviewsReceived": 27,
     "rejectionsReceived": 0,
-    "approvalsReceived": 10,
-    "staffReviewedPrs": 4,
+    "approvalsReceived": 13,
+    "staffReviewedPrs": 7,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 7,
     "staffReviewedPrLinks": [
+      {
+        "number": 3368,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3368",
+        "title": "chore: pin repair03 broad-force performance fix",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 3178,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3178",
@@ -1097,6 +1167,20 @@
         "number": 3353,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3353",
         "title": "fix: preserve routing quality while preventing new peer trace shorts",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 190,
+        "url": "https://github.com/tscircuit/high-density-repair03/pull/190",
+        "title": "fix: prevent new trace-to-via shorts during repair",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 187,
+        "url": "https://github.com/tscircuit/high-density-repair03/pull/187",
+        "title": "perf: reuse broad-force passes and avoid redundant DRC work",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -1118,12 +1202,17 @@
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 44,
-    "prsMerged": 12,
+    "prsMerged": 17,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 25,
+    "major": 3,
+    "minor": 3,
+    "tiny": 6,
+    "stars": "⭐⭐"
   },
   "thanhdo1991": {
     "githubId": 9979578,
@@ -1183,7 +1272,12 @@
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 12.5,
+    "major": 0,
+    "minor": 0,
+    "tiny": 401,
+    "stars": "⭐⭐"
   },
   "tungnguyen84": {
     "githubId": 36720757,
