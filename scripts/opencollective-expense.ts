@@ -40,10 +40,16 @@ async function main() {
       body: JSON.stringify({ query, variables }),
       signal: AbortSignal.timeout(45000),
     })
-    if (!response.ok)
+    if (!response.ok) {
+      const body = await response.text()
+      const reason = /cloudflare/i.test(body)
+        ? "Cloudflare block"
+        : "API request rejected"
+      const ray = response.headers.get("cf-ray") ?? "unavailable"
       throw new Error(
-        `Open Collective HTTP ${response.status}; no automatic retry`,
+        `Open Collective HTTP ${response.status}: ${reason}; Ray ID ${ray}; no automatic retry`,
       )
+    }
     const result = await response.json()
     if (result.errors?.length) {
       // Redact any credential echoed by a remote error and omit arbitrary response bodies.
