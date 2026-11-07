@@ -38,3 +38,10 @@ This repository manages Discord roles based on your weekly GitHub contributions.
 
 ## Approval & Sync
 Once your PR is reviewed and merged, the bot will automatically track your weekly GitHub contributions and assign roles in the Discord server accordingly.
+
+## Contributor Tier Roles & Special Channel Access
+Contributors are granted cumulative tier roles based on their total merged PR contributions across all weeks, unlocking posting access in special Discord channels:
+- **`c-tier`**: 1–9 contributions
+- **`b-tier`**: 10–99 contributions
+- **`a-tier`**: 100+ contributions
+
