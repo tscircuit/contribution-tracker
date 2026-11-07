@@ -2226,6 +2226,11 @@ pie
 <!-- END_CURRENT_WEEK -->
 
 
+## Open Collective profile registration
+
+Add your public Open Collective profile link in [sponsorship-profiles.json](./sponsorship-profiles.json).
+See [how to add your profile](./docs/sponsorship-profiles.md).
+
 ## Development
 
 ### Prerequisites
