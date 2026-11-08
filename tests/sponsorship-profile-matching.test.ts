@@ -65,13 +65,13 @@ test("rejects misleading URLs and invalid profile schemas", () => {
       ),
     ).toThrow()
   }
-  for (const value of [
+  for (const invalidProfiles of [
     [],
     null,
     { alice: {} },
     { alice: { openCollectiveProfileUrl: null, other: true } },
   ]) {
-    expect(() => parseProfiles(JSON.stringify(value))).toThrow()
+    expect(() => parseProfiles(JSON.stringify(invalidProfiles))).toThrow()
   }
 })
 
@@ -106,13 +106,25 @@ test("historical numeric ID prevents reused or renamed GitHub usernames from mat
   ])
   expect(expected).toBe(123)
   expect(() =>
-    requireGithubIdentity("alice", expected, { id: 999, login: "alice" }),
+    requireGithubIdentity({
+      username: "alice",
+      expectedId: expected,
+      current: { id: 999, login: "alice" },
+    }),
   ).toThrow("identity changed")
   expect(() =>
-    requireGithubIdentity("alice", expected, { id: 123, login: "renamed" }),
+    requireGithubIdentity({
+      username: "alice",
+      expectedId: expected,
+      current: { id: 123, login: "renamed" },
+    }),
   ).toThrow("identity changed")
   expect(() =>
-    requireGithubIdentity("alice", expected, { id: 123, login: "ALICE" }),
+    requireGithubIdentity({
+      username: "alice",
+      expectedId: expected,
+      current: { id: 123, login: "ALICE" },
+    }),
   ).not.toThrow()
   expect(() =>
     historicalGithubId("alice", [
@@ -143,4 +155,50 @@ test("September fixture retains all payouts including trixie010's $10", () => {
   expect(() =>
     parseProfiles(fs.readFileSync("sponsorship-profiles.json", "utf8")),
   ).not.toThrow()
+})
+
+test("rejects duplicate usernames regardless of the discarded entry's type", () => {
+  const validEntry =
+    '{"openCollectiveProfileUrl":"https://opencollective.com/alice"}'
+  for (const discardedEntry of [
+    "null",
+    "false",
+    "42",
+    '"text"',
+    "[]",
+    "{}",
+    validEntry,
+  ]) {
+    for (const duplicateKey of ["alice", "ALICE", "\\u0061lice"]) {
+      expect(() =>
+        parseProfiles(
+          `{"alice":${discardedEntry},"${duplicateKey}":${validEntry}}`,
+        ),
+      ).toThrow("Duplicate GitHub username")
+      expect(() =>
+        parseProfiles(
+          `{"alice":${validEntry},"${duplicateKey}":${discardedEntry}}`,
+        ),
+      ).toThrow("Duplicate GitHub username")
+    }
+  }
+})
+
+test("rejects escaped duplicate profile fields before parsing discards them", () => {
+  expect(() =>
+    parseProfiles(
+      '{"alice":{"openCollectiveProfileUrl":null,"\\u006fpenCollectiveProfileUrl":"https://opencollective.com/alice"}}',
+    ),
+  ).toThrow("Duplicate JSON profile field")
+})
+
+test("key scanner leaves string contents and unrelated object scopes intact", () => {
+  expect(() =>
+    parseProfiles(JSON.stringify({ alice: profile(null), bob: profile(null) })),
+  ).not.toThrow()
+  expect(() =>
+    parseProfiles(
+      JSON.stringify({ alice: profile('text with "alice":{} and [braces]') }),
+    ),
+  ).toThrow("Invalid Open Collective profile URL")
 })

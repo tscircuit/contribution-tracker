@@ -60,7 +60,11 @@ async function main() {
         },
       },
     )
-    requireGithubIdentity(sponsorship.username, githubId, github)
+    requireGithubIdentity({
+      username: sponsorship.username,
+      expectedId: githubId,
+      current: github,
+    })
     const slug = profileUrl.split("/").at(-1)!
     const result = await requestJson(
       "https://api.opencollective.com/graphql/v2",

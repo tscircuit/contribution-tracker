@@ -1,33 +1,75 @@
 export const MATCHING_MONTH = "2026-09"
 
+export type GithubUsername = string
+
 export interface SponsorshipRow {
-  username: string
+  username: GithubUsername
   amountCents: number
   remarks: string
 }
 
-export function parseProfiles(source: string): Map<string, string | null> {
-  const value = JSON.parse(source)
-  if (!value || Array.isArray(value) || typeof value !== "object") {
+/** Inspect keys while their occurrences are still present in the raw JSON.
+ * Strings are consumed as whole tokens, so braces and key-like text in string
+ * contents cannot affect nesting. JSON.parse subsequently validates the grammar.
+ */
+function requireUniqueJsonKeys(source: string): void {
+  const containers: Array<{ kind: "object" | "array"; keys: Set<string> }> = []
+  for (let position = 0; position < source.length; position++) {
+    const character = source[position]
+    if (character === "{" || character === "[") {
+      containers.push({
+        kind: character === "{" ? "object" : "array",
+        keys: new Set(),
+      })
+    } else if (character === "}" || character === "]") {
+      containers.pop()
+    } else if (character === '"') {
+      const start = position++
+      while (position < source.length) {
+        if (source[position] === "\\") position += 2
+        else if (source[position] === '"') break
+        else position++
+      }
+      const decodedString: string = JSON.parse(
+        source.slice(start, position + 1),
+      )
+      let nextPosition = position + 1
+      while (
+        /\s/.test(source[nextPosition] ?? "") &&
+        nextPosition < source.length
+      )
+        nextPosition++
+      const container = containers.at(-1)
+      if (source[nextPosition] !== ":" || container?.kind !== "object") continue
+      const key =
+        containers.length === 1 ? decodedString.toLowerCase() : decodedString
+      if (container.keys.has(key)) {
+        throw new Error(
+          containers.length === 1
+            ? "Duplicate GitHub username"
+            : "Duplicate JSON profile field",
+        )
+      }
+      container.keys.add(key)
+    }
+  }
+}
+
+export function parseProfiles(
+  source: string,
+): Map<GithubUsername, string | null> {
+  requireUniqueJsonKeys(source)
+  const parsedProfiles = JSON.parse(source)
+  if (
+    !parsedProfiles ||
+    Array.isArray(parsedProfiles) ||
+    typeof parsedProfiles !== "object"
+  ) {
     throw new Error("Profiles must be an object")
   }
-  // JSON.parse otherwise silently discards repeated keys. The schema permits
-  // objects only at the root and for each contributor entry.
-  const keys = [...source.matchAll(/"((?:\\.|[^"\\])*)"\s*:\s*\{/g)].map(
-    (match) => JSON.parse(`"${match[1]}"`).toLowerCase(),
-  )
-  if (new Set(keys).size !== keys.length)
-    throw new Error("Duplicate GitHub username")
-  const profileFieldCount = [
-    ...source.matchAll(/"((?:\\.|[^"\\])*)"\s*:/g),
-  ].filter(
-    (match) => JSON.parse(`"${match[1]}"`) === "openCollectiveProfileUrl",
-  ).length
-  if (profileFieldCount !== Object.keys(value).length)
-    throw new Error("Duplicate or missing profile URL field")
-  const result = new Map<string, string | null>()
+  const profilesByUsername = new Map<GithubUsername, string | null>()
   const recipients = new Set<string>()
-  for (const [username, entry] of Object.entries(value)) {
+  for (const [username, entry] of Object.entries(parsedProfiles)) {
     if (!/^[a-z\d](?:[a-z\d-]{0,37}[a-z\d])?$/i.test(username)) {
       throw new Error(`Invalid GitHub username: ${username}`)
     }
@@ -55,9 +97,9 @@ export function parseProfiles(source: string): Map<string, string | null> {
         throw new Error(`Duplicate Open Collective recipient: ${canonical}`)
       recipients.add(canonical)
     }
-    result.set(username.toLowerCase(), canonical)
+    profilesByUsername.set(username.toLowerCase(), canonical)
   }
-  return result
+  return profilesByUsername
 }
 
 export function parseSponsorshipCsv(source: string): SponsorshipRow[] {
@@ -150,11 +192,15 @@ export function historicalGithubId(
   return [...ids][0]
 }
 
-export function requireGithubIdentity(
-  username: string,
-  expectedId: number,
-  current: { id: number; login: string },
-) {
+export function requireGithubIdentity({
+  username,
+  expectedId,
+  current,
+}: {
+  username: GithubUsername
+  expectedId: number
+  current: { id: number; login: string }
+}) {
   if (
     current.id !== expectedId ||
     current.login.toLowerCase() !== username.toLowerCase()
