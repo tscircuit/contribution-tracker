@@ -136,3 +136,5 @@ mega_repo_readme.md
 .cache-anthropic/
 .vercel
 .cache-ai
+# Local sponsorship account matching reports
+sponsorship-matches/
