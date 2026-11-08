@@ -111,6 +111,18 @@ export function contributorExpenseStatus({
   }
 }
 
+const escapeCell = (text: string) =>
+  text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\|/g, "&#124;")
+    .replace(/[\r\n]/g, " ")
+const expenseLinks = (expenses: ExpenseEvidence[]) =>
+  expenses
+    .map((expense) => `[${escapeCell(expense.status)}](${expense.url})`)
+    .join(", ") || "—"
+
 export function renderSponsorshipSummary({
   month,
   rows,
@@ -122,17 +134,6 @@ export function renderSponsorshipSummary({
 }) {
   const matched = rows.filter((row) => row.openCollectiveId).length
   const total = rows.reduce((sum, row) => sum + row.amountCents, 0)
-  const escapeCell = (text: string) =>
-    text
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/\|/g, "&#124;")
-      .replace(/[\r\n]/g, " ")
-  const expenseLinks = (expenses: ExpenseEvidence[]) =>
-    expenses
-      .map((expense) => `[${escapeCell(expense.status)}](${expense.url})`)
-      .join(", ") || "—"
   const table = rows
     .map(
       (row) =>
