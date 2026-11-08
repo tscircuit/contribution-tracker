@@ -3,11 +3,13 @@ import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
 import { EXCLUDED_BOTS } from "lib/constants"
 
-const discordWebhook = new WebhookClient({
-  url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
-})
+const getDiscordWebhook = () => {
+  const url = process.env.ISSUES_DISCORD_WEBHOOK_URL
+  if (!url) return null
+  return new WebhookClient({ url })
+}
 
-interface Issue {
+export interface Issue {
   number: number
   title: string
   html_url: string
@@ -21,61 +23,80 @@ function getUTCDateTime(): string {
   return new Date().toISOString()
 }
 
-async function getRecentIssues(repo: string): Promise<Issue[]> {
-  const [owner, repoName] = repo.split("/")
-  const sixtyMinutesAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString()
+export function formatDiscordIssueMessages(
+  issues: Issue[],
+  repo: string,
+  maxLength = 2000,
+): string[] {
+  if (issues.length === 0) return []
 
-  console.log(
-    `[${getUTCDateTime()}] Fetching issues for ${repo} since ${sixtyMinutesAgo}`,
-  )
-
-  const { data } = await octokit.issues.listForRepo({
-    owner,
-    repo: repoName,
-    state: "open",
-    since: sixtyMinutesAgo,
-    sort: "created",
-    direction: "desc",
-  })
-
-  const filteredIssues = data.filter(
+  const header = `New issues in ${repo}:\n`
+  const lines = issues.map(
     (issue) =>
-      !issue.pull_request &&
-      new Date(issue.created_at) >= new Date(sixtyMinutesAgo) &&
-      issue.user?.login &&
-      !EXCLUDED_BOTS.includes(
-        issue.user.login as (typeof EXCLUDED_BOTS)[number],
-      ),
-  ) as Issue[]
-  console.log(
-    `[${getUTCDateTime()}] Found ${filteredIssues.length} new issues in ${repo}`,
+      `• #${issue.number} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`,
   )
 
-  return filteredIssues
+  const messages: string[] = []
+  let currentMessage = header
+
+  for (const line of lines) {
+    if ((currentMessage + line + "\n").length > maxLength) {
+      if (currentMessage.trim().length > 0 && currentMessage !== header) {
+        messages.push(currentMessage.trimEnd())
+        currentMessage = `New issues in ${repo} (cont.):\n`
+      }
+      if ((currentMessage + line + "\n").length > maxLength) {
+        const truncatedLine =
+          line.slice(0, maxLength - currentMessage.length - 5) + "..."
+        messages.push((currentMessage + truncatedLine).trimEnd())
+        currentMessage = `New issues in ${repo} (cont.):\n`
+        continue
+      }
+    }
+    currentMessage += line + "\n"
+  }
+
+  if (
+    currentMessage.trim().length > 0 &&
+    currentMessage !== header &&
+    currentMessage !== `New issues in ${repo} (cont.):\n`
+  ) {
+    messages.push(currentMessage.trimEnd())
+  }
+
+  return messages
 }
 
-async function notifyDiscord(issues: Issue[], repo: string) {
+export async function notifyDiscord(
+  issues: Issue[],
+  repo: string,
+  webhook?: { send: (options: MessageCreateOptions) => Promise<any> },
+) {
   if (issues.length === 0) return
+
+  const client = webhook ?? getDiscordWebhook()
+  if (!client) {
+    console.warn(
+      `[${getUTCDateTime()}] ISSUES_DISCORD_WEBHOOK_URL is not set; skipping Discord notification for ${repo}`,
+    )
+    return
+  }
 
   console.log(
     `[${getUTCDateTime()}] Sending notification for ${issues.length} issues from ${repo} to Discord`,
   )
 
-  const messageContent =
-    `New issues in ${repo}:\n` +
-    issues
-      .map(
-        (issue) =>
-          `• #${issue.number} ${issue.title} by ${issue.user.login} - <${issue.html_url}>`,
-      )
-      .join("\n")
+  const messageChunks = formatDiscordIssueMessages(issues, repo)
 
-  const messageOptions: MessageCreateOptions = {
-    content: messageContent,
-    allowedMentions: { parse: [] }, // This prevents link previews
+  for (const chunk of messageChunks) {
+    const messageOptions: MessageCreateOptions = {
+      content: chunk,
+      allowedMentions: { parse: [] }, // This prevents link previews
+    }
+
+    await client.send(messageOptions)
   }
 
-  await discordWebhook.send(messageOptions)
   console.log(
     `[${getUTCDateTime()}] Successfully sent Discord notification for ${repo}`,
   )
@@ -103,16 +124,29 @@ async function main() {
   )
 
   for (const [repo, issues] of Object.entries(allIssues)) {
-    await notifyDiscord(issues, repo)
+    try {
+      await notifyDiscord(issues, repo)
+    } catch (error) {
+      console.error(
+        `[${getUTCDateTime()}] Failed sending Discord notification for ${repo}:`,
+        error,
+      )
+    }
   }
 
   console.log(`[${getUTCDateTime()}] Completed issue notification process`)
 }
 
-main().catch((error) => {
-  console.error(
-    `[${getUTCDateTime()}] Error in issue notification process:`,
-    error,
-  )
-  process.exit(1)
-})
+if (
+  import.meta.main ||
+  process.argv[1]?.endsWith("issue-notifications.ts") ||
+  process.argv[1]?.endsWith("issue-notifications")
+) {
+  main().catch((error) => {
+    console.error(
+      `[${getUTCDateTime()}] Error in issue notification process:`,
+      error,
+    )
+    process.exit(1)
+  })
+}
