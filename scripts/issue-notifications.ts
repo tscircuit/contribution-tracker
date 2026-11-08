@@ -67,6 +67,39 @@ export function formatDiscordIssueMessages(
   return messages
 }
 
+async function getRecentIssues(repo: string): Promise<Issue[]> {
+  const [owner, repoName] = repo.split("/")
+  const sixtyMinutesAgo = new Date(Date.now() - 60 * 60 * 1000).toISOString()
+
+  console.log(
+    `[${getUTCDateTime()}] Fetching issues for ${repo} since ${sixtyMinutesAgo}`,
+  )
+
+  const { data } = await octokit.issues.listForRepo({
+    owner,
+    repo: repoName,
+    state: "open",
+    since: sixtyMinutesAgo,
+    sort: "created",
+    direction: "desc",
+  })
+
+  const filteredIssues = data.filter(
+    (issue) =>
+      !issue.pull_request &&
+      new Date(issue.created_at) >= new Date(sixtyMinutesAgo) &&
+      issue.user?.login &&
+      !EXCLUDED_BOTS.includes(
+        issue.user.login as (typeof EXCLUDED_BOTS)[number],
+      ),
+  ) as Issue[]
+  console.log(
+    `[${getUTCDateTime()}] Found ${filteredIssues.length} new issues in ${repo}`,
+  )
+
+  return filteredIssues
+}
+
 export async function notifyDiscord(
   issues: Issue[],
   repo: string,
