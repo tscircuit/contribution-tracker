@@ -54,7 +54,7 @@ secret is needed.
 
 Validation stops on duplicate usernames (including case variants and repeated
 JSON keys), duplicate Open Collective URLs/account IDs, invalid URLs/CSV amounts,
-missing or conflicting historical GitHub IDs, changed GitHub identities, lookup
+missing or conflicting historical GitHub IDs, changed GitHub identities, profile lookup
 failures, or nonexistent Open Collective profiles. No report artifact is uploaded
 on a failed job. The job is read-only, has a timeout, rejects redirects, and never
 creates expenses, sends invitations, or pays anyone. Repeated runs just create
@@ -83,8 +83,8 @@ The matching script itself makes live read-only lookups when explicitly run:
 
 ### Future duplicate-expense protection
 
-This workflow currently produces reports only. It does not yet query previous
-expenses or implement duplicate-expense protection.
+This workflow produces reports only. It queries public visible expenses for
+status evidence, but does not yet implement complete duplicate-expense protection.
 
 Before adding expense creation to this same workflow, identify each sponsorship
 by the payer collective, immutable GitHub contributor ID, expense purpose
@@ -107,3 +107,38 @@ rather than automatically creating a replacement.
 Serialize expense-creation runs and reconcile uncertain API outcomes before
 retrying, so a timeout after successful creation cannot create a duplicate. A
 local cache or downloadable report alone is not a durable payment ledger.
+
+
+### Per-contributor expense and payment reporting
+
+Both the Actions run summary and downloaded `summary.md` contain a table with
+GitHub username, Open Collective profile, September amount, profile-match result,
+payment evidence, and linked expense statuses. `matches.json` includes the same
+information as structured rows.
+
+The Action paginates the payer collective's public received expenses across all
+creation dates. It uses recipient account IDs, never display names. A September
+expense can therefore be reported even if it was created or paid in November.
+The following exact references identify the contribution period:
+
+- `tscircuit-contributors:github:<numeric-id>:sponsorship:2026-09`
+- `tscircuit-2026-09-<github-username>` (the earlier invoice generator's reference)
+
+A single matched September expense marked `PAID`, with the expected USD amount,
+is reported as `paid`. Other statuses are shown unchanged beside the expense
+link, with `period-expense-not-paid`. Multiple September expenses or mismatched
+amounts are explicitly flagged for review. This is evidence about existing
+expenses, not permission to create a new one.
+
+Expenses with missing or unrecognized references are listed separately as
+needing contribution-period review. Their paid date, title, or amount is not used
+to assume that they pay September's sponsorship. Missing contributor profiles
+remain visible in the report with unknown payment status.
+
+Public API access can hide drafts or invoice references. Accordingly, no matching
+visible expense is `unknown-no-visible-period-expense`, not proof that someone
+is unpaid. If pagination fails, data changes during the scan, or any GraphQL field
+is inaccessible, the expense lookup is discarded and payment statuses become
+`unknown-lookup-unavailable`; the profile matching report is still produced. No
+private payout details, bank information, or API token are collected. Complete
+expense reconciliation will require authorized visibility before enabling sends.
