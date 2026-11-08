@@ -32,10 +32,9 @@ Action below produces a review report; expense creation remains a separate chang
 Existing GitHub identity handling and Discord registration in `users.json` are
 unchanged.
 
-## Match September 2026 sponsorships (manual only)
+## Open Collective Sponsorships (manual only)
 
-After merging this workflow, open **Actions → Match September 2026 Sponsorship
-Profiles → Run workflow**, selecting the **main** branch. It has no schedule,
+After merging this workflow, open **Actions → Open Collective Sponsorships → Run workflow**, selecting the **main** branch. It has no schedule,
 push trigger, or month input. It is locked to September 2026; running it from
 another branch skips the job.
 
@@ -80,3 +79,31 @@ recipient accounts are rejected rather than silently pooling multiple payouts.
 Offline validation: `bun test tests/sponsorship-profile-matching.test.ts`.
 The matching script itself makes live read-only lookups when explicitly run:
 `bun scripts/match-sponsorship-profiles.ts` (no arguments).
+
+
+### Future duplicate-expense protection
+
+This workflow currently produces reports only. It does not yet query previous
+expenses or implement duplicate-expense protection.
+
+Before adding expense creation to this same workflow, identify each sponsorship
+by the payer collective, immutable GitHub contributor ID, expense purpose
+(monthly contribution sponsorship), and contribution period (`YYYY-MM`). Record
+this key on the Open Collective expense and persist its expense ID in a durable
+ledger. The contribution period must come from the sponsorship month, not the
+creation date or payment date.
+
+For example, a September 2026 sponsorship paid in November must block another
+September sponsorship for that contributor. An October 2026 sponsorship paid in
+November has a different key and must remain eligible.
+
+Check existing draft, pending, approved, processing, and paid expenses before
+creating another expense with that key, not just already-paid expenses. Include
+manual/legacy expenses in reconciliation: an expense without a recorded period
+cannot safely be inferred from its payment date and needs human review. A
+rejected, canceled, refunded, or failed expense needs explicit reconciliation
+rather than automatically creating a replacement.
+
+Serialize expense-creation runs and reconcile uncertain API outcomes before
+retrying, so a timeout after successful creation cannot create a duplicate. A
+local cache or downloadable report alone is not a durable payment ledger.

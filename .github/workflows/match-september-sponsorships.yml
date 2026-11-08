@@ -1,4 +1,4 @@
-name: Match September 2026 Sponsorship Profiles
+name: Open Collective Sponsorships
 
 on:
   workflow_dispatch:
