@@ -1,0 +1,35 @@
+name: Match September 2026 Sponsorship Profiles
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: match-september-2026-sponsorships
+  cancel-in-progress: false
+
+jobs:
+  match-profiles:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.1
+      - name: Match September sponsorships to public accounts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: bun scripts/match-sponsorship-profiles.ts
+      - name: Upload reviewed matching data
+        uses: actions/upload-artifact@v4
+        with:
+          name: sponsorship-profile-matches-2026-09
+          path: sponsorship-matches/2026-09/
+          if-no-files-found: error
+          retention-days: 30
