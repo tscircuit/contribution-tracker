@@ -3,11 +3,20 @@ import { getRepos } from "lib/data-retrieval/getRepos"
 import { octokit } from "lib/sdks"
 import { EXCLUDED_BOTS } from "lib/constants"
 
-const discordWebhook = new WebhookClient({
-  url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
-})
+export const DISCORD_MAX_CONTENT_LENGTH = 2000
 
-interface Issue {
+let defaultDiscordWebhook: WebhookClient | null = null
+
+function getDiscordWebhook(): WebhookClient {
+  if (!defaultDiscordWebhook) {
+    defaultDiscordWebhook = new WebhookClient({
+      url: process.env.ISSUES_DISCORD_WEBHOOK_URL || "",
+    })
+  }
+  return defaultDiscordWebhook
+}
+
+export interface Issue {
   number: number
   title: string
   html_url: string
@@ -17,8 +26,76 @@ interface Issue {
   created_at: string
 }
 
+export interface DiscordWebhookSender {
+  send: (options: MessageCreateOptions) => Promise<unknown>
+}
+
 function getUTCDateTime(): string {
   return new Date().toISOString()
+}
+
+function sliceWithoutBreakingSurrogatePair(
+  text: string,
+  start: number,
+  maxLength: number,
+): number {
+  let end = Math.min(start + maxLength, text.length)
+  if (end < text.length && end > start + 1) {
+    const prevCode = text.charCodeAt(end - 1)
+    const nextCode = text.charCodeAt(end)
+    if (
+      prevCode >= 0xd800 &&
+      prevCode <= 0xdbff &&
+      nextCode >= 0xdc00 &&
+      nextCode <= 0xdfff
+    ) {
+      end -= 1
+    }
+  }
+  return end
+}
+
+export function splitDiscordMessageContent(
+  content: string,
+  maxLength: number = DISCORD_MAX_CONTENT_LENGTH,
+): string[] {
+  if (!content) return []
+  if (content.length <= maxLength) return [content]
+
+  const chunks: string[] = []
+  const lines = content.split("\n")
+  let currentChunk = ""
+
+  for (const line of lines) {
+    const candidate = currentChunk ? `${currentChunk}\n${line}` : line
+    if (candidate.length <= maxLength) {
+      currentChunk = candidate
+      continue
+    }
+
+    if (currentChunk) {
+      chunks.push(currentChunk)
+      currentChunk = ""
+    }
+
+    if (line.length <= maxLength) {
+      currentChunk = line
+      continue
+    }
+
+    let offset = 0
+    while (offset < line.length) {
+      const end = sliceWithoutBreakingSurrogatePair(line, offset, maxLength)
+      chunks.push(line.slice(offset, end))
+      offset = end
+    }
+  }
+
+  if (currentChunk) {
+    chunks.push(currentChunk)
+  }
+
+  return chunks
 }
 
 async function getRecentIssues(repo: string): Promise<Issue[]> {
@@ -54,7 +131,11 @@ async function getRecentIssues(repo: string): Promise<Issue[]> {
   return filteredIssues
 }
 
-async function notifyDiscord(issues: Issue[], repo: string) {
+export async function notifyDiscord(
+  issues: Issue[],
+  repo: string,
+  webhook: DiscordWebhookSender = getDiscordWebhook(),
+) {
   if (issues.length === 0) return
 
   console.log(
@@ -70,12 +151,20 @@ async function notifyDiscord(issues: Issue[], repo: string) {
       )
       .join("\n")
 
-  const messageOptions: MessageCreateOptions = {
-    content: messageContent,
-    allowedMentions: { parse: [] }, // This prevents link previews
+  const chunks = splitDiscordMessageContent(
+    messageContent,
+    DISCORD_MAX_CONTENT_LENGTH,
+  )
+
+  for (const chunk of chunks) {
+    const messageOptions: MessageCreateOptions = {
+      content: chunk,
+      allowedMentions: { parse: [] }, // This prevents link previews
+    }
+
+    await webhook.send(messageOptions)
   }
 
-  await discordWebhook.send(messageOptions)
   console.log(
     `[${getUTCDateTime()}] Successfully sent Discord notification for ${repo}`,
   )
@@ -109,10 +198,12 @@ async function main() {
   console.log(`[${getUTCDateTime()}] Completed issue notification process`)
 }
 
-main().catch((error) => {
-  console.error(
-    `[${getUTCDateTime()}] Error in issue notification process:`,
-    error,
-  )
-  process.exit(1)
-})
+if (import.meta.main) {
+  main().catch((error) => {
+    console.error(
+      `[${getUTCDateTime()}] Error in issue notification process:`,
+      error,
+    )
+    process.exit(1)
+  })
+}
