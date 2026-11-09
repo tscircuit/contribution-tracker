@@ -30,52 +30,53 @@ The current week is shown below. There are 3 major sections:
 ```mermaid
 pie
     "tscircuit/pcb-viewer" : 16
-    "tscircuit/3d-viewer" : 8
-    "tscircuit/core" : 57
-    "tscircuit/tscircuit-autorouter" : 71
+    "tscircuit/3d-viewer" : 13
+    "tscircuit/core" : 71
+    "tscircuit/tscircuit-autorouter" : 84
     "tscircuit/tiny-hypergraph" : 4
-    "tscircuit/high-density-repair01" : 4
+    "tscircuit/high-density-repair01" : 6
     "tscircuit/high-density-repair03" : 7
     "tscircuit/bus-lanes-solver" : 18
-    "tscircuit/circuit-json-webgpu" : 3
+    "tscircuit/circuit-json-webgpu" : 4
     "tscircuit/schematic-viewer" : 2
-    "tscircuit/tscircuit" : 112
-    "tscircuit/runframe" : 71
+    "tscircuit/tscircuit" : 127
+    "tscircuit/repair04" : 2
+    "tscircuit/runframe" : 97
     "tscircuit/circuit-json" : 14
-    "tscircuit/tscircuit.com" : 38
-    "tscircuit/eval" : 35
+    "tscircuit/tscircuit.com" : 59
+    "tscircuit/eval" : 49
     "tscircuit/cli" : 32
-    "tscircuit/svg.tscircuit.com" : 50
+    "tscircuit/svg.tscircuit.com" : 56
     "tscircuit/circuit-json-to-step" : 3
     "tscircuit/schematic-trace-solver" : 5
-    "tscircuit/copper-pour-solver" : 8
+    "tscircuit/copper-pour-solver" : 11
     "tscircuit/test-github-automerge" : 2
     "tscircuit/circuit-json-to-kicad" : 15
     "tscircuit/circuit-json-schematic-placement-analysis" : 24
     "tscircuit/drawing-viewer" : 8
     "tscircuit/circuit-json-to-pnp-csv" : 3
-    "tscircuit/repair04" : 1
     "tscircuit/trace-simplification-solver" : 2
     "tscircuit/tscircuit-standalone" : 7
-    "tscircuit/docs" : 10
+    "tscircuit/jscad-fiber" : 1
+    "tscircuit/docs" : 22
     "tscircuit/circuit-json-to-altium" : 1
     "tscircuit/rfc" : 1
     "tscircuit/signal-integrity-pipeline" : 14
     "tscircuit/props" : 5
+    "tscircuit/circuit-to-svg" : 4
     "tscircuit/checks" : 2
     "tscircuit/circuit-json-to-bom-csv" : 1
     "tscircuit/jlcsearch" : 3
     "tscircuit/motorcontrol" : 2
     "tscircuit/system-block-viewer" : 4
-    "tscircuit/circuit-to-svg" : 3
-    "tscircuit/tscircuit.com-landing" : 3
+    "tscircuit/tscircuit.com-landing" : 4
     "tscircuit/jscad-electronics" : 1
     "tscircuit/circuit-json-to-gltf" : 1
     "tscircuit/modelprinter" : 1
     "tscircuit/parts-engine" : 1
     "tscircuit/easyeda-converter" : 2
-    "tscircuit/kicad-mod-cache" : 1
-    "tscircuit/contribution-tracker" : 3
+    "tscircuit/contribution-tracker" : 7
+    "tscircuit/kicad-mod-cache" : 2
     "tscircuit/handbook" : 1
     "tscircuit/power-trace-expander" : 1
     "tscircuit/circuit-json-util" : 3
@@ -85,43 +86,46 @@ pie
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ |
 |-------------|---------|---------|---------|-------|-----|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 46 | 8 | 40 | 218 | 👑👑👑 |
-| [seveibar](#seveibar) | 35 | 15 | 28 | 183 | 👑👑👑 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 57 | 10 | 47 | 267 | 👑👑👑 |
+| [seveibar](#seveibar) | 41 | 19 | 42 | 215 | 👑👑👑 |
+| [Abse2001](#Abse2001) | 3 | 10 | 16 | 57 | ⭐⭐⭐ |
 | [0hmX](#0hmX) | 7 | 9 | 9 | 56 | ⭐⭐⭐ |
-| [imrishabh18](#imrishabh18) | 8 | 4 | 14 | 53 | ⭐⭐⭐ |
-| [Abse2001](#Abse2001) | 2 | 8 | 13 | 46 | ⭐⭐ |
-| [MustafaMulla29](#MustafaMulla29) | 5 | 6 | 20 | 45 | ⭐⭐ |
+| [imrishabh18](#imrishabh18) | 8 | 5 | 16 | 55 | ⭐⭐⭐ |
+| [MustafaMulla29](#MustafaMulla29) | 5 | 7 | 21 | 47 | ⭐⭐ |
 | [techmannih](#techmannih) | 5 | 0 | 6 | 26 | ⭐⭐ |
 | [AnasSarkiz](#AnasSarkiz) | 5 | 1 | 4 | 26 | ⭐⭐ |
 | [rushabhcodes](#rushabhcodes) | 4 | 2 | 6 | 26 | ⭐⭐ |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 360 | 12 | ⭐⭐ |
+| [GokulPandi-M](#GokulPandi-M) | 2 | 3 | 1 | 15 | ⭐⭐ |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 443 | 12 | ⭐⭐ |
 | [mohan-bee](#mohan-bee) | 2 | 1 | 2 | 12 | ⭐⭐ |
-| [GokulPandi-M](#GokulPandi-M) | 2 | 2 | 0 | 12 | ⭐⭐ |
 | [abdalraof-albarbar](#abdalraof-albarbar) | 1 | 1 | 1 | 7 | ⭐ |
 | [danielshawellis](#danielshawellis) | 0 | 0 | 1 | 1 |  |
+| [trixie010](#trixie010) | 0 | 0 | 1 | 1 |  |
 | [KrishnaX12](#KrishnaX12) | 0 | 0 | 1 | 1 |  |
 
 ## Staff Pass Ratio (SPR)
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 22 | 0 | 22 | 100.0% |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 24 | 0 | 24 | 100.0% |
 | [Abse2001](#Abse2001) | 8 | 0 | 8 | 100.0% |
-| [GokulPandi-M](#GokulPandi-M) | 5 | 2 | 4 | 60.0% |
+| [GokulPandi-M](#GokulPandi-M) | 6 | 2 | 5 | 66.7% |
 | [techmannih](#techmannih) | 5 | 0 | 5 | 100.0% |
 | [imrishabh18](#imrishabh18) | 4 | 0 | 4 | 100.0% |
+| [0hmX](#0hmX) | 3 | 0 | 3 | 100.0% |
 | [AnasSarkiz](#AnasSarkiz) | 3 | 0 | 3 | 100.0% |
 | [mohan-bee](#mohan-bee) | 3 | 1 | 3 | 66.7% |
-| [0hmX](#0hmX) | 2 | 0 | 2 | 100.0% |
-| [rushabhcodes](#rushabhcodes) | 2 | 1 | 2 | 50.0% |
+| [rushabhcodes](#rushabhcodes) | 3 | 2 | 2 | 33.3% |
 | [abdalraof-albarbar](#abdalraof-albarbar) | 1 | 0 | 1 | 100.0% |
 
 <details>
-<summary>ShiboSoftwareDev SPR PRs (22)</summary>
+<summary>ShiboSoftwareDev SPR PRs (24)</summary>
 
 - [#308](https://github.com/tscircuit/schematic-viewer/pull/308) Fit schematics to the selected sheet frame
 - [#1163](https://github.com/tscircuit/pcb-viewer/pull/1163) Speed up WebGPU copper pours by updating Earcut
 - [#1095](https://github.com/tscircuit/3d-viewer/pull/1095) Release the 3D canvas WebGL context on teardown
+- [#5293](https://github.com/tscircuit/core/pull/5293) Preserve completed routing phases when a later phase fails
+- [#3594](https://github.com/tscircuit/tscircuit-autorouter/pull/3594) fix: keep fine repair grids after region reordering
 - [#3588](https://github.com/tscircuit/tscircuit-autorouter/pull/3588) fix: reduce allocations in DDR path planning
 - [#3584](https://github.com/tscircuit/tscircuit-autorouter/pull/3584) fix: preserve required terminal paths when pruning cramped ports
 - [#3564](https://github.com/tscircuit/tscircuit-autorouter/pull/3564) Preserve regional DDR repairs for exact search
@@ -159,8 +163,9 @@ pie
 </details>
 
 <details>
-<summary>GokulPandi-M SPR PRs (5)</summary>
+<summary>GokulPandi-M SPR PRs (6)</summary>
 
+- [#5291](https://github.com/tscircuit/core/pull/5291) Fix missing components when schFlex contains text-only groups
 - [#5287](https://github.com/tscircuit/core/pull/5287) Reproduce invalid schematic positions from text-only groups in schFlex
 - [#5224](https://github.com/tscircuit/core/pull/5224) Fix false errors when importing split routed traces
 - [#5137](https://github.com/tscircuit/core/pull/5137) Reproduce false connectivity errors for split via-to-via traces
@@ -191,6 +196,15 @@ pie
 </details>
 
 <details>
+<summary>0hmX SPR PRs (3)</summary>
+
+- [#28](https://github.com/tscircuit/rfc/pull/28) RFC: <signalintegrity> and <signal> for signal integrity
+- [#5109](https://github.com/tscircuit/core/pull/5109) fix: warn when fabricatorPreset has no stackup template for the board
+- [#5121](https://github.com/tscircuit/core/pull/5121) fix: default board thickness to 1.6mm
+
+</details>
+
+<details>
 <summary>AnasSarkiz SPR PRs (3)</summary>
 
 - [#975](https://github.com/tscircuit/circuit-json/pull/975) Preserve custom KiCad properties in component metadata
@@ -209,17 +223,10 @@ pie
 </details>
 
 <details>
-<summary>0hmX SPR PRs (2)</summary>
-
-- [#5109](https://github.com/tscircuit/core/pull/5109) fix: warn when fabricatorPreset has no stackup template for the board
-- [#5121](https://github.com/tscircuit/core/pull/5121) fix: default board thickness to 1.6mm
-
-</details>
-
-<details>
-<summary>rushabhcodes SPR PRs (2)</summary>
+<summary>rushabhcodes SPR PRs (3)</summary>
 
 - [#283](https://github.com/tscircuit/circuit-json-util/pull/283) fix: support position tolerance when matching route vias
+- [#3596](https://github.com/tscircuit/tscircuit-autorouter/pull/3596) feat: enforce per-connection minimum widths in Pipeline9
 - [#3](https://github.com/tscircuit/drawing-viewer/pull/3) Render engineering drawings from Circuit JSON
 
 </details>
@@ -243,48 +250,51 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [0hmX](#0hmX) | 6 | 3 | 0 | 11 | 0 | 50 | 27 | 0 |
-| [1932819331hy-debug](#1932819331hy-debug) | 3 | 0 | 0 | 0 | 0 | 34 | 0 | 0 |
+| [0hmX](#0hmX) | 11 | 4 | 0 | 13 | 0 | 52 | 27 | 0 |
+| [1932819331hy-debug](#1932819331hy-debug) | 3 | 0 | 0 | 0 | 0 | 41 | 0 | 0 |
 | [abdalraof-albarbar](#abdalraof-albarbar) | 3 | 3 | 0 | 0 | 0 | 9 | 3 | 0 |
-| [Abse2001](#Abse2001) | 11 | 11 | 0 | 10 | 0 | 55 | 23 | 0 |
+| [Abse2001](#Abse2001) | 12 | 12 | 0 | 13 | 0 | 60 | 29 | 0 |
 | [Albertito-AI](#Albertito-AI) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [alokudyogi](#alokudyogi) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 7 | 7 | 0 | 0 | 0 | 16 | 10 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 7 | 7 | 0 | 0 | 0 | 20 | 10 | 0 |
+| [bacourosp](#bacourosp) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [balckwell](#balckwell) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
 | [btctony1](#btctony1) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [Burapa-J](#Burapa-J) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [cocvn157](#cocvn157) | 0 | 0 | 0 | 0 | 0 | 323 | 0 | 0 |
+| [Burapa-J](#Burapa-J) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
+| [cocvn157](#cocvn157) | 0 | 0 | 0 | 0 | 0 | 328 | 0 | 0 |
 | [Crodify](#Crodify) | 0 | 0 | 0 | 0 | 0 | 15 | 0 | 0 |
 | [CrowAleksito](#CrowAleksito) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [cyczzhao-lab](#cyczzhao-lab) | 0 | 0 | 0 | 0 | 0 | 13 | 0 | 0 |
+| [cyczzhao-lab](#cyczzhao-lab) | 0 | 0 | 0 | 0 | 0 | 15 | 0 | 0 |
 | [danielshawellis](#danielshawellis) | 2 | 1 | 0 | 0 | 0 | 2 | 1 | 0 |
 | [Devesh36](#Devesh36) | 1 | 1 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [DNL5555](#DNL5555) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [DoctorLaplace](#DoctorLaplace) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [frds3445](#frds3445) | 2 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [GokulPandi-M](#GokulPandi-M) | 8 | 5 | 3 | 0 | 0 | 7 | 4 | 0 |
+| [GokulPandi-M](#GokulPandi-M) | 11 | 8 | 3 | 0 | 0 | 9 | 6 | 0 |
 | [HarsH-1877](#HarsH-1877) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 6 | 6 | 0 | 8 | 1 | 36 | 27 | 0 |
-| [jeffrey-graham](#jeffrey-graham) | 0 | 0 | 0 | 0 | 0 | 55 | 0 | 0 |
+| [imrishabh18](#imrishabh18) | 6 | 6 | 0 | 9 | 2 | 39 | 30 | 0 |
+| [jeffrey-graham](#jeffrey-graham) | 0 | 0 | 0 | 0 | 0 | 69 | 0 | 0 |
 | [khuxaiphi-stack](#khuxaiphi-stack) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [KrishnaX12](#KrishnaX12) | 1 | 1 | 0 | 0 | 0 | 4 | 1 | 0 |
 | [krosLyao](#krosLyao) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [LBCron](#LBCron) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
+| [LBCron](#LBCron) | 0 | 0 | 0 | 0 | 0 | 10 | 0 | 0 |
 | [longdungai](#longdungai) | 3 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [mau16ro](#mau16ro) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [Mekdou23](#Mekdou23) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [mohan-bee](#mohan-bee) | 3 | 3 | 0 | 0 | 0 | 7 | 5 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 7 | 4 | 0 | 2 | 0 | 41 | 31 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 8 | 5 | 0 | 2 | 0 | 44 | 33 | 0 |
 | [nhausmna](#nhausmna) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [Plugv3](#Plugv3) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
 | [rafagil11](#rafagil11) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [rushabhcodes](#rushabhcodes) | 25 | 12 | 0 | 0 | 0 | 21 | 12 | 0 |
-| [seveibar](#seveibar) | 34 | 1 | 0 | 65 | 2 | 116 | 78 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 38 | 38 | 0 | 6 | 0 | 115 | 94 | 0 |
+| [rushabhcodes](#rushabhcodes) | 27 | 12 | 1 | 0 | 0 | 37 | 12 | 0 |
+| [seveibar](#seveibar) | 36 | 1 | 0 | 70 | 3 | 146 | 102 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 43 | 43 | 0 | 7 | 0 | 138 | 114 | 0 |
 | [Shokun123](#Shokun123) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
 | [siddikmallik1999-design](#siddikmallik1999-design) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [techmannih](#techmannih) | 9 | 6 | 0 | 0 | 0 | 19 | 11 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 495 | 360 | 0 |
-| [voropaevv](#voropaevv) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [trixie010](#trixie010) | 2 | 1 | 1 | 0 | 0 | 3 | 1 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 587 | 443 | 0 |
+| [voropaevv](#voropaevv) | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 |
 | [zenoutlabs](#zenoutlabs) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 
 ## Changes by Repository
@@ -322,12 +332,17 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#1132](https://github.com/tscircuit/3d-viewer/pull/1132) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes initial camera framing for CAD assemblies without a PCB, ensuring proper geometry bounds are respected during rendering. |
 | [#1121](https://github.com/tscircuit/3d-viewer/pull/1121) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Keeps the active GLB on screen while its replacement loads, swapping models on the existing canvas and preserving the camera. |
 | [#1095](https://github.com/tscircuit/3d-viewer/pull/1095) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Releases the old WebGL context after disposing the renderer, ensuring the old context is lost and the replacement canvas works correctly. |
 | [#1094](https://github.com/tscircuit/3d-viewer/pull/1094) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the issue where a detached WebGL canvas retains its context after unmounting, leading to unexpected behavior in rendering. |
+| [#1134](https://github.com/tscircuit/3d-viewer/pull/1134) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds an overhead Game Boy Advance dual RP2350 explosion example with a 180 front-cover flip and separate analog-stick, speaker, and button removal stages. The thirteen-stage sequence removes user accessories first, parks each assembly on the left, flips the cleared front assembly inside-up, then removes its internal modules. Reverse playback reassembles the modules and flips the cover closed. The viewer now accepts optional assemblyExplosionRotations cues: axis, signed angle, and a world-space pivot attached to an authored move. Absolute transforms support scrubbing, reverse playback, late-loaded models, and Reset without rebuilding geometry or accumulating orientation drift. Guide lines follow the rotation arc. The rotation API is documented; it is a viewer extension supplied alongside cores translation-only circuit JSON. The example is pinned to absegameboy-advance-dual-rp23500.3.0-review.8. It preserves the routed PCB and model transforms, includes native TSX, serialized rotation cues, reproducible exporters and clearance checks, and loads assets from the public registry. This PR does not republish the registry package. Remaining extraction limitations: the initial battery-doorrear-shell and front-shellpower-switch collisions remain. Continuous bounds checks clear all parking paths and the full cover flip. A rendered-mesh audit at 0.25 mm travel intervals found no additional collisions in the added motions. The speaker comes out before the Select button to clear its retainer; the volume wheel stays with the cover because its extraction catches on the cover. Existing model contacts and findings are recorded in the fixture; this is not a fully collision-free assembly procedure. Validation: 15 unit tests covering pivot rotation, subsequent world-space motion, geometry sharing, arc anchoring, late loads, reset, source regeneration, complete group motions, PCB invariance, and swept clearance; three Chromium tests covering existing playback, guidelines, reverse, the halffull cover flip, subsequent module removal, backward scrubbing, and reset; TypeScript and library build. |
+| [#1131](https://github.com/tscircuit/3d-viewer/pull/1131) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds a Play In Reverse button to the explosion menu and a Show guidelines checkbox to control the visibility of explosion lines during playback. |
 | [#1124](https://github.com/tscircuit/3d-viewer/pull/1124) | 🐳 Major | ⭐⭐⭐ | seveibar | Explosion stages can now play continuously, defaulting to two seconds per stage. The explosion menu includes a seconds-per-stage setting, PlayPauseReplay, previousnext stage buttons, and Reset. Scrubbing or stepping pauses playback, and closing the menu cancels animation. Playback evaluates a lightweight copy of the movement program and component poses, sharing immutable model geometry rather than cloning it each frame. The viewer also memoizes its serialized model identity. A local FLEX17 CPU benchmark measured pose evaluation at about 4 ms instead of 325 ms, and removes approximately 78 ms of repeated serialization per update. These timings are not an end-to-end FPS measurement. Adds the FLEX17 adjustable spur assembly as a self-contained Storybook sample with its 18 authored stages, based on https:flex17-tsx-adjustable-spur.seveibar.chatgpt.site. Validation: package build, full TypeScript check, five unit tests (including equivalence with core at 90 FLEX17 poses and geometry-sharing checks), and all five Playwright explosion tests pass. Local browser verification uses system Chromium and circuit-to-svg 0.0.454 to avoid the latest transitive packages incompatibility with the repositorys circuit-json override. |
 | [#1091](https://github.com/tscircuit/3d-viewer/pull/1091) | 🐳 Major | ⭐⭐⭐ | seveibar | Right-clicking an object now offers Isolate name, which hides every other object. Unhide All (renamed from Unhide All Components) restores everything. The PCB board can now be picked, so right-clicking it offers Hide Board  Isolate Board (Panel when a panel is rendered). Before this change the board had no id, so only CAD components could be hidden. Cables (cad_cable) can be picked, hidden and isolated the same way. |
 | [#1092](https://github.com/tscircuit/3d-viewer/pull/1092) | 🐳 Major | ⭐⭐⭐ | seveibar | Right-clicking a model and choosing Download GLTF now downloads a GLTF of just that model, named after it (e.g. USBC.gltf). Right-clicking the board or empty space still downloads the whole scene as scene.gltf. |
+| [#1133](https://github.com/tscircuit/3d-viewer/pull/1133) | 🐙 Minor | ⭐⭐ | seveibar | Load Manifold and circuit-generation code only when needed to optimize performance by importing geometry code on demand based on user input. |
+| [#1127](https://github.com/tscircuit/3d-viewer/pull/1127) | 🐙 Minor | ⭐⭐ | seveibar | Fixes explosion guide lines detaching from components when geometry is offset from CAD origin by anchoring movement paths to rendered component bounds and updating guides accordingly. |
 | [#1093](https://github.com/tscircuit/3d-viewer/pull/1093) | 🐙 Minor | ⭐⭐ | seveibar | Fixes the issue where boards in GLB mode could not be hidden or isolated due to missing identifiers, enabling proper visibility controls for board components. |
 
 <details>
@@ -343,10 +358,16 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#5306](https://github.com/tscircuit/core/pull/5306) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Bump tscircuitcapacity-autorouter from 0.0.1061 to 0.0.1063 to include tscircuittscircuit-autorouter3594, preserving fine repair grids after region reordering and fixing H3 DDR bank-address clearance repair. |
+| [#5300](https://github.com/tscircuit/core/pull/5300) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Preserves circular copper when converting fixed vias into routing obstacles, removing a false clearance conflict on the H616 DDR crop. |
+| [#5299](https://github.com/tscircuit/core/pull/5299) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces a completed H616 DDR via becoming a square routing obstacle, comparing native copper with Cores emitted geometry. |
+| [#5293](https://github.com/tscircuit/core/pull/5293) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Preserves completed routing phases in the autorouter when a later phase fails, preventing loss of routing progress for signals. |
 | [#5240](https://github.com/tscircuit/core/pull/5240) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Bumps tscircuitcapacity-autorouter from 0.0.1047 to 0.0.1049 to include the disconnected-graph retry fix |
 | [#5122](https://github.com/tscircuit/core/pull/5122) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Bumps tscircuitcapacity-autorouter from 0.0.1035 to 0.0.1037, bringing in the DDR mesh-memory fix. |
 | [#5182](https://github.com/tscircuit/core/pull/5182) | 🐳 Major | ⭐⭐⭐ | techmannih | Fixes ground-plane routing failure by allowing connections to a declared inner-layer GND pour to pass the trace-length preflight check. |
 | [#5143](https://github.com/tscircuit/core/pull/5143) | 🐳 Major | ⭐⭐⭐ | techmannih | Fixes redundant autorouting requests for terminals already connected by a same-net copper pour by incorporating their physical connectivity into the autorouting process. |
+| [#5219](https://github.com/tscircuit/core/pull/5219) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes the issue where named differential sections were lost when combining shared nets, resulting in zero traces on boards; this fix preserves those sections and routes the intended connections. |
+| [#5281](https://github.com/tscircuit/core/pull/5281) | 🐳 Major | ⭐⭐⭐ | seveibar | Adjusts the positioning of watchdog labels for system self-loops, moving them closer to their respective blocks to improve clarity and avoid overlap with neighboring elements. |
 | [#5247](https://github.com/tscircuit/core/pull/5247) | 🐳 Major | ⭐⭐⭐ | seveibar | Dense system diagrams braid neighboring wires when block faces and connection landing order follow coarse group geometry. Lay out subsystem contents independently, route around blocks and labels, and optimize adjacent landing slotsincluding swaps around block cornersagainst the complete diagrams crossings, shared segments, spacing, bends, and length. Bound the search to 64 swaps and one final rerouting sweep. Keep clear straight arrows and same-face return loops simple by placing their labels beside the wire. Horizontal connections retain inline labels when text fits. Regression assertions cover straight arrows and compact semicircular loops in all four page directions. Round after optimization, letting curves use label padding while protecting the text. Preserve neighboring wire clearance without rejecting curves that move away from an already close wire. Check tangent continuity in the nested fixture, and use zero image-difference allowance for system snapshots so small routing changes cannot leave stale images. Emit optional connection colors and line styles. The RVBoy console and power fixtures check CPU landing order, wire intersections (including sampled cubic curves), and 3 mm separation between overlapping parallel runs. Dense graphs can still have crossings. Use the released companion packages: tscircuitprops0.0.721, circuit-json0.0.548, and circuit-to-svg0.0.457. Their PRs are merged: https:github.comtscircuitpropspull992, https:github.comtscircuitcircuit-jsonpull981, and https:github.comtscircuitcircuit-to-svgpull913. Remove the temporary Git dependency and build-script trust entry. The props update requires complete courtyard polygons. Join legacy KiCad imports that store separate two-point courtyard edges into closed polygons before constructing components, preserving componentlayer boundaries and leaving input records unchanged. Add a visual regression test for shuffled and reversed edges and reject disconnected chains. Validation: 30 targeted tests pass across 28 files, covering all prior CI failure cases, system-block features, and courtyard import regression. TypeScript checking, dependency checking, and the ESMdeclaration build pass locally. Browser checks find no overlaps among the 23 RVBoy connection labels, blocks, and headings. Existing schematic snapshots pass unchanged with the registry renderer and shared symbol definitions. |
 | [#5158](https://github.com/tscircuit/core/pull/5158) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds rounded connections for system-block TSX after Dagre layout, with tighter layout spacing and improved self-loop handling. |
 | [#5113](https://github.com/tscircuit/core/pull/5113) | 🐳 Major | ⭐⭐⭐ | seveibar | Assembly TSX now emits cad_assembly_bom_item records for materials with or without CAD geometry, using released tscircuitprops0.0.718 from tscircuitprops973. |
@@ -357,6 +378,7 @@ pie
 | [#5241](https://github.com/tscircuit/core/pull/5241) | 🐳 Major | ⭐⭐⭐ | AnasSarkiz | Preserves KiCad symbol metadata when inserting default schematic boxes, ensuring that metadata is retained for both default and custom symbols. |
 | [#5223](https://github.com/tscircuit/core/pull/5223) | 🐳 Major | ⭐⭐⭐ | GokulPandi-M | Fixes autorouting failure when adding an inner-layer ground pour that prevents BGA dogbone fanout from functioning correctly. |
 | [#5186](https://github.com/tscircuit/core/pull/5186) | 🐳 Major | ⭐⭐⭐ | GokulPandi-M | Fixes autorouting failure when adding a ground pour that prevents BGA dogbone fanout from routing correctly. |
+| [#5292](https://github.com/tscircuit/core/pull/5292) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | The real H3 DDR3 circuit routes both data bytes, then fails while planning the remaining signals. Core discards the completed copper, leaving 053 signals connected in the saved board. This TSX repro records that failure. Stacked fix: 5293 retains the 16 completed data signals while keeping the remaining-phase error. |
 | [#5251](https://github.com/tscircuit/core/pull/5251) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Fixes HTTP 403 error when posting benchmark results to PR conversation due to insufficient permissions for the reporting job. |
 | [#5231](https://github.com/tscircuit/core/pull/5231) | 🐙 Minor | ⭐⭐ | 0hmX | Fixes unsupported-component error when importing Circuit JSON with simple_fuse and corrects schema mismatches in PCBschematic output. |
 | [#5109](https://github.com/tscircuit/core/pull/5109) | 🐙 Minor | ⭐⭐ | 0hmX | Adds a warning when a fabricatorPreset is set but no matching stackup template exists for the specified board parameters, improving user feedback on stackup issues. |
@@ -365,17 +387,23 @@ pie
 | [#5157](https://github.com/tscircuit/core/pull/5157) | 🐙 Minor | ⭐⭐ | 0hmX | Fixes issue with schPortArrangement by ensuring side pins are stored as pin numbers instead of labels, resolving compatibility with circuit-json requirements. |
 | [#5162](https://github.com/tscircuit/core/pull/5162) | 🐙 Minor | ⭐⭐ | seveibar | Fixes the issue where multi-port power paths incorrectly inherit a capacitors local decoupling limit, preventing autorouting on longer paths. |
 | [#5177](https://github.com/tscircuit/core/pull/5177) | 🐙 Minor | ⭐⭐ | AnasSarkiz | Fixes the issue where custom schematic symbols prevented the split-pad inference from creating and connecting separate physical source ports for repeated footprint pin hints. |
+| [#5277](https://github.com/tscircuit/core/pull/5277) | 🐙 Minor | ⭐⭐ | Abse2001 | Updates the copper-pour solver dependency to version 0.0.72 and integrates board selection for copper pours while retaining existing Circuit JSON structure. |
 | [#5076](https://github.com/tscircuit/core/pull/5076) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes mouse-bite rows to fill the requested tab span and maintain appropriate material clearance between adjacent holes. |
 | [#5071](https://github.com/tscircuit/core/pull/5071) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes routing of rounded panel corners to use continuous polygon slots instead of invalid rounded rectangles, ensuring valid geometry and improved routing for curved boards. |
 | [#5069](https://github.com/tscircuit/core/pull/5069) | 🐙 Minor | ⭐⭐ | Abse2001 | Reproduces a bug where a 22 panel of 1418 mm boards with 2 mm rounded corners creates 1,024 invalid sliver rectangles, producing a comb of tiny routing slots. |
+| [#5291](https://github.com/tscircuit/core/pull/5291) | 🐙 Minor | ⭐⭐ | GokulPandi-M | Fixes issue where text-only groups inside schFlex cause neighboring components to have invalid positions, resulting in their disappearance from the schematic. |
 | [#5287](https://github.com/tscircuit/core/pull/5287) | 🐙 Minor | ⭐⭐ | GokulPandi-M | Fixes invalid schematic positions caused by adding a child group containing only a schematic note inside schFlex, preventing surrounding components positions from becoming NaN. |
 | [#5137](https://github.com/tscircuit/core/pull/5137) | 🐙 Minor | ⭐⭐ | GokulPandi-M | Reproduces false connectivity errors when split via-to-via traces are imported, demonstrating the loss of connection identity in the autorouting process. |
 
 <details>
-<summary>🐌 Tiny Contributions (30)</summary>
+<summary>🐌 Tiny Contributions (35)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#5318](https://github.com/tscircuit/core/pull/5318) | 🐌 Tiny | ShiboSoftwareDev | Bumps tscircuitcapacity-autorouter from 0.0.1065 to 0.0.1066 to restore physically clear through-via access between round BGA pads and eliminate DRC errors in the H616 reproduction. |
+| [#5317](https://github.com/tscircuit/core/pull/5317) | 🐌 Tiny | ShiboSoftwareDev | Bumps tscircuitcapacity-autorouter from 0.0.1064 to 0.0.1065 to include a fix for routed wires against earlier copper and maintain native H616 DDR connections. |
+| [#5312](https://github.com/tscircuit/core/pull/5312) | 🐌 Tiny | ShiboSoftwareDev | Bumps the tscircuitcapacity-autorouter package version from 0.0.1063 to 0.0.1064 to include performance improvements from the latest implementation. |
+| [#5308](https://github.com/tscircuit/core/pull/5308) | 🐌 Tiny | ShiboSoftwareDev | Updates dependencies to remove sharp and ensure compatibility with the latest graphics-debug version, resolving potential installation issues with older versions. |
 | [#5290](https://github.com/tscircuit/core/pull/5290) | 🐌 Tiny | ShiboSoftwareDev | Bump tscircuitcapacity-autorouter to 0.0.1061 to include the DDR planner memory fix from https:github.comtscircuittscircuit-autorouterpull3588. |
 | [#5285](https://github.com/tscircuit/core/pull/5285) | 🐌 Tiny | ShiboSoftwareDev | Updates the autorouter and bus-lanes-solver dependencies to their latest versions, incorporating routing fixes and enhancements. |
 | [#5274](https://github.com/tscircuit/core/pull/5274) | 🐌 Tiny | ShiboSoftwareDev | Updates the DDR benchmark to ensure the complete 22-signal byte section routes cleanly when both byte groups share a phase. |
@@ -400,6 +428,7 @@ pie
 | [#5142](https://github.com/tscircuit/core/pull/5142) | 🐌 Tiny | techmannih | Reproduces a bug where the autorouter requests redundant routes between terminals that are already connected by a continuous copper pour, including comprehensive tests and snapshots to validate the behavior. |
 | [#5289](https://github.com/tscircuit/core/pull/5289) | 🐌 Tiny | imrishabh18 | Bumps the tscircuitcopper-pour-solver dependency to version 0.0.72 to fix copper spikes between rounded SMT pins and ensures proper rendering of multiple board pours by passing the owning PCB board ID to the solver. |
 | [#5106](https://github.com/tscircuit/core/pull/5106) | 🐌 Tiny | 0hmX | Reproduces the issue where the jlcpcb_standard preset with default board thickness of 1.4mm results in no pcb_stackup being emitted, highlighting the lack of user feedback regarding this behavior. |
+| [#5221](https://github.com/tscircuit/core/pull/5221) | 🐌 Tiny | seveibar | Reproduces lost differential pair sections on ESD nets by adding tests that capture failed renders and assert missing connections in the autorouting system. |
 | [#5279](https://github.com/tscircuit/core/pull/5279) | 🐌 Tiny | seveibar | Removes incorrect PD-Stepper and GPL-3.0 license attribution from the RP2040 assembly fixture, ensuring accurate identification of the board as the RP2040 motor-controller design. |
 | [#5253](https://github.com/tscircuit/core/pull/5253) | 🐌 Tiny | seveibar | Bump Cores tscircuitcapacity-autorouter development dependency from 0.0.1051 to 0.0.1054. |
 | [#5278](https://github.com/tscircuit/core/pull/5278) | 🐌 Tiny | Abse2001 | Updates dependencies for kicad-to-circuit-json and tscircuitprops, ensuring validation fixes and improved courtyard polygon handling. |
@@ -413,6 +442,11 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#3592](https://github.com/tscircuit/tscircuit-autorouter/pull/3592) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Restores legal through-via access between round BGA pads in the existing solver, eliminating DRC errors in the native H616 DDR repro while maintaining unchanged data traces. |
+| [#3608](https://github.com/tscircuit/tscircuit-autorouter/pull/3608) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure by checking routed wires against earlier copper to prevent shorts on the native H616 board. |
+| [#3604](https://github.com/tscircuit/tscircuit-autorouter/pull/3604) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reduces the time taken for H616 DDR force repair by optimizing checks for distant copper and pairs, resulting in significant performance improvements in routing times. |
+| [#3594](https://github.com/tscircuit/tscircuit-autorouter/pull/3594) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the issue where sorting repair regions changed the reference size used to refine the search grid, resulting in expanded searches being too coarse. |
+| [#3593](https://github.com/tscircuit/tscircuit-autorouter/pull/3593) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes clearance errors in H3 DDR bank address routing by adding native TSXCore circuit and captured routing input for SVG diff generation. |
 | [#3588](https://github.com/tscircuit/tscircuit-autorouter/pull/3588) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reduces memory allocations in DDR path planning by optimizing buffer usage and improving performance metrics. |
 | [#3584](https://github.com/tscircuit/tscircuit-autorouter/pull/3584) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Preserves required terminal escapes when pruning would disconnect them, ensuring complete routing for signals and improving autorouting efficiency. |
 | [#3564](https://github.com/tscircuit/tscircuit-autorouter/pull/3564) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Preserve accepted regional work as a private input to Pipeline9s existing exact repair, optimizing the repair process and maintaining data integrity. |
@@ -449,10 +483,12 @@ pie
 | [#3442](https://github.com/tscircuit/tscircuit-autorouter/pull/3442) | 🐳 Major | ⭐⭐⭐ | mohan-bee | Reduces routing time for power trace expansion from 20s to 1.5s by utilizing upstream batching in the powerTraceExpansionSolver. |
 
 <details>
-<summary>🐌 Tiny Contributions (37)</summary>
+<summary>🐌 Tiny Contributions (45)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#3590](https://github.com/tscircuit/tscircuit-autorouter/pull/3590) | 🐌 Tiny | ShiboSoftwareDev | Reproduces H616s source_trace_43 via gap using four actual U1 pads, addressing a specific issue with the round pads and their clearance. |
+| [#3607](https://github.com/tscircuit/tscircuit-autorouter/pull/3607) | 🐌 Tiny | ShiboSoftwareDev | Reproduces five physical DRC errors on the native H616 DDR board after all 53 signals connect, including an SCASDQ5 short. Includes runnable TSXCore and an SVG regression using Cores captured routing input. |
 | [#3583](https://github.com/tscircuit/tscircuit-autorouter/pull/3583) | 🐌 Tiny | ShiboSoftwareDev | Reproduces a bug where the A64 DDR clock cannot reach its bottom-layer termination resistor despite clear through-via space, without making any routing changes. |
 | [#3554](https://github.com/tscircuit/tscircuit-autorouter/pull/3554) | 🐌 Tiny | ShiboSoftwareDev | The real H3 DDR3 circuit routes its two data bytes, then fails to find a path for DQS1. Core buffers the phases, leaving 017 accepted signals. Adds the native TSX board, captured routing inputs and generated SVGs. The same repro runs unchanged on the stacked fix, 3555.  Board  request  Initial result  goal  Latest verified progress   ---  ---  ---   H3: 16 DQ  DQS1  017 accepted; goal 1717  Both DQ phases route, then DQS1 fails path planning |
 | [#3532](https://github.com/tscircuit/tscircuit-autorouter/pull/3532) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the native circuit snapshot for OrangeCrabs detailed-routing clearance, addressing clearance issues and ensuring accurate representation of the routing phase. |
@@ -460,6 +496,11 @@ pie
 | [#3543](https://github.com/tscircuit/tscircuit-autorouter/pull/3543) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the i.MX6 DDR board with completed data-byte copper for a stacked fix. |
 | [#3517](https://github.com/tscircuit/tscircuit-autorouter/pull/3517) | 🐌 Tiny | ShiboSoftwareDev | Reproduces Gliders LDQSN through-via touching the completed DATA4 trace on the bottom layer, including a board snapshot with 49 nets and 1 DRC error. |
 | [#3502](https://github.com/tscircuit/tscircuit-autorouter/pull/3502) | 🐌 Tiny | ShiboSoftwareDev | Captures the real A64 and STM32MP157 remaining-routing inputs after 32 DQ signals complete through TSXcore. The runner reproduces slow topology validation and reports the completed mesh hash. |
+| [#3613](https://github.com/tscircuit/tscircuit-autorouter/pull/3613) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3611](https://github.com/tscircuit/tscircuit-autorouter/pull/3611) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3606](https://github.com/tscircuit/tscircuit-autorouter/pull/3606) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3603](https://github.com/tscircuit/tscircuit-autorouter/pull/3603) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3600](https://github.com/tscircuit/tscircuit-autorouter/pull/3600) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#3591](https://github.com/tscircuit/tscircuit-autorouter/pull/3591) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#3586](https://github.com/tscircuit/tscircuit-autorouter/pull/3586) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#3579](https://github.com/tscircuit/tscircuit-autorouter/pull/3579) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -489,6 +530,7 @@ pie
 | [#3535](https://github.com/tscircuit/tscircuit-autorouter/pull/3535) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#3482](https://github.com/tscircuit/tscircuit-autorouter/pull/3482) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#3368](https://github.com/tscircuit/tscircuit-autorouter/pull/3368) | 🐌 Tiny | techmannih | Pins the repair03 broad-force performance fix to a specific commit to avoid repeated native DRC evaluations and common broad-force passes, while preserving existing geometries and including regression tests. |
+| [#3599](https://github.com/tscircuit/tscircuit-autorouter/pull/3599) | 🐌 Tiny | Abse2001 | Adds explicit preview deployment requests now that automatic previews are managed in the Vercel dashboard, allowing authorized users to request previews for open PRs without modifying existing Vercel configurations. |
 | [#3441](https://github.com/tscircuit/tscircuit-autorouter/pull/3441) | 🐌 Tiny | mohan-bee | Motivation Reproduce slow uncached power-trace expansion on the four-gang WiFi controller(https:tscircuit.commohan-beefour-gang-wifi-switch-layoutblobcontroller.circuit.tsx).  Before The captured JOINT_LV workload takes 2,997,249 power-expansion wrapper steps. Matching the board runners 256 steps per yield produces 12,208 timer yields: two local runs on an Apple M5 took 23.123.7 seconds overall, with 20.321.0 seconds in power expansion. This is the low-voltage phase from published v0.0.9, replayed through native Pipeline9 at 0.0.1029. The five earlier mains traces are preloaded; those phases are not rerun.  After Add the exact solver-ready SRJ, uncropped 48  50 mm board context, a cache-disabled native debugger fixture, and a snapshot test. The test preserves the published adapters physical via policy; the full controller snapshot includes 37 new low-voltage traces, five mains traces, all 71 original obstacles, and 0 measured relaxed DRC errors. Snapshot verification passes with 13 assertions; type checking and the package build pass. This is a reproduction PR, with the batching fix kept separate. !Full controller board including preloaded mains routes(https:raw.githubusercontent.comtscircuittscircuit-autorouterceb0bbe039037d0aaa35ec959f55bc71c06d4607testsbugs__snapshots__controller-power-expansion.snap.svg) |
 
 </details>
@@ -514,10 +556,20 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#52](https://github.com/tscircuit/high-density-repair01/pull/52) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Skips redundant checks for distant segment pairs and pairs where neither route can move during H616 DDR force repair, improving performance significantly while retaining necessary checks. |
 | [#44](https://github.com/tscircuit/high-density-repair01/pull/44) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Add opt-in anchors for endpoint vias to prevent copper disconnection in neighboring nodes during force improvement. |
 | [#49](https://github.com/tscircuit/high-density-repair01/pull/49) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes clearance regression in autorouter by preserving coordinates of through-obstacle anchors while maintaining existing grid quantization for ordinary routing anchors. |
 | [#48](https://github.com/tscircuit/high-density-repair01/pull/48) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes routing failure by preserving fixed-point precision at plated-hole boundaries, preventing unintended layer transitions. |
 | [#43](https://github.com/tscircuit/high-density-repair01/pull/43) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Fixes Glider DDR escape via placement issue by adjusting its position to separate it from neighboring topology fragments. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#51](https://github.com/tscircuit/high-density-repair01/pull/51) | 🐌 Tiny | ShiboSoftwareDev | H616 DDR routing hits the 120-second limit in force repair. This captures its real 33-route, 3,844-vertex region from native TSX  Core, alongside the source board with all 384 pads and physical rules preserved. The isolated region takes 251 seconds on current main. The SVG shows the actual region output; it is not a completed or DRC-clean DDR board. |
+
+</details>
 
 ### [tscircuit/high-density-repair03](https://github.com/tscircuit/high-density-repair03)
 
@@ -577,6 +629,7 @@ pie
 | [#104](https://github.com/tscircuit/circuit-json-webgpu/pull/104) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reuse the triangulation of large copper pours across scene changes, optimizing performance and memory usage during rendering. |
 | [#102](https://github.com/tscircuit/circuit-json-webgpu/pull/102) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Writes vertices and indices directly into each typed-array chunk, optimizing the process by avoiding separate rest-argument arrays and chunk lookups for each vertex or index. |
 | [#101](https://github.com/tscircuit/circuit-json-webgpu/pull/101) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Builds WebGPU mesh vertices and indices in fixed-size typed chunks, optimizing memory usage and performance during rendering. |
+| [#105](https://github.com/tscircuit/circuit-json-webgpu/pull/105) | 🐙 Minor | ⭐⭐ | seveibar | Fixes fatal errors in PCB viewer caused by courtyard overlap annotations, allowing valid geometry to compile without interruption. |
 
 ### [tscircuit/schematic-viewer](https://github.com/tscircuit/schematic-viewer)
 
@@ -598,29 +651,43 @@ pie
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#6238](https://github.com/tscircuit/tscircuit/pull/6238) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Fixes package updater failure due to missing core DDR benchmark dependency in the dependency sync process. |
+| [#6274](https://github.com/tscircuit/tscircuit/pull/6274) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds Node shebang to tsci and tscircuit executables, prefers Bun if available, and registers tsx loader for Node when Bun is absent. |
 | [#6143](https://github.com/tscircuit/tscircuit/pull/6143) | 🐙 Minor | ⭐⭐ | seveibar | Adds support for system block diagrams and integrates the Dagre library as a runtime dependency, enabling enhanced layout capabilities for system blocks in the tscircuit package. |
 
 <details>
-<summary>🐌 Tiny Contributions (110)</summary>
+<summary>🐌 Tiny Contributions (124)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#6214](https://github.com/tscircuit/tscircuit/pull/6214) | 🐌 Tiny | ShiboSoftwareDev | Excludes 11 CLI-only converters from core dependency synchronization to resolve package-update workflow failures caused by missing dependencies. |
 | [#6203](https://github.com/tscircuit/tscircuit/pull/6203) | 🐌 Tiny | ShiboSoftwareDev | Fixes package update workflow failure by excluding the circuit-json-to-bom-csv converter from dependency sync as it is only used in assembly tests and a build smoke test. |
-| [#6261](https://github.com/tscircuit/tscircuit/pull/6261) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6279](https://github.com/tscircuit/tscircuit/pull/6279) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6278](https://github.com/tscircuit/tscircuit/pull/6278) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6277](https://github.com/tscircuit/tscircuit/pull/6277) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6276](https://github.com/tscircuit/tscircuit/pull/6276) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6275](https://github.com/tscircuit/tscircuit/pull/6275) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6272](https://github.com/tscircuit/tscircuit/pull/6272) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6271](https://github.com/tscircuit/tscircuit/pull/6271) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6270](https://github.com/tscircuit/tscircuit/pull/6270) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6268](https://github.com/tscircuit/tscircuit/pull/6268) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6269](https://github.com/tscircuit/tscircuit/pull/6269) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6267](https://github.com/tscircuit/tscircuit/pull/6267) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6263](https://github.com/tscircuit/tscircuit/pull/6263) | 🐌 Tiny | tscircuitbot | Updates the package version from 0.0.3121 to 0.0.3122 in package.json |
+| [#6262](https://github.com/tscircuit/tscircuit/pull/6262) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6260](https://github.com/tscircuit/tscircuit/pull/6260) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6257](https://github.com/tscircuit/tscircuit/pull/6257) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6254](https://github.com/tscircuit/tscircuit/pull/6254) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6249](https://github.com/tscircuit/tscircuit/pull/6249) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6259](https://github.com/tscircuit/tscircuit/pull/6259) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6258](https://github.com/tscircuit/tscircuit/pull/6258) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6257](https://github.com/tscircuit/tscircuit/pull/6257) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6256](https://github.com/tscircuit/tscircuit/pull/6256) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6255](https://github.com/tscircuit/tscircuit/pull/6255) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6254](https://github.com/tscircuit/tscircuit/pull/6254) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6253](https://github.com/tscircuit/tscircuit/pull/6253) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6252](https://github.com/tscircuit/tscircuit/pull/6252) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package to version 0.1.2445 in the package.json file. |
 | [#6250](https://github.com/tscircuit/tscircuit/pull/6250) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6249](https://github.com/tscircuit/tscircuit/pull/6249) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6248](https://github.com/tscircuit/tscircuit/pull/6248) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6247](https://github.com/tscircuit/tscircuit/pull/6247) | 🐌 Tiny | tscircuitbot | Updates the version of tscircuitcore and other related packages in package.json |
+| [#6261](https://github.com/tscircuit/tscircuit/pull/6261) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6255](https://github.com/tscircuit/tscircuit/pull/6255) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6248](https://github.com/tscircuit/tscircuit/pull/6248) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6256](https://github.com/tscircuit/tscircuit/pull/6256) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6241](https://github.com/tscircuit/tscircuit/pull/6241) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6246](https://github.com/tscircuit/tscircuit/pull/6246) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6245](https://github.com/tscircuit/tscircuit/pull/6245) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -712,11 +779,19 @@ pie
 | [#6153](https://github.com/tscircuit/tscircuit/pull/6153) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6151](https://github.com/tscircuit/tscircuit/pull/6151) | 🐌 Tiny | tscircuitbot | Updates the version of tscircuitcore from 0.0.2261 to 0.0.2263 and tscircuitmodelprinter from 0.0.18 to 0.0.37 in package.json |
 | [#6147](https://github.com/tscircuit/tscircuit/pull/6147) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6273](https://github.com/tscircuit/tscircuit/pull/6273) | 🐌 Tiny | imrishabh18 | Reproduces the failure of the tsci build when using Node without Bun, ensuring that the build process emits a PCB and is evaluated correctly by the runtime. |
 | [#6223](https://github.com/tscircuit/tscircuit/pull/6223) | 🐌 Tiny | seveibar | Updates the circuit-json-to-gltf package to version 0.0.165 to resolve an import failure related to the footprinter dependency. |
 | [#6161](https://github.com/tscircuit/tscircuit/pull/6161) | 🐌 Tiny | MustafaMulla29 | Updates tscircuiteval from 0.0.1700 to 0.0.1701 to bring in parts-engine 0.0.41  EasyEDA 0.0.389 update. |
 | [#6164](https://github.com/tscircuit/tscircuit/pull/6164) | 🐌 Tiny | MustafaMulla29 | Regenerates bun.lock to match the manifest and resolves the direct eval dependency to 0.0.1701, while retaining 0.0.1700 for the existing nested tscircuit dependency. |
 
 </details>
+
+### [tscircuit/repair04](https://github.com/tscircuit/repair04)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#62](https://github.com/tscircuit/repair04/pull/62) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Reduces computational overhead by pruning clearance pairs and simplifying distance calculations for point-shaped vias while maintaining exact geometry and projection order. |
+| [#68](https://github.com/tscircuit/repair04/pull/68) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Exports the existing createFixedObstacleViolationEvaluator to reuse prepared obstacle geometry instead of rebuilding it for every candidate in the autorouting process. |
 
 ### [tscircuit/runframe](https://github.com/tscircuit/runframe)
 
@@ -730,20 +805,46 @@ pie
 | [#6134](https://github.com/tscircuit/runframe/pull/6134) | 🐙 Minor | ⭐⭐ | Abse2001 | Updates the compatible dependency set for the 3D viewer to resolve issues with core and props exports, enabling successful viewer updates. |
 
 <details>
-<summary>🐌 Tiny Contributions (65)</summary>
+<summary>🐌 Tiny Contributions (91)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#6138](https://github.com/tscircuit/runframe/pull/6138) | 🐌 Tiny | ShiboSoftwareDev | Updates the core dependency to remove a transitive JS CDN dependency that causes installation failures for consumers using newer core versions. |
 | [#6098](https://github.com/tscircuit/runframe/pull/6098) | 🐌 Tiny | ShiboSoftwareDev | Moves tscircuitsystem-block-viewer back to devDependencies to resolve npm-install audit failures caused by its previous placement in runtime dependencies. |
-| [#6156](https://github.com/tscircuit/runframe/pull/6156) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6184](https://github.com/tscircuit/runframe/pull/6184) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6183](https://github.com/tscircuit/runframe/pull/6183) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6182](https://github.com/tscircuit/runframe/pull/6182) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6181](https://github.com/tscircuit/runframe/pull/6181) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1718 to 0.0.1719 |
+| [#6180](https://github.com/tscircuit/runframe/pull/6180) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6179](https://github.com/tscircuit/runframe/pull/6179) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1717 to 0.0.1718 |
+| [#6178](https://github.com/tscircuit/runframe/pull/6178) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6177](https://github.com/tscircuit/runframe/pull/6177) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1716 to 0.0.1717 |
+| [#6176](https://github.com/tscircuit/runframe/pull/6176) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6175](https://github.com/tscircuit/runframe/pull/6175) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1715 to 0.0.1716 |
+| [#6174](https://github.com/tscircuit/runframe/pull/6174) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6173](https://github.com/tscircuit/runframe/pull/6173) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1714 to 0.0.1715 |
+| [#6172](https://github.com/tscircuit/runframe/pull/6172) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6170](https://github.com/tscircuit/runframe/pull/6170) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6169](https://github.com/tscircuit/runframe/pull/6169) | 🐌 Tiny | tscircuitbot | Updates the tscircuit3d-viewer package to version 0.0.649 |
+| [#6168](https://github.com/tscircuit/runframe/pull/6168) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6167](https://github.com/tscircuit/runframe/pull/6167) | 🐌 Tiny | tscircuitbot | Updates the tscircuit3d-viewer package to version 0.0.648 in package.json |
+| [#6166](https://github.com/tscircuit/runframe/pull/6166) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6165](https://github.com/tscircuit/runframe/pull/6165) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1712 to 0.0.1714 in the package.json file. |
+| [#6164](https://github.com/tscircuit/runframe/pull/6164) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6163](https://github.com/tscircuit/runframe/pull/6163) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6162](https://github.com/tscircuit/runframe/pull/6162) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6161](https://github.com/tscircuit/runframe/pull/6161) | 🐌 Tiny | tscircuitbot | Updates the tscircuit3d-viewer package to version 0.0.646 |
+| [#6160](https://github.com/tscircuit/runframe/pull/6160) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6159](https://github.com/tscircuit/runframe/pull/6159) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6154](https://github.com/tscircuit/runframe/pull/6154) | 🐌 Tiny | tscircuitbot | Updates the tscircuit3d-viewer package to version 0.0.644 |
-| [#6151](https://github.com/tscircuit/runframe/pull/6151) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6150](https://github.com/tscircuit/runframe/pull/6150) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1711 to 0.0.1712 |
-| [#6149](https://github.com/tscircuit/runframe/pull/6149) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6148](https://github.com/tscircuit/runframe/pull/6148) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1710 to 0.0.1711 |
+| [#6156](https://github.com/tscircuit/runframe/pull/6156) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6151](https://github.com/tscircuit/runframe/pull/6151) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6149](https://github.com/tscircuit/runframe/pull/6149) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6147](https://github.com/tscircuit/runframe/pull/6147) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6146](https://github.com/tscircuit/runframe/pull/6146) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6145](https://github.com/tscircuit/runframe/pull/6145) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6144](https://github.com/tscircuit/runframe/pull/6144) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1708 to 0.0.1709 |
 | [#6142](https://github.com/tscircuit/runframe/pull/6142) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1707 to 0.0.1708 |
 | [#6140](https://github.com/tscircuit/runframe/pull/6140) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1706 to 0.0.1707 |
@@ -753,7 +854,6 @@ pie
 | [#6128](https://github.com/tscircuit/runframe/pull/6128) | 🐌 Tiny | tscircuitbot | Updates the tscircuitpcb-viewer package to version 1.11.450 |
 | [#6127](https://github.com/tscircuit/runframe/pull/6127) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6126](https://github.com/tscircuit/runframe/pull/6126) | 🐌 Tiny | tscircuitbot | Updates the tscircuitschematic-viewer package from version 2.0.107 to 2.0.108 |
-| [#6145](https://github.com/tscircuit/runframe/pull/6145) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6143](https://github.com/tscircuit/runframe/pull/6143) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6141](https://github.com/tscircuit/runframe/pull/6141) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6139](https://github.com/tscircuit/runframe/pull/6139) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -798,6 +898,7 @@ pie
 | [#6076](https://github.com/tscircuit/runframe/pull/6076) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6072](https://github.com/tscircuit/runframe/pull/6072) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1695 to 0.0.1696 |
 | [#6071](https://github.com/tscircuit/runframe/pull/6071) | 🐌 Tiny | imrishabh18 | Updates the tscircuitpcb-viewer dependency to version 1.11.444 to include a fix for hover label and outline clipping issues. |
+| [#6153](https://github.com/tscircuit/runframe/pull/6153) | 🐌 Tiny | seveibar | The static build viewer placed its file selector and gallery button inside leftHeaderContent, leaving navigation beside FileView instead of centered. This is visible on Compact USB Homing Modules(https:usb-homing-modules-compact.seveibar.chatgpt.sitefileboards2Fpanel.circuit.json), which uses RunFrame 0.0.3169. Add an optional centerHeaderContent slot with three equal desktop columns so unequal side controls cannot shift navigation. On narrow screens navigation gets its own centered row. Apply the same layout to failed-file recovery and regenerate the bundled CSS. Existing previews without center content retain their flex layout. Validation: All 92 Bun tests pass; TypeScript check passes (8 GB Node heap). CSS and standalone production builds pass; changed TSX formatting and diff checks pass. Chromium checks against the sites HTMLdata with the locally built bundle: centered navigation and no horizontal overflow at 320, 390, 768, 1024, and 1440px; file switching and gallery navigation work. Long filenames, failed file loading, and single-file mode also checked. PCB rendering itself could not be verified because headless Chromium has no WebGPU adapter. The hosted site remains pinned to 0.0.3169 and will need its dependency updated after release. Preview: Open the static build viewer directly(https:runframe-git-fix-center-static-viewer-file-navigation-tscircuit.vercel.apprenderer.html?fixtureId7B22path223A22examples2Fexample31-static-build-viewer.fixture.tsx222C22name223A22LoadingWithoutCustomFetch227Dlockedtruefileindex.tsx). This fixture shows FileView, the centered file selector and gallery button, and the right-side viewer tabs. The branch includes main through e1c6f838. |
 | [#6094](https://github.com/tscircuit/runframe/pull/6094) | 🐌 Tiny | seveibar | Upgrades the System viewer to the published jscdn 0.0.5 release and declares it as a runtime dependency, ensuring curved routes work in standalone previews. |
 
 </details>
@@ -833,22 +934,43 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#5752](https://github.com/tscircuit/tscircuit.com/pull/5752) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds a compact, searchable file picker for packages with multiple Circuit JSON files, enhancing user navigation and selection before downloading. |
 | [#5708](https://github.com/tscircuit/tscircuit.com/pull/5708) | 🐳 Major | ⭐⭐⭐ | seveibar | Upgrades the System viewer to support curved routes and enables navigation from components to their schematic representation, displaying associated reference designators and manufacturer part numbers. |
 | [#5699](https://github.com/tscircuit/tscircuit.com/pull/5699) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds a System view for packages with a system_block_page in Circuit JSON, and modifies the Download button to be more compact while preserving accessibility features. |
 | [#5753](https://github.com/tscircuit/tscircuit.com/pull/5753) | 🐳 Major | ⭐⭐⭐ | rushabhcodes | Add Engineering Drawing PNG and SVG downloads to the Download  Images menu on package pages and in the editor, allowing users to download single images or ZIPs of multiple drawings. |
 
 <details>
-<summary>🐌 Tiny Contributions (35)</summary>
+<summary>🐌 Tiny Contributions (55)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#5775](https://github.com/tscircuit/tscircuit.com/pull/5775) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3181 to 0.0.3182 |
+| [#5774](https://github.com/tscircuit/tscircuit.com/pull/5774) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package version from 0.0.1719 to 0.0.1720 |
+| [#5773](https://github.com/tscircuit/tscircuit.com/pull/5773) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3180 to 0.0.3181 |
+| [#5772](https://github.com/tscircuit/tscircuit.com/pull/5772) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1718 to 0.0.1719 |
+| [#5771](https://github.com/tscircuit/tscircuit.com/pull/5771) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package version from 0.0.3179 to 0.0.3180 in package.json |
+| [#5770](https://github.com/tscircuit/tscircuit.com/pull/5770) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1717 to 0.0.1718 |
+| [#5769](https://github.com/tscircuit/tscircuit.com/pull/5769) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3178 to 0.0.3179 |
+| [#5768](https://github.com/tscircuit/tscircuit.com/pull/5768) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1716 to 0.0.1717 |
+| [#5767](https://github.com/tscircuit/tscircuit.com/pull/5767) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3177 to 0.0.3178 |
+| [#5766](https://github.com/tscircuit/tscircuit.com/pull/5766) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1715 to 0.0.1716 |
+| [#5765](https://github.com/tscircuit/tscircuit.com/pull/5765) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3176 to 0.0.3177 |
+| [#5764](https://github.com/tscircuit/tscircuit.com/pull/5764) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1714 to 0.0.1715 |
+| [#5763](https://github.com/tscircuit/tscircuit.com/pull/5763) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5762](https://github.com/tscircuit/tscircuit.com/pull/5762) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5761](https://github.com/tscircuit/tscircuit.com/pull/5761) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3173 to 0.0.3174 |
+| [#5760](https://github.com/tscircuit/tscircuit.com/pull/5760) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3172 to 0.0.3173 |
+| [#5759](https://github.com/tscircuit/tscircuit.com/pull/5759) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package version from 0.0.1712 to 0.0.1714 in package.json |
+| [#5758](https://github.com/tscircuit/tscircuit.com/pull/5758) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5757](https://github.com/tscircuit/tscircuit.com/pull/5757) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5755](https://github.com/tscircuit/tscircuit.com/pull/5755) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitrunframe package from 0.0.3169 to 0.0.3170 in package.json |
 | [#5754](https://github.com/tscircuit/tscircuit.com/pull/5754) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package version from 0.0.3168 to 0.0.3169 in package.json |
 | [#5749](https://github.com/tscircuit/tscircuit.com/pull/5749) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3167 to 0.0.3168 |
 | [#5748](https://github.com/tscircuit/tscircuit.com/pull/5748) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1711 to 0.0.1712 |
-| [#5747](https://github.com/tscircuit/tscircuit.com/pull/5747) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3166 to 0.0.3167 |
 | [#5746](https://github.com/tscircuit/tscircuit.com/pull/5746) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1710 to 0.0.1711 |
 | [#5745](https://github.com/tscircuit/tscircuit.com/pull/5745) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3165 to 0.0.3166 |
 | [#5744](https://github.com/tscircuit/tscircuit.com/pull/5744) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1709 to 0.0.1710 |
+| [#5747](https://github.com/tscircuit/tscircuit.com/pull/5747) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3166 to 0.0.3167 |
 | [#5742](https://github.com/tscircuit/tscircuit.com/pull/5742) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1703 to 0.0.1709 in the package.json file. |
 | [#5741](https://github.com/tscircuit/tscircuit.com/pull/5741) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3163 to 0.0.3164 |
 | [#5739](https://github.com/tscircuit/tscircuit.com/pull/5739) | 🐌 Tiny | tscircuitbot | Fixes unresolved drawing-viewer import, missing systemBlockComponentProps, and missing resolvePassiveFootprintDefinition build errors by updating runframe and its dependencies. |
@@ -882,20 +1004,36 @@ pie
 
 ### [tscircuit/eval](https://github.com/tscircuit/eval)
 
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#5650](https://github.com/tscircuit/eval/pull/5650) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes the package update failure due to KiCads native rounded-pad radii preservation, ensuring accurate PCB-import snapshots and geometry validation. |
 
 <details>
-<summary>🐌 Tiny Contributions (35)</summary>
+<summary>🐌 Tiny Contributions (48)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#5669](https://github.com/tscircuit/eval/pull/5669) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5668](https://github.com/tscircuit/eval/pull/5668) | 🐌 Tiny | tscircuitbot | Updates the version of tscircuitcapacity-autorouter from 0.0.1064 to 0.0.1065 and tscircuitcore from 0.0.2310 to 0.0.2311 in package.json |
+| [#5666](https://github.com/tscircuit/eval/pull/5666) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5665](https://github.com/tscircuit/eval/pull/5665) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5663](https://github.com/tscircuit/eval/pull/5663) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5662](https://github.com/tscircuit/eval/pull/5662) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5660](https://github.com/tscircuit/eval/pull/5660) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5659](https://github.com/tscircuit/eval/pull/5659) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5657](https://github.com/tscircuit/eval/pull/5657) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5656](https://github.com/tscircuit/eval/pull/5656) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitcore package from 0.0.2306 to 0.0.2307 in package.json |
+| [#5654](https://github.com/tscircuit/eval/pull/5654) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5653](https://github.com/tscircuit/eval/pull/5653) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitcore package from 0.0.2305 to 0.0.2306 in package.json |
+| [#5651](https://github.com/tscircuit/eval/pull/5651) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5638](https://github.com/tscircuit/eval/pull/5638) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5637](https://github.com/tscircuit/eval/pull/5637) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5635](https://github.com/tscircuit/eval/pull/5635) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5634](https://github.com/tscircuit/eval/pull/5634) | 🐌 Tiny | tscircuitbot | Updates package dependencies to their latest versions as part of routine maintenance. |
 | [#5632](https://github.com/tscircuit/eval/pull/5632) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5631](https://github.com/tscircuit/eval/pull/5631) | 🐌 Tiny | tscircuitbot | Updates the version of tscircuitcore and tscircuitcore-ddr-benchmark in package.json |
 | [#5629](https://github.com/tscircuit/eval/pull/5629) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5628](https://github.com/tscircuit/eval/pull/5628) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5631](https://github.com/tscircuit/eval/pull/5631) | 🐌 Tiny | tscircuitbot | Updates the version of tscircuitcore and tscircuitcore-ddr-benchmark in package.json |
 | [#5626](https://github.com/tscircuit/eval/pull/5626) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5625](https://github.com/tscircuit/eval/pull/5625) | 🐌 Tiny | tscircuitbot | Updates package dependencies to their latest versions as part of routine maintenance. |
 | [#5623](https://github.com/tscircuit/eval/pull/5623) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -978,17 +1116,23 @@ pie
 | [#2800](https://github.com/tscircuit/svg.tscircuit.com/pull/2800) | 🐳 Major | ⭐⭐⭐ | seveibar | Add support for rendering system block diagrams in SVG and PNG formats, including manifest generation and page selection. |
 
 <details>
-<summary>🐌 Tiny Contributions (49)</summary>
+<summary>🐌 Tiny Contributions (55)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#2854](https://github.com/tscircuit/svg.tscircuit.com/pull/2854) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3119 to 0.0.3120 in package.json |
-| [#2853](https://github.com/tscircuit/svg.tscircuit.com/pull/2853) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3118 to 0.0.3119 in package.json |
-| [#2852](https://github.com/tscircuit/svg.tscircuit.com/pull/2852) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3117 to 0.0.3118 in package.json |
-| [#2851](https://github.com/tscircuit/svg.tscircuit.com/pull/2851) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3116 to 0.0.3117 in package.json |
-| [#2850](https://github.com/tscircuit/svg.tscircuit.com/pull/2850) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3115 to 0.0.3116 in package.json |
+| [#2861](https://github.com/tscircuit/svg.tscircuit.com/pull/2861) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3126 to 0.0.3127 in package.json |
+| [#2860](https://github.com/tscircuit/svg.tscircuit.com/pull/2860) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3125 to 0.0.3126 in package.json |
+| [#2859](https://github.com/tscircuit/svg.tscircuit.com/pull/2859) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3124 to 0.0.3125 in package.json |
+| [#2858](https://github.com/tscircuit/svg.tscircuit.com/pull/2858) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3122 to 0.0.3124 in package.json |
+| [#2857](https://github.com/tscircuit/svg.tscircuit.com/pull/2857) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3121 to 0.0.3122 in package.json |
+| [#2855](https://github.com/tscircuit/svg.tscircuit.com/pull/2855) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3120 to 0.0.3121 in package.json |
 | [#2849](https://github.com/tscircuit/svg.tscircuit.com/pull/2849) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3114 to 0.0.3115 in package.json |
 | [#2848](https://github.com/tscircuit/svg.tscircuit.com/pull/2848) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3113 to 0.0.3114 in package.json |
+| [#2854](https://github.com/tscircuit/svg.tscircuit.com/pull/2854) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3119 to 0.0.3120 in package.json |
+| [#2853](https://github.com/tscircuit/svg.tscircuit.com/pull/2853) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3118 to 0.0.3119 in package.json |
+| [#2851](https://github.com/tscircuit/svg.tscircuit.com/pull/2851) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3116 to 0.0.3117 in package.json |
+| [#2850](https://github.com/tscircuit/svg.tscircuit.com/pull/2850) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3115 to 0.0.3116 in package.json |
+| [#2852](https://github.com/tscircuit/svg.tscircuit.com/pull/2852) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3117 to 0.0.3118 in package.json |
 | [#2847](https://github.com/tscircuit/svg.tscircuit.com/pull/2847) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3112 to 0.0.3113 in package.json |
 | [#2846](https://github.com/tscircuit/svg.tscircuit.com/pull/2846) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3111 to 0.0.3112 in package.json |
 | [#2844](https://github.com/tscircuit/svg.tscircuit.com/pull/2844) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3110 to 0.0.3111 in package.json |
@@ -1074,15 +1218,18 @@ pie
 |------|--------|--------|-------------|-------------|
 | [#146](https://github.com/tscircuit/copper-pour-solver/pull/146) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Fixes copper spikes that occur between adjacent rounded SMT pins by bridging the clearances between overlapping pads, ensuring a smooth copper pour without sharp edges. |
 | [#145](https://github.com/tscircuit/copper-pour-solver/pull/145) | 🐙 Minor | ⭐⭐ | imrishabh18 | Reproduces copper pour spikes beside the NEMA23 eFuse by adjusting pin placements and ensuring proper clearance for copper pours. |
+| [#150](https://github.com/tscircuit/copper-pour-solver/pull/150) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Removes manual rounding in polygon normalization to preserve precision in copper pour clipping, ensuring compliance with a requested board-edge margin of 0.2 mm. |
 | [#142](https://github.com/tscircuit/copper-pour-solver/pull/142) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes a limitation in the Circuit JSON converter that caused explicit pours on secondary PCB boards to be clipped against their sibling boards, by allowing selection of the owning PCB board for each pour. |
 
 <details>
-<summary>🐌 Tiny Contributions (5)</summary>
+<summary>🐌 Tiny Contributions (7)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#152](https://github.com/tscircuit/copper-pour-solver/pull/152) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#144](https://github.com/tscircuit/copper-pour-solver/pull/144) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#140](https://github.com/tscircuit/copper-pour-solver/pull/140) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#149](https://github.com/tscircuit/copper-pour-solver/pull/149) | 🐌 Tiny | MustafaMulla29 | Reproduces a bug where a polygon board with a copper-pour edge margin produces copper slightly inside the clearance, verifying the clearance check error with a comprehensive test. |
 | [#141](https://github.com/tscircuit/copper-pour-solver/pull/141) | 🐌 Tiny | Abse2001 | Waits one minute after publishing before checking npm for the release, then checks every 30 seconds, with a total timeout of ten minutes for verification. |
 | [#139](https://github.com/tscircuit/copper-pour-solver/pull/139) | 🐌 Tiny | Abse2001 | Changes the release verification process to retry checking npm for a published version up to 12 times with delays, ensuring the package is available before proceeding. |
 | [#138](https://github.com/tscircuit/copper-pour-solver/pull/138) | 🐌 Tiny | Abse2001 | Fixes the issue where prepared releases are not published to npm, ensuring that the correct version is available after a successful workflow run. |
@@ -1202,12 +1349,6 @@ pie
 
 </details>
 
-### [tscircuit/repair04](https://github.com/tscircuit/repair04)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#62](https://github.com/tscircuit/repair04/pull/62) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Reduces computational overhead by pruning clearance pairs and simplifying distance calculations for point-shaped vias while maintaining exact geometry and projection order. |
-
 ### [tscircuit/trace-simplification-solver](https://github.com/tscircuit/trace-simplification-solver)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -1235,6 +1376,18 @@ pie
 
 </details>
 
+### [tscircuit/jscad-fiber](https://github.com/tscircuit/jscad-fiber)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#146](https://github.com/tscircuit/jscad-fiber/pull/146) | 🐌 Tiny | imrishabh18 | Constrain the react-reconciler peer dependency to 0.31.0 to resolve ERESOLVE errors during npm install with React 19.1.0. |
+
+</details>
+
 ### [tscircuit/docs](https://github.com/tscircuit/docs)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -1242,15 +1395,27 @@ pie
 | [#979](https://github.com/tscircuit/docs/pull/979) | 🐳 Major | ⭐⭐⭐ | seveibar | The assembly docs still say generic parts have no mounting props, and the PCB screw guide manually copies hole coordinates. There are no element references for assembly.bolt or assembly.referencesurface. Add those references and update the existing part, subassembly, printed-part, motor and assembly guides for the merged API. The examples cover CSS face selectors, target-local signed offsets, normal clearance, geometry-less groups, inherited frames, and topbottom fastening to plain and plated PCB holes. Fasteners use canonical modelprinter strings such as hexsocketbolt_m3_l10mm; mechanical holes use authored datums rather than mesh inference. Three complete shared sources power the CircuitPreview code, editor links, generated Circuit JSON and four inspected 3D views. The bearing housing has explicit pocket and hole geometry, and the bolt model comes from JSCAD Electronics. No GLB assets are added. The generator fails on unavailable model URLs instead of silently publishing placeholder geometry. Validation: all three examples built with the published tscircuit0.0.3064 CLI, and their emitted geometry matches the documented seating planes and group offsets. All 26 docs tests, TypeScript, formatting, and relative-link checks passed. The production site build and all GitHub checks passed. All eight preview routes and all four rendered PNG assets return HTTP 200.  Updated page  Verified deployment preview   ---  ---   Bolts  Open page(https:docs-git-codex-assembly-mounting-docs-tscircuit.vercel.appelementsassembly-bolt)   Reference surfaces  Open page(https:docs-git-codex-assembly-mounting-docs-tscircuit.vercel.appelementsassembly-referencesurface)   Parts  Open page(https:docs-git-codex-assembly-mounting-docs-tscircuit.vercel.appelementsassembly-part)   Subassemblies  Open page(https:docs-git-codex-assembly-mounting-docs-tscircuit.vercel.appelementsassembly-subassembly)   Printed parts  Open page(https:docs-git-codex-assembly-mounting-docs-tscircuit.vercel.appelementsassembly-printedpart)   Motors  Open page(https:docs-git-codex-assembly-mounting-docs-tscircuit.vercel.appelementsassembly-motor)   Mounting 3D models  Open page(https:docs-git-codex-assembly-mounting-docs-tscircuit.vercel.appguidestscircuit-essentialsmounting-3d-models)   Advanced Assembly  Open page(https:docs-git-codex-assembly-mounting-docs-tscircuit.vercel.appguidesadvanced-assembly) |
 | [#980](https://github.com/tscircuit/docs/pull/980) | 🐳 Major | ⭐⭐⭐ | seveibar | Add a dedicated reference page for each of systemblock.page, systemblock.group, systemblock.component, and systemblock.connection, plus a guide with the complete wireless sensor node example and SVG export steps. |
 | [#997](https://github.com/tscircuit/docs/pull/997) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes the issue where clicking the RP2040 board on the homepage results in a loading error, by adding a functional 3D model that loads correctly upon interaction. |
+| [#1003](https://github.com/tscircuit/docs/pull/1003) | 🐙 Minor | ⭐⭐ | seveibar | Embed a video demonstrating reverse explosion playback of a handheld console in the 3D viewer documentation. |
 | [#1002](https://github.com/tscircuit/docs/pull/1002) | 🐙 Minor | ⭐⭐ | seveibar | Document tsci export --format explosion-mp4 in the CLI reference and assembly explosion guide, including the FFmpeglibx264 requirement, TSX and Circuit JSON inputs, timing and dimension options, and output paths. Embed the real RP2040NEMA17 video copied byte-for-byte from the CLIs committed test artifact. Also correct the stale collision-checking descriptions and identify the fixture as our RP2040 motor-controller design, removing the incorrect PD-StepperGPL attribution. |
 | [#981](https://github.com/tscircuit/docs/pull/981) | 🐙 Minor | ⭐⭐ | seveibar | The motor and advanced assembly images show plugs perched on socket lips. Regenerate the three JST motorcontroller previews and their Circuit JSON with the paired cable-seating fix, and explain that PHSH plugs follow header rotation, PCB layer and motor orientation automatically. The examples keep their existing public props. All three images use the actual motor, header and cable models and were visually inspected; no GLB assets are added. Validation: all 26 docs tests, TypeScript, formatting and the production site build passed. All three preview pages and images return HTTP 200, and the deployed PNGs are byte-for-byte identical to the inspected local renders. Paired runtime fix: https:github.comtscircuitcorepull5116 Shared dimensions: https:github.comtscircuitmodelprinterpull125 Plugsocket models: https:github.comtscircuitjscad-electronicspull515 Modelprinter 0.0.37 is released. Draft pending the paired renderer and core releases.  Updated preview  Verified deployment page   ---  ---   Cable  Open page(https:docs-git-codex-cable-seating-previews-tscircuit.vercel.appelementsassembly-cable)   Motor  Open page(https:docs-git-codex-cable-seating-previews-tscircuit.vercel.appelementsassembly-motor)   Advanced Assembly  Open page(https:docs-git-codex-cable-seating-previews-tscircuit.vercel.appguidesadvanced-assembly) |
 
 <details>
-<summary>🐌 Tiny Contributions (5)</summary>
+<summary>🐌 Tiny Contributions (16)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#995](https://github.com/tscircuit/docs/pull/995) | 🐌 Tiny | imrishabh18 | Adds a direct relationship in the dependency diagram between circuit-json-to-kicad and CLI. |
+| [#1015](https://github.com/tscircuit/docs/pull/1015) | 🐌 Tiny | seveibar | Removes the storage detail from the name property description in the documentation for simulation-pcbreturncurrentexcitation. |
+| [#1016](https://github.com/tscircuit/docs/pull/1016) | 🐌 Tiny | seveibar | Describes the warning users receive regarding component availability and preserves the readable example and interpretation. |
+| [#1012](https://github.com/tscircuit/docs/pull/1012) | 🐌 Tiny | seveibar | Move the measurement and packing-diagnostic implementation to Advanced. Keep the existing guide URL as a short entry point to TSX layout documentation and the advanced integration; no unsupported replacement API is introduced. |
+| [#1010](https://github.com/tscircuit/docs/pull/1010) | 🐌 Tiny | seveibar | Clarifies the visual representation of debug overlays for package fanouts and board-level channels without exposing internal record types. |
+| [#1006](https://github.com/tscircuit/docs/pull/1006) | 🐌 Tiny | seveibar | Removes internal cable-insertion field and test discussion from the connector documentation, which provided no authoring instructions. |
+| [#1007](https://github.com/tscircuit/docs/pull/1007) | 🐌 Tiny | seveibar | Describes playback, movement guides, and clearance diagnostics without serialized record names or instructions to preserve individual records. |
+| [#1008](https://github.com/tscircuit/docs/pull/1008) | 🐌 Tiny | seveibar | Describes previously built assemblies as supported inputs without requiring knowledge of their internal explosion records. |
+| [#1014](https://github.com/tscircuit/docs/pull/1014) | 🐌 Tiny | seveibar | Removes the internal world-space serialization step from the explanation of local-frame and mounting behavior in assembly explosion documentation. |
+| [#1009](https://github.com/tscircuit/docs/pull/1009) | 🐌 Tiny | seveibar | Clarifies the description of cable paths in user-facing terms by changing the wording from produces an independent cad_cable path in Circuit JSON to creates an independent cable path. |
+| [#1005](https://github.com/tscircuit/docs/pull/1005) | 🐌 Tiny | seveibar | Replaces serialization details with automatic routing and label behavior for system block connections. |
+| [#1004](https://github.com/tscircuit/docs/pull/1004) | 🐌 Tiny | seveibar | Removes Circuit JSON record lookup and storage-field explanations from the system block guide, simplifying the export process for users. |
 | [#996](https://github.com/tscircuit/docs/pull/996) | 🐌 Tiny | seveibar | Add documentation pages for nine simulation elements and alphabetize the Built-in Elements sidebar. |
 | [#999](https://github.com/tscircuit/docs/pull/999) | 🐌 Tiny | seveibar | Limits the height of System block diagrams to 800px in CircuitPreview, ensuring responsive design and proper scaling across various layouts. |
 | [#1000](https://github.com/tscircuit/docs/pull/1000) | 🐌 Tiny | seveibar | Add brief purchaseUrls and supplierPartNumbers rows to the existing part, subassembly and device prop tables. Six added lines total. |
@@ -1321,6 +1486,23 @@ pie
 
 </details>
 
+### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#925](https://github.com/tscircuit/circuit-to-svg/pull/925) | 🐳 Major | ⭐⭐⭐ | seveibar | PCB support errors from tscircuitchecks are pcb_placement_error records. The PCB renderer previously skipped that type even when shouldDrawErrors was enabled, so the faulty regions were invisible. Render located placement errors above the PCB layers. Diagnostics with region widthheight receive a translucent red fill and dashed border; support errors show a short label and surviving-tab count. A native SVG title and accessible label retain the full diagnostic. Location-only errors receive a marker, and missingnonfinite locations are not drawn. Existing shouldDrawErrors visibility controls apply. The regression fixture contains the original basic-usbc-devices panel geometry and four actual support-check results. Visual snapshots cover highlighted regions, hidden errors, and location-onlymissing-location errors. The matching checks change adds region bounds: https:github.comtscircuitcheckspull539. Existing diagnostics with only a center still render without that update. Usage: ts const errors  checkPcbBoardSupport(circuitJson) const svg  convertCircuitJsonToPcbSvg(...circuitJson, ...errors,  shouldDrawErrors: true, )  Validation: 13 PCB error-rendering tests across nine files pass, including the three new visual snapshots. Snapshots were rendered and visually inspected, then tests rerun without updating. TypeScript and package build pass. The checks-side bounds change passes its 15 focused regressions. |
+| [#900](https://github.com/tscircuit/circuit-to-svg/pull/900) | 🐙 Minor | ⭐⭐ | seveibar | System block connections with cubic_bezier_control_points now render as SVG cubic paths, allowing smooth circular corners and rounded return routes. Mixed routes preserve straight segments; existing point-only routes retain their polyline output. Arrowheads follow the endpoint tangent, including coincident controls and closed loops, and tiny handles do not shrink arrows on long curves. |
+| [#895](https://github.com/tscircuit/circuit-to-svg/pull/895) | 🐙 Minor | ⭐⭐ | seveibar | Adds convertCircuitJsonToSystemSvg function for rendering system block diagrams with various features and validations. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#913](https://github.com/tscircuit/circuit-to-svg/pull/913) | 🐌 Tiny | seveibar | Adds support for rendering system connection colors, line patterns, and label halos in system diagrams, enhancing visual distinction and readability of labels. |
+
+</details>
+
 ### [tscircuit/checks](https://github.com/tscircuit/checks)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -1374,22 +1556,6 @@ pie
 
 </details>
 
-### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#900](https://github.com/tscircuit/circuit-to-svg/pull/900) | 🐙 Minor | ⭐⭐ | seveibar | System block connections with cubic_bezier_control_points now render as SVG cubic paths, allowing smooth circular corners and rounded return routes. Mixed routes preserve straight segments; existing point-only routes retain their polyline output. Arrowheads follow the endpoint tangent, including coincident controls and closed loops, and tiny handles do not shrink arrows on long curves. |
-| [#895](https://github.com/tscircuit/circuit-to-svg/pull/895) | 🐙 Minor | ⭐⭐ | seveibar | Adds convertCircuitJsonToSystemSvg function for rendering system block diagrams with various features and validations. |
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#913](https://github.com/tscircuit/circuit-to-svg/pull/913) | 🐌 Tiny | seveibar | Adds support for rendering system connection colors, line patterns, and label halos in system diagrams, enhancing visual distinction and readability of labels. |
-
-</details>
-
 ### [tscircuit/tscircuit.com-landing](https://github.com/tscircuit/tscircuit.com-landing)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -1397,10 +1563,11 @@ pie
 | [#76](https://github.com/tscircuit/tscircuit.com-landing/pull/76) | 🐙 Minor | ⭐⭐ | seveibar | Moves Datasheets into the Product dropdown and introduces a Solutions dropdown with links to Professional Support and Verified Chips Program. |
 
 <details>
-<summary>🐌 Tiny Contributions (2)</summary>
+<summary>🐌 Tiny Contributions (3)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#77](https://github.com/tscircuit/tscircuit.com-landing/pull/77) | 🐌 Tiny | seveibar | Changes the homepage button link to use a relative URL instead of an absolute URL. |
 | [#75](https://github.com/tscircuit/tscircuit.com-landing/pull/75) | 🐌 Tiny | seveibar | Fixes the navigation bar jitter caused by the animated GitHub star count by using CSS to set a fixed width for the star count display. |
 | [#74](https://github.com/tscircuit/tscircuit.com-landing/pull/74) | 🐌 Tiny | seveibar | Replaces the homepage heros Star on GitHub button with See example, linking to a specific example page and changing the icon to an arrow. |
 
@@ -1467,29 +1634,36 @@ pie
 
 </details>
 
+### [tscircuit/contribution-tracker](https://github.com/tscircuit/contribution-tracker)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#395](https://github.com/tscircuit/contribution-tracker/pull/395) | 🐳 Major | ⭐⭐⭐ | Abse2001 | Expand the existing Open Collective Sponsorships report with a per-contributor table showing GitHub account, Open Collective profile, sponsorship amount, match result, payment evidence, and linked expense statuses. |
+
+<details>
+<summary>🐌 Tiny Contributions (6)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#392](https://github.com/tscircuit/contribution-tracker/pull/392) | 🐌 Tiny | Abse2001 | Add a workflow that matches sponsorship profiles to the September 2026 sponsorship CSV and produces a downloadable report, with validation and error handling for duplicate entries and malformed data. |
+| [#388](https://github.com/tscircuit/contribution-tracker/pull/388) | 🐌 Tiny | Abse2001 | Adds sponsorship-profiles.json for contributors to fill in their Open Collective profile links, without changing existing identity handling or sponsorship workflows. |
+| [#386](https://github.com/tscircuit/contribution-tracker/pull/386) | 🐌 Tiny | Abse2001 | Adds a manually triggered Test Open Collective API action using the OPENCOLLECTIVE_TOKEN Actions secret to verify API authentication without creating expenses or payments. |
+| [#394](https://github.com/tscircuit/contribution-tracker/pull/394) | 🐌 Tiny | GokulPandi-M | Adds my public Open Collective profile to sponsorship-profiles.json so the tscircuit team can match my GitHub contributions to the intended sponsorship recipient. |
+| [#393](https://github.com/tscircuit/contribution-tracker/pull/393) | 🐌 Tiny | trixie010 | Registers trixie010s public Open Collective profile as https:opencollective.comtrixie in sponsorship-profiles.json. |
+| [#391](https://github.com/tscircuit/contribution-tracker/pull/391) | 🐌 Tiny | KrishnaX12 | Registers https:opencollective.comkrishnax12 as the Open Collective profile for KrishnaX12 in sponsorship-profiles.json. |
+
+</details>
+
 ### [tscircuit/kicad-mod-cache](https://github.com/tscircuit/kicad-mod-cache)
 
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#33](https://github.com/tscircuit/kicad-mod-cache/pull/33) | 🐌 Tiny | Abse2001 | Fixes deployment issues by updating Node.js version requirement to 26.x in package.json for Vercel compatibility |
 | [#31](https://github.com/tscircuit/kicad-mod-cache/pull/31) | 🐌 Tiny | Abse2001 | Fixes courtyard contour generation in KiCad importer by updating dependencies to versions that resolve existing bugs. |
-
-</details>
-
-### [tscircuit/contribution-tracker](https://github.com/tscircuit/contribution-tracker)
-
-
-<details>
-<summary>🐌 Tiny Contributions (3)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#388](https://github.com/tscircuit/contribution-tracker/pull/388) | 🐌 Tiny | Abse2001 | Adds sponsorship-profiles.json for contributors to fill in their Open Collective profile links, without changing existing identity handling or sponsorship workflows. |
-| [#386](https://github.com/tscircuit/contribution-tracker/pull/386) | 🐌 Tiny | Abse2001 | Adds a manually triggered Test Open Collective API action using the OPENCOLLECTIVE_TOKEN Actions secret to verify API authentication without creating expenses or payments. |
-| [#391](https://github.com/tscircuit/contribution-tracker/pull/391) | 🐌 Tiny | KrishnaX12 | Registers https:opencollective.comkrishnax12 as the Open Collective profile for KrishnaX12 in sponsorship-profiles.json. |
 
 </details>
 
@@ -1534,11 +1708,21 @@ pie
 | PRs # | Impact | Rating | Description |
 |------|--------|--------|-------------|
 | [#1163](https://github.com/tscircuit/pcb-viewer/pull/1163) | 🐳 Major | ⭐⭐⭐ | Updates the Earcut library to version 3.2.4 to improve the performance of triangulating copper pours in WebGPU, resulting in faster scene compilation and PCB painting times. |
+| [#1132](https://github.com/tscircuit/3d-viewer/pull/1132) | 🐳 Major | ⭐⭐⭐ | Fixes initial camera framing for CAD assemblies without a PCB, ensuring proper geometry bounds are respected during rendering. |
 | [#1121](https://github.com/tscircuit/3d-viewer/pull/1121) | 🐳 Major | ⭐⭐⭐ | Keeps the active GLB on screen while its replacement loads, swapping models on the existing canvas and preserving the camera. |
 | [#1095](https://github.com/tscircuit/3d-viewer/pull/1095) | 🐳 Major | ⭐⭐⭐ | Releases the old WebGL context after disposing the renderer, ensuring the old context is lost and the replacement canvas works correctly. |
 | [#1094](https://github.com/tscircuit/3d-viewer/pull/1094) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where a detached WebGL canvas retains its context after unmounting, leading to unexpected behavior in rendering. |
+| [#5306](https://github.com/tscircuit/core/pull/5306) | 🐳 Major | ⭐⭐⭐ | Bump tscircuitcapacity-autorouter from 0.0.1061 to 0.0.1063 to include tscircuittscircuit-autorouter3594, preserving fine repair grids after region reordering and fixing H3 DDR bank-address clearance repair. |
+| [#5300](https://github.com/tscircuit/core/pull/5300) | 🐳 Major | ⭐⭐⭐ | Preserves circular copper when converting fixed vias into routing obstacles, removing a false clearance conflict on the H616 DDR crop. |
+| [#5299](https://github.com/tscircuit/core/pull/5299) | 🐳 Major | ⭐⭐⭐ | Reproduces a completed H616 DDR via becoming a square routing obstacle, comparing native copper with Cores emitted geometry. |
+| [#5293](https://github.com/tscircuit/core/pull/5293) | 🐳 Major | ⭐⭐⭐ | Preserves completed routing phases in the autorouter when a later phase fails, preventing loss of routing progress for signals. |
 | [#5240](https://github.com/tscircuit/core/pull/5240) | 🐳 Major | ⭐⭐⭐ | Bumps tscircuitcapacity-autorouter from 0.0.1047 to 0.0.1049 to include the disconnected-graph retry fix |
 | [#5122](https://github.com/tscircuit/core/pull/5122) | 🐳 Major | ⭐⭐⭐ | Bumps tscircuitcapacity-autorouter from 0.0.1035 to 0.0.1037, bringing in the DDR mesh-memory fix. |
+| [#3592](https://github.com/tscircuit/tscircuit-autorouter/pull/3592) | 🐳 Major | ⭐⭐⭐ | Restores legal through-via access between round BGA pads in the existing solver, eliminating DRC errors in the native H616 DDR repro while maintaining unchanged data traces. |
+| [#3608](https://github.com/tscircuit/tscircuit-autorouter/pull/3608) | 🐳 Major | ⭐⭐⭐ | Fixes autorouting failure by checking routed wires against earlier copper to prevent shorts on the native H616 board. |
+| [#3604](https://github.com/tscircuit/tscircuit-autorouter/pull/3604) | 🐳 Major | ⭐⭐⭐ | Reduces the time taken for H616 DDR force repair by optimizing checks for distant copper and pairs, resulting in significant performance improvements in routing times. |
+| [#3594](https://github.com/tscircuit/tscircuit-autorouter/pull/3594) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where sorting repair regions changed the reference size used to refine the search grid, resulting in expanded searches being too coarse. |
+| [#3593](https://github.com/tscircuit/tscircuit-autorouter/pull/3593) | 🐳 Major | ⭐⭐⭐ | Fixes clearance errors in H3 DDR bank address routing by adding native TSXCore circuit and captured routing input for SVG diff generation. |
 | [#3588](https://github.com/tscircuit/tscircuit-autorouter/pull/3588) | 🐳 Major | ⭐⭐⭐ | Reduces memory allocations in DDR path planning by optimizing buffer usage and improving performance metrics. |
 | [#3584](https://github.com/tscircuit/tscircuit-autorouter/pull/3584) | 🐳 Major | ⭐⭐⭐ | Preserves required terminal escapes when pruning would disconnect them, ensuring complete routing for signals and improving autorouting efficiency. |
 | [#3564](https://github.com/tscircuit/tscircuit-autorouter/pull/3564) | 🐳 Major | ⭐⭐⭐ | Preserve accepted regional work as a private input to Pipeline9s existing exact repair, optimizing the repair process and maintaining data integrity. |
@@ -1566,6 +1750,7 @@ pie
 | [#3548](https://github.com/tscircuit/tscircuit-autorouter/pull/3548) | 🐳 Major | ⭐⭐⭐ | Releases scratch memory after a large topology completes and validates its output, reducing retained JS heap significantly. |
 | [#309](https://github.com/tscircuit/tiny-hypergraph/pull/309) | 🐳 Major | ⭐⭐⭐ | Stops the selective reripping of routing graphs when a route has been proven to have no path, optimizing the rerip process by avoiding unnecessary retries. |
 | [#308](https://github.com/tscircuit/tiny-hypergraph/pull/308) | 🐳 Major | ⭐⭐⭐ | Preserves fixed native routes during hypergraph rerouting by retaining their initial assignments and excluding them from rip sets, while allowing same-net reuse of their occupied ports. |
+| [#52](https://github.com/tscircuit/high-density-repair01/pull/52) | 🐳 Major | ⭐⭐⭐ | Skips redundant checks for distant segment pairs and pairs where neither route can move during H616 DDR force repair, improving performance significantly while retaining necessary checks. |
 | [#44](https://github.com/tscircuit/high-density-repair01/pull/44) | 🐳 Major | ⭐⭐⭐ | Add opt-in anchors for endpoint vias to prevent copper disconnection in neighboring nodes during force improvement. |
 | [#199](https://github.com/tscircuit/high-density-repair03/pull/199) | 🐳 Major | ⭐⭐⭐ | Fixes DRC evaluation and repulsion for circular SMT pads by treating them correctly as circles instead of rectangles, leading to a reduction in DRC findings. |
 | [#198](https://github.com/tscircuit/high-density-repair03/pull/198) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where existing plated-hole transitions were converted into new vias, ensuring that these transitions are preserved during the repair DRC process. |
@@ -1581,15 +1766,17 @@ pie
 | [#101](https://github.com/tscircuit/circuit-json-webgpu/pull/101) | 🐳 Major | ⭐⭐⭐ | Builds WebGPU mesh vertices and indices in fixed-size typed chunks, optimizing memory usage and performance during rendering. |
 | [#308](https://github.com/tscircuit/schematic-viewer/pull/308) | 🐙 Minor | ⭐⭐ | Adjusts the schematic viewer to fit the TMDS62LEVM sheet frame correctly and allows panning beyond the SVG viewport while clipping to the container. |
 | [#6238](https://github.com/tscircuit/tscircuit/pull/6238) | 🐙 Minor | ⭐⭐ | Fixes package updater failure due to missing core DDR benchmark dependency in the dependency sync process. |
+| [#5292](https://github.com/tscircuit/core/pull/5292) | 🐙 Minor | ⭐⭐ | The real H3 DDR3 circuit routes both data bytes, then fails while planning the remaining signals. Core discards the completed copper, leaving 053 signals connected in the saved board. This TSX repro records that failure. Stacked fix: 5293 retains the 16 completed data signals while keeping the remaining-phase error. |
 | [#5251](https://github.com/tscircuit/core/pull/5251) | 🐙 Minor | ⭐⭐ | Fixes HTTP 403 error when posting benchmark results to PR conversation due to insufficient permissions for the reporting job. |
 | [#312](https://github.com/tscircuit/tiny-hypergraph/pull/312) | 🐙 Minor | ⭐⭐ | Reduces memory allocations during large DDR routing searches by removing the expanded-transition cache and sharing empty buffers, while maintaining the integrity of the search path visualization. |
 | [#43](https://github.com/tscircuit/high-density-repair01/pull/43) | 🐙 Minor | ⭐⭐ | Fixes Glider DDR escape via placement issue by adjusting its position to separate it from neighboring topology fragments. |
+| [#68](https://github.com/tscircuit/repair04/pull/68) | 🐙 Minor | ⭐⭐ | Exports the existing createFixedObstacleViolationEvaluator to reuse prepared obstacle geometry instead of rebuilding it for every candidate in the autorouting process. |
 | [#165](https://github.com/tscircuit/bus-lanes-solver/pull/165) | 🐙 Minor | ⭐⭐ | Completes ButterSticks second shared DDR byte through existing same-net via handoffs and signal-site search, preserving the first bytes copper and terminals. |
 | [#164](https://github.com/tscircuit/bus-lanes-solver/pull/164) | 🐙 Minor | ⭐⭐ | Extends the ButterStick board reproduction to attempt both shared DDR bytes, reusing its native pad capture without adding fixtures, while maintaining production routing unchanged. |
 | [#156](https://github.com/tscircuit/bus-lanes-solver/pull/156) | 🐙 Minor | ⭐⭐ | Fixes the issue where rotated pads were enclosed in horizontalvertical boxes, blocking legal pin escapes by using an oriented capsule that covers the entire rectangular pad, including its corners. |
 
 <details>
-<summary>🐌 Tiny Contributions (40)</summary>
+<summary>🐌 Tiny Contributions (47)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -1598,6 +1785,10 @@ pie
 | [#1168](https://github.com/tscircuit/pcb-viewer/pull/1168) | 🐌 Tiny | Bump the WebGPU renderer bundled by the PCB viewer to 0.0.15 to pick up typed mesh buffers and lower peak PCB memory use |
 | [#6214](https://github.com/tscircuit/tscircuit/pull/6214) | 🐌 Tiny | Excludes 11 CLI-only converters from core dependency synchronization to resolve package-update workflow failures caused by missing dependencies. |
 | [#6203](https://github.com/tscircuit/tscircuit/pull/6203) | 🐌 Tiny | Fixes package update workflow failure by excluding the circuit-json-to-bom-csv converter from dependency sync as it is only used in assembly tests and a build smoke test. |
+| [#5318](https://github.com/tscircuit/core/pull/5318) | 🐌 Tiny | Bumps tscircuitcapacity-autorouter from 0.0.1065 to 0.0.1066 to restore physically clear through-via access between round BGA pads and eliminate DRC errors in the H616 reproduction. |
+| [#5317](https://github.com/tscircuit/core/pull/5317) | 🐌 Tiny | Bumps tscircuitcapacity-autorouter from 0.0.1064 to 0.0.1065 to include a fix for routed wires against earlier copper and maintain native H616 DDR connections. |
+| [#5312](https://github.com/tscircuit/core/pull/5312) | 🐌 Tiny | Bumps the tscircuitcapacity-autorouter package version from 0.0.1063 to 0.0.1064 to include performance improvements from the latest implementation. |
+| [#5308](https://github.com/tscircuit/core/pull/5308) | 🐌 Tiny | Updates dependencies to remove sharp and ensure compatibility with the latest graphics-debug version, resolving potential installation issues with older versions. |
 | [#5290](https://github.com/tscircuit/core/pull/5290) | 🐌 Tiny | Bump tscircuitcapacity-autorouter to 0.0.1061 to include the DDR planner memory fix from https:github.comtscircuittscircuit-autorouterpull3588. |
 | [#5285](https://github.com/tscircuit/core/pull/5285) | 🐌 Tiny | Updates the autorouter and bus-lanes-solver dependencies to their latest versions, incorporating routing fixes and enhancements. |
 | [#5274](https://github.com/tscircuit/core/pull/5274) | 🐌 Tiny | Updates the DDR benchmark to ensure the complete 22-signal byte section routes cleanly when both byte groups share a phase. |
@@ -1618,6 +1809,8 @@ pie
 | [#5129](https://github.com/tscircuit/core/pull/5129) | 🐌 Tiny | Bumps the tscircuitcapacity-autorouter dependency to version 0.0.1038, addressing the circular-pad DDR routing fix and tightening clearance limits for A13. |
 | [#6138](https://github.com/tscircuit/runframe/pull/6138) | 🐌 Tiny | Updates the core dependency to remove a transitive JS CDN dependency that causes installation failures for consumers using newer core versions. |
 | [#6098](https://github.com/tscircuit/runframe/pull/6098) | 🐌 Tiny | Moves tscircuitsystem-block-viewer back to devDependencies to resolve npm-install audit failures caused by its previous placement in runtime dependencies. |
+| [#3590](https://github.com/tscircuit/tscircuit-autorouter/pull/3590) | 🐌 Tiny | Reproduces H616s source_trace_43 via gap using four actual U1 pads, addressing a specific issue with the round pads and their clearance. |
+| [#3607](https://github.com/tscircuit/tscircuit-autorouter/pull/3607) | 🐌 Tiny | Reproduces five physical DRC errors on the native H616 DDR board after all 53 signals connect, including an SCASDQ5 short. Includes runnable TSXCore and an SVG regression using Cores captured routing input. |
 | [#3583](https://github.com/tscircuit/tscircuit-autorouter/pull/3583) | 🐌 Tiny | Reproduces a bug where the A64 DDR clock cannot reach its bottom-layer termination resistor despite clear through-via space, without making any routing changes. |
 | [#3554](https://github.com/tscircuit/tscircuit-autorouter/pull/3554) | 🐌 Tiny | The real H3 DDR3 circuit routes its two data bytes, then fails to find a path for DQS1. Core buffers the phases, leaving 017 accepted signals. Adds the native TSX board, captured routing inputs and generated SVGs. The same repro runs unchanged on the stacked fix, 3555.  Board  request  Initial result  goal  Latest verified progress   ---  ---  ---   H3: 16 DQ  DQS1  017 accepted; goal 1717  Both DQ phases route, then DQS1 fails path planning |
 | [#3532](https://github.com/tscircuit/tscircuit-autorouter/pull/3532) | 🐌 Tiny | Reproduces the native circuit snapshot for OrangeCrabs detailed-routing clearance, addressing clearance issues and ensuring accurate representation of the routing phase. |
@@ -1626,6 +1819,7 @@ pie
 | [#3517](https://github.com/tscircuit/tscircuit-autorouter/pull/3517) | 🐌 Tiny | Reproduces Gliders LDQSN through-via touching the completed DATA4 trace on the bottom layer, including a board snapshot with 49 nets and 1 DRC error. |
 | [#3502](https://github.com/tscircuit/tscircuit-autorouter/pull/3502) | 🐌 Tiny | Captures the real A64 and STM32MP157 remaining-routing inputs after 32 DQ signals complete through TSXcore. The runner reproduces slow topology validation and reports the completed mesh hash. |
 | [#311](https://github.com/tscircuit/tiny-hypergraph/pull/311) | 🐌 Tiny | Captures the expensive blocker search from the real OLIMEX STM32MP157 DDR board, rendered through tscircuit 0.0.3120. No routing changes. Stacked on 309, matching the dependency already pinned in the autorouter. |
+| [#51](https://github.com/tscircuit/high-density-repair01/pull/51) | 🐌 Tiny | H616 DDR routing hits the 120-second limit in force repair. This captures its real 33-route, 3,844-vertex region from native TSX  Core, alongside the source board with all 384 pads and physical rules preserved. The isolated region takes 251 seconds on current main. The SVG shows the actual region output; it is not a completed or DRC-clean DDR board. |
 | [#161](https://github.com/tscircuit/bus-lanes-solver/pull/161) | 🐌 Tiny | Reproduces H616 DQ8DQ15 failing with all eight DQ0DQ7 routes fixed, retaining the original routing input and source provenance, with a test that intentionally fails until a stacked fix is included. |
 | [#158](https://github.com/tscircuit/bus-lanes-solver/pull/158) | 🐌 Tiny | Captures the wasted surface search steps for A13 CPU data bytes while retaining the original circuit design and validating the PCB SVG without altering the production solver or input changes. |
 | [#150](https://github.com/tscircuit/bus-lanes-solver/pull/150) | 🐌 Tiny | ButterSticks first DDR byte joins FPGA U4 and both RAM packages, U11U12. The exact core-generated request has eight signals and 24 endpoints, but routing stops at two terminals required before creating copper. The repro keeps the real board input and snapshots the failed baseline before asserting successful routing. No solver changes. Input provenance and source PCB fingerprint are beside the fixture. !Failed baseline: eight shared DDR signals(https:raw.githubusercontent.comtscircuitbus-lanes-solver86c691174b633d6b3a0af46733e1b80e43b33e07testsrepros__snapshots__butterstick-shared-ddr.snap.svg) Validation: the focused test reproduces the named guard failure. Benchmark effect: production code and benchmark inputs are unchanged; paired AM3352 runs are provided by this PRs benchmark workflow. |
@@ -1656,7 +1850,7 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (360)</summary>
+<summary>🐌 Tiny Contributions (443)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -1668,20 +1862,33 @@ pie
 | [#1182](https://github.com/tscircuit/pcb-viewer/pull/1182) | 🐌 Tiny | Automated package update |
 | [#1164](https://github.com/tscircuit/pcb-viewer/pull/1164) | 🐌 Tiny | Automated package update |
 | [#1154](https://github.com/tscircuit/pcb-viewer/pull/1154) | 🐌 Tiny | Automated package update |
-| [#6261](https://github.com/tscircuit/tscircuit/pull/6261) | 🐌 Tiny | Automated package update |
+| [#6279](https://github.com/tscircuit/tscircuit/pull/6279) | 🐌 Tiny | Automated package update |
+| [#6278](https://github.com/tscircuit/tscircuit/pull/6278) | 🐌 Tiny | Automated package update |
+| [#6277](https://github.com/tscircuit/tscircuit/pull/6277) | 🐌 Tiny | Automated package update |
+| [#6276](https://github.com/tscircuit/tscircuit/pull/6276) | 🐌 Tiny | Automated package update |
+| [#6275](https://github.com/tscircuit/tscircuit/pull/6275) | 🐌 Tiny | Automated package update |
+| [#6272](https://github.com/tscircuit/tscircuit/pull/6272) | 🐌 Tiny | Automated package update |
+| [#6271](https://github.com/tscircuit/tscircuit/pull/6271) | 🐌 Tiny | Automated package update |
+| [#6270](https://github.com/tscircuit/tscircuit/pull/6270) | 🐌 Tiny | Automated package update |
+| [#6268](https://github.com/tscircuit/tscircuit/pull/6268) | 🐌 Tiny | Automated package update |
+| [#6269](https://github.com/tscircuit/tscircuit/pull/6269) | 🐌 Tiny | Automated package update |
+| [#6267](https://github.com/tscircuit/tscircuit/pull/6267) | 🐌 Tiny | Automated package update |
+| [#6263](https://github.com/tscircuit/tscircuit/pull/6263) | 🐌 Tiny | Updates the package version from 0.0.3121 to 0.0.3122 in package.json |
+| [#6262](https://github.com/tscircuit/tscircuit/pull/6262) | 🐌 Tiny | Automated package update |
 | [#6260](https://github.com/tscircuit/tscircuit/pull/6260) | 🐌 Tiny | Automated package update |
+| [#6257](https://github.com/tscircuit/tscircuit/pull/6257) | 🐌 Tiny | Automated package update |
+| [#6254](https://github.com/tscircuit/tscircuit/pull/6254) | 🐌 Tiny | Automated package update |
+| [#6249](https://github.com/tscircuit/tscircuit/pull/6249) | 🐌 Tiny | Automated package update |
 | [#6259](https://github.com/tscircuit/tscircuit/pull/6259) | 🐌 Tiny | Automated package update |
 | [#6258](https://github.com/tscircuit/tscircuit/pull/6258) | 🐌 Tiny | Automated package update |
-| [#6257](https://github.com/tscircuit/tscircuit/pull/6257) | 🐌 Tiny | Automated package update |
-| [#6256](https://github.com/tscircuit/tscircuit/pull/6256) | 🐌 Tiny | Automated package update |
-| [#6255](https://github.com/tscircuit/tscircuit/pull/6255) | 🐌 Tiny | Automated package update |
-| [#6254](https://github.com/tscircuit/tscircuit/pull/6254) | 🐌 Tiny | Automated package update |
 | [#6253](https://github.com/tscircuit/tscircuit/pull/6253) | 🐌 Tiny | Automated package update |
 | [#6252](https://github.com/tscircuit/tscircuit/pull/6252) | 🐌 Tiny | Updates the tscircuitcli package to version 0.1.2445 in the package.json file. |
 | [#6250](https://github.com/tscircuit/tscircuit/pull/6250) | 🐌 Tiny | Automated package update |
-| [#6249](https://github.com/tscircuit/tscircuit/pull/6249) | 🐌 Tiny | Automated package update |
-| [#6248](https://github.com/tscircuit/tscircuit/pull/6248) | 🐌 Tiny | Automated package update |
 | [#6247](https://github.com/tscircuit/tscircuit/pull/6247) | 🐌 Tiny | Updates the version of tscircuitcore and other related packages in package.json |
+| [#6261](https://github.com/tscircuit/tscircuit/pull/6261) | 🐌 Tiny | Automated package update |
+| [#6255](https://github.com/tscircuit/tscircuit/pull/6255) | 🐌 Tiny | Automated package update |
+| [#6248](https://github.com/tscircuit/tscircuit/pull/6248) | 🐌 Tiny | Automated package update |
+| [#6256](https://github.com/tscircuit/tscircuit/pull/6256) | 🐌 Tiny | Automated package update |
 | [#6241](https://github.com/tscircuit/tscircuit/pull/6241) | 🐌 Tiny | Automated package update |
 | [#6246](https://github.com/tscircuit/tscircuit/pull/6246) | 🐌 Tiny | Automated package update |
 | [#6245](https://github.com/tscircuit/tscircuit/pull/6245) | 🐌 Tiny | Automated package update |
@@ -1781,13 +1988,33 @@ pie
 | [#960](https://github.com/tscircuit/circuit-json/pull/960) | 🐌 Tiny | Automated package update |
 | [#5276](https://github.com/tscircuit/core/pull/5276) | 🐌 Tiny | Updates the version of the tscircuitchecks package from 0.0.269 to 0.0.270 in package.json |
 | [#5275](https://github.com/tscircuit/core/pull/5275) | 🐌 Tiny | Updates the version of the tscircuitchecks package from 0.0.268 to 0.0.269 in package.json |
+| [#5775](https://github.com/tscircuit/tscircuit.com/pull/5775) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3181 to 0.0.3182 |
+| [#5774](https://github.com/tscircuit/tscircuit.com/pull/5774) | 🐌 Tiny | Updates the tscircuiteval package version from 0.0.1719 to 0.0.1720 |
+| [#5773](https://github.com/tscircuit/tscircuit.com/pull/5773) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3180 to 0.0.3181 |
+| [#5772](https://github.com/tscircuit/tscircuit.com/pull/5772) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1718 to 0.0.1719 |
+| [#5771](https://github.com/tscircuit/tscircuit.com/pull/5771) | 🐌 Tiny | Updates the tscircuitrunframe package version from 0.0.3179 to 0.0.3180 in package.json |
+| [#5770](https://github.com/tscircuit/tscircuit.com/pull/5770) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1717 to 0.0.1718 |
+| [#5769](https://github.com/tscircuit/tscircuit.com/pull/5769) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3178 to 0.0.3179 |
+| [#5768](https://github.com/tscircuit/tscircuit.com/pull/5768) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1716 to 0.0.1717 |
+| [#5767](https://github.com/tscircuit/tscircuit.com/pull/5767) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3177 to 0.0.3178 |
+| [#5766](https://github.com/tscircuit/tscircuit.com/pull/5766) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1715 to 0.0.1716 |
+| [#5765](https://github.com/tscircuit/tscircuit.com/pull/5765) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3176 to 0.0.3177 |
+| [#5764](https://github.com/tscircuit/tscircuit.com/pull/5764) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1714 to 0.0.1715 |
+| [#5763](https://github.com/tscircuit/tscircuit.com/pull/5763) | 🐌 Tiny | Automated package update |
+| [#5762](https://github.com/tscircuit/tscircuit.com/pull/5762) | 🐌 Tiny | Automated package update |
+| [#5761](https://github.com/tscircuit/tscircuit.com/pull/5761) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3173 to 0.0.3174 |
+| [#5760](https://github.com/tscircuit/tscircuit.com/pull/5760) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3172 to 0.0.3173 |
+| [#5759](https://github.com/tscircuit/tscircuit.com/pull/5759) | 🐌 Tiny | Updates the tscircuiteval package version from 0.0.1712 to 0.0.1714 in package.json |
+| [#5758](https://github.com/tscircuit/tscircuit.com/pull/5758) | 🐌 Tiny | Automated package update |
+| [#5757](https://github.com/tscircuit/tscircuit.com/pull/5757) | 🐌 Tiny | Automated package update |
+| [#5755](https://github.com/tscircuit/tscircuit.com/pull/5755) | 🐌 Tiny | Updates the version of the tscircuitrunframe package from 0.0.3169 to 0.0.3170 in package.json |
 | [#5754](https://github.com/tscircuit/tscircuit.com/pull/5754) | 🐌 Tiny | Updates the tscircuitrunframe package version from 0.0.3168 to 0.0.3169 in package.json |
 | [#5749](https://github.com/tscircuit/tscircuit.com/pull/5749) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3167 to 0.0.3168 |
 | [#5748](https://github.com/tscircuit/tscircuit.com/pull/5748) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1711 to 0.0.1712 |
-| [#5747](https://github.com/tscircuit/tscircuit.com/pull/5747) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3166 to 0.0.3167 |
 | [#5746](https://github.com/tscircuit/tscircuit.com/pull/5746) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1710 to 0.0.1711 |
 | [#5745](https://github.com/tscircuit/tscircuit.com/pull/5745) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3165 to 0.0.3166 |
 | [#5744](https://github.com/tscircuit/tscircuit.com/pull/5744) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1709 to 0.0.1710 |
+| [#5747](https://github.com/tscircuit/tscircuit.com/pull/5747) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3166 to 0.0.3167 |
 | [#5742](https://github.com/tscircuit/tscircuit.com/pull/5742) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1703 to 0.0.1709 in the package.json file. |
 | [#5741](https://github.com/tscircuit/tscircuit.com/pull/5741) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3163 to 0.0.3164 |
 | [#5739](https://github.com/tscircuit/tscircuit.com/pull/5739) | 🐌 Tiny | Fixes unresolved drawing-viewer import, missing systemBlockComponentProps, and missing resolvePassiveFootprintDefinition build errors by updating runframe and its dependencies. |
@@ -1810,14 +2037,27 @@ pie
 | [#5693](https://github.com/tscircuit/tscircuit.com/pull/5693) | 🐌 Tiny | Automated package update |
 | [#5688](https://github.com/tscircuit/tscircuit.com/pull/5688) | 🐌 Tiny | Automated package update |
 | [#5704](https://github.com/tscircuit/tscircuit.com/pull/5704) | 🐌 Tiny | Updates the tscircuitrunframe package version from 0.0.3139 to 0.0.3142 in package.json |
+| [#5669](https://github.com/tscircuit/eval/pull/5669) | 🐌 Tiny | Automated package update |
+| [#5668](https://github.com/tscircuit/eval/pull/5668) | 🐌 Tiny | Updates the version of tscircuitcapacity-autorouter from 0.0.1064 to 0.0.1065 and tscircuitcore from 0.0.2310 to 0.0.2311 in package.json |
+| [#5666](https://github.com/tscircuit/eval/pull/5666) | 🐌 Tiny | Automated package update |
+| [#5665](https://github.com/tscircuit/eval/pull/5665) | 🐌 Tiny | Automated package update |
+| [#5663](https://github.com/tscircuit/eval/pull/5663) | 🐌 Tiny | Automated package update |
+| [#5662](https://github.com/tscircuit/eval/pull/5662) | 🐌 Tiny | Automated package update |
+| [#5660](https://github.com/tscircuit/eval/pull/5660) | 🐌 Tiny | Automated package update |
+| [#5659](https://github.com/tscircuit/eval/pull/5659) | 🐌 Tiny | Automated package update |
+| [#5657](https://github.com/tscircuit/eval/pull/5657) | 🐌 Tiny | Automated package update |
+| [#5656](https://github.com/tscircuit/eval/pull/5656) | 🐌 Tiny | Updates the version of the tscircuitcore package from 0.0.2306 to 0.0.2307 in package.json |
+| [#5654](https://github.com/tscircuit/eval/pull/5654) | 🐌 Tiny | Automated package update |
+| [#5653](https://github.com/tscircuit/eval/pull/5653) | 🐌 Tiny | Updates the version of the tscircuitcore package from 0.0.2305 to 0.0.2306 in package.json |
+| [#5651](https://github.com/tscircuit/eval/pull/5651) | 🐌 Tiny | Automated package update |
 | [#5638](https://github.com/tscircuit/eval/pull/5638) | 🐌 Tiny | Automated package update |
 | [#5637](https://github.com/tscircuit/eval/pull/5637) | 🐌 Tiny | Automated package update |
 | [#5635](https://github.com/tscircuit/eval/pull/5635) | 🐌 Tiny | Automated package update |
 | [#5634](https://github.com/tscircuit/eval/pull/5634) | 🐌 Tiny | Updates package dependencies to their latest versions as part of routine maintenance. |
 | [#5632](https://github.com/tscircuit/eval/pull/5632) | 🐌 Tiny | Automated package update |
-| [#5631](https://github.com/tscircuit/eval/pull/5631) | 🐌 Tiny | Updates the version of tscircuitcore and tscircuitcore-ddr-benchmark in package.json |
 | [#5629](https://github.com/tscircuit/eval/pull/5629) | 🐌 Tiny | Automated package update |
 | [#5628](https://github.com/tscircuit/eval/pull/5628) | 🐌 Tiny | Automated package update |
+| [#5631](https://github.com/tscircuit/eval/pull/5631) | 🐌 Tiny | Updates the version of tscircuitcore and tscircuitcore-ddr-benchmark in package.json |
 | [#5626](https://github.com/tscircuit/eval/pull/5626) | 🐌 Tiny | Automated package update |
 | [#5625](https://github.com/tscircuit/eval/pull/5625) | 🐌 Tiny | Updates package dependencies to their latest versions as part of routine maintenance. |
 | [#5623](https://github.com/tscircuit/eval/pull/5623) | 🐌 Tiny | Automated package update |
@@ -1844,14 +2084,40 @@ pie
 | [#5548](https://github.com/tscircuit/eval/pull/5548) | 🐌 Tiny | Automated package update |
 | [#5547](https://github.com/tscircuit/eval/pull/5547) | 🐌 Tiny | Automated package update |
 | [#5546](https://github.com/tscircuit/eval/pull/5546) | 🐌 Tiny | Automated package update |
-| [#6156](https://github.com/tscircuit/runframe/pull/6156) | 🐌 Tiny | Automated package update |
+| [#6184](https://github.com/tscircuit/runframe/pull/6184) | 🐌 Tiny | Automated package update |
+| [#6183](https://github.com/tscircuit/runframe/pull/6183) | 🐌 Tiny | Automated package update |
+| [#6182](https://github.com/tscircuit/runframe/pull/6182) | 🐌 Tiny | Automated package update |
+| [#6181](https://github.com/tscircuit/runframe/pull/6181) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1718 to 0.0.1719 |
+| [#6180](https://github.com/tscircuit/runframe/pull/6180) | 🐌 Tiny | Automated package update |
+| [#6179](https://github.com/tscircuit/runframe/pull/6179) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1717 to 0.0.1718 |
+| [#6178](https://github.com/tscircuit/runframe/pull/6178) | 🐌 Tiny | Automated package update |
+| [#6177](https://github.com/tscircuit/runframe/pull/6177) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1716 to 0.0.1717 |
+| [#6176](https://github.com/tscircuit/runframe/pull/6176) | 🐌 Tiny | Automated package update |
+| [#6175](https://github.com/tscircuit/runframe/pull/6175) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1715 to 0.0.1716 |
+| [#6174](https://github.com/tscircuit/runframe/pull/6174) | 🐌 Tiny | Automated package update |
+| [#6173](https://github.com/tscircuit/runframe/pull/6173) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1714 to 0.0.1715 |
+| [#6172](https://github.com/tscircuit/runframe/pull/6172) | 🐌 Tiny | Automated package update |
+| [#6170](https://github.com/tscircuit/runframe/pull/6170) | 🐌 Tiny | Automated package update |
+| [#6169](https://github.com/tscircuit/runframe/pull/6169) | 🐌 Tiny | Updates the tscircuit3d-viewer package to version 0.0.649 |
+| [#6168](https://github.com/tscircuit/runframe/pull/6168) | 🐌 Tiny | Automated package update |
+| [#6167](https://github.com/tscircuit/runframe/pull/6167) | 🐌 Tiny | Updates the tscircuit3d-viewer package to version 0.0.648 in package.json |
+| [#6166](https://github.com/tscircuit/runframe/pull/6166) | 🐌 Tiny | Automated package update |
+| [#6165](https://github.com/tscircuit/runframe/pull/6165) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1712 to 0.0.1714 in the package.json file. |
+| [#6164](https://github.com/tscircuit/runframe/pull/6164) | 🐌 Tiny | Automated package update |
+| [#6163](https://github.com/tscircuit/runframe/pull/6163) | 🐌 Tiny | Automated package update |
+| [#6162](https://github.com/tscircuit/runframe/pull/6162) | 🐌 Tiny | Automated package update |
+| [#6161](https://github.com/tscircuit/runframe/pull/6161) | 🐌 Tiny | Updates the tscircuit3d-viewer package to version 0.0.646 |
+| [#6160](https://github.com/tscircuit/runframe/pull/6160) | 🐌 Tiny | Automated package update |
+| [#6159](https://github.com/tscircuit/runframe/pull/6159) | 🐌 Tiny | Automated package update |
 | [#6154](https://github.com/tscircuit/runframe/pull/6154) | 🐌 Tiny | Updates the tscircuit3d-viewer package to version 0.0.644 |
-| [#6151](https://github.com/tscircuit/runframe/pull/6151) | 🐌 Tiny | Automated package update |
 | [#6150](https://github.com/tscircuit/runframe/pull/6150) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1711 to 0.0.1712 |
-| [#6149](https://github.com/tscircuit/runframe/pull/6149) | 🐌 Tiny | Automated package update |
 | [#6148](https://github.com/tscircuit/runframe/pull/6148) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1710 to 0.0.1711 |
+| [#6156](https://github.com/tscircuit/runframe/pull/6156) | 🐌 Tiny | Automated package update |
+| [#6151](https://github.com/tscircuit/runframe/pull/6151) | 🐌 Tiny | Automated package update |
+| [#6149](https://github.com/tscircuit/runframe/pull/6149) | 🐌 Tiny | Automated package update |
 | [#6147](https://github.com/tscircuit/runframe/pull/6147) | 🐌 Tiny | Automated package update |
 | [#6146](https://github.com/tscircuit/runframe/pull/6146) | 🐌 Tiny | Automated package update |
+| [#6145](https://github.com/tscircuit/runframe/pull/6145) | 🐌 Tiny | Automated package update |
 | [#6144](https://github.com/tscircuit/runframe/pull/6144) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1708 to 0.0.1709 |
 | [#6142](https://github.com/tscircuit/runframe/pull/6142) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1707 to 0.0.1708 |
 | [#6140](https://github.com/tscircuit/runframe/pull/6140) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1706 to 0.0.1707 |
@@ -1861,7 +2127,6 @@ pie
 | [#6128](https://github.com/tscircuit/runframe/pull/6128) | 🐌 Tiny | Updates the tscircuitpcb-viewer package to version 1.11.450 |
 | [#6127](https://github.com/tscircuit/runframe/pull/6127) | 🐌 Tiny | Automated package update |
 | [#6126](https://github.com/tscircuit/runframe/pull/6126) | 🐌 Tiny | Updates the tscircuitschematic-viewer package from version 2.0.107 to 2.0.108 |
-| [#6145](https://github.com/tscircuit/runframe/pull/6145) | 🐌 Tiny | Automated package update |
 | [#6143](https://github.com/tscircuit/runframe/pull/6143) | 🐌 Tiny | Automated package update |
 | [#6141](https://github.com/tscircuit/runframe/pull/6141) | 🐌 Tiny | Automated package update |
 | [#6139](https://github.com/tscircuit/runframe/pull/6139) | 🐌 Tiny | Automated package update |
@@ -1924,13 +2189,19 @@ pie
 | [#5673](https://github.com/tscircuit/cli/pull/5673) | 🐌 Tiny | Automated package update |
 | [#5713](https://github.com/tscircuit/cli/pull/5713) | 🐌 Tiny | Updates the easyeda package version from 0.0.388 to 0.0.389 in package.json |
 | [#5678](https://github.com/tscircuit/cli/pull/5678) | 🐌 Tiny | Automated package update |
-| [#2854](https://github.com/tscircuit/svg.tscircuit.com/pull/2854) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3119 to 0.0.3120 in package.json |
-| [#2853](https://github.com/tscircuit/svg.tscircuit.com/pull/2853) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3118 to 0.0.3119 in package.json |
-| [#2852](https://github.com/tscircuit/svg.tscircuit.com/pull/2852) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3117 to 0.0.3118 in package.json |
-| [#2851](https://github.com/tscircuit/svg.tscircuit.com/pull/2851) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3116 to 0.0.3117 in package.json |
-| [#2850](https://github.com/tscircuit/svg.tscircuit.com/pull/2850) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3115 to 0.0.3116 in package.json |
+| [#2861](https://github.com/tscircuit/svg.tscircuit.com/pull/2861) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3126 to 0.0.3127 in package.json |
+| [#2860](https://github.com/tscircuit/svg.tscircuit.com/pull/2860) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3125 to 0.0.3126 in package.json |
+| [#2859](https://github.com/tscircuit/svg.tscircuit.com/pull/2859) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3124 to 0.0.3125 in package.json |
+| [#2858](https://github.com/tscircuit/svg.tscircuit.com/pull/2858) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3122 to 0.0.3124 in package.json |
+| [#2857](https://github.com/tscircuit/svg.tscircuit.com/pull/2857) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3121 to 0.0.3122 in package.json |
+| [#2855](https://github.com/tscircuit/svg.tscircuit.com/pull/2855) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3120 to 0.0.3121 in package.json |
 | [#2849](https://github.com/tscircuit/svg.tscircuit.com/pull/2849) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3114 to 0.0.3115 in package.json |
 | [#2848](https://github.com/tscircuit/svg.tscircuit.com/pull/2848) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3113 to 0.0.3114 in package.json |
+| [#2854](https://github.com/tscircuit/svg.tscircuit.com/pull/2854) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3119 to 0.0.3120 in package.json |
+| [#2853](https://github.com/tscircuit/svg.tscircuit.com/pull/2853) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3118 to 0.0.3119 in package.json |
+| [#2851](https://github.com/tscircuit/svg.tscircuit.com/pull/2851) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3116 to 0.0.3117 in package.json |
+| [#2850](https://github.com/tscircuit/svg.tscircuit.com/pull/2850) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3115 to 0.0.3116 in package.json |
+| [#2852](https://github.com/tscircuit/svg.tscircuit.com/pull/2852) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3117 to 0.0.3118 in package.json |
 | [#2847](https://github.com/tscircuit/svg.tscircuit.com/pull/2847) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3112 to 0.0.3113 in package.json |
 | [#2846](https://github.com/tscircuit/svg.tscircuit.com/pull/2846) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3111 to 0.0.3112 in package.json |
 | [#2844](https://github.com/tscircuit/svg.tscircuit.com/pull/2844) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3110 to 0.0.3111 in package.json |
@@ -1973,6 +2244,11 @@ pie
 | [#2810](https://github.com/tscircuit/svg.tscircuit.com/pull/2810) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3074 to 0.0.3076 in package.json |
 | [#2804](https://github.com/tscircuit/svg.tscircuit.com/pull/2804) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3067 to 0.0.3069 in package.json |
 | [#2799](https://github.com/tscircuit/svg.tscircuit.com/pull/2799) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3065 to 0.0.3066 in package.json |
+| [#3613](https://github.com/tscircuit/tscircuit-autorouter/pull/3613) | 🐌 Tiny | Automated package update |
+| [#3611](https://github.com/tscircuit/tscircuit-autorouter/pull/3611) | 🐌 Tiny | Automated package update |
+| [#3606](https://github.com/tscircuit/tscircuit-autorouter/pull/3606) | 🐌 Tiny | Automated package update |
+| [#3603](https://github.com/tscircuit/tscircuit-autorouter/pull/3603) | 🐌 Tiny | Automated package update |
+| [#3600](https://github.com/tscircuit/tscircuit-autorouter/pull/3600) | 🐌 Tiny | Automated package update |
 | [#3591](https://github.com/tscircuit/tscircuit-autorouter/pull/3591) | 🐌 Tiny | Automated package update |
 | [#3586](https://github.com/tscircuit/tscircuit-autorouter/pull/3586) | 🐌 Tiny | Automated package update |
 | [#3579](https://github.com/tscircuit/tscircuit-autorouter/pull/3579) | 🐌 Tiny | Automated package update |
@@ -2004,6 +2280,7 @@ pie
 | [#181](https://github.com/tscircuit/circuit-json-to-step/pull/181) | 🐌 Tiny | Automated package update |
 | [#1385](https://github.com/tscircuit/schematic-trace-solver/pull/1385) | 🐌 Tiny | Adds a snapshot-only regression test and debugger page for the attached JSON solver input. |
 | [#1404](https://github.com/tscircuit/schematic-trace-solver/pull/1404) | 🐌 Tiny | Bumps the version number in package.json from 0.0.240 to 0.0.243 to reflect the latest release published to GitHub Packages for jscdn. |
+| [#152](https://github.com/tscircuit/copper-pour-solver/pull/152) | 🐌 Tiny | Automated package update |
 | [#144](https://github.com/tscircuit/copper-pour-solver/pull/144) | 🐌 Tiny | Automated package update |
 | [#140](https://github.com/tscircuit/copper-pour-solver/pull/140) | 🐌 Tiny | Automated package update |
 | [#111](https://github.com/tscircuit/test-github-automerge/pull/111) | 🐌 Tiny | Updates the tscircuitcircuit-json-util package from version 0.0.129 to 0.0.130 in the project dependencies. |
@@ -2060,17 +2337,20 @@ pie
 | [#51](https://github.com/tscircuit/tscircuit-standalone/pull/51) | 🐳 Major | ⭐⭐⭐ | Enables users to select writable installation destinations without requiring administrator privileges, enhancing installation flexibility across Windows, macOS, and Linux. |
 | [#49](https://github.com/tscircuit/tscircuit-standalone/pull/49) | 🐳 Major | ⭐⭐⭐ | Run the published CLI from an archived, ordinary Bun installation. Remove source rewrites, module registrations, worker-path mappings, and native-to-WASM substitutions. Prepare the offline cache from the CLIs generated project and use the public importer catalog for browser modules. Browser WASMCDN adapters still need upstream fixes. Uses released CLI 0.1.2438 and the merged Altium fix. |
 | [#1153](https://github.com/tscircuit/pcb-viewer/pull/1153) | 🐙 Minor | ⭐⭐ | Fixes hover overlay overflow issue when zooming in on PCB pads, ensuring labels and outlines remain within the viewer bounds. |
+| [#6274](https://github.com/tscircuit/tscircuit/pull/6274) | 🐙 Minor | ⭐⭐ | Adds Node shebang to tsci and tscircuit executables, prefers Bun if available, and registers tsx loader for Node when Bun is absent. |
 | [#5723](https://github.com/tscircuit/cli/pull/5723) | 🐙 Minor | ⭐⭐ | Routes search calls for JLCPCB, TI, DigiKey, Mouser, and KiCad through the configured catalog proxy instead of using raw fetch calls, ensuring proper proxy usage for all search providers. |
 | [#5699](https://github.com/tscircuit/cli/pull/5699) | 🐙 Minor | ⭐⭐ | Changes the standalone dev and static-site builds to use the installed tscircuitbrowser export instead of the raw RunFrame bundle, ensuring proper worker integration and maintaining existing behaviors for project and UI overrides. |
 | [#145](https://github.com/tscircuit/copper-pour-solver/pull/145) | 🐙 Minor | ⭐⭐ | Reproduces copper pour spikes beside the NEMA23 eFuse by adjusting pin placements and ensuring proper clearance for copper pours. |
 
 <details>
-<summary>🐌 Tiny Contributions (14)</summary>
+<summary>🐌 Tiny Contributions (16)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#1181](https://github.com/tscircuit/pcb-viewer/pull/1181) | 🐌 Tiny | Fixes the height mismatch of the component search button in the pcb-viewer when embedded in runframe by setting the SVG display to inline-block to match the surrounding text controls height. |
+| [#6273](https://github.com/tscircuit/tscircuit/pull/6273) | 🐌 Tiny | Reproduces the failure of the tsci build when using Node without Bun, ensuring that the build process emits a PCB and is evaluated correctly by the runtime. |
 | [#5289](https://github.com/tscircuit/core/pull/5289) | 🐌 Tiny | Bumps the tscircuitcopper-pour-solver dependency to version 0.0.72 to fix copper spikes between rounded SMT pins and ensures proper rendering of multiple board pours by passing the owning PCB board ID to the solver. |
+| [#146](https://github.com/tscircuit/jscad-fiber/pull/146) | 🐌 Tiny | Constrain the react-reconciler peer dependency to 0.31.0 to resolve ERESOLVE errors during npm install with React 19.1.0. |
 | [#30](https://github.com/tscircuit/circuit-json-to-pnp-csv/pull/30) | 🐌 Tiny | Reproduces a bug where the supplier rotation for the DRV8452 component is incorrectly handled, leading to unverified placements being accepted instead of rejected. |
 | [#31](https://github.com/tscircuit/circuit-json-to-pnp-csv/pull/31) | 🐌 Tiny | Rejects missing or incompatible orientation metadata by default for supplier-specific conversions, ensuring correct PCB placement angles for components. |
 | [#5689](https://github.com/tscircuit/tscircuit.com/pull/5689) | 🐌 Tiny | Updates the PCB viewer dependency to version 1.11.444 to fix overflowing hover labels and outlines in the PCB page rendering. |
@@ -2132,17 +2412,23 @@ pie
 | [#958](https://github.com/tscircuit/circuit-json/pull/958) | 🐳 Major | ⭐⭐⭐ | Add cad_assembly_bom_item as a first-class Circuit JSON element for physical assembly bills of materials, allowing for quantities, purchasing information, and nesting of materials without PCB footprints or CAD geometry. |
 | [#959](https://github.com/tscircuit/circuit-json/pull/959) | 🐳 Major | ⭐⭐⭐ | Add resolved Circuit JSON representation for system block properties, enabling drawing of block bounds, routes, and labels without layout algorithms. |
 | [#973](https://github.com/tscircuit/props/pull/973) | 🐳 Major | ⭐⭐⭐ | Adds purchasing URLs and supplier part numbers to assembly elements, enabling metadata emission for materials in BOM records. |
+| [#1134](https://github.com/tscircuit/3d-viewer/pull/1134) | 🐳 Major | ⭐⭐⭐ | Adds an overhead Game Boy Advance dual RP2350 explosion example with a 180 front-cover flip and separate analog-stick, speaker, and button removal stages. The thirteen-stage sequence removes user accessories first, parks each assembly on the left, flips the cleared front assembly inside-up, then removes its internal modules. Reverse playback reassembles the modules and flips the cover closed. The viewer now accepts optional assemblyExplosionRotations cues: axis, signed angle, and a world-space pivot attached to an authored move. Absolute transforms support scrubbing, reverse playback, late-loaded models, and Reset without rebuilding geometry or accumulating orientation drift. Guide lines follow the rotation arc. The rotation API is documented; it is a viewer extension supplied alongside cores translation-only circuit JSON. The example is pinned to absegameboy-advance-dual-rp23500.3.0-review.8. It preserves the routed PCB and model transforms, includes native TSX, serialized rotation cues, reproducible exporters and clearance checks, and loads assets from the public registry. This PR does not republish the registry package. Remaining extraction limitations: the initial battery-doorrear-shell and front-shellpower-switch collisions remain. Continuous bounds checks clear all parking paths and the full cover flip. A rendered-mesh audit at 0.25 mm travel intervals found no additional collisions in the added motions. The speaker comes out before the Select button to clear its retainer; the volume wheel stays with the cover because its extraction catches on the cover. Existing model contacts and findings are recorded in the fixture; this is not a fully collision-free assembly procedure. Validation: 15 unit tests covering pivot rotation, subsequent world-space motion, geometry sharing, arc anchoring, late loads, reset, source regeneration, complete group motions, PCB invariance, and swept clearance; three Chromium tests covering existing playback, guidelines, reverse, the halffull cover flip, subsequent module removal, backward scrubbing, and reset; TypeScript and library build. |
+| [#1131](https://github.com/tscircuit/3d-viewer/pull/1131) | 🐳 Major | ⭐⭐⭐ | Adds a Play In Reverse button to the explosion menu and a Show guidelines checkbox to control the visibility of explosion lines during playback. |
 | [#1124](https://github.com/tscircuit/3d-viewer/pull/1124) | 🐳 Major | ⭐⭐⭐ | Explosion stages can now play continuously, defaulting to two seconds per stage. The explosion menu includes a seconds-per-stage setting, PlayPauseReplay, previousnext stage buttons, and Reset. Scrubbing or stepping pauses playback, and closing the menu cancels animation. Playback evaluates a lightweight copy of the movement program and component poses, sharing immutable model geometry rather than cloning it each frame. The viewer also memoizes its serialized model identity. A local FLEX17 CPU benchmark measured pose evaluation at about 4 ms instead of 325 ms, and removes approximately 78 ms of repeated serialization per update. These timings are not an end-to-end FPS measurement. Adds the FLEX17 adjustable spur assembly as a self-contained Storybook sample with its 18 authored stages, based on https:flex17-tsx-adjustable-spur.seveibar.chatgpt.site. Validation: package build, full TypeScript check, five unit tests (including equivalence with core at 90 FLEX17 poses and geometry-sharing checks), and all five Playwright explosion tests pass. Local browser verification uses system Chromium and circuit-to-svg 0.0.454 to avoid the latest transitive packages incompatibility with the repositorys circuit-json override. |
 | [#1091](https://github.com/tscircuit/3d-viewer/pull/1091) | 🐳 Major | ⭐⭐⭐ | Right-clicking an object now offers Isolate name, which hides every other object. Unhide All (renamed from Unhide All Components) restores everything. The PCB board can now be picked, so right-clicking it offers Hide Board  Isolate Board (Panel when a panel is rendered). Before this change the board had no id, so only CAD components could be hidden. Cables (cad_cable) can be picked, hidden and isolated the same way. |
 | [#1092](https://github.com/tscircuit/3d-viewer/pull/1092) | 🐳 Major | ⭐⭐⭐ | Right-clicking a model and choosing Download GLTF now downloads a GLTF of just that model, named after it (e.g. USBC.gltf). Right-clicking the board or empty space still downloads the whole scene as scene.gltf. |
+| [#5219](https://github.com/tscircuit/core/pull/5219) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where named differential sections were lost when combining shared nets, resulting in zero traces on boards; this fix preserves those sections and routes the intended connections. |
+| [#5281](https://github.com/tscircuit/core/pull/5281) | 🐳 Major | ⭐⭐⭐ | Adjusts the positioning of watchdog labels for system self-loops, moving them closer to their respective blocks to improve clarity and avoid overlap with neighboring elements. |
 | [#5247](https://github.com/tscircuit/core/pull/5247) | 🐳 Major | ⭐⭐⭐ | Dense system diagrams braid neighboring wires when block faces and connection landing order follow coarse group geometry. Lay out subsystem contents independently, route around blocks and labels, and optimize adjacent landing slotsincluding swaps around block cornersagainst the complete diagrams crossings, shared segments, spacing, bends, and length. Bound the search to 64 swaps and one final rerouting sweep. Keep clear straight arrows and same-face return loops simple by placing their labels beside the wire. Horizontal connections retain inline labels when text fits. Regression assertions cover straight arrows and compact semicircular loops in all four page directions. Round after optimization, letting curves use label padding while protecting the text. Preserve neighboring wire clearance without rejecting curves that move away from an already close wire. Check tangent continuity in the nested fixture, and use zero image-difference allowance for system snapshots so small routing changes cannot leave stale images. Emit optional connection colors and line styles. The RVBoy console and power fixtures check CPU landing order, wire intersections (including sampled cubic curves), and 3 mm separation between overlapping parallel runs. Dense graphs can still have crossings. Use the released companion packages: tscircuitprops0.0.721, circuit-json0.0.548, and circuit-to-svg0.0.457. Their PRs are merged: https:github.comtscircuitpropspull992, https:github.comtscircuitcircuit-jsonpull981, and https:github.comtscircuitcircuit-to-svgpull913. Remove the temporary Git dependency and build-script trust entry. The props update requires complete courtyard polygons. Join legacy KiCad imports that store separate two-point courtyard edges into closed polygons before constructing components, preserving componentlayer boundaries and leaving input records unchanged. Add a visual regression test for shuffled and reversed edges and reject disconnected chains. Validation: 30 targeted tests pass across 28 files, covering all prior CI failure cases, system-block features, and courtyard import regression. TypeScript checking, dependency checking, and the ESMdeclaration build pass locally. Browser checks find no overlaps among the 23 RVBoy connection labels, blocks, and headings. Existing schematic snapshots pass unchanged with the registry renderer and shared symbol definitions. |
 | [#5158](https://github.com/tscircuit/core/pull/5158) | 🐳 Major | ⭐⭐⭐ | Adds rounded connections for system-block TSX after Dagre layout, with tighter layout spacing and improved self-loop handling. |
 | [#5113](https://github.com/tscircuit/core/pull/5113) | 🐳 Major | ⭐⭐⭐ | Assembly TSX now emits cad_assembly_bom_item records for materials with or without CAD geometry, using released tscircuitprops0.0.718 from tscircuitprops973. |
 | [#5116](https://github.com/tscircuit/core/pull/5116) | 🐳 Major | ⭐⭐⭐ | Fixes the positioning of JST plug tips inside board and motor sockets to ensure proper electrical contact, addressing issues with misalignment and contact row offsets. |
 | [#5112](https://github.com/tscircuit/core/pull/5112) | 🐳 Major | ⭐⭐⭐ | Adds systemblock.page, .group, .component, and .connection to core. TSX now produces resolved system_block_ Circuit JSON: page dimensions, block bounds, nested group membership, connection routes, and label_anchor_center. The render phase also resolves optional PCB componentsubcircuit associations without creating electrical connectivity. Uses dagrejsdagre 2.x for synchronous compound graph layout: one dependency, approximately 44 KB for its minified ESM module, and no DOM requirement. Supports all four page directions, parallel connections, cycles, self-loops, disconnected blocks, and empty groupspages. The existing props APIs kind maps to Circuit JSONs is_signal  is_power booleans. Invalid names, hierarchy, endpoints, and PCB references produce errors using readable names. The TSX fixtures(https:github.comtscircuitcoretreefeatsystem-blockstestsfeaturessystem-blocks) include 12 system SVG snapshots plus a PCB snapshot, rendered with published circuit-to-svg 0.0.455. Examples cover a nested wireless sensor system, four flow directions, motor-control power and feedback, multiple pages, long text, PCB associations, and updates. Usage documentation(https:github.comtscircuitcoreblobfeatsystem-blocksdocssystem-blocks.md). |
 | [#5161](https://github.com/tscircuit/core/pull/5161) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where saved routing phases expose through vias as obstacles only on specific layers, ensuring proper handling of physical via spans during autorouting. |
+| [#925](https://github.com/tscircuit/circuit-to-svg/pull/925) | 🐳 Major | ⭐⭐⭐ | PCB support errors from tscircuitchecks are pcb_placement_error records. The PCB renderer previously skipped that type even when shouldDrawErrors was enabled, so the faulty regions were invisible. Render located placement errors above the PCB layers. Diagnostics with region widthheight receive a translucent red fill and dashed border; support errors show a short label and surviving-tab count. A native SVG title and accessible label retain the full diagnostic. Location-only errors receive a marker, and missingnonfinite locations are not drawn. Existing shouldDrawErrors visibility controls apply. The regression fixture contains the original basic-usbc-devices panel geometry and four actual support-check results. Visual snapshots cover highlighted regions, hidden errors, and location-onlymissing-location errors. The matching checks change adds region bounds: https:github.comtscircuitcheckspull539. Existing diagnostics with only a center still render without that update. Usage: ts const errors  checkPcbBoardSupport(circuitJson) const svg  convertCircuitJsonToPcbSvg(...circuitJson, ...errors,  shouldDrawErrors: true, )  Validation: 13 PCB error-rendering tests across nine files pass, including the three new visual snapshots. Snapshots were rendered and visually inspected, then tests rerun without updating. TypeScript and package build pass. The checks-side bounds change passes its 15 focused regressions. |
 | [#535](https://github.com/tscircuit/checks/pull/535) | 🐳 Major | ⭐⭐⭐ | Fixes false clearance errors on valid variable-width power traces by using the outgoing wires width during overlap checks. |
 | [#47](https://github.com/tscircuit/circuit-json-to-bom-csv/pull/47) | 🐳 Major | ⭐⭐⭐ | Adds convertCircuitJsonToAssemblyBom for explicit assembly materials and existing PCB parts using released circuit-json0.0.543, preserving purchase URLs, supplier part numbers, and parent-item nesting while ensuring validation and error reporting for BOM entries. |
+| [#5752](https://github.com/tscircuit/tscircuit.com/pull/5752) | 🐳 Major | ⭐⭐⭐ | Adds a compact, searchable file picker for packages with multiple Circuit JSON files, enhancing user navigation and selection before downloading. |
 | [#5708](https://github.com/tscircuit/tscircuit.com/pull/5708) | 🐳 Major | ⭐⭐⭐ | Upgrades the System viewer to support curved routes and enables navigation from components to their schematic representation, displaying associated reference designators and manufacturer part numbers. |
 | [#5699](https://github.com/tscircuit/tscircuit.com/pull/5699) | 🐳 Major | ⭐⭐⭐ | Adds a System view for packages with a system_block_page in Circuit JSON, and modifies the Download button to be more compact while preserving accessibility features. |
 | [#628](https://github.com/tscircuit/jlcsearch/pull/628) | 🐳 Major | ⭐⭐⭐ | Fixes missing manufacturer and category for RK3576 in the catalog, resolves search indexing issues, and ensures stock consistency for the component. |
@@ -2164,6 +2450,8 @@ pie
 | [#43](https://github.com/tscircuit/motorcontrol/pull/43) | 🐳 Major | ⭐⭐⭐ | Releasing a stepper jog currently drops coil current as soon as braking finishes. The gantry and single-motor pages now have a Hold position when idle checkbox. With it enabled, an axis retains its final coil phase after a jog or saved-position GOTO. Each gantry axis can hold independently. The native stepper firmware reports holding separately from movement and keeps the existing stop and protection paths active. The browser continues heartbeats while holding and releases on Stop, focus loss, or disabling the checkbox. The checkbox is off by default and requires compatible firmware. Validated with native host tests, browser controller tests, and Pico SDK builds for DRV8825, DRV8847, DRV8452, and A4988. Physical holding torque and temperature have not been measured. |
 | [#3](https://github.com/tscircuit/system-block-viewer/pull/3) | 🐳 Major | ⭐⭐⭐ | Click or tap a system block or group to inspect its associated components, showing refdes and MPN (or Not specified). Optional onComponentClick makes the rows actionable and supplies sourcePCB IDs, refdes, and MPN for host navigation. |
 | [#6143](https://github.com/tscircuit/tscircuit/pull/6143) | 🐙 Minor | ⭐⭐ | Adds support for system block diagrams and integrates the Dagre library as a runtime dependency, enabling enhanced layout capabilities for system blocks in the tscircuit package. |
+| [#1133](https://github.com/tscircuit/3d-viewer/pull/1133) | 🐙 Minor | ⭐⭐ | Load Manifold and circuit-generation code only when needed to optimize performance by importing geometry code on demand based on user input. |
+| [#1127](https://github.com/tscircuit/3d-viewer/pull/1127) | 🐙 Minor | ⭐⭐ | Fixes explosion guide lines detaching from components when geometry is offset from CAD origin by anchoring movement paths to rendered component bounds and updating guides accordingly. |
 | [#1093](https://github.com/tscircuit/3d-viewer/pull/1093) | 🐙 Minor | ⭐⭐ | Fixes the issue where boards in GLB mode could not be hidden or isolated due to missing identifiers, enabling proper visibility controls for board components. |
 | [#5162](https://github.com/tscircuit/core/pull/5162) | 🐙 Minor | ⭐⭐ | Fixes the issue where multi-port power paths incorrectly inherit a capacitors local decoupling limit, preventing autorouting on longer paths. |
 | [#900](https://github.com/tscircuit/circuit-to-svg/pull/900) | 🐙 Minor | ⭐⭐ | System block connections with cubic_bezier_control_points now render as SVG cubic paths, allowing smooth circular corners and rounded return routes. Mixed routes preserve straight segments; existing point-only routes retain their polyline output. Arrowheads follow the endpoint tangent, including coincident controls and closed loops, and tiny handles do not shrink arrows on long curves. |
@@ -2173,14 +2461,16 @@ pie
 | [#5725](https://github.com/tscircuit/cli/pull/5725) | 🐙 Minor | ⭐⭐ | Adds tsci export assembly.circuit.tsx --format explosion-mp4 -o assembly.mp4 (also accepts Circuit JSON). Playback uses the serialized explosion program through circuit-json-to-gltf and PoppyGL, including grouped stage targets, sequential movement and the exporters embedded guide lines. A fixed orthographic camera fits every move endpoint, including outward-and-return movements. Stage captions and configurable movementhold durations make each step readable. |
 | [#5698](https://github.com/tscircuit/cli/pull/5698) | 🐙 Minor | ⭐⭐ | Adds support for exporting system diagrams and generating assembly SVGs, including new command options for system and assembly SVG exports, and updates to dependencies for enhanced functionality. |
 | [#5671](https://github.com/tscircuit/cli/pull/5671) | 🐙 Minor | ⭐⭐ | Adds support for an explicit Bun-compatible executable selection in the CLI, allowing users to specify a runtime without altering the PATH or requiring an alias. |
+| [#1003](https://github.com/tscircuit/docs/pull/1003) | 🐙 Minor | ⭐⭐ | Embed a video demonstrating reverse explosion playback of a handheld console in the 3D viewer documentation. |
 | [#1002](https://github.com/tscircuit/docs/pull/1002) | 🐙 Minor | ⭐⭐ | Document tsci export --format explosion-mp4 in the CLI reference and assembly explosion guide, including the FFmpeglibx264 requirement, TSX and Circuit JSON inputs, timing and dimension options, and output paths. Embed the real RP2040NEMA17 video copied byte-for-byte from the CLIs committed test artifact. Also correct the stale collision-checking descriptions and identify the fixture as our RP2040 motor-controller design, removing the incorrect PD-StepperGPL attribution. |
 | [#981](https://github.com/tscircuit/docs/pull/981) | 🐙 Minor | ⭐⭐ | The motor and advanced assembly images show plugs perched on socket lips. Regenerate the three JST motorcontroller previews and their Circuit JSON with the paired cable-seating fix, and explain that PHSH plugs follow header rotation, PCB layer and motor orientation automatically. The examples keep their existing public props. All three images use the actual motor, header and cable models and were visually inspected; no GLB assets are added. Validation: all 26 docs tests, TypeScript, formatting and the production site build passed. All three preview pages and images return HTTP 200, and the deployed PNGs are byte-for-byte identical to the inspected local renders. Paired runtime fix: https:github.comtscircuitcorepull5116 Shared dimensions: https:github.comtscircuitmodelprinterpull125 Plugsocket models: https:github.comtscircuitjscad-electronicspull515 Modelprinter 0.0.37 is released. Draft pending the paired renderer and core releases.  Updated preview  Verified deployment page   ---  ---   Cable  Open page(https:docs-git-codex-cable-seating-previews-tscircuit.vercel.appelementsassembly-cable)   Motor  Open page(https:docs-git-codex-cable-seating-previews-tscircuit.vercel.appelementsassembly-motor)   Advanced Assembly  Open page(https:docs-git-codex-cable-seating-previews-tscircuit.vercel.appguidesadvanced-assembly) |
 | [#76](https://github.com/tscircuit/tscircuit.com-landing/pull/76) | 🐙 Minor | ⭐⭐ | Moves Datasheets into the Product dropdown and introduces a Solutions dropdown with links to Professional Support and Verified Chips Program. |
+| [#105](https://github.com/tscircuit/circuit-json-webgpu/pull/105) | 🐙 Minor | ⭐⭐ | Fixes fatal errors in PCB viewer caused by courtyard overlap annotations, allowing valid geometry to compile without interruption. |
 | [#59](https://github.com/tscircuit/trace-simplification-solver/pull/59) | 🐙 Minor | ⭐⭐ | Fixes the omission of entering-layer endpoints of through vias in RVboys path simplifier when blocked path sampling advances, ensuring all vias are retained across layer transitions. |
 | [#46](https://github.com/tscircuit/tscircuit-standalone/pull/46) | 🐙 Minor | ⭐⭐ | Standalone uses its embedded Bun 1.4.4 runtime and a prepared native package cache for offline tsci init and tsci install, ensuring no external connections are made during these operations. |
 
 <details>
-<summary>🐌 Tiny Contributions (28)</summary>
+<summary>🐌 Tiny Contributions (42)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -2189,6 +2479,7 @@ pie
 | [#992](https://github.com/tscircuit/props/pull/992) | 🐌 Tiny | Allows system diagram authors to distinguish related interfaces using optional connection-level color and lineStyle props. |
 | [#972](https://github.com/tscircuit/props/pull/972) | 🐌 Tiny | Add a props API for high-level system diagrams: named functional blocks with purpose descriptions, nested subsystem groups, and labeled powerdata relationships. |
 | [#1122](https://github.com/tscircuit/3d-viewer/pull/1122) | 🐌 Tiny | Removes incorrect PD-StepperGPL attribution and license from the RP2040 assembly fixture, ensuring proper identification of the board as the RP2040 motor-controller design. |
+| [#5221](https://github.com/tscircuit/core/pull/5221) | 🐌 Tiny | Reproduces lost differential pair sections on ESD nets by adding tests that capture failed renders and assert missing connections in the autorouting system. |
 | [#5279](https://github.com/tscircuit/core/pull/5279) | 🐌 Tiny | Removes incorrect PD-Stepper and GPL-3.0 license attribution from the RP2040 assembly fixture, ensuring accurate identification of the board as the RP2040 motor-controller design. |
 | [#5253](https://github.com/tscircuit/core/pull/5253) | 🐌 Tiny | Bump Cores tscircuitcapacity-autorouter development dependency from 0.0.1051 to 0.0.1054. |
 | [#515](https://github.com/tscircuit/jscad-electronics/pull/515) | 🐌 Tiny | Adjusts JST cable plug geometry to ensure proper fit and engagement with motor and PCB sockets, addressing dimensional discrepancies. |
@@ -2198,13 +2489,26 @@ pie
 | [#5701](https://github.com/tscircuit/tscircuit.com/pull/5701) | 🐌 Tiny | Changes the order of views on package pages to Files  System  3D  PCB  Schematic when a package contains a System diagram. |
 | [#5706](https://github.com/tscircuit/tscircuit.com/pull/5706) | 🐌 Tiny | Make two copy edits on the Verified Chips page: Replace Pin metadata for successful first revisions with Better Validation for AI-generated Circuit Boards. Replace help your semiconductor company decrease time to market with accelerate time to market. |
 | [#630](https://github.com/tscircuit/jlcsearch/pull/630) | 🐌 Tiny | Adds On-chip SRAM and In-package DRAM beside CPU specifications on linux_capable_processorslist, with nullable byte counts in the JSON API. Capacities display in readable units such as 128MB, 1.5GB, and 4GB. Verified external-DRAM designs display External; unverified capacities stay blank. |
+| [#6153](https://github.com/tscircuit/runframe/pull/6153) | 🐌 Tiny | The static build viewer placed its file selector and gallery button inside leftHeaderContent, leaving navigation beside FileView instead of centered. This is visible on Compact USB Homing Modules(https:usb-homing-modules-compact.seveibar.chatgpt.sitefileboards2Fpanel.circuit.json), which uses RunFrame 0.0.3169. Add an optional centerHeaderContent slot with three equal desktop columns so unequal side controls cannot shift navigation. On narrow screens navigation gets its own centered row. Apply the same layout to failed-file recovery and regenerate the bundled CSS. Existing previews without center content retain their flex layout. Validation: All 92 Bun tests pass; TypeScript check passes (8 GB Node heap). CSS and standalone production builds pass; changed TSX formatting and diff checks pass. Chromium checks against the sites HTMLdata with the locally built bundle: centered navigation and no horizontal overflow at 320, 390, 768, 1024, and 1440px; file switching and gallery navigation work. Long filenames, failed file loading, and single-file mode also checked. PCB rendering itself could not be verified because headless Chromium has no WebGPU adapter. The hosted site remains pinned to 0.0.3169 and will need its dependency updated after release. Preview: Open the static build viewer directly(https:runframe-git-fix-center-static-viewer-file-navigation-tscircuit.vercel.apprenderer.html?fixtureId7B22path223A22examples2Fexample31-static-build-viewer.fixture.tsx222C22name223A22LoadingWithoutCustomFetch227Dlockedtruefileindex.tsx). This fixture shows FileView, the centered file selector and gallery button, and the right-side viewer tabs. The branch includes main through e1c6f838. |
 | [#6094](https://github.com/tscircuit/runframe/pull/6094) | 🐌 Tiny | Upgrades the System viewer to the published jscdn 0.0.5 release and declares it as a runtime dependency, ensuring curved routes work in standalone previews. |
 | [#5701](https://github.com/tscircuit/cli/pull/5701) | 🐌 Tiny | Add SVG snapshots to ensure visual regressions in system diagrams, assembly SVGs, and assembly drawing pages fail the CLI tests. |
 | [#5696](https://github.com/tscircuit/cli/pull/5696) | 🐌 Tiny | Isolates the CLI compiler from project TypeScript 7 to prevent crashes during startup by bundling compatible TypeScript dependencies and adding CI checks for compatibility. |
+| [#1015](https://github.com/tscircuit/docs/pull/1015) | 🐌 Tiny | Removes the storage detail from the name property description in the documentation for simulation-pcbreturncurrentexcitation. |
+| [#1016](https://github.com/tscircuit/docs/pull/1016) | 🐌 Tiny | Describes the warning users receive regarding component availability and preserves the readable example and interpretation. |
+| [#1012](https://github.com/tscircuit/docs/pull/1012) | 🐌 Tiny | Move the measurement and packing-diagnostic implementation to Advanced. Keep the existing guide URL as a short entry point to TSX layout documentation and the advanced integration; no unsupported replacement API is introduced. |
+| [#1010](https://github.com/tscircuit/docs/pull/1010) | 🐌 Tiny | Clarifies the visual representation of debug overlays for package fanouts and board-level channels without exposing internal record types. |
+| [#1006](https://github.com/tscircuit/docs/pull/1006) | 🐌 Tiny | Removes internal cable-insertion field and test discussion from the connector documentation, which provided no authoring instructions. |
+| [#1007](https://github.com/tscircuit/docs/pull/1007) | 🐌 Tiny | Describes playback, movement guides, and clearance diagnostics without serialized record names or instructions to preserve individual records. |
+| [#1008](https://github.com/tscircuit/docs/pull/1008) | 🐌 Tiny | Describes previously built assemblies as supported inputs without requiring knowledge of their internal explosion records. |
+| [#1014](https://github.com/tscircuit/docs/pull/1014) | 🐌 Tiny | Removes the internal world-space serialization step from the explanation of local-frame and mounting behavior in assembly explosion documentation. |
+| [#1009](https://github.com/tscircuit/docs/pull/1009) | 🐌 Tiny | Clarifies the description of cable paths in user-facing terms by changing the wording from produces an independent cad_cable path in Circuit JSON to creates an independent cable path. |
+| [#1005](https://github.com/tscircuit/docs/pull/1005) | 🐌 Tiny | Replaces serialization details with automatic routing and label behavior for system block connections. |
+| [#1004](https://github.com/tscircuit/docs/pull/1004) | 🐌 Tiny | Removes Circuit JSON record lookup and storage-field explanations from the system block guide, simplifying the export process for users. |
 | [#996](https://github.com/tscircuit/docs/pull/996) | 🐌 Tiny | Add documentation pages for nine simulation elements and alphabetize the Built-in Elements sidebar. |
 | [#999](https://github.com/tscircuit/docs/pull/999) | 🐌 Tiny | Limits the height of System block diagrams to 800px in CircuitPreview, ensuring responsive design and proper scaling across various layouts. |
 | [#1000](https://github.com/tscircuit/docs/pull/1000) | 🐌 Tiny | Add brief purchaseUrls and supplierPartNumbers rows to the existing part, subassembly and device prop tables. Six added lines total. |
 | [#295](https://github.com/tscircuit/circuit-json-to-gltf/pull/295) | 🐌 Tiny | Declares footprinter as a peer dependency to ensure the exporter uses the consumers copy, resolving import issues with hoisted versions. |
+| [#77](https://github.com/tscircuit/tscircuit.com-landing/pull/77) | 🐌 Tiny | Changes the homepage button link to use a relative URL instead of an absolute URL. |
 | [#75](https://github.com/tscircuit/tscircuit.com-landing/pull/75) | 🐌 Tiny | Fixes the navigation bar jitter caused by the animated GitHub star count by using CSS to set a fixed width for the star count display. |
 | [#74](https://github.com/tscircuit/tscircuit.com-landing/pull/74) | 🐌 Tiny | Replaces the homepage heros Star on GitHub button with See example, linking to a specific example page and changing the icon to an arrow. |
 | [#125](https://github.com/tscircuit/modelprinter/pull/125) | 🐌 Tiny | Defines the seated insertion depth, narrow plug nose, and SH contact-row offset in the shared PHSH dimensional profile for better compatibility between core and jscad-electronics. |
@@ -2224,6 +2528,7 @@ pie
 | [#443](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/443) | 🐳 Major | ⭐⭐⭐ | Detects a scattered RCR junction where two resistor paths meet a grounded capacitor, ensuring they are grouped correctly for analysis. |
 | [#442](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/442) | 🐳 Major | ⭐⭐⭐ | Detects crossed component branches whose order is reversed relative to their connected host pins, ensuring correct routing and preserving electrical connections. |
 | [#406](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/406) | 🐳 Major | ⭐⭐⭐ | Adds ChipDiodeCapacitorNetworkNotGrouped with ChipDiodeCapacitorNetworkGroupingSolver to recognize and group diodes and capacitors sharing a junction with a chip, ensuring proper placement and visibility while preserving electrical connections. |
+| [#150](https://github.com/tscircuit/copper-pour-solver/pull/150) | 🐙 Minor | ⭐⭐ | Removes manual rounding in polygon normalization to preserve precision in copper pour clipping, ensuring compliance with a requested board-edge margin of 0.2 mm. |
 | [#397](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/397) | 🐙 Minor | ⭐⭐ | Adds ChipPinTestPointAlignmentSolver and ChipPinTestPointNotAligned for a private, local chip-to-test-point connection that takes a long detour instead of meeting the connected pin directly. |
 | [#413](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/413) | 🐙 Minor | ⭐⭐ | Extends ChipPinResistorPlacementSolver  ResistorSeparatedFromChipPin to private power and signal branches, allowing for improved resistor placement beside connected pins. |
 | [#411](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/411) | 🐙 Minor | ⭐⭐ | Adds ChipLedResistorGroupingSolver  LedResistorBranchSeparatedFromChipPin for a private wired chipLEDresistorrail branch stranded beyond the chips opposite edge, ensuring proper connectivity and layout for components. |
@@ -2232,7 +2537,7 @@ pie
 | [#398](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/398) | 🐙 Minor | ⭐⭐ | Adds CapacitorConnectorAlignmentSolver and CapacitorConnectorNotAligned for a signal capacitor whose entire body sits behind its connected connector pin, ensuring proper alignment and visibility of connections. |
 
 <details>
-<summary>🐌 Tiny Contributions (20)</summary>
+<summary>🐌 Tiny Contributions (21)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -2241,6 +2546,7 @@ pie
 | [#5558](https://github.com/tscircuit/eval/pull/5558) | 🐌 Tiny | Updates tscircuitparts-engine from 0.0.39 to 0.0.41, fixing the issue of duplicate board cutouts for component mounting holes. |
 | [#75](https://github.com/tscircuit/parts-engine/pull/75) | 🐌 Tiny | Updates easyeda from 0.0.350 to 0.0.389, bringing in the mounting-hole duplicate-cutout fix into the converter used by JlcPcbPartsEngine. |
 | [#1403](https://github.com/tscircuit/schematic-trace-solver/pull/1403) | 🐌 Tiny | Adds a snapshot reproduction of the complete SOC sheet from seveibarrvboy-advance, preserving the current routing behavior. |
+| [#149](https://github.com/tscircuit/copper-pour-solver/pull/149) | 🐌 Tiny | Reproduces a bug where a polygon board with a copper-pour edge margin produces copper slightly inside the clearance, verifying the clearance check error with a comprehensive test. |
 | [#832](https://github.com/tscircuit/circuit-json-to-kicad/pull/832) | 🐌 Tiny | Fixes the issue where panel exports only retain the first boards outline, ensuring that the complete panel geometry, including boundaries and routing slots, is preserved during export. |
 | [#837](https://github.com/tscircuit/circuit-json-to-kicad/pull/837) | 🐌 Tiny | Fixes repeated board-local net names by exporting them with the owning PCB board ID, ensuring KiCad keeps their electrical connections separate. |
 | [#836](https://github.com/tscircuit/circuit-json-to-kicad/pull/836) | 🐌 Tiny | Reproduces a bug where nine independently routed RC boards have the same electrical net name in KiCad, leading to incorrect connections between boards that should be independent. |
@@ -2288,29 +2594,35 @@ pie
 |------|--------|--------|-------------|
 | [#955](https://github.com/tscircuit/circuit-json/pull/955) | 🐳 Major | ⭐⭐⭐ | Allows panel-level fabrication paths and labels to carry pcb_panel_id without requiring an invented pcb_component_id, aligning with standalone silkscreen ownership conventions. |
 | [#954](https://github.com/tscircuit/circuit-json/pull/954) | 🐳 Major | ⭐⭐⭐ | Adds schema validation for panel-level fabrication annotations to ensure they do not require an invented component reference, aligning with existing ownership conventions. |
+| [#395](https://github.com/tscircuit/contribution-tracker/pull/395) | 🐳 Major | ⭐⭐⭐ | Expand the existing Open Collective Sponsorships report with a per-contributor table showing GitHub account, Open Collective profile, sponsorship amount, match result, payment evidence, and linked expense statuses. |
 | [#974](https://github.com/tscircuit/props/pull/974) | 🐙 Minor | ⭐⭐ | Rejects courtyard outlines with fewer than three points at props validation, ensuring a complete polygon is supplied instead of two-point segments. |
+| [#5277](https://github.com/tscircuit/core/pull/5277) | 🐙 Minor | ⭐⭐ | Updates the copper-pour solver dependency to version 0.0.72 and integrates board selection for copper pours while retaining existing Circuit JSON structure. |
 | [#5076](https://github.com/tscircuit/core/pull/5076) | 🐙 Minor | ⭐⭐ | Fixes mouse-bite rows to fill the requested tab span and maintain appropriate material clearance between adjacent holes. |
 | [#5071](https://github.com/tscircuit/core/pull/5071) | 🐙 Minor | ⭐⭐ | Fixes routing of rounded panel corners to use continuous polygon slots instead of invalid rounded rectangles, ensuring valid geometry and improved routing for curved boards. |
 | [#5069](https://github.com/tscircuit/core/pull/5069) | 🐙 Minor | ⭐⭐ | Reproduces a bug where a 22 panel of 1418 mm boards with 2 mm rounded corners creates 1,024 invalid sliver rectangles, producing a comb of tiny routing slots. |
+| [#5650](https://github.com/tscircuit/eval/pull/5650) | 🐙 Minor | ⭐⭐ | Fixes the package update failure due to KiCads native rounded-pad radii preservation, ensuring accurate PCB-import snapshots and geometry validation. |
 | [#6134](https://github.com/tscircuit/runframe/pull/6134) | 🐙 Minor | ⭐⭐ | Updates the compatible dependency set for the 3D viewer to resolve issues with core and props exports, enabling successful viewer updates. |
 | [#5663](https://github.com/tscircuit/cli/pull/5663) | 🐙 Minor | ⭐⭐ | Fixes NaN direction issues for pill pads with round drills in STEP exports by updating the circuit-json-to-step converter to version 0.0.63 and preserving assembly ZIP export behavior. |
 | [#177](https://github.com/tscircuit/circuit-json-to-step/pull/177) | 🐙 Minor | ⭐⭐ | Fixes export of round pill drills from oval pads to ensure valid STEP directions, resolving NaN issues and enabling downstream CLI functionality. |
 | [#142](https://github.com/tscircuit/copper-pour-solver/pull/142) | 🐙 Minor | ⭐⭐ | Fixes a limitation in the Circuit JSON converter that caused explicit pours on secondary PCB boards to be clipped against their sibling boards, by allowing selection of the owning PCB board for each pour. |
 
 <details>
-<summary>🐌 Tiny Contributions (13)</summary>
+<summary>🐌 Tiny Contributions (16)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#33](https://github.com/tscircuit/kicad-mod-cache/pull/33) | 🐌 Tiny | Fixes deployment issues by updating Node.js version requirement to 26.x in package.json for Vercel compatibility |
 | [#31](https://github.com/tscircuit/kicad-mod-cache/pull/31) | 🐌 Tiny | Fixes courtyard contour generation in KiCad importer by updating dependencies to versions that resolve existing bugs. |
 | [#5278](https://github.com/tscircuit/core/pull/5278) | 🐌 Tiny | Updates dependencies for kicad-to-circuit-json and tscircuitprops, ensuring validation fixes and improved courtyard polygon handling. |
 | [#5188](https://github.com/tscircuit/core/pull/5188) | 🐌 Tiny | Add 12 missing converter packages to devDependencies in package.json for version tracking. |
 | [#5073](https://github.com/tscircuit/core/pull/5073) | 🐌 Tiny | Reproduces a bug where a requested 3 mm tab results in undersized mouse-bite holes, leading to insufficient web clearance. |
+| [#392](https://github.com/tscircuit/contribution-tracker/pull/392) | 🐌 Tiny | Add a workflow that matches sponsorship profiles to the September 2026 sponsorship CSV and produces a downloadable report, with validation and error handling for duplicate entries and malformed data. |
 | [#388](https://github.com/tscircuit/contribution-tracker/pull/388) | 🐌 Tiny | Adds sponsorship-profiles.json for contributors to fill in their Open Collective profile links, without changing existing identity handling or sponsorship workflows. |
 | [#386](https://github.com/tscircuit/contribution-tracker/pull/386) | 🐌 Tiny | Adds a manually triggered Test Open Collective API action using the OPENCOLLECTIVE_TOKEN Actions secret to verify API authentication without creating expenses or payments. |
 | [#13](https://github.com/tscircuit/handbook/pull/13) | 🐌 Tiny | Adds a concise contributor guide for moving from GitHub Sponsors to Open Collective, detailing the steps for setting up a personal profile, bank payout method, and submitting expenses. |
 | [#5716](https://github.com/tscircuit/tscircuit.com/pull/5716) | 🐌 Tiny | Updates the PCB viewer dependency from version 1.11.447 to 1.11.449 and removes a CSS override for the search button as per user request. |
 | [#5729](https://github.com/tscircuit/cli/pull/5729) | 🐌 Tiny | Updates the CLI dependency for circuit-json-to-gerber from version 0.0.120 to 0.0.122 to include a tenting fix that resolves failures in board mask cases during package audits. |
+| [#3599](https://github.com/tscircuit/tscircuit-autorouter/pull/3599) | 🐌 Tiny | Adds explicit preview deployment requests now that automatic previews are managed in the Vercel dashboard, allowing authorized users to request previews for open PRs without modifying existing Vercel configurations. |
 | [#179](https://github.com/tscircuit/circuit-json-to-step/pull/179) | 🐌 Tiny | Reproduces the failure of round pill drills during STEP export, providing a test case and validation for the issue. |
 | [#141](https://github.com/tscircuit/copper-pour-solver/pull/141) | 🐌 Tiny | Waits one minute after publishing before checking npm for the release, then checks every 30 seconds, with a total timeout of ten minutes for verification. |
 | [#139](https://github.com/tscircuit/copper-pour-solver/pull/139) | 🐌 Tiny | Changes the release verification process to retry checking npm for a published version up to 12 times with delays, ensuring the package is available before proceeding. |
@@ -2367,8 +2679,18 @@ pie
 |------|--------|--------|-------------|
 | [#5223](https://github.com/tscircuit/core/pull/5223) | 🐳 Major | ⭐⭐⭐ | Fixes autorouting failure when adding an inner-layer ground pour that prevents BGA dogbone fanout from functioning correctly. |
 | [#5186](https://github.com/tscircuit/core/pull/5186) | 🐳 Major | ⭐⭐⭐ | Fixes autorouting failure when adding a ground pour that prevents BGA dogbone fanout from routing correctly. |
+| [#5291](https://github.com/tscircuit/core/pull/5291) | 🐙 Minor | ⭐⭐ | Fixes issue where text-only groups inside schFlex cause neighboring components to have invalid positions, resulting in their disappearance from the schematic. |
 | [#5287](https://github.com/tscircuit/core/pull/5287) | 🐙 Minor | ⭐⭐ | Fixes invalid schematic positions caused by adding a child group containing only a schematic note inside schFlex, preventing surrounding components positions from becoming NaN. |
 | [#5137](https://github.com/tscircuit/core/pull/5137) | 🐙 Minor | ⭐⭐ | Reproduces false connectivity errors when split via-to-via traces are imported, demonstrating the loss of connection identity in the autorouting process. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#394](https://github.com/tscircuit/contribution-tracker/pull/394) | 🐌 Tiny | Adds my public Open Collective profile to sponsorship-profiles.json so the tscircuit team can match my GitHub contributions to the intended sponsorship recipient. |
+
+</details>
 
 ### [danielshawellis](https://github.com/danielshawellis)
 
@@ -2379,6 +2701,18 @@ pie
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#5104](https://github.com/tscircuit/core/pull/5104) | 🐌 Tiny | Fixes the issue where a redundant ground trace is drawn between pads A and B, which are already connected by a copper pour, while only the connection from the pour to pad C should be routed. |
+
+</details>
+
+### [trixie010](https://github.com/trixie010)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#393](https://github.com/tscircuit/contribution-tracker/pull/393) | 🐌 Tiny | Registers trixie010s public Open Collective profile as https:opencollective.comtrixie in sponsorship-profiles.json. |
 
 </details>
 

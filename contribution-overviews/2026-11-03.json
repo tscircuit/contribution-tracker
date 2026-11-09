@@ -2,13 +2,20 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 6,
+    "reviewsReceived": 11,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 4,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
+      {
+        "number": 28,
+        "url": "https://github.com/tscircuit/rfc/pull/28",
+        "title": "RFC: <signalintegrity> and <signal> for signal integrity",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 5109,
         "url": "https://github.com/tscircuit/core/pull/5109",
@@ -24,15 +31,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 11,
+    "approvalsGiven": 13,
     "rejectionsGiven": 0,
-    "prsOpened": 50,
+    "prsOpened": 52,
     "prsMerged": 27,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 3,
-    "distinctPrsReviewedAsCodeOwner": 8,
+    "distinctPrsReviewedAsCodeOwner": 10,
     "score": 56,
     "major": 7,
     "minor": 9,
@@ -51,7 +58,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 34,
+    "prsOpened": 41,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -62,9 +69,9 @@
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 11,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 11,
+    "approvalsReceived": 12,
     "staffReviewedPrs": 8,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 8,
@@ -126,15 +133,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 10,
+    "approvalsGiven": 13,
     "rejectionsGiven": 0,
-    "prsOpened": 55,
-    "prsMerged": 23,
+    "prsOpened": 60,
+    "prsMerged": 29,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
-    "distinctPrsReviewedAsCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 10,
+    "distinctPrsReviewedAsCodeOwner": 3,
     "reposOwned": [
       {
         "repo": "tscircuit/pcb-viewer",
@@ -149,11 +156,11 @@
         ]
       }
     ],
-    "score": 46,
-    "major": 2,
-    "minor": 8,
-    "tiny": 13,
-    "stars": "⭐⭐"
+    "score": 57,
+    "major": 3,
+    "minor": 10,
+    "tiny": 16,
+    "stars": "⭐⭐⭐"
   },
   "Albertito-AI": {
     "githubId": 222739729,
@@ -209,7 +216,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 16,
+    "prsOpened": 20,
     "prsMerged": 10,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -234,7 +241,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 5,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -345,13 +352,20 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 8,
+    "reviewsReceived": 11,
     "rejectionsReceived": 3,
-    "approvalsReceived": 5,
-    "staffReviewedPrs": 5,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 6,
     "staffRejectionsReceived": 2,
-    "staffApprovalsReceived": 4,
+    "staffApprovalsReceived": 5,
     "staffReviewedPrLinks": [
+      {
+        "number": 5291,
+        "url": "https://github.com/tscircuit/core/pull/5291",
+        "title": "Fix missing components when schFlex contains text-only groups",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 5287,
         "url": "https://github.com/tscircuit/core/pull/5287",
@@ -390,17 +404,17 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 4,
+    "prsOpened": 9,
+    "prsMerged": 6,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 12,
+    "score": 15,
     "major": 2,
-    "minor": 2,
-    "tiny": 0,
+    "minor": 3,
+    "tiny": 1,
     "stars": "⭐⭐"
   },
   "HarsH-1877": {
@@ -460,7 +474,27 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
+    "prsOpened": 10,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "Mekdou23": {
+    "githubId": 146580059,
+    "githubLogin": "Mekdou23",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -471,26 +505,26 @@
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 7,
+    "reviewsReceived": 8,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
+    "approvalsReceived": 5,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 41,
-    "prsMerged": 31,
+    "prsOpened": 44,
+    "prsMerged": 33,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 45,
+    "score": 47,
     "major": 5,
-    "minor": 6,
-    "tiny": 20,
+    "minor": 7,
+    "tiny": 21,
     "stars": "⭐⭐"
   },
   "Plugv3": {
@@ -516,12 +550,12 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 38,
+    "reviewsReceived": 43,
     "rejectionsReceived": 0,
-    "approvalsReceived": 38,
-    "staffReviewedPrs": 22,
+    "approvalsReceived": 43,
+    "staffReviewedPrs": 24,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 22,
+    "staffApprovalsReceived": 24,
     "staffReviewedPrLinks": [
       {
         "number": 308,
@@ -541,6 +575,20 @@
         "number": 1095,
         "url": "https://github.com/tscircuit/3d-viewer/pull/1095",
         "title": "Release the 3D canvas WebGL context on teardown",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5293,
+        "url": "https://github.com/tscircuit/core/pull/5293",
+        "title": "Preserve completed routing phases when a later phase fails",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3594,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3594",
+        "title": "fix: keep fine repair grids after region reordering",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -678,14 +726,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 6,
+    "approvalsGiven": 7,
     "rejectionsGiven": 0,
-    "prsOpened": 115,
-    "prsMerged": 94,
+    "prsOpened": 138,
+    "prsMerged": 114,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 5,
     "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
@@ -707,10 +755,10 @@
         ]
       }
     ],
-    "score": 218,
-    "major": 46,
-    "minor": 8,
-    "tiny": 40,
+    "score": 267,
+    "major": 57,
+    "minor": 10,
+    "tiny": 47,
     "stars": "👑👑👑"
   },
   "Shokun123": {
@@ -786,6 +834,26 @@
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
   },
+  "bacourosp": {
+    "githubId": 5471629,
+    "githubLogin": "bacourosp",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "balckwell": {
     "githubId": 120542819,
     "githubLogin": "balckwell",
@@ -838,7 +906,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 323,
+    "prsOpened": 328,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -858,7 +926,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 13,
+    "prsOpened": 15,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -950,14 +1018,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 8,
-    "rejectionsGiven": 1,
-    "prsOpened": 36,
-    "prsMerged": 27,
+    "approvalsGiven": 9,
+    "rejectionsGiven": 2,
+    "prsOpened": 39,
+    "prsMerged": 30,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 6,
+    "distinctPrsReviewedNonCodeOwner": 7,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
@@ -967,10 +1035,10 @@
         ]
       }
     ],
-    "score": 53,
+    "score": 55,
     "major": 8,
-    "minor": 4,
-    "tiny": 14,
+    "minor": 5,
+    "tiny": 16,
     "stars": "⭐⭐⭐"
   },
   "jeffrey-graham": {
@@ -985,7 +1053,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 55,
+    "prsOpened": 69,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -1163,11 +1231,11 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 25,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 27,
+    "rejectionsReceived": 1,
     "approvalsReceived": 12,
-    "staffReviewedPrs": 2,
-    "staffRejectionsReceived": 1,
+    "staffReviewedPrs": 3,
+    "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
       {
@@ -1175,6 +1243,13 @@
         "url": "https://github.com/tscircuit/circuit-json-util/pull/283",
         "title": "fix: support position tolerance when matching route vias",
         "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 3596,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3596",
+        "title": "feat: enforce per-connection minimum widths in Pipeline9",
+        "staffApprovals": 0,
         "staffRejections": 1
       },
       {
@@ -1187,7 +1262,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 21,
+    "prsOpened": 37,
     "prsMerged": 12,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -1203,22 +1278,22 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 34,
+    "reviewsReceived": 36,
     "rejectionsReceived": 0,
     "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 65,
-    "rejectionsGiven": 2,
-    "prsOpened": 116,
-    "prsMerged": 78,
+    "approvalsGiven": 70,
+    "rejectionsGiven": 3,
+    "prsOpened": 146,
+    "prsMerged": 102,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 48,
-    "distinctPrsReviewedAsCodeOwner": 16,
+    "distinctPrsReviewedNonCodeOwner": 50,
+    "distinctPrsReviewedAsCodeOwner": 18,
     "reposOwned": [
       {
         "repo": "tscircuit/jscad-electronics",
@@ -1237,12 +1312,24 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/copper-pour-solver",
+        "paths": [
+          "*"
+        ]
+      },
+      {
+        "repo": "tscircuit/common",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 183,
-    "major": 35,
-    "minor": 15,
-    "tiny": 28,
+    "score": 215,
+    "major": 41,
+    "minor": 19,
+    "tiny": 42,
     "stars": "👑👑👑"
   },
   "siddikmallik1999-design": {
@@ -1326,6 +1413,31 @@
     "tiny": 6,
     "stars": "⭐⭐"
   },
+  "trixie010": {
+    "githubId": 203519918,
+    "githubLogin": "trixie010",
+    "reviewsReceived": 2,
+    "rejectionsReceived": 1,
+    "approvalsReceived": 1,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 1,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 1,
+    "major": 0,
+    "minor": 0,
+    "tiny": 1,
+    "stars": ""
+  },
   "tscircuitbot": {
     "githubId": 174540199,
     "githubLogin": "tscircuitbot",
@@ -1338,8 +1450,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 495,
-    "prsMerged": 360,
+    "prsOpened": 587,
+    "prsMerged": 443,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -1348,7 +1460,7 @@
     "score": 12,
     "major": 0,
     "minor": 0,
-    "tiny": 360,
+    "tiny": 443,
     "stars": "⭐⭐"
   },
   "voropaevv": {
@@ -1363,7 +1475,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 2,
+    "prsOpened": 5,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
