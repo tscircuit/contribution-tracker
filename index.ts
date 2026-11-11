@@ -226,16 +226,22 @@ export async function generateOverview(
         if (!analysis) {
           return null
         }
-        await postMergeComment(analysis)
         if (pr.hasMajorTag) {
           analysis.impact = "Major"
+          if ((analysis.starRating ?? 0) < 3) {
+            analysis.starRating = 3
+          }
         }
         if (analysis.isAlignedWithMilestone) {
           analysis.impact = "Major"
+          if ((analysis.starRating ?? 0) < 3) {
+            analysis.starRating = 3
+          }
           console.log(
             `PR #${pr.number} by ${pr.user.login} in ${repo} is aligned with milestone, setting impact to Major`,
           )
         }
+        await postMergeComment(analysis)
         return analysis
       }),
     )
