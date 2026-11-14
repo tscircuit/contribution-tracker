@@ -1,6 +1,11 @@
 import { octokit } from "lib/sdks"
-import { resolveContributorIdentity } from "../contributor-identity"
-import type { PullRequestWithReviews, ReviewerStats } from "../types"
+import { getReviewStats } from "../data-processing/get-review-stats"
+import type { PullRequestWithReviews } from "../types"
+import {
+  fetchDownvotedReviewIds,
+  REVIEW_DOWNVOTES_QUERY,
+  type ReviewDownvotesResponse,
+} from "./review-downvotes"
 import { batchProcess } from "../utils/batch-process"
 
 export async function getAllPRs(
@@ -65,113 +70,29 @@ export async function getAllPRs(
     filteredPRs,
     async (pr) => {
       const reviews = await fetchReviews(pr.number)
-      const isMerged = !!pr.merged_at
-
-      const allReviewsByUser = reviews.reduce<Record<string, ReviewerStats>>(
-        (acc, review) => {
-          if (!review.user) return acc
-          const reviewerIdentity = resolveContributorIdentity(review.user)
-          if (!acc[reviewerIdentity.contributorIdentityKey]) {
-            acc[reviewerIdentity.contributorIdentityKey] = {
-              githubId: reviewerIdentity.githubId,
-              githubLogin: reviewerIdentity.githubLogin,
-              approvalsGiven: 0,
-              rejectionsGiven: 0,
-              prNumbers: new Set<number>(),
-            }
-          }
-
-          if (review.state === "APPROVED") {
-            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
-            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
-              pr.number,
-            )
-          } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
-            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
-              pr.number,
-            )
-          }
-
-          return acc
-        },
-        {},
-      )
-
-      let processedReviews = reviews
-
-      // For merged PRs, get the latest review per user
-      if (isMerged) {
-        const latestReviewByContributorIdentity = new Map<string, any>()
-        // Process in reverse to get the latest review first
-        for (const review of [...reviews].reverse()) {
-          if (!review.user) continue
-          const reviewerIdentity = resolveContributorIdentity(review.user)
-          if (
-            !latestReviewByContributorIdentity.has(
-              reviewerIdentity.contributorIdentityKey,
-            )
-          ) {
-            latestReviewByContributorIdentity.set(
-              reviewerIdentity.contributorIdentityKey,
-              review,
-            )
-          }
-        }
-        processedReviews = Array.from(
-          latestReviewByContributorIdentity.values(),
-        )
-      }
-
-      const approvalsReceived = processedReviews.filter(
-        (review) => review.state === "APPROVED",
-      ).length
-      const rejectionsReceived = processedReviews.filter(
-        (review) => review.state === "CHANGES_REQUESTED",
-      ).length
-
-      const reviewsByUser = processedReviews.reduce<
-        Record<string, ReviewerStats>
-      >((acc, review) => {
-        if (!review.user) return acc
-        const reviewerIdentity = resolveContributorIdentity(review.user)
-        if (!acc[reviewerIdentity.contributorIdentityKey]) {
-          acc[reviewerIdentity.contributorIdentityKey] = {
-            githubId: reviewerIdentity.githubId,
-            githubLogin: reviewerIdentity.githubLogin,
-            approvalsGiven: 0,
-            rejectionsGiven: 0,
-            prNumbers: new Set<number>(),
-          }
-        }
-
-        if (isMerged) {
-          // For merged PRs, only add to prNumbers if approved
-          if (review.state === "APPROVED") {
-            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
-            acc[reviewerIdentity.contributorIdentityKey].prNumbers?.add(
-              pr.number,
-            )
-          } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
-          }
-        } else {
-          if (review.state === "APPROVED") {
-            acc[reviewerIdentity.contributorIdentityKey].approvalsGiven++
-          } else if (review.state === "CHANGES_REQUESTED") {
-            acc[reviewerIdentity.contributorIdentityKey].rejectionsGiven++
-          }
-        }
-        return acc
-      }, {})
+      const downvotedReviewIds = reviews.length
+        ? await fetchDownvotedReviewIds({
+            fetchPage: (cursor) =>
+              octokit.graphql<ReviewDownvotesResponse>(REVIEW_DOWNVOTES_QUERY, {
+                owner,
+                repo: repo_name,
+                pullNumber: pr.number,
+                cursor,
+              }),
+          })
+        : new Set<number>()
+      const reviewStats = getReviewStats({
+        reviews,
+        downvotedReviewIds,
+        prNumber: pr.number,
+        isMerged: !!pr.merged_at,
+        since: sinceDate,
+        currentTime,
+      })
 
       return {
         ...pr,
-        reviewsReceived: processedReviews.length,
-        approvalsReceived,
-        rejectionsReceived,
-        reviewsByUser,
-        allReviewsByUser,
+        ...reviewStats,
         isClosed: pr.state === "closed",
         state:
           pr.state === "closed" && !pr.merged_at
