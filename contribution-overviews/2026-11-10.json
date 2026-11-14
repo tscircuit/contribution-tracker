@@ -52,23 +52,16 @@
         "staffRejections": 0
       },
       {
-        "number": 3709,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3709",
-        "title": "fix: length-match ordered differential pair lanes",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 3708,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3708",
-        "title": "fix: route connection path points in order",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
         "number": 3710,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3710",
         "title": "fix: pass ordered differential lane hops to length matching",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3709,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3709",
+        "title": "fix: length-match ordered differential pair lanes",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -80,6 +73,13 @@
         "staffRejections": 0
       },
       {
+        "number": 3708,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3708",
+        "title": "fix: route connection path points in order",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
         "number": 315,
         "url": "https://github.com/tscircuit/tiny-hypergraph/pull/315",
         "title": "Report each connection's solo search iterations from DuplicateCongestedPortSolver",
@@ -87,15 +87,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 18,
+    "approvalsGiven": 23,
     "rejectionsGiven": 0,
-    "prsOpened": 55,
+    "prsOpened": 60,
     "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 7,
-    "distinctPrsReviewedAsCodeOwner": 11,
+    "distinctPrsReviewedNonCodeOwner": 9,
+    "distinctPrsReviewedAsCodeOwner": 14,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit-autorouter",
@@ -133,13 +133,48 @@
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 4,
+    "reviewsReceived": 10,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
-    "staffReviewedPrs": 3,
-    "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 3,
+    "approvalsReceived": 9,
+    "staffReviewedPrs": 9,
+    "staffRejectionsReceived": 2,
+    "staffApprovalsReceived": 9,
     "staffReviewedPrLinks": [
+      {
+        "number": 5214,
+        "url": "https://github.com/tscircuit/core/pull/5214",
+        "title": "feat: implement finished panel size limits (#5067)",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 5208,
+        "url": "https://github.com/tscircuit/core/pull/5208",
+        "title": "feat: implement panel tab child elements (#5067)",
+        "staffApprovals": 1,
+        "staffRejections": 1
+      },
+      {
+        "number": 5211,
+        "url": "https://github.com/tscircuit/core/pull/5211",
+        "title": "feat: implement tooling rail elements (#5067)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5217,
+        "url": "https://github.com/tscircuit/core/pull/5217",
+        "title": "feat: V-score panel tabs with vScore (#5067)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5205,
+        "url": "https://github.com/tscircuit/core/pull/5205",
+        "title": "feat: implement panel silkscreen (#5067)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 5202,
         "url": "https://github.com/tscircuit/core/pull/5202",
@@ -160,31 +195,38 @@
         "title": "Expose JLCPCB's Standard-only mark on verified parts",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 5771,
+        "url": "https://github.com/tscircuit/cli/pull/5771",
+        "title": "Implement tsci quote estimate with the JLCPCB quote estimator",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
     "approvalsGiven": 4,
     "rejectionsGiven": 0,
-    "prsOpened": 19,
-    "prsMerged": 13,
+    "prsOpened": 39,
+    "prsMerged": 27,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 34,
-    "major": 5,
-    "minor": 4,
-    "tiny": 4,
-    "stars": "⭐⭐"
+    "score": 63,
+    "major": 7,
+    "minor": 11,
+    "tiny": 9,
+    "stars": "⭐⭐⭐"
   },
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 4,
-    "rejectionsReceived": 0,
+    "reviewsReceived": 5,
+    "rejectionsReceived": 1,
     "approvalsReceived": 4,
-    "staffReviewedPrs": 1,
-    "staffRejectionsReceived": 0,
+    "staffReviewedPrs": 2,
+    "staffRejectionsReceived": 1,
     "staffApprovalsReceived": 1,
     "staffReviewedPrLinks": [
       {
@@ -193,11 +235,18 @@
         "title": "fix: recognize explicit pin role attributes as specified",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 5780,
+        "url": "https://github.com/tscircuit/cli/pull/5780",
+        "title": "fix: warn when imports omit an explicit 3D model",
+        "staffApprovals": 0,
+        "staffRejections": 1
       }
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 8,
+    "prsOpened": 11,
     "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -222,7 +271,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 8,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -293,26 +342,26 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 5,
+    "reviewsReceived": 6,
     "rejectionsReceived": 1,
-    "approvalsReceived": 3,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
-    "prsMerged": 3,
+    "prsOpened": 8,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 2.5,
+    "score": 3.5,
     "major": 0,
     "minor": 0,
-    "tiny": 3,
+    "tiny": 4,
     "stars": ""
   },
   "LBCron": {
@@ -327,7 +376,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
+    "prsOpened": 6,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -346,16 +395,16 @@
     "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
-        "number": 5438,
-        "url": "https://github.com/tscircuit/core/pull/5438",
-        "title": "fix: keep board plane reservations independent of child groups",
+        "number": 5426,
+        "url": "https://github.com/tscircuit/core/pull/5426",
+        "title": "fix: preserve copper-plane connectivity at breakout endpoints",
         "staffApprovals": 1,
         "staffRejections": 0
       },
       {
-        "number": 5426,
-        "url": "https://github.com/tscircuit/core/pull/5426",
-        "title": "fix: preserve copper-plane connectivity at breakout endpoints",
+        "number": 5438,
+        "url": "https://github.com/tscircuit/core/pull/5438",
+        "title": "fix: keep board plane reservations independent of child groups",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -367,14 +416,14 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 3,
+    "approvalsGiven": 4,
     "rejectionsGiven": 1,
     "prsOpened": 34,
     "prsMerged": 27,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 4,
     "distinctPrsReviewedAsCodeOwner": 0,
     "score": 45,
     "major": 5,
@@ -394,7 +443,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 5,
+    "prsOpened": 6,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -405,31 +454,45 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 25,
+    "reviewsReceived": 36,
     "rejectionsReceived": 0,
-    "approvalsReceived": 25,
-    "staffReviewedPrs": 8,
+    "approvalsReceived": 36,
+    "staffReviewedPrs": 12,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 8,
+    "staffApprovalsReceived": 12,
     "staffReviewedPrLinks": [
+      {
+        "number": 3783,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3783",
+        "title": "fix: pass the board via copper minimum to node repair",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3770,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3770",
+        "title": "fix: preserve preloaded vias at routing cell boundaries",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3765,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3765",
+        "title": "fix: honor explicit via clearance in regional repair guard",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3760,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3760",
+        "title": "fix: honor declared via clearance when validating projection",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 3733,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3733",
         "title": "fix: preserve validated gaps in stitch paths",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 3693,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3693",
-        "title": "repro: ButterStick bus wires ignore allowed layers",
-        "staffApprovals": 1,
-        "staffRejections": 0
-      },
-      {
-        "number": 3664,
-        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3664",
-        "title": "Restore physically clear BGA via columns at the gap threshold",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -444,6 +507,20 @@
         "number": 3667,
         "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3667",
         "title": "Use faster DDR length-matching obstacle checks",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3664,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3664",
+        "title": "Restore physically clear BGA via columns at the gap threshold",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 3693,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3693",
+        "title": "repro: ButterStick bus wires ignore allowed layers",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -471,8 +548,8 @@
     ],
     "approvalsGiven": 2,
     "rejectionsGiven": 0,
-    "prsOpened": 100,
-    "prsMerged": 61,
+    "prsOpened": 143,
+    "prsMerged": 91,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -486,10 +563,10 @@
         ]
       }
     ],
-    "score": 166,
-    "major": 35,
-    "minor": 6,
-    "tiny": 19,
+    "score": 250,
+    "major": 53,
+    "minor": 12,
+    "tiny": 25,
     "stars": "👑👑👑"
   },
   "Umutplvn": {
@@ -537,6 +614,26 @@
     "tiny": 1,
     "stars": ""
   },
+  "ameenalqershi": {
+    "githubId": 39249008,
+    "githubLogin": "ameenalqershi",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 4,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "aswadi": {
     "githubId": 12741066,
     "githubLogin": "aswadi",
@@ -569,7 +666,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 26,
+    "prsOpened": 27,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -653,16 +750,16 @@
     "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
-        "number": 638,
-        "url": "https://github.com/tscircuit/jlcsearch/pull/638",
-        "title": "Add a safe search-index-only rebuild action",
+        "number": 635,
+        "url": "https://github.com/tscircuit/jlcsearch/pull/635",
+        "title": "Fix JSON output after D1 stock-sync retries",
         "staffApprovals": 1,
         "staffRejections": 0
       },
       {
-        "number": 635,
-        "url": "https://github.com/tscircuit/jlcsearch/pull/635",
-        "title": "Fix JSON output after D1 stock-sync retries",
+        "number": 638,
+        "url": "https://github.com/tscircuit/jlcsearch/pull/638",
+        "title": "Add a safe search-index-only rebuild action",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -674,19 +771,19 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 8,
+    "approvalsGiven": 11,
     "rejectionsGiven": 3,
-    "prsOpened": 22,
-    "prsMerged": 10,
+    "prsOpened": 28,
+    "prsMerged": 16,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 8,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 20,
-    "major": 1,
-    "minor": 6,
-    "tiny": 3,
+    "distinctPrsReviewedNonCodeOwner": 10,
+    "distinctPrsReviewedAsCodeOwner": 1,
+    "score": 31,
+    "major": 2,
+    "minor": 9,
+    "tiny": 4,
     "stars": "⭐⭐"
   },
   "imyelo": {
@@ -769,6 +866,26 @@
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
   },
+  "rafagil11": {
+    "githubId": 259209186,
+    "githubLogin": "rafagil11",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
@@ -810,16 +927,16 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 30,
-    "prsMerged": 6,
+    "prsOpened": 34,
+    "prsMerged": 8,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 15,
+    "score": 17,
     "major": 2,
-    "minor": 3,
+    "minor": 4,
     "tiny": 1,
     "stars": "⭐⭐"
   },
@@ -866,22 +983,22 @@
   "seveibar": {
     "githubId": 1910070,
     "githubLogin": "seveibar",
-    "reviewsReceived": 10,
+    "reviewsReceived": 13,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
+    "approvalsReceived": 1,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 37,
-    "rejectionsGiven": 2,
-    "prsOpened": 44,
-    "prsMerged": 24,
+    "approvalsGiven": 47,
+    "rejectionsGiven": 3,
+    "prsOpened": 62,
+    "prsMerged": 40,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 24,
-    "distinctPrsReviewedAsCodeOwner": 10,
+    "distinctPrsReviewedNonCodeOwner": 31,
+    "distinctPrsReviewedAsCodeOwner": 14,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit.com",
@@ -896,11 +1013,31 @@
         ]
       }
     ],
-    "score": 74,
-    "major": 14,
-    "minor": 7,
-    "tiny": 3,
-    "stars": "⭐⭐⭐"
+    "score": 101,
+    "major": 17,
+    "minor": 10,
+    "tiny": 13,
+    "stars": "👑"
+  },
+  "singhaditya21": {
+    "githubId": 53948039,
+    "githubLogin": "singhaditya21",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 3,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "techmannih": {
     "githubId": 125847751,
@@ -956,6 +1093,46 @@
     "tiny": 3,
     "stars": "⭐⭐"
   },
+  "tirumallaharish0200": {
+    "githubId": 239103305,
+    "githubLogin": "tirumallaharish0200",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
+  "trixie010": {
+    "githubId": 203519918,
+    "githubLogin": "trixie010",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 2,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "tscircuitbot": {
     "githubId": 174540199,
     "githubLogin": "tscircuitbot",
@@ -968,17 +1145,17 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 321,
-    "prsMerged": 272,
+    "prsOpened": 446,
+    "prsMerged": 379,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 14.5,
+    "score": 15,
     "major": 0,
     "minor": 0,
-    "tiny": 272,
+    "tiny": 379,
     "stars": "⭐⭐"
   },
   "tungnguyen84": {
@@ -1053,7 +1230,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 6,
+    "prsOpened": 13,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
