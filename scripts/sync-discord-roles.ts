@@ -5,9 +5,9 @@ import { Client, Role, WebhookClient } from "discord.js"
 // ----- Role definitions ----- //
 
 // All-Time roles (by score)
-// These roles are cumulative: if a user qualifies for a higher tier, they should have
-// all lower-tier roles as well. However, WE DO NOT REMOVE ANY ALL-TIME ROLES ONCE ASSIGNED.
-const ALL_TIME_ROLE_NAMES = [
+// Only the single highest earned all-time role is kept on the user; lower-tier
+// all-time roles are removed when a higher all-time role is present or earned.
+export const ALL_TIME_ROLE_NAMES = [
   "New Contributor",
   "Contributor",
   "Try Hard",
@@ -15,23 +15,61 @@ const ALL_TIME_ROLE_NAMES = [
   "King",
   "Legend",
 ] as const
-type AllTimeRoleName = (typeof ALL_TIME_ROLE_NAMES)[number]
+export type AllTimeRoleName = (typeof ALL_TIME_ROLE_NAMES)[number]
 
 // Weekly roles (by stars)
-// These roles are fully synced each week: only the cumulative weekly roles based on the current
-// stars value should be present.
-const WEEKLY_ROLE_NAMES = ["⭐", "⭐⭐", "⭐⭐⭐", "👑", "👑👑"] as const
-type WeeklyRoleName = (typeof WEEKLY_ROLE_NAMES)[number]
+// These roles are fully synced each week: only the single weekly role matching
+// the current stars value should be present.
+export const WEEKLY_ROLE_NAMES = ["⭐", "⭐⭐", "⭐⭐⭐", "👑", "👑👑"] as const
+export type WeeklyRoleName = (typeof WEEKLY_ROLE_NAMES)[number]
 
-// ----- Helper function for All-Time roles ----- //
+// ----- Helper functions for role resolution ----- //
 
-function getAllTimeRoleName(score: number): AllTimeRoleName | null {
+export function getAllTimeRoleName(score: number): AllTimeRoleName | null {
   if (score >= 100) return "Legend"
   if (score >= 75) return "King"
   if (score >= 50) return "Hero"
   if (score >= 30) return "Try Hard"
   if (score >= 10) return "Contributor"
   if (score >= 3) return "New Contributor"
+  return null
+}
+
+export function getHighestAllTimeRoleName(
+  score: number | undefined,
+  existingRoleNames: Iterable<string> = [],
+): AllTimeRoleName | null {
+  let highestIndex = -1
+
+  if (typeof score === "number") {
+    const earnedFromScore = getAllTimeRoleName(score)
+    if (earnedFromScore) {
+      highestIndex = Math.max(
+        highestIndex,
+        ALL_TIME_ROLE_NAMES.indexOf(earnedFromScore),
+      )
+    }
+  }
+
+  for (const roleName of existingRoleNames) {
+    const existingIndex = ALL_TIME_ROLE_NAMES.indexOf(
+      roleName as AllTimeRoleName,
+    )
+    if (existingIndex > highestIndex) {
+      highestIndex = existingIndex
+    }
+  }
+
+  return highestIndex >= 0 ? ALL_TIME_ROLE_NAMES[highestIndex] : null
+}
+
+export function getWeeklyRoleName(stars: unknown): WeeklyRoleName | null {
+  if (
+    typeof stars === "string" &&
+    WEEKLY_ROLE_NAMES.includes(stars as WeeklyRoleName)
+  ) {
+    return stars as WeeklyRoleName
+  }
   return null
 }
 
@@ -94,7 +132,7 @@ function loadUserMappings(): Record<string, string> {
 
 // ----- Main sync function ----- //
 
-async function syncRoles(client: Client, guildId: string) {
+export async function syncRoles(client: Client, guildId: string) {
   const guild = await client.guilds.fetch(guildId)
   if (!guild) {
     console.error("Guild not found.")
@@ -139,39 +177,6 @@ async function syncRoles(client: Client, guildId: string) {
     // Use 'score' for all-time roles and 'stars' for weekly roles.
     const { score, stars } = contributorDetails
 
-    // Compute desired cumulative all-time roles (only add missing; do not remove any)
-    const desiredAllTimeRoles: Role[] = []
-    if (typeof score === "number") {
-      const targetAllTimeRoleName = getAllTimeRoleName(score)
-      if (targetAllTimeRoleName) {
-        const targetIndex = ALL_TIME_ROLE_NAMES.indexOf(targetAllTimeRoleName)
-        for (let i = 0; i <= targetIndex; i++) {
-          const roleName = ALL_TIME_ROLE_NAMES[i]
-          const role = allTimeRoles[roleName]
-          if (role) {
-            desiredAllTimeRoles.push(role)
-          }
-        }
-      }
-    }
-
-    // Compute desired cumulative weekly roles (fully synced)
-    const desiredWeeklyRoles: Role[] = []
-    if (
-      typeof stars === "string" &&
-      WEEKLY_ROLE_NAMES.includes(stars as WeeklyRoleName)
-    ) {
-      const targetWeeklyRoleName = stars as WeeklyRoleName
-      const targetIndex = WEEKLY_ROLE_NAMES.indexOf(targetWeeklyRoleName)
-      for (let i = 0; i <= targetIndex; i++) {
-        const roleName = WEEKLY_ROLE_NAMES[i]
-        const role = weeklyRoles[roleName]
-        if (role) {
-          desiredWeeklyRoles.push(role)
-        }
-      }
-    }
-
     // Find the Discord user by GitHub username using the userMappings
     const discordId = Object.keys(userMappings).find(
       (id) => userMappings[id].toLowerCase() === githubUsername.toLowerCase(),
@@ -187,11 +192,38 @@ async function syncRoles(client: Client, guildId: string) {
       continue
     }
 
-    // --- Sync All-Time Roles (Addition Only) ---
+    // --- Sync All-Time Roles (Keep only the single highest earned role) ---
     const currentAllTimeRoles = discordUser.roles.cache.filter((role) =>
       ALL_TIME_ROLE_NAMES.includes(role.name as AllTimeRoleName),
     )
     const currentAllTimeRoleIds = new Set(currentAllTimeRoles.map((r) => r.id))
+    const targetAllTimeRoleName = getHighestAllTimeRoleName(
+      score,
+      currentAllTimeRoles.map((r) => r.name),
+    )
+    const desiredAllTimeRoles: Role[] = []
+    if (targetAllTimeRoleName && allTimeRoles[targetAllTimeRoleName]) {
+      desiredAllTimeRoles.push(allTimeRoles[targetAllTimeRoleName])
+    }
+    const desiredAllTimeRoleIds = new Set(desiredAllTimeRoles.map((r) => r.id))
+
+    const allTimeRolesToRemove = currentAllTimeRoles.filter(
+      (role) => !desiredAllTimeRoleIds.has(role.id),
+    )
+    if (allTimeRolesToRemove.size > 0) {
+      await discordUser.roles.remove(allTimeRolesToRemove).catch((e) => {
+        console.warn(
+          `Error removing all-time roles from ${githubUsername} (${discordId}): ${e.message}`,
+        )
+      })
+      console.log(
+        `Removed all-time roles [${Array.from(allTimeRolesToRemove.values())
+          .map((r) => r.name)
+          .join(", ")}] from ${githubUsername} (${discordId}).`,
+      )
+      await Bun.sleep(1000)
+    }
+
     const allTimeRolesToAdd = desiredAllTimeRoles.filter(
       (role) => !currentAllTimeRoleIds.has(role.id),
     )
@@ -209,8 +241,13 @@ async function syncRoles(client: Client, guildId: string) {
       await Bun.sleep(1000)
     }
 
-    // --- Sync Weekly Roles (Remove & Add) ---
-    // Only weekly roles are removed if they are not part of the desired set.
+    // --- Sync Weekly Roles (Keep only the single weekly role matching stars) ---
+    const desiredWeeklyRoles: Role[] = []
+    const targetWeeklyRoleName = getWeeklyRoleName(stars)
+    if (targetWeeklyRoleName && weeklyRoles[targetWeeklyRoleName]) {
+      desiredWeeklyRoles.push(weeklyRoles[targetWeeklyRoleName])
+    }
+
     const currentWeeklyRoles = discordUser.roles.cache.filter((role) =>
       WEEKLY_ROLE_NAMES.includes(role.name as WeeklyRoleName),
     )
@@ -299,9 +336,11 @@ async function main() {
   client.login(discordToken)
 }
 
-main().catch((err) => {
-  console.error("An error occurred:", err)
-})
+if (import.meta.main) {
+  main().catch((err) => {
+    console.error("An error occurred:", err)
+  })
+}
 
 /**
 Weekly Role Thresholds:
