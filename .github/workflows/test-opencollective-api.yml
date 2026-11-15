@@ -1,13 +1,34 @@
-name: Test Open Collective API
+name: Open Collective expenses
 
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: Operation (draft creation suppresses invitations)
+        type: choice
+        options: [authenticate, preview, create-draft]
+        default: authenticate
+      month:
+        description: Sponsorship month (YYYY-MM)
+        type: string
+      contributor:
+        description: GitHub contributor login
+        type: string
+      payee:
+        description: Verified Open Collective account slug (may differ from GitHub)
+        type: string
 
 permissions:
   contents: read
 
+# Serialize all expense runs, including reruns on other branches.
+concurrency:
+  group: opencollective-tscircuit-contributors
+  cancel-in-progress: false
+
 jobs:
   authenticate:
+    if: inputs.mode == 'authenticate'
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
@@ -16,3 +37,29 @@ jobs:
         env:
           OPENCOLLECTIVE_TOKEN: ${{ secrets.OPENCOLLECTIVE_TOKEN }}
         run: python3 scripts/test-opencollective-api.py
+
+  expense:
+    if: inputs.mode != 'authenticate'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.1
+      - run: bun install --frozen-lockfile
+      - name: Prepare or create expense draft
+        env:
+          SPONSORSHIP_MONTH: ${{ inputs.month }}
+          CONTRIBUTOR: ${{ inputs.contributor }}
+          PAYEE_SLUG: ${{ inputs.payee }}
+          EXPENSE_MODE: ${{ inputs.mode }}
+          OPENCOLLECTIVE_TOKEN: ${{ inputs.mode == 'create-draft' && secrets.OPENCOLLECTIVE_TOKEN || '' }}
+        run: bun scripts/opencollective-expense.ts
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: opencollective-result-${{ github.run_id }}-${{ github.run_attempt }}
+          path: /tmp/opencollective-result/*.json
+          if-no-files-found: ignore
+          retention-days: 30
