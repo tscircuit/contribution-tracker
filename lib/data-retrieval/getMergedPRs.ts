@@ -9,6 +9,29 @@ type ClosedPullRequest = Awaited<
   ReturnType<typeof octokit.pulls.list>
 >["data"][number]
 
+export function extractLinkedIssueNumbers(
+  text: string | null | undefined,
+  repo?: string,
+): number[] {
+  if (!text) return []
+  const numbers = new Set<number>()
+  const escapedRepo = repo?.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const pattern = escapedRepo
+    ? new RegExp(
+        `\\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\\s+(?:${escapedRepo})?#(\\d+)\\b`,
+        "gi",
+      )
+    : /\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/gi
+
+  for (const match of text.matchAll(pattern)) {
+    const issueNumber = Number.parseInt(match[1], 10)
+    if (Number.isFinite(issueNumber) && issueNumber > 0) {
+      numbers.add(issueNumber)
+    }
+  }
+  return Array.from(numbers)
+}
+
 export async function getMergedPRs(
   repo: string,
   since: string,
@@ -89,7 +112,39 @@ export async function getMergedPRs(
       //     comment.body &&
       //     comment.body.includes("/major"),
       // )
-      const hasMajorTag = pr.labels.some((label) => label.name === "major")
+      let hasMajorTag = pr.labels.some(
+        (label) => label.name?.toLowerCase() === "major",
+      )
+      if (!hasMajorTag) {
+        const linkedIssueNumbers = Array.from(
+          new Set([
+            ...extractLinkedIssueNumbers(pr.title, repo),
+            ...extractLinkedIssueNumbers(pr.body, repo),
+          ]),
+        )
+        for (const issueNumber of linkedIssueNumbers) {
+          const linkedIssue = await octokit.issues
+            .get({
+              owner,
+              repo: repo_name,
+              issue_number: issueNumber,
+            })
+            .then((res) => res.data)
+            .catch(() => null)
+          if (
+            linkedIssue &&
+            !linkedIssue.pull_request &&
+            linkedIssue.labels.some(
+              (label) =>
+                typeof label === "object" &&
+                label?.name?.toLowerCase() === "major",
+            )
+          ) {
+            hasMajorTag = true
+            break
+          }
+        }
+      }
       const manualStarRating = pr.labels
         .map(
           (label) =>

@@ -68,13 +68,20 @@ export function getContributorScore({
         break
     }
 
-    if (pr.starRating !== undefined) {
-      result[`rating${pr.starRating}Count`]++
+    const effectiveStarRating =
+      pr.impact === "Major" &&
+      (pr.starRating === undefined || pr.starRating < 3)
+        ? 3
+        : pr.starRating
 
-      const isWithinTinyPrCap = pr.starRating !== 1 || result.rating1Count <= 12
+    if (effectiveStarRating !== undefined) {
+      result[`rating${effectiveStarRating}Count`]++
+
+      const isWithinTinyPrCap =
+        effectiveStarRating !== 1 || result.rating1Count <= 12
 
       if (isWithinTinyPrCap) {
-        result.score += 2 ** ((pr.starRating ?? 0) - 1)
+        result.score += 2 ** ((effectiveStarRating ?? 0) - 1)
       }
     }
 
