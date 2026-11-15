@@ -12,6 +12,20 @@ export interface ReviewerStats {
   prNumbers?: Set<number> // Set of PR numbers this reviewer has reviewed
 }
 
+export interface ReviewLatencyEntry {
+  repo: string
+  number: number
+  title: string
+  url: string
+  author: string
+  authorId?: number
+  createdAt: string
+  firstReviewAt: string
+  firstReviewer: string
+  firstReviewerId?: number
+  timeToFirstReviewMs: number
+}
+
 export interface ContributorStats {
   /** Durable GitHub account ID. Missing only from overview files generated before ID tracking. */
   githubId?: number
@@ -76,6 +90,10 @@ export interface PullRequestWithReviews extends PullRequest {
   rejectionsReceived: number
   approvalsReceived: number
   isClosed: boolean
+  firstReviewAt?: string
+  firstReviewer?: string
+  firstReviewerId?: number
+  timeToFirstReviewMs?: number
   reviewsByUser?: Record<string, ReviewerStats>
   allReviewsByUser?: Record<string, ReviewerStats>
 }

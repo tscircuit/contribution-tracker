@@ -6,6 +6,7 @@ import { generateMarkdown } from "lib/data-processing/generateMarkdown"
 import {
   getOrCreateContributorStats,
   getPrsWithCurrentContributorLogins,
+  getReviewLatencyEntriesWithCurrentLogins,
   mergeContributorStatsByGitHubId,
 } from "lib/contributor-identity"
 import {
@@ -20,7 +21,11 @@ import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
 import { getRepos } from "lib/data-retrieval/getRepos"
 import { postMergeComment } from "lib/notifications/notify-pr-change"
 import { SENIOR_STAFF_USERNAMES } from "lib/constants"
-import type { AnalyzedPR, ContributorStats } from "lib/types"
+import type {
+  AnalyzedPR,
+  ContributorStats,
+  ReviewLatencyEntry,
+} from "lib/types"
 import { fetchCodeownersFile } from "lib/utils/code-owner-utils"
 
 export interface GenerateOverviewOptions {
@@ -38,6 +43,7 @@ export async function generateOverview(
 
   const repos = await getRepos()
   const mergedPrsWithAnalysis: AnalyzedPR[] = []
+  const reviewLatencyEntries: ReviewLatencyEntry[] = []
   // Runtime aggregation is keyed by durable GitHub account ID, never login.
   const contributorStatsByIdentity: Record<string, ContributorStats> = {}
   const reviewedPrsByReviewerIdentity: Record<
@@ -95,6 +101,27 @@ export async function generateOverview(
       contributorStats.rejectionsReceived += pr.rejectionsReceived
       contributorStats.approvalsReceived += pr.approvalsReceived
       contributorStats.prsOpened += 1
+
+      if (
+        !pr.user.login.includes("[bot]") &&
+        pr.firstReviewAt &&
+        pr.firstReviewer &&
+        pr.timeToFirstReviewMs !== undefined
+      ) {
+        reviewLatencyEntries.push({
+          repo,
+          number: pr.number,
+          title: pr.title,
+          url: pr.html_url,
+          author: contributorLogin,
+          authorId: pr.user.id,
+          createdAt: pr.created_at,
+          firstReviewAt: pr.firstReviewAt,
+          firstReviewer: pr.firstReviewer,
+          firstReviewerId: pr.firstReviewerId,
+          timeToFirstReviewMs: pr.timeToFirstReviewMs,
+        })
+      }
 
       const seniorStaffReviewStats = Object.entries(
         pr.allReviewsByUser ?? {},
@@ -314,6 +341,11 @@ export async function generateOverview(
       mergedPrsWithAnalysis,
       contributorStatsByLogin,
     )
+  const reviewLatencyEntriesWithCurrentLogins =
+    getReviewLatencyEntriesWithCurrentLogins(
+      reviewLatencyEntries,
+      contributorStatsByLogin,
+    )
 
   // Data processing complete
   await generateAndWriteFiles({
@@ -321,6 +353,7 @@ export async function generateOverview(
     contributorStatsByLogin,
     startDateString,
     repoOwnersMap,
+    reviewLatencyEntries: reviewLatencyEntriesWithCurrentLogins,
     updateReadme: options.updateReadme ?? false,
   })
 }
@@ -330,12 +363,14 @@ async function generateAndWriteFiles({
   contributorStatsByLogin,
   startDateString,
   repoOwnersMap,
+  reviewLatencyEntries,
   updateReadme,
 }: {
   mergedPrsWithCurrentContributorLogins: AnalyzedPR[]
   contributorStatsByLogin: Record<string, ContributorStats>
   startDateString: string
   repoOwnersMap: Record<string, string[]>
+  reviewLatencyEntries: ReviewLatencyEntry[]
   updateReadme: boolean
 }) {
   console.log("Generating markdown")
@@ -366,6 +401,7 @@ async function generateAndWriteFiles({
     contributorStatsByLogin,
     startDateString,
     repoOwnersMap,
+    reviewLatencyEntries,
   )
   console.log("Generated markdown", markdown)
 

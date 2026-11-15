@@ -1,5 +1,5 @@
 import { scoreToStarString } from "./scoring/scoreToStars"
-import type { AnalyzedPR, ContributorStats } from "./types"
+import type { AnalyzedPR, ContributorStats, ReviewLatencyEntry } from "./types"
 
 export interface GitHubUserIdentity {
   id?: number
@@ -268,6 +268,51 @@ export function getPrsWithCurrentContributorLogins(
         id: contributorIdentity.githubId,
         login: currentContributorLogin,
       },
+    }
+  })
+}
+
+export function getReviewLatencyEntriesWithCurrentLogins(
+  entries: ReviewLatencyEntry[],
+  contributorStatsByLogin: Record<string, ContributorStats>,
+): ReviewLatencyEntry[] {
+  const currentLoginByGithubId = new Map(
+    Object.entries(contributorStatsByLogin).flatMap(
+      ([login, contributorStats]) =>
+        contributorStats.githubId === undefined
+          ? []
+          : [[contributorStats.githubId, login] as const],
+    ),
+  )
+
+  return entries.map((entry) => {
+    const authorIdentity = resolveContributorIdentity({
+      id: entry.authorId,
+      login: entry.author,
+    })
+    const reviewerIdentity = resolveContributorIdentity({
+      id: entry.firstReviewerId,
+      login: entry.firstReviewer,
+    })
+
+    const currentAuthor =
+      (authorIdentity.githubId === undefined
+        ? undefined
+        : currentLoginByGithubId.get(authorIdentity.githubId)) ??
+      authorIdentity.githubLogin
+
+    const currentReviewer =
+      (reviewerIdentity.githubId === undefined
+        ? undefined
+        : currentLoginByGithubId.get(reviewerIdentity.githubId)) ??
+      reviewerIdentity.githubLogin
+
+    return {
+      ...entry,
+      author: currentAuthor,
+      authorId: authorIdentity.githubId,
+      firstReviewer: currentReviewer,
+      firstReviewerId: reviewerIdentity.githubId,
     }
   })
 }

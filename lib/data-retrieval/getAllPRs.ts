@@ -3,6 +3,66 @@ import { resolveContributorIdentity } from "../contributor-identity"
 import type { PullRequestWithReviews, ReviewerStats } from "../types"
 import { batchProcess } from "../utils/batch-process"
 
+export function extractFirstReviewTiming(
+  pr: {
+    created_at: string
+    user?: { id?: number; login: string } | null
+  },
+  reviews: Array<{
+    submitted_at?: string | null
+    state?: string
+    user?: { id?: number; login: string } | null
+  }>,
+): {
+  firstReviewAt?: string
+  firstReviewer?: string
+  firstReviewerId?: number
+  timeToFirstReviewMs?: number
+} {
+  const authorLogin = pr.user?.login?.toLowerCase()
+  const authorId = pr.user?.id
+
+  const firstReview = reviews
+    .filter((review) => {
+      if (!review.submitted_at || !review.user?.login) return false
+      if (review.state === "PENDING") return false
+      if (review.user.login.includes("[bot]")) return false
+      if (
+        authorId !== undefined &&
+        review.user.id !== undefined &&
+        review.user.id === authorId
+      ) {
+        return false
+      }
+      if (authorLogin && review.user.login.toLowerCase() === authorLogin) {
+        return false
+      }
+      return !Number.isNaN(new Date(review.submitted_at).getTime())
+    })
+    .sort(
+      (a, b) =>
+        new Date(a.submitted_at!).getTime() -
+        new Date(b.submitted_at!).getTime(),
+    )[0]
+
+  if (!firstReview?.submitted_at || !firstReview.user) {
+    return {}
+  }
+
+  const reviewerIdentity = resolveContributorIdentity(firstReview.user)
+
+  return {
+    firstReviewAt: firstReview.submitted_at,
+    firstReviewer: reviewerIdentity.githubLogin,
+    firstReviewerId: reviewerIdentity.githubId,
+    timeToFirstReviewMs: Math.max(
+      0,
+      new Date(firstReview.submitted_at).getTime() -
+        new Date(pr.created_at).getTime(),
+    ),
+  }
+}
+
 export async function getAllPRs(
   repo: string,
   since: string,
@@ -129,6 +189,7 @@ export async function getAllPRs(
       const rejectionsReceived = processedReviews.filter(
         (review) => review.state === "CHANGES_REQUESTED",
       ).length
+      const firstReviewTiming = extractFirstReviewTiming(pr, reviews)
 
       const reviewsByUser = processedReviews.reduce<
         Record<string, ReviewerStats>
@@ -170,6 +231,7 @@ export async function getAllPRs(
         reviewsReceived: processedReviews.length,
         approvalsReceived,
         rejectionsReceived,
+        ...firstReviewTiming,
         reviewsByUser,
         allReviewsByUser,
         isClosed: pr.state === "closed",
