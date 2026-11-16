@@ -178,3 +178,96 @@ test("partial GraphQL errors fail lookup rather than returning partial payment e
     globalThis.fetch = originalFetch
   }
 })
+
+test("$10 paid expenses without a period cannot imply full September sponsorship payment", () => {
+  const contributors: ReportContributor[] = [
+    {
+      ...contributor,
+      username: "Devesh36",
+      amountCents: 4500,
+      openCollectiveId: "devesh",
+    },
+    {
+      ...contributor,
+      username: "mohan-bee",
+      amountCents: 90000,
+      openCollectiveId: "mohan",
+    },
+    contributor,
+  ]
+  const rows = contributors.map((recipient) => ({
+    ...recipient,
+    ...contributorExpenseStatus({
+      contributor: recipient,
+      expenses: [
+        expense({
+          reference: null,
+          payee: { id: recipient.openCollectiveId! },
+        }),
+      ],
+      month: "2026-09",
+      lookupAvailable: true,
+    }),
+  }))
+  const summary = renderSponsorshipSummary({
+    month: "2026-09",
+    rows,
+    lookupAvailable: true,
+  })
+  for (const row of rows) {
+    expect(row.paymentStatus).toBe("unknown-no-visible-period-expense")
+    expect(row.expenses).toHaveLength(0)
+    expect(row.unassignedExpenses[0].amountCents).toBe(1000)
+  }
+  expect(
+    summary.match(/PAID: USD 10\.00 \(contribution month unverified\)/g),
+  ).toHaveLength(3)
+  expect(summary).toContain("$45.00")
+  expect(summary).toContain("$900.00")
+  expect(summary).not.toContain("[PAID]")
+  expect(summary).toContain("do not confirm payment of the 2026-09 sponsorship")
+})
+
+test("a period-matched partial payment shows its actual amount and requires review", () => {
+  const recipient = { ...contributor, amountCents: 4500 }
+  const evidence = contributorExpenseStatus({
+    contributor: recipient,
+    expenses: [expense()],
+    month: "2026-09",
+    lookupAvailable: true,
+  })
+  const summary = renderSponsorshipSummary({
+    month: "2026-09",
+    rows: [{ ...recipient, ...evidence }],
+    lookupAvailable: true,
+  })
+  expect(evidence.paymentStatus).toBe("period-expense-amount-mismatch-review")
+  expect(summary).toContain("[PAID: USD 10.00]")
+  expect(summary).not.toContain("[PAID: USD 45.00]")
+  expect(summary).toContain("$45.00")
+})
+
+test("expense labels retain their currency and each individual amount", () => {
+  const evidence = report([
+    expense({
+      reference: null,
+      amountV2: { valueInCents: 1000, currency: "EUR" },
+    }),
+    expense({
+      id: "second",
+      legacyId: 101,
+      reference: null,
+      status: "PENDING",
+      amountV2: { valueInCents: 3550, currency: "USD" },
+    }),
+  ])
+  const summary = renderSponsorshipSummary({
+    month: "2026-09",
+    rows: [{ ...contributor, ...evidence }],
+    lookupAvailable: true,
+  })
+  expect(summary).toContain("[PAID: EUR 10.00 (contribution month unverified)]")
+  expect(summary).toContain(
+    "[PENDING: USD 35.50 (contribution month unverified)]",
+  )
+})
