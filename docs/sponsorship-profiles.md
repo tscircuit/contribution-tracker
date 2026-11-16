@@ -132,8 +132,8 @@ expenses, not permission to create a new one.
 
 Expenses with missing or unrecognized references are listed separately as
 needing contribution-period review. Their paid date, title, or amount is not used
-to assume that they pay September's sponsorship. Missing contributor profiles
-remain visible in the report with unknown payment status.
+to assume that they pay September's sponsorship. Contributors without profiles are excluded from the displayed rows and matched
+total; their count is retained in the report header.
 
 Public API access can hide drafts or invoice references. Accordingly, no matching
 visible expense is `unknown-no-visible-period-expense`, not proof that someone
@@ -149,3 +149,23 @@ expense** was paid, not that the contributor's entire sponsorship was paid.
 Expenses without a verified contribution period are not credited to September.
 For a period-matched expense, an amount differing from the sponsorship remains
 flagged for review; the report does not silently deduct partial or test payments.
+
+
+### Matched contributors and the current payment review total
+
+The summary and JSON list only contributors with a resolved Open Collective
+account and a profile URL. Missing profiles are counted but omitted from rows and
+from the matched sponsorship total. Adding a profile includes that contributor on
+the next manual run; their amount still comes from the existing sponsorship CSV.
+
+The headline **current payment review total** is the matched sponsorship total
+minus sponsorships confirmed fully paid for the contribution month. Confirmed
+paid contributors remain in the table for transparency. Pending expenses, partial
+payments, unassigned test payments, unknown payment status, and account ownership
+still require review before any sending. This subtotal is not a guaranteed
+outstanding balance or a list authorized for payment.
+
+In `matches.json`, `totalCents` now totals the displayed matched contributors;
+`sourceTotalCents` preserves the complete source CSV total for auditing.
+`confirmedPaidCents` and `paymentReviewTotalCents` explain the headline subtotal.
+`missingCount` counts omitted contributors. No payouts or expenses are created.
