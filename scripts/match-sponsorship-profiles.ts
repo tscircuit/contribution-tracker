@@ -81,14 +81,58 @@ export async function fetchVisibleExpenses(): Promise<VisibleExpense[]> {
   throw new Error("Expense pagination limit exceeded")
 }
 
-async function requestJson(url: string, options: RequestInit = {}) {
+export async function requestJson(url: string, options: RequestInit = {}) {
+  const endpoint = new URL(url)
+  const headers = new Headers(options.headers)
+  headers.set("User-Agent", "tscircuit-contribution-tracker")
   const response = await fetch(url, {
     ...options,
+    headers,
     redirect: "error",
     signal: AbortSignal.timeout(20000),
   })
-  if (!response.ok)
-    throw new Error(`Account lookup failed: HTTP ${response.status}`)
+  if (!response.ok) {
+    const rateLimited =
+      response.status === 429 ||
+      response.headers.get("x-ratelimit-remaining") === "0" ||
+      response.headers.has("retry-after")
+    let integrationDenied = false
+    if (
+      endpoint.hostname === "api.github.com" &&
+      response.status === 403 &&
+      !rateLimited
+    ) {
+      const failure = await response.json().catch(() => null)
+      integrationDenied =
+        failure?.message === "Resource not accessible by integration"
+    }
+    // This endpoint is public. Only this specific token-permission denial may
+    // fall back; rate limits and other 403s are never retried anonymously.
+    if (
+      integrationDenied &&
+      headers.has("Authorization") &&
+      /^\/users\/[a-z\d-]+$/i.test(endpoint.pathname) &&
+      (!options.method || options.method === "GET")
+    ) {
+      headers.delete("Authorization")
+      return requestJson(url, { ...options, headers })
+    }
+    const hints = [
+      rateLimited
+        ? "rate limited"
+        : integrationDenied
+          ? "integration permission denied"
+          : "request rejected",
+    ]
+    for (const name of ["retry-after", "x-ratelimit-reset"]) {
+      const seconds = response.headers.get(name)
+      if (seconds && /^\d+$/.test(seconds)) hints.push(`${name}=${seconds}`)
+    }
+    // Do not echo remote bodies, headers, query strings, or token values.
+    throw new Error(
+      `Account lookup failed: ${endpoint.hostname}${endpoint.pathname} HTTP ${response.status} (${hints.join("; ")})`,
+    )
+  }
   return response.json()
 }
 
