@@ -126,22 +126,51 @@ const expenseLinks = (expenses: ExpenseEvidence[]) =>
     )
     .join(", ") || "—"
 
+export type SponsorshipReportRow = ReportContributor &
+  ReturnType<typeof contributorExpenseStatus>
+
+export function summarizeMatchedSponsorships(rows: SponsorshipReportRow[]) {
+  const matchedRows = rows.filter(
+    (row) => row.openCollectiveId && row.profileUrl,
+  )
+  const totalCents = matchedRows.reduce((sum, row) => sum + row.amountCents, 0)
+  const confirmedPaidCents = matchedRows
+    .filter((row) => row.paymentStatus === "paid")
+    .reduce((sum, row) => sum + row.amountCents, 0)
+  const sourceTotalCents = rows.reduce((sum, row) => sum + row.amountCents, 0)
+  if (
+    ![totalCents, confirmedPaidCents, sourceTotalCents].every(
+      Number.isSafeInteger,
+    )
+  ) {
+    throw new Error("Unsafe sponsorship total")
+  }
+  return {
+    rows: matchedRows,
+    matchedCount: matchedRows.length,
+    missingCount: rows.length - matchedRows.length,
+    sourceTotalCents,
+    totalCents,
+    confirmedPaidCents,
+    paymentReviewTotalCents: totalCents - confirmedPaidCents,
+  }
+}
+
 export function renderSponsorshipSummary({
   month,
   rows,
   lookupAvailable,
 }: {
   month: string
-  rows: Array<ReportContributor & ReturnType<typeof contributorExpenseStatus>>
+  rows: SponsorshipReportRow[]
   lookupAvailable: boolean
 }) {
-  const matched = rows.filter((row) => row.openCollectiveId).length
-  const total = rows.reduce((sum, row) => sum + row.amountCents, 0)
-  const table = rows
+  const totals = summarizeMatchedSponsorships(rows)
+  const table = totals.rows
     .map(
       (row) =>
         `| [${row.username}](https://github.com/${row.username}) | ${row.profileUrl ? `[${row.profileUrl.split("/").at(-1)}](${row.profileUrl})` : "Missing"} | $${(row.amountCents / 100).toFixed(2)} | ${row.status} | ${row.paymentStatus} | ${expenseLinks(row.expenses)} | ${expenseLinks(row.unassignedExpenses)} |`,
     )
     .join("\n")
-  return `# Open Collective Sponsorships — ${month}\n\n${matched} matched; ${rows.length - matched} missing profiles. Total: $${(total / 100).toFixed(2)} USD.\n\n**Expense status applies only to the amount shown in its link. Expenses with an unverified contribution month do not confirm payment of the ${month} sponsorship.**\n\n| GitHub contributor | Open Collective | Sponsorship (USD) | Profile match | Payment evidence | ${month} expenses | Expenses with unverified contribution month |\n| --- | --- | --- | --- | --- | --- | --- |\n${table}\n\nExpense lookup: ${lookupAvailable ? "public visible expenses checked" : "unavailable; payment status is unknown"}. Public access can hide drafts and invoice references. No visible expense does **not** mean unpaid. Other expenses shown need contribution-month review; their statuses do not establish payment for ${month}. Profile ownership still needs maintainer review. This is a report, not a duplicate-payment guarantee. No expenses, invitations, or payments were created.\n`
+  return `# Open Collective Sponsorships — ${month}\n\n${totals.matchedCount} matched contributors shown; ${totals.missingCount} missing profiles excluded.\n\n**Current payment review total: $${(totals.paymentReviewTotalCents / 100).toFixed(2)} USD.**\n\nMatched sponsorship total: $${(totals.totalCents / 100).toFixed(2)} USD. Confirmed paid for ${month}: $${(totals.confirmedPaidCents / 100).toFixed(2)} USD.\n\nThe payment review total excludes missing profiles and confirmed fully paid sponsorships. Pending expenses, partial payments, unknown payment status, and ownership must still be reviewed before sending; this is not a confirmed outstanding balance.\n\n**Expense status applies only to the amount shown in its link. Expenses with an unverified contribution month do not confirm payment of the ${month} sponsorship.**\n\n| GitHub contributor | Open Collective | Sponsorship (USD) | Profile match | Payment evidence | ${month} expenses | Expenses with unverified contribution month |\n| --- | --- | --- | --- | --- | --- | --- |\n${table}\n\nExpense lookup: ${lookupAvailable ? "public visible expenses checked" : "unavailable; payment status is unknown"}. Public access can hide drafts and invoice references. No visible expense does **not** mean unpaid. Other expenses shown need contribution-month review; their statuses do not establish payment for ${month}. Profile ownership still needs maintainer review. This is a report, not a duplicate-payment guarantee. No expenses, invitations, or payments were created.\n`
 }

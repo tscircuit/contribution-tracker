@@ -2,6 +2,7 @@ import { expect, test } from "bun:test"
 import {
   contributorExpenseStatus,
   renderSponsorshipSummary,
+  summarizeMatchedSponsorships,
 } from "../lib/sponsorship-expense-report"
 import type {
   ReportContributor,
@@ -270,4 +271,74 @@ test("expense labels retain their currency and each individual amount", () => {
   expect(summary).toContain(
     "[PENDING: USD 35.50 (contribution month unverified)]",
   )
+})
+
+test("matched report excludes missing profiles and does not total their sponsorships", () => {
+  const matchedRow = { ...contributor, ...report([]) }
+  const missingContributor = {
+    ...contributor,
+    username: "missing-person",
+    profileUrl: null,
+    openCollectiveId: undefined,
+    amountCents: 200000,
+    status: "missing-profile",
+  }
+  const missingRow = {
+    ...missingContributor,
+    ...contributorExpenseStatus({
+      contributor: missingContributor,
+      expenses: [],
+      month: "2026-09",
+      lookupAvailable: true,
+    }),
+  }
+  const rows = [matchedRow, missingRow]
+  const totals = summarizeMatchedSponsorships(rows)
+  expect(totals.rows).toEqual([matchedRow])
+  expect(totals.totalCents).toBe(1000)
+  expect(totals.sourceTotalCents).toBe(201000)
+  expect(totals.paymentReviewTotalCents).toBe(1000)
+  expect(totals.missingCount).toBe(1)
+  const summary = renderSponsorshipSummary({
+    month: "2026-09",
+    rows,
+    lookupAvailable: true,
+  })
+  expect(summary).not.toContain("missing-person")
+  expect(summary).not.toContain("$2010.00")
+  expect(summary).toContain("Current payment review total: $10.00 USD")
+})
+
+test("confirmed fully paid contributors are excluded from payment review total", () => {
+  const paidRow = { ...contributor, ...report([expense()]) }
+  const pendingRow = {
+    ...contributor,
+    username: "pending-person",
+    ...report([expense({ status: "PENDING" })]),
+  }
+  const unknownRow = {
+    ...contributor,
+    username: "unknown-person",
+    ...report([expense({ reference: null })]),
+  }
+  const totals = summarizeMatchedSponsorships([paidRow, pendingRow, unknownRow])
+  expect(totals.totalCents).toBe(3000)
+  expect(totals.confirmedPaidCents).toBe(1000)
+  expect(totals.paymentReviewTotalCents).toBe(2000)
+  expect(totals.rows).toHaveLength(3)
+})
+
+test("all-missing report has no displayed payouts and a zero payment review total", () => {
+  const totals = summarizeMatchedSponsorships([
+    {
+      ...contributor,
+      profileUrl: null,
+      openCollectiveId: undefined,
+      ...report([]),
+    },
+  ])
+  expect(totals.rows).toHaveLength(0)
+  expect(totals.totalCents).toBe(0)
+  expect(totals.paymentReviewTotalCents).toBe(0)
+  expect(totals.missingCount).toBe(1)
 })

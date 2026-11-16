@@ -13,6 +13,7 @@ import {
   PAYER_SLUG,
   contributorExpenseStatus,
   renderSponsorshipSummary,
+  summarizeMatchedSponsorships,
 } from "../lib/sponsorship-expense-report"
 import type { VisibleExpense } from "../lib/sponsorship-expense-report"
 
@@ -200,13 +201,10 @@ async function main() {
     currency: "USD",
     sourceSha256: createHash("sha256").update(source).digest("hex"),
     profilesSha256: createHash("sha256").update(profileSource).digest("hex"),
-    totalCents: rows.reduce((sum, row) => sum + row.amountCents, 0),
-    matchedCount: recipients.size,
-    missingCount: rows.length - recipients.size,
+    ...summarizeMatchedSponsorships(reportRows),
     ownershipVerified: false,
     expenseLookupAvailable,
     expenseVisibility: "public-only-not-complete-payment-history",
-    rows: reportRows,
   }
   if (!Number.isSafeInteger(report.totalCents))
     throw new Error("Unsafe sponsorship total")
