@@ -1,0 +1,13 @@
+{
+  "username": "mohan-bee",
+  "month": "2026-09",
+  "excludedTestExpenses": [
+    {
+      "id": "ex_SfHLOhmlQEf01sziHs0r5",
+      "amountCents": 1000,
+      "currency": "USD",
+      "payeeId": "acc_9pYkhsxI17jMzmSlmeYTz",
+      "reason": "Confirmed by Abse2001 as a separate test payment, not part of September sponsorship."
+    }
+  ]
+}
