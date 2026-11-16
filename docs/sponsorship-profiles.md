@@ -169,3 +169,15 @@ In `matches.json`, `totalCents` now totals the displayed matched contributors;
 `sourceTotalCents` preserves the complete source CSV total for auditing.
 `confirmedPaidCents` and `paymentReviewTotalCents` explain the headline subtotal.
 `missingCount` counts omitted contributors. No payouts or expenses are created.
+
+### Account lookup errors
+
+API requests identify this application with an explicit User-Agent. HTTP failures
+report the service hostname, endpoint path, status, and numeric rate-limit hints
+when present. Tokens, query strings, and remote error bodies are not printed.
+
+If GitHub specifically returns `Resource not accessible by integration` for a
+public `/users/<username>` lookup with the workflow token, retry that lookup once
+without credentials. The numeric identity check still applies to the response.
+Rate limits and all other access failures stop the lookup; the Action does not
+retry those failures anonymously or grant itself more permissions.
