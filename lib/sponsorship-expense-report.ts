@@ -120,7 +120,10 @@ const escapeCell = (text: string) =>
     .replace(/[\r\n]/g, " ")
 const expenseLinks = (expenses: ExpenseEvidence[]) =>
   expenses
-    .map((expense) => `[${escapeCell(expense.status)}](${expense.url})`)
+    .map(
+      (expense) =>
+        `[${escapeCell(expense.status)}: ${escapeCell(expense.currency)} ${(expense.amountCents / 100).toFixed(2)}${expense.periodVerified ? "" : " (contribution month unverified)"}](${expense.url})`,
+    )
     .join(", ") || "—"
 
 export function renderSponsorshipSummary({
@@ -140,5 +143,5 @@ export function renderSponsorshipSummary({
         `| [${row.username}](https://github.com/${row.username}) | ${row.profileUrl ? `[${row.profileUrl.split("/").at(-1)}](${row.profileUrl})` : "Missing"} | $${(row.amountCents / 100).toFixed(2)} | ${row.status} | ${row.paymentStatus} | ${expenseLinks(row.expenses)} | ${expenseLinks(row.unassignedExpenses)} |`,
     )
     .join("\n")
-  return `# Open Collective Sponsorships — ${month}\n\n${matched} matched; ${rows.length - matched} missing profiles. Total: $${(total / 100).toFixed(2)} USD.\n\n| GitHub contributor | Open Collective | Sponsorship (USD) | Profile match | Payment evidence | ${month} expenses | Other expenses needing period review |\n| --- | --- | --- | --- | --- | --- | --- |\n${table}\n\nExpense lookup: ${lookupAvailable ? "public visible expenses checked" : "unavailable; payment status is unknown"}. Public access can hide drafts and invoice references. No visible expense does **not** mean unpaid. Other expenses shown need contribution-month review; their statuses do not establish payment for ${month}. Profile ownership still needs maintainer review. This is a report, not a duplicate-payment guarantee. No expenses, invitations, or payments were created.\n`
+  return `# Open Collective Sponsorships — ${month}\n\n${matched} matched; ${rows.length - matched} missing profiles. Total: $${(total / 100).toFixed(2)} USD.\n\n**Expense status applies only to the amount shown in its link. Expenses with an unverified contribution month do not confirm payment of the ${month} sponsorship.**\n\n| GitHub contributor | Open Collective | Sponsorship (USD) | Profile match | Payment evidence | ${month} expenses | Expenses with unverified contribution month |\n| --- | --- | --- | --- | --- | --- | --- |\n${table}\n\nExpense lookup: ${lookupAvailable ? "public visible expenses checked" : "unavailable; payment status is unknown"}. Public access can hide drafts and invoice references. No visible expense does **not** mean unpaid. Other expenses shown need contribution-month review; their statuses do not establish payment for ${month}. Profile ownership still needs maintainer review. This is a report, not a duplicate-payment guarantee. No expenses, invitations, or payments were created.\n`
 }

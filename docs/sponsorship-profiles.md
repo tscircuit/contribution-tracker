@@ -142,3 +142,10 @@ is inaccessible, the expense lookup is discarded and payment statuses become
 `unknown-lookup-unavailable`; the profile matching report is still produced. No
 private payout details, bank information, or API token are collected. Complete
 expense reconciliation will require authorized visibility before enabling sends.
+
+Each expense link shows its own status, currency, and amount, for example
+`PAID: USD 10.00 (contribution month unverified)`. This means that the **$10
+expense** was paid, not that the contributor's entire sponsorship was paid.
+Expenses without a verified contribution period are not credited to September.
+For a period-matched expense, an amount differing from the sponsorship remains
+flagged for review; the report does not silently deduct partial or test payments.
