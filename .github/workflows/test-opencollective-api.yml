@@ -1,18 +1,72 @@
-name: Test Open Collective API
+name: Open Collective Sponsorship Test
+run-name: Open Collective Sponsorship Test · ${{ inputs.operation }} · ${{ inputs.recipient || 'API only' }}
 
 on:
   workflow_dispatch:
+    inputs:
+      operation:
+        description: "Check the API, or create one September invoice (external write)"
+        required: true
+        default: check_api
+        type: choice
+        options:
+          - check_api
+          - create_invoice
+      recipient:
+        description: "GitHub username from sponsorship-profiles.json; required for create_invoice"
+        required: false
+        type: string
 
 permissions:
   contents: read
 
+concurrency:
+  group: match-september-2026-sponsorships
+  cancel-in-progress: false
+
 jobs:
   authenticate:
+    if: inputs.operation == 'check_api'
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Test authentication (read only)
         env:
           OPENCOLLECTIVE_TOKEN: ${{ secrets.OPENCOLLECTIVE_TOKEN }}
         run: python3 scripts/test-opencollective-api.py
+
+  create-invoice:
+    if: inputs.operation == 'create_invoice' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.1
+      - name: Generate sponsorship report
+        id: report
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: bun scripts/match-sponsorship-profiles.ts
+      - name: Create selected recipient invoice once and request invitation
+        env:
+          SPONSORSHIP_RECIPIENT: ${{ inputs.recipient }}
+          GITHUB_TOKEN: ${{ github.token }}
+          OPENCOLLECTIVE_TOKEN: ${{ secrets.OPENCOLLECTIVE_TOKEN }}
+        run: bun scripts/send-selected-sponsorship.ts
+      - name: Upload report and sending result
+        if: always() && steps.report.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sponsorship-profile-matches-2026-09
+          path: sponsorship-matches/2026-09/
+          if-no-files-found: error
+          retention-days: 30
