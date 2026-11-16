@@ -1,6 +1,8 @@
 {
   "reference": "tscircuit-contributors:github:167054270:sponsorship:2026-09",
   "fingerprint": "830d2d9a7b0670c87ac28c9edf7d9b368a42f12de1c45c5c199238bc0d203cf5",
-  "state": "reserved",
-  "invitationRequested": false
+  "state": "confirmed",
+  "expenseId": "ex_IkMuQRGO7Efaa3CClZxbi",
+  "expenseLegacyId": 355727,
+  "invitationRequested": true
 }
