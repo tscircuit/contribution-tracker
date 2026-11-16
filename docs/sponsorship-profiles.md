@@ -26,158 +26,128 @@ Only add a public profile link. Keep bank, identity, and tax details in Open
 Collective's private forms. Maintainers should review profile changes because the
 mapping will identify future expense recipients.
 
-This file only collects profile links. Adding an entry does not create an expense,
-send an invitation, change sponsorship amounts, or trigger payment. The matching
-Action below produces a review report; expense creation remains a separate change.
-Existing GitHub identity handling and Discord registration in `users.json` are
-unchanged.
+Adding a profile does not run the workflow or create an expense. Profile changes
+need maintainer review because the mapping identifies expense recipients. Existing
+GitHub identity handling and Discord registration in `users.json` are unchanged.
 
 ## Open Collective Sponsorships (manual only)
 
-After merging this workflow, open **Actions → Open Collective Sponsorships → Run workflow**, selecting the **main** branch. It has no schedule,
-push trigger, or month input. It is locked to September 2026; running it from
-another branch skips the job.
+Open **Actions → Open Collective Sponsorships → Run workflow**, selecting **main**.
+The same workflow remains manual-only and restricted to September 2026.
 
-The Action reads `sponsorships/2026-09.csv` and `sponsorship-profiles.json`, then
-uploads `sponsorship-profile-matches-2026-09` with a JSON report and summary.
-Amounts are copied from the existing CSV in integer cents; no sponsorship is
-recalculated or increased. Missing/null profiles are reported, not guessed or
-assigned to another recipient. Registrations without a September payout do not
-produce a payable row.
+This existing Action remains report-only. It never creates expenses or sends
+invitations. Use the existing test workflow below when you explicitly want to
+create an invoice for a selected recipient.
 
-For mapped contributors, the Action checks the live GitHub numeric account ID
-against the September overview records and resolves the explicit Open Collective
-URL to an account ID through its public API. It does not match display names or
-assume GitHub and Open Collective usernames are the same. GitHub's automatic
-workflow token is used only for read-only GitHub requests; no Open Collective
-secret is needed.
+### Reporting
 
-Validation stops on duplicate usernames (including case variants and repeated
-JSON keys), duplicate Open Collective URLs/account IDs, invalid URLs/CSV amounts,
-missing or conflicting historical GitHub IDs, changed GitHub identities, profile lookup
-failures, or nonexistent Open Collective profiles. No report artifact is uploaded
-on a failed job. The job is read-only, has a timeout, rejects redirects, and never
-creates expenses, sends invitations, or pays anyone. Repeated runs just create
-new reports.
+The Action reads `sponsorships/2026-09.csv` and `sponsorship-profiles.json`, verifies
+GitHub numeric IDs against the September overviews, and resolves public Open
+Collective account IDs. It rejects duplicate JSON keys before parsing discards
+them, duplicate recipients, invalid URLs/amounts, changed identities, and failed
+profile lookups. It never matches display names or assumes usernames match across
+platforms. Profile existence is not proof of ownership.
 
-### Username collisions and ownership
+The summary and `matches.json` list only contributors with resolved profiles.
+Missing profiles are counted but excluded from rows and the matched total.
+`totalCents` is the matched amount; `sourceTotalCents` is the full CSV total.
+`confirmedPaidCents` and `paymentReviewTotalCents` explain the headline review
+total. Confirmed fully paid sponsorships are excluded from that review total;
+pending, partial, unknown payments and ownership still require review.
 
-GitHub usernames and Open Collective profile slugs are unique within their own
-platforms; display names are not. The same text on different platforms does not
-establish that accounts have the same owner. GitHub usernames may be renamed or
-later reused, so this Action also compares numeric GitHub IDs against historical
-records and stops if they differ.
-
-A valid Open Collective URL proves only that the account exists. It does not
-prove that the GitHub contributor owns it, and the registration file currently
-does not pin a previously approved Open Collective account ID. Maintainers must
-review profile registration PRs and confirm ownership before using a report for
-payment. The report explicitly records `ownershipVerified: false` and labels
-matched rows `matched-needs-owner-review`; it is not authorization to pay. Shared
-recipient accounts are rejected rather than silently pooling multiple payouts.
-
-Offline validation: `bun test tests/sponsorship-profile-matching.test.ts`.
-The matching script itself makes live read-only lookups when explicitly run:
-`bun scripts/match-sponsorship-profiles.ts` (no arguments).
-
-
-### Future duplicate-expense protection
-
-This workflow produces reports only. It queries public visible expenses for
-status evidence, but does not yet implement complete duplicate-expense protection.
-
-Before adding expense creation to this same workflow, identify each sponsorship
-by the payer collective, immutable GitHub contributor ID, expense purpose
-(monthly contribution sponsorship), and contribution period (`YYYY-MM`). Record
-this key on the Open Collective expense and persist its expense ID in a durable
-ledger. The contribution period must come from the sponsorship month, not the
-creation date or payment date.
-
-For example, a September 2026 sponsorship paid in November must block another
-September sponsorship for that contributor. An October 2026 sponsorship paid in
-November has a different key and must remain eligible.
-
-Check existing draft, pending, approved, processing, and paid expenses before
-creating another expense with that key, not just already-paid expenses. Include
-manual/legacy expenses in reconciliation: an expense without a recorded period
-cannot safely be inferred from its payment date and needs human review. A
-rejected, canceled, refunded, or failed expense needs explicit reconciliation
-rather than automatically creating a replacement.
-
-Serialize expense-creation runs and reconcile uncertain API outcomes before
-retrying, so a timeout after successful creation cannot create a duplicate. A
-local cache or downloadable report alone is not a durable payment ledger.
-
-
-### Per-contributor expense and payment reporting
-
-Both the Actions run summary and downloaded `summary.md` contain a table with
-GitHub username, Open Collective profile, September amount, profile-match result,
-payment evidence, and linked expense statuses. `matches.json` includes the same
-information as structured rows.
-
-The Action paginates the payer collective's public received expenses across all
-creation dates. It uses recipient account IDs, never display names. A September
-expense can therefore be reported even if it was created or paid in November.
-The following exact references identify the contribution period:
+The public expense scan covers all creation dates. Recipient ID plus exact
+references identify contribution months, regardless of when payment happens:
 
 - `tscircuit-contributors:github:<numeric-id>:sponsorship:2026-09`
-- `tscircuit-2026-09-<github-username>` (the earlier invoice generator's reference)
+- `tscircuit-2026-09-<github-username>` (legacy reference)
 
-A single matched September expense marked `PAID`, with the expected USD amount,
-is reported as `paid`. Other statuses are shown unchanged beside the expense
-link, with `period-expense-not-paid`. Multiple September expenses or mismatched
-amounts are explicitly flagged for review. This is evidence about existing
-expenses, not permission to create a new one.
+Expense links show their own status, currency, and amount. An unassigned
+`PAID: USD 10.00 (contribution month unverified)` does not mean the full September
+sponsorship was paid. Unknown periods, partial amounts, and multiple matching
+expenses need review. Public visibility can hide drafts/references; missing
+visible evidence is **unknown**, not proof of nonpayment. Incomplete public scans
+are discarded and marked unavailable. The sender uses a separate authenticated
+scan and does not rely on this public payment evidence to authorize creation.
 
-Expenses with missing or unrecognized references are listed separately as
-needing contribution-period review. Their paid date, title, or amount is not used
-to assume that they pay September's sponsorship. Contributors without profiles are excluded from the displayed rows and matched
-total; their count is retained in the report header.
+Download `sponsorship-profile-matches-2026-09` from the run's Artifacts section.
+The normal table is a pre-send snapshot. Sending appends an explicit result and
+expense link to the summary and records `sendResult` in JSON.
 
-Public API access can hide drafts or invoice references. Accordingly, no matching
-visible expense is `unknown-no-visible-period-expense`, not proof that someone
-is unpaid. If pagination fails, data changes during the scan, or any GraphQL field
-is inaccessible, the expense lookup is discarded and payment statuses become
-`unknown-lookup-unavailable`; the profile matching report is still produced. No
-private payout details, bank information, or API token are collected. Complete
-expense reconciliation will require authorized visibility before enabling sends.
+### Select a recipient in the existing test workflow
 
-Each expense link shows its own status, currency, and amount, for example
-`PAID: USD 10.00 (contribution month unverified)`. This means that the **$10
-expense** was paid, not that the contributor's entire sponsorship was paid.
-Expenses without a verified contribution period are not credited to September.
-For a period-matched expense, an amount differing from the sponsorship remains
-flagged for review; the report does not silently deduct partial or test payments.
+The existing API test workflow is now named **Open Collective Sponsorship Test**.
+It has two manual operations:
 
+- `check_api` (default): the existing read-only authentication test.
+- `create_invoice`: enter a contributor's GitHub username in **recipient** to
+  create one invoice for that contributor's September 2026 sponsorship. The input
+  must match a sponsorship CSV row and registered profile. There is no default
+  recipient or named recipient hardcoded in the sender.
 
-### Matched contributors and the current payment review total
+Select **main**. The workflow name is generic; the selected username and operation
+are explicit in the inputs, run title, and result. Choosing `create_invoice` is an
+external write and requests an invitation. It never approves or pays the expense.
 
-The summary and JSON list only contributors with a resolved Open Collective
-account and a profile URL. Missing profiles are counted but omitted from rows and
-from the matched sponsorship total. Adding a profile includes that contributor on
-the next manual run; their amount still comes from the existing sponsorship CSV.
+The sender reuses the existing `OPENCOLLECTIVE_TOKEN` secret, with expenses scope
+and collective-admin access to inspect all drafts. No secrets are added or changed.
+The Actions token has contents-write permission only in the creation job, to
+maintain the ledger; the read-only test retains contents-read permission.
 
-The headline **current payment review total** is the matched sponsorship total
-minus sponsorships confirmed fully paid for the contribution month. Confirmed
-paid contributors remain in the table for transparency. Pending expenses, partial
-payments, unassigned test payments, unknown payment status, and account ownership
-still require review before any sending. This subtotal is not a guaranteed
-outstanding balance or a list authorized for payment.
+The saved Open Collective account is used as-is. Incognito profiles may not have
+email recipients, so notification delivery is not guaranteed; the expense link
+is reported for manual follow-up. No email addresses are collected.
 
-In `matches.json`, `totalCents` now totals the displayed matched contributors;
-`sourceTotalCents` preserves the complete source CSV total for auditing.
-`confirmedPaidCents` and `paymentReviewTotalCents` explain the headline subtotal.
-`missingCount` counts omitted contributors. No payouts or expenses are created.
+The amount comes from the selected contributor's September CSV row, not a coded
+price. Each merged PR from the same payout weeks gets a line item weighted by
+`2 ** (stars - 1)`, with exact cent allocation to the CSV total.
 
-### Account lookup errors
+The mutation uses `skipInvite: false`, so this is not a silent draft. Open Collective is asked to invite the selected contributor to finish his private details and submit
+the expense;
+Open Collective generates the final invoice after submission. No PDF attachment
+is generated by the Action. A successful response confirms expense creation and
+that the email was requested, **not inbox delivery**. Reruns do not resend the
+invitation automatically.
 
-API requests identify this application with an explicit User-Agent. HTTP failures
-report the service hostname, endpoint path, status, and numeric rate-limit hints
-when present. Tokens, query strings, and remote error bodies are not printed.
+### Duplicate prevention and recovery
 
-If GitHub specifically returns `Resource not accessible by integration` for a
-public `/users/<username>` lookup with the workflow token, retry that lookup once
-without credentials. The numeric identity check still applies to the response.
-Rate limits and all other access failures stop the lookup; the Action does not
-retry those failures anonymously or grant itself more permissions.
+The workflow serializes runs. Its Actions token needs `contents: write` for a
+separate `opencollective-expense-ledger` branch; it does not commit to main.
+Do not delete the ledger branch or reset its records.
+
+The permanent key combines payer, immutable GitHub contributor ID, sponsorship
+purpose, and contribution month. A full authenticated scan checks drafts and
+submitted expenses before creating anything. An existing September invoice blocks
+a second September invoice even when paid in November. Another contribution month
+is a different key. Existing rejected/canceled invoices also stop automatic
+replacement and need reconciliation.
+
+Expenses with unknown periods block sending unless explicitly reviewed. The $10
+paid test expense recorded in the sending config was confirmed by Abse2001 as
+separate from September. For that recipient, the sender verifies its ID, payee, paid status, currency,
+and amount before honoring that exception; it never assumes all $10 payments are
+tests or deducts them from sponsorships.
+
+An atomic ledger reservation is saved **before** the creation mutation. The
+confirmed expense ID is saved afterward. A timeout, failed confirmation write,
+changed plan/recipient, incomplete visibility, or ledger conflict never causes a
+blind retry. Reruns reconcile a visible existing invoice; if the attempt remains
+uncertain they stop for manual review. This prevents automated retries from
+creating duplicates but cannot make unrelated manual payments idempotent.
+
+The ledger records invoice creation and invitation-request status, not delivery
+receipts or payout credentials. If an email is missing, check Open Collective;
+do not delete the reservation and retry the invoice.
+
+### Verification and diagnostics
+
+Run `bun test tests/sponsorship-expense-send.test.ts` for offline sending tests.
+The matching/reporting tests also remain offline with mocked API responses. Do
+not run `scripts/send-selected-sponsorship.ts` merely to test it: it performs writes
+when the configured main-branch environment, recipient input, and existing secrets
+are present.
+
+HTTP lookups use an application User-Agent and safe hostname/status diagnostics.
+Only a specific GitHub integration-permission denial for a public user GET may
+retry without credentials; rate limits and other access failures stop the lookup.
+Creation mutations are never retried automatically. Error bodies, tokens, query
+strings, and private response bodies are not printed.
