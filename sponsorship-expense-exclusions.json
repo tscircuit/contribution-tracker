@@ -6,6 +6,13 @@
       "currency": "USD",
       "payeeId": "acc_9pYkhsxI17jMzmSlmeYTz",
       "reason": "Confirmed by Abse2001 as a separate test payment, not part of September sponsorship."
+    },
+    {
+      "id": "ex_Y7bxOXnTrZYKtym3Fl8m0",
+      "amountCents": 1000,
+      "currency": "USD",
+      "payeeId": "acc_h96SxJP8YI2G2cC07XQxe",
+      "reason": "Confirmed as a separate prior payment; the full September sponsorship remains payable."
     }
   ]
 }
