@@ -2,12 +2,12 @@
   "0hmX": {
     "githubId": 109351887,
     "githubLogin": "0hmX",
-    "reviewsReceived": 24,
+    "reviewsReceived": 39,
     "rejectionsReceived": 0,
-    "approvalsReceived": 8,
-    "staffReviewedPrs": 8,
+    "approvalsReceived": 15,
+    "staffReviewedPrs": 12,
     "staffRejectionsReceived": 1,
-    "staffApprovalsReceived": 9,
+    "staffApprovalsReceived": 13,
     "staffReviewedPrLinks": [
       {
         "number": 5628,
@@ -64,22 +64,50 @@
         "title": "feat: add hole plating copper thickness to JLCPCB stackups",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 6,
+        "url": "https://github.com/tscircuit/ibis-to-spice/pull/6",
+        "title": "feat: expose [Ramp] dV/dt and R_load on IbisBuffer",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 141,
+        "url": "https://github.com/tscircuit/signal-integrity-pipeline/pull/141",
+        "title": "feat: estimate IBIS output edge duration for channel endpoints",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 118,
+        "url": "https://github.com/tscircuit/signal-integrity-pipeline/pull/118",
+        "title": "feat: inspect IBIS pin capabilities and references for channel endpoints",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 117,
+        "url": "https://github.com/tscircuit/signal-integrity-pipeline/pull/117",
+        "title": "feat: add isQuiet to board and the default capture duration to pipeline/timing",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 11,
+    "approvalsGiven": 18,
     "rejectionsGiven": 0,
-    "prsOpened": 41,
-    "prsMerged": 19,
+    "prsOpened": 64,
+    "prsMerged": 31,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 3,
+    "distinctPrsReviewedNonCodeOwner": 10,
     "distinctPrsReviewedAsCodeOwner": 8,
-    "score": 41,
-    "major": 5,
-    "minor": 6,
-    "tiny": 8,
-    "stars": "⭐⭐"
+    "score": 67,
+    "major": 10,
+    "minor": 7,
+    "tiny": 14,
+    "stars": "⭐⭐⭐"
   },
   "0xNexuz": {
     "githubId": 152623760,
@@ -101,20 +129,47 @@
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0
   },
+  "AJ0070": {
+    "githubId": 87864439,
+    "githubLogin": "AJ0070",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
+    "staffReviewedPrs": 0,
+    "staffRejectionsReceived": 0,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 1,
+    "prsMerged": 0,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0
+  },
   "Abse2001": {
     "githubId": 54582525,
     "githubLogin": "Abse2001",
-    "reviewsReceived": 2,
+    "reviewsReceived": 3,
     "rejectionsReceived": 0,
-    "approvalsReceived": 2,
-    "staffReviewedPrs": 2,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 2,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 5502,
         "url": "https://github.com/tscircuit/core/pull/5502",
         "title": "Keep small-board mouse bites drillable (#5066)",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 5876,
+        "url": "https://github.com/tscircuit/cli/pull/5876",
+        "title": "Resolve relative model paths in tsci export glb and gltf (#5654)",
         "staffApprovals": 1,
         "staffRejections": 0
       },
@@ -126,18 +181,18 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 19,
+    "approvalsGiven": 20,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
-    "prsMerged": 4,
+    "prsOpened": 17,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 19,
+    "distinctPrsReviewedNonCodeOwner": 20,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 15,
+    "score": 21,
     "major": 3,
-    "minor": 1,
+    "minor": 4,
     "tiny": 0,
     "stars": "⭐⭐"
   },
@@ -164,9 +219,9 @@
   "AnasSarkiz": {
     "githubId": 72264380,
     "githubLogin": "AnasSarkiz",
-    "reviewsReceived": 3,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 3,
+    "approvalsReceived": 4,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
@@ -174,17 +229,17 @@
     "approvalsGiven": 1,
     "rejectionsGiven": 0,
     "prsOpened": 12,
-    "prsMerged": 3,
+    "prsMerged": 4,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 7,
-    "major": 1,
+    "score": 11,
+    "major": 2,
     "minor": 0,
     "tiny": 2,
-    "stars": "⭐"
+    "stars": "⭐⭐"
   },
   "Andresdev14": {
     "githubId": 88004496,
@@ -249,27 +304,55 @@
   "GokulPandi-M": {
     "githubId": 187867218,
     "githubLogin": "GokulPandi-M",
-    "reviewsReceived": 9,
-    "rejectionsReceived": 1,
-    "approvalsReceived": 1,
+    "reviewsReceived": 12,
+    "rejectionsReceived": 2,
+    "approvalsReceived": 3,
+    "staffReviewedPrs": 1,
+    "staffRejectionsReceived": 1,
+    "staffApprovalsReceived": 0,
+    "staffReviewedPrLinks": [
+      {
+        "number": 334,
+        "url": "https://github.com/tscircuit/tiny-hypergraph/pull/334",
+        "title": "Support per-route layer constraints during path search",
+        "staffApprovals": 0,
+        "staffRejections": 1
+      }
+    ],
+    "approvalsGiven": 0,
+    "rejectionsGiven": 0,
+    "prsOpened": 10,
+    "prsMerged": 2,
+    "issuesCreated": 0,
+    "bountiedIssuesCount": 0,
+    "bountiedIssuesTotal": 0,
+    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 5,
+    "major": 1,
+    "minor": 0,
+    "tiny": 1,
+    "stars": "⭐"
+  },
+  "Hajjy22": {
+    "githubId": 135442276,
+    "githubLogin": "Hajjy22",
+    "reviewsReceived": 0,
+    "rejectionsReceived": 0,
+    "approvalsReceived": 0,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 7,
-    "prsMerged": 1,
+    "prsOpened": 3,
+    "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 1,
-    "major": 0,
-    "minor": 0,
-    "tiny": 1,
-    "stars": ""
+    "distinctPrsReviewedAsCodeOwner": 0
   },
   "Kefia-02": {
     "githubId": 348668230,
@@ -303,7 +386,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 14,
+    "prsOpened": 21,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -314,12 +397,12 @@
   "MustafaMulla29": {
     "githubId": 97171641,
     "githubLogin": "MustafaMulla29",
-    "reviewsReceived": 16,
+    "reviewsReceived": 12,
     "rejectionsReceived": 0,
-    "approvalsReceived": 4,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 8,
+    "staffReviewedPrs": 3,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 3,
     "staffReviewedPrLinks": [
       {
         "number": 580,
@@ -327,21 +410,35 @@
         "title": "Report schematic box width and pin-padding warnings",
         "staffApprovals": 1,
         "staffRejections": 0
+      },
+      {
+        "number": 1451,
+        "url": "https://github.com/tscircuit/schematic-trace-solver/pull/1451",
+        "title": "Place shared ground labels at the lower end of their rail",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
+      {
+        "number": 484,
+        "url": "https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/484",
+        "title": "fix: let 0 ohm links away from ground lie in line",
+        "staffApprovals": 1,
+        "staffRejections": 0
       }
     ],
-    "approvalsGiven": 0,
+    "approvalsGiven": 1,
     "rejectionsGiven": 0,
-    "prsOpened": 23,
-    "prsMerged": 10,
+    "prsOpened": 26,
+    "prsMerged": 19,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 0,
+    "distinctPrsReviewedNonCodeOwner": 1,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 15,
-    "major": 1,
-    "minor": 2,
-    "tiny": 7,
+    "score": 31,
+    "major": 2,
+    "minor": 5,
+    "tiny": 12,
     "stars": "⭐⭐"
   },
   "NavaneethKSD": {
@@ -387,13 +484,20 @@
   "ShiboSoftwareDev": {
     "githubId": 144173452,
     "githubLogin": "ShiboSoftwareDev",
-    "reviewsReceived": 43,
+    "reviewsReceived": 50,
     "rejectionsReceived": 0,
-    "approvalsReceived": 31,
-    "staffReviewedPrs": 1,
+    "approvalsReceived": 38,
+    "staffReviewedPrs": 2,
     "staffRejectionsReceived": 0,
-    "staffApprovalsReceived": 1,
+    "staffApprovalsReceived": 2,
     "staffReviewedPrLinks": [
+      {
+        "number": 3985,
+        "url": "https://github.com/tscircuit/tscircuit-autorouter/pull/3985",
+        "title": "Keep preloaded copper as paths throughout Pipeline9",
+        "staffApprovals": 1,
+        "staffRejections": 0
+      },
       {
         "number": 298,
         "url": "https://github.com/tscircuit/fanout-solver/pull/298",
@@ -402,15 +506,15 @@
         "staffRejections": 0
       }
     ],
-    "approvalsGiven": 4,
+    "approvalsGiven": 9,
     "rejectionsGiven": 0,
-    "prsOpened": 154,
-    "prsMerged": 86,
+    "prsOpened": 181,
+    "prsMerged": 98,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 2,
-    "distinctPrsReviewedAsCodeOwner": 1,
+    "distinctPrsReviewedNonCodeOwner": 5,
+    "distinctPrsReviewedAsCodeOwner": 2,
     "reposOwned": [
       {
         "repo": "tscircuit/tscircuit-autorouter",
@@ -419,10 +523,10 @@
         ]
       }
     ],
-    "score": 209,
-    "major": 42,
-    "minor": 14,
-    "tiny": 29,
+    "score": 229.5,
+    "major": 46,
+    "minor": 16,
+    "tiny": 34,
     "stars": "👑👑👑"
   },
   "U-ITACHII": {
@@ -465,7 +569,7 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 4,
+    "prsOpened": 8,
     "prsMerged": 1,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -530,7 +634,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 2,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -550,7 +654,7 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 1,
+    "prsOpened": 3,
     "prsMerged": 0,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
@@ -568,14 +672,14 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 4,
+    "approvalsGiven": 8,
     "rejectionsGiven": 2,
-    "prsOpened": 21,
-    "prsMerged": 13,
+    "prsOpened": 30,
+    "prsMerged": 19,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 4,
+    "distinctPrsReviewedNonCodeOwner": 8,
     "distinctPrsReviewedAsCodeOwner": 0,
     "reposOwned": [
       {
@@ -585,10 +689,10 @@
         ]
       }
     ],
-    "score": 28,
+    "score": 36,
     "major": 2,
-    "minor": 8,
-    "tiny": 3,
+    "minor": 10,
+    "tiny": 7,
     "stars": "⭐⭐"
   },
   "menwo535-jpg": {
@@ -614,22 +718,27 @@
   "mohan-bee": {
     "githubId": 167054270,
     "githubLogin": "mohan-bee",
-    "reviewsReceived": 0,
+    "reviewsReceived": 5,
     "rejectionsReceived": 0,
-    "approvalsReceived": 0,
+    "approvalsReceived": 2,
     "staffReviewedPrs": 0,
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 16,
-    "prsMerged": 0,
+    "prsOpened": 28,
+    "prsMerged": 7,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
-    "distinctPrsReviewedAsCodeOwner": 0
+    "distinctPrsReviewedAsCodeOwner": 0,
+    "score": 21,
+    "major": 4,
+    "minor": 2,
+    "tiny": 1,
+    "stars": "⭐⭐"
   },
   "pecopeko": {
     "githubId": 198374676,
@@ -654,9 +763,9 @@
   "rushabhcodes": {
     "githubId": 97875843,
     "githubLogin": "rushabhcodes",
-    "reviewsReceived": 31,
+    "reviewsReceived": 35,
     "rejectionsReceived": 3,
-    "approvalsReceived": 11,
+    "approvalsReceived": 14,
     "staffReviewedPrs": 8,
     "staffRejectionsReceived": 2,
     "staffApprovalsReceived": 6,
@@ -720,17 +829,17 @@
     ],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 43,
-    "prsMerged": 19,
+    "prsOpened": 47,
+    "prsMerged": 22,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
     "distinctPrsReviewedNonCodeOwner": 0,
     "distinctPrsReviewedAsCodeOwner": 0,
-    "score": 35,
+    "score": 38,
     "major": 4,
     "minor": 5,
-    "tiny": 9,
+    "tiny": 12,
     "stars": "⭐⭐"
   },
   "seveibar": {
@@ -743,14 +852,14 @@
     "staffRejectionsReceived": 0,
     "staffApprovalsReceived": 0,
     "staffReviewedPrLinks": [],
-    "approvalsGiven": 22,
-    "rejectionsGiven": 2,
-    "prsOpened": 38,
-    "prsMerged": 26,
+    "approvalsGiven": 31,
+    "rejectionsGiven": 3,
+    "prsOpened": 43,
+    "prsMerged": 33,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
-    "distinctPrsReviewedNonCodeOwner": 21,
+    "distinctPrsReviewedNonCodeOwner": 29,
     "distinctPrsReviewedAsCodeOwner": 1,
     "reposOwned": [
       {
@@ -764,12 +873,18 @@
         "paths": [
           "*"
         ]
+      },
+      {
+        "repo": "tscircuit/copper-pour-solver",
+        "paths": [
+          "*"
+        ]
       }
     ],
-    "score": 63,
+    "score": 67,
     "major": 10,
-    "minor": 6,
-    "tiny": 10,
+    "minor": 7,
+    "tiny": 16,
     "stars": "⭐⭐⭐"
   },
   "singhaditya21": {
@@ -804,8 +919,8 @@
     "staffReviewedPrLinks": [],
     "approvalsGiven": 0,
     "rejectionsGiven": 0,
-    "prsOpened": 282,
-    "prsMerged": 233,
+    "prsOpened": 345,
+    "prsMerged": 284,
     "issuesCreated": 0,
     "bountiedIssuesCount": 0,
     "bountiedIssuesTotal": 0,
@@ -814,7 +929,7 @@
     "score": 12,
     "major": 0,
     "minor": 0,
-    "tiny": 233,
+    "tiny": 284,
     "stars": "⭐⭐"
   }
 }
