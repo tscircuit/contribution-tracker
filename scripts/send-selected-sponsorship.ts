@@ -100,7 +100,7 @@ export class GithubLedgerStore implements LedgerStore {
   }
 }
 
-async function collectiveQuery(
+export async function collectiveQuery(
   query: string,
   variables: Record<string, unknown> = {},
 ) {
@@ -130,7 +130,10 @@ async function collectiveQuery(
 export function normalizeExpense({
   expense,
   plan,
-}: { expense: any; plan: SendPlan }): SendExpense {
+}: {
+  expense: any
+  plan: Pick<SendPlan, "payeeId" | "payeeLegacyId" | "payeeSlug">
+}): SendExpense {
   if (
     !expense ||
     typeof expense.id !== "string" ||
@@ -174,8 +177,8 @@ export function normalizeExpense({
 const EXPENSE_FIELDS =
   "id legacyId status reference draft payee { id } amountV2 { valueInCents currency }"
 
-async function listAuthenticatedExpenses(
-  plan: SendPlan,
+export async function listAuthenticatedExpenses(
+  plan: Pick<SendPlan, "payeeId" | "payeeLegacyId" | "payeeSlug">,
 ): Promise<SendExpense[]> {
   const expenses: SendExpense[] = []
   const ids = new Set<string>()

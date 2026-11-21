@@ -25,7 +25,11 @@ jobs:
       - name: Match September sponsorships to public accounts
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: bun scripts/match-sponsorship-profiles.ts
+        run: GITHUB_STEP_SUMMARY= bun scripts/match-sponsorship-profiles.ts
+      - name: Preview audited unpaid September sponsorships (no sending)
+        env:
+          OPENCOLLECTIVE_TOKEN: ${{ secrets.OPENCOLLECTIVE_TOKEN }}
+        run: bun scripts/preview-audited-sponsorships.ts
       - name: Upload reviewed matching data
         uses: actions/upload-artifact@v4
         with:
