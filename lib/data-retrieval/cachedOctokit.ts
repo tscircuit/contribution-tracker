@@ -60,6 +60,19 @@ export class CachedOctokit {
   }
 
   // Implement exact Octokit method signatures
+  public async graphql<T>(
+    query: string,
+    variables: Record<string, string | number | null> = {},
+  ): Promise<T> {
+    const cacheArguments = { query, ...variables }
+    const cached = await this.getCached<T>("graphql", cacheArguments)
+    if (cached) return cached
+
+    const response = await this.octokit.graphql<T>(query, variables)
+    await this.setCached("graphql", cacheArguments, response)
+    return response
+  }
+
   public pulls = {
     list: async (
       params: Endpoints["GET /repos/{owner}/{repo}/pulls"]["parameters"],
