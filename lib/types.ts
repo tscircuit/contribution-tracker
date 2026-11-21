@@ -76,6 +76,8 @@ export interface PullRequestWithReviews extends PullRequest {
   rejectionsReceived: number
   approvalsReceived: number
   isClosed: boolean
+  openedInWindow?: boolean
+  mergedInWindow?: boolean
   reviewsByUser?: Record<string, ReviewerStats>
   allReviewsByUser?: Record<string, ReviewerStats>
 }
