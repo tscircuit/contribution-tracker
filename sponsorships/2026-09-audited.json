@@ -1,0 +1,42 @@
+{
+  "month": "2026-09",
+  "currency": "USD",
+  "pricing": "200 USD times audited points divided by highest audited points",
+  "contributors": [
+    {
+      "username": "anil08607",
+      "auditedPoints": 45.5,
+      "amountCents": 5056
+    },
+    {
+      "username": "Devesh36",
+      "auditedPoints": 16,
+      "amountCents": 1778
+    },
+    {
+      "username": "GokulPandi-M",
+      "auditedPoints": 59,
+      "amountCents": 6556
+    },
+    {
+      "username": "hrithik18k",
+      "auditedPoints": 48,
+      "amountCents": 5333
+    },
+    {
+      "username": "KrishnaX12",
+      "auditedPoints": 40,
+      "amountCents": 4444
+    },
+    {
+      "username": "mohan-bee",
+      "auditedPoints": 180,
+      "amountCents": 20000
+    },
+    {
+      "username": "trixie010",
+      "auditedPoints": 3,
+      "amountCents": 333
+    }
+  ]
+}

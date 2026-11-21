@@ -151,3 +151,29 @@ Only a specific GitHub integration-permission denial for a public user GET may
 retry without credentials; rate limits and other access failures stop the lookup.
 Creation mutations are never retried automatically. Error bodies, tokens, query
 strings, and private response bodies are not printed.
+
+### Audited September payment preview
+
+The manual **Open Collective Sponsorships** action now produces a read-only
+September 2026 preview using `sponsorships/2026-09-audited.json`. These are the
+approved spreadsheet amounts, totaling $435 before payment reconciliation.
+The original sponsorship CSV and the separate sending workflow are unchanged.
+Do not use the sending workflow to pay these revised values yet.
+
+The preview uses the existing `OPENCOLLECTIVE_TOKEN` repository secret with
+collective-admin access to scan all received expenses, including drafts. It
+checks the contribution-month reference and verified recipient rather than the
+expense creation/payment month. A September payment at least as large as the
+new audited amount is fully paid even when it used the previous larger amount.
+Those contributors are omitted from the outstanding table. The JSON artifact
+keeps every audited recipient and their matching expense evidence.
+
+Pending/existing expenses, partial payments and unverified periods are shown
+for review, rather than silently allowing another invoice. Unrelated test
+payments do not settle September. A failed or incomplete authenticated lookup
+fails the preview; it must not report a contributor as unpaid on missing data.
+
+This action never creates expenses, sends invitations, changes the expense
+ledger, or makes payments. Download its existing September artifact for
+`summary.md` and `audited-preview.json`. Missing profiles and staff are excluded
+from the audited recipient list.
