@@ -29,88 +29,95 @@ The current week is shown below. There are 3 major sections:
 
 ```mermaid
 pie
-    "tscircuit/core" : 86
+    "tscircuit/core" : 95
+    "tscircuit/tscircuit-autorouter" : 112
     "tscircuit/ibis-to-spice" : 3
     "tscircuit/signal-integrity-pipeline" : 27
-    "tscircuit/circuit-json-to-differential-pair-phase-skew" : 2
+    "tscircuit/circuit-json-to-differential-pair-phase-skew" : 7
+    "tscircuit/tscircuit-pullrequest-deterministic-checks" : 4
     "tscircuit/circuit-json" : 15
     "tscircuit/props" : 12
+    "tscircuit/circuit-to-svg" : 6
+    "tscircuit/circuit-to-canvas" : 1
     "tscircuit/jlcpcb-manufacturing-specs" : 2
     "tscircuit/pcb-viewer" : 1
-    "tscircuit/jlcsearch" : 2
-    "tscircuit/tscircuit-autorouter" : 108
-    "tscircuit/circuit-to-svg" : 3
-    "tscircuit/checks" : 6
-    "tscircuit/cli" : 24
-    "tscircuit/circuit-json-to-gltf" : 6
-    "tscircuit/high-density-repair03" : 4
-    "tscircuit/nema17-motor-controller" : 1
-    "tscircuit/tscircuit" : 120
-    "tscircuit/skill" : 4
-    "tscircuit/tscircuit.com" : 115
-    "tscircuit/eval" : 108
-    "tscircuit/runframe" : 111
-    "tscircuit/svg.tscircuit.com" : 54
+    "tscircuit/tscircuit" : 126
+    "tscircuit/tscircuit.com" : 122
+    "tscircuit/eval" : 110
+    "tscircuit/runframe" : 117
+    "tscircuit/cli" : 26
+    "tscircuit/svg.tscircuit.com" : 58
+    "tscircuit/circuit-json-to-step" : 10
     "tscircuit/schematic-trace-solver" : 3
     "tscircuit/copper-pour-solver" : 2
     "tscircuit/test-github-automerge" : 4
-    "tscircuit/circuit-json-to-kicad" : 3
+    "tscircuit/circuit-json-to-kicad" : 7
     "tscircuit/circuit-json-schematic-placement-analysis" : 16
     "tscircuit/krt-wasm" : 2
     "tscircuit/check-shorts" : 3
     "tscircuit/fanout-solver" : 43
-    "tscircuit/circuit-json-to-drawing" : 5
+    "tscircuit/circuit-json-to-drawing" : 6
     "tscircuit/drawing-viewer" : 4
+    "tscircuit/jlcsearch" : 2
+    "tscircuit/checks" : 8
+    "tscircuit/circuit-json-to-gltf" : 6
+    "tscircuit/high-density-repair03" : 4
+    "tscircuit/nema17-motor-controller" : 1
+    "tscircuit/skill" : 6
     "tscircuit/circuit-json-util" : 6
     "tscircuit/high-density-a01" : 5
+    "tscircuit/repair04" : 6
     "tscircuit/trace-simplification-solver" : 1
     "tscircuit/poppygl" : 3
     "tscircuit/motorcontrol" : 8
+    "tscircuit/footprinter" : 1
     "tscircuit/docs" : 1
     "tscircuit/schematic-match-adapt" : 1
     "tscircuit/simple-3d-svg" : 1
     "tscircuit/circuit-json-to-simple-3d" : 1
     "tscircuit/internal-dynamic-import" : 1
     "tscircuit/tscircuit.com-landing" : 1
+    "tscircuit/basic-usbc-devices" : 2
     "tscircuit/tscircuit-desktop" : 1
-    "tscircuit/devices.tscircuit.com" : 1
+    "tscircuit/devices.tscircuit.com" : 2
     "tscircuit/kicad-to-circuit-json" : 4
     "tscircuit/3d-viewer" : 1
+    "tscircuit/circuit-json-to-altium" : 4
     "tscircuit/length-matching-solver" : 3
     "tscircuit/easyeda-converter" : 1
+    "tscircuit/EEcircuit-engine" : 2
     "tscircuit/tiny-hypergraph" : 4
     "tscircuit/high-density-repair01" : 3
     "tscircuit/high-density-b01" : 6
     "tscircuit/winding-breakout-point-solver" : 2
-    "tscircuit/repair04" : 5
     "tscircuit/bus-lanes-solver" : 8
-    "tscircuit/high-density-phase-solver" : 1
+    "tscircuit/bga-escape-routing-solver" : 2
     "tscircuit/circuit-json-to-spice" : 9
-    "tscircuit/ngspice-spice-engine" : 9
+    "tscircuit/ngspice-spice-engine" : 10
     "tscircuit/spicets" : 2
     "tscircuit/manufacturing-simulation" : 2
     "tscircuit/contribution-tracker" : 1
     "tscircuit/circuit-json-to-gerber" : 1
-    "tscircuit/circuit-json-to-step" : 2
 ```
 
 ## Contributor Overview
 
 | Contributor | 🐳 Major | 🐙 Minor | 🐌 Tiny | Score | ⭐ |
 |-------------|---------|---------|---------|-------|-----|
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 108 | 29 | 62 | 503.5 | 👑👑👑 |
-| [seveibar](#seveibar) | 22 | 20 | 35 | 141 | 👑👑 |
-| [0hmX](#0hmX) | 14 | 11 | 19 | 91 | 👑 |
-| [imrishabh18](#imrishabh18) | 2 | 13 | 10 | 45 | ⭐⭐ |
-| [rushabhcodes](#rushabhcodes) | 4 | 7 | 17 | 42 | ⭐⭐ |
-| [MustafaMulla29](#MustafaMulla29) | 2 | 5 | 13 | 31 | ⭐⭐ |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 110 | 30 | 68 | 513.5 | 👑👑👑 |
+| [seveibar](#seveibar) | 27 | 26 | 40 | 173 | 👑👑👑 |
+| [0hmX](#0hmX) | 17 | 16 | 25 | 113 | 👑 |
+| [imrishabh18](#imrishabh18) | 3 | 13 | 12 | 51 | ⭐⭐⭐ |
+| [rushabhcodes](#rushabhcodes) | 4 | 7 | 22 | 43 | ⭐⭐ |
+| [MustafaMulla29](#MustafaMulla29) | 2 | 8 | 16 | 37 | ⭐⭐ |
 | [Abse2001](#Abse2001) | 3 | 5 | 0 | 23 | ⭐⭐ |
 | [mohan-bee](#mohan-bee) | 4 | 2 | 2 | 22 | ⭐⭐ |
 | [AnasSarkiz](#AnasSarkiz) | 4 | 0 | 3 | 20 | ⭐⭐ |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 571 | 12 | ⭐⭐ |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 599 | 12 | ⭐⭐ |
+| [Devesh36](#Devesh36) | 0 | 2 | 1 | 5 | ⭐ |
 | [GokulPandi-M](#GokulPandi-M) | 1 | 0 | 1 | 5 | ⭐ |
 | [VB-Blue](#VB-Blue) | 1 | 0 | 0 | 4 | ⭐ |
-| [Devesh36](#Devesh36) | 0 | 1 | 1 | 3 |  |
+| [aswadi](#aswadi) | 0 | 1 | 0 | 2 |  |
 | [KrishnaX12](#KrishnaX12) | 0 | 1 | 0 | 2 |  |
 | [AJ0070](#AJ0070) | 0 | 1 | 0 | 2 |  |
 
@@ -118,8 +125,8 @@ pie
 
 | Contributor | Reviewed PRs | Rejections | Approvals | SPR |
 |-------------|--------------|------------|-----------|-----|
-| [0hmX](#0hmX) | 14 | 2 | 14 | 85.7% |
-| [rushabhcodes](#rushabhcodes) | 10 | 3 | 7 | 70.0% |
+| [0hmX](#0hmX) | 16 | 2 | 16 | 87.5% |
+| [rushabhcodes](#rushabhcodes) | 11 | 4 | 7 | 63.6% |
 | [ShiboSoftwareDev](#ShiboSoftwareDev) | 6 | 0 | 7 | 100.0% |
 | [Abse2001](#Abse2001) | 3 | 0 | 3 | 100.0% |
 | [MustafaMulla29](#MustafaMulla29) | 3 | 0 | 3 | 100.0% |
@@ -128,7 +135,7 @@ pie
 | [VB-Blue](#VB-Blue) | 1 | 0 | 1 | 100.0% |
 
 <details>
-<summary>0hmX SPR PRs (14)</summary>
+<summary>0hmX SPR PRs (16)</summary>
 
 - [#5804](https://github.com/tscircuit/core/pull/5804) feat: emit aggressor controls in channel simulation records
 - [#5628](https://github.com/tscircuit/core/pull/5628) refactor!: remove the analog IBIS simulation API
@@ -138,6 +145,8 @@ pie
 - [#5629](https://github.com/tscircuit/core/pull/5629) feat: add <simulation.ibismodel>
 - [#5423](https://github.com/tscircuit/core/pull/5423) feat: add <simulation.pcbtransientchannelsimulation>
 - [#5649](https://github.com/tscircuit/core/pull/5649) feat: add <simulation.pcbdriverreceiverchannel>
+- [#962](https://github.com/tscircuit/circuit-to-svg/pull/962) Add optional differential pair phase skew overlays
+- [#4162](https://github.com/tscircuit/tscircuit-autorouter/pull/4162) Use the widest merged connection width as each trace's power expansion target
 - [#11](https://github.com/tscircuit/jlcpcb-manufacturing-specs/pull/11) feat: add hole plating copper thickness to JLCPCB stackups
 - [#114](https://github.com/tscircuit/circuit-json-webgpu/pull/114) feat: draw retained coloured strokes within WebGPU PCB layers
 - [#6](https://github.com/tscircuit/ibis-to-spice/pull/6) feat: expose [Ramp] dV/dt and R_load on IbisBuffer
@@ -148,11 +157,12 @@ pie
 </details>
 
 <details>
-<summary>rushabhcodes SPR PRs (10)</summary>
+<summary>rushabhcodes SPR PRs (11)</summary>
 
 - [#998](https://github.com/tscircuit/circuit-json/pull/998) Preserve arc geometry in PCB board outlines and cutouts
 - [#1028](https://github.com/tscircuit/circuit-json/pull/1028) fix: preserve namespaced KiCad metadata on existing records
 - [#1025](https://github.com/tscircuit/circuit-json/pull/1025) Revert "Preserve arc geometry in PCB board outlines and cutouts (#998)"
+- [#1039](https://github.com/tscircuit/props/pull/1039) Support relative solder paste margins
 - [#1036](https://github.com/tscircuit/props/pull/1036) Preserve rectangular solder paste rotation
 - [#1032](https://github.com/tscircuit/props/pull/1032) feat: add native net class authoring props
 - [#5825](https://github.com/tscircuit/core/pull/5825) Compose silkscreen text rotation with parent placement
@@ -226,51 +236,58 @@ pie
 
 | Contributor | Reviews Received | Approvals Received | Rejections Received | Approvals | Rejections Given | PRs Opened | PRs Merged | Issues Created |
 |---|---|---|---|---|---|---|---|---|
-| [2848823170](#2848823170) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
-| [0hmX](#0hmX) | 43 | 17 | 1 | 22 | 2 | 93 | 44 | 0 |
+| [2848823170](#2848823170) | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 |
+| [0hmX](#0hmX) | 65 | 19 | 1 | 24 | 2 | 130 | 58 | 0 |
 | [0xNexuz](#0xNexuz) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [aaka3h](#aaka3h) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [abdalraof-albarbar](#abdalraof-albarbar) | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 |
-| [Abse2001](#Abse2001) | 3 | 3 | 0 | 22 | 0 | 24 | 8 | 0 |
-| [AJ0070](#AJ0070) | 1 | 1 | 0 | 0 | 0 | 30 | 1 | 0 |
+| [Abse2001](#Abse2001) | 3 | 3 | 0 | 23 | 0 | 26 | 8 | 0 |
+| [AJ0070](#AJ0070) | 1 | 1 | 0 | 0 | 0 | 33 | 1 | 0 |
 | [Aming9303](#Aming9303) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [anaaracena](#anaaracena) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [AnasSarkiz](#AnasSarkiz) | 8 | 6 | 0 | 2 | 0 | 13 | 7 | 0 |
+| [AnasSarkiz](#AnasSarkiz) | 8 | 6 | 0 | 2 | 0 | 16 | 7 | 0 |
 | [Andresdev14](#Andresdev14) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [aryansanganti](#aryansanganti) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [ashtygn](#ashtygn) | 0 | 0 | 0 | 0 | 0 | 14 | 0 | 0 |
-| [aswadi](#aswadi) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [aswadi](#aswadi) | 1 | 1 | 0 | 0 | 0 | 7 | 1 | 0 |
+| [aurasocialbusinesspro-debug](#aurasocialbusinesspro-debug) | 0 | 0 | 0 | 0 | 0 | 10 | 0 | 0 |
 | [bhatipoglu](#bhatipoglu) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [CrazyEther](#CrazyEther) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [dat-hoangnguyentuandat](#dat-hoangnguyentuandat) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [devbox-zero-ops](#devbox-zero-ops) | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 |
-| [Devesh36](#Devesh36) | 5 | 4 | 1 | 0 | 0 | 10 | 2 | 0 |
+| [devbox-zero-ops](#devbox-zero-ops) | 0 | 0 | 0 | 0 | 0 | 11 | 0 | 0 |
+| [Devesh36](#Devesh36) | 5 | 4 | 1 | 0 | 0 | 10 | 3 | 0 |
+| [draarivpatel-ui](#draarivpatel-ui) | 16 | 0 | 0 | 0 | 0 | 16 | 0 | 0 |
+| [GamerDubz](#GamerDubz) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [GokulPandi-M](#GokulPandi-M) | 16 | 3 | 3 | 0 | 0 | 11 | 2 | 0 |
 | [Hajjy22](#Hajjy22) | 0 | 0 | 0 | 0 | 0 | 9 | 0 | 0 |
 | [hrithik18k](#hrithik18k) | 1 | 0 | 1 | 0 | 0 | 3 | 0 | 0 |
-| [imrishabh18](#imrishabh18) | 2 | 0 | 0 | 14 | 5 | 35 | 25 | 0 |
+| [imrishabh18](#imrishabh18) | 10 | 0 | 0 | 19 | 5 | 41 | 28 | 0 |
 | [Kefia-02](#Kefia-02) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [KrishnaX12](#KrishnaX12) | 3 | 2 | 0 | 0 | 0 | 1 | 1 | 0 |
 | [kunalgoesbyken](#kunalgoesbyken) | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | [LBCron](#LBCron) | 0 | 0 | 0 | 0 | 0 | 31 | 0 | 0 |
 | [menwo535-jpg](#menwo535-jpg) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
+| [mikihirokami-maker](#mikihirokami-maker) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [mohan-bee](#mohan-bee) | 7 | 3 | 0 | 0 | 0 | 35 | 8 | 0 |
-| [MustafaMulla29](#MustafaMulla29) | 13 | 9 | 0 | 1 | 0 | 28 | 20 | 0 |
+| [MustafaMulla29](#MustafaMulla29) | 17 | 12 | 0 | 2 | 0 | 40 | 26 | 0 |
 | [NavaneethKSD](#NavaneethKSD) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| [nitina-ariveguru](#nitina-ariveguru) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | [parthchilwerwar](#parthchilwerwar) | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [pecopeko](#pecopeko) | 0 | 0 | 0 | 0 | 0 | 9 | 0 | 0 |
-| [pethapixels-create](#pethapixels-create) | 0 | 0 | 0 | 0 | 0 | 14 | 0 | 0 |
-| [rushabhcodes](#rushabhcodes) | 47 | 18 | 5 | 1 | 0 | 62 | 29 | 0 |
+| [pethapixels-create](#pethapixels-create) | 4 | 0 | 0 | 0 | 0 | 16 | 0 | 0 |
+| [rushabhcodes](#rushabhcodes) | 52 | 21 | 6 | 1 | 0 | 75 | 34 | 0 |
 | [Semihzx](#Semihzx) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
-| [seveibar](#seveibar) | 19 | 0 | 0 | 40 | 6 | 128 | 78 | 0 |
-| [ShiboSoftwareDev](#ShiboSoftwareDev) | 68 | 47 | 2 | 12 | 0 | 337 | 201 | 0 |
+| [seveibar](#seveibar) | 33 | 0 | 0 | 41 | 7 | 155 | 94 | 0 |
+| [ShiboSoftwareDev](#ShiboSoftwareDev) | 70 | 49 | 2 | 13 | 0 | 353 | 210 | 0 |
 | [singhaditya21](#singhaditya21) | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 |
 | [sxpnet64](#sxpnet64) | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
 | [thisisanubhav](#thisisanubhav) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
-| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 695 | 571 | 0 |
+| [tranhoangtu-it](#tranhoangtu-it) | 9 | 0 | 0 | 0 | 0 | 15 | 0 | 0 |
+| [tscircuitbot](#tscircuitbot) | 0 | 0 | 0 | 0 | 0 | 748 | 599 | 0 |
 | [tunguyen1993](#tunguyen1993) | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 |
 | [U-ITACHII](#U-ITACHII) | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 |
-| [VB-Blue](#VB-Blue) | 1 | 1 | 0 | 0 | 0 | 10 | 1 | 0 |
+| [VB-Blue](#VB-Blue) | 1 | 1 | 0 | 0 | 0 | 16 | 1 | 0 |
+| [zk16k123-svg](#zk16k123-svg) | 0 | 0 | 0 | 0 | 0 | 8 | 0 | 0 |
 
 ## Changes by Repository
 
@@ -280,6 +297,7 @@ pie
 |------|--------|--------|-------------|-------------|
 | [#5629](https://github.com/tscircuit/core/pull/5629) | 🐳 Major | ⭐⭐⭐ | 0hmX | Render simulation.ibismodel into a Circuit JSON IBIS model record with component, pin, and reference-port bindings, validating ambiguous, duplicate, or undeclared vendor pin bindings. |
 | [#5649](https://github.com/tscircuit/core/pull/5649) | 🐳 Major | ⭐⭐⭐ | 0hmX | Adds simulation.pcbdriverreceiverchannel, resolves driver and receiver pins to IBIS models, validates PCB connectivity and routing, and writes channel records with an explicit seed when supplied. |
+| [#5792](https://github.com/tscircuit/core/pull/5792) | 🐳 Major | ⭐⭐⭐ | seveibar | Lets a wire harness (cable manufacturing) sheet be defined in TSX. Core now emits the records added in tscircuitcircuit-json1023 from the props added in tscircuitprops1030; tscircuitcircuit-json-to-drawing14 renders them. |
 | [#5816](https://github.com/tscircuit/core/pull/5816) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes autorouting failure due to unrotated plated holes in packed USB-C connectors, allowing successful routing of the board. |
 | [#5814](https://github.com/tscircuit/core/pull/5814) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds maxLength and maxViaCount properties to Simple Route JSON connections to enforce routing constraints for traces, preserving the distinction between terminal-to-terminal and terminal-to-net connections. |
 | [#5645](https://github.com/tscircuit/core/pull/5645) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes saved-phase failures by ensuring complete phases validate copper connectivity for export and replay, allowing shared anchor pads and junctions while rejecting cross-net connections. |
@@ -308,6 +326,8 @@ pie
 | [#5839](https://github.com/tscircuit/core/pull/5839) | 🐙 Minor | ⭐⭐ | imrishabh18 | Updates circuit-to-svg to version 0.0.463 and circuit-json-util to 0.0.135, aligning dependencies and ensuring compatibility with the latest runtime and CLI updates, while also validating authored waypoint paths and refreshing PCB snapshots. |
 | [#5685](https://github.com/tscircuit/core/pull/5685) | 🐙 Minor | ⭐⭐ | imrishabh18 | Captures and normalizes schematic and source warnings and errors for the NEMA 17 example, ensuring stability across test orders. |
 | [#5702](https://github.com/tscircuit/core/pull/5702) | 🐙 Minor | ⭐⭐ | imrishabh18 | Recomputes NEMA 17 diagnostics by rerunning pin specification and schematic checks using the installed Checks package, while retaining source-render annotations. |
+| [#5848](https://github.com/tscircuit/core/pull/5848) | 🐙 Minor | ⭐⭐ | seveibar | Fixes the issue where hand-placed components inside schematic sheets were not preserved during layout, ensuring correct rendering and placement of components in nested groups. |
+| [#5847](https://github.com/tscircuit/core/pull/5847) | 🐙 Minor | ⭐⭐ | seveibar | Reproduces the issue of manual schematic placement loss on the full USB-C Wi-Fi sounder board by adding a test that captures the current output and retains the original designs footprints and connections. |
 | [#5788](https://github.com/tscircuit/core/pull/5788) | 🐙 Minor | ⭐⭐ | seveibar | Adds support for explicit autorouter selection using tscircuit and tscircuit_beta, updating the props dependency and ensuring regression tests pass for the new configurations. |
 | [#5724](https://github.com/tscircuit/core/pull/5724) | 🐙 Minor | ⭐⭐ | rushabhcodes | Adds native support for pill solder-paste apertures in imported footprints, preserving stencil geometry and preventing duplicates during import. |
 | [#5692](https://github.com/tscircuit/core/pull/5692) | 🐙 Minor | ⭐⭐ | rushabhcodes | Fixes the issue where a TLV75533PDBVR regulator footprint loses the requested 90 rotation on its stencil apertures, causing misalignment with copper lands. |
@@ -317,21 +337,24 @@ pie
 | [#5756](https://github.com/tscircuit/core/pull/5756) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Bumps the tscircuitfanout-solver dependency from version 0.0.93 to 0.0.94, enhancing same-layer routing capabilities and ensuring compatibility with existing tests and structures. |
 | [#5706](https://github.com/tscircuit/core/pull/5706) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Updates the ngspice engine and SPICE exporter to use newer versions of dependencies, ensuring compatibility and improved functionality in simulation tests. |
 | [#5636](https://github.com/tscircuit/core/pull/5636) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Reproduces buffered output of completed routing work while the next autorouting phase is pending, ensuring that traces from the first phase remain accessible until the second phase is completed. |
+| [#5829](https://github.com/tscircuit/core/pull/5829) | 🐙 Minor | ⭐⭐ | Devesh36 | Fixes redundant copper trace between internally connected pins of the USBLC6 ESD protector in PCB design. |
+| [#5328](https://github.com/tscircuit/core/pull/5328) | 🐙 Minor | ⭐⭐ | aswadi | Fixes the emission of parsed numeric inductance in the source_component for inductors, ensuring SI unit strings are correctly converted to numeric henries. |
 | [#5510](https://github.com/tscircuit/core/pull/5510) | 🐙 Minor | ⭐⭐ | KrishnaX12 | Fixes the issue of redundant schematic wires being added to already connected pins during endpoint repair in the Cores schematic system. |
 | [#5492](https://github.com/tscircuit/core/pull/5492) | 🐙 Minor | ⭐⭐ | Abse2001 | Reproduces the issue of insufficient drill size for mouse bites on small boards, ensuring they remain drillable. |
 | [#5502](https://github.com/tscircuit/core/pull/5502) | 🐙 Minor | ⭐⭐ | Abse2001 | Adjusts mouse-bite drill sizes for small boards to ensure they remain drillable according to JLCPCBs specifications, while addressing clearance issues with traces. |
 
 <details>
-<summary>🐌 Tiny Contributions (44)</summary>
+<summary>🐌 Tiny Contributions (48)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#5841](https://github.com/tscircuit/core/pull/5841) | 🐌 Tiny | imrishabh18 | Update Cores circuit-json-to-gltf development dependency from 0.0.164 to 0.0.169, which includes a model-origin fix and visual regression tests. |
-| [#5701](https://github.com/tscircuit/core/pull/5701) | 🐌 Tiny | imrishabh18 | Updates the tscircuitchecks dependency to version 0.0.282, ensuring that Core honors explicit false power and ground pin requirements. |
+| [#5857](https://github.com/tscircuit/core/pull/5857) | 🐌 Tiny | tscircuitbot | Updates the tscircuitchecks package version from 0.0.282 to 0.0.283 in package.json |
 | [#5769](https://github.com/tscircuit/core/pull/5769) | 🐌 Tiny | tscircuitbot | Updates the tscircuitkrt-wasm package from version 0.1.1 to 0.1.10 in package.json |
 | [#5699](https://github.com/tscircuit/core/pull/5699) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitchecks package from 0.0.280 to 0.0.281 in package.json |
 | [#5694](https://github.com/tscircuit/core/pull/5694) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitfanout-solver package from 0.0.84 to 0.0.85 in package.json |
 | [#5688](https://github.com/tscircuit/core/pull/5688) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitchecks package from 0.0.279 to 0.0.280 in package.json |
+| [#5841](https://github.com/tscircuit/core/pull/5841) | 🐌 Tiny | imrishabh18 | Update Cores circuit-json-to-gltf development dependency from 0.0.164 to 0.0.169, which includes a model-origin fix and visual regression tests. |
+| [#5701](https://github.com/tscircuit/core/pull/5701) | 🐌 Tiny | imrishabh18 | Updates the tscircuitchecks dependency to version 0.0.282, ensuring that Core honors explicit false power and ground pin requirements. |
 | [#5810](https://github.com/tscircuit/core/pull/5810) | 🐌 Tiny | seveibar | Fixes default schematic box sizing for pin headers and two-pin connectors to comply with schematic placement checks. |
 | [#5768](https://github.com/tscircuit/core/pull/5768) | 🐌 Tiny | seveibar | Emit a Circuit JSON warning when a board, group, breakout, or routing phase explicitly supplies autorouter.traceClearance. The message directs authors to set minTraceToPadEdgeClearance on the board or routing phase. Keep serializing the legacy field for FreeRouting compatibility. Remove the SEPIC reproduction from 5686, its two annotated snapshots, and its private board fixture. The focused warning test covers zero, a unit string, and a second render. The existing subcircuit test still verifies legacy serialization. Companion TypeScript deprecation: https:github.comtscircuitpropspull1054. Supersedes the implementation direction in 5767. Typecheck and changed tests pass. Two neighboring legacy-router PCB snapshots differ locally by 0.27 and 0.48. Both differences reproduce on untouched main. |
 | [#5643](https://github.com/tscircuit/core/pull/5643) | 🐌 Tiny | seveibar | Adds four small TSX reproductions for the saved-phase bug in 5614, providing tests for various routing scenarios that previously resulted in errors during autorouting. |
@@ -339,6 +362,9 @@ pie
 | [#5723](https://github.com/tscircuit/core/pull/5723) | 🐌 Tiny | rushabhcodes | Reproduces the issue of missing support for oval and rotated paste-only apertures in the USB1046 footprint, ensuring six bottom apertures without top duplicates. |
 | [#5826](https://github.com/tscircuit/core/pull/5826) | 🐌 Tiny | rushabhcodes | Updates the kicad-to-circuit-json dependency to version 0.0.154, correcting fabrication-text and keep-upright angles in existing Arduino importreroute SVGs without altering the original KiCad board or workflows. |
 | [#5691](https://github.com/tscircuit/core/pull/5691) | 🐌 Tiny | rushabhcodes | Reproduces a bug where rotated paste-only apertures cannot be expressed, exposing a rotation bug in the Core. |
+| [#5862](https://github.com/tscircuit/core/pull/5862) | 🐌 Tiny | ShiboSoftwareDev | Pins the tscircuitcore-ddr-benchmark dependency to a specific commit to ensure consistent benchmark results and validation of routing performance. |
+| [#5865](https://github.com/tscircuit/core/pull/5865) | 🐌 Tiny | ShiboSoftwareDev | Pins the tscircuitngspice-spice-engine dependency to version 0.0.26, updating the cores real-simulation tests and adapter version for downstream dependency synchronization. |
+| [#5850](https://github.com/tscircuit/core/pull/5850) | 🐌 Tiny | ShiboSoftwareDev | Pins the tscircuitcore-ddr-benchmark dependency to a specific commit, ensuring consistent benchmark results with audited DDR skew constraints and updated report tables. |
 | [#5813](https://github.com/tscircuit/core/pull/5813) | 🐌 Tiny | ShiboSoftwareDev | Updates the autorouter version from 0.0.1154 to 0.0.1156 and the fanout solver version from 0.0.103 to 0.0.104, incorporating various improvements and fixes related to STM32MP157 BGA-channel routing and fanout solver recovery of same-net plane drops. |
 | [#5800](https://github.com/tscircuit/core/pull/5800) | 🐌 Tiny | ShiboSoftwareDev | Bumps tscircuitcapacity-autorouter from 0.0.1153 to 0.0.1154 to include updates that prevent greedy crossings of immutable copper while preserving movable-route crossings for downstream unraveling. |
 | [#5795](https://github.com/tscircuit/core/pull/5795) | 🐌 Tiny | ShiboSoftwareDev | Updates the tscircuitfanout-solver dependency from version 0.0.102 to 0.0.103, incorporating improvements from tscircuitfanout-solver369, which allows interior plane pads to utilize the existing centered-escape pass after original candidates while maintaining clearance checks. |
@@ -373,6 +399,131 @@ pie
 
 </details>
 
+### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#4162](https://github.com/tscircuit/tscircuit-autorouter/pull/4162) | 🐳 Major | ⭐⭐⭐ | 0hmX | Fixes power trace width expansion when connections share a pad, ensuring the widest trace width is used for merged nets. |
+| [#4163](https://github.com/tscircuit/tscircuit-autorouter/pull/4163) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Move high-density trace conversion into libutils and update the Pipeline 7 and Pipeline 9 callers and tests to use the shared module. This refactor targets main directly. The branch-width work remains in 4008. |
+| [#3964](https://github.com/tscircuit/tscircuit-autorouter/pull/3964) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Fixes phantom via repair on the RP2040 motor controller by ensuring existing plated-hole transitions are not treated as new vias. |
+| [#4130](https://github.com/tscircuit/tscircuit-autorouter/pull/4130) | 🐳 Major | ⭐⭐⭐ | seveibar | Reproduce high-density routing cannot complete the GND connection on the Four-port USB hub source(https:github.comtscircuitbasic-usbc-devicesblob4a134c7046b91a66ba77106b4bca589d7c00aaa8hub.circuit.tsx). This capture retains the board placement, connections and design rules and replaces the board-level router with the default local Pipeline 9. The input has 55 connections and 356 obstacles. The board uses tscircuit 0.0.3271 and the bundled autorouter 0.0.1147. Its routing result includes this finding:  Pipeline9 primary high-density routing failed: B01 failed: No path found for source_net_0_mst76; regional fallback failed: Failed to solve 1 nodes, cmn_29. err0: GrowShrinkHighDensityIntraNodeSolver failed after resizing to 8x. Last error: All solvers failed in hyper solver. Example failures: Candidate solution rejected by validator, Candidate solution rejected by validator, CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000), CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000), CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000). (capacity-autorouter0.0.1147) The routing failure leaves the board without global routes. From the repository root after installing dependencies, run: sh bun fixturesbug-reportsbugreport111-0535adreproduce.ts  The command exits nonzero while the reported defect reproduces. The adjacent Cosmos fixture opens the same input in the pipeline debugger. Public autorouting bug report(https:api.tscircuit.comautoroutingbug_reportsview?autorouting_bug_report_id0535adf0-8deb-4d71-82db-27c320495fb7) |
+| [#4124](https://github.com/tscircuit/tscircuit-autorouter/pull/4124) | 🐳 Major | ⭐⭐⭐ | seveibar | Reduces copper DRC violations from 7 to 6 by ensuring trace simplification respects the boards 0.20 mm trace-to-hole edge clearance. |
+| [#4075](https://github.com/tscircuit/tscircuit-autorouter/pull/4075) | 🐳 Major | ⭐⭐⭐ | seveibar | Reduces copper DRC violations on the gamepad SRJ from 9 to 7 by reserving via footprints during routing to prevent accidental contacts. |
+| [#4036](https://github.com/tscircuit/tscircuit-autorouter/pull/4036) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes autorouting failure when routing connections near fine-pitch pads by preserving pad escapes with a refined grid selection process. |
+| [#3969](https://github.com/tscircuit/tscircuit-autorouter/pull/3969) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes autorouting failure by utilizing the connectivity map for calculating the via lower bound in the polyline solver, resolving VREF fanout rejection issues. |
+| [#4000](https://github.com/tscircuit/tscircuit-autorouter/pull/4000) | 🐳 Major | ⭐⭐⭐ | mohan-bee | Pins the length-matching solver to a specific commit to fix routing issues with differential pairs. |
+| [#4109](https://github.com/tscircuit/tscircuit-autorouter/pull/4109) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure in STM32MP157 DDR board by reproducing the incomplete routing and updating the visual regression tests. |
+| [#4110](https://github.com/tscircuit/tscircuit-autorouter/pull/4110) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Completes the routing of all 72 DDR nets for the STM32MP157 by implementing a new BGA escape routing solver that effectively utilizes narrow pad channels, ensuring all connections are electrically complete and meet clearance requirements. |
+| [#4111](https://github.com/tscircuit/tscircuit-autorouter/pull/4111) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Replays the greedy finishing pass used by Pipeline9 on an anonymous captured circuit fragment: 18 regions, 19 ports, and immutable preloaded copper. The current dependency reports success with one impossible same-layer crossing. |
+| [#4059](https://github.com/tscircuit/tscircuit-autorouter/pull/4059) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Shares the clearance check for through-via positions across destination layers, reducing the number of checks significantly and improving routing performance. |
+| [#4112](https://github.com/tscircuit/tscircuit-autorouter/pull/4112) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes greedy autorouting failures by preventing crossings of immutable copper while allowing movable-route crossings for downstream unraveling. |
+| [#4096](https://github.com/tscircuit/tscircuit-autorouter/pull/4096) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Updates the A01 dependency to preserve terminal-adjacent via landings in Pipeline9, ensuring all routes are accepted without explicit vias at layer-change endpoints. |
+| [#4084](https://github.com/tscircuit/tscircuit-autorouter/pull/4084) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure when regional trace cuts overlap unrelated fixed terminals in immutable-preload mode. |
+| [#4083](https://github.com/tscircuit/tscircuit-autorouter/pull/4083) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure when regional trace cuts overlap an unrelated fixed terminal, causing repair to fail. |
+| [#4079](https://github.com/tscircuit/tscircuit-autorouter/pull/4079) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reduces memory allocations during net comparisons in native copper validation by directly comparing IDs instead of creating temporary arrays. |
+| [#4077](https://github.com/tscircuit/tscircuit-autorouter/pull/4077) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Updates the B01 dependency to improve routing efficiency and validation for high-density designs, specifically addressing through-vias near fixed endpoints. |
+| [#4071](https://github.com/tscircuit/tscircuit-autorouter/pull/4071) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Optimizes the detailed routing process by caching occupant lists for repeated via checks, resulting in significant runtime improvements across various boards. |
+| [#4068](https://github.com/tscircuit/tscircuit-autorouter/pull/4068) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Avoids retaining regional routing diagnostics by default, aligning with ordinary Pipeline 9 routing behavior to keep diagnostics off unless explicitly requested. |
+| [#4057](https://github.com/tscircuit/tscircuit-autorouter/pull/4057) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Implements B01s bounded fixed-wire rasterization to optimize the routing process by reducing unnecessary cell checks for long wires, improving CPU time and maintaining routing accuracy. |
+| [#4046](https://github.com/tscircuit/tscircuit-autorouter/pull/4046) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Stacked on the iCEPi visual repro 4038. The crossing-capacity fix in 4039 builds on this cleanup. The preloaded trace graph solver now coordinates three operations. It converts saved copper into layer-specific segments, assigns each segment to mesh boundaries, and adds crossing ports in clear intervals. Each operation lives in a module named for what it does. The solver shrinks from 490 to 144 lines. Pipeline 9 keeps the routing sequence, per-stage state, and public output methods in its entrypoint. The entrypoint shows where path search runs between the topology, high-density routing, trace refinement, and post-processing stages. Saved-trace updates and debug drawing have their own modules. A regression checks that each instance owns all 25 stage objects so the networked pipeline can replace its high-density stage independently. The entrypoint shrinks from 1,803 to 583 lines. The unfixed iCEPi repro still assigns both conflicting crossings and connects 16 of 50 nets. Both existing SVG snapshots pass. I also compared all 25 stage names and constructors, rendered graphics, previews, and final copper on a saved-trace fixture. The results matched in both layer and net colors. I reran all ten DDR TSX boards through tscircuit with this cleanup. Every native routing-phase input matched the release. All 460 emitted trace records, all 751 via records, and all physical and connectivity findings matched. The package build, TypeScript check, and all nine CI test shards passed. Cleanup CI(https:github.comtscircuittscircuit-autorouteractionsruns44870381311) Visual repro 4038(https:github.comtscircuittscircuit-autorouterpull4038)  Crossing-capacity fix 4039(https:github.comtscircuittscircuit-autorouterpull4039)  tscircuit code handbook(https:github.comtscircuithandbookblobmainguidescode.md) |
+| [#4051](https://github.com/tscircuit/tscircuit-autorouter/pull/4051) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting issue where unrelated copper is treated as connected due to matching net names in the connectivity map. |
+| [#4039](https://github.com/tscircuit/tscircuit-autorouter/pull/4039) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure by replanning DDR crossings that cannot fit beside fixed copper, allowing for improved connectivity on the iCEPi DDR board. |
+| [#4038](https://github.com/tscircuit/tscircuit-autorouter/pull/4038) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces a bug where overlapping DDR gap crossings in the iCEPi board cause routing failures due to insufficient spacing between traces. |
+| [#4030](https://github.com/tscircuit/tscircuit-autorouter/pull/4030) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Bounds clamping moves escape points on new routes that the force solver has already marked fixed, preserving the wire and its via together beside native fixed copper. |
+| [#4025](https://github.com/tscircuit/tscircuit-autorouter/pull/4025) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces DDR routing failures beside fixed bus copper for ButterStick and i.MX6 boards, ensuring accurate routing and continuity checks in high-density scenarios. |
+| [#4028](https://github.com/tscircuit/tscircuit-autorouter/pull/4028) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure by rejecting overlapping terminals in native regional routing, preventing impossible fixed endpoints before malformed via candidates. |
+| [#4026](https://github.com/tscircuit/tscircuit-autorouter/pull/4026) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure by preventing through-via assignments that overlap fixed DDR copper, ensuring proper routing on A64 and ButterStick boards. |
+| [#3985](https://github.com/tscircuit/tscircuit-autorouter/pull/3985) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Core replaces saved DDR routes with obstacle tiles, hiding their paths and net ownership. Keep them as native paths through graph planning and the existing detailed-routing and repair stages. Pass saved paths into force cleanup so it preserves their copper while moving new routes. |
+| [#3982](https://github.com/tscircuit/tscircuit-autorouter/pull/3982) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure when via seeding mistakes a shared PCB pad for a foreign crossing, allowing the native C18R37R38 fanout to utilize its via limit effectively. |
+| [#3981](https://github.com/tscircuit/tscircuit-autorouter/pull/3981) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes via limit exhaustion in the regulator feedback fanout when branches meet at a shared pad within the same electrical net. |
+| [#3967](https://github.com/tscircuit/tscircuit-autorouter/pull/3967) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces the native C2C3R1R2 VREF fanout rejection due to insufficient vias for routing. |
+| [#3960](https://github.com/tscircuit/tscircuit-autorouter/pull/3960) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Preserves legal routes when a nodes optimization violates via clearance, preventing signal vias from moving too close to DDR pads. |
+| [#3956](https://github.com/tscircuit/tscircuit-autorouter/pull/3956) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Captures a legal H616 regional route that force improvement moves too close to a DDR pad, creating four clearance errors. The regional solve then fails despite having a valid route available. |
+| [#3893](https://github.com/tscircuit/tscircuit-autorouter/pull/3893) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces the iCEPi CPUX terminal-layer failure using 24 captured route fragments and 32 nearby pads. The passing test records 12 terminals and 3 via sites. Once stitching succeeds, it runs native simplification; 3894 naturally updates the same SVG to 22 terminals and 1 via site. Remaining DRC findings stay visible. The whole plane repro captures 8,935 fragments and fails after 537559 connections. SVG rendering lives in fixture helpers; each test checks routing behavior. Focused snapshot(https:raw.githubusercontent.comtscircuittscircuit-autorouter93193735a959e0721fc7df083aaa7ab09eebf4d0testsrepro__snapshots__icepi-planar-stitch.snap.svg)  Whole plane snapshot(https:raw.githubusercontent.comtscircuittscircuit-autorouter93193735a959e0721fc7df083aaa7ab09eebf4d0testsrepro__snapshots__icepi-plane-stitch.snap.svg). |
+| [#3939](https://github.com/tscircuit/tscircuit-autorouter/pull/3939) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Validates all direct shortcuts and inset candidates against existing point and segment collision checks to prevent routing through neighboring pads, improving routing accuracy and reducing copper shorts. |
+| [#3937](https://github.com/tscircuit/tscircuit-autorouter/pull/3937) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes native trace clearance issue caused by via cleanup that leaves a trace gap violating clearance rules. |
+| [#3931](https://github.com/tscircuit/tscircuit-autorouter/pull/3931) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the autorouting process to reuse existing vias when escaping BGA pads, improving routing efficiency and maintaining connectivity without introducing new vias. |
+| [#3929](https://github.com/tscircuit/tscircuit-autorouter/pull/3929) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the issue where the BGA escape routing adds an additional via beside an existing via-in-pad instead of utilizing the existing via, leading to unnecessary complexity in the routing. |
+| [#3919](https://github.com/tscircuit/tscircuit-autorouter/pull/3919) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Captures a native 4  3 mm cut of ButterSticks plane-escape search and measures repeated adjacency scans while freezing all ordered candidates and their parent chains. |
+| [#3903](https://github.com/tscircuit/tscircuit-autorouter/pull/3903) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes DDR routing issues on the i.MX6 PCB by implementing pad-safe via repairs, eliminating DRC errors and preventing regression. |
+| [#3889](https://github.com/tscircuit/tscircuit-autorouter/pull/3889) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces the routing of the native A13 board after all data phases, capturing remaining connections and DRC findings without altering pads, placement, or layers. |
+| [#3952](https://github.com/tscircuit/tscircuit-autorouter/pull/3952) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Prevents worsening existing clearance violations against fixed DDR vias during force improvement, allowing the i.MX6 to repair its remaining DRC error. |
+| [#3932](https://github.com/tscircuit/tscircuit-autorouter/pull/3932) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reduces clearance search time by 89.9 by avoiding repeated pad-alias lookups, preserving paths and empty-alias behavior. |
+| [#3920](https://github.com/tscircuit/tscircuit-autorouter/pull/3920) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Avoid rescanning a capacity region when an earlier expansion already has an equal or lower cost. Cheaper later approaches still expand. Stacked on 3919. |
+| [#3912](https://github.com/tscircuit/tscircuit-autorouter/pull/3912) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes copper handoff validation by checking exact repairs against cached reference DRC, ensuring circuit-error priority is preserved and final fixed-copper validation is accurate. |
+| [#3900](https://github.com/tscircuit/tscircuit-autorouter/pull/3900) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the issue of fixed vias adding rows and columns to the BGA pad-channel grid by generating extra channels from component pads. |
+| [#3894](https://github.com/tscircuit/tscircuit-autorouter/pull/3894) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes CPUX stitching bypassing an existing via and missing the bottom-layer terminal. |
+| [#3938](https://github.com/tscircuit/tscircuit-autorouter/pull/3938) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Preserves a safe layer detour when via removal introduces a new native trace-pair violation, ensuring that the indexed DRC count remains unchanged while reducing native DRC errors from 10 to 9. |
+| [#4002](https://github.com/tscircuit/tscircuit-autorouter/pull/4002) | 🐳 Major | ⭐⭐⭐ | GokulPandi-M | Fixes autorouting failure by ensuring that Pipeline 9 respects layer restrictions for bus connections, preventing routing on forbidden layers. |
+| [#3971](https://github.com/tscircuit/tscircuit-autorouter/pull/3971) | 🐳 Major | ⭐⭐⭐ | AnasSarkiz | Fixes the autorouters behavior to reject candidates that introduce new copper contacts, preventing potential design rule violations during the routing process. |
+| [#3970](https://github.com/tscircuit/tscircuit-autorouter/pull/3970) | 🐳 Major | ⭐⭐⭐ | AnasSarkiz | Fixes a bug where the joint DRC repairs refine step incorrectly moves a trace onto pads of other nets, leading to unintended overlaps. |
+| [#4074](https://github.com/tscircuit/tscircuit-autorouter/pull/4074) | 🐙 Minor | ⭐⭐ | seveibar | 9 copper DRC violations, including a ground escape via touching the left-stick X trace. The fixture is the original four-layer boards Simple Route JSON captured at the autorouter boundary. The test runs the checkouts Pipeline 9 with caching disabled, using the boards clearances. It needs no gamepad-specific tscircuit installation. The purple rings mark every reported location. !Routed Bluetooth gamepad with nine copper DRC locations(https:github.comtscircuittscircuit-autorouterblobf2991dbb73073b8add7ef696f28acd285e0730bftestsrepro__snapshots__bluetooth-gamepad-drc.snap.svg?rawtrue) Run bun test --timeout 120000 testsreprobluetooth-gamepad-drc.test.ts. The full board renderer also reported a crystal trace over its 10 mm limit, bringing its total to 10. That source-level limit is absent from the captured input. The SRJ test measures copper violations and leaves poured-plane connectivity to the full-board audit. The stacked fix is 4075. |
+| [#4078](https://github.com/tscircuit/tscircuit-autorouter/pull/4078) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Captures 8,192 actual A03 segment-validation requests from the unchanged ButterStick DDR TSX board, preserving every decision: 6,186 accepted and 2,006 rejected. |
+| [#3949](https://github.com/tscircuit/tscircuit-autorouter/pull/3949) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Captures i.MX6 DDR routing beside completed data-byte copper, retaining 53404 connected nets and addressing one physical clearance error. |
+
+<details>
+<summary>🐌 Tiny Contributions (55)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#4170](https://github.com/tscircuit/tscircuit-autorouter/pull/4170) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4164](https://github.com/tscircuit/tscircuit-autorouter/pull/4164) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4156](https://github.com/tscircuit/tscircuit-autorouter/pull/4156) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4143](https://github.com/tscircuit/tscircuit-autorouter/pull/4143) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4125](https://github.com/tscircuit/tscircuit-autorouter/pull/4125) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4123](https://github.com/tscircuit/tscircuit-autorouter/pull/4123) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4120](https://github.com/tscircuit/tscircuit-autorouter/pull/4120) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4142](https://github.com/tscircuit/tscircuit-autorouter/pull/4142) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4117](https://github.com/tscircuit/tscircuit-autorouter/pull/4117) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4108](https://github.com/tscircuit/tscircuit-autorouter/pull/4108) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4087](https://github.com/tscircuit/tscircuit-autorouter/pull/4087) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4086](https://github.com/tscircuit/tscircuit-autorouter/pull/4086) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4081](https://github.com/tscircuit/tscircuit-autorouter/pull/4081) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4076](https://github.com/tscircuit/tscircuit-autorouter/pull/4076) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4070](https://github.com/tscircuit/tscircuit-autorouter/pull/4070) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4066](https://github.com/tscircuit/tscircuit-autorouter/pull/4066) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4045](https://github.com/tscircuit/tscircuit-autorouter/pull/4045) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4055](https://github.com/tscircuit/tscircuit-autorouter/pull/4055) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4054](https://github.com/tscircuit/tscircuit-autorouter/pull/4054) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4037](https://github.com/tscircuit/tscircuit-autorouter/pull/4037) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4035](https://github.com/tscircuit/tscircuit-autorouter/pull/4035) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4033](https://github.com/tscircuit/tscircuit-autorouter/pull/4033) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4024](https://github.com/tscircuit/tscircuit-autorouter/pull/4024) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4020](https://github.com/tscircuit/tscircuit-autorouter/pull/4020) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4017](https://github.com/tscircuit/tscircuit-autorouter/pull/4017) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#4005](https://github.com/tscircuit/tscircuit-autorouter/pull/4005) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3991](https://github.com/tscircuit/tscircuit-autorouter/pull/3991) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3986](https://github.com/tscircuit/tscircuit-autorouter/pull/3986) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3975](https://github.com/tscircuit/tscircuit-autorouter/pull/3975) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3965](https://github.com/tscircuit/tscircuit-autorouter/pull/3965) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3961](https://github.com/tscircuit/tscircuit-autorouter/pull/3961) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3957](https://github.com/tscircuit/tscircuit-autorouter/pull/3957) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3954](https://github.com/tscircuit/tscircuit-autorouter/pull/3954) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3947](https://github.com/tscircuit/tscircuit-autorouter/pull/3947) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3942](https://github.com/tscircuit/tscircuit-autorouter/pull/3942) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3941](https://github.com/tscircuit/tscircuit-autorouter/pull/3941) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3936](https://github.com/tscircuit/tscircuit-autorouter/pull/3936) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3925](https://github.com/tscircuit/tscircuit-autorouter/pull/3925) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3916](https://github.com/tscircuit/tscircuit-autorouter/pull/3916) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3913](https://github.com/tscircuit/tscircuit-autorouter/pull/3913) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3908](https://github.com/tscircuit/tscircuit-autorouter/pull/3908) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3905](https://github.com/tscircuit/tscircuit-autorouter/pull/3905) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3948](https://github.com/tscircuit/tscircuit-autorouter/pull/3948) | 🐌 Tiny | imrishabh18 | The BeaglePlay DDR4 fixture needs pad-to-port metadata so DRC can recognize its 102 terminals. Add that metadata and run the existing input through Pipeline 9 in the BeaglePlay test. The test checks all 51 routes, all 102 connected ports, zero DRC error messages under the boards 0.081 mm clearance, and the platforms routed SVG snapshot. Linux and macOS each have a recorded snapshot. Remove the provenance Markdown and routedunrouted PNGs. Keep the original hardware license and interactive fixture. CI assigns this test the existing full-board routing timeout. The annotated input routes cleanly with the existing solver. Validation runs use effort 1 with caching disabled. |
+| [#3958](https://github.com/tscircuit/tscircuit-autorouter/pull/3958) | 🐌 Tiny | imrishabh18 | Adds the captured input, debugger fixture, and default Pipeline 9 snapshot test for the RP2040 motor controller(https:tscircuit.comimrishabh18rp2040-motor-controllerpcb) with saved routes removed. The generated snapshot reports 2 relaxed DRC errors. Validated with the focused snapshot test and TypeScript check. |
+| [#4141](https://github.com/tscircuit/tscircuit-autorouter/pull/4141) | 🐌 Tiny | seveibar | Add a Preview This PR section above the benchmark HOWTO in tscircuitbots opening comment. It explains who can run preview, which PRs qualify, and where to find the Vercel link. |
+| [#3995](https://github.com/tscircuit/tscircuit-autorouter/pull/3995) | 🐌 Tiny | mohan-bee | Run Pipeline 9 once on the full 82  59 mm, six-layer RK3506G2 test layout. The fixture relocates and resizes two DSI_D0 terminal pads as a staggered breakout and keeps the other 340 obstacles. With the previous solver pin, DSI_D0 has 2.989 mm of length skew against a 0.250 mm limit. The normal solve exports all four nets, and the snapshot records the measured skew and copper. Baseline SVG(https:github.comtscircuittscircuit-autorouterblob15fc92f19d004f151f07ae8f49d9da6c7549b5abtestsbugs__snapshots__pipeline9-differential-pair-partial-output.snap.svg) The stack uses this one fixture and test on both branches. The solver pin and the resulting SVG change in 4000. |
+| [#4095](https://github.com/tscircuit/tscircuit-autorouter/pull/4095) | 🐌 Tiny | ShiboSoftwareDev | Reproduces a failure in the Pipeline9 autorouting process due to missing via landings in a captured circuit region. |
+| [#4067](https://github.com/tscircuit/tscircuit-autorouter/pull/4067) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the retained search diagnostics for an unsuccessful ButterStick candidate, capturing 1,688,757 explored nodes during the routing process. |
+| [#4058](https://github.com/tscircuit/tscircuit-autorouter/pull/4058) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the repeated via-clearance checks on the ButterStick board, capturing a completed regional search and validating connectivity without changing existing assertions. |
+| [#4027](https://github.com/tscircuit/tscircuit-autorouter/pull/4027) | 🐌 Tiny | ShiboSoftwareDev | Reproduces A01s missing-via exception from the original OrangeCrab-local TSX on tscircuit 0.0.3257  core 0.0.2436  autorouter 0.0.1139. |
+| [#4021](https://github.com/tscircuit/tscircuit-autorouter/pull/4021) | 🐌 Tiny | ShiboSoftwareDev | Updates native-trace dependencies to their merged main revisions, including a distance-rounding fix that preserves portable scoring and restores previous Game Boy and Muse route geometry. |
+| [#4029](https://github.com/tscircuit/tscircuit-autorouter/pull/4029) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the routing of H616 DDR signals alongside fixed data paths, documenting physical findings without altering production code. |
+| [#3911](https://github.com/tscircuit/tscircuit-autorouter/pull/3911) | 🐌 Tiny | ShiboSoftwareDev | Refreshes the existing SEPIC repro with a fixed 6  4 mm view of the native copper, surrounding pads, and measured same-layer clearance, capturing the failing route before the fix. |
+| [#3917](https://github.com/tscircuit/tscircuit-autorouter/pull/3917) | 🐌 Tiny | ShiboSoftwareDev | Adds a fixed-camera native PCB view of the A13 trace contacting a neighboring RAM pad BALL_C3, while keeping the existing full-board clearance snapshot unchanged. |
+| [#3902](https://github.com/tscircuit/tscircuit-autorouter/pull/3902) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the remaining bank-address via clock-enable trace clearance error on the native i.MX6 PCB, with all 53 DDR nets connected. |
+
+</details>
+
 ### [tscircuit/ibis-to-spice](https://github.com/tscircuit/ibis-to-spice)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -386,8 +537,8 @@ pie
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#99](https://github.com/tscircuit/signal-integrity-pipeline/pull/99) | 🐳 Major | ⭐⭐⭐ | 0hmX | Prepare each PCB transient channel simulation written by core. Validate its driverreceiver channels, scope the copper and IBIS models, and lower the settings, stimuli and probes used by routed admission in 100. Stacked on 120.  New concepts Channel simulation preparation. prepareChannelSimulationById prepares the drivers, receivers, timing and stimuli for one simulation. Model, supply and control helpers return updated Circuit JSON. Declared and nominal supplies. A declared voltage source stays with the retained nets it supplies. The IBIS reference voltages bias unpowered rails. Pseudo-random binary sequence (PRBS). The seed determines the starting phase. Preparation generates only the bits needed for the recording, up to the pattern limit. Adjacent routed segments may share a physical endpoint. Constant drivers hold their level from t0 regardless of the stimulus offset.  Aggressor states Use aggressorPattern to set a quiet level or switching pattern, or set aggressorDisabled for high impedance. Every retained output-capable pin outside the declared driver roles needs an explicit state, including bidirectional receivers. Admission names the pins in the error if their state is missing. This PR pins the core preview from tscircuitcore5804 so TSX emits the aggressor fields. Switch the preview pin to the release when it ships. |
-| [#120](https://github.com/tscircuit/signal-integrity-pipeline/pull/120) | 🐳 Major | ⭐⭐⭐ | 0hmX | Adds CopperScope for routed channel extraction. Stacked on 158. Routed admission in 99 supplies the distance in millimetres and defaults to 32 mm. Scope rejects non-finite or negative distances with simulation_scope. |
 | [#158](https://github.com/tscircuit/signal-integrity-pipeline/pull/158) | 🐳 Major | ⭐⭐⭐ | 0hmX | Refactors the filtering of Circuit JSON records using the cju utility, ensuring local bookkeeping and maintaining existing checks for cardinality and duplicate identifiers. |
+| [#120](https://github.com/tscircuit/signal-integrity-pipeline/pull/120) | 🐳 Major | ⭐⭐⭐ | 0hmX | Adds CopperScope for routed channel extraction. Stacked on 158. Routed admission in 99 supplies the distance in millimetres and defaults to 32 mm. Scope rejects non-finite or negative distances with simulation_scope. |
 | [#141](https://github.com/tscircuit/signal-integrity-pipeline/pull/141) | 🐳 Major | ⭐⭐⭐ | 0hmX | Adds edgeDurationSeconds to estimate the 1090 edge duration for channel endpoints, enabling accurate transient timestep sizing across fixtures. |
 | [#118](https://github.com/tscircuit/signal-integrity-pipeline/pull/118) | 🐳 Major | ⭐⭐⭐ | 0hmX | Resolves the buffer, pin capabilities and reference rails for selected channel endpoints. Stacked on 117. The inspection exports have no production callers in this layer. 99 uses them to prepare channels. Inspection resolves the selected pins rail overrides and vendor pin mappings through resolveIbisReferences and checks clamp voltages at the typical corner. It gets the typical voltages from resolveIbisReferenceVoltages, the same function the converter uses. It checks every selected pin binding for duplicates before skipping power, ground and unconnected pins. IBIS rail ports (7)(https:github.comtscircuitibis-to-spicepull7)  Shared reference voltages (8)(https:github.comtscircuitibis-to-spicepull8) |
 | [#98](https://github.com/tscircuit/signal-integrity-pipeline/pull/98) | 🐳 Major | ⭐⭐⭐ | 0hmX | Removes the 3D extraction pipeline, DDR report and viewer, old observation folding, and their examples and tests. Retains the independently usable board, simulation, and adapter utilities. |
@@ -426,13 +577,35 @@ pie
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#2](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/2) | 🐳 Major | ⭐⭐⭐ | 0hmX | Adds getDifferentialPairPhaseSkew( circuitJson ), a pure function that computes KiCad-style phase skew for every routed differential pair, so pcb-viewer can draw it on demand instead of reading it from Circuit JSON. It ports the calculation from tscircuitcore 5749 (closed) and the via length through the stackup from core 5752 (closed), with the shared contracts snake_case output: source_bus_id, positive_trace  negative_trace (pcb_trace_id, max_phase_skew, min_phase_skew, segments with optional phase_skew), max_abs_phase_skew, end_to_end_length_delta (always present) and max_length_skew (copied from differentialpair maxLengthSkew, an unsigned limit). Reads Circuit JSON through tscircuitcircuit-json-util (cju) and finds each pairs board with its createBoardOwnerMap. Reads the boards thickness and num_layers through circuit-jsons pcb_board schema, so a record that omits them gets the schemas defaults. Walks copper with the copper renderers layer rules: wire points on one layer, a wire point and a via on one of the vias layers, a through pad across its pad. A via joins its two layers whichever way it is stored, also at the start of a route. Two vias in a row, as core routes pcbPath vias, join on the layer they share. Measures routing inside the start and end pads, and on either side of a via inside its pad where the vias outer diameter is known, straight from the pad centre to where the route leaves the pad, or to a via inside the pad, as KiCads tuning path does, so a jog hidden in a pad, its drill or a vias pad adds no phase skew. Pads are measured by their outer copper outline as renderers draw it (drill included, oval plated pads as ellipses), built from each pad shapes fields without throwing; each leg is checked for where it first crosses the outline (points on an edge count as inside), so a leg through the notch of a concave pad leaves the pad there however the route is split. Routing whose straight replacement would cross a concave pads notch is kept as drawn. Cuts teardrop tapers into constant-width wire points every 0.01 mm of width change before clipping, so matching and drawing use the local width, also where a taper crosses a pad edge. A via counts its height through the boards stackup; without one, it is estimated by spacing copper layers evenly through the board thickness by num_layers. That is close to KiCads default stackup but not equal (KiCad takes off copper and solder mask first: 1.58 mm rather than 1.6 mm top to bottom on a 1.6 mm 4-layer board). Ramps are sampled every 0.05 mm, joining neighbours with the same rounded phase skew (10 nm), so sub-micron ramps keep their gradient. A pair is left out, without throwing or hiding other pairs, when a side is routed as several pcb_traces or is unrouted, the same trace is on both sides, a trace has no planar copper (a via in pad joining two pads at one point), a traces copper jumps layers without a via or changes to a copper layer its board doesnt have, or its boards dimensions fail the pcb_board schema or still give no finite length. Deleted with the core render phase: the stored element and its colours, the runtime error for a failed pair, the split-pair warning, and the teardropasync-routing ordering (a pure function measures whatever Circuit JSON it is given). Functions return new values instead of mutating their arguments (walk joining, interval insertion, phase skew range), per AGENTS.md. Tests: the TSX USB reproduction (core 5747), the KiCad-ported behaviour tests from core 5749 and pcb-viewer fix6calc, and regression tests for the cases above, all rendered through tscircuitcore, with SVG snapshots of the overlay in KiCads colours. Packages: adds tscircuitcircuit-json-util as a dependency; tscircuitcore, tscircuit, tscircuitchecks, react and bun-match-svg as test-only dev dependencies. Install preview (no build step; ships lib.ts): bash bun add https:pkg.pr.newtscircuitcircuit-json-to-differential-pair-phase-skew0836b0e  mermaid flowchart LR Asource_bus with differential_pair -- Bone pcb_trace per side B -- Tcut tapers into constant-width pieces T -- Cclip routing inside start and end pads and via pads C -- Dwalk copper by renderer layer rules, vias by stackup height, tapers by local width D --no planar copper or a layer jump Xpair left out D -- Eorient walks from output ports E -- Ffind parallel, close coupled runs F -- Gspans: unknown, measured, interpolated G -- Hsegments every 0.05 mm with phase_skew, equal neighbours joined  Stacked on: 1 (scaffold).  New concepts Phase skew: at a point along a pair, how much farther this trace has run than its partner (mm). It is signed per trace, as KiCad shows it: positive_trace holds P minus N and negative_trace holds N minus P, so the two traces show opposite colours at the same place. end_to_end_length_delta is always P minus N. Coupled run: a stretch where both traces run parallel (cosine  0.9999) on one layer within (gap  mean width)  1.2. Phase skew is known inside runs, interpolated between them, and unknown before the first and after the last. Pad clipping: KiCads OptimiseTraceInPad and OptimiseTraceInVia. From the end of a route inside its pad, the measured path runs straight to the first point where the route leaves the pads outer outline, or to a via inside the pad; the wire points in between are dropped. Routing that already runs straight is left as it is. Behaviour differs from core in one place: a via counts its height through the boards stackup (or an estimate from evenly spaced layers through its thickness without one), as core 5752 proposed. Core main still counts 1.6 mm per via in pcb_trace.trace_length, so on boards that arent 1.6 mm thick end_to_end_length_delta can differ from cores bus length skew check. |
+| [#8](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/8) | 🐙 Minor | ⭐⭐ | 0hmX | Each stroke now carries the pcb_trace_id of the trace it covers. |
+| [#5](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/5) | 🐙 Minor | ⭐⭐ | 0hmX | Export getDifferentialPairPhaseSkewStrokes so renderers can draw the same opaque RGB overlay from Circuit JSON. |
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (4)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#7](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/7) | 🐌 Tiny | 0hmX | Ship lib directly in GitHub release and PR preview tarballs, following the handbooks source package layout. Enable strict indexed access and override checks for lib in CI. Based on main. |
+| [#6](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/6) | 🐌 Tiny | 0hmX | Changes the release process from npm to GitHub Releases due to permission issues with npm, allowing users to install the package directly from GitHub Releases instead. |
+| [#4](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/4) | 🐌 Tiny | 0hmX | This PR enables the package to be published to npm on every push to the main branch, transitioning from a development preview to a stable release. |
 | [#1](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/1) | 🐌 Tiny | 0hmX | Sets up the package so the differential pair phase skew calculation can land in the next PR. |
+
+</details>
+
+### [tscircuit/tscircuit-pullrequest-deterministic-checks](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#3](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks/pull/3) | 🐳 Major | ⭐⭐⭐ | 0hmX | Stacked on 2. Fixes the bugs an independent review of 2 confirmed. Most were inherited from the original tool, not introduced by the port. Two commits, so the reproductions can be checked on their own: 1. Add reproductions: 11 tests marked test.failing. On the unfixed code, each one fails for exactly the reported bug. 2. Fix: the fixes; the reproductions become regular tests.  Finding  Fix  ------  A bare --pr 1 could return another repos cached PR  Cache bare numbers per directory   A push between reads could cache the newer diff under the older head SHA  Always diff the exact base...head commits   A truncated GitHub tree silently skipped files  Fail with an error that suggests checking a local clone    counter read as a header; non-ASCII paths dropped; diff.noprefix broke local diffs  Hunks end by their  counts, git-quoted paths are decoded, local diffs force ab prefixes   --checks deps matched nothing  Filter findings, not checks, by ID prefix   Deleting the only test workflow was a pre-existing warning  A finding on a directory belongs to a change inside it   Code-analysis results shared between test and non-test files; a parameter added on its own line wasnt checked  Cache by path  content; any added line in a signature counts   binscripts entries treated as dependencies; expect(existsSync(x)) treated as a CI skip  Only real dependency sections count; only conditional skips are flagged   A corrupt cache entry aborted every run  Corrupt entries are a miss; writes are atomic; cache version bumped to v2   bun run check was missing after the port  Restored   Re-review follow-up (third commit) A second independent review confirmed all 11 reproductions fail on the unfixed code for the stated bug, and found variants the first fixes missed. Each one now has a test that fails on the previous commit: The cache version is also applied under a custom PULLREQUEST_DETERMINISTIC_CHECKS_CACHE_DIR, and an entry with no payload counts as a miss. Bare PR numbers are also scoped by GH_REPO and GH_HOST. An invalid package.json or biome.json is reported as a finding instead of aborting the run. A URL dependency is caught even when another section declares the same name. The CI-skip rule now also catches guards written with  and ?, and no longer flags guards that throw or assert. Editing another workflow no longer promotes an existing missing-test-workflow gap to an error, while renaming the test workflow out of the directory now does. Pure renames, mode-only changes with  b in the name, emoji paths and CRLF headers keep their paths. Editing only an arrow functions body no longer flags its signature. Two reproduction fixtures were corrected to exercise the reported bug. Checked on real PRs: diffs from the compare API match GitHubs file lists for merged PRs, an open PR and a merged PR from a fork. Known limitations, not fixed: if ( guards split across several lines, and the PR-source tests share one fake gh and process.cwd(), so they assume Buns default serial test run. GitHub-backed tests use a fake gh on PATH, so the suite never touches the network. runCommand now resolves executables against the current PATH so the fake is picked up. Verification: bun test: 31 pass. bunx tsc --noEmit, bun run format:check and bunx biome lint . are clean. Self-check (bun run check --base originbootstrap): 0 errors, 2 warnings, down from 3; the bin false positive is gone. Replaying every review comment from the past week at the commit it was left on, with a fresh cache: still 2127 caught. handbooktwo-parameter-rule findings went from 38 to 41 (multi-line signatures); depsunneeded-bumps from 34 to 27 (no more scriptsbin false positives). |
+| [#2](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks/pull/2) | 🐳 Major | ⭐⭐⭐ | 0hmX | Stacked on 1.  What changed Port the Bun CLI, audit command, TypeScript API, checks, and disk cache under lib with a package binary and bundled plop config. Keep check rules, IDs, levels, messages, review quotes, cache key formats, environment variables, flags, and exit behavior. The port changes the source hash used to invalidate cached findings. Document CLI and API usage, caching, review history, and the agent skill. Port the six original test cases and add four parser and disk-cache cases using a temporary cache. Keep the plop workflows unmodified. While this PR targets bootstrap, only bun test runs in CI; typecheck and format were run locally and run in CI once it targets main. |
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#4](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks/pull/4) | 🐌 Tiny | 0hmX | Adds a rule that a PR may change at most one line of any existing package.json, ensuring dependency changes are submitted as separate PRs to reduce noise. |
+| [#1](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks/pull/1) | 🐌 Tiny | 0hmX | Sets up the repository with GitHub workflows for format checking, testing, and type checking using Bun and Biome, ensuring deterministic checks for pull requests. |
 
 </details>
 
@@ -489,6 +662,31 @@ pie
 
 </details>
 
+### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#965](https://github.com/tscircuit/circuit-to-svg/pull/965) | 🐙 Minor | ⭐⭐ | 0hmX | Circuit-to-svgs published declarations should define the phase skew palette locally because the library is an internal bundled dependency. Removing declaration resolution for the library lets it ship plain TypeScript source while circuit-to-svg continues to bundle its JavaScript. |
+| [#962](https://github.com/tscircuit/circuit-to-svg/pull/962) | 🐙 Minor | ⭐⭐ | 0hmX | Add showDifferentialPairPhaseSkew to convertCircuitJsonToPcbSvg, off by default. It draws an opaque, round-capped stroke over the pairs copper and under its drills. White marks traces in step, blue marks traces ahead, red marks traces behind, and gray marks regions with unknown skew. The overlay follows the selected copper layer and accepts phaseSkewColors overrides. |
+| [#955](https://github.com/tscircuit/circuit-to-svg/pull/955) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes PCB bounds calculation by excluding system diagram geometry from SVG bounds, ensuring accurate rendering of PCB outlines. |
+| [#954](https://github.com/tscircuit/circuit-to-svg/pull/954) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds a visual snapshot of a PCB exported from Circuit JSON that captures the current output from the unmodified renderer, addressing the issue of PCB shrinking inside a large white bounds rectangle. |
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#966](https://github.com/tscircuit/circuit-to-svg/pull/966) | 🐌 Tiny | 0hmX | Updates the phase skew library dependency to version 0.0.5 and refreshes the Bun lockfile, ensuring compatibility and stability of the build. |
+| [#961](https://github.com/tscircuit/circuit-to-svg/pull/961) | 🐌 Tiny | seveibar | Reads the schematic_length_unit of each geometry record before schematic bounds and SVG rendering, ensuring that mm, inch, and legacy schematic records are rendered at the same physical scale. |
+
+</details>
+
+### [tscircuit/circuit-to-canvas](https://github.com/tscircuit/circuit-to-canvas)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#327](https://github.com/tscircuit/circuit-to-canvas/pull/327) | 🐙 Minor | ⭐⭐ | 0hmX | Add showDifferentialPairPhaseSkew to drawElements to redraw differential pair traces as opaque, round-capped strokes, indicating phase skew with color coding. |
+
 ### [tscircuit/jlcpcb-manufacturing-specs](https://github.com/tscircuit/jlcpcb-manufacturing-specs)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -508,265 +706,36 @@ pie
 
 </details>
 
-### [tscircuit/jlcsearch](https://github.com/tscircuit/jlcsearch)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#657](https://github.com/tscircuit/jlcsearch/pull/657) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Optimizes search functionality by incorporating package codes into the text index, reducing candidate results and improving search speed. |
-| [#651](https://github.com/tscircuit/jlcsearch/pull/651) | 🐳 Major | ⭐⭐⭐ | VB-Blue | Adds LED Indication - Discrete to ledTableSpec.listCandidateComponents so standard indicator LEDs are included in the led derived table and ledslist, while updating metadata parsing for discrete indicator LEDs. |
-
-### [tscircuit/tscircuit-autorouter](https://github.com/tscircuit/tscircuit-autorouter)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#3964](https://github.com/tscircuit/tscircuit-autorouter/pull/3964) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Fixes phantom via repair on the RP2040 motor controller by ensuring existing plated-hole transitions are not treated as new vias. |
-| [#4124](https://github.com/tscircuit/tscircuit-autorouter/pull/4124) | 🐳 Major | ⭐⭐⭐ | seveibar | Reduces copper DRC violations from 7 to 6 by ensuring trace simplification respects the boards 0.20 mm trace-to-hole edge clearance. |
-| [#4130](https://github.com/tscircuit/tscircuit-autorouter/pull/4130) | 🐳 Major | ⭐⭐⭐ | seveibar | Reproduce high-density routing cannot complete the GND connection on the Four-port USB hub source(https:github.comtscircuitbasic-usbc-devicesblob4a134c7046b91a66ba77106b4bca589d7c00aaa8hub.circuit.tsx). This capture retains the board placement, connections and design rules and replaces the board-level router with the default local Pipeline 9. The input has 55 connections and 356 obstacles. The board uses tscircuit 0.0.3271 and the bundled autorouter 0.0.1147. Its routing result includes this finding:  Pipeline9 primary high-density routing failed: B01 failed: No path found for source_net_0_mst76; regional fallback failed: Failed to solve 1 nodes, cmn_29. err0: GrowShrinkHighDensityIntraNodeSolver failed after resizing to 8x. Last error: All solvers failed in hyper solver. Example failures: Candidate solution rejected by validator, Candidate solution rejected by validator, CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000), CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000), CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000). (capacity-autorouter0.0.1147) The routing failure leaves the board without global routes. From the repository root after installing dependencies, run: sh bun fixturesbug-reportsbugreport111-0535adreproduce.ts  The command exits nonzero while the reported defect reproduces. The adjacent Cosmos fixture opens the same input in the pipeline debugger. Public autorouting bug report(https:api.tscircuit.comautoroutingbug_reportsview?autorouting_bug_report_id0535adf0-8deb-4d71-82db-27c320495fb7) |
-| [#4075](https://github.com/tscircuit/tscircuit-autorouter/pull/4075) | 🐳 Major | ⭐⭐⭐ | seveibar | Reduces copper DRC violations on the gamepad SRJ from 9 to 7 by reserving via footprints during routing to prevent accidental contacts. |
-| [#4036](https://github.com/tscircuit/tscircuit-autorouter/pull/4036) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes autorouting failure when routing connections near fine-pitch pads by preserving pad escapes with a refined grid selection process. |
-| [#3969](https://github.com/tscircuit/tscircuit-autorouter/pull/3969) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes autorouting failure by utilizing the connectivity map for calculating the via lower bound in the polyline solver, resolving VREF fanout rejection issues. |
-| [#4000](https://github.com/tscircuit/tscircuit-autorouter/pull/4000) | 🐳 Major | ⭐⭐⭐ | mohan-bee | Pins the length-matching solver to a specific commit to fix routing issues with differential pairs. |
-| [#4110](https://github.com/tscircuit/tscircuit-autorouter/pull/4110) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Completes the routing of all 72 DDR nets for the STM32MP157 by implementing a new BGA escape routing solver that effectively utilizes narrow pad channels, ensuring all connections are electrically complete and meet clearance requirements. |
-| [#4109](https://github.com/tscircuit/tscircuit-autorouter/pull/4109) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure in STM32MP157 DDR board by reproducing the incomplete routing and updating the visual regression tests. |
-| [#4111](https://github.com/tscircuit/tscircuit-autorouter/pull/4111) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Replays the greedy finishing pass used by Pipeline9 on an anonymous captured circuit fragment: 18 regions, 19 ports, and immutable preloaded copper. The current dependency reports success with one impossible same-layer crossing. |
-| [#4059](https://github.com/tscircuit/tscircuit-autorouter/pull/4059) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Shares the clearance check for through-via positions across destination layers, reducing the number of checks significantly and improving routing performance. |
-| [#4112](https://github.com/tscircuit/tscircuit-autorouter/pull/4112) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes greedy autorouting failures by preventing crossings of immutable copper while allowing movable-route crossings for downstream unraveling. |
-| [#4096](https://github.com/tscircuit/tscircuit-autorouter/pull/4096) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Updates the A01 dependency to preserve terminal-adjacent via landings in Pipeline9, ensuring all routes are accepted without explicit vias at layer-change endpoints. |
-| [#4084](https://github.com/tscircuit/tscircuit-autorouter/pull/4084) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure when regional trace cuts overlap unrelated fixed terminals in immutable-preload mode. |
-| [#4083](https://github.com/tscircuit/tscircuit-autorouter/pull/4083) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure when regional trace cuts overlap an unrelated fixed terminal, causing repair to fail. |
-| [#4079](https://github.com/tscircuit/tscircuit-autorouter/pull/4079) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reduces memory allocations during net comparisons in native copper validation by directly comparing IDs instead of creating temporary arrays. |
-| [#4077](https://github.com/tscircuit/tscircuit-autorouter/pull/4077) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Updates the B01 dependency to improve routing efficiency and validation for high-density designs, specifically addressing through-vias near fixed endpoints. |
-| [#4071](https://github.com/tscircuit/tscircuit-autorouter/pull/4071) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Optimizes the detailed routing process by caching occupant lists for repeated via checks, resulting in significant runtime improvements across various boards. |
-| [#4068](https://github.com/tscircuit/tscircuit-autorouter/pull/4068) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Avoids retaining regional routing diagnostics by default, aligning with ordinary Pipeline 9 routing behavior to keep diagnostics off unless explicitly requested. |
-| [#4057](https://github.com/tscircuit/tscircuit-autorouter/pull/4057) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Implements B01s bounded fixed-wire rasterization to optimize the routing process by reducing unnecessary cell checks for long wires, improving CPU time and maintaining routing accuracy. |
-| [#4046](https://github.com/tscircuit/tscircuit-autorouter/pull/4046) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Stacked on the iCEPi visual repro 4038. The crossing-capacity fix in 4039 builds on this cleanup. The preloaded trace graph solver now coordinates three operations. It converts saved copper into layer-specific segments, assigns each segment to mesh boundaries, and adds crossing ports in clear intervals. Each operation lives in a module named for what it does. The solver shrinks from 490 to 144 lines. Pipeline 9 keeps the routing sequence, per-stage state, and public output methods in its entrypoint. The entrypoint shows where path search runs between the topology, high-density routing, trace refinement, and post-processing stages. Saved-trace updates and debug drawing have their own modules. A regression checks that each instance owns all 25 stage objects so the networked pipeline can replace its high-density stage independently. The entrypoint shrinks from 1,803 to 583 lines. The unfixed iCEPi repro still assigns both conflicting crossings and connects 16 of 50 nets. Both existing SVG snapshots pass. I also compared all 25 stage names and constructors, rendered graphics, previews, and final copper on a saved-trace fixture. The results matched in both layer and net colors. I reran all ten DDR TSX boards through tscircuit with this cleanup. Every native routing-phase input matched the release. All 460 emitted trace records, all 751 via records, and all physical and connectivity findings matched. The package build, TypeScript check, and all nine CI test shards passed. Cleanup CI(https:github.comtscircuittscircuit-autorouteractionsruns44870381311) Visual repro 4038(https:github.comtscircuittscircuit-autorouterpull4038)  Crossing-capacity fix 4039(https:github.comtscircuittscircuit-autorouterpull4039)  tscircuit code handbook(https:github.comtscircuithandbookblobmainguidescode.md) |
-| [#4051](https://github.com/tscircuit/tscircuit-autorouter/pull/4051) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting issue where unrelated copper is treated as connected due to matching net names in the connectivity map. |
-| [#4039](https://github.com/tscircuit/tscircuit-autorouter/pull/4039) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure by replanning DDR crossings that cannot fit beside fixed copper, allowing for improved connectivity on the iCEPi DDR board. |
-| [#4038](https://github.com/tscircuit/tscircuit-autorouter/pull/4038) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces a bug where overlapping DDR gap crossings in the iCEPi board cause routing failures due to insufficient spacing between traces. |
-| [#4030](https://github.com/tscircuit/tscircuit-autorouter/pull/4030) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Bounds clamping moves escape points on new routes that the force solver has already marked fixed, preserving the wire and its via together beside native fixed copper. |
-| [#4025](https://github.com/tscircuit/tscircuit-autorouter/pull/4025) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces DDR routing failures beside fixed bus copper for ButterStick and i.MX6 boards, ensuring accurate routing and continuity checks in high-density scenarios. |
-| [#4028](https://github.com/tscircuit/tscircuit-autorouter/pull/4028) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure by rejecting overlapping terminals in native regional routing, preventing impossible fixed endpoints before malformed via candidates. |
-| [#4026](https://github.com/tscircuit/tscircuit-autorouter/pull/4026) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure by preventing through-via assignments that overlap fixed DDR copper, ensuring proper routing on A64 and ButterStick boards. |
-| [#3985](https://github.com/tscircuit/tscircuit-autorouter/pull/3985) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Core replaces saved DDR routes with obstacle tiles, hiding their paths and net ownership. Keep them as native paths through graph planning and the existing detailed-routing and repair stages. Pass saved paths into force cleanup so it preserves their copper while moving new routes. |
-| [#3982](https://github.com/tscircuit/tscircuit-autorouter/pull/3982) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes autorouting failure when via seeding mistakes a shared PCB pad for a foreign crossing, allowing the native C18R37R38 fanout to utilize its via limit effectively. |
-| [#3981](https://github.com/tscircuit/tscircuit-autorouter/pull/3981) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes via limit exhaustion in the regulator feedback fanout when branches meet at a shared pad within the same electrical net. |
-| [#3967](https://github.com/tscircuit/tscircuit-autorouter/pull/3967) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces the native C2C3R1R2 VREF fanout rejection due to insufficient vias for routing. |
-| [#3960](https://github.com/tscircuit/tscircuit-autorouter/pull/3960) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Preserves legal routes when a nodes optimization violates via clearance, preventing signal vias from moving too close to DDR pads. |
-| [#3956](https://github.com/tscircuit/tscircuit-autorouter/pull/3956) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Captures a legal H616 regional route that force improvement moves too close to a DDR pad, creating four clearance errors. The regional solve then fails despite having a valid route available. |
-| [#3893](https://github.com/tscircuit/tscircuit-autorouter/pull/3893) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces the iCEPi CPUX terminal-layer failure using 24 captured route fragments and 32 nearby pads. The passing test records 12 terminals and 3 via sites. Once stitching succeeds, it runs native simplification; 3894 naturally updates the same SVG to 22 terminals and 1 via site. Remaining DRC findings stay visible. The whole plane repro captures 8,935 fragments and fails after 537559 connections. SVG rendering lives in fixture helpers; each test checks routing behavior. Focused snapshot(https:raw.githubusercontent.comtscircuittscircuit-autorouter93193735a959e0721fc7df083aaa7ab09eebf4d0testsrepro__snapshots__icepi-planar-stitch.snap.svg)  Whole plane snapshot(https:raw.githubusercontent.comtscircuittscircuit-autorouter93193735a959e0721fc7df083aaa7ab09eebf4d0testsrepro__snapshots__icepi-plane-stitch.snap.svg). |
-| [#3939](https://github.com/tscircuit/tscircuit-autorouter/pull/3939) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Validates all direct shortcuts and inset candidates against existing point and segment collision checks to prevent routing through neighboring pads, improving routing accuracy and reducing copper shorts. |
-| [#3937](https://github.com/tscircuit/tscircuit-autorouter/pull/3937) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes native trace clearance issue caused by via cleanup that leaves a trace gap violating clearance rules. |
-| [#3931](https://github.com/tscircuit/tscircuit-autorouter/pull/3931) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the autorouting process to reuse existing vias when escaping BGA pads, improving routing efficiency and maintaining connectivity without introducing new vias. |
-| [#3929](https://github.com/tscircuit/tscircuit-autorouter/pull/3929) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the issue where the BGA escape routing adds an additional via beside an existing via-in-pad instead of utilizing the existing via, leading to unnecessary complexity in the routing. |
-| [#3919](https://github.com/tscircuit/tscircuit-autorouter/pull/3919) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Captures a native 4  3 mm cut of ButterSticks plane-escape search and measures repeated adjacency scans while freezing all ordered candidates and their parent chains. |
-| [#3903](https://github.com/tscircuit/tscircuit-autorouter/pull/3903) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes DDR routing issues on the i.MX6 PCB by implementing pad-safe via repairs, eliminating DRC errors and preventing regression. |
-| [#3889](https://github.com/tscircuit/tscircuit-autorouter/pull/3889) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces the routing of the native A13 board after all data phases, capturing remaining connections and DRC findings without altering pads, placement, or layers. |
-| [#3952](https://github.com/tscircuit/tscircuit-autorouter/pull/3952) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Prevents worsening existing clearance violations against fixed DDR vias during force improvement, allowing the i.MX6 to repair its remaining DRC error. |
-| [#3932](https://github.com/tscircuit/tscircuit-autorouter/pull/3932) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reduces clearance search time by 89.9 by avoiding repeated pad-alias lookups, preserving paths and empty-alias behavior. |
-| [#3920](https://github.com/tscircuit/tscircuit-autorouter/pull/3920) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Avoid rescanning a capacity region when an earlier expansion already has an equal or lower cost. Cheaper later approaches still expand. Stacked on 3919. |
-| [#3912](https://github.com/tscircuit/tscircuit-autorouter/pull/3912) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes copper handoff validation by checking exact repairs against cached reference DRC, ensuring circuit-error priority is preserved and final fixed-copper validation is accurate. |
-| [#3900](https://github.com/tscircuit/tscircuit-autorouter/pull/3900) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the issue of fixed vias adding rows and columns to the BGA pad-channel grid by generating extra channels from component pads. |
-| [#3894](https://github.com/tscircuit/tscircuit-autorouter/pull/3894) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes CPUX stitching bypassing an existing via and missing the bottom-layer terminal. |
-| [#3938](https://github.com/tscircuit/tscircuit-autorouter/pull/3938) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Preserves a safe layer detour when via removal introduces a new native trace-pair violation, ensuring that the indexed DRC count remains unchanged while reducing native DRC errors from 10 to 9. |
-| [#4002](https://github.com/tscircuit/tscircuit-autorouter/pull/4002) | 🐳 Major | ⭐⭐⭐ | GokulPandi-M | Fixes autorouting failure by ensuring that Pipeline 9 respects layer restrictions for bus connections, preventing routing on forbidden layers. |
-| [#3971](https://github.com/tscircuit/tscircuit-autorouter/pull/3971) | 🐳 Major | ⭐⭐⭐ | AnasSarkiz | Fixes the autorouters behavior to reject candidates that introduce new copper contacts, preventing potential design rule violations during the routing process. |
-| [#3970](https://github.com/tscircuit/tscircuit-autorouter/pull/3970) | 🐳 Major | ⭐⭐⭐ | AnasSarkiz | Fixes a bug where the joint DRC repairs refine step incorrectly moves a trace onto pads of other nets, leading to unintended overlaps. |
-| [#4074](https://github.com/tscircuit/tscircuit-autorouter/pull/4074) | 🐙 Minor | ⭐⭐ | seveibar | 9 copper DRC violations, including a ground escape via touching the left-stick X trace. The fixture is the original four-layer boards Simple Route JSON captured at the autorouter boundary. The test runs the checkouts Pipeline 9 with caching disabled, using the boards clearances. It needs no gamepad-specific tscircuit installation. The purple rings mark every reported location. !Routed Bluetooth gamepad with nine copper DRC locations(https:github.comtscircuittscircuit-autorouterblobf2991dbb73073b8add7ef696f28acd285e0730bftestsrepro__snapshots__bluetooth-gamepad-drc.snap.svg?rawtrue) Run bun test --timeout 120000 testsreprobluetooth-gamepad-drc.test.ts. The full board renderer also reported a crystal trace over its 10 mm limit, bringing its total to 10. That source-level limit is absent from the captured input. The SRJ test measures copper violations and leaves poured-plane connectivity to the full-board audit. The stacked fix is 4075. |
-| [#4078](https://github.com/tscircuit/tscircuit-autorouter/pull/4078) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Captures 8,192 actual A03 segment-validation requests from the unchanged ButterStick DDR TSX board, preserving every decision: 6,186 accepted and 2,006 rejected. |
-| [#3949](https://github.com/tscircuit/tscircuit-autorouter/pull/3949) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Captures i.MX6 DDR routing beside completed data-byte copper, retaining 53404 connected nets and addressing one physical clearance error. |
-
-<details>
-<summary>🐌 Tiny Contributions (53)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#3948](https://github.com/tscircuit/tscircuit-autorouter/pull/3948) | 🐌 Tiny | imrishabh18 | The BeaglePlay DDR4 fixture needs pad-to-port metadata so DRC can recognize its 102 terminals. Add that metadata and run the existing input through Pipeline 9 in the BeaglePlay test. The test checks all 51 routes, all 102 connected ports, zero DRC error messages under the boards 0.081 mm clearance, and the platforms routed SVG snapshot. Linux and macOS each have a recorded snapshot. Remove the provenance Markdown and routedunrouted PNGs. Keep the original hardware license and interactive fixture. CI assigns this test the existing full-board routing timeout. The annotated input routes cleanly with the existing solver. Validation runs use effort 1 with caching disabled. |
-| [#3958](https://github.com/tscircuit/tscircuit-autorouter/pull/3958) | 🐌 Tiny | imrishabh18 | Adds the captured input, debugger fixture, and default Pipeline 9 snapshot test for the RP2040 motor controller(https:tscircuit.comimrishabh18rp2040-motor-controllerpcb) with saved routes removed. The generated snapshot reports 2 relaxed DRC errors. Validated with the focused snapshot test and TypeScript check. |
-| [#4156](https://github.com/tscircuit/tscircuit-autorouter/pull/4156) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4143](https://github.com/tscircuit/tscircuit-autorouter/pull/4143) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4142](https://github.com/tscircuit/tscircuit-autorouter/pull/4142) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4125](https://github.com/tscircuit/tscircuit-autorouter/pull/4125) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4123](https://github.com/tscircuit/tscircuit-autorouter/pull/4123) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4120](https://github.com/tscircuit/tscircuit-autorouter/pull/4120) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4117](https://github.com/tscircuit/tscircuit-autorouter/pull/4117) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4108](https://github.com/tscircuit/tscircuit-autorouter/pull/4108) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4087](https://github.com/tscircuit/tscircuit-autorouter/pull/4087) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4086](https://github.com/tscircuit/tscircuit-autorouter/pull/4086) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4081](https://github.com/tscircuit/tscircuit-autorouter/pull/4081) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4076](https://github.com/tscircuit/tscircuit-autorouter/pull/4076) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4070](https://github.com/tscircuit/tscircuit-autorouter/pull/4070) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4066](https://github.com/tscircuit/tscircuit-autorouter/pull/4066) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4045](https://github.com/tscircuit/tscircuit-autorouter/pull/4045) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4055](https://github.com/tscircuit/tscircuit-autorouter/pull/4055) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4054](https://github.com/tscircuit/tscircuit-autorouter/pull/4054) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4037](https://github.com/tscircuit/tscircuit-autorouter/pull/4037) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4035](https://github.com/tscircuit/tscircuit-autorouter/pull/4035) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4033](https://github.com/tscircuit/tscircuit-autorouter/pull/4033) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4024](https://github.com/tscircuit/tscircuit-autorouter/pull/4024) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4020](https://github.com/tscircuit/tscircuit-autorouter/pull/4020) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4017](https://github.com/tscircuit/tscircuit-autorouter/pull/4017) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4005](https://github.com/tscircuit/tscircuit-autorouter/pull/4005) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3991](https://github.com/tscircuit/tscircuit-autorouter/pull/3991) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3986](https://github.com/tscircuit/tscircuit-autorouter/pull/3986) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3975](https://github.com/tscircuit/tscircuit-autorouter/pull/3975) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3965](https://github.com/tscircuit/tscircuit-autorouter/pull/3965) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3961](https://github.com/tscircuit/tscircuit-autorouter/pull/3961) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3957](https://github.com/tscircuit/tscircuit-autorouter/pull/3957) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3954](https://github.com/tscircuit/tscircuit-autorouter/pull/3954) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3947](https://github.com/tscircuit/tscircuit-autorouter/pull/3947) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3942](https://github.com/tscircuit/tscircuit-autorouter/pull/3942) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3941](https://github.com/tscircuit/tscircuit-autorouter/pull/3941) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3936](https://github.com/tscircuit/tscircuit-autorouter/pull/3936) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3925](https://github.com/tscircuit/tscircuit-autorouter/pull/3925) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3916](https://github.com/tscircuit/tscircuit-autorouter/pull/3916) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3913](https://github.com/tscircuit/tscircuit-autorouter/pull/3913) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3908](https://github.com/tscircuit/tscircuit-autorouter/pull/3908) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#3905](https://github.com/tscircuit/tscircuit-autorouter/pull/3905) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#4141](https://github.com/tscircuit/tscircuit-autorouter/pull/4141) | 🐌 Tiny | seveibar | Add a Preview This PR section above the benchmark HOWTO in tscircuitbots opening comment. It explains who can run preview, which PRs qualify, and where to find the Vercel link. |
-| [#3995](https://github.com/tscircuit/tscircuit-autorouter/pull/3995) | 🐌 Tiny | mohan-bee | Run Pipeline 9 once on the full 82  59 mm, six-layer RK3506G2 test layout. The fixture relocates and resizes two DSI_D0 terminal pads as a staggered breakout and keeps the other 340 obstacles. With the previous solver pin, DSI_D0 has 2.989 mm of length skew against a 0.250 mm limit. The normal solve exports all four nets, and the snapshot records the measured skew and copper. Baseline SVG(https:github.comtscircuittscircuit-autorouterblob15fc92f19d004f151f07ae8f49d9da6c7549b5abtestsbugs__snapshots__pipeline9-differential-pair-partial-output.snap.svg) The stack uses this one fixture and test on both branches. The solver pin and the resulting SVG change in 4000. |
-| [#4095](https://github.com/tscircuit/tscircuit-autorouter/pull/4095) | 🐌 Tiny | ShiboSoftwareDev | Reproduces a failure in the Pipeline9 autorouting process due to missing via landings in a captured circuit region. |
-| [#4067](https://github.com/tscircuit/tscircuit-autorouter/pull/4067) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the retained search diagnostics for an unsuccessful ButterStick candidate, capturing 1,688,757 explored nodes during the routing process. |
-| [#4058](https://github.com/tscircuit/tscircuit-autorouter/pull/4058) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the repeated via-clearance checks on the ButterStick board, capturing a completed regional search and validating connectivity without changing existing assertions. |
-| [#4027](https://github.com/tscircuit/tscircuit-autorouter/pull/4027) | 🐌 Tiny | ShiboSoftwareDev | Reproduces A01s missing-via exception from the original OrangeCrab-local TSX on tscircuit 0.0.3257  core 0.0.2436  autorouter 0.0.1139. |
-| [#4021](https://github.com/tscircuit/tscircuit-autorouter/pull/4021) | 🐌 Tiny | ShiboSoftwareDev | Updates native-trace dependencies to their merged main revisions, including a distance-rounding fix that preserves portable scoring and restores previous Game Boy and Muse route geometry. |
-| [#4029](https://github.com/tscircuit/tscircuit-autorouter/pull/4029) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the routing of H616 DDR signals alongside fixed data paths, documenting physical findings without altering production code. |
-| [#3911](https://github.com/tscircuit/tscircuit-autorouter/pull/3911) | 🐌 Tiny | ShiboSoftwareDev | Refreshes the existing SEPIC repro with a fixed 6  4 mm view of the native copper, surrounding pads, and measured same-layer clearance, capturing the failing route before the fix. |
-| [#3917](https://github.com/tscircuit/tscircuit-autorouter/pull/3917) | 🐌 Tiny | ShiboSoftwareDev | Adds a fixed-camera native PCB view of the A13 trace contacting a neighboring RAM pad BALL_C3, while keeping the existing full-board clearance snapshot unchanged. |
-| [#3902](https://github.com/tscircuit/tscircuit-autorouter/pull/3902) | 🐌 Tiny | ShiboSoftwareDev | Reproduces the remaining bank-address via clock-enable trace clearance error on the native i.MX6 PCB, with all 53 DDR nets connected. |
-
-</details>
-
-### [tscircuit/circuit-to-svg](https://github.com/tscircuit/circuit-to-svg)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#955](https://github.com/tscircuit/circuit-to-svg/pull/955) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes PCB bounds calculation by excluding system diagram geometry from SVG bounds, ensuring accurate rendering of PCB outlines. |
-| [#954](https://github.com/tscircuit/circuit-to-svg/pull/954) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds a visual snapshot of a PCB exported from Circuit JSON that captures the current output from the unmodified renderer, addressing the issue of PCB shrinking inside a large white bounds rectangle. |
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#961](https://github.com/tscircuit/circuit-to-svg/pull/961) | 🐌 Tiny | seveibar | Reads the schematic_length_unit of each geometry record before schematic bounds and SVG rendering, ensuring that mm, inch, and legacy schematic records are rendered at the same physical scale. |
-
-</details>
-
-### [tscircuit/checks](https://github.com/tscircuit/checks)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#578](https://github.com/tscircuit/checks/pull/578) | 🐳 Major | ⭐⭐⭐ | MustafaMulla29 | Adds the reviewed seven-sheet TI TPS25751EVM schematic under testsreference-schematics. The test asserts the exact list of schematic warnings the board produces, so any added, removed or changed warning shows up in review. This catches new false positives when schematic checks are added or changed. The editable TSX contains 261 physical components with native symbols, functional pin labels and pin attributes, automatic trace routing, and the reference section outlines and table borders. The fixture is schematic-only. Reference: TI TPS25751EVM User Guide, SLVUCP9B(https:www.ti.comlitugslvucp9bslvucp9b.pdf), figures 5-1 through 5-7, pages 3944. Component placement follows the recreated reference; wire routing is generated by tscircuit. The test renders all seven sheets, calls runAllSchematicChecks, and compares a sorted sheet component warning-type summary against the expected list. It then snapshots each sheet as SVG. Expected warnings (27): 13 schematic_box_too_wide: all legitimate. 14 schematic_pin_padding_to_edge_too_large: 6 are legitimate (U1, U4, U6, U7, U8, U11). 8 are known false positives, marked  FP in the test (U5, J2J7, J11). The padding solver compares against the nominal 0.2 pin_spacing instead of the drawn pin pitch (0.4 or 0.8, set through schPinStyle margins), and uses a 1e-9 tolerance. When the analyzer is fixed, those lines should be removed from the expected list. The inverted_rails warnings from earlier revisions were false positives. They were fixed in the analyzer and are gone since the bump to v0.0.98. Validation: bun test testsreference-schematicstps25751evm.test.tsx passes (about 10 s locally; the test timeout is 30 s). tsc --noEmit and formatting pass. |
-| [#585](https://github.com/tscircuit/checks/pull/585) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes the issue where chips with explicitly declared absent power or ground requirements still trigger missing-pin warnings. |
-| [#584](https://github.com/tscircuit/checks/pull/584) | 🐙 Minor | ⭐⭐ | imrishabh18 | Honor explicit false values for power and ground requirements independently, skipping missing-role warnings when all connectable pins declare that requirement false. |
-| [#580](https://github.com/tscircuit/checks/pull/580) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Enable SchematicBoxTooWideSolver and SchematicPinPaddingToEdgeSolver in the existing schematic-placement check, reporting excessive chippin-header widths and excessive space between pin banks and box edges. |
-
-<details>
-<summary>🐌 Tiny Contributions (2)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#583](https://github.com/tscircuit/checks/pull/583) | 🐌 Tiny | MustafaMulla29 | Bumps tscircuitcircuit-json-schematic-placement-analysis to v0.0.98, removing false inverted rails warnings for specific components in the schematic. |
-| [#581](https://github.com/tscircuit/checks/pull/581) | 🐌 Tiny | MustafaMulla29 | Reproduces the missing checks integration for the TI TPS25751EVM regulator, ensuring that box sizing warnings are correctly identified and reported during schematic checks. |
-
-</details>
-
-### [tscircuit/cli](https://github.com/tscircuit/cli)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#5895](https://github.com/tscircuit/cli/pull/5895) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds tsci inspect footprint pathOrString, which prints a footprints pins, pad positions, pad sizes, drill sizes and overall extents before the part is placed. |
-| [#5867](https://github.com/tscircuit/cli/pull/5867) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes the issue where cloning an existing project overwrites custom scripts and dependencies, ensuring existing project files are preserved during the cloning process. |
-| [#5863](https://github.com/tscircuit/cli/pull/5863) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes the error output when the registry rejects an oversized archive, allowing for individual file uploads instead. |
-| [#5883](https://github.com/tscircuit/cli/pull/5883) | 🐙 Minor | ⭐⭐ | seveibar | Every tsci build now copies the circuit.json it is about to overwrite to .tscircuit-build-historytimestampdistboardcircuit.json. This covers both sequential and --concurrency builds. Additionally, tsci build --routing-history writes distboardrouting-history.mp4 next to each built circuit.json, showing the PCB of the newest build over time with a timeline. |
-| [#5885](https://github.com/tscircuit/cli/pull/5885) | 🐙 Minor | ⭐⭐ | seveibar | Adds a global CLI configuration option to enable or disable the saving of build history for circuit builds. |
-| [#5876](https://github.com/tscircuit/cli/pull/5876) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes 404 errors when exporting glb and gltf formats by ensuring relative model paths are converted to file URLs before processing. |
-| [#5875](https://github.com/tscircuit/cli/pull/5875) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes the issue where tsci export -f glb fails to load a cadModel with a relative stepUrl, resulting in a 404 error and an incomplete GLB file. |
-
-<details>
-<summary>🐌 Tiny Contributions (17)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#5864](https://github.com/tscircuit/cli/pull/5864) | 🐌 Tiny | imrishabh18 | Fixes the issue where tsci clone overwrites custom devstart scripts and dependencies, ensuring that project files and configurations are preserved during cloning. |
-| [#5866](https://github.com/tscircuit/cli/pull/5866) | 🐌 Tiny | imrishabh18 | Fixes the package name format when creating a package with an organization, changing it from npm-style to registry-compatible format. |
-| [#5865](https://github.com/tscircuit/cli/pull/5865) | 🐌 Tiny | imrishabh18 | Fixes the package name format for registry creation to align with the expected registry format and adds tests for various package visibility flags. |
-| [#5862](https://github.com/tscircuit/cli/pull/5862) | 🐌 Tiny | imrishabh18 | Fixes excessive error output by truncating large error messages and omitting sensitive data from upload error diagnostics. |
-| [#5905](https://github.com/tscircuit/cli/pull/5905) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5904](https://github.com/tscircuit/cli/pull/5904) | 🐌 Tiny | tscircuitbot | Updates the easyeda package version from 0.0.389 to 0.0.391 in package.json |
-| [#5900](https://github.com/tscircuit/cli/pull/5900) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5897](https://github.com/tscircuit/cli/pull/5897) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5896](https://github.com/tscircuit/cli/pull/5896) | 🐌 Tiny | tscircuitbot | Automated README update with latest CLI usage output. |
-| [#5884](https://github.com/tscircuit/cli/pull/5884) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5882](https://github.com/tscircuit/cli/pull/5882) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5881](https://github.com/tscircuit/cli/pull/5881) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5880](https://github.com/tscircuit/cli/pull/5880) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5857](https://github.com/tscircuit/cli/pull/5857) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#5899](https://github.com/tscircuit/cli/pull/5899) | 🐌 Tiny | seveibar | Updates the drawing renderer to version 0.0.8 and regenerates the assembly drawing build snapshot, aligning label placement with the hosted SVG renderer. |
-| [#5856](https://github.com/tscircuit/cli/pull/5856) | 🐌 Tiny | ShiboSoftwareDev | Fixes CLI startup failure when using Circuit JSON 0.0.552 due to removed schemas in the bundled PCB SPICE pipeline, by updating to the renamed signal-integrity-pipeline and adjusting imports accordingly. |
-| [#5877](https://github.com/tscircuit/cli/pull/5877) | 🐌 Tiny | MustafaMulla29 | Updates the version of tscircuitcircuit-json-schematic-placement-analysis from 0.0.97 to 0.0.102, incorporating several analyzer fixes including false-positive corrections for inverted rails and improved handling of crystal placements. |
-
-</details>
-
-### [tscircuit/circuit-json-to-gltf](https://github.com/tscircuit/circuit-json-to-gltf)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#305](https://github.com/tscircuit/circuit-json-to-gltf/pull/305) | 🐙 Minor | ⭐⭐ | imrishabh18 | Reproduces the RP2040 JST solder-pad offset in glTF to ensure accurate placement of solder pads in the exported model. |
-| [#306](https://github.com/tscircuit/circuit-json-to-gltf/pull/306) | 🐙 Minor | ⭐⭐ | imrishabh18 | Preserves the OBJs local origin when its CAD anchor is offset in the board plane from a known PCB footprint origin, ensuring accurate placement of solder contacts in glTF exports. |
-| [#304](https://github.com/tscircuit/circuit-json-to-gltf/pull/304) | 🐙 Minor | ⭐⭐ | seveibar | Renders rounded sticker corners from cad_sticker.corner_radius, allowing for more visually appealing sticker designs with adjustable corner radii. |
-| [#302](https://github.com/tscircuit/circuit-json-to-gltf/pull/302) | 🐙 Minor | ⭐⭐ | seveibar | Adds functionality to render the proposed cad_sticker record, allowing for the display of stickers on 3D models with specified artwork and dimensions. |
-| [#298](https://github.com/tscircuit/circuit-json-to-gltf/pull/298) | 🐙 Minor | ⭐⭐ | rushabhcodes | Allows the glTF converter to resolve CAD model URLs at load time, preventing missing models in the 3D scene by utilizing a shared lookup function from the website. |
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#297](https://github.com/tscircuit/circuit-json-to-gltf/pull/297) | 🐌 Tiny | rushabhcodes | Adds a test to reproduce the missing geometry for the Classic F1 LCD model when using a relative model URL, ensuring the converter correctly resolves and loads the LCD triangles. |
-
-</details>
-
-### [tscircuit/high-density-repair03](https://github.com/tscircuit/high-density-repair03)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#216](https://github.com/tscircuit/high-density-repair03/pull/216) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Checks via-removal shortcuts against the callers reference DRC before accepting them to prevent new trace-pair clearance violations. |
-| [#214](https://github.com/tscircuit/high-density-repair03/pull/214) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Keeps displacement chains under the existing near-convergence guard so the Game Boy repair stays at 28 errors instead of 29 while allowing the i.MX6 via-clearance repair. |
-| [#219](https://github.com/tscircuit/high-density-repair03/pull/219) | 🐳 Major | ⭐⭐⭐ | AnasSarkiz | Adds naming for the other object on trace DRC errors using typed IDs, aligning with circuit-json and tscircuitchecks standards. |
-| [#217](https://github.com/tscircuit/high-density-repair03/pull/217) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes the issue where existing plated holes were incorrectly treated as new vias, causing pad-clearance violations in the RP2040 motor-controller trace. |
-
-### [tscircuit/nema17-motor-controller](https://github.com/tscircuit/nema17-motor-controller)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#1](https://github.com/tscircuit/nema17-motor-controller/pull/1) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds the trace-free RP2040DRV8825 circuit from v1.0.58, retaining its electrical connections and PCB placement with the default local autorouter. Includes only the circuits required source, footprints, layout assets, licenses, compatibility patches, and build configuration. Generated outputs, reports, snapshots, and unrelated files are excluded. Validation: TypeScript, netlist check, frozen install, and the unrouted build pass. Existing placement and routing validation findings are documented in the README; the autorouter reproduction is tscircuittscircuit-autorouter3958. |
-
 ### [tscircuit/tscircuit](https://github.com/tscircuit/tscircuit)
 
 
 <details>
-<summary>🐌 Tiny Contributions (120)</summary>
+<summary>🐌 Tiny Contributions (126)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#6621](https://github.com/tscircuit/tscircuit/pull/6621) | 🐌 Tiny | imrishabh18 | Updates the circuit-to-svg package from version 0.0.460 to 0.0.463, along with updates to circuit-json-util and circuit-json, to ensure compatibility with the new renderers requirements. |
-| [#6622](https://github.com/tscircuit/tscircuit/pull/6622) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6620](https://github.com/tscircuit/tscircuit/pull/6620) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6630](https://github.com/tscircuit/tscircuit/pull/6630) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6629](https://github.com/tscircuit/tscircuit/pull/6629) | 🐌 Tiny | tscircuitbot | Updates the versions of tscircuitcore, tscircuiteval, tscircuitcli, and tscircuitngspice-spice-engine to their latest releases without introducing new functionality. |
+| [#6628](https://github.com/tscircuit/tscircuit/pull/6628) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6627](https://github.com/tscircuit/tscircuit/pull/6627) | 🐌 Tiny | tscircuitbot | Updates the version of tscircuitcli and tscircuitcore in package.json |
+| [#6624](https://github.com/tscircuit/tscircuit/pull/6624) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6623](https://github.com/tscircuit/tscircuit/pull/6623) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6619](https://github.com/tscircuit/tscircuit/pull/6619) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package version from 0.1.2485 to 0.1.2486 in package.json |
+| [#6622](https://github.com/tscircuit/tscircuit/pull/6622) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6618](https://github.com/tscircuit/tscircuit/pull/6618) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6617](https://github.com/tscircuit/tscircuit/pull/6617) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6616](https://github.com/tscircuit/tscircuit/pull/6616) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6615](https://github.com/tscircuit/tscircuit/pull/6615) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6614](https://github.com/tscircuit/tscircuit/pull/6614) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6612](https://github.com/tscircuit/tscircuit/pull/6612) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6611](https://github.com/tscircuit/tscircuit/pull/6611) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6610](https://github.com/tscircuit/tscircuit/pull/6610) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6609](https://github.com/tscircuit/tscircuit/pull/6609) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package to version 0.1.2483 |
-| [#6608](https://github.com/tscircuit/tscircuit/pull/6608) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6607](https://github.com/tscircuit/tscircuit/pull/6607) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6606](https://github.com/tscircuit/tscircuit/pull/6606) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6607](https://github.com/tscircuit/tscircuit/pull/6607) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6620](https://github.com/tscircuit/tscircuit/pull/6620) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6617](https://github.com/tscircuit/tscircuit/pull/6617) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6614](https://github.com/tscircuit/tscircuit/pull/6614) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6610](https://github.com/tscircuit/tscircuit/pull/6610) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6608](https://github.com/tscircuit/tscircuit/pull/6608) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6605](https://github.com/tscircuit/tscircuit/pull/6605) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6611](https://github.com/tscircuit/tscircuit/pull/6611) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6609](https://github.com/tscircuit/tscircuit/pull/6609) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcli package to version 0.1.2483 |
 | [#6604](https://github.com/tscircuit/tscircuit/pull/6604) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6603](https://github.com/tscircuit/tscircuit/pull/6603) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6602](https://github.com/tscircuit/tscircuit/pull/6602) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -867,26 +836,10 @@ pie
 | [#6507](https://github.com/tscircuit/tscircuit/pull/6507) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6503](https://github.com/tscircuit/tscircuit/pull/6503) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6495](https://github.com/tscircuit/tscircuit/pull/6495) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6621](https://github.com/tscircuit/tscircuit/pull/6621) | 🐌 Tiny | imrishabh18 | Updates the circuit-to-svg package from version 0.0.460 to 0.0.463, along with updates to circuit-json-util and circuit-json, to ensure compatibility with the new renderers requirements. |
 | [#6613](https://github.com/tscircuit/tscircuit/pull/6613) | 🐌 Tiny | seveibar | Updates the CLI minimum version to 0.1.2485 and modifies the lockfile to reflect this change after an automatic dependency update picked up an earlier version. |
 | [#6569](https://github.com/tscircuit/tscircuit/pull/6569) | 🐌 Tiny | seveibar | Updates the core, eval, and KRT dependencies to their latest versions, ensuring compatibility with the published eval worker that uses the embedded Rust core version 0.24.1. |
 | [#6566](https://github.com/tscircuit/tscircuit/pull/6566) | 🐌 Tiny | seveibar | Checks the embedded KRT WASM against the binary supplied by the installed tscircuitkrt-wasm before copying the eval worker, ensuring alignment of versions and preventing runtime errors. |
-
-</details>
-
-### [tscircuit/skill](https://github.com/tscircuit/skill)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#65](https://github.com/tscircuit/skill/pull/65) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds documentation for schematic box sizing, sheet capacity, search sources, and prop gaps, improving user guidance for schematic design and component placement. |
-
-<details>
-<summary>🐌 Tiny Contributions (3)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#69](https://github.com/tscircuit/skill/pull/69) | 🐌 Tiny | imrishabh18 | Add a bullet point to the documentation showing how to use ignoredFiles in tscircuit.config.json to keep AI-generated debug files out of tsci push uploads. |
-| [#66](https://github.com/tscircuit/skill/pull/66) | 🐌 Tiny | seveibar | Replaces the node -e one-liner in FOOTPRINTS.md with tsci inspect footprint, and adds a one-line entry for the command to CLI.md. |
-| [#68](https://github.com/tscircuit/skill/pull/68) | 🐌 Tiny | MustafaMulla29 | Require generating and opening both schematic and PCB images, then fixing visible issues in both layouts and re-rendering before finalizing. |
 
 </details>
 
@@ -894,15 +847,22 @@ pie
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#6099](https://github.com/tscircuit/tscircuit.com/pull/6099) | 🐳 Major | ⭐⭐⭐ | seveibar | Introduces a new circuit board design featuring a USB-C Wi-Fi sounder based on the ESP32-C6-WROOM-1-N8, including a complete schematic and PCB layout. |
+| [#6058](https://github.com/tscircuit/tscircuit.com/pull/6058) | 🐳 Major | ⭐⭐⭐ | seveibar | Shows releases that were built locally and pushed with tsci push --include-dist differently from cloud builds, and mirrors the registry change in the fake API. |
 | [#5985](https://github.com/tscircuit/tscircuit.com/pull/5985) | 🐳 Major | ⭐⭐⭐ | seveibar | Updates the circuit-to-svg and circuit-json libraries to support custom wire colors and line patterns, ensuring that the runtime parser preserves these style fields during rendering. |
 | [#6009](https://github.com/tscircuit/tscircuit.com/pull/6009) | 🐳 Major | ⭐⭐⭐ | rushabhcodes | Reduces model download time by reusing the rendered Drawing view when switching tabs, preventing unnecessary model downloads and improving performance. |
 | [#5962](https://github.com/tscircuit/tscircuit.com/pull/5962) | 🐳 Major | ⭐⭐⭐ | rushabhcodes | Adds a Drawing tab to the package page for inspecting engineering drawings alongside PCB, schematic, and 3D views. |
 
 <details>
-<summary>🐌 Tiny Contributions (112)</summary>
+<summary>🐌 Tiny Contributions (117)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#6108](https://github.com/tscircuit/tscircuit.com/pull/6108) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package version from 0.0.3332 to 0.0.3333 in package.json |
+| [#6107](https://github.com/tscircuit/tscircuit.com/pull/6107) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package version from 0.0.1850 to 0.0.1851 in package.json |
+| [#6106](https://github.com/tscircuit/tscircuit.com/pull/6106) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3331 to 0.0.3332 |
+| [#6105](https://github.com/tscircuit/tscircuit.com/pull/6105) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package version from 0.0.3330 to 0.0.3331 |
+| [#6104](https://github.com/tscircuit/tscircuit.com/pull/6104) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6103](https://github.com/tscircuit/tscircuit.com/pull/6103) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package version from 0.0.3329 to 0.0.3330 in package.json |
 | [#6102](https://github.com/tscircuit/tscircuit.com/pull/6102) | 🐌 Tiny | tscircuitbot | Updates the tscircuitrunframe package from version 0.0.3328 to 0.0.3329 |
 | [#6101](https://github.com/tscircuit/tscircuit.com/pull/6101) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1849 to 0.0.1850 |
@@ -1022,10 +982,11 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (108)</summary>
+<summary>🐌 Tiny Contributions (110)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#6112](https://github.com/tscircuit/eval/pull/6112) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6091](https://github.com/tscircuit/eval/pull/6091) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6090](https://github.com/tscircuit/eval/pull/6090) | 🐌 Tiny | tscircuitbot | Updates the version of the tscircuitcore package from 0.0.2461 to 0.0.2462 in package.json |
 | [#6088](https://github.com/tscircuit/eval/pull/6088) | 🐌 Tiny | tscircuitbot | Automated package update |
@@ -1133,6 +1094,7 @@ pie
 | [#5930](https://github.com/tscircuit/eval/pull/5930) | 🐌 Tiny | tscircuitbot | Updates package dependencies to their latest versions as part of routine maintenance. |
 | [#5928](https://github.com/tscircuit/eval/pull/5928) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#5927](https://github.com/tscircuit/eval/pull/5927) | 🐌 Tiny | tscircuitbot | Updates the versions of several dependencies in the package.json file. |
+| [#6111](https://github.com/tscircuit/eval/pull/6111) | 🐌 Tiny | ShiboSoftwareDev | Pins the tscircuitngspice-spice-engine dependency from version 0.0.25 to 0.0.26 to ensure compatibility with the EEcircuit 1.7.7 adapter. |
 | [#5993](https://github.com/tscircuit/eval/pull/5993) | 🐌 Tiny | ShiboSoftwareDev | Updates eval to use Core 0.0.2429 and synchronizes dependencies with the latest versions, including spicets 0.0.6, circuit-json-to-spice 0.0.50, and ngspice-spice-engine 0.0.25, ensuring compatibility and integration of merged parser and initial-condition fixes into the simulation worker and platform configuration. |
 
 </details>
@@ -1141,19 +1103,25 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (111)</summary>
+<summary>🐌 Tiny Contributions (117)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#6517](https://github.com/tscircuit/runframe/pull/6517) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6516](https://github.com/tscircuit/runframe/pull/6516) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1850 to 0.0.1851 |
+| [#6513](https://github.com/tscircuit/runframe/pull/6513) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6512](https://github.com/tscircuit/runframe/pull/6512) | 🐌 Tiny | tscircuitbot | Updates the circuit-json-to-kicad package version from 0.0.280 to 0.0.281 in package.json |
+| [#6510](https://github.com/tscircuit/runframe/pull/6510) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#6509](https://github.com/tscircuit/runframe/pull/6509) | 🐌 Tiny | tscircuitbot | Updates the circuit-json-to-kicad package version from 0.0.279 to 0.0.280 in package.json |
+| [#6502](https://github.com/tscircuit/runframe/pull/6502) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6507](https://github.com/tscircuit/runframe/pull/6507) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6506](https://github.com/tscircuit/runframe/pull/6506) | 🐌 Tiny | tscircuitbot | Updates the circuit-json-to-gerber package from version 0.0.122 to 0.0.124 |
 | [#6505](https://github.com/tscircuit/runframe/pull/6505) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6504](https://github.com/tscircuit/runframe/pull/6504) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1849 to 0.0.1850 |
 | [#6503](https://github.com/tscircuit/runframe/pull/6503) | 🐌 Tiny | tscircuitbot | Automated package update |
-| [#6502](https://github.com/tscircuit/runframe/pull/6502) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6500](https://github.com/tscircuit/runframe/pull/6500) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1848 to 0.0.1849 |
 | [#6499](https://github.com/tscircuit/runframe/pull/6499) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6498](https://github.com/tscircuit/runframe/pull/6498) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1847 to 0.0.1848 |
+| [#6504](https://github.com/tscircuit/runframe/pull/6504) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1849 to 0.0.1850 |
 | [#6492](https://github.com/tscircuit/runframe/pull/6492) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1844 to 0.0.1845 |
 | [#6489](https://github.com/tscircuit/runframe/pull/6489) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#6488](https://github.com/tscircuit/runframe/pull/6488) | 🐌 Tiny | tscircuitbot | Updates the tscircuiteval package from version 0.0.1842 to 0.0.1843 |
@@ -1259,24 +1227,67 @@ pie
 
 </details>
 
+### [tscircuit/cli](https://github.com/tscircuit/cli)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#5895](https://github.com/tscircuit/cli/pull/5895) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds tsci inspect footprint pathOrString, which prints a footprints pins, pad positions, pad sizes, drill sizes and overall extents before the part is placed. |
+| [#5867](https://github.com/tscircuit/cli/pull/5867) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes the issue where cloning an existing project overwrites custom scripts and dependencies, ensuring existing project files are preserved during the cloning process. |
+| [#5863](https://github.com/tscircuit/cli/pull/5863) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes the error output when the registry rejects an oversized archive, allowing for individual file uploads instead. |
+| [#5887](https://github.com/tscircuit/cli/pull/5887) | 🐙 Minor | ⭐⭐ | seveibar | tsci push --include-dist now uses the uploaded dist directory as the build instead of also building the package in the cloud. |
+| [#5883](https://github.com/tscircuit/cli/pull/5883) | 🐙 Minor | ⭐⭐ | seveibar | Every tsci build now copies the circuit.json it is about to overwrite to .tscircuit-build-historytimestampdistboardcircuit.json. This covers both sequential and --concurrency builds. Additionally, tsci build --routing-history writes distboardrouting-history.mp4 next to each built circuit.json, showing the PCB of the newest build over time with a timeline. |
+| [#5885](https://github.com/tscircuit/cli/pull/5885) | 🐙 Minor | ⭐⭐ | seveibar | Adds a global CLI configuration option to enable or disable the saving of build history for circuit builds. |
+| [#5918](https://github.com/tscircuit/cli/pull/5918) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Pins the EEcircuit bundle to version 1.7.7 and normalizes the cache directory to fix BunmacOS first-download issues without requiring realpath support. |
+| [#5876](https://github.com/tscircuit/cli/pull/5876) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes 404 errors when exporting glb and gltf formats by ensuring relative model paths are converted to file URLs before processing. |
+| [#5875](https://github.com/tscircuit/cli/pull/5875) | 🐙 Minor | ⭐⭐ | Abse2001 | Fixes the issue where tsci export -f glb fails to load a cadModel with a relative stepUrl, resulting in a 404 error and an incomplete GLB file. |
+
+<details>
+<summary>🐌 Tiny Contributions (17)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#5905](https://github.com/tscircuit/cli/pull/5905) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5904](https://github.com/tscircuit/cli/pull/5904) | 🐌 Tiny | tscircuitbot | Updates the easyeda package version from 0.0.389 to 0.0.391 in package.json |
+| [#5900](https://github.com/tscircuit/cli/pull/5900) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5897](https://github.com/tscircuit/cli/pull/5897) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5896](https://github.com/tscircuit/cli/pull/5896) | 🐌 Tiny | tscircuitbot | Automated README update with latest CLI usage output. |
+| [#5884](https://github.com/tscircuit/cli/pull/5884) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5882](https://github.com/tscircuit/cli/pull/5882) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5881](https://github.com/tscircuit/cli/pull/5881) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5880](https://github.com/tscircuit/cli/pull/5880) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5857](https://github.com/tscircuit/cli/pull/5857) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#5864](https://github.com/tscircuit/cli/pull/5864) | 🐌 Tiny | imrishabh18 | Fixes the issue where tsci clone overwrites custom devstart scripts and dependencies, ensuring that project files and configurations are preserved during cloning. |
+| [#5866](https://github.com/tscircuit/cli/pull/5866) | 🐌 Tiny | imrishabh18 | Fixes the package name format when creating a package with an organization, changing it from npm-style to registry-compatible format. |
+| [#5865](https://github.com/tscircuit/cli/pull/5865) | 🐌 Tiny | imrishabh18 | Fixes the package name format for registry creation to align with the expected registry format and adds tests for various package visibility flags. |
+| [#5862](https://github.com/tscircuit/cli/pull/5862) | 🐌 Tiny | imrishabh18 | Fixes excessive error output by truncating large error messages and omitting sensitive data from upload error diagnostics. |
+| [#5899](https://github.com/tscircuit/cli/pull/5899) | 🐌 Tiny | seveibar | Updates the drawing renderer to version 0.0.8 and regenerates the assembly drawing build snapshot, aligning label placement with the hosted SVG renderer. |
+| [#5856](https://github.com/tscircuit/cli/pull/5856) | 🐌 Tiny | ShiboSoftwareDev | Fixes CLI startup failure when using Circuit JSON 0.0.552 due to removed schemas in the bundled PCB SPICE pipeline, by updating to the renamed signal-integrity-pipeline and adjusting imports accordingly. |
+| [#5877](https://github.com/tscircuit/cli/pull/5877) | 🐌 Tiny | MustafaMulla29 | Updates the version of tscircuitcircuit-json-schematic-placement-analysis from 0.0.97 to 0.0.102, incorporating several analyzer fixes including false-positive corrections for inverted rails and improved handling of crystal placements. |
+
+</details>
+
 ### [tscircuit/svg.tscircuit.com](https://github.com/tscircuit/svg.tscircuit.com)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
+| [#3021](https://github.com/tscircuit/svg.tscircuit.com/pull/3021) | 🐙 Minor | ⭐⭐ | seveibar | Hosted TSX can now render wire harness sheets through svg_typedrawing, enabling documentation previews and editor links for the harness API without precomputed Circuit JSON. |
 | [#3014](https://github.com/tscircuit/svg.tscircuit.com/pull/3014) | 🐙 Minor | ⭐⭐ | seveibar | Centers dimension labels in hosted assembly drawings by updating the drawing renderer and refreshing the explosion drawing snapshot to ensure vertical labels are positioned at the line midpoint. |
 
 <details>
-<summary>🐌 Tiny Contributions (53)</summary>
+<summary>🐌 Tiny Contributions (56)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
-| [#3019](https://github.com/tscircuit/svg.tscircuit.com/pull/3019) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3286 to 0.0.3287 in package.json |
+| [#3024](https://github.com/tscircuit/svg.tscircuit.com/pull/3024) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3289 to 0.0.3290 in package.json |
+| [#3023](https://github.com/tscircuit/svg.tscircuit.com/pull/3023) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3288 to 0.0.3289 in package.json |
+| [#3020](https://github.com/tscircuit/svg.tscircuit.com/pull/3020) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3287 to 0.0.3288 in package.json |
 | [#3018](https://github.com/tscircuit/svg.tscircuit.com/pull/3018) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3285 to 0.0.3286 in package.json |
-| [#3017](https://github.com/tscircuit/svg.tscircuit.com/pull/3017) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3282 to 0.0.3285 in package.json |
 | [#3015](https://github.com/tscircuit/svg.tscircuit.com/pull/3015) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3281 to 0.0.3282 in package.json |
 | [#3013](https://github.com/tscircuit/svg.tscircuit.com/pull/3013) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3280 to 0.0.3281 in package.json |
 | [#3012](https://github.com/tscircuit/svg.tscircuit.com/pull/3012) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3279 to 0.0.3280 in package.json |
 | [#3011](https://github.com/tscircuit/svg.tscircuit.com/pull/3011) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#3019](https://github.com/tscircuit/svg.tscircuit.com/pull/3019) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3286 to 0.0.3287 in package.json |
+| [#3017](https://github.com/tscircuit/svg.tscircuit.com/pull/3017) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3282 to 0.0.3285 in package.json |
 | [#3010](https://github.com/tscircuit/svg.tscircuit.com/pull/3010) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3277 to 0.0.3278 in package.json |
 | [#3007](https://github.com/tscircuit/svg.tscircuit.com/pull/3007) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3274 to 0.0.3275 in package.json |
 | [#3002](https://github.com/tscircuit/svg.tscircuit.com/pull/3002) | 🐌 Tiny | tscircuitbot | Updates the tscircuit package version from 0.0.3269 to 0.0.3270 in package.json |
@@ -1326,6 +1337,29 @@ pie
 
 </details>
 
+### [tscircuit/circuit-json-to-step](https://github.com/tscircuit/circuit-json-to-step)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#193](https://github.com/tscircuit/circuit-json-to-step/pull/193) | 🐙 Minor | ⭐⭐ | Devesh36 | Fixes the missing non-plated oval mounting hole reproduced in 190, ensuring that board and panel exports correctly cut the elliptical opening. |
+| [#202](https://github.com/tscircuit/circuit-json-to-step/pull/202) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Fixes the issue where through-vias were not drilled correctly in STEP board and panel exports, ensuring only appropriate vias are drilled and improving the accuracy of the exported designs. |
+| [#206](https://github.com/tscircuit/circuit-json-to-step/pull/206) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Fixes the winding direction of the bottom boundary of the STEP board to ensure proper topology at export time, addressing issue 197. |
+| [#204](https://github.com/tscircuit/circuit-json-to-step/pull/204) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Fixes the issue where circular holes with rectangular pads were not being drilled correctly in PCB and assembly exports, ensuring both shapes produce the same drill output. |
+
+<details>
+<summary>🐌 Tiny Contributions (6)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#214](https://github.com/tscircuit/circuit-json-to-step/pull/214) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#210](https://github.com/tscircuit/circuit-json-to-step/pull/210) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#190](https://github.com/tscircuit/circuit-json-to-step/pull/190) | 🐌 Tiny | Devesh36 | Reproduces a bug where non-plated oval mounting holes disappear from STEP exports, providing a test and JSON fixture without altering production code. |
+| [#201](https://github.com/tscircuit/circuit-json-to-step/pull/201) | 🐌 Tiny | MustafaMulla29 | Reproduces the issue where vias are not drilled through STEP substrates, ensuring that the via drill is covered on both substrate faces in PCB, assembly, and panel exports. |
+| [#205](https://github.com/tscircuit/circuit-json-to-step/pull/205) | 🐌 Tiny | MustafaMulla29 | Reproduces a bug where the bottom board boundary has inconsistent winding in the STEP export, affecting the rendering of the boards bottom face. |
+| [#203](https://github.com/tscircuit/circuit-json-to-step/pull/203) | 🐌 Tiny | MustafaMulla29 | Reproduces the issue where rectangular-pad plated holes are missing from STEP exports by providing a test case with two plated holes, one rectangular and one round, ensuring proper coverage in PCB and assembly exports. |
+
+</details>
+
 ### [tscircuit/schematic-trace-solver](https://github.com/tscircuit/schematic-trace-solver)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -1363,9 +1397,9 @@ pie
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#114](https://github.com/tscircuit/test-github-automerge/pull/114) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcircuit-json-util package from version 0.0.131 to 0.0.132 in the project dependencies. |
 | [#118](https://github.com/tscircuit/test-github-automerge/pull/118) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcircuit-json-util package from version 0.0.133 to 0.0.134 in the project dependencies. |
 | [#116](https://github.com/tscircuit/test-github-automerge/pull/116) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcircuit-json-util package from version 0.0.132 to 0.0.133 |
-| [#114](https://github.com/tscircuit/test-github-automerge/pull/114) | 🐌 Tiny | tscircuitbot | Updates the tscircuitcircuit-json-util package from version 0.0.131 to 0.0.132 in the project dependencies. |
 | [#112](https://github.com/tscircuit/test-github-automerge/pull/112) | 🐌 Tiny | tscircuitbot | Automated package update |
 
 </details>
@@ -1374,11 +1408,15 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (3)</summary>
+<summary>🐌 Tiny Contributions (7)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#947](https://github.com/tscircuit/circuit-json-to-kicad/pull/947) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#946](https://github.com/tscircuit/circuit-json-to-kicad/pull/946) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#939](https://github.com/tscircuit/circuit-json-to-kicad/pull/939) | 🐌 Tiny | tscircuitbot | Automated package update |
+| [#945](https://github.com/tscircuit/circuit-json-to-kicad/pull/945) | 🐌 Tiny | imrishabh18 | Fixes the issue where overlapping pin strokes during schematic grid alignment caused errors in rendering and net connections. |
+| [#944](https://github.com/tscircuit/circuit-json-to-kicad/pull/944) | 🐌 Tiny | imrishabh18 | Fixes a bug where overlapping pin strokes cause schematic export to fail. |
 | [#913](https://github.com/tscircuit/circuit-json-to-kicad/pull/913) | 🐌 Tiny | rushabhcodes | Maps Circuit JSONs allow_placements to KiCads footprints and pads flags, enabling proper handling of component placements within keepouts. |
 | [#912](https://github.com/tscircuit/circuit-json-to-kicad/pull/912) | 🐌 Tiny | rushabhcodes | Reproduces a bug where KiCad incorrectly flags allowed placements in keepouts, ensuring that the exported rules reflect the correct restrictions on tracks, vias, and copper pours. |
 
@@ -1503,6 +1541,7 @@ pie
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
 | [#14](https://github.com/tscircuit/circuit-json-to-drawing/pull/14) | 🐳 Major | ⭐⭐⭐ | seveibar | Renders wire harness (cable manufacturing) sheets from the elements proposed in tscircuitcircuit-json1023. TSX spec: tscircuitprops1030. |
+| [#23](https://github.com/tscircuit/circuit-json-to-drawing/pull/23) | 🐙 Minor | ⭐⭐ | seveibar | Adjusts connector designator rendering to ensure longer names do not overlap with pin numbers, resizing text appropriately and anchoring it away from the cable when necessary. |
 | [#21](https://github.com/tscircuit/circuit-json-to-drawing/pull/21) | 🐙 Minor | ⭐⭐ | seveibar | Updates the PoppyGL dependency to version 0.0.40 to suppress coplanar drawing seams and ensures consistent rendering of flat parts in glTF format. |
 
 <details>
@@ -1530,6 +1569,87 @@ pie
 | [#20](https://github.com/tscircuit/drawing-viewer/pull/20) | 🐌 Tiny | tscircuitbot | Automated package update |
 | [#19](https://github.com/tscircuit/drawing-viewer/pull/19) | 🐌 Tiny | seveibar | Pins the published circuit-json-to-drawing 0.0.8 renderer so viewer exports and the interactive drawing use the same centered dimension labels as CLI and hosted SVG output. |
 | [#15](https://github.com/tscircuit/drawing-viewer/pull/15) | 🐌 Tiny | rushabhcodes | Reproduces a bug where the LCD geometry is missing in the Classic F1 drawing by implementing a test case that validates the renderers asset resolution for the LCD path. |
+
+</details>
+
+### [tscircuit/jlcsearch](https://github.com/tscircuit/jlcsearch)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#657](https://github.com/tscircuit/jlcsearch/pull/657) | 🐳 Major | ⭐⭐⭐ | imrishabh18 | Optimizes search functionality by incorporating package codes into the text index, reducing candidate results and improving search speed. |
+| [#651](https://github.com/tscircuit/jlcsearch/pull/651) | 🐳 Major | ⭐⭐⭐ | VB-Blue | Adds LED Indication - Discrete to ledTableSpec.listCandidateComponents so standard indicator LEDs are included in the led derived table and ledslist, while updating metadata parsing for discrete indicator LEDs. |
+
+### [tscircuit/checks](https://github.com/tscircuit/checks)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#594](https://github.com/tscircuit/checks/pull/594) | 🐳 Major | ⭐⭐⭐ | seveibar | Fixes connectivity checks to recognize when a pad lands on a via annulus, improving diagnostics for PCB designs. |
+| [#578](https://github.com/tscircuit/checks/pull/578) | 🐳 Major | ⭐⭐⭐ | MustafaMulla29 | Adds the reviewed seven-sheet TI TPS25751EVM schematic under testsreference-schematics. The test asserts the exact list of schematic warnings the board produces, so any added, removed or changed warning shows up in review. This catches new false positives when schematic checks are added or changed. The editable TSX contains 261 physical components with native symbols, functional pin labels and pin attributes, automatic trace routing, and the reference section outlines and table borders. The fixture is schematic-only. Reference: TI TPS25751EVM User Guide, SLVUCP9B(https:www.ti.comlitugslvucp9bslvucp9b.pdf), figures 5-1 through 5-7, pages 3944. Component placement follows the recreated reference; wire routing is generated by tscircuit. The test renders all seven sheets, calls runAllSchematicChecks, and compares a sorted sheet component warning-type summary against the expected list. It then snapshots each sheet as SVG. Expected warnings (27): 13 schematic_box_too_wide: all legitimate. 14 schematic_pin_padding_to_edge_too_large: 6 are legitimate (U1, U4, U6, U7, U8, U11). 8 are known false positives, marked  FP in the test (U5, J2J7, J11). The padding solver compares against the nominal 0.2 pin_spacing instead of the drawn pin pitch (0.4 or 0.8, set through schPinStyle margins), and uses a 1e-9 tolerance. When the analyzer is fixed, those lines should be removed from the expected list. The inverted_rails warnings from earlier revisions were false positives. They were fixed in the analyzer and are gone since the bump to v0.0.98. Validation: bun test testsreference-schematicstps25751evm.test.tsx passes (about 10 s locally; the test timeout is 30 s). tsc --noEmit and formatting pass. |
+| [#585](https://github.com/tscircuit/checks/pull/585) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes the issue where chips with explicitly declared absent power or ground requirements still trigger missing-pin warnings. |
+| [#584](https://github.com/tscircuit/checks/pull/584) | 🐙 Minor | ⭐⭐ | imrishabh18 | Honor explicit false values for power and ground requirements independently, skipping missing-role warnings when all connectable pins declare that requirement false. |
+| [#580](https://github.com/tscircuit/checks/pull/580) | 🐙 Minor | ⭐⭐ | MustafaMulla29 | Enable SchematicBoxTooWideSolver and SchematicPinPaddingToEdgeSolver in the existing schematic-placement check, reporting excessive chippin-header widths and excessive space between pin banks and box edges. |
+
+<details>
+<summary>🐌 Tiny Contributions (3)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#593](https://github.com/tscircuit/checks/pull/593) | 🐌 Tiny | seveibar | Reproduces a false open error in the AM4378 handheld circuit design due to an overlap between the LCD connector pad and a via annulus, enabling independent testing of the issue. |
+| [#583](https://github.com/tscircuit/checks/pull/583) | 🐌 Tiny | MustafaMulla29 | Bumps tscircuitcircuit-json-schematic-placement-analysis to v0.0.98, removing false inverted rails warnings for specific components in the schematic. |
+| [#581](https://github.com/tscircuit/checks/pull/581) | 🐌 Tiny | MustafaMulla29 | Reproduces the missing checks integration for the TI TPS25751EVM regulator, ensuring that box sizing warnings are correctly identified and reported during schematic checks. |
+
+</details>
+
+### [tscircuit/circuit-json-to-gltf](https://github.com/tscircuit/circuit-json-to-gltf)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#306](https://github.com/tscircuit/circuit-json-to-gltf/pull/306) | 🐙 Minor | ⭐⭐ | imrishabh18 | Preserves the OBJs local origin when its CAD anchor is offset in the board plane from a known PCB footprint origin, ensuring accurate placement of solder contacts in glTF exports. |
+| [#305](https://github.com/tscircuit/circuit-json-to-gltf/pull/305) | 🐙 Minor | ⭐⭐ | imrishabh18 | Reproduces the RP2040 JST solder-pad offset in glTF to ensure accurate placement of solder pads in the exported model. |
+| [#304](https://github.com/tscircuit/circuit-json-to-gltf/pull/304) | 🐙 Minor | ⭐⭐ | seveibar | Renders rounded sticker corners from cad_sticker.corner_radius, allowing for more visually appealing sticker designs with adjustable corner radii. |
+| [#302](https://github.com/tscircuit/circuit-json-to-gltf/pull/302) | 🐙 Minor | ⭐⭐ | seveibar | Adds functionality to render the proposed cad_sticker record, allowing for the display of stickers on 3D models with specified artwork and dimensions. |
+| [#298](https://github.com/tscircuit/circuit-json-to-gltf/pull/298) | 🐙 Minor | ⭐⭐ | rushabhcodes | Allows the glTF converter to resolve CAD model URLs at load time, preventing missing models in the 3D scene by utilizing a shared lookup function from the website. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#297](https://github.com/tscircuit/circuit-json-to-gltf/pull/297) | 🐌 Tiny | rushabhcodes | Adds a test to reproduce the missing geometry for the Classic F1 LCD model when using a relative model URL, ensuring the converter correctly resolves and loads the LCD triangles. |
+
+</details>
+
+### [tscircuit/high-density-repair03](https://github.com/tscircuit/high-density-repair03)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#216](https://github.com/tscircuit/high-density-repair03/pull/216) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Checks via-removal shortcuts against the callers reference DRC before accepting them to prevent new trace-pair clearance violations. |
+| [#214](https://github.com/tscircuit/high-density-repair03/pull/214) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Keeps displacement chains under the existing near-convergence guard so the Game Boy repair stays at 28 errors instead of 29 while allowing the i.MX6 via-clearance repair. |
+| [#219](https://github.com/tscircuit/high-density-repair03/pull/219) | 🐳 Major | ⭐⭐⭐ | AnasSarkiz | Adds naming for the other object on trace DRC errors using typed IDs, aligning with circuit-json and tscircuitchecks standards. |
+| [#217](https://github.com/tscircuit/high-density-repair03/pull/217) | 🐙 Minor | ⭐⭐ | imrishabh18 | Fixes the issue where existing plated holes were incorrectly treated as new vias, causing pad-clearance violations in the RP2040 motor-controller trace. |
+
+### [tscircuit/nema17-motor-controller](https://github.com/tscircuit/nema17-motor-controller)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#1](https://github.com/tscircuit/nema17-motor-controller/pull/1) | 🐙 Minor | ⭐⭐ | imrishabh18 | Adds the trace-free RP2040DRV8825 circuit from v1.0.58, retaining its electrical connections and PCB placement with the default local autorouter. Includes only the circuits required source, footprints, layout assets, licenses, compatibility patches, and build configuration. Generated outputs, reports, snapshots, and unrelated files are excluded. Validation: TypeScript, netlist check, frozen install, and the unrouted build pass. Existing placement and routing validation findings are documented in the README; the autorouter reproduction is tscircuittscircuit-autorouter3958. |
+
+### [tscircuit/skill](https://github.com/tscircuit/skill)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#65](https://github.com/tscircuit/skill/pull/65) | 🐳 Major | ⭐⭐⭐ | seveibar | Adds documentation for schematic box sizing, sheet capacity, search sources, and prop gaps, improving user guidance for schematic design and component placement. |
+| [#70](https://github.com/tscircuit/skill/pull/70) | 🐙 Minor | ⭐⭐ | seveibar | Documents manual routing with pcbPath, explains the automatic 1 mm trace limit for capacitors, and clarifies net routing phases and placement errors that affect autorouting. |
+
+<details>
+<summary>🐌 Tiny Contributions (4)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#69](https://github.com/tscircuit/skill/pull/69) | 🐌 Tiny | imrishabh18 | Add a bullet point to the documentation showing how to use ignoredFiles in tscircuit.config.json to keep AI-generated debug files out of tsci push uploads. |
+| [#66](https://github.com/tscircuit/skill/pull/66) | 🐌 Tiny | seveibar | Replaces the node -e one-liner in FOOTPRINTS.md with tsci inspect footprint, and adds a one-line entry for the command to CLI.md. |
+| [#64](https://github.com/tscircuit/skill/pull/64) | 🐌 Tiny | rushabhcodes | Adds documentation and examples for creating assembly drawings and exploded views in the tscircuit skill, including new elements for drawing pages, part views, and explosion stages. |
+| [#68](https://github.com/tscircuit/skill/pull/68) | 🐌 Tiny | MustafaMulla29 | Require generating and opening both schematic and PCB images, then fixing visible issues in both layouts and re-rendering before finalizing. |
 
 </details>
 
@@ -1561,6 +1681,17 @@ pie
 | [#145](https://github.com/tscircuit/high-density-a01/pull/145) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes rounding errors in A03 distance calculations that affect routing and DRC findings. |
 | [#143](https://github.com/tscircuit/high-density-a01/pull/143) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the issue where a route containing only a via lost both landing points when restoring off-grid terminal coordinates, ensuring that landing points are retained and terminal leads are added during the restoration process. |
 | [#90](https://github.com/tscircuit/high-density-a01/pull/90) | 🐙 Minor | ⭐⭐ | seveibar | Add visual snapshot for A03 terminal layer repro, rendering input ports and comparing original output with a visual snapshot to highlight routing issues. |
+
+### [tscircuit/repair04](https://github.com/tscircuit/repair04)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#88](https://github.com/tscircuit/repair04/pull/88) | 🐳 Major | ⭐⭐⭐ | seveibar | Allows through-via antipads in poured planes during regional repair, enabling better pathfinding for vias in the presence of ground pours. |
+| [#85](https://github.com/tscircuit/repair04/pull/85) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Adds support for fixed copper paths in the negotiation solver to avoid routing conflicts with saved copper during regional repairs. |
+| [#83](https://github.com/tscircuit/repair04/pull/83) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reduces clearance search time by 89.9 by using one representative of each obstacles already joined aliases while preserving paths and empty-alias behavior. |
+| [#82](https://github.com/tscircuit/repair04/pull/82) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Replays a native OrangeCrab clearance search with the original board connectivity, addressing repeated pad alias lookups during the clearance search process. |
+| [#79](https://github.com/tscircuit/repair04/pull/79) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces the clearance grid for completed DDR vias as component pads, adding extra rows, columns, and midpoints across the repair region. |
+| [#80](https://github.com/tscircuit/repair04/pull/80) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the contribution of fixed-copper vias to the BGA pad-channel grid by using single-layer component pads for extra channels, improving grid state and reducing clearance issues. |
 
 ### [tscircuit/trace-simplification-solver](https://github.com/tscircuit/trace-simplification-solver)
 
@@ -1602,6 +1733,18 @@ pie
 | [#47](https://github.com/tscircuit/motorcontrol/pull/47) | 🐌 Tiny | seveibar | Summary Match the Assets pages light Tailwind palette across the motor dashboards and firmware page. Add consistent navigation, including the three-axis gantry, and update chart, alarm, and Stop colors for light backgrounds. Build the shared dashboard stylesheet from its Tailwind source and check the generated CSS in CI.  Verification Checked all seven pages in Chrome at 320, 390, 768, and 1440 px. Passed the dashboard, Python, and native host suites and both firmware staging commands. |
 | [#56](https://github.com/tscircuit/motorcontrol/pull/56) | 🐌 Tiny | AnasSarkiz | Summary Add the two-piece NEMA14 WAGO enclosure to Assets with STEP and STL downloads, rotatable previews, and the native FreeCAD model. Put the R5 lid and both USB-C plug collars on one flat plane. The rear bay gives direct access to the WAGO tabs and wire entries with the cover installed. Seat all four M2.5 screws 8.10 mm below the top in 6.40 mm pockets. A 4.70 mm head has 0.85 mm radial clearance and the DATA-side head clears the modeled plug by 0.51 mm with a 1.45 mm head height. Pair the R5 cover with the R2 bottom housing and its 3.50 mm WAGO pin-relief pocket. The assembled size is 38.25  38.25  20.95 mm with a 35.2  35.2 mm motor interface.  R5 enclosure render !R5 NEMA14 WAGO enclosure showing the flat top, four screw pockets, and WAGO access(https:raw.githubusercontent.comtscircuitmotorcontrol48c583bac86d718d22282eb3346d3f9c7abc1bc4docsnema14-enclosurenema14-wago-r5.jpg)  Verification Checked the populated PCB, WAGO supplier solid, plug bodies, reference harness, underside pin allowances, and fastener seats in CAD. Both 12.7  7.8 mm plug envelopes engage their collars within 0.45 mm of movement in four lateral directions. Checked all four pocket diameters, equal seat heights, and screw-head bearing surfaces. Reopened the STEP, verified a watertight STL, and sliced the cover face-down with supports. Built the Assets page, ran the Python test suite, and checked both previews and all four downloads in Chromium. Physical fit with the actual USB-C plugs and fasteners needs a prototype test. |
 | [#46](https://github.com/tscircuit/motorcontrol/pull/46) | 🐌 Tiny | AnasSarkiz | Add the existing NEMA17 controller enclosure to the Assets page alongside all seven retained spacer entries. The editable page is React TSX, rendered at build time into the existing static distassets.html route. Downloads remain ordinary HTML links and work without JavaScript; preview controls remain typed browser TypeScript. |
+
+</details>
+
+### [tscircuit/footprinter](https://github.com/tscircuit/footprinter)
+
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#1024](https://github.com/tscircuit/footprinter/pull/1024) | 🐌 Tiny | seveibar | Add five optional mechanical dimensions to usbcmidmount16, allowing for detailed CAD modeling of USB-C components. |
 
 </details>
 
@@ -1677,6 +1820,19 @@ pie
 
 </details>
 
+### [tscircuit/basic-usbc-devices](https://github.com/tscircuit/basic-usbc-devices)
+
+
+<details>
+<summary>🐌 Tiny Contributions (2)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#12](https://github.com/tscircuit/basic-usbc-devices/pull/12) | 🐌 Tiny | seveibar | Upgrades the tscircuit dependency to version 0.0.3288 and resolves the lockfile against the current boards and dependencies on main. |
+| [#11](https://github.com/tscircuit/basic-usbc-devices/pull/11) | 🐌 Tiny | seveibar | Upgrades the device board toolchain from tscircuit 0.0.3271 to 0.0.3288 and refreshes the Bun lockfile, ensuring compatibility and stability across various builds. |
+
+</details>
+
 ### [tscircuit/tscircuit-desktop](https://github.com/tscircuit/tscircuit-desktop)
 
 
@@ -1693,10 +1849,11 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (1)</summary>
+<summary>🐌 Tiny Contributions (2)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#3](https://github.com/tscircuit/devices.tscircuit.com/pull/3) | 🐌 Tiny | seveibar | Fixes the mounting outlines for the toggle switch and potentiometer, correcting geometry issues in the mounting sheet and ensuring accurate representation in exported models and datasheets. |
 | [#1](https://github.com/tscircuit/devices.tscircuit.com/pull/1) | 🐌 Tiny | seveibar | Regenerates all 18 published mounting sheets with centered dimension labels, ensuring all labels lie on their dimension lines and content outside dimension groups remains byte-identical. |
 
 </details>
@@ -1730,6 +1887,21 @@ pie
 
 </details>
 
+### [tscircuit/circuit-json-to-altium](https://github.com/tscircuit/circuit-json-to-altium)
+
+
+<details>
+<summary>🐌 Tiny Contributions (4)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#219](https://github.com/tscircuit/circuit-json-to-altium/pull/219) | 🐌 Tiny | rushabhcodes | Fixes the issue where NEMA17s actual Y1 label disappears when its type changes from silkscreen text to copper text by exporting copper text as native Text records on the selected copper layer, retaining placement, ownership, rotation, mirroring and Unicode text. |
+| [#218](https://github.com/tscircuit/circuit-json-to-altium/pull/218) | 🐌 Tiny | rushabhcodes | Fixes the issue where the NEMA17s Y1 label disappears when its type changes from silkscreen text to copper text. |
+| [#208](https://github.com/tscircuit/circuit-json-to-altium/pull/208) | 🐌 Tiny | rushabhcodes | Fixes the export of copper primitives in declared four-layer boards to retain the correct copper stack and board thickness, ensuring accurate representation in binary PCB files. |
+| [#207](https://github.com/tscircuit/circuit-json-to-altium/pull/207) | 🐌 Tiny | rushabhcodes | Adds regression tests to ensure that generated Altium PCB documents correctly preserve copper layer names, native layer IDs, and total board thickness, addressing issues with missing metadata in the layer stack. |
+
+</details>
+
 ### [tscircuit/length-matching-solver](https://github.com/tscircuit/length-matching-solver)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -1747,6 +1919,21 @@ pie
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
 | [#664](https://github.com/tscircuit/easyeda-converter/pull/664) | 🐌 Tiny | mohan-bee | Make the required load capacitance visible in generated crystal components. |
+
+</details>
+
+### [tscircuit/EEcircuit-engine](https://github.com/tscircuit/EEcircuit-engine)
+
+| PR # | Impact | Rating | Contributor | Description |
+|------|--------|--------|-------------|-------------|
+| [#10](https://github.com/tscircuit/EEcircuit-engine/pull/10) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | A conditional B-source current step into a capacitor aborts at 42.338 s, and the TI LMZM33602 startup aborts before its requested stop time. This patch preserves capacitor precision and locates behavioral comparison crossings, allowing both circuits to finish with the original fixtures. Stack: repro 9  this fix. The repro snapshots update from actual WebAssembly output. The four-component waveform also has an independent closed-form numerical assertion. Implementation: Stamp an algebraically equivalent scaled capacitor companion unknown, keeping large Cdt terms off node diagonals. Preserve weak conductances, integration history, and solved capacitor currentpower queries. Use compensated residuals and bounded iterative refinement for real SPARSE transient solves. KLU and sensitivity retain their existing paths. Locate continuous arguments crossing , , , and  in behavioral sources after a converged trial. Use bracketed Illinois false position, discard brackets after ordinary NRLTE rejection, integrate the left limit, then restart through the existing XSPICE breakpoint path. Respect the existing minimum breakpoint spacing. Allow value-only expression evaluation to avoid calculating unused derivatives during convergence and event checks. The upstream numerical patch changes 22 Cheader files: 544 additions and 24 deletions. It applies cleanly to both upstream branches selected by the existing mainnext build scripts. It changes no public TypeScript API. Original circuits, component values, tolerances, NewtonLTE acceptance checks, and minimum-timestep policy stay intact; the fix adds no smoothing, parasitic components, recovery jumps, or tolerance relaxation. Validation on the final native and WebAssembly builds: The unchanged four-component reproducer finishes and matches its closed-form RC response. The positive test fails on the unpatched engine. It covers all four comparisons, both trap and Gear, both current signs, a floating capacitor, nonlinear exponential threshold crossings, AC gain, and module reuse. Original TI startup completes 1 ms at default tolerances, with all four tolerances tightened 10, and tightened 100, in both backends. All 27 native operating cases and all 10 WebAssembly cases complete without simulation errors: 182430 V input, 122448  load, and 475468 F output capacitance. WebAssembly includes the eight corners, center, and the 30 V  12   54 F spacing regression. Native upstream: all 58 harness entries pass. All 1,215 model-QA comparison messages exactly match the unpatched baseline, including existing reference differences. AddressSanitizer passes six sourcerunremove lifecycle cycles and the previously failing TI corner. Leak detection is unavailable on this macOS platform. Lint, source and test TypeScript checks, Vite build, sourcepackage regressions, numerical regressions, SVG snapshots, and Chromium pass. The WebAssembly builds complete source manifest matches the intended patch plus the repositorys existing Emscriptenstatic-model hooks. npm test passes the applicable regressions, then encounters the pre-existing missing testfixturesfigure-10-17tps63802-pfm-buck.cir. No tests are skipped or assertions weakened. Extended 5 ms validation also passes:  Backend  Maximum step  Final output  Wall time on this machine   ---  ---  ---  ---   Native  1 s  8.143839846 V  1,042.5 s   Native  250 ns  8.143838275 V  1,081.0 s   WebAssembly  1 s  8.143836797 V  1,964.6 s  All three reach the requested stop time, with finite waveforms and no simulation errors. On a uniform 10 ns alignment grid: Native coarsefine: 0.272 mV RMS, 1.312 mV maximum, 1.571 V endpoint difference. NativeWebAssembly: 0.357 mV RMS, 2.144 mV maximum, 3.049 V endpoint difference. The full TI-model WebAssembly run takes 32.7 minutes here. That runtime remains a release concern; this is a verified correctness fix ready for maintainer review, not an unrestricted performance sign-off. The repository reports no automated PR workflow runscheck statuses for this head; the checks above were executed locally. The RC closed form validates the small circuit independently. NativeWebAssembly agreement and TI-model convergence are numerical checks, not a comparison against measured TI hardware. Algorithm references: Illinois root finding(https:www.math.ubc.caloewmech2Dowell2BJarratt.pdf), bounded iterative refinement(https:netlib.orglapackexplore-htmld5da4group__gerfs_gaf9908a6db85a278e5756cbded5f49819.html). |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Contributor | Description |
+|------|--------|-------------|-------------|
+| [#9](https://github.com/tscircuit/EEcircuit-engine/pull/9) | 🐌 Tiny | ShiboSoftwareDev | Reproduces two transient aborts using real WebAssembly results for the TI LMZM33602 startup and a four-component conditional current source charging a capacitor, including SVG visualizations of the results. |
 
 </details>
 
@@ -1793,16 +1980,6 @@ pie
 
 </details>
 
-### [tscircuit/repair04](https://github.com/tscircuit/repair04)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#85](https://github.com/tscircuit/repair04/pull/85) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Adds support for fixed copper paths in the negotiation solver to avoid routing conflicts with saved copper during regional repairs. |
-| [#83](https://github.com/tscircuit/repair04/pull/83) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reduces clearance search time by 89.9 by using one representative of each obstacles already joined aliases while preserving paths and empty-alias behavior. |
-| [#82](https://github.com/tscircuit/repair04/pull/82) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Replays a native OrangeCrab clearance search with the original board connectivity, addressing repeated pad alias lookups during the clearance search process. |
-| [#79](https://github.com/tscircuit/repair04/pull/79) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Reproduces the clearance grid for completed DDR vias as component pads, adding extra rows, columns, and midpoints across the repair region. |
-| [#80](https://github.com/tscircuit/repair04/pull/80) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Fixes the contribution of fixed-copper vias to the BGA pad-channel grid by using single-layer component pads for extra channels, improving grid state and reducing clearance issues. |
-
 ### [tscircuit/bus-lanes-solver](https://github.com/tscircuit/bus-lanes-solver)
 
 | PR # | Impact | Rating | Contributor | Description |
@@ -1824,11 +2001,12 @@ pie
 
 </details>
 
-### [tscircuit/high-density-phase-solver](https://github.com/tscircuit/high-density-phase-solver)
+### [tscircuit/bga-escape-routing-solver](https://github.com/tscircuit/bga-escape-routing-solver)
 
 | PR # | Impact | Rating | Contributor | Description |
 |------|--------|--------|-------------|-------------|
-| [#1](https://github.com/tscircuit/high-density-phase-solver/pull/1) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Adds the BGA detailed-routing algorithm used by autorouter 4110. On the STM32MP157, a full-width trace has just 0.019 mm of centerline freedom between adjacent balls. The solver aligns the grid to the BGA pitch, counts legal through-via sites, reserves exits in scarcity order, then routes the callers original point pairs on the supplied signal layers. Pipeline9 owns board selection, final DRC and export. |
+| [#5](https://github.com/tscircuit/bga-escape-routing-solver/pull/5) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Rename the BGA escape routing solver package and enhance documentation with examples, CI integration, and a new visual debugger. |
+| [#1](https://github.com/tscircuit/bga-escape-routing-solver/pull/1) | 🐳 Major | ⭐⭐⭐ | ShiboSoftwareDev | Adds the BGA detailed-routing algorithm used by autorouter 4110. On the STM32MP157, a full-width trace has just 0.019 mm of centerline freedom between adjacent balls. The solver aligns the grid to the BGA pitch, counts legal through-via sites, reserves exits in scarcity order, then routes the callers original point pairs on the supplied signal layers. Pipeline9 owns board selection, final DRC and export. |
 
 ### [tscircuit/circuit-json-to-spice](https://github.com/tscircuit/circuit-json-to-spice)
 
@@ -1862,10 +2040,11 @@ pie
 | [#36](https://github.com/tscircuit/ngspice-spice-engine/pull/36) | 🐙 Minor | ⭐⭐ | ShiboSoftwareDev | Normalizes the resistance and control endpoints for reversed PSpice switches to ensure correct voltage switching response. |
 
 <details>
-<summary>🐌 Tiny Contributions (5)</summary>
+<summary>🐌 Tiny Contributions (6)</summary>
 
 | PR # | Impact | Contributor | Description |
 |------|--------|-------------|-------------|
+| [#49](https://github.com/tscircuit/ngspice-spice-engine/pull/49) | 🐌 Tiny | ShiboSoftwareDev | Pins the engine CDN URL to published tscircuiteecircuit-engine1.7.7, which contains transient precision and behavioral-event fixes, and updates snapshots accordingly. |
 | [#42](https://github.com/tscircuit/ngspice-spice-engine/pull/42) | 🐌 Tiny | ShiboSoftwareDev | Reproduces a bug where a TI-style initial condition with whitespace is ignored in ngspice, affecting simulation results. |
 | [#35](https://github.com/tscircuit/ngspice-spice-engine/pull/35) | 🐌 Tiny | ShiboSoftwareDev | Reproduces a TPS7A20-style output switch with reversed RONROFF endpoints and validates the current behavior through a comprehensive test. |
 | [#45](https://github.com/tscircuit/ngspice-spice-engine/pull/45) | 🐌 Tiny | ShiboSoftwareDev | Updates the spicets dependency to version 0.0.6 for the ngspice adapter, ensuring compatibility with the latest features and fixes from spicets. |
@@ -1908,21 +2087,6 @@ pie
 |------|--------|--------|-------------|-------------|
 | [#264](https://github.com/tscircuit/circuit-json-to-gerber/pull/264) | 🐙 Minor | ⭐⭐ | AJ0070 | Changes the representation of rotated solder paste from using LR to using rotated regions, ensuring accurate rendering in Gerber files. |
 
-### [tscircuit/circuit-json-to-step](https://github.com/tscircuit/circuit-json-to-step)
-
-| PR # | Impact | Rating | Contributor | Description |
-|------|--------|--------|-------------|-------------|
-| [#193](https://github.com/tscircuit/circuit-json-to-step/pull/193) | 🐙 Minor | ⭐⭐ | Devesh36 | Fixes the missing non-plated oval mounting hole reproduced in 190, ensuring that board and panel exports correctly cut the elliptical opening. |
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Contributor | Description |
-|------|--------|-------------|-------------|
-| [#190](https://github.com/tscircuit/circuit-json-to-step/pull/190) | 🐌 Tiny | Devesh36 | Reproduces a bug where non-plated oval mounting holes disappear from STEP exports, providing a test and JSON fixture without altering production code. |
-
-</details>
-
 ## Changes by Contributor
 
 ### [0hmX](https://github.com/0hmX)
@@ -1931,18 +2095,21 @@ pie
 |------|--------|--------|-------------|
 | [#5629](https://github.com/tscircuit/core/pull/5629) | 🐳 Major | ⭐⭐⭐ | Render simulation.ibismodel into a Circuit JSON IBIS model record with component, pin, and reference-port bindings, validating ambiguous, duplicate, or undeclared vendor pin bindings. |
 | [#5649](https://github.com/tscircuit/core/pull/5649) | 🐳 Major | ⭐⭐⭐ | Adds simulation.pcbdriverreceiverchannel, resolves driver and receiver pins to IBIS models, validates PCB connectivity and routing, and writes channel records with an explicit seed when supplied. |
+| [#4162](https://github.com/tscircuit/tscircuit-autorouter/pull/4162) | 🐳 Major | ⭐⭐⭐ | Fixes power trace width expansion when connections share a pad, ensuring the widest trace width is used for merged nets. |
 | [#8](https://github.com/tscircuit/ibis-to-spice/pull/8) | 🐳 Major | ⭐⭐⭐ | Share scalar reference-voltage resolution between rail checks and SPICE conversion, accept all four explicit references without Voltage Range in separate-reference conversion, and reject missing typical waveform samples when parsing the selected model. |
 | [#7](https://github.com/tscircuit/ibis-to-spice/pull/7) | 🐳 Major | ⭐⭐⭐ | Exports the resolveIbisReferences function to unify rail mapping and diagnostics in the signal-integrity pipeline, ensuring consistent output across multiple runs. |
 | [#6](https://github.com/tscircuit/ibis-to-spice/pull/6) | 🐳 Major | ⭐⭐⭐ | Expose the typical, minimum and maximum rising and falling Ramp ratios on IbisBuffer.ramp, along with the optional R_load in ohms. |
 | [#99](https://github.com/tscircuit/signal-integrity-pipeline/pull/99) | 🐳 Major | ⭐⭐⭐ | Prepare each PCB transient channel simulation written by core. Validate its driverreceiver channels, scope the copper and IBIS models, and lower the settings, stimuli and probes used by routed admission in 100. Stacked on 120.  New concepts Channel simulation preparation. prepareChannelSimulationById prepares the drivers, receivers, timing and stimuli for one simulation. Model, supply and control helpers return updated Circuit JSON. Declared and nominal supplies. A declared voltage source stays with the retained nets it supplies. The IBIS reference voltages bias unpowered rails. Pseudo-random binary sequence (PRBS). The seed determines the starting phase. Preparation generates only the bits needed for the recording, up to the pattern limit. Adjacent routed segments may share a physical endpoint. Constant drivers hold their level from t0 regardless of the stimulus offset.  Aggressor states Use aggressorPattern to set a quiet level or switching pattern, or set aggressorDisabled for high impedance. Every retained output-capable pin outside the declared driver roles needs an explicit state, including bidirectional receivers. Admission names the pins in the error if their state is missing. This PR pins the core preview from tscircuitcore5804 so TSX emits the aggressor fields. Switch the preview pin to the release when it ships. |
-| [#120](https://github.com/tscircuit/signal-integrity-pipeline/pull/120) | 🐳 Major | ⭐⭐⭐ | Adds CopperScope for routed channel extraction. Stacked on 158. Routed admission in 99 supplies the distance in millimetres and defaults to 32 mm. Scope rejects non-finite or negative distances with simulation_scope. |
 | [#158](https://github.com/tscircuit/signal-integrity-pipeline/pull/158) | 🐳 Major | ⭐⭐⭐ | Refactors the filtering of Circuit JSON records using the cju utility, ensuring local bookkeeping and maintaining existing checks for cardinality and duplicate identifiers. |
+| [#120](https://github.com/tscircuit/signal-integrity-pipeline/pull/120) | 🐳 Major | ⭐⭐⭐ | Adds CopperScope for routed channel extraction. Stacked on 158. Routed admission in 99 supplies the distance in millimetres and defaults to 32 mm. Scope rejects non-finite or negative distances with simulation_scope. |
 | [#141](https://github.com/tscircuit/signal-integrity-pipeline/pull/141) | 🐳 Major | ⭐⭐⭐ | Adds edgeDurationSeconds to estimate the 1090 edge duration for channel endpoints, enabling accurate transient timestep sizing across fixtures. |
 | [#118](https://github.com/tscircuit/signal-integrity-pipeline/pull/118) | 🐳 Major | ⭐⭐⭐ | Resolves the buffer, pin capabilities and reference rails for selected channel endpoints. Stacked on 117. The inspection exports have no production callers in this layer. 99 uses them to prepare channels. Inspection resolves the selected pins rail overrides and vendor pin mappings through resolveIbisReferences and checks clamp voltages at the typical corner. It gets the typical voltages from resolveIbisReferenceVoltages, the same function the converter uses. It checks every selected pin binding for duplicates before skipping power, ground and unconnected pins. IBIS rail ports (7)(https:github.comtscircuitibis-to-spicepull7)  Shared reference voltages (8)(https:github.comtscircuitibis-to-spicepull8) |
 | [#98](https://github.com/tscircuit/signal-integrity-pipeline/pull/98) | 🐳 Major | ⭐⭐⭐ | Removes the 3D extraction pipeline, DDR report and viewer, old observation folding, and their examples and tests. Retains the independently usable board, simulation, and adapter utilities. |
 | [#116](https://github.com/tscircuit/signal-integrity-pipeline/pull/116) | 🐳 Major | ⭐⭐⭐ | Adds circuit-json-to-connectivity-map 0.0.35 as a direct dependency and uses it for source-net membership, introducing helpers for source connection groups and passive bridges for signal analysis. |
 | [#127](https://github.com/tscircuit/signal-integrity-pipeline/pull/127) | 🐳 Major | ⭐⭐⭐ | Remove the local Circuit JSON schema overrides, the obsolete AM3352 fixture and its attribution, and the two tests for legacy forms. Keep the malformed-record checks.  Input checked against circuit-json 0.0.552  Failures   ---  ---:   Private DDR3 board  0   Fresh core 0.0.2409 render of examplesroutedtwo-trace-board.tsx  0   testsfixturesstraight.circuit.json  0   Old AM3352 core export  234  Old exports that use the removed forms now fail with a circuit_schema error identifying the record. Re-export those boards with current core. This follows ShiboSoftwareDevs review comment(https:github.comtscircuitsignal-integrity-pipelinepull125discussion_r4618728046) and is stacked on 125.  Generated with Claude Code(https:claude.comclaude-code) |
 | [#2](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/2) | 🐳 Major | ⭐⭐⭐ | Adds getDifferentialPairPhaseSkew( circuitJson ), a pure function that computes KiCad-style phase skew for every routed differential pair, so pcb-viewer can draw it on demand instead of reading it from Circuit JSON. It ports the calculation from tscircuitcore 5749 (closed) and the via length through the stackup from core 5752 (closed), with the shared contracts snake_case output: source_bus_id, positive_trace  negative_trace (pcb_trace_id, max_phase_skew, min_phase_skew, segments with optional phase_skew), max_abs_phase_skew, end_to_end_length_delta (always present) and max_length_skew (copied from differentialpair maxLengthSkew, an unsigned limit). Reads Circuit JSON through tscircuitcircuit-json-util (cju) and finds each pairs board with its createBoardOwnerMap. Reads the boards thickness and num_layers through circuit-jsons pcb_board schema, so a record that omits them gets the schemas defaults. Walks copper with the copper renderers layer rules: wire points on one layer, a wire point and a via on one of the vias layers, a through pad across its pad. A via joins its two layers whichever way it is stored, also at the start of a route. Two vias in a row, as core routes pcbPath vias, join on the layer they share. Measures routing inside the start and end pads, and on either side of a via inside its pad where the vias outer diameter is known, straight from the pad centre to where the route leaves the pad, or to a via inside the pad, as KiCads tuning path does, so a jog hidden in a pad, its drill or a vias pad adds no phase skew. Pads are measured by their outer copper outline as renderers draw it (drill included, oval plated pads as ellipses), built from each pad shapes fields without throwing; each leg is checked for where it first crosses the outline (points on an edge count as inside), so a leg through the notch of a concave pad leaves the pad there however the route is split. Routing whose straight replacement would cross a concave pads notch is kept as drawn. Cuts teardrop tapers into constant-width wire points every 0.01 mm of width change before clipping, so matching and drawing use the local width, also where a taper crosses a pad edge. A via counts its height through the boards stackup; without one, it is estimated by spacing copper layers evenly through the board thickness by num_layers. That is close to KiCads default stackup but not equal (KiCad takes off copper and solder mask first: 1.58 mm rather than 1.6 mm top to bottom on a 1.6 mm 4-layer board). Ramps are sampled every 0.05 mm, joining neighbours with the same rounded phase skew (10 nm), so sub-micron ramps keep their gradient. A pair is left out, without throwing or hiding other pairs, when a side is routed as several pcb_traces or is unrouted, the same trace is on both sides, a trace has no planar copper (a via in pad joining two pads at one point), a traces copper jumps layers without a via or changes to a copper layer its board doesnt have, or its boards dimensions fail the pcb_board schema or still give no finite length. Deleted with the core render phase: the stored element and its colours, the runtime error for a failed pair, the split-pair warning, and the teardropasync-routing ordering (a pure function measures whatever Circuit JSON it is given). Functions return new values instead of mutating their arguments (walk joining, interval insertion, phase skew range), per AGENTS.md. Tests: the TSX USB reproduction (core 5747), the KiCad-ported behaviour tests from core 5749 and pcb-viewer fix6calc, and regression tests for the cases above, all rendered through tscircuitcore, with SVG snapshots of the overlay in KiCads colours. Packages: adds tscircuitcircuit-json-util as a dependency; tscircuitcore, tscircuit, tscircuitchecks, react and bun-match-svg as test-only dev dependencies. Install preview (no build step; ships lib.ts): bash bun add https:pkg.pr.newtscircuitcircuit-json-to-differential-pair-phase-skew0836b0e  mermaid flowchart LR Asource_bus with differential_pair -- Bone pcb_trace per side B -- Tcut tapers into constant-width pieces T -- Cclip routing inside start and end pads and via pads C -- Dwalk copper by renderer layer rules, vias by stackup height, tapers by local width D --no planar copper or a layer jump Xpair left out D -- Eorient walks from output ports E -- Ffind parallel, close coupled runs F -- Gspans: unknown, measured, interpolated G -- Hsegments every 0.05 mm with phase_skew, equal neighbours joined  Stacked on: 1 (scaffold).  New concepts Phase skew: at a point along a pair, how much farther this trace has run than its partner (mm). It is signed per trace, as KiCad shows it: positive_trace holds P minus N and negative_trace holds N minus P, so the two traces show opposite colours at the same place. end_to_end_length_delta is always P minus N. Coupled run: a stretch where both traces run parallel (cosine  0.9999) on one layer within (gap  mean width)  1.2. Phase skew is known inside runs, interpolated between them, and unknown before the first and after the last. Pad clipping: KiCads OptimiseTraceInPad and OptimiseTraceInVia. From the end of a route inside its pad, the measured path runs straight to the first point where the route leaves the pads outer outline, or to a via inside the pad; the wire points in between are dropped. Routing that already runs straight is left as it is. Behaviour differs from core in one place: a via counts its height through the boards stackup (or an estimate from evenly spaced layers through its thickness without one), as core 5752 proposed. Core main still counts 1.6 mm per via in pcb_trace.trace_length, so on boards that arent 1.6 mm thick end_to_end_length_delta can differ from cores bus length skew check. |
+| [#3](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks/pull/3) | 🐳 Major | ⭐⭐⭐ | Stacked on 2. Fixes the bugs an independent review of 2 confirmed. Most were inherited from the original tool, not introduced by the port. Two commits, so the reproductions can be checked on their own: 1. Add reproductions: 11 tests marked test.failing. On the unfixed code, each one fails for exactly the reported bug. 2. Fix: the fixes; the reproductions become regular tests.  Finding  Fix  ------  A bare --pr 1 could return another repos cached PR  Cache bare numbers per directory   A push between reads could cache the newer diff under the older head SHA  Always diff the exact base...head commits   A truncated GitHub tree silently skipped files  Fail with an error that suggests checking a local clone    counter read as a header; non-ASCII paths dropped; diff.noprefix broke local diffs  Hunks end by their  counts, git-quoted paths are decoded, local diffs force ab prefixes   --checks deps matched nothing  Filter findings, not checks, by ID prefix   Deleting the only test workflow was a pre-existing warning  A finding on a directory belongs to a change inside it   Code-analysis results shared between test and non-test files; a parameter added on its own line wasnt checked  Cache by path  content; any added line in a signature counts   binscripts entries treated as dependencies; expect(existsSync(x)) treated as a CI skip  Only real dependency sections count; only conditional skips are flagged   A corrupt cache entry aborted every run  Corrupt entries are a miss; writes are atomic; cache version bumped to v2   bun run check was missing after the port  Restored   Re-review follow-up (third commit) A second independent review confirmed all 11 reproductions fail on the unfixed code for the stated bug, and found variants the first fixes missed. Each one now has a test that fails on the previous commit: The cache version is also applied under a custom PULLREQUEST_DETERMINISTIC_CHECKS_CACHE_DIR, and an entry with no payload counts as a miss. Bare PR numbers are also scoped by GH_REPO and GH_HOST. An invalid package.json or biome.json is reported as a finding instead of aborting the run. A URL dependency is caught even when another section declares the same name. The CI-skip rule now also catches guards written with  and ?, and no longer flags guards that throw or assert. Editing another workflow no longer promotes an existing missing-test-workflow gap to an error, while renaming the test workflow out of the directory now does. Pure renames, mode-only changes with  b in the name, emoji paths and CRLF headers keep their paths. Editing only an arrow functions body no longer flags its signature. Two reproduction fixtures were corrected to exercise the reported bug. Checked on real PRs: diffs from the compare API match GitHubs file lists for merged PRs, an open PR and a merged PR from a fork. Known limitations, not fixed: if ( guards split across several lines, and the PR-source tests share one fake gh and process.cwd(), so they assume Buns default serial test run. GitHub-backed tests use a fake gh on PATH, so the suite never touches the network. runCommand now resolves executables against the current PATH so the fake is picked up. Verification: bun test: 31 pass. bunx tsc --noEmit, bun run format:check and bunx biome lint . are clean. Self-check (bun run check --base originbootstrap): 0 errors, 2 warnings, down from 3; the bin false positive is gone. Replaying every review comment from the past week at the commit it was left on, with a fresh cache: still 2127 caught. handbooktwo-parameter-rule findings went from 38 to 41 (multi-line signatures); depsunneeded-bumps from 34 to 27 (no more scriptsbin false positives). |
+| [#2](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks/pull/2) | 🐳 Major | ⭐⭐⭐ | Stacked on 1.  What changed Port the Bun CLI, audit command, TypeScript API, checks, and disk cache under lib with a package binary and bundled plop config. Keep check rules, IDs, levels, messages, review quotes, cache key formats, environment variables, flags, and exit behavior. The port changes the source hash used to invalidate cached findings. Document CLI and API usage, caching, review history, and the agent skill. Port the six original test cases and add four parser and disk-cache cases using a temporary cache. Keep the plop workflows unmodified. While this PR targets bootstrap, only bun test runs in CI; typecheck and format were run locally and run in CI once it targets main. |
 | [#1042](https://github.com/tscircuit/circuit-json/pull/1042) | 🐙 Minor | ⭐⭐ | Add optional aggressor_pattern and aggressor_disabled fields to PCB transient channel simulation records, allowing for more precise control over aggressor behavior in simulations. |
 | [#1058](https://github.com/tscircuit/props/pull/1058) | 🐙 Minor | ⭐⭐ | Add optional aggressorPattern and aggressorDisabled props to simulation.pcbtransientchannelsimulation for enhanced control over simulation aggressors. |
 | [#5804](https://github.com/tscircuit/core/pull/5804) | 🐙 Minor | ⭐⭐ | Serialize aggressorPattern and aggressorDisabled as aggressor_pattern and aggressor_disabled on PCB transient channel simulation records, ensuring omitted fields are not included and preserving explicitly declared values. |
@@ -1951,16 +2118,22 @@ pie
 | [#5650](https://github.com/tscircuit/core/pull/5650) | 🐙 Minor | ⭐⭐ | Allows channels using pseudo-random binary sequence (PRBS) patterns to automatically select distinct seeds based on signal names and sequence lengths, preventing identical bit transmission across channels. |
 | [#5647](https://github.com/tscircuit/core/pull/5647) | 🐙 Minor | ⭐⭐ | Copies plated_hole_copper_thickness from the JLCPCB stackup data into pcb_stackup for boards using a JLCPCB fabricatorPreset, enabling accurate modeling of vias in PCB transient channel simulations. |
 | [#5423](https://github.com/tscircuit/core/pull/5423) | 🐙 Minor | ⭐⭐ | Add simulation.pcbtransientchannelsimulation as a direct child of a PCB board, emitting run records with settings and covering tests for board-only rules. |
+| [#965](https://github.com/tscircuit/circuit-to-svg/pull/965) | 🐙 Minor | ⭐⭐ | Circuit-to-svgs published declarations should define the phase skew palette locally because the library is an internal bundled dependency. Removing declaration resolution for the library lets it ship plain TypeScript source while circuit-to-svg continues to bundle its JavaScript. |
+| [#962](https://github.com/tscircuit/circuit-to-svg/pull/962) | 🐙 Minor | ⭐⭐ | Add showDifferentialPairPhaseSkew to convertCircuitJsonToPcbSvg, off by default. It draws an opaque, round-capped stroke over the pairs copper and under its drills. White marks traces in step, blue marks traces ahead, red marks traces behind, and gray marks regions with unknown skew. The overlay follows the selected copper layer and accepts phaseSkewColors overrides. |
+| [#327](https://github.com/tscircuit/circuit-to-canvas/pull/327) | 🐙 Minor | ⭐⭐ | Add showDifferentialPairPhaseSkew to drawElements to redraw differential pair traces as opaque, round-capped strokes, indicating phase skew with color coding. |
 | [#11](https://github.com/tscircuit/jlcpcb-manufacturing-specs/pull/11) | 🐙 Minor | ⭐⭐ | Adds plated_hole_copper_thickness to every JLCPCB stackup, setting it to JLCPCBs published average hole plating thickness of 0.018 mm for all stackups. |
 | [#119](https://github.com/tscircuit/signal-integrity-pipeline/pull/119) | 🐙 Minor | ⭐⭐ | Check that selected routed copper connects each driver to its receivers and follows a linear path. The check raises channel_fanout for a branch, channel_net for disconnected copper, and channel_driver_terminal_missing or channel_receiver_terminal_missing for missing PCB terminals in strict mode. |
 | [#117](https://github.com/tscircuit/signal-integrity-pipeline/pull/117) | 🐙 Minor | ⭐⭐ | Adds isQuiet functionality to determine if a channel is quiet and sets a default capture duration for timing in the pipeline. |
+| [#8](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/8) | 🐙 Minor | ⭐⭐ | Each stroke now carries the pcb_trace_id of the trace it covers. |
+| [#5](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/5) | 🐙 Minor | ⭐⭐ | Export getDifferentialPairPhaseSkewStrokes so renderers can draw the same opaque RGB overlay from Circuit JSON. |
 
 <details>
-<summary>🐌 Tiny Contributions (19)</summary>
+<summary>🐌 Tiny Contributions (25)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#1223](https://github.com/tscircuit/pcb-viewer/pull/1223) | 🐌 Tiny | Adds support for rendering differential-pair local skew in the WebGPU rendering engine, allowing for accurate visual representation of skew in PCB designs. |
+| [#966](https://github.com/tscircuit/circuit-to-svg/pull/966) | 🐌 Tiny | Updates the phase skew library dependency to version 0.0.5 and refreshes the Bun lockfile, ensuring compatibility and stability of the build. |
 | [#156](https://github.com/tscircuit/signal-integrity-pipeline/pull/156) | 🐌 Tiny | Renames the seed argument to memberId in the sourceNetMembers function to clarify its purpose as the identifier for the source port or net. |
 | [#155](https://github.com/tscircuit/signal-integrity-pipeline/pull/155) | 🐌 Tiny | Add three rules to AGENTS.md regarding naming conventions, value transformation, and function length. |
 | [#143](https://github.com/tscircuit/signal-integrity-pipeline/pull/143) | 🐌 Tiny | Adds tests for IBIS pin inspection and edge duration using real vendor files, ensuring proper verification of vendor models and their integration into the testing framework. |
@@ -1978,45 +2151,12 @@ pie
 | [#124](https://github.com/tscircuit/signal-integrity-pipeline/pull/124) | 🐌 Tiny | Records the code, test, and PR conventions used across the routed pipeline. |
 | [#131](https://github.com/tscircuit/signal-integrity-pipeline/pull/131) | 🐌 Tiny | Formats the base repository with Biome 2.0.0 and checks formatting in CI. This is the third tooling layer, stacked on 129 above the contributor guide in 124.  New concepts Biome configuration. Uses the tscircuit template with repository-specific exclusions for generated output, models, and snapshots. Lint ownership. Biome handles layout and import order. ESLint retains JSDoc, typed signatures, enum restrictions, file length, and test-to-source rules. Feature layers above this PR are Biome-formatted and run their tests with bun:test. |
 | [#133](https://github.com/tscircuit/signal-integrity-pipeline/pull/133) | 🐌 Tiny | Stacked on main, directly below 117. Use named inputs for internal pipeline and tooling calls. Move stateful helpers to module scope and name return shapes and limits so callers can read their intent at the call site. The public transmittedBits helper now takes a named input object.  New concepts Named inputs make the roles of multiple arguments explicit at a call site. The circuit-node lookup factory captures the same per-circuit maps and returns the node lookup used by declarations and deck assembly. Compiled buffers are typed as groups in experiment order, with each groups buffers in model order.  Generated with Claude Code(https:claude.comclaude-code) |
+| [#7](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/7) | 🐌 Tiny | Ship lib directly in GitHub release and PR preview tarballs, following the handbooks source package layout. Enable strict indexed access and override checks for lib in CI. Based on main. |
+| [#6](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/6) | 🐌 Tiny | Changes the release process from npm to GitHub Releases due to permission issues with npm, allowing users to install the package directly from GitHub Releases instead. |
+| [#4](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/4) | 🐌 Tiny | This PR enables the package to be published to npm on every push to the main branch, transitioning from a development preview to a stable release. |
 | [#1](https://github.com/tscircuit/circuit-json-to-differential-pair-phase-skew/pull/1) | 🐌 Tiny | Sets up the package so the differential pair phase skew calculation can land in the next PR. |
-
-</details>
-
-### [imrishabh18](https://github.com/imrishabh18)
-
-| PRs # | Impact | Rating | Description |
-|------|--------|--------|-------------|
-| [#657](https://github.com/tscircuit/jlcsearch/pull/657) | 🐳 Major | ⭐⭐⭐ | Optimizes search functionality by incorporating package codes into the text index, reducing candidate results and improving search speed. |
-| [#3964](https://github.com/tscircuit/tscircuit-autorouter/pull/3964) | 🐳 Major | ⭐⭐⭐ | Fixes phantom via repair on the RP2040 motor controller by ensuring existing plated-hole transitions are not treated as new vias. |
-| [#5839](https://github.com/tscircuit/core/pull/5839) | 🐙 Minor | ⭐⭐ | Updates circuit-to-svg to version 0.0.463 and circuit-json-util to 0.0.135, aligning dependencies and ensuring compatibility with the latest runtime and CLI updates, while also validating authored waypoint paths and refreshing PCB snapshots. |
-| [#5685](https://github.com/tscircuit/core/pull/5685) | 🐙 Minor | ⭐⭐ | Captures and normalizes schematic and source warnings and errors for the NEMA 17 example, ensuring stability across test orders. |
-| [#5702](https://github.com/tscircuit/core/pull/5702) | 🐙 Minor | ⭐⭐ | Recomputes NEMA 17 diagnostics by rerunning pin specification and schematic checks using the installed Checks package, while retaining source-render annotations. |
-| [#955](https://github.com/tscircuit/circuit-to-svg/pull/955) | 🐙 Minor | ⭐⭐ | Fixes PCB bounds calculation by excluding system diagram geometry from SVG bounds, ensuring accurate rendering of PCB outlines. |
-| [#954](https://github.com/tscircuit/circuit-to-svg/pull/954) | 🐙 Minor | ⭐⭐ | Adds a visual snapshot of a PCB exported from Circuit JSON that captures the current output from the unmodified renderer, addressing the issue of PCB shrinking inside a large white bounds rectangle. |
-| [#585](https://github.com/tscircuit/checks/pull/585) | 🐙 Minor | ⭐⭐ | Fixes the issue where chips with explicitly declared absent power or ground requirements still trigger missing-pin warnings. |
-| [#584](https://github.com/tscircuit/checks/pull/584) | 🐙 Minor | ⭐⭐ | Honor explicit false values for power and ground requirements independently, skipping missing-role warnings when all connectable pins declare that requirement false. |
-| [#5867](https://github.com/tscircuit/cli/pull/5867) | 🐙 Minor | ⭐⭐ | Fixes the issue where cloning an existing project overwrites custom scripts and dependencies, ensuring existing project files are preserved during the cloning process. |
-| [#5863](https://github.com/tscircuit/cli/pull/5863) | 🐙 Minor | ⭐⭐ | Fixes the error output when the registry rejects an oversized archive, allowing for individual file uploads instead. |
-| [#305](https://github.com/tscircuit/circuit-json-to-gltf/pull/305) | 🐙 Minor | ⭐⭐ | Reproduces the RP2040 JST solder-pad offset in glTF to ensure accurate placement of solder pads in the exported model. |
-| [#306](https://github.com/tscircuit/circuit-json-to-gltf/pull/306) | 🐙 Minor | ⭐⭐ | Preserves the OBJs local origin when its CAD anchor is offset in the board plane from a known PCB footprint origin, ensuring accurate placement of solder contacts in glTF exports. |
-| [#217](https://github.com/tscircuit/high-density-repair03/pull/217) | 🐙 Minor | ⭐⭐ | Fixes the issue where existing plated holes were incorrectly treated as new vias, causing pad-clearance violations in the RP2040 motor-controller trace. |
-| [#1](https://github.com/tscircuit/nema17-motor-controller/pull/1) | 🐙 Minor | ⭐⭐ | Adds the trace-free RP2040DRV8825 circuit from v1.0.58, retaining its electrical connections and PCB placement with the default local autorouter. Includes only the circuits required source, footprints, layout assets, licenses, compatibility patches, and build configuration. Generated outputs, reports, snapshots, and unrelated files are excluded. Validation: TypeScript, netlist check, frozen install, and the unrouted build pass. Existing placement and routing validation findings are documented in the README; the autorouter reproduction is tscircuittscircuit-autorouter3958. |
-
-<details>
-<summary>🐌 Tiny Contributions (10)</summary>
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#6621](https://github.com/tscircuit/tscircuit/pull/6621) | 🐌 Tiny | Updates the circuit-to-svg package from version 0.0.460 to 0.0.463, along with updates to circuit-json-util and circuit-json, to ensure compatibility with the new renderers requirements. |
-| [#5841](https://github.com/tscircuit/core/pull/5841) | 🐌 Tiny | Update Cores circuit-json-to-gltf development dependency from 0.0.164 to 0.0.169, which includes a model-origin fix and visual regression tests. |
-| [#5701](https://github.com/tscircuit/core/pull/5701) | 🐌 Tiny | Updates the tscircuitchecks dependency to version 0.0.282, ensuring that Core honors explicit false power and ground pin requirements. |
-| [#5864](https://github.com/tscircuit/cli/pull/5864) | 🐌 Tiny | Fixes the issue where tsci clone overwrites custom devstart scripts and dependencies, ensuring that project files and configurations are preserved during cloning. |
-| [#5866](https://github.com/tscircuit/cli/pull/5866) | 🐌 Tiny | Fixes the package name format when creating a package with an organization, changing it from npm-style to registry-compatible format. |
-| [#5865](https://github.com/tscircuit/cli/pull/5865) | 🐌 Tiny | Fixes the package name format for registry creation to align with the expected registry format and adds tests for various package visibility flags. |
-| [#5862](https://github.com/tscircuit/cli/pull/5862) | 🐌 Tiny | Fixes excessive error output by truncating large error messages and omitting sensitive data from upload error diagnostics. |
-| [#3948](https://github.com/tscircuit/tscircuit-autorouter/pull/3948) | 🐌 Tiny | The BeaglePlay DDR4 fixture needs pad-to-port metadata so DRC can recognize its 102 terminals. Add that metadata and run the existing input through Pipeline 9 in the BeaglePlay test. The test checks all 51 routes, all 102 connected ports, zero DRC error messages under the boards 0.081 mm clearance, and the platforms routed SVG snapshot. Linux and macOS each have a recorded snapshot. Remove the provenance Markdown and routedunrouted PNGs. Keep the original hardware license and interactive fixture. CI assigns this test the existing full-board routing timeout. The annotated input routes cleanly with the existing solver. Validation runs use effort 1 with caching disabled. |
-| [#3958](https://github.com/tscircuit/tscircuit-autorouter/pull/3958) | 🐌 Tiny | Adds the captured input, debugger fixture, and default Pipeline 9 snapshot test for the RP2040 motor controller(https:tscircuit.comimrishabh18rp2040-motor-controllerpcb) with saved routes removed. The generated snapshot reports 2 relaxed DRC errors. Validated with the focused snapshot test and TypeScript check. |
-| [#69](https://github.com/tscircuit/skill/pull/69) | 🐌 Tiny | Add a bullet point to the documentation showing how to use ignoredFiles in tscircuit.config.json to keep AI-generated debug files out of tsci push uploads. |
+| [#4](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks/pull/4) | 🐌 Tiny | Adds a rule that a PR may change at most one line of any existing package.json, ensuring dependency changes are submitted as separate PRs to reduce noise. |
+| [#1](https://github.com/tscircuit/tscircuit-pullrequest-deterministic-checks/pull/1) | 🐌 Tiny | Sets up the repository with GitHub workflows for format checking, testing, and type checking using Bun and Biome, ensuring deterministic checks for pull requests. |
 
 </details>
 
@@ -2024,26 +2164,32 @@ pie
 
 
 <details>
-<summary>🐌 Tiny Contributions (571)</summary>
+<summary>🐌 Tiny Contributions (599)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
-| [#6622](https://github.com/tscircuit/tscircuit/pull/6622) | 🐌 Tiny | Automated package update |
-| [#6620](https://github.com/tscircuit/tscircuit/pull/6620) | 🐌 Tiny | Automated package update |
+| [#6630](https://github.com/tscircuit/tscircuit/pull/6630) | 🐌 Tiny | Automated package update |
+| [#6629](https://github.com/tscircuit/tscircuit/pull/6629) | 🐌 Tiny | Updates the versions of tscircuitcore, tscircuiteval, tscircuitcli, and tscircuitngspice-spice-engine to their latest releases without introducing new functionality. |
+| [#6628](https://github.com/tscircuit/tscircuit/pull/6628) | 🐌 Tiny | Automated package update |
+| [#6627](https://github.com/tscircuit/tscircuit/pull/6627) | 🐌 Tiny | Updates the version of tscircuitcli and tscircuitcore in package.json |
+| [#6624](https://github.com/tscircuit/tscircuit/pull/6624) | 🐌 Tiny | Automated package update |
+| [#6623](https://github.com/tscircuit/tscircuit/pull/6623) | 🐌 Tiny | Automated package update |
 | [#6619](https://github.com/tscircuit/tscircuit/pull/6619) | 🐌 Tiny | Updates the tscircuitcli package version from 0.1.2485 to 0.1.2486 in package.json |
+| [#6622](https://github.com/tscircuit/tscircuit/pull/6622) | 🐌 Tiny | Automated package update |
 | [#6618](https://github.com/tscircuit/tscircuit/pull/6618) | 🐌 Tiny | Automated package update |
-| [#6617](https://github.com/tscircuit/tscircuit/pull/6617) | 🐌 Tiny | Automated package update |
 | [#6616](https://github.com/tscircuit/tscircuit/pull/6616) | 🐌 Tiny | Automated package update |
 | [#6615](https://github.com/tscircuit/tscircuit/pull/6615) | 🐌 Tiny | Automated package update |
-| [#6614](https://github.com/tscircuit/tscircuit/pull/6614) | 🐌 Tiny | Automated package update |
 | [#6612](https://github.com/tscircuit/tscircuit/pull/6612) | 🐌 Tiny | Automated package update |
-| [#6611](https://github.com/tscircuit/tscircuit/pull/6611) | 🐌 Tiny | Automated package update |
-| [#6610](https://github.com/tscircuit/tscircuit/pull/6610) | 🐌 Tiny | Automated package update |
-| [#6609](https://github.com/tscircuit/tscircuit/pull/6609) | 🐌 Tiny | Updates the tscircuitcli package to version 0.1.2483 |
-| [#6608](https://github.com/tscircuit/tscircuit/pull/6608) | 🐌 Tiny | Automated package update |
-| [#6607](https://github.com/tscircuit/tscircuit/pull/6607) | 🐌 Tiny | Automated package update |
 | [#6606](https://github.com/tscircuit/tscircuit/pull/6606) | 🐌 Tiny | Automated package update |
+| [#6607](https://github.com/tscircuit/tscircuit/pull/6607) | 🐌 Tiny | Automated package update |
+| [#6620](https://github.com/tscircuit/tscircuit/pull/6620) | 🐌 Tiny | Automated package update |
+| [#6617](https://github.com/tscircuit/tscircuit/pull/6617) | 🐌 Tiny | Automated package update |
+| [#6614](https://github.com/tscircuit/tscircuit/pull/6614) | 🐌 Tiny | Automated package update |
+| [#6610](https://github.com/tscircuit/tscircuit/pull/6610) | 🐌 Tiny | Automated package update |
+| [#6608](https://github.com/tscircuit/tscircuit/pull/6608) | 🐌 Tiny | Automated package update |
 | [#6605](https://github.com/tscircuit/tscircuit/pull/6605) | 🐌 Tiny | Automated package update |
+| [#6611](https://github.com/tscircuit/tscircuit/pull/6611) | 🐌 Tiny | Automated package update |
+| [#6609](https://github.com/tscircuit/tscircuit/pull/6609) | 🐌 Tiny | Updates the tscircuitcli package to version 0.1.2483 |
 | [#6604](https://github.com/tscircuit/tscircuit/pull/6604) | 🐌 Tiny | Automated package update |
 | [#6603](https://github.com/tscircuit/tscircuit/pull/6603) | 🐌 Tiny | Automated package update |
 | [#6602](https://github.com/tscircuit/tscircuit/pull/6602) | 🐌 Tiny | Automated package update |
@@ -2151,10 +2297,16 @@ pie
 | [#1026](https://github.com/tscircuit/circuit-json/pull/1026) | 🐌 Tiny | Automated package update |
 | [#1024](https://github.com/tscircuit/circuit-json/pull/1024) | 🐌 Tiny | Automated package update |
 | [#1020](https://github.com/tscircuit/circuit-json/pull/1020) | 🐌 Tiny | Automated package update |
+| [#5857](https://github.com/tscircuit/core/pull/5857) | 🐌 Tiny | Updates the tscircuitchecks package version from 0.0.282 to 0.0.283 in package.json |
 | [#5769](https://github.com/tscircuit/core/pull/5769) | 🐌 Tiny | Updates the tscircuitkrt-wasm package from version 0.1.1 to 0.1.10 in package.json |
 | [#5699](https://github.com/tscircuit/core/pull/5699) | 🐌 Tiny | Updates the version of the tscircuitchecks package from 0.0.280 to 0.0.281 in package.json |
 | [#5694](https://github.com/tscircuit/core/pull/5694) | 🐌 Tiny | Updates the version of the tscircuitfanout-solver package from 0.0.84 to 0.0.85 in package.json |
 | [#5688](https://github.com/tscircuit/core/pull/5688) | 🐌 Tiny | Updates the version of the tscircuitchecks package from 0.0.279 to 0.0.280 in package.json |
+| [#6108](https://github.com/tscircuit/tscircuit.com/pull/6108) | 🐌 Tiny | Updates the tscircuitrunframe package version from 0.0.3332 to 0.0.3333 in package.json |
+| [#6107](https://github.com/tscircuit/tscircuit.com/pull/6107) | 🐌 Tiny | Updates the tscircuiteval package version from 0.0.1850 to 0.0.1851 in package.json |
+| [#6106](https://github.com/tscircuit/tscircuit.com/pull/6106) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3331 to 0.0.3332 |
+| [#6105](https://github.com/tscircuit/tscircuit.com/pull/6105) | 🐌 Tiny | Updates the tscircuitrunframe package version from 0.0.3330 to 0.0.3331 |
+| [#6104](https://github.com/tscircuit/tscircuit.com/pull/6104) | 🐌 Tiny | Automated package update |
 | [#6103](https://github.com/tscircuit/tscircuit.com/pull/6103) | 🐌 Tiny | Updates the tscircuitrunframe package version from 0.0.3329 to 0.0.3330 in package.json |
 | [#6102](https://github.com/tscircuit/tscircuit.com/pull/6102) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3328 to 0.0.3329 |
 | [#6101](https://github.com/tscircuit/tscircuit.com/pull/6101) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1849 to 0.0.1850 |
@@ -2263,6 +2415,7 @@ pie
 | [#5989](https://github.com/tscircuit/tscircuit.com/pull/5989) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1798 to 0.0.1799 |
 | [#6001](https://github.com/tscircuit/tscircuit.com/pull/6001) | 🐌 Tiny | Updates the tscircuitrunframe package from version 0.0.3280 to 0.0.3281 |
 | [#5991](https://github.com/tscircuit/tscircuit.com/pull/5991) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1799 to 0.0.1800 |
+| [#6112](https://github.com/tscircuit/eval/pull/6112) | 🐌 Tiny | Automated package update |
 | [#6091](https://github.com/tscircuit/eval/pull/6091) | 🐌 Tiny | Automated package update |
 | [#6090](https://github.com/tscircuit/eval/pull/6090) | 🐌 Tiny | Updates the version of the tscircuitcore package from 0.0.2461 to 0.0.2462 in package.json |
 | [#6088](https://github.com/tscircuit/eval/pull/6088) | 🐌 Tiny | Automated package update |
@@ -2370,15 +2523,21 @@ pie
 | [#5930](https://github.com/tscircuit/eval/pull/5930) | 🐌 Tiny | Updates package dependencies to their latest versions as part of routine maintenance. |
 | [#5928](https://github.com/tscircuit/eval/pull/5928) | 🐌 Tiny | Automated package update |
 | [#5927](https://github.com/tscircuit/eval/pull/5927) | 🐌 Tiny | Updates the versions of several dependencies in the package.json file. |
+| [#6517](https://github.com/tscircuit/runframe/pull/6517) | 🐌 Tiny | Automated package update |
+| [#6516](https://github.com/tscircuit/runframe/pull/6516) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1850 to 0.0.1851 |
+| [#6513](https://github.com/tscircuit/runframe/pull/6513) | 🐌 Tiny | Automated package update |
+| [#6512](https://github.com/tscircuit/runframe/pull/6512) | 🐌 Tiny | Updates the circuit-json-to-kicad package version from 0.0.280 to 0.0.281 in package.json |
+| [#6510](https://github.com/tscircuit/runframe/pull/6510) | 🐌 Tiny | Automated package update |
+| [#6509](https://github.com/tscircuit/runframe/pull/6509) | 🐌 Tiny | Updates the circuit-json-to-kicad package version from 0.0.279 to 0.0.280 in package.json |
+| [#6502](https://github.com/tscircuit/runframe/pull/6502) | 🐌 Tiny | Automated package update |
 | [#6507](https://github.com/tscircuit/runframe/pull/6507) | 🐌 Tiny | Automated package update |
 | [#6506](https://github.com/tscircuit/runframe/pull/6506) | 🐌 Tiny | Updates the circuit-json-to-gerber package from version 0.0.122 to 0.0.124 |
 | [#6505](https://github.com/tscircuit/runframe/pull/6505) | 🐌 Tiny | Automated package update |
-| [#6504](https://github.com/tscircuit/runframe/pull/6504) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1849 to 0.0.1850 |
 | [#6503](https://github.com/tscircuit/runframe/pull/6503) | 🐌 Tiny | Automated package update |
-| [#6502](https://github.com/tscircuit/runframe/pull/6502) | 🐌 Tiny | Automated package update |
 | [#6500](https://github.com/tscircuit/runframe/pull/6500) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1848 to 0.0.1849 |
 | [#6499](https://github.com/tscircuit/runframe/pull/6499) | 🐌 Tiny | Automated package update |
 | [#6498](https://github.com/tscircuit/runframe/pull/6498) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1847 to 0.0.1848 |
+| [#6504](https://github.com/tscircuit/runframe/pull/6504) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1849 to 0.0.1850 |
 | [#6492](https://github.com/tscircuit/runframe/pull/6492) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1844 to 0.0.1845 |
 | [#6489](https://github.com/tscircuit/runframe/pull/6489) | 🐌 Tiny | Automated package update |
 | [#6488](https://github.com/tscircuit/runframe/pull/6488) | 🐌 Tiny | Updates the tscircuiteval package from version 0.0.1842 to 0.0.1843 |
@@ -2490,13 +2649,16 @@ pie
 | [#5881](https://github.com/tscircuit/cli/pull/5881) | 🐌 Tiny | Automated package update |
 | [#5880](https://github.com/tscircuit/cli/pull/5880) | 🐌 Tiny | Automated package update |
 | [#5857](https://github.com/tscircuit/cli/pull/5857) | 🐌 Tiny | Automated package update |
-| [#3019](https://github.com/tscircuit/svg.tscircuit.com/pull/3019) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3286 to 0.0.3287 in package.json |
+| [#3024](https://github.com/tscircuit/svg.tscircuit.com/pull/3024) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3289 to 0.0.3290 in package.json |
+| [#3023](https://github.com/tscircuit/svg.tscircuit.com/pull/3023) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3288 to 0.0.3289 in package.json |
+| [#3020](https://github.com/tscircuit/svg.tscircuit.com/pull/3020) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3287 to 0.0.3288 in package.json |
 | [#3018](https://github.com/tscircuit/svg.tscircuit.com/pull/3018) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3285 to 0.0.3286 in package.json |
-| [#3017](https://github.com/tscircuit/svg.tscircuit.com/pull/3017) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3282 to 0.0.3285 in package.json |
 | [#3015](https://github.com/tscircuit/svg.tscircuit.com/pull/3015) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3281 to 0.0.3282 in package.json |
 | [#3013](https://github.com/tscircuit/svg.tscircuit.com/pull/3013) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3280 to 0.0.3281 in package.json |
 | [#3012](https://github.com/tscircuit/svg.tscircuit.com/pull/3012) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3279 to 0.0.3280 in package.json |
 | [#3011](https://github.com/tscircuit/svg.tscircuit.com/pull/3011) | 🐌 Tiny | Automated package update |
+| [#3019](https://github.com/tscircuit/svg.tscircuit.com/pull/3019) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3286 to 0.0.3287 in package.json |
+| [#3017](https://github.com/tscircuit/svg.tscircuit.com/pull/3017) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3282 to 0.0.3285 in package.json |
 | [#3010](https://github.com/tscircuit/svg.tscircuit.com/pull/3010) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3277 to 0.0.3278 in package.json |
 | [#3007](https://github.com/tscircuit/svg.tscircuit.com/pull/3007) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3274 to 0.0.3275 in package.json |
 | [#3002](https://github.com/tscircuit/svg.tscircuit.com/pull/3002) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3269 to 0.0.3270 in package.json |
@@ -2543,12 +2705,14 @@ pie
 | [#2965](https://github.com/tscircuit/svg.tscircuit.com/pull/2965) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3230 to 0.0.3231 in package.json |
 | [#2964](https://github.com/tscircuit/svg.tscircuit.com/pull/2964) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3229 to 0.0.3230 in package.json |
 | [#2963](https://github.com/tscircuit/svg.tscircuit.com/pull/2963) | 🐌 Tiny | Updates the tscircuit package version from 0.0.3225 to 0.0.3229 in package.json |
+| [#4170](https://github.com/tscircuit/tscircuit-autorouter/pull/4170) | 🐌 Tiny | Automated package update |
+| [#4164](https://github.com/tscircuit/tscircuit-autorouter/pull/4164) | 🐌 Tiny | Automated package update |
 | [#4156](https://github.com/tscircuit/tscircuit-autorouter/pull/4156) | 🐌 Tiny | Automated package update |
 | [#4143](https://github.com/tscircuit/tscircuit-autorouter/pull/4143) | 🐌 Tiny | Automated package update |
-| [#4142](https://github.com/tscircuit/tscircuit-autorouter/pull/4142) | 🐌 Tiny | Automated package update |
 | [#4125](https://github.com/tscircuit/tscircuit-autorouter/pull/4125) | 🐌 Tiny | Automated package update |
 | [#4123](https://github.com/tscircuit/tscircuit-autorouter/pull/4123) | 🐌 Tiny | Automated package update |
 | [#4120](https://github.com/tscircuit/tscircuit-autorouter/pull/4120) | 🐌 Tiny | Automated package update |
+| [#4142](https://github.com/tscircuit/tscircuit-autorouter/pull/4142) | 🐌 Tiny | Automated package update |
 | [#4117](https://github.com/tscircuit/tscircuit-autorouter/pull/4117) | 🐌 Tiny | Automated package update |
 | [#4108](https://github.com/tscircuit/tscircuit-autorouter/pull/4108) | 🐌 Tiny | Automated package update |
 | [#4087](https://github.com/tscircuit/tscircuit-autorouter/pull/4087) | 🐌 Tiny | Automated package update |
@@ -2583,12 +2747,16 @@ pie
 | [#3913](https://github.com/tscircuit/tscircuit-autorouter/pull/3913) | 🐌 Tiny | Automated package update |
 | [#3908](https://github.com/tscircuit/tscircuit-autorouter/pull/3908) | 🐌 Tiny | Automated package update |
 | [#3905](https://github.com/tscircuit/tscircuit-autorouter/pull/3905) | 🐌 Tiny | Automated package update |
+| [#214](https://github.com/tscircuit/circuit-json-to-step/pull/214) | 🐌 Tiny | Automated package update |
+| [#210](https://github.com/tscircuit/circuit-json-to-step/pull/210) | 🐌 Tiny | Automated package update |
 | [#1453](https://github.com/tscircuit/schematic-trace-solver/pull/1453) | 🐌 Tiny | Updates the package version from 0.0.247 to 0.0.248 in package.json for jscdn publishing. |
 | [#161](https://github.com/tscircuit/copper-pour-solver/pull/161) | 🐌 Tiny | Automated package update |
+| [#114](https://github.com/tscircuit/test-github-automerge/pull/114) | 🐌 Tiny | Updates the tscircuitcircuit-json-util package from version 0.0.131 to 0.0.132 in the project dependencies. |
 | [#118](https://github.com/tscircuit/test-github-automerge/pull/118) | 🐌 Tiny | Updates the tscircuitcircuit-json-util package from version 0.0.133 to 0.0.134 in the project dependencies. |
 | [#116](https://github.com/tscircuit/test-github-automerge/pull/116) | 🐌 Tiny | Updates the tscircuitcircuit-json-util package from version 0.0.132 to 0.0.133 |
-| [#114](https://github.com/tscircuit/test-github-automerge/pull/114) | 🐌 Tiny | Updates the tscircuitcircuit-json-util package from version 0.0.131 to 0.0.132 in the project dependencies. |
 | [#112](https://github.com/tscircuit/test-github-automerge/pull/112) | 🐌 Tiny | Automated package update |
+| [#947](https://github.com/tscircuit/circuit-json-to-kicad/pull/947) | 🐌 Tiny | Automated package update |
+| [#946](https://github.com/tscircuit/circuit-json-to-kicad/pull/946) | 🐌 Tiny | Automated package update |
 | [#939](https://github.com/tscircuit/circuit-json-to-kicad/pull/939) | 🐌 Tiny | Automated package update |
 | [#478](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/478) | 🐌 Tiny | Automated package update |
 | [#468](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/468) | 🐌 Tiny | Automated package update |
@@ -2599,6 +2767,47 @@ pie
 | [#18](https://github.com/tscircuit/circuit-json-to-drawing/pull/18) | 🐌 Tiny | Automated package update |
 | [#15](https://github.com/tscircuit/circuit-json-to-drawing/pull/15) | 🐌 Tiny | Automated package update |
 | [#20](https://github.com/tscircuit/drawing-viewer/pull/20) | 🐌 Tiny | Automated package update |
+
+</details>
+
+### [imrishabh18](https://github.com/imrishabh18)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#657](https://github.com/tscircuit/jlcsearch/pull/657) | 🐳 Major | ⭐⭐⭐ | Optimizes search functionality by incorporating package codes into the text index, reducing candidate results and improving search speed. |
+| [#4163](https://github.com/tscircuit/tscircuit-autorouter/pull/4163) | 🐳 Major | ⭐⭐⭐ | Move high-density trace conversion into libutils and update the Pipeline 7 and Pipeline 9 callers and tests to use the shared module. This refactor targets main directly. The branch-width work remains in 4008. |
+| [#3964](https://github.com/tscircuit/tscircuit-autorouter/pull/3964) | 🐳 Major | ⭐⭐⭐ | Fixes phantom via repair on the RP2040 motor controller by ensuring existing plated-hole transitions are not treated as new vias. |
+| [#5839](https://github.com/tscircuit/core/pull/5839) | 🐙 Minor | ⭐⭐ | Updates circuit-to-svg to version 0.0.463 and circuit-json-util to 0.0.135, aligning dependencies and ensuring compatibility with the latest runtime and CLI updates, while also validating authored waypoint paths and refreshing PCB snapshots. |
+| [#5685](https://github.com/tscircuit/core/pull/5685) | 🐙 Minor | ⭐⭐ | Captures and normalizes schematic and source warnings and errors for the NEMA 17 example, ensuring stability across test orders. |
+| [#5702](https://github.com/tscircuit/core/pull/5702) | 🐙 Minor | ⭐⭐ | Recomputes NEMA 17 diagnostics by rerunning pin specification and schematic checks using the installed Checks package, while retaining source-render annotations. |
+| [#955](https://github.com/tscircuit/circuit-to-svg/pull/955) | 🐙 Minor | ⭐⭐ | Fixes PCB bounds calculation by excluding system diagram geometry from SVG bounds, ensuring accurate rendering of PCB outlines. |
+| [#954](https://github.com/tscircuit/circuit-to-svg/pull/954) | 🐙 Minor | ⭐⭐ | Adds a visual snapshot of a PCB exported from Circuit JSON that captures the current output from the unmodified renderer, addressing the issue of PCB shrinking inside a large white bounds rectangle. |
+| [#585](https://github.com/tscircuit/checks/pull/585) | 🐙 Minor | ⭐⭐ | Fixes the issue where chips with explicitly declared absent power or ground requirements still trigger missing-pin warnings. |
+| [#584](https://github.com/tscircuit/checks/pull/584) | 🐙 Minor | ⭐⭐ | Honor explicit false values for power and ground requirements independently, skipping missing-role warnings when all connectable pins declare that requirement false. |
+| [#5867](https://github.com/tscircuit/cli/pull/5867) | 🐙 Minor | ⭐⭐ | Fixes the issue where cloning an existing project overwrites custom scripts and dependencies, ensuring existing project files are preserved during the cloning process. |
+| [#5863](https://github.com/tscircuit/cli/pull/5863) | 🐙 Minor | ⭐⭐ | Fixes the error output when the registry rejects an oversized archive, allowing for individual file uploads instead. |
+| [#306](https://github.com/tscircuit/circuit-json-to-gltf/pull/306) | 🐙 Minor | ⭐⭐ | Preserves the OBJs local origin when its CAD anchor is offset in the board plane from a known PCB footprint origin, ensuring accurate placement of solder contacts in glTF exports. |
+| [#305](https://github.com/tscircuit/circuit-json-to-gltf/pull/305) | 🐙 Minor | ⭐⭐ | Reproduces the RP2040 JST solder-pad offset in glTF to ensure accurate placement of solder pads in the exported model. |
+| [#217](https://github.com/tscircuit/high-density-repair03/pull/217) | 🐙 Minor | ⭐⭐ | Fixes the issue where existing plated holes were incorrectly treated as new vias, causing pad-clearance violations in the RP2040 motor-controller trace. |
+| [#1](https://github.com/tscircuit/nema17-motor-controller/pull/1) | 🐙 Minor | ⭐⭐ | Adds the trace-free RP2040DRV8825 circuit from v1.0.58, retaining its electrical connections and PCB placement with the default local autorouter. Includes only the circuits required source, footprints, layout assets, licenses, compatibility patches, and build configuration. Generated outputs, reports, snapshots, and unrelated files are excluded. Validation: TypeScript, netlist check, frozen install, and the unrouted build pass. Existing placement and routing validation findings are documented in the README; the autorouter reproduction is tscircuittscircuit-autorouter3958. |
+
+<details>
+<summary>🐌 Tiny Contributions (12)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#6621](https://github.com/tscircuit/tscircuit/pull/6621) | 🐌 Tiny | Updates the circuit-to-svg package from version 0.0.460 to 0.0.463, along with updates to circuit-json-util and circuit-json, to ensure compatibility with the new renderers requirements. |
+| [#5841](https://github.com/tscircuit/core/pull/5841) | 🐌 Tiny | Update Cores circuit-json-to-gltf development dependency from 0.0.164 to 0.0.169, which includes a model-origin fix and visual regression tests. |
+| [#5701](https://github.com/tscircuit/core/pull/5701) | 🐌 Tiny | Updates the tscircuitchecks dependency to version 0.0.282, ensuring that Core honors explicit false power and ground pin requirements. |
+| [#5864](https://github.com/tscircuit/cli/pull/5864) | 🐌 Tiny | Fixes the issue where tsci clone overwrites custom devstart scripts and dependencies, ensuring that project files and configurations are preserved during cloning. |
+| [#5866](https://github.com/tscircuit/cli/pull/5866) | 🐌 Tiny | Fixes the package name format when creating a package with an organization, changing it from npm-style to registry-compatible format. |
+| [#5865](https://github.com/tscircuit/cli/pull/5865) | 🐌 Tiny | Fixes the package name format for registry creation to align with the expected registry format and adds tests for various package visibility flags. |
+| [#5862](https://github.com/tscircuit/cli/pull/5862) | 🐌 Tiny | Fixes excessive error output by truncating large error messages and omitting sensitive data from upload error diagnostics. |
+| [#3948](https://github.com/tscircuit/tscircuit-autorouter/pull/3948) | 🐌 Tiny | The BeaglePlay DDR4 fixture needs pad-to-port metadata so DRC can recognize its 102 terminals. Add that metadata and run the existing input through Pipeline 9 in the BeaglePlay test. The test checks all 51 routes, all 102 connected ports, zero DRC error messages under the boards 0.081 mm clearance, and the platforms routed SVG snapshot. Linux and macOS each have a recorded snapshot. Remove the provenance Markdown and routedunrouted PNGs. Keep the original hardware license and interactive fixture. CI assigns this test the existing full-board routing timeout. The annotated input routes cleanly with the existing solver. Validation runs use effort 1 with caching disabled. |
+| [#3958](https://github.com/tscircuit/tscircuit-autorouter/pull/3958) | 🐌 Tiny | Adds the captured input, debugger fixture, and default Pipeline 9 snapshot test for the RP2040 motor controller(https:tscircuit.comimrishabh18rp2040-motor-controllerpcb) with saved routes removed. The generated snapshot reports 2 relaxed DRC errors. Validated with the focused snapshot test and TypeScript check. |
+| [#945](https://github.com/tscircuit/circuit-json-to-kicad/pull/945) | 🐌 Tiny | Fixes the issue where overlapping pin strokes during schematic grid alignment caused errors in rendering and net connections. |
+| [#944](https://github.com/tscircuit/circuit-json-to-kicad/pull/944) | 🐌 Tiny | Fixes a bug where overlapping pin strokes cause schematic export to fail. |
+| [#69](https://github.com/tscircuit/skill/pull/69) | 🐌 Tiny | Add a bullet point to the documentation showing how to use ignoredFiles in tscircuit.config.json to keep AI-generated debug files out of tsci push uploads. |
 
 </details>
 
@@ -2614,18 +2823,23 @@ pie
 | [#1030](https://github.com/tscircuit/props/pull/1030) | 🐳 Major | ⭐⭐⭐ | Add support for wire harness drawings including cable specifications, wiring tables, and BOM tables in TSX format. |
 | [#1027](https://github.com/tscircuit/props/pull/1027) | 🐳 Major | ⭐⭐⭐ | Proposes the optional minTraceClearance?: Distance prop on net. |
 | [#1025](https://github.com/tscircuit/props/pull/1025) | 🐳 Major | ⭐⭐⭐ | Proposes a manufacturing namespace with two elements for laser-engraved marks on a part surface. They are children of assembly.printedpart or assembly.part. Elements are named for the process, so a mark says how it is made and not only how it looks. |
+| [#5792](https://github.com/tscircuit/core/pull/5792) | 🐳 Major | ⭐⭐⭐ | Lets a wire harness (cable manufacturing) sheet be defined in TSX. Core now emits the records added in tscircuitcircuit-json1023 from the props added in tscircuitprops1030; tscircuitcircuit-json-to-drawing14 renders them. |
 | [#5816](https://github.com/tscircuit/core/pull/5816) | 🐳 Major | ⭐⭐⭐ | Fixes autorouting failure due to unrotated plated holes in packed USB-C connectors, allowing successful routing of the board. |
 | [#5814](https://github.com/tscircuit/core/pull/5814) | 🐳 Major | ⭐⭐⭐ | Adds maxLength and maxViaCount properties to Simple Route JSON connections to enforce routing constraints for traces, preserving the distinction between terminal-to-terminal and terminal-to-net connections. |
 | [#5645](https://github.com/tscircuit/core/pull/5645) | 🐳 Major | ⭐⭐⭐ | Fixes saved-phase failures by ensuring complete phases validate copper connectivity for export and replay, allowing shared anchor pads and junctions while rejecting cross-net connections. |
+| [#594](https://github.com/tscircuit/checks/pull/594) | 🐳 Major | ⭐⭐⭐ | Fixes connectivity checks to recognize when a pad lands on a via annulus, improving diagnostics for PCB designs. |
+| [#6099](https://github.com/tscircuit/tscircuit.com/pull/6099) | 🐳 Major | ⭐⭐⭐ | Introduces a new circuit board design featuring a USB-C Wi-Fi sounder based on the ESP32-C6-WROOM-1-N8, including a complete schematic and PCB layout. |
+| [#6058](https://github.com/tscircuit/tscircuit.com/pull/6058) | 🐳 Major | ⭐⭐⭐ | Shows releases that were built locally and pushed with tsci push --include-dist differently from cloud builds, and mirrors the registry change in the fake API. |
 | [#5985](https://github.com/tscircuit/tscircuit.com/pull/5985) | 🐳 Major | ⭐⭐⭐ | Updates the circuit-to-svg and circuit-json libraries to support custom wire colors and line patterns, ensuring that the runtime parser preserves these style fields during rendering. |
 | [#5895](https://github.com/tscircuit/cli/pull/5895) | 🐳 Major | ⭐⭐⭐ | Adds tsci inspect footprint pathOrString, which prints a footprints pins, pad positions, pad sizes, drill sizes and overall extents before the part is placed. |
-| [#4124](https://github.com/tscircuit/tscircuit-autorouter/pull/4124) | 🐳 Major | ⭐⭐⭐ | Reduces copper DRC violations from 7 to 6 by ensuring trace simplification respects the boards 0.20 mm trace-to-hole edge clearance. |
 | [#4130](https://github.com/tscircuit/tscircuit-autorouter/pull/4130) | 🐳 Major | ⭐⭐⭐ | Reproduce high-density routing cannot complete the GND connection on the Four-port USB hub source(https:github.comtscircuitbasic-usbc-devicesblob4a134c7046b91a66ba77106b4bca589d7c00aaa8hub.circuit.tsx). This capture retains the board placement, connections and design rules and replaces the board-level router with the default local Pipeline 9. The input has 55 connections and 356 obstacles. The board uses tscircuit 0.0.3271 and the bundled autorouter 0.0.1147. Its routing result includes this finding:  Pipeline9 primary high-density routing failed: B01 failed: No path found for source_net_0_mst76; regional fallback failed: Failed to solve 1 nodes, cmn_29. err0: GrowShrinkHighDensityIntraNodeSolver failed after resizing to 8x. Last error: All solvers failed in hyper solver. Example failures: Candidate solution rejected by validator, Candidate solution rejected by validator, CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000), CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000), CachedIntraNodeRouteSolver ran out of iterations (MAX_ITERATIONS8000). (capacity-autorouter0.0.1147) The routing failure leaves the board without global routes. From the repository root after installing dependencies, run: sh bun fixturesbug-reportsbugreport111-0535adreproduce.ts  The command exits nonzero while the reported defect reproduces. The adjacent Cosmos fixture opens the same input in the pipeline debugger. Public autorouting bug report(https:api.tscircuit.comautoroutingbug_reportsview?autorouting_bug_report_id0535adf0-8deb-4d71-82db-27c320495fb7) |
+| [#4124](https://github.com/tscircuit/tscircuit-autorouter/pull/4124) | 🐳 Major | ⭐⭐⭐ | Reduces copper DRC violations from 7 to 6 by ensuring trace simplification respects the boards 0.20 mm trace-to-hole edge clearance. |
 | [#4075](https://github.com/tscircuit/tscircuit-autorouter/pull/4075) | 🐳 Major | ⭐⭐⭐ | Reduces copper DRC violations on the gamepad SRJ from 9 to 7 by reserving via footprints during routing to prevent accidental contacts. |
 | [#4036](https://github.com/tscircuit/tscircuit-autorouter/pull/4036) | 🐳 Major | ⭐⭐⭐ | Fixes autorouting failure when routing connections near fine-pitch pads by preserving pad escapes with a refined grid selection process. |
 | [#3969](https://github.com/tscircuit/tscircuit-autorouter/pull/3969) | 🐳 Major | ⭐⭐⭐ | Fixes autorouting failure by utilizing the connectivity map for calculating the via lower bound in the polyline solver, resolving VREF fanout rejection issues. |
 | [#65](https://github.com/tscircuit/skill/pull/65) | 🐳 Major | ⭐⭐⭐ | Adds documentation for schematic box sizing, sheet capacity, search sources, and prop gaps, improving user guidance for schematic design and component placement. |
 | [#89](https://github.com/tscircuit/high-density-a01/pull/89) | 🐳 Major | ⭐⭐⭐ | Fixes incorrect layer transitions during trimming of shared cross-root port cells, ensuring proper endpoint connections without unintended lateral layer changes. |
+| [#88](https://github.com/tscircuit/repair04/pull/88) | 🐳 Major | ⭐⭐⭐ | Allows through-via antipads in poured planes during regional repair, enabling better pathfinding for vias in the presence of ground pours. |
 | [#67](https://github.com/tscircuit/trace-simplification-solver/pull/67) | 🐳 Major | ⭐⭐⭐ | Adjusts trace simplification logic to respect board copper clearance requirements, ensuring that traces do not violate specified spacing rules during simplification. |
 | [#14](https://github.com/tscircuit/circuit-json-to-drawing/pull/14) | 🐳 Major | ⭐⭐⭐ | Renders wire harness (cable manufacturing) sheets from the elements proposed in tscircuitcircuit-json1023. TSX spec: tscircuitprops1030. |
 | [#1034](https://github.com/tscircuit/circuit-json/pull/1034) | 🐙 Minor | ⭐⭐ | Adds an optional corner_radius to cad_sticker so stickers with rounded corners can be described. |
@@ -2635,22 +2849,28 @@ pie
 | [#1055](https://github.com/tscircuit/props/pull/1055) | 🐙 Minor | ⭐⭐ | Adds tscircuit to the public autorouter preset types and schemas, enabling TSX authors to discover it through autocomplete. |
 | [#1044](https://github.com/tscircuit/props/pull/1044) | 🐙 Minor | ⭐⭐ | Adds cornerRadius to assembly.sticker  for stickers with rounded corners, allowing for customizable rounded corners up to half the width or height of the sticker. |
 | [#1026](https://github.com/tscircuit/props/pull/1026) | 🐙 Minor | ⭐⭐ | Adds assemblyProps.sticker for an assembly.sticker  element, allowing users to apply adhesive stickers to parts in their assemblies. |
+| [#5848](https://github.com/tscircuit/core/pull/5848) | 🐙 Minor | ⭐⭐ | Fixes the issue where hand-placed components inside schematic sheets were not preserved during layout, ensuring correct rendering and placement of components in nested groups. |
+| [#5847](https://github.com/tscircuit/core/pull/5847) | 🐙 Minor | ⭐⭐ | Reproduces the issue of manual schematic placement loss on the full USB-C Wi-Fi sounder board by adding a test that captures the current output and retains the original designs footprints and connections. |
 | [#5788](https://github.com/tscircuit/core/pull/5788) | 🐙 Minor | ⭐⭐ | Adds support for explicit autorouter selection using tscircuit and tscircuit_beta, updating the props dependency and ensuring regression tests pass for the new configurations. |
+| [#5887](https://github.com/tscircuit/cli/pull/5887) | 🐙 Minor | ⭐⭐ | tsci push --include-dist now uses the uploaded dist directory as the build instead of also building the package in the cloud. |
 | [#5883](https://github.com/tscircuit/cli/pull/5883) | 🐙 Minor | ⭐⭐ | Every tsci build now copies the circuit.json it is about to overwrite to .tscircuit-build-historytimestampdistboardcircuit.json. This covers both sequential and --concurrency builds. Additionally, tsci build --routing-history writes distboardrouting-history.mp4 next to each built circuit.json, showing the PCB of the newest build over time with a timeline. |
 | [#5885](https://github.com/tscircuit/cli/pull/5885) | 🐙 Minor | ⭐⭐ | Adds a global CLI configuration option to enable or disable the saving of build history for circuit builds. |
+| [#3021](https://github.com/tscircuit/svg.tscircuit.com/pull/3021) | 🐙 Minor | ⭐⭐ | Hosted TSX can now render wire harness sheets through svg_typedrawing, enabling documentation previews and editor links for the harness API without precomputed Circuit JSON. |
 | [#3014](https://github.com/tscircuit/svg.tscircuit.com/pull/3014) | 🐙 Minor | ⭐⭐ | Centers dimension labels in hosted assembly drawings by updating the drawing renderer and refreshing the explosion drawing snapshot to ensure vertical labels are positioned at the line midpoint. |
 | [#4074](https://github.com/tscircuit/tscircuit-autorouter/pull/4074) | 🐙 Minor | ⭐⭐ | 9 copper DRC violations, including a ground escape via touching the left-stick X trace. The fixture is the original four-layer boards Simple Route JSON captured at the autorouter boundary. The test runs the checkouts Pipeline 9 with caching disabled, using the boards clearances. It needs no gamepad-specific tscircuit installation. The purple rings mark every reported location. !Routed Bluetooth gamepad with nine copper DRC locations(https:github.comtscircuittscircuit-autorouterblobf2991dbb73073b8add7ef696f28acd285e0730bftestsrepro__snapshots__bluetooth-gamepad-drc.snap.svg?rawtrue) Run bun test --timeout 120000 testsreprobluetooth-gamepad-drc.test.ts. The full board renderer also reported a crystal trace over its 10 mm limit, bringing its total to 10. That source-level limit is absent from the captured input. The SRJ test measures copper violations and leaves poured-plane connectivity to the full-board audit. The stacked fix is 4075. |
 | [#304](https://github.com/tscircuit/circuit-json-to-gltf/pull/304) | 🐙 Minor | ⭐⭐ | Renders rounded sticker corners from cad_sticker.corner_radius, allowing for more visually appealing sticker designs with adjustable corner radii. |
 | [#302](https://github.com/tscircuit/circuit-json-to-gltf/pull/302) | 🐙 Minor | ⭐⭐ | Adds functionality to render the proposed cad_sticker record, allowing for the display of stickers on 3D models with specified artwork and dimensions. |
 | [#60](https://github.com/tscircuit/poppygl/pull/60) | 🐙 Minor | ⭐⭐ | Suppresses visible seams in glTF mesh rendering by grouping outline edges of triangles from the same mesh instance, ensuring a continuous visual representation across material boundaries. |
+| [#70](https://github.com/tscircuit/skill/pull/70) | 🐙 Minor | ⭐⭐ | Documents manual routing with pcbPath, explains the automatic 1 mm trace limit for capacitors, and clarifies net routing phases and placement errors that affect autorouting. |
 | [#90](https://github.com/tscircuit/high-density-a01/pull/90) | 🐙 Minor | ⭐⭐ | Add visual snapshot for A03 terminal layer repro, rendering input ports and comparing original output with a visual snapshot to highlight routing issues. |
 | [#467](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/467) | 🐙 Minor | ⭐⭐ | Emit a warning when a fuse is drawn as a generic box instead of a dedicated fuse symbol, and skip the vertical rail-orientation warning for two-terminal generic chips connected between distinct power nets. |
 | [#83](https://github.com/tscircuit/check-shorts/pull/83) | 🐙 Minor | ⭐⭐ | Adds a browser-compatible entry point for detecting shorts in PCB mode, allowing on-demand loading from a CDN without Node-only dependencies. |
 | [#55](https://github.com/tscircuit/motorcontrol/pull/55) | 🐙 Minor | ⭐⭐ | Adds a dedicated RP2040 firmware target for the NEMA14 V2 PCB, including its TMP102 on IC0, two signed winding-current ADC channels, a distinct protocol ID, and a CI UF2 artifact. |
+| [#23](https://github.com/tscircuit/circuit-json-to-drawing/pull/23) | 🐙 Minor | ⭐⭐ | Adjusts connector designator rendering to ensure longer names do not overlap with pin numbers, resizing text appropriately and anchoring it away from the cable when necessary. |
 | [#21](https://github.com/tscircuit/circuit-json-to-drawing/pull/21) | 🐙 Minor | ⭐⭐ | Updates the PoppyGL dependency to version 0.0.40 to suppress coplanar drawing seams and ensures consistent rendering of flat parts in glTF format. |
 
 <details>
-<summary>🐌 Tiny Contributions (35)</summary>
+<summary>🐌 Tiny Contributions (40)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -2660,11 +2880,13 @@ pie
 | [#311](https://github.com/tscircuit/circuit-json-util/pull/311) | 🐌 Tiny | Adds snapshot tests to verify the behavior of hole shapes when a footprint is rotated 90 degrees, ensuring correct transformations in the PCB elements. |
 | [#313](https://github.com/tscircuit/circuit-json-util/pull/313) | 🐌 Tiny | Provides a record converter for core serialization and schematic rendering, allowing for conversion of schematic geometry based on specified length units while maintaining existing values for metadata and identifiers. |
 | [#1054](https://github.com/tscircuit/props/pull/1054) | 🐌 Tiny | Deprecates the legacy autorouter option traceClearance in TypeScript and the generated props overview, directing users to use minTraceToPadEdgeClearance instead. |
+| [#1024](https://github.com/tscircuit/footprinter/pull/1024) | 🐌 Tiny | Add five optional mechanical dimensions to usbcmidmount16, allowing for detailed CAD modeling of USB-C components. |
 | [#5810](https://github.com/tscircuit/core/pull/5810) | 🐌 Tiny | Fixes default schematic box sizing for pin headers and two-pin connectors to comply with schematic placement checks. |
 | [#5768](https://github.com/tscircuit/core/pull/5768) | 🐌 Tiny | Emit a Circuit JSON warning when a board, group, breakout, or routing phase explicitly supplies autorouter.traceClearance. The message directs authors to set minTraceToPadEdgeClearance on the board or routing phase. Keep serializing the legacy field for FreeRouting compatibility. Remove the SEPIC reproduction from 5686, its two annotated snapshots, and its private board fixture. The focused warning test covers zero, a unit string, and a second render. The existing subcircuit test still verifies legacy serialization. Companion TypeScript deprecation: https:github.comtscircuitpropspull1054. Supersedes the implementation direction in 5767. Typecheck and changed tests pass. Two neighboring legacy-router PCB snapshots differ locally by 0.27 and 0.48. Both differences reproduce on untouched main. |
 | [#5643](https://github.com/tscircuit/core/pull/5643) | 🐌 Tiny | Adds four small TSX reproductions for the saved-phase bug in 5614, providing tests for various routing scenarios that previously resulted in errors during autorouting. |
 | [#5641](https://github.com/tscircuit/core/pull/5641) | 🐌 Tiny | Adds guidance on testing patterns in AGENTS.md, specifying that tests should be simple, shallow TSX without complex logic or large imports unless they represent an entire real circuit. |
 | [#961](https://github.com/tscircuit/circuit-to-svg/pull/961) | 🐌 Tiny | Reads the schematic_length_unit of each geometry record before schematic bounds and SVG rendering, ensuring that mm, inch, and legacy schematic records are rendered at the same physical scale. |
+| [#593](https://github.com/tscircuit/checks/pull/593) | 🐌 Tiny | Reproduces a false open error in the AM4378 handheld circuit design due to an overlap between the LCD connector pad and a via annulus, enabling independent testing of the issue. |
 | [#6096](https://github.com/tscircuit/tscircuit.com/pull/6096) | 🐌 Tiny | Updates the drawing-viewer to version 0.0.8, centering dimension labels on their lines in package drawing previews and SVG downloads. |
 | [#5988](https://github.com/tscircuit/tscircuit.com/pull/5988) | 🐌 Tiny | Apply a shared Roboto ExtraBold (800) wordmark style with normal letter spacing to both application headers and the footer, following the logo specification. Load the 800 font face through the existing Google Fonts request and update the header typography assertions. |
 | [#6501](https://github.com/tscircuit/runframe/pull/6501) | 🐌 Tiny | Updates the drawing viewer to version 0.0.8, which centers dimension labels in the drawing preview. |
@@ -2687,7 +2909,10 @@ pie
 | [#47](https://github.com/tscircuit/motorcontrol/pull/47) | 🐌 Tiny | Summary Match the Assets pages light Tailwind palette across the motor dashboards and firmware page. Add consistent navigation, including the three-axis gantry, and update chart, alarm, and Stop colors for light backgrounds. Build the shared dashboard stylesheet from its Tailwind source and check the generated CSS in CI.  Verification Checked all seven pages in Chrome at 320, 390, 768, and 1440 px. Passed the dashboard, Python, and native host suites and both firmware staging commands. |
 | [#17](https://github.com/tscircuit/circuit-json-to-drawing/pull/17) | 🐌 Tiny | Centers dimension labels on their respective lines for improved clarity in assembly drawings. |
 | [#19](https://github.com/tscircuit/drawing-viewer/pull/19) | 🐌 Tiny | Pins the published circuit-json-to-drawing 0.0.8 renderer so viewer exports and the interactive drawing use the same centered dimension labels as CLI and hosted SVG output. |
+| [#12](https://github.com/tscircuit/basic-usbc-devices/pull/12) | 🐌 Tiny | Upgrades the tscircuit dependency to version 0.0.3288 and resolves the lockfile against the current boards and dependencies on main. |
+| [#11](https://github.com/tscircuit/basic-usbc-devices/pull/11) | 🐌 Tiny | Upgrades the device board toolchain from tscircuit 0.0.3271 to 0.0.3288 and refreshes the Bun lockfile, ensuring compatibility and stability across various builds. |
 | [#32](https://github.com/tscircuit/tscircuit-desktop/pull/32) | 🐌 Tiny | Adds a manual release workflow for the native USB companion in tscircuitmotorcontrol, enabling signing and distribution of the Motorcontrol Desktop application for macOS and Windows. |
+| [#3](https://github.com/tscircuit/devices.tscircuit.com/pull/3) | 🐌 Tiny | Fixes the mounting outlines for the toggle switch and potentiometer, correcting geometry issues in the mounting sheet and ensuring accurate representation in exported models and datasheets. |
 | [#1](https://github.com/tscircuit/devices.tscircuit.com/pull/1) | 🐌 Tiny | Regenerates all 18 published mounting sheets with centered dimension labels, ensuring all labels lie on their dimension lines and content outside dimension groups remains byte-identical. |
 
 </details>
@@ -2709,7 +2934,7 @@ pie
 | [#16](https://github.com/tscircuit/drawing-viewer/pull/16) | 🐙 Minor | ⭐⭐ | Allows the website to pass the CAD file lookup to DrawingViewer through an optional resolveStaticAsset function, enabling proper rendering of the LCD model in the drawing. |
 
 <details>
-<summary>🐌 Tiny Contributions (17)</summary>
+<summary>🐌 Tiny Contributions (22)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
@@ -2729,6 +2954,11 @@ pie
 | [#329](https://github.com/tscircuit/kicad-to-circuit-json/pull/329) | 🐌 Tiny | Reproduces the issue of text rotation loss for the Arduino Uno during conversion from KiCad, ensuring that specific text orientations are preserved in the output. |
 | [#326](https://github.com/tscircuit/kicad-to-circuit-json/pull/326) | 🐌 Tiny | Preserves declared KiCad paste apertures and capsule geometry for the USB1046 connector during import, ensuring accurate stencil geometry and pad representation. |
 | [#325](https://github.com/tscircuit/kicad-to-circuit-json/pull/325) | 🐌 Tiny | Reproduces the issue of lost F.Paste stencil in the USB1046 footprint when imported into the converter, ensuring all six apertures are preserved in the output. |
+| [#64](https://github.com/tscircuit/skill/pull/64) | 🐌 Tiny | Adds documentation and examples for creating assembly drawings and exploded views in the tscircuit skill, including new elements for drawing pages, part views, and explosion stages. |
+| [#219](https://github.com/tscircuit/circuit-json-to-altium/pull/219) | 🐌 Tiny | Fixes the issue where NEMA17s actual Y1 label disappears when its type changes from silkscreen text to copper text by exporting copper text as native Text records on the selected copper layer, retaining placement, ownership, rotation, mirroring and Unicode text. |
+| [#218](https://github.com/tscircuit/circuit-json-to-altium/pull/218) | 🐌 Tiny | Fixes the issue where the NEMA17s Y1 label disappears when its type changes from silkscreen text to copper text. |
+| [#208](https://github.com/tscircuit/circuit-json-to-altium/pull/208) | 🐌 Tiny | Fixes the export of copper primitives in declared four-layer boards to retain the correct copper stack and board thickness, ensuring accurate representation in binary PCB files. |
+| [#207](https://github.com/tscircuit/circuit-json-to-altium/pull/207) | 🐌 Tiny | Adds regression tests to ensure that generated Altium PCB documents correctly preserve copper layer names, native layer IDs, and total board thickness, addressing issues with missing metadata in the layer stack. |
 | [#15](https://github.com/tscircuit/drawing-viewer/pull/15) | 🐌 Tiny | Reproduces a bug where the LCD geometry is missing in the Classic F1 drawing by implementing a test case that validates the renderers asset resolution for the LCD path. |
 
 </details>
@@ -2772,8 +3002,8 @@ pie
 | [#5637](https://github.com/tscircuit/core/pull/5637) | 🐳 Major | ⭐⭐⭐ | Publish completed trace-only routing phases while later phases continue, allowing for better visibility of routing progress on complex boards. |
 | [#5673](https://github.com/tscircuit/core/pull/5673) | 🐳 Major | ⭐⭐⭐ | Updates the capacity autorouter and bus lanes solver dependencies, allowing for improved routing capabilities and fixes for cramped-port searches. |
 | [#5657](https://github.com/tscircuit/core/pull/5657) | 🐳 Major | ⭐⭐⭐ | Reproduces a ground pour generated before its routed signal via when an autorouting:start listener reads getCircuitJson(). |
-| [#4110](https://github.com/tscircuit/tscircuit-autorouter/pull/4110) | 🐳 Major | ⭐⭐⭐ | Completes the routing of all 72 DDR nets for the STM32MP157 by implementing a new BGA escape routing solver that effectively utilizes narrow pad channels, ensuring all connections are electrically complete and meet clearance requirements. |
 | [#4109](https://github.com/tscircuit/tscircuit-autorouter/pull/4109) | 🐳 Major | ⭐⭐⭐ | Fixes autorouting failure in STM32MP157 DDR board by reproducing the incomplete routing and updating the visual regression tests. |
+| [#4110](https://github.com/tscircuit/tscircuit-autorouter/pull/4110) | 🐳 Major | ⭐⭐⭐ | Completes the routing of all 72 DDR nets for the STM32MP157 by implementing a new BGA escape routing solver that effectively utilizes narrow pad channels, ensuring all connections are electrically complete and meet clearance requirements. |
 | [#4111](https://github.com/tscircuit/tscircuit-autorouter/pull/4111) | 🐳 Major | ⭐⭐⭐ | Replays the greedy finishing pass used by Pipeline9 on an anonymous captured circuit fragment: 18 regions, 19 ports, and immutable preloaded copper. The current dependency reports success with one impossible same-layer crossing. |
 | [#4059](https://github.com/tscircuit/tscircuit-autorouter/pull/4059) | 🐳 Major | ⭐⭐⭐ | Shares the clearance check for through-via positions across destination layers, reducing the number of checks significantly and improving routing performance. |
 | [#4112](https://github.com/tscircuit/tscircuit-autorouter/pull/4112) | 🐳 Major | ⭐⭐⭐ | Fixes greedy autorouting failures by preventing crossings of immutable copper while allowing movable-route crossings for downstream unraveling. |
@@ -2814,6 +3044,7 @@ pie
 | [#3900](https://github.com/tscircuit/tscircuit-autorouter/pull/3900) | 🐳 Major | ⭐⭐⭐ | Fixes the issue of fixed vias adding rows and columns to the BGA pad-channel grid by generating extra channels from component pads. |
 | [#3894](https://github.com/tscircuit/tscircuit-autorouter/pull/3894) | 🐳 Major | ⭐⭐⭐ | Fixes CPUX stitching bypassing an existing via and missing the bottom-layer terminal. |
 | [#3938](https://github.com/tscircuit/tscircuit-autorouter/pull/3938) | 🐳 Major | ⭐⭐⭐ | Preserves a safe layer detour when via removal introduces a new native trace-pair violation, ensuring that the indexed DRC count remains unchanged while reducing native DRC errors from 10 to 9. |
+| [#10](https://github.com/tscircuit/EEcircuit-engine/pull/10) | 🐳 Major | ⭐⭐⭐ | A conditional B-source current step into a capacitor aborts at 42.338 s, and the TI LMZM33602 startup aborts before its requested stop time. This patch preserves capacitor precision and locates behavioral comparison crossings, allowing both circuits to finish with the original fixtures. Stack: repro 9  this fix. The repro snapshots update from actual WebAssembly output. The four-component waveform also has an independent closed-form numerical assertion. Implementation: Stamp an algebraically equivalent scaled capacitor companion unknown, keeping large Cdt terms off node diagonals. Preserve weak conductances, integration history, and solved capacitor currentpower queries. Use compensated residuals and bounded iterative refinement for real SPARSE transient solves. KLU and sensitivity retain their existing paths. Locate continuous arguments crossing , , , and  in behavioral sources after a converged trial. Use bracketed Illinois false position, discard brackets after ordinary NRLTE rejection, integrate the left limit, then restart through the existing XSPICE breakpoint path. Respect the existing minimum breakpoint spacing. Allow value-only expression evaluation to avoid calculating unused derivatives during convergence and event checks. The upstream numerical patch changes 22 Cheader files: 544 additions and 24 deletions. It applies cleanly to both upstream branches selected by the existing mainnext build scripts. It changes no public TypeScript API. Original circuits, component values, tolerances, NewtonLTE acceptance checks, and minimum-timestep policy stay intact; the fix adds no smoothing, parasitic components, recovery jumps, or tolerance relaxation. Validation on the final native and WebAssembly builds: The unchanged four-component reproducer finishes and matches its closed-form RC response. The positive test fails on the unpatched engine. It covers all four comparisons, both trap and Gear, both current signs, a floating capacitor, nonlinear exponential threshold crossings, AC gain, and module reuse. Original TI startup completes 1 ms at default tolerances, with all four tolerances tightened 10, and tightened 100, in both backends. All 27 native operating cases and all 10 WebAssembly cases complete without simulation errors: 182430 V input, 122448  load, and 475468 F output capacitance. WebAssembly includes the eight corners, center, and the 30 V  12   54 F spacing regression. Native upstream: all 58 harness entries pass. All 1,215 model-QA comparison messages exactly match the unpatched baseline, including existing reference differences. AddressSanitizer passes six sourcerunremove lifecycle cycles and the previously failing TI corner. Leak detection is unavailable on this macOS platform. Lint, source and test TypeScript checks, Vite build, sourcepackage regressions, numerical regressions, SVG snapshots, and Chromium pass. The WebAssembly builds complete source manifest matches the intended patch plus the repositorys existing Emscriptenstatic-model hooks. npm test passes the applicable regressions, then encounters the pre-existing missing testfixturesfigure-10-17tps63802-pfm-buck.cir. No tests are skipped or assertions weakened. Extended 5 ms validation also passes:  Backend  Maximum step  Final output  Wall time on this machine   ---  ---  ---  ---   Native  1 s  8.143839846 V  1,042.5 s   Native  250 ns  8.143838275 V  1,081.0 s   WebAssembly  1 s  8.143836797 V  1,964.6 s  All three reach the requested stop time, with finite waveforms and no simulation errors. On a uniform 10 ns alignment grid: Native coarsefine: 0.272 mV RMS, 1.312 mV maximum, 1.571 V endpoint difference. NativeWebAssembly: 0.357 mV RMS, 2.144 mV maximum, 3.049 V endpoint difference. The full TI-model WebAssembly run takes 32.7 minutes here. That runtime remains a release concern; this is a verified correctness fix ready for maintainer review, not an unrestricted performance sign-off. The repository reports no automated PR workflow runscheck statuses for this head; the checks above were executed locally. The RC closed form validates the small circuit independently. NativeWebAssembly agreement and TI-model convergence are numerical checks, not a comparison against measured TI hardware. Algorithm references: Illinois root finding(https:www.math.ubc.caloewmech2Dowell2BJarratt.pdf), bounded iterative refinement(https:netlib.orglapackexplore-htmld5da4group__gerfs_gaf9908a6db85a278e5756cbded5f49819.html). |
 | [#131](https://github.com/tscircuit/high-density-a01/pull/131) | 🐳 Major | ⭐⭐⭐ | Validates fixed copper during A03 wire and via search to prevent candidate rejection due to saved copper, ensuring proper routing decisions and preserving root-net ownership. |
 | [#145](https://github.com/tscircuit/high-density-a01/pull/145) | 🐳 Major | ⭐⭐⭐ | Fixes rounding errors in A03 distance calculations that affect routing and DRC findings. |
 | [#143](https://github.com/tscircuit/high-density-a01/pull/143) | 🐳 Major | ⭐⭐⭐ | Fixes the issue where a route containing only a via lost both landing points when restoring off-grid terminal coordinates, ensuring that landing points are retained and terminal leads are added during the restoration process. |
@@ -2865,7 +3096,8 @@ pie
 | [#230](https://github.com/tscircuit/bus-lanes-solver/pull/230) | 🐳 Major | ⭐⭐⭐ | Share polygon crossings and nearby boundary edges across board-grid rows, optimizing rendering times and reducing query counts significantly. |
 | [#226](https://github.com/tscircuit/bus-lanes-solver/pull/226) | 🐳 Major | ⭐⭐⭐ | Records distance-projection work in PCB snapshots of the focused concave-board route and the existing native H616 byte-zero circuit, ensuring all obstacles and outlines are accounted for and connectivity and DRC pass before rendering. |
 | [#227](https://github.com/tscircuit/bus-lanes-solver/pull/227) | 🐳 Major | ⭐⭐⭐ | Skip distant board edges by their bounds before evaluating exact copper clearance, improving rendering performance significantly. |
-| [#1](https://github.com/tscircuit/high-density-phase-solver/pull/1) | 🐳 Major | ⭐⭐⭐ | Adds the BGA detailed-routing algorithm used by autorouter 4110. On the STM32MP157, a full-width trace has just 0.019 mm of centerline freedom between adjacent balls. The solver aligns the grid to the BGA pitch, counts legal through-via sites, reserves exits in scarcity order, then routes the callers original point pairs on the supplied signal layers. Pipeline9 owns board selection, final DRC and export. |
+| [#5](https://github.com/tscircuit/bga-escape-routing-solver/pull/5) | 🐳 Major | ⭐⭐⭐ | Rename the BGA escape routing solver package and enhance documentation with examples, CI integration, and a new visual debugger. |
+| [#1](https://github.com/tscircuit/bga-escape-routing-solver/pull/1) | 🐳 Major | ⭐⭐⭐ | Adds the BGA detailed-routing algorithm used by autorouter 4110. On the STM32MP157, a full-width trace has just 0.019 mm of centerline freedom between adjacent balls. The solver aligns the grid to the BGA pitch, counts legal through-via sites, reserves exits in scarcity order, then routes the callers original point pairs on the supplied signal layers. Pipeline9 owns board selection, final DRC and export. |
 | [#5781](https://github.com/tscircuit/core/pull/5781) | 🐙 Minor | ⭐⭐ | Adds tests to verify that the automatic breakout-point creation correctly handles trace ports on the real iCEPi board without repeated scans. |
 | [#5764](https://github.com/tscircuit/core/pull/5764) | 🐙 Minor | ⭐⭐ | A cold typed port lookup traverses the component tree twice: once to find the port and again to check ambiguity. Adds a regular PCB snapshot recording the traversal count, plus the original full IcePi circuit and its PCB snapshot. IcePi still fails fanout (1432); this repro concerns selector cost before routing. Fix stacked in 5765. Validation: both repro tests, typecheck and all ten CI test shards pass. |
 | [#5777](https://github.com/tscircuit/core/pull/5777) | 🐙 Minor | ⭐⭐ | Adds a test to validate the performance of the iCEPi boards connectivity map generation, measuring the number of Set.has calls required for the process. |
@@ -2877,6 +3109,7 @@ pie
 | [#82](https://github.com/tscircuit/circuit-json-to-spice/pull/82) | 🐙 Minor | ⭐⭐ | Isolates imported SPICE model libraries by giving each its own nested scope to prevent name collisions and unintended behavior changes. |
 | [#78](https://github.com/tscircuit/circuit-json-to-spice/pull/78) | 🐙 Minor | ⭐⭐ | Fixes the issue of SPICE subcircuit parameters being incorrectly included as instance pins in the simulation output. |
 | [#77](https://github.com/tscircuit/circuit-json-to-spice/pull/77) | 🐙 Minor | ⭐⭐ | Reproduces a three-pin .subckt whose PARAMS header is counted as extra instance pins, ensuring accurate pin-count diagnostics in simulations. |
+| [#5918](https://github.com/tscircuit/cli/pull/5918) | 🐙 Minor | ⭐⭐ | Pins the EEcircuit bundle to version 1.7.7 and normalizes the cache directory to fix BunmacOS first-download issues without requiring realpath support. |
 | [#4078](https://github.com/tscircuit/tscircuit-autorouter/pull/4078) | 🐙 Minor | ⭐⭐ | Captures 8,192 actual A03 segment-validation requests from the unchanged ButterStick DDR TSX board, preserving every decision: 6,186 accepted and 2,006 rejected. |
 | [#3949](https://github.com/tscircuit/tscircuit-autorouter/pull/3949) | 🐙 Minor | ⭐⭐ | Captures i.MX6 DDR routing beside completed data-byte copper, retaining 53404 connected nets and addressing one physical clearance error. |
 | [#38](https://github.com/tscircuit/ngspice-spice-engine/pull/38) | 🐙 Minor | ⭐⭐ | Preserves explicit PSpice ampere units on numeric DC sources, ensuring correct representation in waveform snapshots and parser functionality. |
@@ -2897,10 +3130,13 @@ pie
 | [#229](https://github.com/tscircuit/bus-lanes-solver/pull/229) | 🐙 Minor | ⭐⭐ | Refreshes the real H616 byte-zero capture from tscircuit 0.0.3271 and exposes this work in ordinary PCB snapshots, addressing repeated outline scans during board-grid construction. |
 
 <details>
-<summary>🐌 Tiny Contributions (62)</summary>
+<summary>🐌 Tiny Contributions (68)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
+| [#5862](https://github.com/tscircuit/core/pull/5862) | 🐌 Tiny | Pins the tscircuitcore-ddr-benchmark dependency to a specific commit to ensure consistent benchmark results and validation of routing performance. |
+| [#5865](https://github.com/tscircuit/core/pull/5865) | 🐌 Tiny | Pins the tscircuitngspice-spice-engine dependency to version 0.0.26, updating the cores real-simulation tests and adapter version for downstream dependency synchronization. |
+| [#5850](https://github.com/tscircuit/core/pull/5850) | 🐌 Tiny | Pins the tscircuitcore-ddr-benchmark dependency to a specific commit, ensuring consistent benchmark results with audited DDR skew constraints and updated report tables. |
 | [#5813](https://github.com/tscircuit/core/pull/5813) | 🐌 Tiny | Updates the autorouter version from 0.0.1154 to 0.0.1156 and the fanout solver version from 0.0.103 to 0.0.104, incorporating various improvements and fixes related to STM32MP157 BGA-channel routing and fanout solver recovery of same-net plane drops. |
 | [#5800](https://github.com/tscircuit/core/pull/5800) | 🐌 Tiny | Bumps tscircuitcapacity-autorouter from 0.0.1153 to 0.0.1154 to include updates that prevent greedy crossings of immutable copper while preserving movable-route crossings for downstream unraveling. |
 | [#5795](https://github.com/tscircuit/core/pull/5795) | 🐌 Tiny | Updates the tscircuitfanout-solver dependency from version 0.0.102 to 0.0.103, incorporating improvements from tscircuitfanout-solver369, which allows interior plane pads to utilize the existing centered-escape pass after original candidates while maintaining clearance checks. |
@@ -2931,6 +3167,7 @@ pie
 | [#5679](https://github.com/tscircuit/core/pull/5679) | 🐌 Tiny | Updates the tscircuitcapacity-autorouter dependency from version 0.0.1124 to 0.0.1125, which includes improvements to pad-alias resolution during clearance search and a grid correction for component-pad-only A13. |
 | [#5642](https://github.com/tscircuit/core/pull/5642) | 🐌 Tiny | Bumps the tscircuitcapacity-autorouter dependency from version 0.0.1120 to 0.0.1121, incorporating improvements and fixes from upstream, including enhanced clearance-grid channel builds and reduced physical findings in routing tests. |
 | [#5638](https://github.com/tscircuit/core/pull/5638) | 🐌 Tiny | Bumps the tscircuitcapacity-autorouter dependency from version 0.0.1119 to 0.0.1120, improving routing preferences and connection stitching. |
+| [#6111](https://github.com/tscircuit/eval/pull/6111) | 🐌 Tiny | Pins the tscircuitngspice-spice-engine dependency from version 0.0.25 to 0.0.26 to ensure compatibility with the EEcircuit 1.7.7 adapter. |
 | [#5993](https://github.com/tscircuit/eval/pull/5993) | 🐌 Tiny | Updates eval to use Core 0.0.2429 and synchronizes dependencies with the latest versions, including spicets 0.0.6, circuit-json-to-spice 0.0.50, and ngspice-spice-engine 0.0.25, ensuring compatibility and integration of merged parser and initial-condition fixes into the simulation worker and platform configuration. |
 | [#91](https://github.com/tscircuit/circuit-json-to-spice/pull/91) | 🐌 Tiny | Adds a test to reproduce the issue where a square current source with a DC offset does not produce the expected output, and updates the schematic-symbol dependency to ensure proper rendering of the current-source symbol. |
 | [#85](https://github.com/tscircuit/circuit-json-to-spice/pull/85) | 🐌 Tiny | Add runnable reproductions of the latest Desktop-generated TI simulations: LDO startup and load step, buck startupload stepripple, and the four-stage power tree. Include an isolated LMZM33602 startup bench for the remaining tree convergence failure. Reuse the existing hash-verified TI model downloads, exporter library isolation, and bounded child-process runner. Keep the original all selection unchanged. The Desktop benches preserve the generated external circuits and source conditions. Convert native control blocks to batch analysis directives and save only the requested probes. These are diagnostic reproductions; the power-tree test bench remains electrically unvalidated. Document the TI macro-models simulation return separately from the hardware AGND pin instructions. The separate initial-condition whitespace issue has a CI-passing visual repro in https:github.comtscircuitngspice-spice-enginepull42 and a stacked fix in https:github.comtscircuitngspice-spice-enginepull43. Validation: all 70 exporter tests and 32 snapshots pass; format check and typecheck pass. Full TI runs are manual and are not added to CI. Manual results: with published adapter 0.0.23, the Desktop LDO load-step and startup benches complete at 2.79995 V and 2.78551 V. The buck startup bench completes at 3.32269 V with the stacked adapter fix at 8 ms. The full tree still exceeds ten minutes; native ngspice also reproduces startup convergence trouble. The isolated LMZM bench times out in both the adapter (60 seconds) and native ngspice (120 seconds). No full-tree fix is claimed. Paired native comparison: native ngspice 47 versus the adapters ngspice 46 WASM build with the initial-condition fix. LDO waveforms agree within 1.2e-12 V on the aligned grid; buck startup final 100 us means differ by 2.28 mV, with instantaneous differences up to 98 mV. Buck load-step runs fail in both builds at different times. The original tree using trapezoidal integration fails in both at exactly 0.765744 ms. The README links TI hardware measurements and explains the LDO model-versus-measurement discrepancy. Add a recorded final-window buck voltage trace and CI-passing textSVG snapshots reproducing the phase-dependent regulation check. The stacked correction is 86, which also applies the complete TI solver profile. Original failing bench settings are preserved in this repro. |
@@ -2946,6 +3183,8 @@ pie
 | [#3911](https://github.com/tscircuit/tscircuit-autorouter/pull/3911) | 🐌 Tiny | Refreshes the existing SEPIC repro with a fixed 6  4 mm view of the native copper, surrounding pads, and measured same-layer clearance, capturing the failing route before the fix. |
 | [#3917](https://github.com/tscircuit/tscircuit-autorouter/pull/3917) | 🐌 Tiny | Adds a fixed-camera native PCB view of the A13 trace contacting a neighboring RAM pad BALL_C3, while keeping the existing full-board clearance snapshot unchanged. |
 | [#3902](https://github.com/tscircuit/tscircuit-autorouter/pull/3902) | 🐌 Tiny | Reproduces the remaining bank-address via clock-enable trace clearance error on the native i.MX6 PCB, with all 53 DDR nets connected. |
+| [#9](https://github.com/tscircuit/EEcircuit-engine/pull/9) | 🐌 Tiny | Reproduces two transient aborts using real WebAssembly results for the TI LMZM33602 startup and a four-component conditional current source charging a capacitor, including SVG visualizations of the results. |
+| [#49](https://github.com/tscircuit/ngspice-spice-engine/pull/49) | 🐌 Tiny | Pins the engine CDN URL to published tscircuiteecircuit-engine1.7.7, which contains transient precision and behavioral-event fixes, and updates snapshots accordingly. |
 | [#42](https://github.com/tscircuit/ngspice-spice-engine/pull/42) | 🐌 Tiny | Reproduces a bug where a TI-style initial condition with whitespace is ignored in ngspice, affecting simulation results. |
 | [#35](https://github.com/tscircuit/ngspice-spice-engine/pull/35) | 🐌 Tiny | Reproduces a TPS7A20-style output switch with reversed RONROFF endpoints and validates the current behavior through a comprehensive test. |
 | [#45](https://github.com/tscircuit/ngspice-spice-engine/pull/45) | 🐌 Tiny | Updates the spicets dependency to version 0.0.6 for the ngspice adapter, ensuring compatibility with the latest features and fixes from spicets. |
@@ -2965,6 +3204,28 @@ pie
 | [#234](https://github.com/tscircuit/bus-lanes-solver/pull/234) | 🐌 Tiny | Draws rotated bus pads at their footprint dimensions, ensuring accurate clearance checks against the pads in the bus solvers debug view. |
 
 </details>
+
+### [Devesh36](https://github.com/Devesh36)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#5829](https://github.com/tscircuit/core/pull/5829) | 🐙 Minor | ⭐⭐ | Fixes redundant copper trace between internally connected pins of the USBLC6 ESD protector in PCB design. |
+| [#193](https://github.com/tscircuit/circuit-json-to-step/pull/193) | 🐙 Minor | ⭐⭐ | Fixes the missing non-plated oval mounting hole reproduced in 190, ensuring that board and panel exports correctly cut the elliptical opening. |
+
+<details>
+<summary>🐌 Tiny Contributions (1)</summary>
+
+| PR # | Impact | Description |
+|------|--------|-------------|
+| [#190](https://github.com/tscircuit/circuit-json-to-step/pull/190) | 🐌 Tiny | Reproduces a bug where non-plated oval mounting holes disappear from STEP exports, providing a test and JSON fixture without altering production code. |
+
+</details>
+
+### [aswadi](https://github.com/aswadi)
+
+| PRs # | Impact | Rating | Description |
+|------|--------|--------|-------------|
+| [#5328](https://github.com/tscircuit/core/pull/5328) | 🐙 Minor | ⭐⭐ | Fixes the emission of parsed numeric inductance in the source_component for inductors, ensuring SI unit strings are correctly converted to numeric henries. |
 
 ### [KrishnaX12](https://github.com/KrishnaX12)
 
@@ -3007,19 +3268,25 @@ pie
 | [#578](https://github.com/tscircuit/checks/pull/578) | 🐳 Major | ⭐⭐⭐ | Adds the reviewed seven-sheet TI TPS25751EVM schematic under testsreference-schematics. The test asserts the exact list of schematic warnings the board produces, so any added, removed or changed warning shows up in review. This catches new false positives when schematic checks are added or changed. The editable TSX contains 261 physical components with native symbols, functional pin labels and pin attributes, automatic trace routing, and the reference section outlines and table borders. The fixture is schematic-only. Reference: TI TPS25751EVM User Guide, SLVUCP9B(https:www.ti.comlitugslvucp9bslvucp9b.pdf), figures 5-1 through 5-7, pages 3944. Component placement follows the recreated reference; wire routing is generated by tscircuit. The test renders all seven sheets, calls runAllSchematicChecks, and compares a sorted sheet component warning-type summary against the expected list. It then snapshots each sheet as SVG. Expected warnings (27): 13 schematic_box_too_wide: all legitimate. 14 schematic_pin_padding_to_edge_too_large: 6 are legitimate (U1, U4, U6, U7, U8, U11). 8 are known false positives, marked  FP in the test (U5, J2J7, J11). The padding solver compares against the nominal 0.2 pin_spacing instead of the drawn pin pitch (0.4 or 0.8, set through schPinStyle margins), and uses a 1e-9 tolerance. When the analyzer is fixed, those lines should be removed from the expected list. The inverted_rails warnings from earlier revisions were false positives. They were fixed in the analyzer and are gone since the bump to v0.0.98. Validation: bun test testsreference-schematicstps25751evm.test.tsx passes (about 10 s locally; the test timeout is 30 s). tsc --noEmit and formatting pass. |
 | [#1451](https://github.com/tscircuit/schematic-trace-solver/pull/1451) | 🐳 Major | ⭐⭐⭐ | Fixes the placement of shared ground labels on the power-stage sheet to ensure they are positioned at the lower end of their respective rails instead of hanging from stubs. |
 | [#580](https://github.com/tscircuit/checks/pull/580) | 🐙 Minor | ⭐⭐ | Enable SchematicBoxTooWideSolver and SchematicPinPaddingToEdgeSolver in the existing schematic-placement check, reporting excessive chippin-header widths and excessive space between pin banks and box edges. |
+| [#202](https://github.com/tscircuit/circuit-json-to-step/pull/202) | 🐙 Minor | ⭐⭐ | Fixes the issue where through-vias were not drilled correctly in STEP board and panel exports, ensuring only appropriate vias are drilled and improving the accuracy of the exported designs. |
+| [#206](https://github.com/tscircuit/circuit-json-to-step/pull/206) | 🐙 Minor | ⭐⭐ | Fixes the winding direction of the bottom boundary of the STEP board to ensure proper topology at export time, addressing issue 197. |
+| [#204](https://github.com/tscircuit/circuit-json-to-step/pull/204) | 🐙 Minor | ⭐⭐ | Fixes the issue where circular holes with rectangular pads were not being drilled correctly in PCB and assembly exports, ensuring both shapes produce the same drill output. |
 | [#487](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/487) | 🐙 Minor | ⭐⭐ | Fixes alignment checks for diode-resistor pairs to only consider true series links, excluding shared rails and parallel pairs. |
 | [#484](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/484) | 🐙 Minor | ⭐⭐ | Fixes the orientation check for 0 ohm links, allowing them to be drawn in line when not connected to ground, aligning with TIs reference designs. |
 | [#470](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/470) | 🐙 Minor | ⭐⭐ | Fixes pin padding calculations to allow one drawn pitch of padding in the pin-padding solver, improving layout accuracy for components with varying pin spacing. |
 | [#473](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/473) | 🐙 Minor | ⭐⭐ | Fixes crystal positioning issue when load capacitors are stacked above and below the crystal, ensuring the crystal is centered vertically between the capacitor bodies. |
 
 <details>
-<summary>🐌 Tiny Contributions (13)</summary>
+<summary>🐌 Tiny Contributions (16)</summary>
 
 | PR # | Impact | Description |
 |------|--------|-------------|
 | [#583](https://github.com/tscircuit/checks/pull/583) | 🐌 Tiny | Bumps tscircuitcircuit-json-schematic-placement-analysis to v0.0.98, removing false inverted rails warnings for specific components in the schematic. |
 | [#581](https://github.com/tscircuit/checks/pull/581) | 🐌 Tiny | Reproduces the missing checks integration for the TI TPS25751EVM regulator, ensuring that box sizing warnings are correctly identified and reported during schematic checks. |
 | [#5877](https://github.com/tscircuit/cli/pull/5877) | 🐌 Tiny | Updates the version of tscircuitcircuit-json-schematic-placement-analysis from 0.0.97 to 0.0.102, incorporating several analyzer fixes including false-positive corrections for inverted rails and improved handling of crystal placements. |
+| [#201](https://github.com/tscircuit/circuit-json-to-step/pull/201) | 🐌 Tiny | Reproduces the issue where vias are not drilled through STEP substrates, ensuring that the via drill is covered on both substrate faces in PCB, assembly, and panel exports. |
+| [#205](https://github.com/tscircuit/circuit-json-to-step/pull/205) | 🐌 Tiny | Reproduces a bug where the bottom board boundary has inconsistent winding in the STEP export, affecting the rendering of the boards bottom face. |
+| [#203](https://github.com/tscircuit/circuit-json-to-step/pull/203) | 🐌 Tiny | Reproduces the issue where rectangular-pad plated holes are missing from STEP exports by providing a test case with two plated holes, one rectangular and one round, ensuring proper coverage in PCB and assembly exports. |
 | [#1450](https://github.com/tscircuit/schematic-trace-solver/pull/1450) | 🐌 Tiny | Adds the full power-stage sheet of the TI TPS25751EVM reference schematic as a schematic trace solver repro. |
 | [#68](https://github.com/tscircuit/skill/pull/68) | 🐌 Tiny | Require generating and opening both schematic and PCB images, then fixing visible issues in both layouts and re-rendering before finalizing. |
 | [#485](https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/485) | 🐌 Tiny | Adds tests to reproduce and validate the alignment behavior of diode-resistor pairs in schematic analysis, specifically addressing incorrect warnings for series and parallel configurations. |
@@ -3062,21 +3329,6 @@ pie
 | [#215](https://github.com/tscircuit/bus-lanes-solver/pull/215) | 🐌 Tiny | This PR modifies the CI workflow to run tests in parallel across 6 shards based on recorded timings, significantly reducing the total test execution time from 55 minutes to approximately 13.5 minutes for the critical path. |
 | [#56](https://github.com/tscircuit/motorcontrol/pull/56) | 🐌 Tiny | Summary Add the two-piece NEMA14 WAGO enclosure to Assets with STEP and STL downloads, rotatable previews, and the native FreeCAD model. Put the R5 lid and both USB-C plug collars on one flat plane. The rear bay gives direct access to the WAGO tabs and wire entries with the cover installed. Seat all four M2.5 screws 8.10 mm below the top in 6.40 mm pockets. A 4.70 mm head has 0.85 mm radial clearance and the DATA-side head clears the modeled plug by 0.51 mm with a 1.45 mm head height. Pair the R5 cover with the R2 bottom housing and its 3.50 mm WAGO pin-relief pocket. The assembled size is 38.25  38.25  20.95 mm with a 35.2  35.2 mm motor interface.  R5 enclosure render !R5 NEMA14 WAGO enclosure showing the flat top, four screw pockets, and WAGO access(https:raw.githubusercontent.comtscircuitmotorcontrol48c583bac86d718d22282eb3346d3f9c7abc1bc4docsnema14-enclosurenema14-wago-r5.jpg)  Verification Checked the populated PCB, WAGO supplier solid, plug bodies, reference harness, underside pin allowances, and fastener seats in CAD. Both 12.7  7.8 mm plug envelopes engage their collars within 0.45 mm of movement in four lateral directions. Checked all four pocket diameters, equal seat heights, and screw-head bearing surfaces. Reopened the STEP, verified a watertight STL, and sliced the cover face-down with supports. Built the Assets page, ran the Python test suite, and checked both previews and all four downloads in Chromium. Physical fit with the actual USB-C plugs and fasteners needs a prototype test. |
 | [#46](https://github.com/tscircuit/motorcontrol/pull/46) | 🐌 Tiny | Add the existing NEMA17 controller enclosure to the Assets page alongside all seven retained spacer entries. The editable page is React TSX, rendered at build time into the existing static distassets.html route. Downloads remain ordinary HTML links and work without JavaScript; preview controls remain typed browser TypeScript. |
-
-</details>
-
-### [Devesh36](https://github.com/Devesh36)
-
-| PRs # | Impact | Rating | Description |
-|------|--------|--------|-------------|
-| [#193](https://github.com/tscircuit/circuit-json-to-step/pull/193) | 🐙 Minor | ⭐⭐ | Fixes the missing non-plated oval mounting hole reproduced in 190, ensuring that board and panel exports correctly cut the elliptical opening. |
-
-<details>
-<summary>🐌 Tiny Contributions (1)</summary>
-
-| PR # | Impact | Description |
-|------|--------|-------------|
-| [#190](https://github.com/tscircuit/circuit-json-to-step/pull/190) | 🐌 Tiny | Reproduces a bug where non-plated oval mounting holes disappear from STEP exports, providing a test and JSON fixture without altering production code. |
 
 </details>
 
