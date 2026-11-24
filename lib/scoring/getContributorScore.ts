@@ -73,8 +73,8 @@ export function getContributorScore({
 
       const isWithinTinyPrCap = pr.starRating !== 1 || result.rating1Count <= 12
 
-      if (isWithinTinyPrCap) {
-        result.score += 2 ** ((pr.starRating ?? 0) - 1)
+      if (isWithinTinyPrCap && pr.starRating > 0) {
+        result.score += 2 ** (pr.starRating - 1)
       }
     }
 
