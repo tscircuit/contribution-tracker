@@ -1,5 +1,5 @@
 import { CURRENT_MILESTONES } from "milestones"
-import { PR_ATTRIBUTES, PR_AUDIT_ATTRIBUTES } from "./pr-attributes"
+import { PR_ATTRIBUTES } from "./pr-attributes"
 
 export function generateAnalyzePRPrompt(
   pr: {
@@ -45,7 +45,7 @@ Strictly assess the PR across the following dimensions:
    - "Fixes KiCad symbol export when jumper is misaligned"
 </description>
 
-${Object.entries({ ...PR_ATTRIBUTES, ...PR_AUDIT_ATTRIBUTES })
+${Object.entries(PR_ATTRIBUTES)
   .map(
     ([attributeName, attributeDescription]) => `
 - <${attributeName}>

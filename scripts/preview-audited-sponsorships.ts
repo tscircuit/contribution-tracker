@@ -1,6 +1,3 @@
-import { readCalculatedSponsorships } from "../lib/calculated-sponsorships"
-import { MATCHING_MONTH } from "../lib/sponsorship-profile-matching"
-import { getSponsorshipLimitCents } from "../lib/scoring/sponsorship-limits"
 import fs from "node:fs"
 import {
   collectiveQuery,
@@ -14,10 +11,9 @@ async function main() {
     throw new Error(
       "Existing OPENCOLLECTIVE_TOKEN is required for complete expense visibility",
     )
-  const contributors = readCalculatedSponsorships(MATCHING_MONTH)
-  if (!contributors)
-    throw new Error("Evaluated PR data is required for the audited preview")
-  const audit = { month: MATCHING_MONTH, currency: "USD", contributors }
+  const audit = JSON.parse(
+    fs.readFileSync("sponsorships/2026-09-audited.json", "utf8"),
+  )
   const matching = JSON.parse(
     fs.readFileSync("sponsorship-matches/2026-09/matches.json", "utf8"),
   )
@@ -46,8 +42,7 @@ async function main() {
       typeof contributor.username !== "string" ||
       !Number.isSafeInteger(contributor.amountCents) ||
       contributor.amountCents <= 0 ||
-      contributor.amountCents >
-        getSponsorshipLimitCents(contributor.username) ||
+      contributor.amountCents > 20000 ||
       seen.has(contributor.username.toLowerCase())
     )
       throw new Error("Invalid audited contributor")

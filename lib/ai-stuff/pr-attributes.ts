@@ -42,9 +42,6 @@ export const PR_ATTRIBUTES = {
     "This PR contributes a major algorithm improvement to a library, the algorithm is non-trivial, well-tested and has good documentation and comments",
   substantially_improves_svg_generation:
     "This contribution to circuit-to-svg introduces brand new functionality and support for rendering a new element or handling of a previously unhandled element",
-}
-
-export const PR_AUDIT_ATTRIBUTES = {
   payment_bookkeeping:
     "Only sponsorship/payment administration, including registering payout profiles; not project functionality.",
   clear_noop_or_duplicate:
@@ -57,7 +54,7 @@ export const PR_AUDIT_ATTRIBUTES = {
 
 export type PrAttribute = keyof typeof PR_ATTRIBUTES
 
-const base_attribute_schema = z.object(
+export const pr_attribute_schema = z.object(
   Object.fromEntries(
     Object.keys(PR_ATTRIBUTES).map((attributeName) => [
       attributeName,
@@ -66,14 +63,6 @@ const base_attribute_schema = z.object(
   ),
 )
 
-export const pr_attribute_schema = base_attribute_schema.merge(
-  z.object(
-    Object.fromEntries(
-      Object.keys(PR_AUDIT_ATTRIBUTES).map((name) => [name, z.boolean()]),
-    ),
-  ),
-)
-
 export type PrAttributeSchema = {
   [key in keyof typeof PR_ATTRIBUTES]: boolean
-} & Partial<Record<keyof typeof PR_AUDIT_ATTRIBUTES, boolean>>
+}

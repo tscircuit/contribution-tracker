@@ -92,7 +92,7 @@ test("approved September amounts match the revised spreadsheet", async () => {
       (sum: number, row: { amountCents: number }) => sum + row.amountCents,
       0,
     ),
-  ).toBe(53500)
+  ).toBe(43500)
   const paidUsers = new Set(["mohan-bee", "trixie010", "Devesh36"])
   const outstanding = audit.contributors.filter(
     (row: { username: string }) => !paidUsers.has(row.username),

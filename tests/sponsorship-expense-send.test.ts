@@ -255,7 +255,7 @@ test("changed recipient, duplicate period expenses and modified plans cannot be 
   expect(remote.creates).toBe(1)
 })
 
-test("PR allocation preserves weighting and exact cents while omitting dependency-only PRs", () => {
+test("PR allocation preserves star weighting, exact cents, and the real September payout", () => {
   const prs = [1, 2, 3].map((starRating, index) => ({
     repo: "org/repo",
     number: index,
@@ -273,23 +273,13 @@ test("PR allocation preserves weighting and exact cents while omitting dependenc
       JSON.parse(fs.readFileSync(`pr-analysis/2026-09-${day}.json`, "utf8")),
     )
     .filter((pr) => pr.contributor === "mohan-bee" && pr.state === "merged")
-  const items = allocatePrItems({ prs: realPrs, amountCents: 30000 })
+  const items = allocatePrItems({ prs: realPrs, amountCents: 90000 })
   expect(items.reduce((sum, item) => sum + item.amountV2.valueInCents, 0)).toBe(
-    30000,
+    90000,
   )
-  expect(items).toHaveLength(86)
-  for (const pr of realPrs.filter(
-    (pr) =>
-      pr.only_dependency_update ||
-      pr.payment_bookkeeping ||
-      pr.clear_noop_or_duplicate,
-  )) {
-    expect(
-      items.some((item) =>
-        item.description.startsWith(`${pr.repo}#${pr.number}:`),
-      ),
-    ).toBe(false)
-  }
+  expect(items).toHaveLength(
+    new Set(realPrs.map((pr) => `${pr.repo}#${pr.number}`)).size,
+  )
 })
 
 test("invitation API requests notification for the saved account without a new email secret", async () => {

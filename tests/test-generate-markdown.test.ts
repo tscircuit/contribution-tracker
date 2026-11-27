@@ -3,6 +3,10 @@ import { generateMarkdown } from "lib/data-processing/generateMarkdown"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 
 const minimalPrAttributes = {
+  payment_bookkeeping: false,
+  clear_noop_or_duplicate: false,
+  only_docs_tests_or_ci: false,
+  missing_regression_evidence: false,
   mostly_style: false,
   new_page_or_component: false,
   introduces_or_fixes_a_footprint: false,

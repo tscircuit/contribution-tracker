@@ -9,13 +9,7 @@ const attributes = (value: boolean): PrAttributeSchema =>
   Object.fromEntries(
     Object.keys(PR_ATTRIBUTES).map((key) => [
       key,
-      [
-        "only_dependency_update",
-        "only_reproduces_a_bug",
-        "only_adds_autorouter_fixtures",
-      ].includes(key)
-        ? false
-        : value,
+      key === "major_library_algorithm_contribution" ? value : false,
     ]),
   ) as PrAttributeSchema
 

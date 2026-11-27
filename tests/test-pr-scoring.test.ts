@@ -3,6 +3,13 @@ import { getContributorScore } from "lib/scoring/getContributorScore"
 import { MAINTAINERS } from "lib/scoring/maintainers"
 import type { AnalyzedPR, ContributorStats } from "lib/types"
 
+import {
+  PR_ATTRIBUTES,
+  type PrAttributeSchema,
+} from "../lib/ai-stuff/pr-attributes"
+import { getContributionStarRatingFromAttributes } from "../lib/ai-stuff/getConstributionStarRatingFromAttributes"
+import { getSponsorshipAmount } from "../lib/scoring/getSponsorshipAmount"
+
 const createPRs = (
   starRating: AnalyzedPR["starRating"],
   impact: AnalyzedPR["impact"],
@@ -275,4 +282,110 @@ describe("maintainer scoring", () => {
       expect(nonMaintainerResult.score).toBe(1)
     },
   )
+})
+
+// These are the normal PR evaluation rules, including for newly analyzed PRs.
+function contributionAttributes(
+  overrides: Partial<PrAttributeSchema> = {},
+): PrAttributeSchema {
+  return {
+    ...Object.fromEntries(
+      Object.keys(PR_ATTRIBUTES).map((key) => [key, false]),
+    ),
+    ...overrides,
+  } as PrAttributeSchema
+}
+
+describe("standard contribution evaluation", () => {
+  it("gives dependency, bookkeeping and demonstrated duplicate/no-op work zero actual points", () => {
+    for (const flag of [
+      "only_dependency_update",
+      "payment_bookkeeping",
+      "clear_noop_or_duplicate",
+    ]) {
+      const attributes = contributionAttributes({ [flag]: true })
+      const starRating = getContributionStarRatingFromAttributes(
+        attributes,
+        "tscircuit/core",
+        5,
+      )
+      expect(starRating).toBe(0)
+      expect(
+        getContributorScore({
+          contributorPRs: [
+            { ...attributes, starRating, impact: "Tiny" } as AnalyzedPR,
+          ],
+          contributorStats: undefined,
+        }).score,
+      ).toBe(0)
+    }
+    expect(
+      getContributorScore({
+        contributorPRs: [{ starRating: 0, impact: "Tiny" } as AnalyzedPR],
+        contributorStats: undefined,
+      }).score,
+    ).toBe(0.5)
+  })
+  it("rates docs/test/CI-only fixes at one star and caps standalone reproductions at two", () => {
+    expect(
+      getContributionStarRatingFromAttributes(
+        contributionAttributes({ only_docs_tests_or_ci: true }),
+        "tscircuit/core",
+        5,
+      ),
+    ).toBe(1)
+    expect(
+      getContributionStarRatingFromAttributes(
+        contributionAttributes({ only_reproduces_a_bug: true }),
+        "tscircuit/core",
+        5,
+      ),
+    ).toBe(2)
+  })
+  it("reduces demonstrated missing regression evidence by one star level", () => {
+    expect(
+      getContributionStarRatingFromAttributes(
+        contributionAttributes({ missing_regression_evidence: true }),
+        "tscircuit/core",
+        3,
+      ),
+    ).toBe(2)
+    expect(
+      getContributionStarRatingFromAttributes(
+        contributionAttributes({ missing_regression_evidence: true }),
+        "tscircuit/core",
+        1,
+      ),
+    ).toBe(0)
+    expect(
+      getContributionStarRatingFromAttributes(
+        contributionAttributes(),
+        "tscircuit/core",
+        3,
+      ),
+    ).toBe(3)
+  })
+  it("caps monthly sponsorships at $200, with the $300 exception, without increasing lower amounts", () => {
+    expect(
+      getSponsorshipAmount({
+        weeklyStars: [3, 3, 3, 3],
+        highScore: 80,
+        username: "example",
+      }),
+    ).toBe(200)
+    expect(
+      getSponsorshipAmount({
+        weeklyStars: [3, 3, 3, 3],
+        highScore: 80,
+        username: "MOHAN-BEE",
+      }),
+    ).toBe(300)
+    expect(
+      getSponsorshipAmount({
+        weeklyStars: [1, 0, 0, 0],
+        highScore: 4,
+        username: "example",
+      }),
+    ).toBe(30)
+  })
 })

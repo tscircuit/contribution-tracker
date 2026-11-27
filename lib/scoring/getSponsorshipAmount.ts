@@ -1,6 +1,10 @@
-import { getSponsorshipLimitCents } from "./sponsorship-limits"
 import { MAINTAINERS } from "./maintainers"
 import { SPONSORSHIP_STAR_SCORE_THRESHOLDS } from "./scoreToStars"
+
+export const MONTHLY_SPONSORSHIP_CAP = 200
+export const MONTHLY_SPONSORSHIP_CAP_EXCEPTIONS: Record<string, number> = {
+  "mohan-bee": 300,
+}
 
 export const MAINTAINER_BASE = {
   maintainer1: 200,
@@ -135,8 +139,8 @@ export function getSponsorshipAmount({
     }
   }
 
-  return Math.min(
-    baseAmount + maintainerBase,
-    getSponsorshipLimitCents(username) / 100,
-  )
+  const cap =
+    MONTHLY_SPONSORSHIP_CAP_EXCEPTIONS[username?.toLowerCase() ?? ""] ??
+    MONTHLY_SPONSORSHIP_CAP
+  return Math.min(baseAmount + maintainerBase, cap)
 }

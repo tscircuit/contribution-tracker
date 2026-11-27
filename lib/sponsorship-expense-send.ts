@@ -1,5 +1,3 @@
-import { isNonContribution } from "./ai-stuff/getConstributionStarRatingFromAttributes"
-import type { PrAttributeSchema } from "./ai-stuff/pr-attributes"
 import { createHash } from "node:crypto"
 
 export interface SendPlan {
@@ -52,22 +50,19 @@ export function allocatePrItems({
   prs,
   amountCents,
 }: {
-  prs: Array<
-    {
-      repo: string
-      number: number
-      title: string
-      starRating: number
-      url: string
-    } & Partial<PrAttributeSchema>
-  >
+  prs: Array<{
+    repo: string
+    number: number
+    title: string
+    starRating: number
+    url: string
+  }>
   amountCents: number
 }): SendPlan["items"] {
   if (!Number.isSafeInteger(amountCents) || amountCents <= 0)
     throw new Error("Invalid invoice amount")
   const unique = new Map<string, (typeof prs)[number]>()
   for (const pr of prs) {
-    if (isNonContribution(pr)) continue
     if (
       !Number.isInteger(pr.starRating) ||
       pr.starRating < 0 ||

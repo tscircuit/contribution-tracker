@@ -21,7 +21,7 @@ export const generateSponsorshipExplanationMarkdown = () => {
   markdown += "## Scoring & Sponsorship System\n\n"
   markdown += "### Overview\n\n"
   markdown +=
-    "PRs are analyzed by AI and assigned a **star rating (0-3 stars)**. Dependencies, payment bookkeeping, clear no-ops and duplicate-counted work earn zero points (distinct from a useful zero-star PR earning 0.5). Documentation/test/CI-only fixes receive one star; standalone reproductions receive at most two stars. Missing meaningful tests or relevant automated snapshots reduce the rating by one level when the gap is demonstrated; relevant unchanged tests count and nonvisual fixes do not require screenshots.  4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR, with 1-star PRs capped at 12 per week, plus review points.\n\n"
+    "PRs are analyzed by AI and assigned a **star rating (1-3 stars)**. 4 and 5 star ratings can only be manually assigned by staff. Weekly scores use `2^(starRating - 1)` per PR, with 1-star PRs capped at 12 per week, plus review points.\n\n"
 
   markdown += "### Weekly Score → Star String\n\n"
   markdown += "| Score Range | Star String | Count Value |\n"
@@ -87,8 +87,7 @@ export const generateSponsorshipExplanationMarkdown = () => {
   })
   markdown += "\n"
 
-  markdown +=
-    "**Final Amount** = min(Base Amount + Maintainer Bonus, monthly cap). The monthly cap is **$200**, with a **$300** exception for `mohan-bee`. Hardware reimbursements remain separate. When evaluated PR data is available, monthly exports use proportional audited PR points: contributor limit × contributor points ÷ highest eligible monthly points, rounded half-up to cents. CSV and JSON files are generated outputs, never fixed payout inputs.\n"
+  markdown += "**Final Amount** = Base Amount + Maintainer Bonus\n"
 
   return markdown
 }
