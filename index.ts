@@ -1,3 +1,4 @@
+import { pr_attribute_schema } from "lib/ai-stuff/pr-attributes"
 import * as fs from "fs"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { getContributionOverviewWindow } from "lib/ai/date-utils"
@@ -206,7 +207,11 @@ export async function generateOverview(
           repo,
           pr.number,
         )
-        if (existingPr) {
+        if (
+          existingPr &&
+          pr_attribute_schema.safeParse(existingPr).success &&
+          typeof existingPr.evaluation_evidence === "string"
+        ) {
           console.log(`Using stored analysis for PR #${pr.number} in ${repo}`)
           return {
             ...existingPr,
