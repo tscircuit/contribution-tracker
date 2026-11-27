@@ -93,13 +93,32 @@ export function getContributorScore({
   const isMaintainer =
     contributor && (MAINTAINERS as Record<string, string>)[contributor]
 
-  const totalDistinctPrsReviewed =
-    (contributorStats.distinctPrsReviewedNonCodeOwner || 0) +
-    (contributorStats.distinctPrsReviewedAsCodeOwner || 0)
+  const totalDistinctPrsReviewed = contributorStats.distinctPrsReviewedByWeek
+    ? Object.entries(contributorStats.distinctPrsReviewedByWeek).reduce(
+        (total, [reviewWeek, reviewedPrs]) => {
+          if (
+            (contributorStats.downvotedReviewsGivenByWeek?.[reviewWeek] ?? 0) >=
+            3
+          ) {
+            return total
+          }
+          return total + reviewedPrs.nonCodeOwner + reviewedPrs.asCodeOwner
+        },
+        0,
+      )
+    : (contributorStats.distinctPrsReviewedNonCodeOwner || 0) +
+      (contributorStats.distinctPrsReviewedAsCodeOwner || 0)
   let reviewPoints = Math.min(totalDistinctPrsReviewed, isMaintainer ? 15 : 5)
 
   if (!isMaintainer) {
     reviewPoints = Math.min(reviewPoints, impactWorth.Tiny)
+  }
+
+  if (
+    !contributorStats.distinctPrsReviewedByWeek &&
+    (contributorStats.downvotedReviewsGiven ?? 0) >= 3
+  ) {
+    reviewPoints = 0
   }
 
   result.score += reviewPoints
