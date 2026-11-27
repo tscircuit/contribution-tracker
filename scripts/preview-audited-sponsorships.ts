@@ -1,3 +1,4 @@
+import { getSponsorshipLimitCents } from "../lib/scoring/sponsorship-limits"
 import fs from "node:fs"
 import {
   collectiveQuery,
@@ -42,7 +43,8 @@ async function main() {
       typeof contributor.username !== "string" ||
       !Number.isSafeInteger(contributor.amountCents) ||
       contributor.amountCents <= 0 ||
-      contributor.amountCents > 20000 ||
+      contributor.amountCents >
+        getSponsorshipLimitCents(contributor.username) ||
       seen.has(contributor.username.toLowerCase())
     )
       throw new Error("Invalid audited contributor")

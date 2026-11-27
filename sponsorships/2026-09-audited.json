@@ -1,42 +1,1591 @@
 {
   "month": "2026-09",
   "currency": "USD",
-  "pricing": "200 USD times audited points divided by highest audited points",
+  "pricing": "Reviewed audited amounts; $200 sponsorship limit with $300 exception for mohan-bee.",
   "contributors": [
     {
       "username": "anil08607",
       "auditedPoints": 45.5,
-      "amountCents": 5056
+      "amountCents": 5056,
+      "items": [
+        {
+          "description": "tscircuit/altium-to-circuit-json#100: Map copper layers from the physical board stack (4 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/100",
+          "amountV2": {
+            "valueInCents": 445,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#101: Use shared signed fixed-point schematic coordinate parsing (4 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/101",
+          "amountV2": {
+            "valueInCents": 445,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#102: Adopt the merged altiumts coordinate API (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/102",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#113: Fix copper polygon deduplication for explicit IDs (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/113",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#45: fix(site): enable vertical scrolling on left control panel (0.5 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/45",
+          "amountV2": {
+            "valueInCents": 56,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#60: feat: support copper arcs (curved traces) in PCB conversion (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/60",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#96: Remove redundant work in slotted-pad conversion (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/96",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#97: Prevent completed converter stages from executing again (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/97",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#99: Keep generic schematic text out of circuit connectivity (1 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/99",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#171: parse and render parameter set directives (record 43) (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/171",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#187: render pad and via solder mask openings (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/187",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#192: test: reproduce untyped schematic Record 47 with SVG snapshots (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/192",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#197: add typed pin-to-pad mapping support for schematic Record 47 (4 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/197",
+          "amountV2": {
+            "valueInCents": 445,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#212: Exclude generic schematic text from electrical nets (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/212",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#214: Share signed fixed-point schematic coordinate parsing (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/214",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#286: test: reproduce false missing courtyard warnings for manually placed vias (1 audited points) \u2014 https://github.com/tscircuit/checks/pull/286",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#287: fix: skip missing courtyard warnings for manually placed vias (2 audited points) \u2014 https://github.com/tscircuit/checks/pull/287",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-altium#112: Fix vertical alignment of round-tripped Altium pin names (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-altium/pull/112",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-altium#113: Fix filled schematic backgrounds obscuring Altium components (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-altium/pull/113",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-altium#114: Fix missing rounded corners by preserving Altium elliptical arcs (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-altium/pull/114",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-altium#115: Fix: Altium RECORD=209 note parsing and preserve annotations across schematic round trips (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-altium/pull/115",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-kicad#558: test: reproduce standalone via exports extra anonymous footprint (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-kicad/pull/558",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3691: repro: LM386 audio amplifier auto-layout produces overlapping components (2 audited points) \u2014 https://github.com/tscircuit/core/pull/3691",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3731: repro183: battery charger status monitor auto-layout causes U1 and R_CHG component overlap (1 audited points) \u2014 https://github.com/tscircuit/core/pull/3731",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#247: repro: solved layout overlaps LM386 audio amplifier components (1 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/247",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#256: repro: battery charger status LED auto-layout causes U1 and R_CHG component overlap (2 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/256",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        }
+      ]
     },
     {
       "username": "Devesh36",
       "auditedPoints": 16,
-      "amountCents": 1778
+      "amountCents": 1778,
+      "items": [
+        {
+          "description": "tscircuit/altium-to-circuit-json#120: test: show non-plated Altium slots become circular holes (1 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/120",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#121: fix: preserve non-plated Altium slot geometry (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/121",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#122: Fix mechanical-layer pads appearing as PCB holes (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/122",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#123: test: reproduce keepout arcs converted to copper (1 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/123",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#77: Fix missing exploded PCB dimensions (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/77",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#82: Fix native PCB dimension labels (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/82",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#84: Fix Altium PCB copper layer count (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/84",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#85: Preserve units in native PCB dimension labels (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/85",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-kicad#610: test: reproduce missing PCB footprint attributes (#585) (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-kicad/pull/610",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-kicad#617: test: reproduce missing component silkscreen rectangles (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-kicad/pull/617",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        }
+      ]
     },
     {
       "username": "GokulPandi-M",
       "auditedPoints": 59,
-      "amountCents": 6556
+      "amountCents": 6556,
+      "items": [
+        {
+          "description": "tscircuit/altium-to-circuit-json#55: Fix Altium PCB silkscreen text justification (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/55",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#274: Reproduce opposite-side through-hole pin and courtyard overlap (1 audited points) \u2014 https://github.com/tscircuit/checks/pull/274",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#275: Fix plated-hole overlap checks against component courtyards (2 audited points) \u2014 https://github.com/tscircuit/checks/pull/275",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#104: fix: preserve series power-path diode orientation (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/104",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#50: fix: escape XML attribute values (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/50",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#58: test: add horizontal signal capacitor repro (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/58",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#60: fix: accept capacitors inline with horizontal traces (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/60",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#64: test: add repro for cropped full-schematic previews (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/64",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#87: reproduce orientation warning for a series power-path diode (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/87",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-kicad#496: Reproduce missing OBJ-only USB-C model in KiCad export (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-kicad/pull/496",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-kicad#497: Reproduce flipped bottom-mounted display model in KiCad (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-kicad/pull/497",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-kicad#502: Export EasyEDA OBJ-only models through STEP siblings (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-kicad/pull/502",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-kicad#509: Fix bottom-side 3D model rotation and offsets (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-kicad/pull/509",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3667: repro: annotations overlap across adjacent LED output branches (2 audited points) \u2014 https://github.com/tscircuit/core/pull/3667",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3898: repro: different-net traces overlap between vertical passives (1 audited points) \u2014 https://github.com/tscircuit/core/pull/3898",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3932: repro: same-net VREF branches form a redundant parallel route (1 audited points) \u2014 https://github.com/tscircuit/core/pull/3932",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#4128: reproduce disconnected traces from asymmetric custom symbol bounds (1 audited points) \u2014 https://github.com/tscircuit/core/pull/4128",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#4130: use graphical body bounds for custom schematic symbols (2 audited points) \u2014 https://github.com/tscircuit/core/pull/4130",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/easyeda-converter#538: repro: C2941005 import loses four schematic terminals (1 audited points) \u2014 https://github.com/tscircuit/easyeda-converter/pull/538",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/kicad-to-circuit-json#195: repro: USB symbol primitives hidden in site preview (1 audited points) \u2014 https://github.com/tscircuit/kicad-to-circuit-json/pull/195",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/kicad-to-circuit-json#198: fix: preserve KiCad symbol graphic layering (1 audited points) \u2014 https://github.com/tscircuit/kicad-to-circuit-json/pull/198",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/kicad-to-circuit-json#199: repro: rotated mirrored symbol graphics face the wrong direction (1 audited points) \u2014 https://github.com/tscircuit/kicad-to-circuit-json/pull/199",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/kicad-to-circuit-json#200: Fix rotated mirrored symbol transform order (1 audited points) \u2014 https://github.com/tscircuit/kicad-to-circuit-json/pull/200",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#240: repro: adjacent passive partitions violate configured gap (1 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/240",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#244: repro: solved layout overlaps adjacent LED output branches (1 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/244",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#245: Prevent chip-anchored grounded load pair overlaps (4 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/245",
+          "amountV2": {
+            "valueInCents": 445,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/parts-engine#57: repro: green LED selection ignores requested color (2 audited points) \u2014 https://github.com/tscircuit/parts-engine/pull/57",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/parts-engine#58: fix: respect requested LED color in JLC searches (2 audited points) \u2014 https://github.com/tscircuit/parts-engine/pull/58",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-symbols#478: align varistor terminals on the same axis (1 audited points) \u2014 https://github.com/tscircuit/schematic-symbols/pull/478",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1101: repro: repeated junctions around adjacent power rails (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1101",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1122: fix: collapse same-net cycles before shared-stub cleanup (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1122",
+          "amountV2": {
+            "valueInCents": 445,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1123: fix: move same-net junctions off component ports (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1123",
+          "amountV2": {
+            "valueInCents": 445,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1188: repro: different-net trace overlaps vertical passive ground label (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1188",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1194: fix: prevent recovered traces from entering components from behind (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1194",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1211: repro: same-net branches form a redundant near-parallel route (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1211",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1213: fix: skip recovery for already-connected same-net pairs (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1213",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1223: reproduce traces stopping at component boundaries before ports (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1223",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        }
+      ]
     },
     {
       "username": "hrithik18k",
       "auditedPoints": 48,
-      "amountCents": 5333
+      "amountCents": 5333,
+      "items": [
+        {
+          "description": "tscircuit/altium-to-circuit-json#54: Fix wrapped silkscreen arc sweeps (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/54",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#57: Import Altium circular PCB keepouts (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/57",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#66: Fix Altium filled silkscreen regions (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/66",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#72: Preserve Altium PCB net connectivity (4 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/72",
+          "amountV2": {
+            "valueInCents": 445,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#111: test(schematic): reproduce PowerSupply content clipped outside page (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/111",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#113: fix(schematic): honor predefined sheet dimensions (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/113",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#117: repro(schematic): magnetic-core inductor differs from Altium (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/117",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#121: fix(schematic): normalize wrapped arc sweeps (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/121",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#133: fix(svg): orient schematic ports from their connections (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/133",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#150: fix(schematic): render multiline notes correctly (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/150",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#156: repro(schematic): multiline note text layout (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/156",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#159: repro(svg): PCB arcs crossing zero render as short sweeps (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/159",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#163: fix(svg): render wrapped PCB arcs as full sweeps (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/163",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#173: repro: 8-bit embedded schematic bitmaps fail to render (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/173",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#176: feat: support uncompressed 8-bit indexed schematic bitmaps (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/176",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json#748: feat: add styled schematic pin label runs (2 audited points) \u2014 https://github.com/tscircuit/circuit-json/pull/748",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json#769: feat: add styled parts to schematic text (2 audited points) \u2014 https://github.com/tscircuit/circuit-json/pull/769",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-to-svg#708: fix: render overlined pin labels and schematic text (1 audited points) \u2014 https://github.com/tscircuit/circuit-to-svg/pull/708",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-to-svg#721: repro: active-low schematic text loses overlines (1 audited points) \u2014 https://github.com/tscircuit/circuit-to-svg/pull/721",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3975: test: add ICM-20948 shared ground label repro (2 audited points) \u2014 https://github.com/tscircuit/core/pull/3975",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/easyeda-converter#561: test: reproduce C335982 polarized capacitor geometry loss (1 audited points) \u2014 https://github.com/tscircuit/easyeda-converter/pull/561",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/easyeda-converter#562: fix: preserve polarized capacitor symbols (1 audited points) \u2014 https://github.com/tscircuit/easyeda-converter/pull/562",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/easyeda-converter#571: Add repro for incorrect C2765186 USB-C schematic symbol (1 audited points) \u2014 https://github.com/tscircuit/easyeda-converter/pull/571",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/easyeda-converter#572: prefer schematic pin names over footprint pad aliases (1 audited points) \u2014 https://github.com/tscircuit/easyeda-converter/pull/572",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/kicad-to-circuit-json#183: fix: preserve KiCad active-low overlines in Circuit JSON (1 audited points) \u2014 https://github.com/tscircuit/kicad-to-circuit-json/pull/183",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/kicad-to-circuit-json#187: repro: KiCad active-low labels render as literal markup (1 audited points) \u2014 https://github.com/tscircuit/kicad-to-circuit-json/pull/187",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1195: Fix net-label branch origin at component edge (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1195",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1209: Fix overlapping GND label for shared pin branch (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1209",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1215: Shorten same-side rails to outward net-label columns (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1215",
+          "amountV2": {
+            "valueInCents": 445,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/tscircuit.com#4729: fix: export all schematic sheets in image downloads (2 audited points) \u2014 https://github.com/tscircuit/tscircuit.com/pull/4729",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        }
+      ]
     },
     {
       "username": "KrishnaX12",
       "auditedPoints": 40,
-      "amountCents": 4444
+      "amountCents": 4444,
+      "items": [
+        {
+          "description": "tscircuit/altium-to-circuit-json#51: Fix Altium pad and plated slot geometry (1 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/51",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#80: Import Altium mechanical assembly text (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/80",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#91: Skip hidden Altium component silkscreen text (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/91",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#93: Match Altium default PCB text alignment (2 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/93",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altium-to-circuit-json#95: Reproduce missing copper polygon cutouts (1 audited points) \u2014 https://github.com/tscircuit/altium-to-circuit-json/pull/95",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#119: feat(schematic): parse, index, and render Bus (RECORD=26) and BusEntry (RECORD=37) records (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/119",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#131: repro(svg): real board ignores active component display modes (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/131",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#134: repro(pcb): opaque Connections6 stream prevents parsing (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/134",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#136: fix(schematic): render active component display modes (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/136",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#137: fix(pcb): accept opaque Connections6 records (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/137",
+          "amountV2": {
+            "valueInCents": 223,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#142: fix(svg): paint transparent component fills first (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/142",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#151: repro(svg): render real STM32 ST-Link V2 PCB (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/151",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#152: fix(svg): include off-board PCB graphics in bounds (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/152",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#154: fix(svg): resolve PCB component special strings (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/154",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#161: fix(schematic): honor legacy pin and power port fonts (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/161",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#165: repro(svg): snapshot unresolved ST-Link designators (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/165",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#184: repro(svg): snapshot missing C17 top-solder openings (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/184",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#203: fix(viewer): expose solder mask layer views (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/203",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#222: Reproduce CH582 copper antenna hidden by polygon cutout (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/222",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#223: Fix : ch582 copper antenna hidden by polygon cutout (2 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/223",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#98: Fix active-low overbars in schematic SVG text (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/98",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/altiumts#99: Fix schematic component paint order for pin labels (1 audited points) \u2014 https://github.com/tscircuit/altiumts/pull/99",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-gltf#190: repro: USB-C flashlight connector shifts away from pads in 3D PNG export (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-gltf/pull/190",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/copper-pour-solver#100: fix rectangular hole copper-pour clearance (2 audited points) \u2014 https://github.com/tscircuit/copper-pour-solver/pull/100",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/copper-pour-solver#102: reproduce misplaced copper pour on shifted boards in direct converter (1 audited points) \u2014 https://github.com/tscircuit/copper-pour-solver/pull/102",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/copper-pour-solver#103: fix copper pour bounds for shifted boards in direct converter (2 audited points) \u2014 https://github.com/tscircuit/copper-pour-solver/pull/103",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/copper-pour-solver#99: reproduce missing copper-pour clearance around rectangular holes (1 audited points) \u2014 https://github.com/tscircuit/copper-pour-solver/pull/99",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/tscircuit.com#4874: fix: preserve package star state (2 audited points) \u2014 https://github.com/tscircuit/tscircuit.com/pull/4874",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        }
+      ]
     },
     {
       "username": "mohan-bee",
       "auditedPoints": 180,
-      "amountCents": 20000
+      "amountCents": 30000,
+      "items": [
+        {
+          "description": "tscircuit/calculate-cell-boundaries#36: reproduce missing dividers with expanded section margins (2 audited points) \u2014 https://github.com/tscircuit/calculate-cell-boundaries/pull/36",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/calculate-cell-boundaries#37: preserve cell boundaries when preferred margins connect all cells (4 audited points) \u2014 https://github.com/tscircuit/calculate-cell-boundaries/pull/37",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/calculate-cell-boundaries#38: reproduce missing usb charger section divider (1 audited points) \u2014 https://github.com/tscircuit/calculate-cell-boundaries/pull/38",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/calculate-cell-boundaries#39: preserve section dividers across floating-point gaps (4 audited points) \u2014 https://github.com/tscircuit/calculate-cell-boundaries/pull/39",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/calculate-cell-boundaries#41: straighten touching section dividers at crossing junctions (2 audited points) \u2014 https://github.com/tscircuit/calculate-cell-boundaries/pull/41",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/calculate-cell-boundaries#42: Reproduce slow boundary calculation for Tang Nano schematic sections (1 audited points) \u2014 https://github.com/tscircuit/calculate-cell-boundaries/pull/42",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/calculate-cell-boundaries#43: skip redundant neighbour scans during schematic grid merging (4 audited points) \u2014 https://github.com/tscircuit/calculate-cell-boundaries/pull/43",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#262: add pushbutton same-net TSX repro and schematic snapshot (2 audited points) \u2014 https://github.com/tscircuit/checks/pull/262",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#263: report two-terminal switches connected to themselves (2 audited points) \u2014 https://github.com/tscircuit/checks/pull/263",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#325: reproduce routing-check crash on pill-shaped holes (1 audited points) \u2014 https://github.com/tscircuit/checks/pull/325",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#326: fix routing checks for pill-shaped holes (2 audited points) \u2014 https://github.com/tscircuit/checks/pull/326",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#335: Reproduce false off-board errors for circular mounting pads (1 audited points) \u2014 https://github.com/tscircuit/checks/pull/335",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#336: Check circular mounting pads against their actual board-edge outline (2 audited points) \u2014 https://github.com/tscircuit/checks/pull/336",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#347: Reproduce missed copper overlap between different-net vias (2 audited points) \u2014 https://github.com/tscircuit/checks/pull/347",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/checks#348: Detect copper overlap and clearance violations between different-net vias (4 audited points) \u2014 https://github.com/tscircuit/checks/pull/348",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#36: Reproduce missed trace-anchored net label collision (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/36",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#73: reproduce false padding warnings for centered supply pins (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/73",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#74: fix false padding warnings for singleton schematic pins (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/74",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#77: reproduce false diode resistor alignment across separate nets (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/77",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-schematic-placement-analysis#78: prevent diode resistor alignment warnings across separate nets (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-schematic-placement-analysis/pull/78",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-gerber#154: prevent zero-length via transitions from adding copper (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-gerber/pull/154",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-gerber#175: reproduce soldermask openings on covered smt pads (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-gerber/pull/175",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-gerber#176: prevent mask openings on covered smt pads (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-gerber/pull/176",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-util#152: reproduce missing-pin errors omitted from netlist diagnostics (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-util/pull/152",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-util#153: include missing-pin errors in netlist diagnostics (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-util/pull/153",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-to-svg#785: expose schematic text ids for search selection (2 audited points) \u2014 https://github.com/tscircuit/circuit-to-svg/pull/785",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/cli#4645: fix npm publishing blocked by override conflicts and stale versions (1 audited points) \u2014 https://github.com/tscircuit/cli/pull/4645",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/copper-pour-solver#94: reproduce copper pour short on polygon plated holes (1 audited points) \u2014 https://github.com/tscircuit/copper-pour-solver/pull/94",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/copper-pour-solver#95: prevent copper pour shorts on polygon plated holes (2 audited points) \u2014 https://github.com/tscircuit/copper-pour-solver/pull/95",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/copper-pour-solver#96: reproduce missing copper-pour clearance around pill holes (1 audited points) \u2014 https://github.com/tscircuit/copper-pour-solver/pull/96",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/copper-pour-solver#97: preserve copper-pour clearance around non-plated pill holes (2 audited points) \u2014 https://github.com/tscircuit/copper-pour-solver/pull/97",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3642: reproduce missing schematic section dividers for small gaps (1 audited points) \u2014 https://github.com/tscircuit/core/pull/3642",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3646: use library cell margins to preserve schematic section dividers (1 audited points) \u2014 https://github.com/tscircuit/core/pull/3646",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3664: reproduce net-based USB differential pair routing failure (1 audited points) \u2014 https://github.com/tscircuit/core/pull/3664",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3665: fix differential pairs connected through named nets (4 audited points) \u2014 https://github.com/tscircuit/core/pull/3665",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3723: reproduce duplicate pcb obstacle connectivity ids (2 audited points) \u2014 https://github.com/tscircuit/core/pull/3723",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#3724: deduplicate pcb obstacle connectivity ids (4 audited points) \u2014 https://github.com/tscircuit/core/pull/3724",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#4028: reproduce ignored net nominal trace width (2 audited points) \u2014 https://github.com/tscircuit/core/pull/4028",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#4029: honor net nominal trace width during pcb routing (4 audited points) \u2014 https://github.com/tscircuit/core/pull/4029",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#4199: reproduce false missing-trace warnings with an async 0603 footprint (1 audited points) \u2014 https://github.com/tscircuit/core/pull/4199",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/core#4215: Fix false missing-trace warnings during async footprint loading (2 audited points) \u2014 https://github.com/tscircuit/core/pull/4215",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/easyeda-converter#566: reproduce missing c609652 multiplexed pin label (1 audited points) \u2014 https://github.com/tscircuit/easyeda-converter/pull/566",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/easyeda-converter#567: preserve multiplexed easyeda pin names and connection aliases (2 audited points) \u2014 https://github.com/tscircuit/easyeda-converter/pull/567",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/jlcsearch#593: recognize pin structure when deriving header rows (4 audited points) \u2014 https://github.com/tscircuit/jlcsearch/pull/593",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/length-matching-solver#60: reproduce reversing differential-pair spine corner crash (2 audited points) \u2014 https://github.com/tscircuit/length-matching-solver/pull/60",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/length-matching-solver#61: reject reversing differential-pair spine candidates (4 audited points) \u2014 https://github.com/tscircuit/length-matching-solver/pull/61",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/length-matching-solver#65: reproduce usb length matching rejection beside existing fanout (2 audited points) \u2014 https://github.com/tscircuit/length-matching-solver/pull/65",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/length-matching-solver#66: preserve valid terminal fanout during differential-pair length matching (4 audited points) \u2014 https://github.com/tscircuit/length-matching-solver/pull/66",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#236: add board 8822 schematic layout repro (1 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/236",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#237: Preserve crystal circuit alignment through grounded load placement (2 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/237",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#246: align adjacent grounded load pairs in chip pin order (4 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/246",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#264: add acoustic guitar tuner core layout repro (2 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/264",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/matchpack#265: fix right-side grounded load ordering (2 audited points) \u2014 https://github.com/tscircuit/matchpack/pull/265",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1002: Add smartwatch power sheet routing repro (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1002",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1008: prevent duplicate ground labels on unwired component pins (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1008",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1016: Add hub USB sheet schematic trace repro (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1016",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1017: keep downward ground labels directly below shared rails (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1017",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1043: add board 8090 power section routing repro (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1043",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1045: merge parallel same-net rails after a shared segment (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1045",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1048: mark ground nets in repro and bug report inputs (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1048",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1061: collapse duplicate stubs on shared net branches (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1061",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1064: avoid perimeter detours when recovering short schematic traces (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1064",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1077: preserve same-net branch junctions when aligning rails (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1077",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1088: repro disconnected gnd label in rp2040 robot controller (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1088",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1089: fix disconnected net labels during same-net junction alignment (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1089",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1091: add robot controller imu and tof routing repro (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1091",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1093: fix disconnected trace endpoints when generating detours (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1093",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1105: keep net labels attached to connector tips (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1105",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1116: Add RTC IMU microSD trace routing repro (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1116",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1185: Shorten recovered trace detours around nearby obstacles (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1185",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1189: reproduce vertical recovery detour between stacked schematic terminals (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1189",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1190: limit local recovery channels to shortening valid routes (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1190",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1191: reproduce the manual placement trace detour (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1191",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1192: prefer shorter recovery routes over junction detours (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1192",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1219: prevent junction alignment from overlapping different-net trace strokes (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1219",
+          "amountV2": {
+            "valueInCents": 667,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1224: add full am3352 03-interfaces sheet repro (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1224",
+          "amountV2": {
+            "valueInCents": 167,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1225: add full am3352 06-boot sheet repro (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1225",
+          "amountV2": {
+            "valueInCents": 166,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1226: remove unnecessary detours around net label connectors (4 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1226",
+          "amountV2": {
+            "valueInCents": 666,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1231: refresh am3352 interfaces snapshot after routing fixes (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1231",
+          "amountV2": {
+            "valueInCents": 166,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1246: keep distant ground connections between chips on net labels (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1246",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1247: add stm32 mini dev board mcu sheet repro (1 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1247",
+          "amountV2": {
+            "valueInCents": 166,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1248: remove redundant bends from earlier label detours (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1248",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1249: Add a reproduction of the Pico schematic sheet (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1249",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-trace-solver#1250: prevent shoved net labels from colliding with themselves (2 audited points) \u2014 https://github.com/tscircuit/schematic-trace-solver/pull/1250",
+          "amountV2": {
+            "valueInCents": 333,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/schematic-viewer#279: include inline net labels in schematic search (1 audited points) \u2014 https://github.com/tscircuit/schematic-viewer/pull/279",
+          "amountV2": {
+            "valueInCents": 166,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/tscircuit-autorouter#2456: preserve maximum uncoupled length through pipeline9 post-processing (4 audited points) \u2014 https://github.com/tscircuit/tscircuit-autorouter/pull/2456",
+          "amountV2": {
+            "valueInCents": 666,
+            "currency": "USD"
+          }
+        }
+      ]
     },
     {
       "username": "trixie010",
       "auditedPoints": 3,
-      "amountCents": 333
+      "amountCents": 333,
+      "items": [
+        {
+          "description": "tscircuit/circuit-json-to-tscircuit#86: repro: silkscreen path layer and stroke_width dropped on conversion (1 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-tscircuit/pull/86",
+          "amountV2": {
+            "valueInCents": 111,
+            "currency": "USD"
+          }
+        },
+        {
+          "description": "tscircuit/circuit-json-to-tscircuit#87: fix: preserve layer and stroke_width on silkscreen path conversion (2 audited points) \u2014 https://github.com/tscircuit/circuit-json-to-tscircuit/pull/87",
+          "amountV2": {
+            "valueInCents": 222,
+            "currency": "USD"
+          }
+        }
+      ]
     }
-  ]
+  ],
+  "sourceCommit": "65e0f1646bf7abfc2003364f1d5f7aa6bc86e934",
+  "sourceWeeks": ["2026-09-01", "2026-09-08", "2026-09-15", "2026-09-22"]
 }

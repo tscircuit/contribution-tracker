@@ -1,3 +1,4 @@
+import { getSponsorshipLimitCents } from "./sponsorship-limits"
 import { MAINTAINERS } from "./maintainers"
 import { SPONSORSHIP_STAR_SCORE_THRESHOLDS } from "./scoreToStars"
 
@@ -134,5 +135,8 @@ export function getSponsorshipAmount({
     }
   }
 
-  return baseAmount + maintainerBase
+  return Math.min(
+    baseAmount + maintainerBase,
+    getSponsorshipLimitCents(username) / 100,
+  )
 }

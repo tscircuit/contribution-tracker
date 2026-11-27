@@ -136,7 +136,7 @@ test("historical numeric ID prevents reused or renamed GitHub usernames from mat
   expect(() => historicalGithubId("alice", [{}])).toThrow("Missing")
 })
 
-test("September fixture retains all payouts including trixie010's $10", () => {
+test("September fixture uses reviewed audited payouts and durable identities", () => {
   expect(MATCHING_MONTH).toBe("2026-09")
   const rows = parseSponsorshipCsv(
     fs.readFileSync(`sponsorships/${MATCHING_MONTH}.csv`, "utf8"),
@@ -146,9 +146,9 @@ test("September fixture retains all payouts including trixie010's $10", () => {
       fs.readFileSync(`contribution-overviews/2026-09-${day}.json`, "utf8"),
     ),
   )
-  expect(rows).toHaveLength(11)
+  expect(rows).toHaveLength(7)
   expect(rows.find((row) => row.username === "trixie010")?.amountCents).toBe(
-    1000,
+    333,
   )
   for (const row of rows)
     expect(historicalGithubId(row.username, overviews)).toBeGreaterThan(0)

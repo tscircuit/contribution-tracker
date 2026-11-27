@@ -1,3 +1,4 @@
+import { PR_EVALUATION_POLICY_VERSION } from "./lib/ai-stuff/getConstributionStarRatingFromAttributes"
 import * as fs from "fs"
 import { analyzePRWithAI } from "lib/ai-stuff/analyze-pr"
 import { getContributionOverviewWindow } from "lib/ai/date-utils"
@@ -206,7 +207,9 @@ export async function generateOverview(
           repo,
           pr.number,
         )
-        if (existingPr) {
+        if (
+          existingPr?.evaluationPolicyVersion === PR_EVALUATION_POLICY_VERSION
+        ) {
           console.log(`Using stored analysis for PR #${pr.number} in ${repo}`)
           return {
             ...existingPr,

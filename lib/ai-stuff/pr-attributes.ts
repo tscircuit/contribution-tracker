@@ -7,7 +7,7 @@ export const PR_ATTRIBUTES = {
     "The PR introduces or fixes an electronic component footprint",
   core_change: "The PR changes tscircuit/core with new functionality",
   only_dependency_update:
-    "The PR is only a dependency update without any new functionality",
+    "The PR only updates dependencies, versions or generated declarations, even when it integrates a useful upstream fix or refreshes accompanying snapshots; no new implementation in this repository",
   bad_title:
     "The PR title is overly vague or generic, it can't be used to communicate the PR's purpose in a changelog",
   introduces_new_circuit_board:
@@ -44,9 +44,20 @@ export const PR_ATTRIBUTES = {
     "This contribution to circuit-to-svg introduces brand new functionality and support for rendering a new element or handling of a previously unhandled element",
 }
 
+export const PR_AUDIT_ATTRIBUTES = {
+  payment_bookkeeping:
+    "Only sponsorship/payment administration, including registering payout profiles; not project functionality.",
+  clear_noop_or_duplicate:
+    "A demonstrated no-op or work already credited elsewhere. Do not infer duplication from a similar title alone.",
+  only_docs_tests_or_ci:
+    "Only documentation, test maintenance or CI fixes. A useful standalone bug reproduction uses only_reproduces_a_bug instead. Implementation fixes with tests are not test-only work.",
+  missing_regression_evidence:
+    "A behavioral fix lacks meaningful automated regression assertions or relevant automated visual snapshots. Existing relevant tests count, even when unchanged. Nonvisual data/logic fixes do not require screenshots. Manual screenshots alone are not automated regression coverage. Set true only when the available source demonstrates a gap; missing changed tests alone is insufficient, and unknown existing coverage is not proof of a gap.",
+}
+
 export type PrAttribute = keyof typeof PR_ATTRIBUTES
 
-export const pr_attribute_schema = z.object(
+const base_attribute_schema = z.object(
   Object.fromEntries(
     Object.keys(PR_ATTRIBUTES).map((attributeName) => [
       attributeName,
@@ -55,6 +66,14 @@ export const pr_attribute_schema = z.object(
   ),
 )
 
+export const pr_attribute_schema = base_attribute_schema.merge(
+  z.object(
+    Object.fromEntries(
+      Object.keys(PR_AUDIT_ATTRIBUTES).map((name) => [name, z.boolean()]),
+    ),
+  ),
+)
+
 export type PrAttributeSchema = {
   [key in keyof typeof PR_ATTRIBUTES]: boolean
-}
+} & Partial<Record<keyof typeof PR_AUDIT_ATTRIBUTES, boolean>>

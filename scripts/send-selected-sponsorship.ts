@@ -1,3 +1,4 @@
+import { readReviewedSponsorships } from "../lib/reviewed-sponsorships"
 import fs from "node:fs"
 import { PAYER_SLUG } from "../lib/sponsorship-expense-report"
 import {
@@ -326,6 +327,11 @@ async function main() {
         pr.state === "merged" &&
         pr.merged_at,
     )
+  const reviewed = readReviewedSponsorships(MATCHING_MONTH)?.find(
+    (entry) => entry.username.toLowerCase() === selectedUsername,
+  )
+  if (reviewed && reviewed.amountCents !== row.amountCents)
+    throw new Error("Reviewed amount and CSV disagree")
   const plan: SendPlan = {
     month: MATCHING_MONTH,
     githubId: row.githubId,
@@ -336,7 +342,8 @@ async function main() {
     payeeSlug: payee.slug,
     amountCents: row.amountCents,
     reference: `${PAYER_SLUG}:github:${row.githubId}:sponsorship:${MATCHING_MONTH}`,
-    items: allocatePrItems({ prs, amountCents: row.amountCents }),
+    items:
+      reviewed?.items ?? allocatePrItems({ prs, amountCents: row.amountCents }),
   }
   const reviewedExclusions = config.excludedTestExpenses.filter(
     (entry: { payeeId: string }) => entry.payeeId === plan.payeeId,

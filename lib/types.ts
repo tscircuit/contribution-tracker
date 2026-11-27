@@ -96,6 +96,7 @@ export interface AnalyzedPR extends PullRequest, PrAttributeSchema {
   /** @deprecated */
   isAlignedWithMilestone: boolean
   starRating: StarRating
+  evaluationPolicyVersion?: number
 }
 
 export interface Milestone {

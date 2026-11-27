@@ -1,3 +1,4 @@
+import { reviewedSponsorshipCsv } from "../lib/reviewed-sponsorships"
 import fs from "node:fs"
 import path from "node:path"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
@@ -332,6 +333,15 @@ function main() {
     console.log(
       `Payment artifacts are disabled for ${year}-${month.toString().padStart(2, "0")}; skipping sponsorship CSV generation.`,
     )
+    return
+  }
+
+  const reviewed = reviewedSponsorshipCsv(
+    `${year}-${month.toString().padStart(2, "0")}`,
+  )
+  if (reviewed !== null) {
+    fs.writeFileSync(getMonthFile(year, month), reviewed)
+    console.log("Exported reviewed audited sponsorship amounts")
     return
   }
 
