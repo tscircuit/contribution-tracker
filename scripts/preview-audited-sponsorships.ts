@@ -74,6 +74,10 @@ async function main() {
     }
     const expenses = await listAuthenticatedExpenses(plan)
     rows.push({
+      githubId: matched.githubId,
+      payeeId: matched.openCollectiveId,
+      payeeLegacyId: data.account.legacyId,
+      payeeSlug: slug,
       ...contributor,
       profileUrl: matched.profileUrl,
       ...auditedPaymentStatus({
@@ -84,17 +88,33 @@ async function main() {
       }),
     })
   }
-  const outstanding = rows.filter((row) => row.status !== "paid")
+  for (const row of rows) {
+    if (
+      audit.settledContributors.some(
+        (entry: { username: string }) =>
+          entry.username.toLowerCase() === row.username.toLowerCase(),
+      )
+    ) {
+      row.status = "maintainer-confirmed-settled"
+      row.remainingCents = 0
+    }
+  }
+  const outstanding = rows.filter(
+    (row) => !["paid", "maintainer-confirmed-settled"].includes(row.status),
+  )
   const totalCents = outstanding.reduce(
     (sum, row) => sum + row.remainingCents,
     0,
   )
-  const summary = `# September 2026 audited sponsorship preview\n\n**Test only. No expenses, emails, invoices or payments are sent.**\n\nOutstanding audited amount: **$${(totalCents / 100).toFixed(2)} USD**. Existing expenses and review rows must be reconciled before sending.\n\n| Contributor | Audited payout | September paid | Remaining | Status |\n| --- | ---: | ---: | ---: | --- |\n${outstanding.map((row) => `| ${row.username} | $${(row.amountCents / 100).toFixed(2)} | $${(row.paidCents / 100).toFixed(2)} | $${(row.remainingCents / 100).toFixed(2)} | ${row.status} |`).join("\n")}\n\nAlready paid (omitted above): ${
+  const summary = `# September 2026 audited sponsorship preview\n\n**Read-only details snapshot. This step sends nothing.**\n\nOutstanding audited amount: **$${(totalCents / 100).toFixed(2)} USD**. Existing expenses and review rows must be reconciled before sending.\n\n| Contributor | Audited payout | September paid | Remaining | Status |\n| --- | ---: | ---: | ---: | --- |\n${outstanding.map((row) => `| ${row.username} | $${(row.amountCents / 100).toFixed(2)} | $${(row.paidCents / 100).toFixed(2)} | $${(row.remainingCents / 100).toFixed(2)} | ${row.status} |`).join("\n")}\n\nAlready paid (omitted above): ${
     rows
-      .filter((row) => row.status === "paid")
+      .filter((row) =>
+        ["paid", "maintainer-confirmed-settled"].includes(row.status),
+      )
       .map((row) => row.username)
       .join(", ") || "none confirmed"
-  }.\n\nPayment matching uses the September contribution reference and recipient, regardless of payment date. Prior payments above the new audited amount satisfy it; unrelated $10 test payments do not. Unknown periods and existing pending invoices require review, never an automatic resend.\n`
+  }.\n\nPayment matching uses the September contribution reference and recipient, regardless of payment date. Maintainer-confirmed settlements are explicitly excluded in the audited data file, independently of API verification. Prior payments above the new audited amount satisfy it; unrelated $10 test payments do not. Unknown periods and existing pending invoices require review, never an automatic resend.\n`
+  const details = `\n## All audited contributors\n\n| Contributor | Audited amount | Status |\n| --- | ---: | --- |\n${rows.map((row) => `| ${row.username} | $${(row.amountCents / 100).toFixed(2)} | ${row.status} |`).join("\n")}\n`
   fs.writeFileSync(
     "sponsorship-matches/2026-09/audited-preview.json",
     JSON.stringify(
@@ -103,10 +123,10 @@ async function main() {
       2,
     ) + "\n",
   )
-  fs.writeFileSync("sponsorship-matches/2026-09/summary.md", summary)
+  fs.writeFileSync("sponsorship-matches/2026-09/summary.md", summary + details)
   if (process.env.GITHUB_STEP_SUMMARY)
-    fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary)
-  console.log(summary)
+    fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary + details)
+  console.log(summary + details)
 }
 if (import.meta.main)
   main().catch((error) => {

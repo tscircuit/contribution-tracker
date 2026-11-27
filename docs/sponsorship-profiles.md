@@ -157,8 +157,7 @@ strings, and private response bodies are not printed.
 The manual **Open Collective Sponsorships** action now produces a read-only
 September 2026 preview using `sponsorships/2026-09-audited.json`. These are the
 approved spreadsheet amounts, totaling $435 before payment reconciliation.
-The original sponsorship CSV and the separate sending workflow are unchanged.
-Do not use the sending workflow to pay these revised values yet.
+The original historical sponsorship CSV remains unchanged. The former API-test workflow now only checks authentication; invoicing uses the audited workflow below.
 
 The preview uses the existing `OPENCOLLECTIVE_TOKEN` repository secret with
 collective-admin access to scan all received expenses, including drafts. It
@@ -173,7 +172,27 @@ for review, rather than silently allowing another invoice. Unrelated test
 payments do not settle September. A failed or incomplete authenticated lookup
 fails the preview; it must not report a contributor as unpaid on missing data.
 
-This action never creates expenses, sends invitations, changes the expense
+The `details` option never creates expenses, sends invitations, changes the expense
 ledger, or makes payments. Download its existing September artifact for
 `summary.md` and `audited-preview.json`. Missing profiles and staff are excluded
 from the audited recipient list.
+
+### Run September details or payout
+
+Run **Open Collective Sponsorships** on `main` and select `operation`:
+
+- `details` (default): read-only report of every audited contributor and the outstanding table.
+- `payout`: refresh the report, then create invoice invitations only for eligible unpaid contributors using the audited PR line items and amounts. It does not approve expenses or transfer money.
+
+The audited file records the maintainer-confirmed September settlements for
+mohan-bee, Devesh36 and trixie010; both options exclude these from the outstanding
+balance even when older expense references cannot establish their month.
+The other four approved amounts total $213.89 before any further settlements.
+New paid expenses, pending invoices, ambiguous periods and partial payments
+are rechecked and skipped as appropriate. The durable per-month ledger and a
+fresh authenticated expense scan prevent reruns from creating another invoice.
+Failures require review; do not blindly retry an uncertain creation.
+
+Payout requires the existing collective token and the automatic GitHub token
+with ledger write permission. Details retains read-only GitHub permissions.
+No new secrets are needed. Download the report artifact for per-user results.
