@@ -7,7 +7,7 @@ import { Client, Role, WebhookClient } from "discord.js"
 // All-Time roles (by score)
 // These roles are cumulative: if a user qualifies for a higher tier, they should have
 // all lower-tier roles as well. However, WE DO NOT REMOVE ANY ALL-TIME ROLES ONCE ASSIGNED.
-const ALL_TIME_ROLE_NAMES = [
+export const ALL_TIME_ROLE_NAMES = [
   "New Contributor",
   "Contributor",
   "Try Hard",
@@ -15,17 +15,22 @@ const ALL_TIME_ROLE_NAMES = [
   "King",
   "Legend",
 ] as const
-type AllTimeRoleName = (typeof ALL_TIME_ROLE_NAMES)[number]
+export type AllTimeRoleName = (typeof ALL_TIME_ROLE_NAMES)[number]
+
+// Contributor Tier roles (by total # of merged PR contributions across all weeks)
+// Cumulative: higher-tier contributors also receive lower-tier channel access roles.
+export const TIER_ROLE_NAMES = ["c-tier", "b-tier", "a-tier"] as const
+export type TierRoleName = (typeof TIER_ROLE_NAMES)[number]
 
 // Weekly roles (by stars)
 // These roles are fully synced each week: only the cumulative weekly roles based on the current
 // stars value should be present.
-const WEEKLY_ROLE_NAMES = ["⭐", "⭐⭐", "⭐⭐⭐", "👑", "👑👑"] as const
-type WeeklyRoleName = (typeof WEEKLY_ROLE_NAMES)[number]
+export const WEEKLY_ROLE_NAMES = ["⭐", "⭐⭐", "⭐⭐⭐", "👑", "👑👑"] as const
+export type WeeklyRoleName = (typeof WEEKLY_ROLE_NAMES)[number]
 
 // ----- Helper function for All-Time roles ----- //
 
-function getAllTimeRoleName(score: number): AllTimeRoleName | null {
+export function getAllTimeRoleName(score: number): AllTimeRoleName | null {
   if (score >= 100) return "Legend"
   if (score >= 75) return "King"
   if (score >= 50) return "Hero"
@@ -33,6 +38,43 @@ function getAllTimeRoleName(score: number): AllTimeRoleName | null {
   if (score >= 10) return "Contributor"
   if (score >= 3) return "New Contributor"
   return null
+}
+
+// ----- Helper functions for Contributor Tier roles ----- //
+
+export function getTierRoleName(
+  contributionsCount: number,
+): TierRoleName | null {
+  if (contributionsCount >= 100) return "a-tier"
+  if (contributionsCount >= 10) return "b-tier"
+  if (contributionsCount >= 1) return "c-tier"
+  return null
+}
+
+export function getCumulativeTierRoleNames(
+  contributionsCount: number,
+): TierRoleName[] {
+  const targetTierRole = getTierRoleName(contributionsCount)
+  if (!targetTierRole) return []
+  const targetIndex = TIER_ROLE_NAMES.indexOf(targetTierRole)
+  return TIER_ROLE_NAMES.slice(0, targetIndex + 1)
+}
+
+export function aggregateTotalContributionsByUser(
+  weeklyOverviews: Array<Record<string, { prsMerged?: number }>>,
+): Record<string, number> {
+  const totalsByLowercaseUser: Record<string, number> = {}
+  for (const overview of weeklyOverviews) {
+    for (const [username, details] of Object.entries(overview)) {
+      const merged =
+        typeof details?.prsMerged === "number" ? details.prsMerged : 0
+      if (merged > 0) {
+        const key = username.toLowerCase()
+        totalsByLowercaseUser[key] = (totalsByLowercaseUser[key] ?? 0) + merged
+      }
+    }
+  }
+  return totalsByLowercaseUser
 }
 
 // ----- Crown notification function ----- //
@@ -86,6 +128,22 @@ function loadContributionData(): Record<string, any> {
   return JSON.parse(fileContent)
 }
 
+export function loadTotalContributionsByUser(
+  contributionsDir: string = path.join(process.cwd(), "contribution-overviews"),
+): Record<string, number> {
+  const files = fs
+    .readdirSync(contributionsDir)
+    .filter((file) => file.endsWith(".json"))
+    .sort()
+
+  const overviews = files.map((file) => {
+    const filePath = path.join(contributionsDir, file)
+    return JSON.parse(fs.readFileSync(filePath, "utf-8"))
+  })
+
+  return aggregateTotalContributionsByUser(overviews)
+}
+
 function loadUserMappings(): Record<string, string> {
   const filePath = path.join(process.cwd(), "users.json")
   const fileContent = fs.readFileSync(filePath, "utf-8")
@@ -102,6 +160,7 @@ async function syncRoles(client: Client, guildId: string) {
   }
 
   const contributionsByUser = loadContributionData()
+  const totalContributionsByUser = loadTotalContributionsByUser()
   const userMappings = loadUserMappings()
 
   // Fetch all-time roles from the guild
@@ -126,6 +185,17 @@ async function syncRoles(client: Client, guildId: string) {
     weeklyRoles[roleName] = role
   }
 
+  // Fetch contributor tier roles from the guild
+  const tierRoles: Record<TierRoleName, Role> = {} as any
+  for (const roleName of TIER_ROLE_NAMES) {
+    const role = guild.roles.cache.find((r) => r.name === roleName)
+    if (!role) {
+      console.warn(`Tier role '${roleName}' not found.`)
+      continue
+    }
+    tierRoles[roleName] = role
+  }
+
   console.log("\n")
 
   // Track crown winners for notifications
@@ -138,6 +208,20 @@ async function syncRoles(client: Client, guildId: string) {
     // Extract all-time and weekly contribution data:
     // Use 'score' for all-time roles and 'stars' for weekly roles.
     const { score, stars } = contributorDetails
+    const totalContributions =
+      totalContributionsByUser[githubUsername.toLowerCase()] ??
+      (typeof contributorDetails.prsMerged === "number"
+        ? contributorDetails.prsMerged
+        : 0)
+
+    // Compute desired cumulative tier roles (only add missing; do not remove any)
+    const desiredTierRoles: Role[] = []
+    for (const roleName of getCumulativeTierRoleNames(totalContributions)) {
+      const role = tierRoles[roleName]
+      if (role) {
+        desiredTierRoles.push(role)
+      }
+    }
 
     // Compute desired cumulative all-time roles (only add missing; do not remove any)
     const desiredAllTimeRoles: Role[] = []
@@ -205,6 +289,28 @@ async function syncRoles(client: Client, guildId: string) {
         })
       console.log(
         `Added all-time roles [${allTimeRolesToAdd.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
+      )
+      await Bun.sleep(1000)
+    }
+
+    // --- Sync Contributor Tier Roles (Addition Only) ---
+    const currentTierRoles = discordUser.roles.cache.filter((role) =>
+      TIER_ROLE_NAMES.includes(role.name as TierRoleName),
+    )
+    const currentTierRoleIds = new Set(currentTierRoles.map((r) => r.id))
+    const tierRolesToAdd = desiredTierRoles.filter(
+      (role) => !currentTierRoleIds.has(role.id),
+    )
+    if (tierRolesToAdd.length > 0) {
+      await discordUser.roles
+        .add(tierRolesToAdd.map((r) => r.id))
+        .catch((e) => {
+          console.warn(
+            `Error adding tier roles to ${githubUsername} (${discordId}): ${e.message}`,
+          )
+        })
+      console.log(
+        `Added tier roles [${tierRolesToAdd.map((r) => r.name).join(", ")}] to ${githubUsername} (${discordId}).`,
       )
       await Bun.sleep(1000)
     }
@@ -299,11 +405,19 @@ async function main() {
   client.login(discordToken)
 }
 
-main().catch((err) => {
-  console.error("An error occurred:", err)
-})
+if (import.meta.main) {
+  main().catch((err) => {
+    console.error("An error occurred:", err)
+  })
+}
 
 /**
+Contributor Tier Thresholds (Cumulative by total merged PRs):
+=============================================================
+a-tier: 100+ contributions
+b-tier: 10-99 contributions
+c-tier: 1-9 contributions
+
 Weekly Role Thresholds:
 ====================
 👑👑: 100+ points
