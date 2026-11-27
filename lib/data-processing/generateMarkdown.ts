@@ -1,7 +1,28 @@
-import type { AnalyzedPR, ContributorStats } from "lib/types"
+import type {
+  AnalyzedPR,
+  ContributorStats,
+  ReviewLatencyEntry,
+} from "lib/types"
 import { getContributorScore } from "../scoring"
 import { scoreToStarString } from "../scoring/scoreToStars"
 export { scoreToStarString }
+
+export function formatReviewLatency(ms: number): string {
+  const totalMinutes = Math.max(0, Math.round(ms / 60_000))
+  const days = Math.floor(totalMinutes / (24 * 60))
+  const hours = Math.floor((totalMinutes % (24 * 60)) / 60)
+  const minutes = totalMinutes % 60
+  const parts: string[] = []
+
+  if (days > 0) parts.push(`${days}d`)
+  if (hours > 0) parts.push(`${hours}h`)
+  if (minutes > 0 || parts.length === 0) parts.push(`${minutes}m`)
+
+  return parts.join(" ")
+}
+
+const escapeMarkdownTableCell = (value: string): string =>
+  value.replace(/\|/g, "\\|").replace(/\r?\n/g, " ")
 
 export const impactIcon = (impact: "Major" | "Minor" | "Tiny") => {
   switch (impact) {
@@ -72,6 +93,7 @@ export async function generateMarkdown(
   contributorIdToStatsMap: Record<string, ContributorStats>,
   weekStart: string,
   repoOwnersMap: Record<string, string[]> = {},
+  reviewLatencyEntries: ReviewLatencyEntry[] = [],
 ): Promise<string> {
   const tinyPrUrls = new Set(
     prs.filter((pr) => pr.impact === "Tiny").map((pr) => pr.url),
@@ -100,6 +122,9 @@ export async function generateMarkdown(
   markdown += "- [Contributor Overview](#contributor-overview)\n"
   markdown += "- [PRs by Repository](#prs-by-repository)\n"
   markdown += "- [PRs by Contributor](#changes-by-contributor)\n"
+  if (reviewLatencyEntries.length > 0) {
+    markdown += "- [Time to First Review](#time-to-first-review)\n"
+  }
   markdown += `- [Scoring & Sponsorship Details](${scoringDocPath})\n\n`
 
   // Remove bot accounts from contributor data
@@ -261,6 +286,35 @@ export async function generateMarkdown(
     },
   )
   markdown += "\n"
+
+  if (reviewLatencyEntries.length > 0) {
+    markdown += "## Time to First Review\n\n"
+    markdown +=
+      "| PR | Repository | Author | First Reviewer | First Review | Time to First Review |\n"
+    markdown +=
+      "|----|------------|--------|----------------|--------------|----------------------|\n"
+
+    reviewLatencyEntries
+      .slice()
+      .sort((a, b) => {
+        if (b.timeToFirstReviewMs !== a.timeToFirstReviewMs) {
+          return b.timeToFirstReviewMs - a.timeToFirstReviewMs
+        }
+        const dateDiff = a.firstReviewAt.localeCompare(b.firstReviewAt)
+        if (dateDiff !== 0) return dateDiff
+        return a.number - b.number
+      })
+      .forEach((entry) => {
+        markdown += `| [#${entry.number} ${escapeMarkdownTableCell(
+          entry.title,
+        )}](${entry.url}) | ${entry.repo} | ${entry.author} | ${
+          entry.firstReviewer
+        } | ${entry.firstReviewAt} | ${formatReviewLatency(
+          entry.timeToFirstReviewMs,
+        )} |\n`
+      })
+    markdown += "\n"
+  }
 
   // Generate changes by repository
   markdown += "## Changes by Repository\n\n"
