@@ -4,7 +4,6 @@ import { getContributionOverviewWindow } from "lib/ai/date-utils"
 import { replaceCurrentWeekReadme } from "lib/data-processing/current-week-readme"
 import { generateMarkdown } from "lib/data-processing/generateMarkdown"
 import {
-  getOrCreateContributorStats,
   getPrsWithCurrentContributorLogins,
   mergeContributorStatsByGitHubId,
 } from "lib/contributor-identity"
@@ -14,6 +13,7 @@ import {
   storePrAnalysis,
 } from "lib/data-processing/storePrAnalysis"
 import { getAllPRs } from "lib/data-retrieval/getAllPRs"
+import { recordPullRequestActivityForRepo } from "lib/data-retrieval/prWindowActivity"
 import { getBountiedIssues } from "lib/data-retrieval/getBountiedIssues"
 import { getIssuesCreated } from "lib/data-retrieval/getIssuesCreated"
 import { getMergedPRs } from "lib/data-retrieval/getMergedPRs"
@@ -61,134 +61,16 @@ export async function generateOverview(
     console.log(`Found ${repoOwners.length} repo owners`)
     const prsWithReviews = await getAllPRs(repo, startDate, currentTime)
     console.log(`Found ${prsWithReviews.length} total PRs`)
-    for (const pr of prsWithReviews) {
-      if (pr.user.login.includes("renovate")) {
-        continue
-      }
-
-      const contributorLogin = pr.user.login
-      const contributorStats = getOrCreateContributorStats(
-        contributorStatsByIdentity,
-        pr.user,
-      )
-
-      const isRepoOwner = repoOwners.some((content) =>
-        content.owners.includes(contributorLogin),
-      )
-      if (isRepoOwner) {
-        const existingRepo = contributorStats.reposOwned?.find(
-          (ownedRepo) => ownedRepo.repo === repo,
-        )
-        if (!existingRepo) {
-          contributorStats.reposOwned = (
-            contributorStats.reposOwned ?? []
-          ).concat({
-            repo,
-            paths: repoOwners.find((content) =>
-              content.owners.includes(contributorLogin),
-            )?.paths ?? ["*"],
-          })
-        }
-      }
-
-      contributorStats.reviewsReceived += pr.reviewsReceived
-      contributorStats.rejectionsReceived += pr.rejectionsReceived
-      contributorStats.approvalsReceived += pr.approvalsReceived
-      contributorStats.prsOpened += 1
-
-      const seniorStaffReviewStats = Object.entries(
-        pr.allReviewsByUser ?? {},
-      ).reduce(
-        (acc, [, reviewerStats]) => {
-          if (!seniorStaffUsernames.has(reviewerStats.githubLogin)) return acc
-          acc.approvals += reviewerStats.approvalsGiven
-          acc.rejections += reviewerStats.rejectionsGiven
-          return acc
-        },
-        { approvals: 0, rejections: 0 },
-      )
-
-      if (
-        seniorStaffReviewStats.approvals > 0 ||
-        seniorStaffReviewStats.rejections > 0
-      ) {
-        contributorStats.staffReviewedPrs =
-          (contributorStats.staffReviewedPrs ?? 0) + 1
-        contributorStats.staffRejectionsReceived =
-          (contributorStats.staffRejectionsReceived ?? 0) +
-          seniorStaffReviewStats.rejections
-        contributorStats.staffApprovalsReceived =
-          (contributorStats.staffApprovalsReceived ?? 0) +
-          seniorStaffReviewStats.approvals
-        contributorStats.staffReviewedPrLinks = (
-          contributorStats.staffReviewedPrLinks ?? []
-        ).concat({
-          number: pr.number,
-          url: pr.html_url,
-          title: pr.title,
-          staffApprovals: seniorStaffReviewStats.approvals,
-          staffRejections: seniorStaffReviewStats.rejections,
-        })
-      }
-
-      if (pr.reviewsByUser) {
-        Object.entries(pr.reviewsByUser).forEach(
-          ([reviewerIdentityKey, reviewerStats]) => {
-            const reviewerLogin = reviewerStats.githubLogin
-            const isReviewerRepoOwner = repoOwners.some((content) =>
-              content.owners.includes(reviewerLogin),
-            )
-            const reviewerContributorStats = getOrCreateContributorStats(
-              contributorStatsByIdentity,
-              {
-                id: reviewerStats.githubId,
-                login: reviewerLogin,
-              },
-            )
-            reviewerContributorStats.approvalsGiven +=
-              reviewerStats.approvalsGiven
-            reviewerContributorStats.rejectionsGiven +=
-              reviewerStats.rejectionsGiven
-
-            // Collect unique PR numbers for each reviewer
-            if (!reviewedPrsByReviewerIdentity[reviewerIdentityKey]) {
-              reviewedPrsByReviewerIdentity[reviewerIdentityKey] = new Set<{
-                number: number
-                isReviewerRepoOwner: boolean
-              }>()
-            }
-            if (reviewerStats.prNumbers) {
-              reviewerStats.prNumbers.forEach((prNum) =>
-                reviewedPrsByReviewerIdentity[reviewerIdentityKey].add({
-                  number: prNum,
-                  isReviewerRepoOwner: isReviewerRepoOwner || false,
-                }),
-              )
-            }
-          },
-        )
-      }
-
-      if (pr.isClosed && pr.merged_at) contributorStats.prsMerged += 1
-    }
-
-    // After processing all PRs, set distinctPrsReviewedNonCodeOwner for each reviewer
-    Object.entries(reviewedPrsByReviewerIdentity).forEach(
-      ([reviewerIdentityKey, prReviewMeta]) => {
-        if (contributorStatsByIdentity[reviewerIdentityKey]) {
-          contributorStatsByIdentity[
-            reviewerIdentityKey
-          ].distinctPrsReviewedNonCodeOwner = Array.from(prReviewMeta).filter(
-            (pr) => !pr.isReviewerRepoOwner,
-          ).length
-          contributorStatsByIdentity[
-            reviewerIdentityKey
-          ].distinctPrsReviewedAsCodeOwner = Array.from(prReviewMeta).filter(
-            (pr) => pr.isReviewerRepoOwner,
-          ).length
-        }
-      },
-    )
+    recordPullRequestActivityForRepo({
+      repo,
+      prsWithReviews,
+      repoOwners,
+      contributorStatsByIdentity,
+      reviewedPrsByReviewerIdentity,
+      seniorStaffUsernames,
+      sinceDate: new Date(startDate),
+      currentTime,
+    })
 
     const mergedPrs = await getMergedPRs(repo, startDate, currentTime)
     console.log(`Found ${mergedPrs.length} merged PRs`)

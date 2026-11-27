@@ -33,7 +33,13 @@ const buildContributorScores = (
 
   const contributorScores: Record<string, any> = {}
 
-  Object.entries(prsByContributor).forEach(([contributor, contributorPRs]) => {
+  const allContributors = new Set([
+    ...Object.keys(prsByContributor),
+    ...Object.keys(contributorIdToStatsMap),
+  ])
+
+  allContributors.forEach((contributor) => {
+    const contributorPRs = prsByContributor[contributor] ?? []
     const stats = contributorIdToStatsMap[contributor]
 
     const scoreResult = getContributorScore({
@@ -42,9 +48,11 @@ const buildContributorScores = (
       contributor,
     })
 
-    contributorScores[contributor] = {
-      ...scoreResult,
-      issuesCreated: stats?.issuesCreated ?? 0,
+    if (contributorPRs.length > 0 || scoreResult.score > 0) {
+      contributorScores[contributor] = {
+        ...scoreResult,
+        issuesCreated: stats?.issuesCreated ?? 0,
+      }
     }
 
     if (stats) {
