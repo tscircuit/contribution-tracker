@@ -7,7 +7,18 @@ import {
 
 const attributes = (value: boolean): PrAttributeSchema =>
   Object.fromEntries(
-    Object.keys(PR_ATTRIBUTES).map((key) => [key, value]),
+    Object.keys(PR_ATTRIBUTES).map((key) => [
+      key,
+      key === "changes_runtime_implementation"
+        ? true
+        : [
+              "major_library_algorithm_contribution",
+              "substantial_impact",
+              "has_relevant_regression_test",
+            ].includes(key)
+          ? value
+          : false,
+    ]),
   ) as PrAttributeSchema
 
 describe("format converter PR scoring", () => {

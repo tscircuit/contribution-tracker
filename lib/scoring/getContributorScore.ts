@@ -1,3 +1,4 @@
+import { isNonContribution } from "../ai-stuff/getConstributionStarRatingFromAttributes"
 import { MAINTAINERS } from "./maintainers"
 import type { AnalyzedPR, ContributorStats } from "../types"
 
@@ -55,6 +56,7 @@ export function getContributorScore({
 
   // Calculate score from PRs
   for (const pr of contributorPRs) {
+    if (isNonContribution(pr)) continue
     // Count PRs by impact level
     switch (pr.impact) {
       case "Major":

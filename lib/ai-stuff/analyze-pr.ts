@@ -1,3 +1,9 @@
+import {
+  hasOnlySupportingFileChanges,
+  hasRuntimeCodeChanges,
+  hasMatchingAutomatedVisualSnapshot,
+  isDependencyOnlyDiff,
+} from "../data-processing/filter-diff"
 import { z } from "zod"
 import type { MergedPullRequest } from "lib/types"
 import type { AnalyzedPR } from "lib/types"
@@ -8,12 +14,12 @@ import { getContributionStarRatingFromAttributes } from "./getConstributionStarR
 
 const prSchema = z
   .object({
-    number: z.number(),
-    title: z.string(),
     description: z.string(),
-    contributor: z.string(),
-    repo: z.string(),
-    url: z.string(),
+    evaluation_evidence: z
+      .string()
+      .describe(
+        "At most 60 words: impact and specific test/snapshot evidence, or not demonstrated. No invented coverage or execution.",
+      ),
   })
   .merge(pr_attribute_schema)
 
@@ -38,13 +44,14 @@ export async function analyzePRWithAI(
     prompt: generateAnalyzePRPrompt(pr, repo),
     debug: `PR #${pr.number} - ${pr.title} by ${pr.user.login} in ${repo}`,
   })
+  const attributes = normalizeContributionAttributes(result.object, pr.diff)
   const starRating = getContributionStarRatingFromAttributes(
-    result.object,
+    attributes,
     repo,
     pr.manualStarRating,
   )
   return {
-    ...result.object,
+    ...attributes,
     description: cleanDescription(result.object.description),
     user: pr.user,
     html_url: pr.html_url,
@@ -52,14 +59,39 @@ export async function analyzePRWithAI(
     merged_at: pr.merged_at,
     body: pr.body,
     state: pr.state,
-    number: result.object.number,
-    title: result.object.title,
+    number: pr.number,
+    title: pr.title,
     contributor: pr.user.login,
     contributorId: pr.user.id,
-    repo: result.object.repo,
-    url: result.object.url,
+    repo,
+    url: pr.html_url,
     isAlignedWithMilestone: false,
     starRating,
     impact: starRating >= 3 ? "Major" : starRating >= 2 ? "Minor" : "Tiny",
   }
+}
+
+export function normalizeContributionAttributes<
+  T extends import("./pr-attributes").PrAttributeSchema,
+>(input: T, diff: string): T {
+  const attributes = {
+    ...input,
+    changes_runtime_implementation:
+      hasOnlySupportingFileChanges(diff) || isDependencyOnlyDiff(diff)
+        ? false
+        : hasRuntimeCodeChanges(diff) || input.changes_runtime_implementation,
+  }
+  if (
+    attributes.has_relevant_regression_test &&
+    hasMatchingAutomatedVisualSnapshot(diff)
+  ) {
+    attributes.has_relevant_visual_snapshot = true
+  }
+  if (isDependencyOnlyDiff(diff)) attributes.only_dependency_update = true
+  if (attributes.changes_runtime_implementation) {
+    attributes.only_reproduces_a_bug = false
+    attributes.only_adds_autorouter_fixtures = false
+    attributes.only_docs_tests_or_ci = false
+  }
+  return attributes
 }
