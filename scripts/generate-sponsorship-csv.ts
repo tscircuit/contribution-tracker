@@ -1,4 +1,7 @@
-import { reviewedSponsorshipCsv } from "../lib/reviewed-sponsorships"
+import {
+  calculatedSponsorshipCsv,
+  readCalculatedSponsorships,
+} from "../lib/calculated-sponsorships"
 import fs from "node:fs"
 import path from "node:path"
 import { STAFF_USERNAMES } from "frontend/src/constants/contributors"
@@ -15,7 +18,7 @@ import {
   filterHardwareReimbursementsForMonth,
   readHardwareReimbursements,
 } from "../lib/hardware-reimbursements"
-import { CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC } from "../lib/ai/date-utils"
+import { getFullWeeksForMonth } from "../lib/contribution-weeks"
 import { resolveContributorIdentity } from "../lib/contributor-identity"
 import { arePaymentArtifactsDisabled } from "../lib/payment-artifacts"
 
@@ -30,76 +33,7 @@ interface ContributorStatsByLogin {
   [username: string]: WeeklyContributorStats
 }
 
-export interface ContributionWeek {
-  filePath: string
-  weekStartDate: Date
-  weekEndDate: Date
-  completedAt: Date
-}
-
-export function getFullWeeksForMonth(
-  year: number,
-  month: number,
-  today = new Date(),
-): ContributionWeek[] {
-  const overviewsDir = path.join(process.cwd(), "contribution-overviews")
-
-  // First day of the target month
-  const monthStart = new Date(Date.UTC(year, month - 1, 1))
-  // First day of next month
-  const nextMonthStart = new Date(Date.UTC(year, month, 1))
-
-  return fs
-    .readdirSync(overviewsDir)
-    .filter((file) => file.endsWith(".json"))
-    .map((file) => {
-      const fileDate = new Date(file.replace(".json", ""))
-      return {
-        filePath: path.join(overviewsDir, file),
-        fileDate,
-      }
-    })
-    .filter(({ fileDate }) => !isNaN(fileDate.getTime()))
-    .map(({ filePath, fileDate }) => {
-      const weekStartDate = new Date(
-        Date.UTC(
-          fileDate.getUTCFullYear(),
-          fileDate.getUTCMonth(),
-          fileDate.getUTCDate(),
-        ),
-      )
-      const weekEndDate = new Date(
-        Date.UTC(
-          fileDate.getUTCFullYear(),
-          fileDate.getUTCMonth(),
-          fileDate.getUTCDate() + 6,
-        ),
-      )
-      const completedAt = new Date(weekEndDate)
-      // Current overview files start at Tuesday's cutoff and are complete at
-      // the following Tuesday's cutoff. Older files started on Wednesday.
-      if (isTuesday(fileDate)) {
-        completedAt.setUTCDate(completedAt.getUTCDate() + 1)
-      }
-      completedAt.setUTCHours(CONTRIBUTION_OVERVIEW_CUTOFF_HOUR_UTC, 0, 0, 0)
-
-      return {
-        filePath,
-        weekStartDate,
-        weekEndDate,
-        completedAt,
-      }
-    })
-    .filter(({ weekEndDate, completedAt }) => {
-      return (
-        weekEndDate >= monthStart &&
-        weekEndDate < nextMonthStart &&
-        completedAt <= today
-      )
-    })
-    .sort((a, b) => b.weekStartDate.getTime() - a.weekStartDate.getTime())
-}
-
+export { getFullWeeksForMonth } from "../lib/contribution-weeks"
 function readContributorStatsByLogin(
   filePath: string,
 ): ContributorStatsByLogin {
@@ -336,12 +270,27 @@ function main() {
     return
   }
 
-  const reviewed = reviewedSponsorshipCsv(
+  const calculated = calculatedSponsorshipCsv(
     `${year}-${month.toString().padStart(2, "0")}`,
   )
-  if (reviewed !== null) {
-    fs.writeFileSync(getMonthFile(year, month), reviewed)
-    console.log("Exported reviewed audited sponsorship amounts")
+  if (calculated !== null) {
+    fs.mkdirSync("sponsorships", { recursive: true })
+    fs.writeFileSync(getMonthFile(year, month), calculated)
+    const period = `${year}-${month.toString().padStart(2, "0")}`
+    fs.writeFileSync(
+      `sponsorships/${period}-audited.json`,
+      JSON.stringify(
+        {
+          month: period,
+          currency: "USD",
+          pricing: "Calculated from audited PR points and configured limits",
+          contributors: readCalculatedSponsorships(period),
+        },
+        null,
+        2,
+      ) + "\n",
+    )
+    console.log("Exported rule-calculated audited sponsorship amounts")
     return
   }
 

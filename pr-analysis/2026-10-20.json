@@ -2832,7 +2832,14 @@
     "contributorId": 187867218,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/circuit-json-util#257",
@@ -3147,7 +3154,14 @@
     "contributorId": 142524747,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/core#4818",
@@ -3192,7 +3206,14 @@
     "contributorId": 142524747,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4816",
@@ -3237,7 +3258,14 @@
     "contributorId": 142524747,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4817",
@@ -3282,7 +3310,14 @@
     "contributorId": 142524747,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4825",
@@ -3597,7 +3632,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4700",
@@ -3619,7 +3661,7 @@
     "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_adds_autorouter_fixtures": false,
-    "only_reproduces_a_bug": false,
+    "only_reproduces_a_bug": true,
     "reproduces_and_fixes_a_bug": false,
     "minor_developer_experience_improvement": false,
     "major_experience_improvement": false,
@@ -3642,7 +3684,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/core#4541",
@@ -3687,7 +3736,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4540",
@@ -3732,7 +3788,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/core#4815",
@@ -3776,8 +3839,15 @@
     "state": "merged",
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 0,
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Dependency/release update receives zero points under the revised payment policy, including updates with accompanying test/snapshot or generated declaration changes."
   },
   {
     "tag": "tscircuit/core#4814",
@@ -3821,8 +3891,15 @@
     "state": "merged",
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 0,
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Dependency/release update receives zero points under the revised payment policy, including updates with accompanying test/snapshot or generated declaration changes."
   },
   {
     "tag": "tscircuit/core#4809",
@@ -5171,8 +5248,15 @@
     "state": "merged",
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
-    "starRating": 2,
-    "impact": "Minor"
+    "starRating": 1,
+    "impact": "Tiny",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": true,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "No committed hierarchical KiCad ZIP regression. Existing download/fabrication tests at this head do not exercise KiCad child-sheet output. Manual downloaded-archive validation is documented, but is not an automated regression."
   },
   {
     "tag": "tscircuit/tscircuit.com#5521",
@@ -7647,7 +7731,14 @@
     "contributorId": 187867218,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/cli#5521",
@@ -7962,7 +8053,14 @@
     "contributorId": 187867218,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/cli#5511",
@@ -9356,8 +9454,15 @@
     "state": "merged",
     "contributorId": 142524747,
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 0,
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": true,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "CSS fixes mobile navigation layout. Manual screenshots exist, but no automated relevant layout test or golden snapshot was demonstrated in the changed files or exact-head test tree."
   },
   {
     "tag": "tscircuit/tscircuit-autorouter#3125",
@@ -9627,7 +9732,14 @@
     "contributorId": 142524747,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-to-step#171",
@@ -9686,7 +9798,7 @@
     "new_page_or_component": false,
     "introduces_or_fixes_a_footprint": false,
     "core_change": false,
-    "only_dependency_update": true,
+    "only_dependency_update": false,
     "bad_title": false,
     "introduces_new_circuit_board": false,
     "fixes_circuit_board": true,
@@ -9717,7 +9829,14 @@
     "contributorId": 142524747,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/circuit-json-to-step#169",
@@ -9762,7 +9881,14 @@
     "contributorId": 142524747,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/schematic-trace-solver#1347",
@@ -9987,7 +10113,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/schematic-trace-solver#1340",
@@ -10009,7 +10142,7 @@
     "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_adds_autorouter_fixtures": false,
-    "only_reproduces_a_bug": false,
+    "only_reproduces_a_bug": true,
     "reproduces_and_fixes_a_bug": false,
     "minor_developer_experience_improvement": false,
     "major_experience_improvement": false,
@@ -10032,7 +10165,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/copper-pour-solver#128",
@@ -10437,7 +10577,14 @@
     "contributorId": 178554403,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/circuit-json-to-kicad#724",
@@ -10707,7 +10854,14 @@
     "contributorId": 178554403,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-to-kicad#714",
@@ -10797,7 +10951,14 @@
     "contributorId": 178554403,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/circuit-json-to-kicad#713",
@@ -10932,7 +11093,14 @@
     "contributorId": 186785561,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/rectdiff#170",
@@ -11472,7 +11640,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-webgpu#68",
@@ -11517,7 +11692,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/pcb-spice-pipeline#2",
@@ -12462,7 +12644,14 @@
     "contributorId": 187867218,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-util#256",
@@ -12777,7 +12966,14 @@
     "contributorId": 187867218,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4763",
@@ -12799,7 +12995,7 @@
     "minor_fix": false,
     "major_autorouter_bug_fix": true,
     "only_adds_autorouter_fixtures": false,
-    "only_reproduces_a_bug": false,
+    "only_reproduces_a_bug": true,
     "reproduces_and_fixes_a_bug": false,
     "minor_developer_experience_improvement": false,
     "major_experience_improvement": false,
@@ -12821,8 +13017,15 @@
     "state": "merged",
     "contributorId": 186785561,
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 2,
+    "impact": "Minor",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/core#4826",
@@ -18267,7 +18470,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4874",
@@ -18446,8 +18656,15 @@
     "state": "merged",
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 0,
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Dependency/release update receives zero points under the revised payment policy, including updates with accompanying test/snapshot or generated declaration changes."
   },
   {
     "tag": "tscircuit/core#4856",
@@ -18717,7 +18934,14 @@
     "contributorId": 186785561,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/circuit-json-to-gerber#204",
@@ -21912,7 +22136,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/schematic-trace-solver#1349",
@@ -21934,7 +22165,7 @@
     "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_adds_autorouter_fixtures": false,
-    "only_reproduces_a_bug": false,
+    "only_reproduces_a_bug": true,
     "reproduces_and_fixes_a_bug": false,
     "minor_developer_experience_improvement": false,
     "major_experience_improvement": false,
@@ -21957,7 +22188,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/circuit-json-to-kicad#739",
@@ -23892,7 +24130,14 @@
     "contributorId": 187867218,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-to-gerber#190",
@@ -23937,7 +24182,14 @@
     "contributorId": 187867218,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/circuit-json-to-bom-csv#35",
@@ -23982,7 +24234,14 @@
     "contributorId": 203519918,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-to-bom-csv#34",
@@ -24027,7 +24286,14 @@
     "contributorId": 203519918,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/tscircuit.com#5576",
@@ -24521,8 +24787,15 @@
     "state": "merged",
     "contributorId": 187867218,
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 0,
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Dependency/release update receives zero points under the revised payment policy, including updates with accompanying test/snapshot or generated declaration changes."
   },
   {
     "tag": "tscircuit/cli#5570",
@@ -25107,7 +25380,14 @@
     "contributorId": 178554403,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/circuit-json-placement-analysis#48",
@@ -25557,7 +25837,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-util#267",
@@ -25602,7 +25889,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/tscircuit-autorouter#3253",
@@ -25962,7 +26256,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/schematic-trace-solver#1353",
@@ -26007,7 +26308,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/test-github-automerge#106",
@@ -26547,7 +26855,14 @@
     "contributorId": 186785561,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/easyeda-converter#614",
@@ -26682,7 +26997,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/3d-viewer#1058",
@@ -26817,7 +27139,14 @@
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/tscircuit.com#5579",
@@ -27537,7 +27866,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-to-kicad#747",
@@ -27671,8 +28007,15 @@
     "state": "merged",
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 0,
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Dependency/release update receives zero points under the revised payment policy, including updates with accompanying test/snapshot or generated declaration changes."
   },
   {
     "tag": "tscircuit/circuit-json-webgpu#84",
@@ -27717,7 +28060,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-webgpu#83",
@@ -27762,7 +28112,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/motorcontrol#39",
@@ -29247,7 +29604,14 @@
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/easyeda-converter#621",
@@ -29382,7 +29746,14 @@
     "contributorId": 167054270,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4909",
@@ -29404,7 +29775,7 @@
     "minor_fix": false,
     "major_autorouter_bug_fix": false,
     "only_adds_autorouter_fixtures": false,
-    "only_reproduces_a_bug": false,
+    "only_reproduces_a_bug": true,
     "reproduces_and_fixes_a_bug": false,
     "minor_developer_experience_improvement": false,
     "major_experience_improvement": false,
@@ -29427,7 +29798,14 @@
     "contributorId": 186785561,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/core#4961",
@@ -29652,7 +30030,14 @@
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4963",
@@ -29742,7 +30127,14 @@
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4958",
@@ -29787,7 +30179,14 @@
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/core#4931",
@@ -29832,7 +30231,14 @@
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
     "starRating": 1,
-    "impact": "Tiny"
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Useful standalone reproduction/regression fixture; capped at minor (2 stars / 2 points). No implementation fix credited."
   },
   {
     "tag": "tscircuit/core#4946",
@@ -30372,7 +30778,14 @@
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-to-gerber#219",
@@ -30416,8 +30829,15 @@
     "state": "merged",
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
-    "starRating": 3,
-    "impact": "Major"
+    "starRating": 1,
+    "impact": "Tiny",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": true,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Standalone documentation, test or CI maintenance receives one star / one point."
   },
   {
     "tag": "tscircuit/tscircuit.com#5585",
@@ -30956,8 +31376,15 @@
     "state": "merged",
     "contributorId": 285619933,
     "isAlignedWithMilestone": false,
-    "starRating": 1,
-    "impact": "Tiny"
+    "starRating": 0,
+    "impact": "Tiny",
+    "baseStarRating": 1,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Dependency/release update receives zero points under the revised payment policy, including updates with accompanying test/snapshot or generated declaration changes."
   },
   {
     "tag": "tscircuit/cli#5599",
@@ -31632,7 +32059,14 @@
     "contributorId": 178554403,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/kicadts#82",
@@ -31677,7 +32111,14 @@
     "contributorId": 178554403,
     "isAlignedWithMilestone": false,
     "starRating": 3,
-    "impact": "Major"
+    "impact": "Major",
+    "baseStarRating": 3,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/kicadts#81",
@@ -31722,7 +32163,14 @@
     "contributorId": 178554403,
     "isAlignedWithMilestone": false,
     "starRating": 2,
-    "impact": "Minor"
+    "impact": "Minor",
+    "baseStarRating": 2,
+    "payment_bookkeeping": false,
+    "clear_noop_or_duplicate": false,
+    "only_docs_tests_or_ci": false,
+    "missing_regression_evidence": false,
+    "evaluationPolicyVersion": 3,
+    "auditEvidenceNote": "Retain original implementation/fix rating; relevant regression assertions and/or snapshot coverage demonstrated in reviewed source."
   },
   {
     "tag": "tscircuit/circuit-json-to-kicad#710",

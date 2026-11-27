@@ -1,7 +1,7 @@
 import type { StarRating } from "lib/types"
 import type { PrAttributeSchema } from "./pr-attributes"
 
-const getBaseContributionStarRating = (
+export const getBaseContributionStarRating = (
   a: PrAttributeSchema,
   repo: string,
   manualStarRating?: StarRating,
@@ -42,7 +42,7 @@ const getBaseContributionStarRating = (
   return Math.min(maxRating, Math.round(score)) as StarRating
 }
 
-export const PR_EVALUATION_POLICY_VERSION = 2
+export const PR_EVALUATION_POLICY_VERSION = 3
 
 export function isNonContribution(
   attributes: Partial<PrAttributeSchema>,
@@ -59,8 +59,25 @@ export function getContributionStarRatingFromAttributes(
   repo: string,
   manualStarRating?: StarRating,
 ): StarRating {
+  return applyPrAuditRules({
+    attributes,
+    baseStarRating: getBaseContributionStarRating(
+      attributes,
+      repo,
+      manualStarRating,
+    ),
+  })
+}
+
+export function applyPrAuditRules({
+  attributes,
+  baseStarRating,
+}: {
+  attributes: Partial<PrAttributeSchema>
+  baseStarRating: StarRating
+}): StarRating {
   if (isNonContribution(attributes)) return 0
-  let stars = getBaseContributionStarRating(attributes, repo, manualStarRating)
+  let stars = baseStarRating
   if (
     attributes.only_reproduces_a_bug ||
     attributes.only_adds_autorouter_fixtures

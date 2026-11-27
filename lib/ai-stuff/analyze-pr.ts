@@ -6,6 +6,7 @@ import { generateAiObjectCached } from "./sdk"
 import { pr_attribute_schema } from "./pr-attributes"
 import {
   getContributionStarRatingFromAttributes,
+  getBaseContributionStarRating,
   PR_EVALUATION_POLICY_VERSION,
 } from "./getConstributionStarRatingFromAttributes"
 
@@ -62,6 +63,11 @@ export async function analyzePRWithAI(
     repo: result.object.repo,
     url: result.object.url,
     isAlignedWithMilestone: false,
+    baseStarRating: getBaseContributionStarRating(
+      result.object,
+      repo,
+      pr.manualStarRating,
+    ),
     evaluationPolicyVersion: PR_EVALUATION_POLICY_VERSION,
     starRating,
     impact: starRating >= 3 ? "Major" : starRating >= 2 ? "Minor" : "Tiny",

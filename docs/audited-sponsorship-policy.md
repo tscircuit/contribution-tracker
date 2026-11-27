@@ -20,33 +20,41 @@ Monthly sponsorships are capped at $200, with a $300 limit for `mohan-bee`.
 The limit applies to sponsorship earnings; separately approved hardware
 reimbursements are not sponsorship earnings.
 
-## Reviewed September and October 2026
+## Rule-based monthly export
 
-The `sponsorships/2026-09-audited.json` and `2026-10-audited.json` manifests are
-reviewed payout snapshots, based on the PR audits prepared in this discussion.
-They contain the credited PR invoice items and exact-cent allocations.
-Regenerating the CSV for either month uses the reviewed manifest instead of
-recalculating the old weekly tiers. Manifest parsing rejects duplicate/staff
-recipients, amounts exceeding the applicable cap, and invoice item totals that
-do not reconcile.
+The exporter selects the requested month's complete payout weeks, reads merged
+PR evaluations, verifies durable contributor IDs against the overview data,
+removes staff/ineligible contributors and missing profiles, and counts each PR
+once. Previously reviewed PR classifications are saved with each PR evaluation,
+including a baseline rating and an evidence note. These are review findings,
+not fixed payment overrides. Unevaluated legacy PRs must be refreshed before
+export, rather than silently assumed to satisfy the audit.
 
-Only the seven audited contributors with registered Open Collective profiles
-are included. Abse2001, AnasSarkiz and ShiboSoftwareDev are staff and receive no
-rows. Contributors without a reviewed profile/payout are omitted from these
-reviewed month snapshots; the global exporter still uses its existing staff
-and eligibility rules for other months.
+For each eligible contributor, calculate:
 
-| Contribution month | Reviewed gross sponsorship total |
-| --- | ---: |
-| September 2026 | $535.00 |
-| October 2026 | $668.49 |
+`monthly limit × contributor audited points ÷ highest eligible monthly points`
 
-Mohan's reviewed amount is $300 for each month. Everyone else's previously
-reviewed amount is unchanged. These totals do not mean new outstanding debt:
-already-paid September sponsorships remain settled, and existing expenses and
-the contribution-month ledger must be reconciled before sending. The selected
-September sender uses the reviewed invoice items and still retains its
-existing duplicate protections. A stored older plan is never overwritten to
-force another expense through.
+The standard monthly limit is $200; the configured exception for `mohan-bee`
+is $300. Round half-up to cents, then allocate the total across credited PRs
+using their point weights and largest remainders. This is proportional pricing;
+it replaces the legacy weekly-tier amount for months with PR evaluation data.
+The exception changes only that recipient's rate. Staff, missing profiles and
+zero-point work do not set the denominator.
 
-November files and the current payment-artifact generation pause are unchanged.
+No approved monthly dollar amounts are read as calculation inputs. The CSV
+and `YYYY-MM-audited.json` files are generated outputs; editing or removing
+those outputs does not set the next calculated amount. The same code works for
+any requested month with complete weeks and evaluated PR data. Existing
+payment-artifact generation pauses remain enforced.
+
+The September and October replay matches the earlier audited payout amounts
+exactly: $535.00 and $668.49 respectively, using their previously reviewed PR
+classifications. See [the comparison](audited-sponsorship-comparison.md).
+This does not claim that a new AI-only pass independently reproduced every
+human review decision. New evaluation findings can change the calculated
+amounts; there is no dollar override to force a match.
+
+Already-paid sponsorships remain settled. The sender recalculates its invoice
+items from current evaluated PRs and retains its existing period-reference and
+ledger duplicate protections. No invoices or payments are created by export.
+November files and the payment-artifact generation pause are unchanged.

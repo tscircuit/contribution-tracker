@@ -73,4 +73,4 @@ The sponsorship amount is calculated based on these metrics (checked in order):
 | Level 5 | **$1300** |
 | Level 6 | **$2000** |
 
-**Final Amount** = min(Base Amount + Maintainer Bonus, monthly cap). The monthly cap is **$200**, with a **$300** exception for `mohan-bee`. Hardware reimbursements remain separate. Reviewed September and October 2026 amounts are exported from their audited manifests instead of recalculating legacy tiers.
+**Final Amount** = min(Base Amount + Maintainer Bonus, monthly cap). The monthly cap is **$200**, with a **$300** exception for `mohan-bee`. Hardware reimbursements remain separate. When evaluated PR data is available, monthly exports use proportional audited PR points: contributor limit × contributor points ÷ highest eligible monthly points, rounded half-up to cents. CSV and JSON files are generated outputs, never fixed payout inputs.

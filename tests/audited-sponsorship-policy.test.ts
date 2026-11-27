@@ -7,9 +7,9 @@ import { getContributionStarRatingFromAttributes as rating } from "../lib/ai-stu
 import { getContributorScore } from "../lib/scoring/getContributorScore"
 import { getSponsorshipAmount } from "../lib/scoring/getSponsorshipAmount"
 import {
-  readReviewedSponsorships,
-  reviewedSponsorshipCsv,
-} from "../lib/reviewed-sponsorships"
+  readCalculatedSponsorships,
+  calculatedSponsorshipCsv,
+} from "../lib/calculated-sponsorships"
 import { allocatePrItems } from "../lib/sponsorship-expense-send"
 import type { AnalyzedPR } from "../lib/types"
 function attributes(
@@ -103,12 +103,12 @@ test("monthly sponsorship caps preserve lower earnings and apply the exception c
     }),
   ).toBe(30)
 })
-test("reviewed manifests and regenerated CSVs retain the approved payouts and omit staff", async () => {
+test("recalculated exports match the prior audit and omit staff", async () => {
   for (const [month, total] of [
     ["2026-09", 53500],
     ["2026-10", 66849],
   ] as const) {
-    const rows = readReviewedSponsorships(month)!
+    const rows = readCalculatedSponsorships(month)!
     expect(rows).toHaveLength(7)
     expect(rows.reduce((sum, row) => sum + row.amountCents, 0)).toBe(total)
     expect(rows.find((row) => row.username === "mohan-bee")?.amountCents).toBe(
@@ -120,7 +120,7 @@ test("reviewed manifests and regenerated CSVs retain the approved payouts and om
       ),
     ).toBe(false)
     expect(await Bun.file(`sponsorships/${month}.csv`).text()).toBe(
-      reviewedSponsorshipCsv(month)!,
+      calculatedSponsorshipCsv(month)!,
     )
   }
 })

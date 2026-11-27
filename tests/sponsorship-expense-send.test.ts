@@ -277,8 +277,13 @@ test("PR allocation preserves weighting and exact cents while omitting dependenc
   expect(items.reduce((sum, item) => sum + item.amountV2.valueInCents, 0)).toBe(
     30000,
   )
-  expect(items).toHaveLength(87)
-  for (const pr of realPrs.filter((pr) => pr.only_dependency_update)) {
+  expect(items).toHaveLength(86)
+  for (const pr of realPrs.filter(
+    (pr) =>
+      pr.only_dependency_update ||
+      pr.payment_bookkeeping ||
+      pr.clear_noop_or_duplicate,
+  )) {
     expect(
       items.some((item) =>
         item.description.startsWith(`${pr.repo}#${pr.number}:`),
